@@ -1,0 +1,378 @@
+# AI探索评估 - 24题完整问题集
+
+## 概述
+
+本文档包含基于纽约时代广场地区真实POI数据生成的24个空间认知评估问题，用于测试AI在陌生环境中的空间意识和认知能力。
+
+**数据来源**: 纽约时代广场POI数据  
+**生成时间**: 2025年1月  
+**问题分布**: 
+- 定位与定向: 8
+- 空间距离估算: 4  
+- 邻近关系判断: 4
+- POI密度识别: 4
+- 路径规划: 4
+
+---
+
+## 一、定位与定向（8题）
+
+### 问题1
+**题目**: Hard Rock Cafe相对于Junior's在哪个方向？
+
+**选项**:
+- 北
+- 南
+- 东
+- 西
+
+**正确答案**: B  
+**解释**: Hard Rock Cafe位于Junior's的南面。  
+**难度**: medium
+
+---
+
+### 问题2
+**题目**: Starbucks相对于Hard Rock Cafe在哪个方向？
+
+**选项**:
+- 北
+- 南
+- 东
+- 西
+
+**正确答案**: B  
+**解释**: Starbucks位于Hard Rock Cafe的南面。  
+**难度**: medium
+
+---
+
+### 问题3
+**题目**: Europa Cafe相对于Starbucks在哪个方向？
+
+**选项**:
+- 北
+- 南
+- 东
+- 西
+
+**正确答案**: D  
+**解释**: Europa Cafe位于Starbucks的西面。  
+**难度**: medium
+
+---
+
+### 问题4
+**题目**: Chase相对于Europa Cafe在哪个方向？
+
+**选项**:
+- 北
+- 南
+- 东
+- 西
+
+**正确答案**: B  
+**解释**: Chase位于Europa Cafe的南面。  
+**难度**: medium
+
+---
+
+### 问题5
+**题目**: Junior's相对于Hard Rock Cafe在哪个方向？
+
+**选项**:
+- 北
+- 南
+- 东
+- 西
+
+**正确答案**: A  
+**解释**: Junior's位于Hard Rock Cafe的北面。  
+**难度**: medium
+
+---
+
+### 问题6
+**题目**: Hard Rock Cafe相对于Starbucks在哪个方向？
+
+**选项**:
+- 北
+- 南
+- 东
+- 西
+
+**正确答案**: A  
+**解释**: Hard Rock Cafe位于Starbucks的北面。  
+**难度**: medium
+
+---
+
+### 问题7
+**题目**: Starbucks相对于Europa Cafe在哪个方向？
+
+**选项**:
+- 北
+- 南
+- 东
+- 西
+
+**正确答案**: C  
+**解释**: Starbucks位于Europa Cafe的东面。  
+**难度**: medium
+
+---
+
+### 问题8
+**题目**: Europa Cafe相对于Chase在哪个方向？
+
+**选项**:
+- 北
+- 南
+- 东
+- 西
+
+**正确答案**: A  
+**解释**: Europa Cafe位于Chase的北面。  
+**难度**: medium
+
+---
+## 二、空间距离估算（4题）
+
+### 问题1
+**题目**: Junior's到Starbucks的直线距离大约是多少？
+
+**选项**:
+- 100-300米
+- 400-600米
+- 700-900米
+- 1000-1200米
+
+**正确答案**: A  
+**解释**: Junior's到Starbucks的直线距离约为284米。  
+**难度**: medium
+
+---
+
+### 问题2
+**题目**: Hard Rock Cafe到Europa Cafe的直线距离大约是多少？
+
+**选项**:
+- 100-300米
+- 400-600米
+- 700-900米
+- 1000-1200米
+
+**正确答案**: A  
+**解释**: Hard Rock Cafe到Europa Cafe的直线距离约为82米。  
+**难度**: medium
+
+---
+
+### 问题3
+**题目**: Starbucks到Chase的直线距离大约是多少？
+
+**选项**:
+- 100-300米
+- 400-600米
+- 700-900米
+- 1000-1200米
+
+**正确答案**: A  
+**解释**: Starbucks到Chase的直线距离约为145米。  
+**难度**: medium
+
+---
+
+### 问题4
+**题目**: Europa Cafe到Chase的直线距离大约是多少？
+
+**选项**:
+- 100-300米
+- 400-600米
+- 700-900米
+- 1000-1200米
+
+**正确答案**: A  
+**解释**: Europa Cafe到Chase的直线距离约为411米。  
+**难度**: medium
+
+---
+## 三、邻近关系判断（4题）
+
+### 问题1
+**题目**: 在以下POI中，哪个距离Junior's最近？
+
+**选项**:
+- Hard Rock Cafe
+- Starbucks
+- Europa Cafe
+
+**正确答案**: A  
+**解释**: Hard Rock Cafe距离Junior's最近，约114米。  
+**难度**: medium
+
+---
+
+### 问题2
+**题目**: 在以下POI中，哪个距离Hard Rock Cafe最近？
+
+**选项**:
+- Starbucks
+- Europa Cafe
+- Chase
+
+**正确答案**: B  
+**解释**: Europa Cafe距离Hard Rock Cafe最近，约82米。  
+**难度**: medium
+
+---
+
+### 问题3
+**题目**: 在以下POI中，哪个距离Starbucks最近？
+
+**选项**:
+- Europa Cafe
+- Chase
+- Chase
+
+**正确答案**: B  
+**解释**: Chase距离Starbucks最近，约145米。  
+**难度**: medium
+
+---
+
+### 问题4
+**题目**: 在以下POI中，哪个距离Europa Cafe最近？
+
+**选项**:
+- Chase
+- Chase
+- Public School 212
+
+**正确答案**: A  
+**解释**: Chase距离Europa Cafe最近，约85米。  
+**难度**: medium
+
+---
+## 四、POI密度识别（4题）
+
+### 问题1
+**题目**: 在当前区域内，哪个POI周围的POI密度最高？
+
+**选项**:
+- Europa Cafe
+- Duane Reade
+- Public School 212
+- Starbucks
+
+**正确答案**: A  
+**解释**: Europa Cafe周围的POI密度最高，500米范围内有8个其他POI。  
+**难度**: medium
+
+---
+
+### 问题2
+**题目**: 在当前区域内，哪个POI周围的POI密度最高？
+
+**选项**:
+- Hard Rock Cafe
+- Duane Reade
+- Public School 212
+- Starbucks
+
+**正确答案**: A  
+**解释**: Hard Rock Cafe周围的POI密度最高，500米范围内有8个其他POI。  
+**难度**: medium
+
+---
+
+### 问题3
+**题目**: 在当前区域内，哪个POI周围的POI密度最低？
+
+**选项**:
+- Duane Reade
+- Public School 212
+- Starbucks
+- Chase
+
+**正确答案**: A  
+**解释**: Duane Reade周围的POI密度最低，500米范围内只有1个其他POI。  
+**难度**: medium
+
+---
+
+### 问题4
+**题目**: 在当前区域内，哪个POI周围的POI密度最低？
+
+**选项**:
+- Public School 212
+- Duane Reade
+- Starbucks
+- Chase
+
+**正确答案**: A  
+**解释**: Public School 212周围的POI密度最低，500米范围内只有4个其他POI。  
+**难度**: medium
+
+---
+## 五、路径规划（4题）
+
+### 问题1
+**题目**: 从Junior's到Hard Rock Cafe，以下哪种路径最短？
+
+**选项**:
+- Junior's -> (Junior's and west 50rd的节点) -> (7th avenue and west 50rd的节点) -> (west 44rd and 7th avenue的节点) -> (Hard Rock Cafe and 7th avenue的节点) -> Hard Rock Cafe
+- Junior's -> (west 50rd and The Lambs Club的节点) -> (Chase and 7th avenue的节点) -> (Chase and 6th avenue的节点) -> Hard Rock Cafe
+- Junior's -> (west 50rd and Chase的节点) -> (west 50rd and The Lambs Club的节点) -> (west 42rd and 7th avenue的节点) -> (west 50rd and Public School 212的节点) -> Hard Rock Cafe
+- Junior's -> (west 44rd and 50th street的节点) -> (west 44rd and 7th avenue的节点) -> (Junior's and west 50rd的节点) -> Hard Rock Cafe
+
+**正确答案**: A  
+**解释**: 最短路径是：Junior's -> (Junior's and west 50rd的节点) -> (7th avenue and west 50rd的节点) -> (west 44rd and 7th avenue的节点) -> (Hard Rock Cafe and 7th avenue的节点) -> Hard Rock Cafe，总距离约505米。  
+**难度**: hard
+
+---
+
+### 问题2
+**题目**: 从Hard Rock Cafe到Starbucks，以下哪种路径最短？
+
+**选项**:
+- Hard Rock Cafe -> (west 50rd and Public School 212的节点) -> (west 46rd and Del Frisco's Double Eagle Steakhouse的节点) -> (west 50rd and Chase的节点) -> Starbucks
+- Hard Rock Cafe -> (Hard Rock Cafe and 7th avenue的节点) -> Starbucks
+- Hard Rock Cafe -> (west 44rd and The Lambs Club的节点) -> (west 46rd and 50th street的节点) -> (Duane Reade与50th street的节点) -> (Hard Rock Cafe and 7th avenue的节点) -> Starbucks
+- Hard Rock Cafe -> (west 50rd and The Lambs Club的节点) -> (west 46rd and 7th avenue的节点) -> (west 42rd and Starbucks的节点) -> Starbucks
+
+**正确答案**: B  
+**解释**: 最短路径是：Hard Rock Cafe -> (Hard Rock Cafe and 7th avenue的节点) -> Starbucks，总距离约195米。  
+**难度**: hard
+
+---
+
+### 问题3
+**题目**: 从Starbucks到Europa Cafe，以下哪种路径最短？
+
+**选项**:
+- Starbucks -> (west 44rd and 7th avenue的节点) -> (west 50rd and The Lambs Club的节点) -> (Europa Cafe and 7th avenue的节点) -> Europa Cafe
+- Starbucks -> (west 44rd and The Lambs Club的节点) -> (Europa Cafe and 7th avenue的节点) -> (7th avenue and The Playwright的节点) -> (west 50rd and 6th avenue的节点) -> Europa Cafe
+- Starbucks -> (Hard Rock Cafe and 7th avenue的节点) -> (Europa Cafe and 7th avenue的节点) -> Europa Cafe
+- Starbucks -> (Hard Rock Cafe and 7th avenue的节点) -> (west 46rd and 50th street的节点) -> (west 46rd and 6th avenue的节点) -> Europa Cafe
+
+**正确答案**: C  
+**解释**: 最短路径是：Starbucks -> (Hard Rock Cafe and 7th avenue的节点) -> (Europa Cafe and 7th avenue的节点) -> Europa Cafe，总距离约220米。  
+**难度**: hard
+
+---
+
+### 问题4
+**题目**: 从Europa Cafe到Chase，以下哪种路径最短？
+
+**选项**:
+- Europa Cafe -> (Junior's and west 50rd的节点) -> (west 50rd and The Lambs Club的节点) -> (west 46rd and 7th avenue的节点) -> Chase
+- Europa Cafe -> (Chase and 6th avenue的节点) -> (west 46rd and 50th street的节点) -> (7th avenue and west 50rd的节点) -> (west 46rd and Del Frisco's Double Eagle Steakhouse的节点) -> Chase
+- Europa Cafe -> (west 50rd and Chase的节点) -> (west 42rd and 7th avenue的节点) -> (west 44rd and 6th avenue的节点) -> Chase
+- Europa Cafe -> Chase
+
+**正确答案**: D  
+**解释**: 最短路径是：Europa Cafe -> Chase，总距离约85米。  
+**难度**: hard
+
+---

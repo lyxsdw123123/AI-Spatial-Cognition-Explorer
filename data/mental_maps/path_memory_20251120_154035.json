@@ -1,0 +1,306 @@
+{
+  "poi_connections": {},
+  "node_sequences": {
+    "8d52994a-5022-4069-931f-b5ece689c070": {
+      "path_id": "8d52994a-5022-4069-931f-b5ece689c070",
+      "nodes": [
+        "node_0",
+        "node_1"
+      ],
+      "coordinates": [
+        [
+          39.9042,
+          116.4074
+        ],
+        [
+          39.905,
+          116.408
+        ]
+      ],
+      "poi_waypoints": [],
+      "start_location": [
+        39.9042,
+        116.4074
+      ],
+      "end_location": [
+        39.905,
+        116.408
+      ],
+      "total_distance": 111.00000000021453,
+      "node_count": 2,
+      "created_time": "2025-11-20T15:40:35.557168",
+      "traversal_count": 1
+    },
+    "d5b65dfc-ae06-4cf4-b93d-ecc2ae94bd0f": {
+      "path_id": "d5b65dfc-ae06-4cf4-b93d-ecc2ae94bd0f",
+      "nodes": [
+        "node_0",
+        "node_1"
+      ],
+      "coordinates": [
+        [
+          39.905,
+          116.408
+        ],
+        [
+          39.9055,
+          116.409
+        ]
+      ],
+      "poi_waypoints": [],
+      "start_location": [
+        39.905,
+        116.408
+      ],
+      "end_location": [
+        39.9055,
+        116.409
+      ],
+      "total_distance": 124.10177275183091,
+      "node_count": 2,
+      "created_time": "2025-11-20T15:40:35.557168",
+      "traversal_count": 1
+    },
+    "fef0489b-3d0b-4ebb-b210-d8b7d57907aa": {
+      "path_id": "fef0489b-3d0b-4ebb-b210-d8b7d57907aa",
+      "nodes": [
+        "node_0",
+        "node_1"
+      ],
+      "coordinates": [
+        [
+          39.9055,
+          116.409
+        ],
+        [
+          39.906,
+          116.41
+        ]
+      ],
+      "poi_waypoints": [],
+      "start_location": [
+        39.9055,
+        116.409
+      ],
+      "end_location": [
+        39.906,
+        116.41
+      ],
+      "total_distance": 124.1017727500673,
+      "node_count": 2,
+      "created_time": "2025-11-20T15:40:35.558183",
+      "traversal_count": 1
+    },
+    "ccbdec8d-645c-4107-85c9-118ea31ded2d": {
+      "path_id": "ccbdec8d-645c-4107-85c9-118ea31ded2d",
+      "nodes": [],
+      "coordinates": [],
+      "poi_waypoints": [],
+      "start_location": [
+        39.9044,
+        116.4075
+      ],
+      "end_location": [
+        39.906,
+        116.41
+      ],
+      "total_distance": 0.0,
+      "node_count": 0,
+      "created_time": "2025-11-20T15:40:35.560183",
+      "traversal_count": 1
+    }
+  },
+  "road_segments": {
+    "485c16af-609b-433e-a083-1232214e3b85": {
+      "segment_id": "485c16af-609b-433e-a083-1232214e3b85",
+      "start_node": "node_39.9042_116.4074",
+      "end_node": "node_39.905_116.408",
+      "length": 111.00000000021453,
+      "road_type": "move_1",
+      "road_name": "",
+      "coordinates": [
+        [
+          39.9042,
+          116.4074
+        ],
+        [
+          39.905,
+          116.408
+        ]
+      ],
+      "traversal_count": 1,
+      "created_time": "2025-11-20T15:40:35.557168",
+      "last_traversed": "2025-11-20T15:40:35.557168",
+      "speed_limit": 0,
+      "road_condition": "良好"
+    },
+    "aedb8852-50a6-43bd-a338-69f9d0acf998": {
+      "segment_id": "aedb8852-50a6-43bd-a338-69f9d0acf998",
+      "start_node": "node_39.905_116.408",
+      "end_node": "node_39.9055_116.409",
+      "length": 124.10177275183091,
+      "road_type": "move_2",
+      "road_name": "",
+      "coordinates": [
+        [
+          39.905,
+          116.408
+        ],
+        [
+          39.9055,
+          116.409
+        ]
+      ],
+      "traversal_count": 1,
+      "created_time": "2025-11-20T15:40:35.557168",
+      "last_traversed": "2025-11-20T15:40:35.557168",
+      "speed_limit": 0,
+      "road_condition": "良好"
+    },
+    "ebd52496-e235-4e56-a8ab-982b0393a0be": {
+      "segment_id": "ebd52496-e235-4e56-a8ab-982b0393a0be",
+      "start_node": "node_39.9055_116.409",
+      "end_node": "node_39.906_116.41",
+      "length": 124.1017727500673,
+      "road_type": "move_3",
+      "road_name": "",
+      "coordinates": [
+        [
+          39.9055,
+          116.409
+        ],
+        [
+          39.906,
+          116.41
+        ]
+      ],
+      "traversal_count": 1,
+      "created_time": "2025-11-20T15:40:35.558183",
+      "last_traversed": "2025-11-20T15:40:35.558183",
+      "speed_limit": 0,
+      "road_condition": "良好"
+    },
+    "73d971e6-cd69-458b-ace2-76a85fab0bf9": {
+      "segment_id": "73d971e6-cd69-458b-ace2-76a85fab0bf9",
+      "start_node": "node_116.4074_39.9042",
+      "end_node": "node_116.408_39.905",
+      "length": 100,
+      "road_type": "primary",
+      "road_name": "",
+      "coordinates": [
+        [
+          116.4074,
+          39.9042
+        ],
+        [
+          116.408,
+          39.905
+        ]
+      ],
+      "traversal_count": 1,
+      "created_time": "2025-11-20T15:40:35.559183",
+      "last_traversed": "2025-11-20T15:40:35.559183",
+      "speed_limit": 0,
+      "road_condition": "良好"
+    },
+    "54536445-af69-4fa1-ac0e-349df3cc76cf": {
+      "segment_id": "54536445-af69-4fa1-ac0e-349df3cc76cf",
+      "start_node": "node_116.408_39.905",
+      "end_node": "node_116.409_39.9055",
+      "length": 80,
+      "road_type": "secondary",
+      "road_name": "",
+      "coordinates": [
+        [
+          116.408,
+          39.905
+        ],
+        [
+          116.409,
+          39.9055
+        ]
+      ],
+      "traversal_count": 1,
+      "created_time": "2025-11-20T15:40:35.559183",
+      "last_traversed": "2025-11-20T15:40:35.559183",
+      "speed_limit": 0,
+      "road_condition": "良好"
+    },
+    "ed9a2626-c865-42b8-b074-6b1e725d7c20": {
+      "segment_id": "ed9a2626-c865-42b8-b074-6b1e725d7c20",
+      "start_node": "segment_start_0",
+      "end_node": "segment_end_0",
+      "length": 500,
+      "road_type": "未知",
+      "road_name": "",
+      "coordinates": [
+        [
+          39.9044,
+          116.4075
+        ],
+        [
+          39.906,
+          116.41
+        ]
+      ],
+      "traversal_count": 1,
+      "created_time": "2025-11-20T15:40:35.560183",
+      "last_traversed": "2025-11-20T15:40:35.560183",
+      "speed_limit": 0,
+      "road_condition": "良好"
+    }
+  },
+  "metadata": {
+    "saved_time": "2025-11-20T15:40:35.563184",
+    "operation_count": 10,
+    "stats": {
+      "poi_layer": {
+        "total_connections": 0,
+        "unique_pois": 0,
+        "memory_type": "POI层记忆"
+      },
+      "node_layer": {
+        "total_paths": 4,
+        "total_nodes": 2,
+        "average_path_length": 1.5,
+        "total_distance": 359.2,
+        "memory_type": "道路节点层记忆"
+      },
+      "road_layer": {
+        "total_segments": 6,
+        "total_nodes": 9,
+        "total_distance": 1039.2,
+        "road_types": {
+          "move_1": {
+            "count": 1,
+            "total_length": 111.00000000021453
+          },
+          "move_2": {
+            "count": 1,
+            "total_length": 124.10177275183091
+          },
+          "move_3": {
+            "count": 1,
+            "total_length": 124.1017727500673
+          },
+          "primary": {
+            "count": 1,
+            "total_length": 100
+          },
+          "secondary": {
+            "count": 1,
+            "total_length": 80
+          },
+          "未知": {
+            "count": 1,
+            "total_length": 500
+          }
+        },
+        "average_segment_length": 173.2,
+        "memory_type": "道路数据层记忆"
+      },
+      "total_operations": 10,
+      "last_updated": "2025-11-20T15:40:35.564184"
+    }
+  }
+}

@@ -1,0 +1,378 @@
+# AI探索评估 - 24题完整问题集
+
+## 概述
+
+本文档包含基于芝加哥千禧公园地区真实POI数据生成的24个空间认知评估问题，用于测试AI在陌生环境中的空间意识和认知能力。
+
+**数据来源**: 芝加哥千禧公园POI数据  
+**生成时间**: 2025年1月  
+**问题分布**: 
+- 定位与定向: 8
+- 空间距离估算: 4  
+- 邻近关系判断: 4
+- POI密度识别: 4
+- 路径规划: 4
+
+---
+
+## 一、定位与定向（8题）
+
+### 问题1
+**题目**: Wildberry Pancakes and Cafe相对于The Park Grill在哪个方向？
+
+**选项**:
+- 北
+- 南
+- 东
+- 西
+
+**正确答案**: A  
+**解释**: Wildberry Pancakes and Cafe位于The Park Grill的北面。  
+**难度**: medium
+
+---
+
+### 问题2
+**题目**: Starbucks相对于Wildberry Pancakes and Cafe在哪个方向？
+
+**选项**:
+- 北
+- 南
+- 东
+- 西
+
+**正确答案**: B  
+**解释**: Starbucks位于Wildberry Pancakes and Cafe的南面。  
+**难度**: medium
+
+---
+
+### 问题3
+**题目**: Pittsfield Cafe相对于Starbucks在哪个方向？
+
+**选项**:
+- 北
+- 南
+- 东
+- 西
+
+**正确答案**: A  
+**解释**: Pittsfield Cafe位于Starbucks的北面。  
+**难度**: medium
+
+---
+
+### 问题4
+**题目**: Walgreens相对于Pittsfield Cafe在哪个方向？
+
+**选项**:
+- 北
+- 南
+- 东
+- 西
+
+**正确答案**: C  
+**解释**: Walgreens位于Pittsfield Cafe的东面。  
+**难度**: medium
+
+---
+
+### 问题5
+**题目**: The Park Grill相对于Wildberry Pancakes and Cafe在哪个方向？
+
+**选项**:
+- 北
+- 南
+- 东
+- 西
+
+**正确答案**: B  
+**解释**: The Park Grill位于Wildberry Pancakes and Cafe的南面。  
+**难度**: medium
+
+---
+
+### 问题6
+**题目**: Wildberry Pancakes and Cafe相对于Starbucks在哪个方向？
+
+**选项**:
+- 北
+- 南
+- 东
+- 西
+
+**正确答案**: A  
+**解释**: Wildberry Pancakes and Cafe位于Starbucks的北面。  
+**难度**: medium
+
+---
+
+### 问题7
+**题目**: Starbucks相对于Pittsfield Cafe在哪个方向？
+
+**选项**:
+- 北
+- 南
+- 东
+- 西
+
+**正确答案**: B  
+**解释**: Starbucks位于Pittsfield Cafe的南面。  
+**难度**: medium
+
+---
+
+### 问题8
+**题目**: Pittsfield Cafe相对于Walgreens在哪个方向？
+
+**选项**:
+- 北
+- 南
+- 东
+- 西
+
+**正确答案**: D  
+**解释**: Pittsfield Cafe位于Walgreens的西面。  
+**难度**: medium
+
+---
+## 二、空间距离估算（4题）
+
+### 问题1
+**题目**: The Park Grill到Starbucks的直线距离大约是多少？
+
+**选项**:
+- 100-300米
+- 400-600米
+- 700-900米
+- 1000-1200米
+
+**正确答案**: A  
+**解释**: The Park Grill到Starbucks的直线距离约为129米。  
+**难度**: medium
+
+---
+
+### 问题2
+**题目**: Wildberry Pancakes and Cafe到Pittsfield Cafe的直线距离大约是多少？
+
+**选项**:
+- 100-300米
+- 400-600米
+- 700-900米
+- 1000-1200米
+
+**正确答案**: A  
+**解释**: Wildberry Pancakes and Cafe到Pittsfield Cafe的直线距离约为264米。  
+**难度**: medium
+
+---
+
+### 问题3
+**题目**: Starbucks到Walgreens的直线距离大约是多少？
+
+**选项**:
+- 100-300米
+- 400-600米
+- 700-900米
+- 1000-1200米
+
+**正确答案**: A  
+**解释**: Starbucks到Walgreens的直线距离约为88米。  
+**难度**: medium
+
+---
+
+### 问题4
+**题目**: Pittsfield Cafe到CVS Pharmacy的直线距离大约是多少？
+
+**选项**:
+- 200-400米
+- 500-800米
+- 900-1200米
+- 1300-1600米
+
+**正确答案**: B  
+**解释**: Pittsfield Cafe到CVS Pharmacy的直线距离约为528米。  
+**难度**: medium
+
+---
+## 三、邻近关系判断（4题）
+
+### 问题1
+**题目**: 在以下POI中，哪个距离The Park Grill最近？
+
+**选项**:
+- Wildberry Pancakes and Cafe
+- Starbucks
+- Pittsfield Cafe
+
+**正确答案**: B  
+**解释**: Starbucks距离The Park Grill最近，约129米。  
+**难度**: medium
+
+---
+
+### 问题2
+**题目**: 在以下POI中，哪个距离Wildberry Pancakes and Cafe最近？
+
+**选项**:
+- Starbucks
+- Pittsfield Cafe
+- Walgreens
+
+**正确答案**: C  
+**解释**: Walgreens距离Wildberry Pancakes and Cafe最近，约237米。  
+**难度**: medium
+
+---
+
+### 问题3
+**题目**: 在以下POI中，哪个距离Starbucks最近？
+
+**选项**:
+- Pittsfield Cafe
+- Walgreens
+- CVS Pharmacy
+
+**正确答案**: B  
+**解释**: Walgreens距离Starbucks最近，约88米。  
+**难度**: medium
+
+---
+
+### 问题4
+**题目**: 在以下POI中，哪个距离Pittsfield Cafe最近？
+
+**选项**:
+- Walgreens
+- CVS Pharmacy
+- National College of Education Urban Campus
+
+**正确答案**: A  
+**解释**: Walgreens距离Pittsfield Cafe最近，约39米。  
+**难度**: medium
+
+---
+## 四、POI密度识别（4题）
+
+### 问题1
+**题目**: 在当前区域内，哪个POI周围的POI密度最高？
+
+**选项**:
+- Market Creations
+- CVS Pharmacy
+- Starbucks
+- Pittsfield Cafe
+
+**正确答案**: A  
+**解释**: Market Creations周围的POI密度最高，500米范围内有9个其他POI。  
+**难度**: medium
+
+---
+
+### 问题2
+**题目**: 在当前区域内，哪个POI周围的POI密度最高？
+
+**选项**:
+- Chase
+- CVS Pharmacy
+- Starbucks
+- Pittsfield Cafe
+
+**正确答案**: A  
+**解释**: Chase周围的POI密度最高，500米范围内有9个其他POI。  
+**难度**: medium
+
+---
+
+### 问题3
+**题目**: 在当前区域内，哪个POI周围的POI密度最低？
+
+**选项**:
+- CVS Pharmacy
+- Starbucks
+- Pittsfield Cafe
+- Walgreens
+
+**正确答案**: A  
+**解释**: CVS Pharmacy周围的POI密度最低，500米范围内只有4个其他POI。  
+**难度**: medium
+
+---
+
+### 问题4
+**题目**: 在当前区域内，哪个POI周围的POI密度最低？
+
+**选项**:
+- Starbucks
+- CVS Pharmacy
+- Pittsfield Cafe
+- Walgreens
+
+**正确答案**: A  
+**解释**: Starbucks周围的POI密度最低，500米范围内只有8个其他POI。  
+**难度**: medium
+
+---
+## 五、路径规划（4题）
+
+### 问题1
+**题目**: 从The Park Grill到Wildberry Pancakes and Cafe，以下哪种路径最短？
+
+**选项**:
+- The Park Grill -> (The Park Grill and machigan street节点) -> (Walgreens and machigan street节点) -> (randoful river and machigan street节点) -> (randoful river and Market Creations节点) -> (randoful river and Wildberry Pancakes and Cafe) -> Wildberry Pancakes and Cafe
+- The Park Grill -> (east steet and machigan street节点) -> (Pittsfield Cafe and wabash avenue节点) -> (Walgreens and machigan street节点) -> (randoful river and Wildberry Pancakes and Cafe) -> Wildberry Pancakes and Cafe
+- The Park Grill -> (The Park Grill and machigan street节点) -> (moron river and Terzo Piano节点) -> (randoful river and Chase节点) -> (east steet and machigan street节点) -> Wildberry Pancakes and Cafe
+- The Park Grill -> (east steet and Market Creations节点) -> (National College and machigan street节点) -> (lake street and Starbucks的节点) -> Wildberry Pancakes and Cafe
+
+**正确答案**: A  
+**解释**: 最短路径是：The Park Grill -> (The Park Grill and machigan street节点) -> (Walgreens and machigan street节点) -> (randoful river and machigan street节点) -> (randoful river and Market Creations节点) -> (randoful river and Wildberry Pancakes and Cafe) -> Wildberry Pancakes and Cafe，总距离约471米。  
+**难度**: hard
+
+---
+
+### 问题2
+**题目**: 从Wildberry Pancakes and Cafe到Starbucks，以下哪种路径最短？
+
+**选项**:
+- Wildberry Pancakes and Cafe -> (Pizano's Pizza & Pasta and wabash avenue节点) -> (Walgreens and machigan street节点) -> (east steet and machigan street节点) -> (east steet and Market Creations节点) -> Starbucks
+- Wildberry Pancakes and Cafe -> (randoful river and Wildberry Pancakes and Cafe) -> (randoful river and Market Creations节点) -> (randoful river and machigan street节点) -> (Walgreens and machigan street节点) -> (Walgreens and machigan street节点) -> Starbucks
+- Wildberry Pancakes and Cafe -> (Oasis Cafe and wabash avenue节点) -> (moron river and machigan street节点) -> (lake street西节点) -> (east steet and Eggy's的节点) -> Starbucks
+- Wildberry Pancakes and Cafe -> (east steet and Eggy's的节点) -> (moron river and Terzo Piano节点) -> (National College and machigan street节点) -> Starbucks
+
+**正确答案**: B  
+**解释**: 最短路径是：Wildberry Pancakes and Cafe -> (randoful river and Wildberry Pancakes and Cafe) -> (randoful river and Market Creations节点) -> (randoful river and machigan street节点) -> (Walgreens and machigan street节点) -> (Walgreens and machigan street节点) -> Starbucks，总距离约435米。  
+**难度**: hard
+
+---
+
+### 问题3
+**题目**: 从Starbucks到Pittsfield Cafe，以下哪种路径最短？
+
+**选项**:
+- Starbucks -> (randoful river and stetson avenue的节点) -> (east steet and stetson avenue的节点) -> (randoful river and Chase节点) -> (randoful river西节点) -> Pittsfield Cafe
+- Starbucks -> (machigan street南节点) -> (Miller’s Pub and wabash avenue节点) -> (east steet and Market Creations节点) -> (The Park Grill and machigan street节点) -> (Oasis Cafe and wabash avenue节点) -> Pittsfield Cafe
+- Starbucks -> (Walgreens and machigan street节点) -> (Walgreens and machigan street节点) -> (randoful river and machigan street节点) -> (randoful river and Chase节点) -> (randoful river西节点) -> (Pittsfield Cafe and wabash avenue节点) -> Pittsfield Cafe
+- Starbucks -> (randoful river and Chase节点) -> (Oasis Cafe and wabash avenue节点) -> (moron river and machigan street节点) -> (The Park Grill and machigan street节点) -> Pittsfield Cafe
+
+**正确答案**: C  
+**解释**: 最短路径是：Starbucks -> (Walgreens and machigan street节点) -> (Walgreens and machigan street节点) -> (randoful river and machigan street节点) -> (randoful river and Chase节点) -> (randoful river西节点) -> (Pittsfield Cafe and wabash avenue节点) -> Pittsfield Cafe，总距离约532米。  
+**难度**: hard
+
+---
+
+### 问题4
+**题目**: 从Pittsfield Cafe到Walgreens，以下哪种路径最短？
+
+**选项**:
+- Pittsfield Cafe -> (Walgreens and machigan street节点) -> (east steet and Eggy's的节点) -> (National College and machigan street节点) -> (randoful river and Market Creations节点) -> Walgreens
+- Pittsfield Cafe -> (Walgreens and machigan street节点) -> (moron river and machigan street节点) -> (Miller’s Pub and wabash avenue节点) -> (east steet and Wildberry Pancakes and Cafe的节点) -> Walgreens
+- Pittsfield Cafe -> (east steet and stetson avenue的节点) -> (moron river and machigan street节点) -> (Oasis Cafe and wabash avenue节点) -> Walgreens
+- Pittsfield Cafe -> (Pittsfield Cafe and wabash avenue节点) -> (randoful river西节点) -> (randoful river and Chase节点) -> (randoful river and machigan street节点) -> (Walgreens and machigan street节点) -> Walgreens
+
+**正确答案**: D  
+**解释**: 最短路径是：Pittsfield Cafe -> (Pittsfield Cafe and wabash avenue节点) -> (randoful river西节点) -> (randoful river and Chase节点) -> (randoful river and machigan street节点) -> (Walgreens and machigan street节点) -> Walgreens，总距离约443米。  
+**难度**: hard
+
+---

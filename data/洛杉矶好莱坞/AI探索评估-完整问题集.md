@@ -1,0 +1,378 @@
+# AI探索评估 - 24题完整问题集
+
+## 概述
+
+本文档包含基于洛杉矶好莱坞地区真实POI数据生成的24个空间认知评估问题，用于测试AI在陌生环境中的空间意识和认知能力。
+
+**数据来源**: 洛杉矶好莱坞POI数据  
+**生成时间**: 2025年1月  
+**问题分布**: 
+- 定位与定向: 8
+- 空间距离估算: 4  
+- 邻近关系判断: 4
+- POI密度识别: 4
+- 路径规划: 4
+
+---
+
+## 一、定位与定向（8题）
+
+### 问题1
+**题目**: Hard Rock Cafe相对于Whealthy在哪个方向？
+
+**选项**:
+- 北
+- 南
+- 东
+- 西
+
+**正确答案**: B  
+**解释**: Hard Rock Cafe位于Whealthy的南面。  
+**难度**: medium
+
+---
+
+### 问题2
+**题目**: TCL Chinese 6 Theatre相对于Hard Rock Cafe在哪个方向？
+
+**选项**:
+- 北
+- 南
+- 东
+- 西
+
+**正确答案**: A  
+**解释**: TCL Chinese 6 Theatre位于Hard Rock Cafe的北面。  
+**难度**: medium
+
+---
+
+### 问题3
+**题目**: Chado Tea Room相对于TCL Chinese 6 Theatre在哪个方向？
+
+**选项**:
+- 北
+- 南
+- 东
+- 西
+
+**正确答案**: A  
+**解释**: Chado Tea Room位于TCL Chinese 6 Theatre的北面。  
+**难度**: medium
+
+---
+
+### 问题4
+**题目**: The Coffee Bean & Tea Leaf相对于Chado Tea Room在哪个方向？
+
+**选项**:
+- 北
+- 南
+- 东
+- 西
+
+**正确答案**: B  
+**解释**: The Coffee Bean & Tea Leaf位于Chado Tea Room的南面。  
+**难度**: medium
+
+---
+
+### 问题5
+**题目**: Whealthy相对于Hard Rock Cafe在哪个方向？
+
+**选项**:
+- 北
+- 南
+- 东
+- 西
+
+**正确答案**: A  
+**解释**: Whealthy位于Hard Rock Cafe的北面。  
+**难度**: medium
+
+---
+
+### 问题6
+**题目**: Hard Rock Cafe相对于TCL Chinese 6 Theatre在哪个方向？
+
+**选项**:
+- 北
+- 南
+- 东
+- 西
+
+**正确答案**: B  
+**解释**: Hard Rock Cafe位于TCL Chinese 6 Theatre的南面。  
+**难度**: medium
+
+---
+
+### 问题7
+**题目**: TCL Chinese 6 Theatre相对于Chado Tea Room在哪个方向？
+
+**选项**:
+- 北
+- 南
+- 东
+- 西
+
+**正确答案**: B  
+**解释**: TCL Chinese 6 Theatre位于Chado Tea Room的南面。  
+**难度**: medium
+
+---
+
+### 问题8
+**题目**: Chado Tea Room相对于The Coffee Bean & Tea Leaf在哪个方向？
+
+**选项**:
+- 北
+- 南
+- 东
+- 西
+
+**正确答案**: A  
+**解释**: Chado Tea Room位于The Coffee Bean & Tea Leaf的北面。  
+**难度**: medium
+
+---
+## 二、空间距离估算（4题）
+
+### 问题1
+**题目**: Whealthy到TCL Chinese 6 Theatre的直线距离大约是多少？
+
+**选项**:
+- 100-300米
+- 400-600米
+- 700-900米
+- 1000-1200米
+
+**正确答案**: A  
+**解释**: Whealthy到TCL Chinese 6 Theatre的直线距离约为42米。  
+**难度**: medium
+
+---
+
+### 问题2
+**题目**: Hard Rock Cafe到Chado Tea Room的直线距离大约是多少？
+
+**选项**:
+- 100-300米
+- 400-600米
+- 700-900米
+- 1000-1200米
+
+**正确答案**: A  
+**解释**: Hard Rock Cafe到Chado Tea Room的直线距离约为133米。  
+**难度**: medium
+
+---
+
+### 问题3
+**题目**: TCL Chinese 6 Theatre到The Coffee Bean & Tea Leaf的直线距离大约是多少？
+
+**选项**:
+- 100-300米
+- 400-600米
+- 700-900米
+- 1000-1200米
+
+**正确答案**: A  
+**解释**: TCL Chinese 6 Theatre到The Coffee Bean & Tea Leaf的直线距离约为201米。  
+**难度**: medium
+
+---
+
+### 问题4
+**题目**: Chado Tea Room到JINYA Ramen Bar的直线距离大约是多少？
+
+**选项**:
+- 100-300米
+- 400-600米
+- 700-900米
+- 1000-1200米
+
+**正确答案**: A  
+**解释**: Chado Tea Room到JINYA Ramen Bar的直线距离约为103米。  
+**难度**: medium
+
+---
+## 三、邻近关系判断（4题）
+
+### 问题1
+**题目**: 在以下POI中，哪个距离Whealthy最近？
+
+**选项**:
+- Hard Rock Cafe
+- TCL Chinese 6 Theatre
+- Chado Tea Room
+
+**正确答案**: B  
+**解释**: TCL Chinese 6 Theatre距离Whealthy最近，约42米。  
+**难度**: medium
+
+---
+
+### 问题2
+**题目**: 在以下POI中，哪个距离Hard Rock Cafe最近？
+
+**选项**:
+- TCL Chinese 6 Theatre
+- Chado Tea Room
+- The Coffee Bean & Tea Leaf
+
+**正确答案**: A  
+**解释**: TCL Chinese 6 Theatre距离Hard Rock Cafe最近，约87米。  
+**难度**: medium
+
+---
+
+### 问题3
+**题目**: 在以下POI中，哪个距离TCL Chinese 6 Theatre最近？
+
+**选项**:
+- Chado Tea Room
+- The Coffee Bean & Tea Leaf
+- JINYA Ramen Bar
+
+**正确答案**: A  
+**解释**: Chado Tea Room距离TCL Chinese 6 Theatre最近，约46米。  
+**难度**: medium
+
+---
+
+### 问题4
+**题目**: 在以下POI中，哪个距离Chado Tea Room最近？
+
+**选项**:
+- The Coffee Bean & Tea Leaf
+- JINYA Ramen Bar
+- Hooters
+
+**正确答案**: B  
+**解释**: JINYA Ramen Bar距离Chado Tea Room最近，约103米。  
+**难度**: medium
+
+---
+## 四、POI密度识别（4题）
+
+### 问题1
+**题目**: 在当前区域内，哪个POI周围的POI密度最高？
+
+**选项**:
+- Greco's Pizza
+- Whealthy
+- Hard Rock Cafe
+- TCL Chinese 6 Theatre
+
+**正确答案**: A  
+**解释**: Greco's Pizza周围的POI密度最高，500米范围内有9个其他POI。  
+**难度**: medium
+
+---
+
+### 问题2
+**题目**: 在当前区域内，哪个POI周围的POI密度最高？
+
+**选项**:
+- Dave & Buster's
+- Whealthy
+- Hard Rock Cafe
+- TCL Chinese 6 Theatre
+
+**正确答案**: A  
+**解释**: Dave & Buster's周围的POI密度最高，500米范围内有9个其他POI。  
+**难度**: medium
+
+---
+
+### 问题3
+**题目**: 在当前区域内，哪个POI周围的POI密度最低？
+
+**选项**:
+- Whealthy
+- Hard Rock Cafe
+- TCL Chinese 6 Theatre
+- Chado Tea Room
+
+**正确答案**: A  
+**解释**: Whealthy周围的POI密度最低，500米范围内只有9个其他POI。  
+**难度**: medium
+
+---
+
+### 问题4
+**题目**: 在当前区域内，哪个POI周围的POI密度最低？
+
+**选项**:
+- Hard Rock Cafe
+- Whealthy
+- TCL Chinese 6 Theatre
+- Chado Tea Room
+
+**正确答案**: A  
+**解释**: Hard Rock Cafe周围的POI密度最低，500米范围内只有9个其他POI。  
+**难度**: medium
+
+---
+## 五、路径规划（4题）
+
+### 问题1
+**题目**: 从Whealthy到Hard Rock Cafe，以下哪种路径最短？
+
+**选项**:
+- Whealthy -> Hard Rock Cafe
+- Whealthy -> (Hard Rock Cafe and hollywood bouldvard的节点) -> (California Pizza Kitchen and north high avenue的节点) -> (Starbucks道路节点) -> Hard Rock Cafe
+- Whealthy -> (Tea Leaf and hollywood bouldvard的节点) -> (north high avenue的节点) -> (Greco's Pizza and hollywood bouldvard的节点) -> (north orange and hollywood bouldvard的节点) -> Hard Rock Cafe
+- Whealthy -> (Tea Leaf and hollywood bouldvard的节点) -> (hollywood bouldvard and north high avenue的节点) -> (Lucky Strike and north high avenue的节点) -> Hard Rock Cafe
+
+**正确答案**: A  
+**解释**: 最短路径是：Whealthy -> Hard Rock Cafe，总距离约45米。  
+**难度**: hard
+
+---
+
+### 问题2
+**题目**: 从Hard Rock Cafe到TCL Chinese 6 Theatre，以下哪种路径最短？
+
+**选项**:
+- Hard Rock Cafe -> (Starbucks道路节点) -> (north orange and franklin avenue的节点) -> (franklin avenue的西节点) -> TCL Chinese 6 Theatre
+- Hard Rock Cafe -> (Hard Rock Cafe and hollywood bouldvard的节点) -> TCL Chinese 6 Theatre
+- Hard Rock Cafe -> (JINYA Ramen Bar and hollywood bouldvard的节点) -> (Starbucks道路节点) -> (California Pizza Kitchen and north high avenue的节点) -> (north orange and franklin avenue的节点) -> TCL Chinese 6 Theatre
+- Hard Rock Cafe -> (north high avenue的南节点) -> (Restorant and hollywood bouldvard的节点) -> (north orange and hollywood bouldvard的节点) -> TCL Chinese 6 Theatre
+
+**正确答案**: B  
+**解释**: 最短路径是：Hard Rock Cafe -> (Hard Rock Cafe and hollywood bouldvard的节点) -> TCL Chinese 6 Theatre，总距离约87米。  
+**难度**: hard
+
+---
+
+### 问题3
+**题目**: 从TCL Chinese 6 Theatre到Chado Tea Room，以下哪种路径最短？
+
+**选项**:
+- TCL Chinese 6 Theatre -> (Tea Leaf and hollywood bouldvard的节点) -> (Hard Rock Cafe and hollywood bouldvard的节点) -> (north high avenue的南节点) -> Chado Tea Room
+- TCL Chinese 6 Theatre -> (Lucky Strike and north high avenue的节点) -> (California Pizza Kitchen and north high avenue的节点) -> (hollywood bouldvard的东节点) -> (Tea Leaf and hollywood bouldvard的节点) -> Chado Tea Room
+- TCL Chinese 6 Theatre -> Chado Tea Room
+- TCL Chinese 6 Theatre -> (north high avenue的节点) -> (Lucky Strike and north high avenue的节点) -> (north orange and hollywood bouldvard的节点) -> Chado Tea Room
+
+**正确答案**: C  
+**解释**: 最短路径是：TCL Chinese 6 Theatre -> Chado Tea Room，总距离约46米。  
+**难度**: hard
+
+---
+
+### 问题4
+**题目**: 从Chado Tea Room到The Coffee Bean & Tea Leaf，以下哪种路径最短？
+
+**选项**:
+- Chado Tea Room -> (25 Degrees and hollywood bouldvard的节点) -> (hollywood bouldvard and north high avenue的节点) -> (California Pizza Kitchen and north high avenue的节点) -> (hollywood bouldvard的东节点) -> The Coffee Bean & Tea Leaf
+- Chado Tea Room -> (hollywood bouldvard and north high avenue的节点) -> (Starbucks道路节点) -> (north high avenue的节点) -> (north orange and hollywood bouldvard的节点) -> (Lucky Strike and north high avenue的节点) -> The Coffee Bean & Tea Leaf
+- Chado Tea Room -> (Hooters and hollywood bouldvard的节点) -> (north high avenue的节点) -> (north orange and hollywood bouldvard的节点) -> (Restorant and hollywood bouldvard的节点) -> The Coffee Bean & Tea Leaf
+- Chado Tea Room -> (Hard Rock Cafe and hollywood bouldvard的节点) -> (Hard Rock Cafe and hollywood bouldvard的节点) -> (Hard Rock Cafe and hollywood bouldvard的节点) -> (Hard Rock Cafe and hollywood bouldvard的节点) -> (Hooters and hollywood bouldvard的节点) -> (Tea Leaf and hollywood bouldvard的节点) -> The Coffee Bean & Tea Leaf
+
+**正确答案**: D  
+**解释**: 最短路径是：Chado Tea Room -> (Hard Rock Cafe and hollywood bouldvard的节点) -> (Hard Rock Cafe and hollywood bouldvard的节点) -> (Hard Rock Cafe and hollywood bouldvard的节点) -> (Hard Rock Cafe and hollywood bouldvard的节点) -> (Hooters and hollywood bouldvard的节点) -> (Tea Leaf and hollywood bouldvard的节点) -> The Coffee Bean & Tea Leaf，总距离约309米。  
+**难度**: hard
+
+---

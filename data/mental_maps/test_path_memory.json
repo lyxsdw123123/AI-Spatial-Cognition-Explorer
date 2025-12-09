@@ -1,0 +1,117 @@
+{
+  "poi_connections": {},
+  "node_sequences": {},
+  "road_segments": {},
+  "metadata": {
+    "saved_time": "2025-11-06T19:31:10.501521",
+    "operation_count": 0,
+    "stats": {
+      "poi_layer": {
+        "total_connections": 0,
+        "unique_pois": 0,
+        "memory_type": "POI层记忆"
+      },
+      "node_layer": {
+        "total_paths": 0,
+        "total_nodes": 0,
+        "average_path_length": 0,
+        "total_distance": 0,
+        "memory_type": "道路节点层记忆"
+      },
+      "road_layer": {
+        "total_segments": 0,
+        "total_nodes": 0,
+        "total_distance": 0,
+        "road_types": {},
+        "memory_type": "道路数据层记忆"
+      },
+      "path_memory": {
+        "total_pois_visited": 2,
+        "total_road_nodes": 1,
+        "total_distance": 6708891.8,
+        "total_time": 1800,
+        "path_unit_count": 1,
+        "session_id": "session_20251106_193110",
+        "last_updated": "2025-11-06T19:31:10.501521"
+      },
+      "session_summary": {
+        "session_id": "session_20251106_193110",
+        "total_paths": 1,
+        "total_pois": 2,
+        "total_road_nodes": 1,
+        "total_distance_km": 6708.89,
+        "total_time_minutes": 30.0,
+        "average_path_distance_m": 6708891.8,
+        "average_path_time_min": 30.0,
+        "path_units": [
+          {
+            "path_id": "path_20251106_193110",
+            "path_sequence": 1,
+            "start_poi": "天安门广场",
+            "end_poi": "故宫博物院",
+            "route_nodes_count": 1,
+            "total_distance_m": 6708891.8,
+            "exploration_time_min": 30.0,
+            "created_at": "2025-11-06T19:31:10.501521"
+          }
+        ]
+      },
+      "total_operations": 0,
+      "last_updated": "2025-11-06T19:31:10.501521"
+    }
+  },
+  "path_units": {
+    "path_20251106_193110": {
+      "path_id": "path_20251106_193110",
+      "session_id": "session_20251106_193110",
+      "path_sequence": 1,
+      "start_poi_name": "天安门广场",
+      "end_poi_name": "故宫博物院",
+      "total_distance_meters": 6708891.8,
+      "exploration_time_seconds": 1800,
+      "created_at": "2025-11-06T19:31:10.501521",
+      "updated_at": "2025-11-06T19:31:10.501521",
+      "visibility_info": {
+        "start_location": [
+          39.9042,
+          116.4074
+        ],
+        "visibility_radius": 200.0,
+        "visible_pois_count": 0,
+        "visible_pois": []
+      },
+      "route_nodes": [
+        {
+          "name": "东长安街",
+          "location": [
+            116.4074,
+            39.905
+          ],
+          "node_type": "road_node",
+          "relative_position": {
+            "direction": 29.8,
+            "distance": 6708891.8,
+            "poi_name": "东长安街",
+            "poi_type": "road_node",
+            "timestamp": "2025-11-06T19:31:10.501521"
+          },
+          "timestamp": "2025-11-06T19:31:10.501521"
+        }
+      ],
+      "visible_pois_during_route": []
+    }
+  },
+  "exploration_stats": {
+    "session_20251106_193110": {
+      "session_id": "session_20251106_193110",
+      "total_pois_visited": 2,
+      "total_road_nodes_visited": 1,
+      "total_distance_meters": 6708891.8,
+      "total_time_seconds": 1800,
+      "path_count": 1,
+      "created_at": "2025-11-06T19:31:10.501521",
+      "updated_at": "2025-11-06T19:31:10.501521"
+    }
+  },
+  "session_id": "session_20251106_193110"
+}
