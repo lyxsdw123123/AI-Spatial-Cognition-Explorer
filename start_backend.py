@@ -25,7 +25,7 @@ def main():
     
     try:
         uvicorn.run(
-            "backend.main:app",
+            "backend.app:app",
             host=Config.BACKEND_HOST,
             port=Config.BACKEND_PORT,
             reload=True,

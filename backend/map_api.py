@@ -10,7 +10,7 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from map_service import MapServiceManager
+from backend.map_service import MapServiceManager
 
 logger = logging.getLogger(__name__)
 

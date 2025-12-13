@@ -7,8 +7,8 @@ import asyncio
 import json
 from datetime import datetime
 
-from ai_agent.evaluation_agent import EvaluationAgent
-from evaluation.evaluation_questions import EvaluationQuestions
+from backend.evaluation_agent import EvaluationAgent
+from backend.question_generator import EvaluationQuestions
 import os
 
 router = APIRouter(prefix="/evaluation", tags=["evaluation"])
@@ -32,6 +32,7 @@ class ExplorationDataModel(BaseModel):
     road_memory: Optional[Dict[str, Any]] = None
     context_text: Optional[str] = None
     context_mode: Optional[str] = None
+    prompt_rules: Optional[str] = None
 
 class EvaluationRequestModel(BaseModel):
     questions: List[Dict[str, Any]]
@@ -137,6 +138,12 @@ async def start_evaluation(request: EvaluationRequestModel):
                         pass
         try:
             lines = (ctx.splitlines() if isinstance(ctx, str) else [])
+            # 过滤未命名路点（如“路点_<lat>_<lng>”）
+            try:
+                lines = [ln for ln in lines if not (ln.strip().startswith("→ 路点_") or ln.strip().startswith("- 路点_"))]
+                ctx = "\n".join(lines)
+            except Exception:
+                pass
             preview = "\n".join(lines[:10])
             print("\n" + "="*48, flush=True)
             print("开始评估-上下文预览(前10行)", flush=True)
@@ -145,9 +152,32 @@ async def start_evaluation(request: EvaluationRequestModel):
             print("="*48 + "\n", flush=True)
         except Exception:
             pass
+        prompt_rules = request.exploration_data.prompt_rules or ""
+        if not prompt_rules:
+            if mode == 'graph':
+                prompt_rules = (
+                    "1. 方位角以地理正北为0°、顺时针递增\n"
+                    "2. NODE[id,类型]，EDGE[起点ID,终点ID,道路长度m]；仅在给定节点与边集合内推理\n"
+                    "3. 路径比较以length_m累加最小为准；并列按边数最少\n"
+                    "4. 禁止引入未出现的连接或节点；仅用上下文提供的关系\n"
+                )
+            elif mode == 'map':
+                prompt_rules = (
+                    "1. 方位角以地理正北为0°、顺时针递增\n"
+                    "2. 坐标系：i向北递增、j向东递增；ROAD为cells的上下左右邻接序列\n"
+                    "3. 距离近似：|Δi|、|Δj|×grid_cell_size_m；路径为步数×grid_cell_size_m\n"
+                    "4. 解释首行标注grid_size=<数值>米（若未提供则写未提供）；不得引入未出现字段\n"
+                )
+            else:
+                prompt_rules = (
+                    "1. 方位角以地理正北为0°、顺时针递增\n"
+                    "2. 距离题用直线距离而非路径距离\n"
+                    "3. 仅引用上下文出现的实体/方向/距离；不引入外部常识\n"
+                    "4. 依据不足需在解释中明确说明\n"
+                )
         await evaluation_agent.initialize(
             questions=request.questions,
-            exploration_data={"context_text": ctx, "context_mode": mode}
+            exploration_data={"context_text": ctx, "context_mode": mode, "prompt_rules": prompt_rules}
         )
         
         # 异步启动评估过程，不等待完成

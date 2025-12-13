@@ -18,8 +18,8 @@ import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config.config import Config
 from local_data_loader import load_local_shapefile_data
-from map_service import MapServiceManager
-from evaluation.evaluation_questions import EVALUATION_QUESTIONS
+from backend.map_service import MapServiceManager
+from backend.question_generator import EVALUATION_QUESTIONS
 
 # 页面配置
 st.set_page_config(
