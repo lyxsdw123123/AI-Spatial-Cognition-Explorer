@@ -183,7 +183,8 @@ class PathMemoryManager:
 
             self.path_units.append(pu)
             try:
-                print(f"[DEBUG] create_path_unit: route_nodes_count={len(route_nodes_objs)} names={[getattr(x,'name',None) for x in route_nodes_objs]}", flush=True)
+                # print(f"[DEBUG] create_path_unit: route_nodes_count={len(route_nodes_objs)} names={[getattr(x,'name',None) for x in route_nodes_objs]}", flush=True)
+                pass
             except Exception:
                 pass
             # 同步写入磁盘
@@ -504,7 +505,8 @@ class PathMemoryManager:
         try:
             self._road_nodes_catalog = nodes or []
             try:
-                print(f"[DEBUG] 路节点目录注入: count={len(self._road_nodes_catalog)}", flush=True)
+                # print(f"[DEBUG] 路节点目录注入: count={len(self._road_nodes_catalog)}", flush=True)
+                pass
             except Exception:
                 pass
         except Exception:
@@ -568,7 +570,8 @@ class PathMemoryManager:
                 if d < best_d:
                     best_d = d; best_name = name
             try:
-                print(f"[DEBUG] 最近具名节点: at=({lat:.6f},{lng:.6f}) -> {best_name} dist≈{int(best_d)}m tol={int(tolerance_m)}m", flush=True)
+                # print(f"[DEBUG] 最近具名节点: at=({lat:.6f},{lng:.6f}) -> {best_name} dist≈{int(best_d)}m tol={int(tolerance_m)}m", flush=True)
+                pass
             except Exception:
                 pass
             if best_d <= tolerance_m:
@@ -753,7 +756,8 @@ class PathMemoryManager:
                         nodes_chain.append({'name': name_a, 'relative_position': {'direction': direction, 'distance': rp_dist}})
                         last_latlng = [a_lat, a_lng]
                         try:
-                            print(f"[DEBUG] 追加具名路点(start): name={name_a} dir={direction} dist≈{int(rp_dist)}m", flush=True)
+                            # print(f"[DEBUG] 追加具名路点(start): name={name_a} dir={direction} dist≈{int(rp_dist)}m", flush=True)
+                            pass
                         except Exception:
                             pass
                     # 追加终点匹配
@@ -761,14 +765,16 @@ class PathMemoryManager:
                         nodes_chain.append({'name': name_b, 'relative_position': {'direction': direction, 'distance': int(round(dist))}})
                         last_latlng = [b_lat, b_lng]
                         try:
-                            print(f"[DEBUG] 追加具名路点(end): name={name_b} dir={direction} dist≈{int(round(dist))}m", flush=True)
+                            # print(f"[DEBUG] 追加具名路点(end): name={name_b} dir={direction} dist≈{int(round(dist))}m", flush=True)
+                            pass
                         except Exception:
                             pass
                     total_dist += dist
                 self._current_leg_route_nodes = nodes_chain
                 self._current_leg_total_distance = total_dist
                 try:
-                    print(f"[DEBUG] 当前段具名路点数={len(self._current_leg_route_nodes)} 总距离≈{int(round(self._current_leg_total_distance))}m", flush=True)
+                    # print(f"[DEBUG] 当前段具名路点数={len(self._current_leg_route_nodes)} 总距离≈{int(round(self._current_leg_total_distance))}m", flush=True)
+                    pass
                 except Exception:
                     pass
             except Exception as e:
@@ -974,7 +980,8 @@ class PathMemoryManager:
                     )
                 else:
                     try:
-                        print(f"[DEBUG] POI层不支持record_poi_visit，使用回退ID: {visit_id}", flush=True)
+                        # print(f"[DEBUG] POI层不支持record_poi_visit，使用回退ID: {visit_id}", flush=True)
+                        pass
                     except Exception:
                         pass
             except Exception as e:
@@ -1032,15 +1039,17 @@ class PathMemoryManager:
                     "approach_path": visit_details.get('approach_path') or {}
                 })
                 try:
-                    print(f"[DEBUG] ordered_sequence append poi_visit: name={poi_name}, id={poi_id}", flush=True)
-                    print(f"[DEBUG] ordered_sequence current length={len(self.ordered_sequence)}", flush=True)
+                    # print(f"[DEBUG] ordered_sequence append poi_visit: name={poi_name}, id={poi_id}", flush=True)
+                    # print(f"[DEBUG] ordered_sequence current length={len(self.ordered_sequence)}", flush=True)
+                    pass
                 except Exception:
                     pass
             except Exception:
                 pass
             self._increment_operation_count()
             try:
-                print(f"[DEBUG] 记录POI访问完成: poi={poi_name} visit_id={visit_id}", flush=True)
+                # print(f"[DEBUG] 记录POI访问完成: poi={poi_name} visit_id={visit_id}", flush=True)
+                pass
             except Exception:
                 pass
             return visit_id

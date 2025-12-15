@@ -42,7 +42,7 @@ class EvaluationQuestions:
             success = self.local_data_service.load_poi_data()
             if success:
                 self.poi_data = self.local_data_service.get_poi_data()
-                print(f"成功加载{len(self.poi_data)}个POI数据用于生成评估题目")
+                # print(f"成功加载{len(self.poi_data)}个POI数据用于生成评估题目")
             else:
                 print("加载本地POI数据失败")
                 self.poi_data = []

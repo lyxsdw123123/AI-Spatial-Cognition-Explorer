@@ -37,7 +37,7 @@ class LocalDataService:
             
             # 设置新区域
             self.region_name = new_region_name
-            print(f"已切换到区域: {new_region_name}")
+            # print(f"已切换到区域: {new_region_name}")
             
             return True
             
@@ -54,7 +54,7 @@ class LocalDataService:
         self.road_nodes = {}
         self.road_nodes_gdf = None
         self.road_nodes_data = {}
-        print("已清理所有数据")
+        # print("已清理所有数据")
         
     def _get_region_data_path(self, filename: str) -> str:
         """获取指定区域的数据文件路径
@@ -107,7 +107,7 @@ class LocalDataService:
                 return False
                 
             self.roads_gdf = gpd.read_file(road_file_path, encoding='utf-8')
-            print(f"成功加载道路数据，共 {len(self.roads_gdf)} 条道路")
+            # print(f"成功加载道路数据，共 {len(self.roads_gdf)} 条道路")
             
             # 构建道路网络
             self._build_road_network()
@@ -138,7 +138,7 @@ class LocalDataService:
             os.environ['SHAPE_RESTORE_SHX'] = 'YES'
             self.poi_gdf = gpd.read_file(poi_file_path, encoding='utf-8')
             self.poi_data = self.poi_gdf  # 设置poi_data属性
-            print(f"成功加载POI数据，共 {len(self.poi_gdf)} 个POI点")
+            # print(f"成功加载POI数据，共 {len(self.poi_gdf)} 个POI点")
             return True
             
         except Exception as e:
@@ -166,15 +166,15 @@ class LocalDataService:
                     coords = list(line.coords)
                     node_id = self._add_road_segment_connected(coords, coord_to_node, node_id)
         
-        print(f"道路网络构建完成，节点数: {self.road_network.number_of_nodes()}, 边数: {self.road_network.number_of_edges()}")
+        # print(f"道路网络构建完成，节点数: {self.road_network.number_of_nodes()}, 边数: {self.road_network.number_of_edges()}")
         
         # 检查网络连通性
         if self.road_network.number_of_nodes() > 0:
             connected_components = list(nx.connected_components(self.road_network))
-            print(f"道路网络连通分量数: {len(connected_components)}")
+            # print(f"道路网络连通分量数: {len(connected_components)}")
             if len(connected_components) > 1:
                 largest_component = max(connected_components, key=len)
-                print(f"最大连通分量节点数: {len(largest_component)}/{self.road_network.number_of_nodes()}")
+                # print(f"最大连通分量节点数: {len(largest_component)}/{self.road_network.number_of_nodes()}")
     
     def _add_road_segment_connected(self, coords: List[Tuple], coord_to_node: Dict, node_id: int) -> int:
         """添加道路段到网络图，确保相同坐标的节点共享ID"""
@@ -285,27 +285,27 @@ class LocalDataService:
         Returns:
             List: 路径点列表
         """
-        print(f"🗺️ [路径规划] 开始计算路径: {start_point} -> {end_point}")
-        print(f"🗺️ [路径规划] 道路网络状态: 节点数={self.road_network.number_of_nodes() if self.road_network else 0}, 边数={self.road_network.number_of_edges() if self.road_network else 0}")
+        # print(f"🗺️ [路径规划] 开始计算路径: {start_point} -> {end_point}")
+        # print(f"🗺️ [路径规划] 道路网络状态: 节点数={self.road_network.number_of_nodes() if self.road_network else 0}, 边数={self.road_network.number_of_edges() if self.road_network else 0}")
         
         if self.road_network is None or len(self.road_nodes) == 0:
-            print(f"🗺️ [路径规划] ❌ 道路网络未初始化，返回直线路径")
+            # print(f"🗺️ [路径规划] ❌ 道路网络未初始化，返回直线路径")
             return [start_point, end_point]
         
         # 找到最近的道路节点
         start_node = self._find_nearest_road_node(start_point)
         end_node = self._find_nearest_road_node(end_point)
         
-        print(f"🗺️ [路径规划] 最近节点: 起点节点={start_node}, 终点节点={end_node}")
+        # print(f"🗺️ [路径规划] 最近节点: 起点节点={start_node}, 终点节点={end_node}")
         
         if start_node is None or end_node is None:
-            print(f"🗺️ [路径规划] ❌ 无法找到最近道路节点，返回直线路径")
+            # print(f"🗺️ [路径规划] ❌ 无法找到最近道路节点，返回直线路径")
             return [start_point, end_point]
         
         try:
             # 使用Dijkstra算法找最短路径
             path_nodes = nx.shortest_path(self.road_network, start_node, end_node, weight='weight')
-            print(f"🗺️ [路径规划] ✅ 找到路径，节点序列长度: {len(path_nodes)}")
+            # print(f"🗺️ [路径规划] ✅ 找到路径，节点序列长度: {len(path_nodes)}")
             
             # 转换为坐标列表
             path_coords = []
@@ -313,11 +313,11 @@ class LocalDataService:
                 if node in self.road_nodes:
                     path_coords.append(self.road_nodes[node])
             
-            print(f"🗺️ [路径规划] ✅ 路径坐标转换完成，坐标点数: {len(path_coords)}")
+            # print(f"🗺️ [路径规划] ✅ 路径坐标转换完成，坐标点数: {len(path_coords)}")
             return path_coords if path_coords else [start_point, end_point]
             
         except nx.NetworkXNoPath:
-            print(f"🗺️ [路径规划] ❌ NetworkX无法找到路径，返回直线路径")
+            # print(f"🗺️ [路径规划] ❌ NetworkX无法找到路径，返回直线路径")
             return [start_point, end_point]
     
     def _find_nearest_road_node(self, point: Tuple[float, float]) -> Optional[int]:
@@ -350,11 +350,11 @@ class LocalDataService:
             # 过滤掉无效POI（name为None或空，或者geometry为None）
             poi_name = poi.get('name')
             if poi_name is None or poi_name == '' or str(poi_name).lower() == 'none':
-                print(f"🔍 [数据过滤] 跳过无效POI: 索引={idx}, name={poi_name}")
+                # print(f"🔍 [数据过滤] 跳过无效POI: 索引={idx}, name={poi_name}")
                 continue
                 
             if poi.geometry is None:
-                print(f"🔍 [数据过滤] 跳过无geometry的POI: 索引={idx}, name={poi_name}")
+                # print(f"🔍 [数据过滤] 跳过无geometry的POI: 索引={idx}, name={poi_name}")
                 continue
             
             poi_dict = {
@@ -370,7 +370,7 @@ class LocalDataService:
             }
             poi_list.append(poi_dict)
         
-        print(f"🔍 [数据加载] 从{len(self.poi_gdf)}个原始POI中过滤出{len(poi_list)}个有效POI")
+        # print(f"🔍 [数据加载] 从{len(self.poi_gdf)}个原始POI中过滤出{len(poi_list)}个有效POI")
         return poi_list
     
     def get_road_data(self) -> List[Dict]:
@@ -460,7 +460,7 @@ class LocalDataService:
                     'coordinates': (node.geometry.x, node.geometry.y)
                 }
             
-            print(f"成功加载道路节点数据，共 {len(self.road_nodes_gdf)} 个节点")
+            # print(f"成功加载道路节点数据，共 {len(self.road_nodes_gdf)} 个节点")
             return True
             
         except Exception as e:

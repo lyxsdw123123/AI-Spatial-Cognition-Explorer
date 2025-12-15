@@ -17,6 +17,10 @@ class Config:
     # 通义千问配置
     DASHSCOPE_API_KEY = os.getenv('DASHSCOPE_API_KEY', 'your_dashscope_api_key_here')
     
+    # 其他大模型配置
+    DEEPSEEK_API_KEY = os.getenv('DEEPSEEK_API_KEY', '')
+    OPENAI_API_KEY = os.getenv('OPENAI_API_KEY', '')
+    
     # AI探索配置
     AI_VISION_RADIUS = 1000  # AI视野半径（米）
     AI_MOVE_SPEED = 50      # AI移动速度（米/秒）
@@ -48,6 +52,8 @@ class Config:
         return {
             'amap_api_key': cls.AMAP_API_KEY,
             'dashscope_api_key': cls.DASHSCOPE_API_KEY,
+            'deepseek_api_key': cls.DEEPSEEK_API_KEY,
+            'openai_api_key': cls.OPENAI_API_KEY,
             'ai_vision_radius': cls.AI_VISION_RADIUS,
             'ai_move_speed': cls.AI_MOVE_SPEED,
             'ai_move_interval': cls.AI_MOVE_INTERVAL,

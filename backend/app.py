@@ -65,6 +65,8 @@ class InitExplorationModel(BaseModel):
     use_local_data: bool = False
     exploration_mode: str = "随机POI探索"
     memory_mode: Optional[str] = None
+    max_rounds: int = 1
+    model_provider: str = "qwen"
 
 class POIQueryModel(BaseModel):
     location: LocationModel
@@ -201,9 +203,9 @@ async def init_exploration(init_data: InitExplorationModel):
         # 如果提供记忆模式，设置到代理
         try:
             if init_data.memory_mode:
-                print(f"[DEBUG] /exploration/init memory_mode={init_data.memory_mode}")
+                # print(f"[DEBUG] /exploration/init memory_mode={init_data.memory_mode}")
                 explorer_agent.set_memory_mode(init_data.memory_mode)
-                print(f"[DEBUG] /exploration/init 设置后代理模式={getattr(explorer_agent,'memory_mode','context')}")
+                # print(f"[DEBUG] /exploration/init 设置后代理模式={getattr(explorer_agent,'memory_mode','context')}")
         except Exception:
             pass
 
@@ -228,7 +230,8 @@ async def init_exploration(init_data: InitExplorationModel):
                 if nodes and getattr(explorer_agent, 'path_memory', None):
                     explorer_agent.path_memory.set_road_nodes_catalog(nodes)
                     try:
-                        print(f"[DEBUG] /exploration/init 已注入本地道路节点数据: count={len(nodes)}", flush=True)
+                        # print(f"[DEBUG] /exploration/init 已注入本地道路节点数据: count={len(nodes)}", flush=True)
+                        pass
                     except Exception:
                         pass
             except Exception:
@@ -238,9 +241,13 @@ async def init_exploration(init_data: InitExplorationModel):
             await explorer_agent.initialize(start_location, boundary, 
                                           use_local_data=True, 
                                           exploration_mode=init_data.exploration_mode,
-                                          local_data_service=local_data_service)
+                                          local_data_service=local_data_service,
+                                          max_rounds=init_data.max_rounds,
+                                          model_provider=init_data.model_provider)
         else:
-            await explorer_agent.initialize(start_location, boundary)
+            await explorer_agent.initialize(start_location, boundary, 
+                                          max_rounds=init_data.max_rounds,
+                                          model_provider=init_data.model_provider)
         
         return {
             "success": True,
@@ -249,7 +256,9 @@ async def init_exploration(init_data: InitExplorationModel):
             "boundary": boundary,
             "use_local_data": init_data.use_local_data,
             "exploration_mode": init_data.exploration_mode if init_data.use_local_data else None,
-            "memory_mode": getattr(explorer_agent, 'memory_mode', 'context')
+            "memory_mode": getattr(explorer_agent, 'memory_mode', 'context'),
+            "max_rounds": init_data.max_rounds,
+            "model_provider": init_data.model_provider
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -285,21 +294,25 @@ async def start_exploration(payload: Dict = None):
     try:
         try:
             if isinstance(payload, dict):
-                print(f"[DEBUG] /exploration/start payload.memory_mode={payload.get('memory_mode')}")
+                # print(f"[DEBUG] /exploration/start payload.memory_mode={payload.get('memory_mode')}")
                 raw = payload.get("memory_mode")
                 if isinstance(raw, str):
                     mm = raw.strip().lower()
                     if mm in ("context", "graph", "map"):
                         explorer_agent.set_memory_mode(mm)
-                        print(f"[DEBUG] /exploration/start 设置后代理模式={getattr(explorer_agent,'memory_mode','context')}")
+                        # print(f"[DEBUG] /exploration/start 设置后代理模式={getattr(explorer_agent,'memory_mode','context')}")
                     else:
-                        print(f"[DEBUG] /exploration/start 无效模式: {mm}")
+                        pass
+                        # print(f"[DEBUG] /exploration/start 无效模式: {mm}")
                 else:
-                    print(f"[DEBUG] /exploration/start 模式不是字符串: {raw}")
+                    pass
+                    # print(f"[DEBUG] /exploration/start 模式不是字符串: {raw}")
             else:
-                print(f"[DEBUG] /exploration/start payload不是dict: {type(payload)}")
+                pass
+                # print(f"[DEBUG] /exploration/start payload不是dict: {type(payload)}")
         except Exception as e:
-            print(f"[DEBUG] /exploration/start 设置模式异常: {e}")
+            # print(f"[DEBUG] /exploration/start 设置模式异常: {e}")
+            pass
         if explorer_agent.is_exploring:
             return {"success": False, "message": "探索已在进行中"}
         
@@ -320,20 +333,20 @@ async def start_exploration(payload: Dict = None):
 async def stop_exploration():
     """停止探索"""
     try:
-        print("收到停止探索请求")
+        # print("收到停止探索请求")
         
         # 检查探索状态
         if not explorer_agent.is_exploring:
-            print("探索未在进行中")
+            # print("探索未在进行中")
             return {
                 "success": False,
                 "message": "探索未在进行中",
                 "report": None
             }
         
-        print("正在停止探索...")
+        # print("正在停止探索...")
         report = explorer_agent.stop_exploration()
-        print(f"探索已停止，生成报告: {report}")
+        # print(f"探索已停止，生成报告: {report}")
         
         # 新增：打印探索上下文到终端
         try:
@@ -386,7 +399,8 @@ async def stop_exploration():
                         if road_nodes_data and getattr(explorer_agent, 'path_memory', None):
                             explorer_agent.path_memory.set_road_nodes_catalog(road_nodes_data)
                             try:
-                                print(f"[DEBUG] 已注入本地道路节点数据: count={len(road_nodes_data)}", flush=True)
+                                # print(f"[DEBUG] 已注入本地道路节点数据: count={len(road_nodes_data)}", flush=True)
+                                pass
                             except Exception:
                                 pass
                     except Exception:
@@ -433,7 +447,7 @@ async def stop_exploration():
             route_points = []
             try:
                 mode = getattr(explorer_agent, 'memory_mode', 'context')
-                print(f"[DEBUG] 停止探索-当前代理模式: {mode}")
+                # print(f"[DEBUG] 停止探索-当前代理模式: {mode}")
                 context_text = None
                 nodes_out = []
                 edges_out = []
@@ -614,7 +628,8 @@ async def stop_exploration():
                         if name and (not isinstance(name, str) or name.strip()):
                             nodes_with_names.append({'name': name})
                 try:
-                    print(f"[DEBUG] 本地具名道路节点统计: count={len(nodes_with_names)}", flush=True)
+                    # print(f"[DEBUG] 本地具名道路节点统计: count={len(nodes_with_names)}", flush=True)
+                    pass
                 except Exception:
                     pass
             except Exception:
@@ -906,7 +921,7 @@ async def stop_exploration():
 
                 try:
                     names_seq = [p.get('name') for p in ordered_pois if isinstance(p, dict)]
-                    print(f"[DEBUG] 时间序POI：{names_seq}", flush=True)
+                    # print(f"[DEBUG] 时间序POI：{names_seq}", flush=True)
                 except Exception:
                     pass
 
@@ -989,12 +1004,12 @@ async def stop_exploration():
                     except Exception:
                         seq = []
                     try:
-                        print(f"[DEBUG] ordered_sequence_len={len(seq)}", flush=True)
+                        # print(f"[DEBUG] ordered_sequence_len={len(seq)}", flush=True)
                         type_counts = {}
                         for it in seq:
                             t = it.get('type')
                             type_counts[t] = type_counts.get(t, 0) + 1
-                        print(f"[DEBUG] ordered_sequence type_counts={type_counts}", flush=True)
+                        # print(f"[DEBUG] ordered_sequence type_counts={type_counts}", flush=True)
                     except Exception:
                         pass
                     poi_indices = []
@@ -1003,7 +1018,8 @@ async def stop_exploration():
                         if t == 'poi_visit':
                             poi_indices.append(idx)
                     try:
-                        print(f"[DEBUG] poi_indices={poi_indices}", flush=True)
+                        # print(f"[DEBUG] poi_indices={poi_indices}", flush=True)
+                        pass
                     except Exception:
                         pass
                     def _item_coords(it):
@@ -1268,6 +1284,16 @@ async def stop_exploration():
                         lines.append(f"探索时间：{int(sm.get('total_time_seconds'))}秒")
                     exploration_data['context_text'] = "\n".join(lines)
                     exploration_data['context_mode'] = 'context'
+                elif mode == 'raw':
+                    # 原始记忆模式：直接使用LangChain的原始对话历史文本
+                    try:
+                        raw_history = explorer_agent.get_raw_memory_text()
+                        exploration_data['context_text'] = raw_history
+                        exploration_data['context_mode'] = 'raw'
+                    except Exception as e:
+                        print(f"[ERROR] raw模式获取历史失败: {e}")
+                        exploration_data['context_text'] = "Error: Failed to retrieve raw conversation history."
+                        exploration_data['context_mode'] = 'raw'
                 elif mode == 'graph':
                     poi_units = new_exploration_data.get('poi_units', [])
                     paths = new_exploration_data.get('exploration_paths', [])
@@ -1877,7 +1903,7 @@ async def stop_exploration():
             await agent.initialize([], exploration_data)
             injected_context = exploration_data.get('context_text')
             fallback_context = agent._build_exploration_context()
-            print(f"[DEBUG] 停止探索-注入上下文: {injected_context is not None}, 回退上下文: {fallback_context is not None}")
+            # print(f"[DEBUG] 停止探索-注入上下文: {injected_context is not None}, 回退上下文: {fallback_context is not None}")
             try:
                 if getattr(explorer_agent, 'memory_mode', 'context') == 'map' and not injected_context:
                     nodes_out_local = nodes_out if isinstance(nodes_out, list) else []
@@ -1998,7 +2024,8 @@ async def stop_exploration():
             except Exception:
                 pass
             if injected_context:
-                print(f"[DEBUG] 注入上下文长度: {len(injected_context)}")
+                pass
+                # print(f"[DEBUG] 注入上下文长度: {len(injected_context)}")
             if getattr(explorer_agent, 'memory_mode', 'context') == 'map':
                 nodes_out_local = nodes_out if isinstance(nodes_out, list) else []
                 edges_out_local = edges_out if isinstance(edges_out, list) else []
@@ -2248,23 +2275,26 @@ async def get_memory_summary():
 async def set_memory_mode(payload: Dict):
     try:
         mode_raw = payload.get("mode")
-        print(f"[DEBUG] /memory/mode 收到请求，原始数据={payload}")
+        # print(f"[DEBUG] /memory/mode 收到请求，原始数据={payload}")
         try:
-            print(f"[DEBUG] /memory/mode 输入={mode_raw}")
+            # print(f"[DEBUG] /memory/mode 输入={mode_raw}")
             if isinstance(mode_raw, str):
                 m = mode_raw.strip().lower()
-                if m in ("context", "graph", "map"):
+                if m in ("context", "graph", "map", "raw"):
                     old_mode = getattr(explorer_agent,'memory_mode','context')
                     explorer_agent.set_memory_mode(m)
                     new_mode = getattr(explorer_agent,'memory_mode','context')
-                    print(f"[DEBUG] /memory/mode 模式变更: {old_mode} -> {new_mode}")
+                    # print(f"[DEBUG] /memory/mode 模式变更: {old_mode} -> {new_mode}")
                 else:
-                    print(f"[DEBUG] /memory/mode 无效模式: {m}")
+                    pass
+                    # print(f"[DEBUG] /memory/mode 无效模式: {m}")
             else:
-                print(f"[DEBUG] /memory/mode 模式类型错误: {type(mode_raw)}")
+                pass
+                # print(f"[DEBUG] /memory/mode 模式类型错误: {type(mode_raw)}")
         except Exception as e:
-            print(f"[DEBUG] /memory/mode 设置异常: {e}")
-        print(f"[DEBUG] /memory/mode 返回代理模式={getattr(explorer_agent,'memory_mode','context')}")
+            # print(f"[DEBUG] /memory/mode 设置异常: {e}")
+            pass
+        # print(f"[DEBUG] /memory/mode 返回代理模式={getattr(explorer_agent,'memory_mode','context')}")
         return {"success": True, "mode": explorer_agent.memory_mode}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

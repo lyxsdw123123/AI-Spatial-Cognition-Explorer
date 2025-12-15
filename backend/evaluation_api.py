@@ -30,6 +30,7 @@ class ExplorationDataModel(BaseModel):
     visited_pois: List[Dict[str, Any]]
     exploration_report: Optional[Dict[str, Any]] = None
     road_memory: Optional[Dict[str, Any]] = None
+    new_exploration_data: Optional[Dict[str, Any]] = None
     context_text: Optional[str] = None
     context_mode: Optional[str] = None
     prompt_rules: Optional[str] = None
@@ -37,6 +38,7 @@ class ExplorationDataModel(BaseModel):
 class EvaluationRequestModel(BaseModel):
     questions: List[Dict[str, Any]]
     exploration_data: ExplorationDataModel
+    model_provider: str = "qwen"
 
 @router.post("/start")
 async def start_evaluation(request: EvaluationRequestModel):
@@ -67,6 +69,12 @@ async def start_evaluation(request: EvaluationRequestModel):
 
         # 按记忆模式统一上下文格式
         import aiohttp
+        if mode == 'raw' and (not ctx or not ctx.strip()):
+            # Raw模式下通常不需要额外的格式化，因为它是纯文本日志
+            # 但如果上下文为空，我们无法在这里恢复它，因为我们无法访问explorer_agent实例
+            # 依赖于前端传递或者后端在start_evaluation前已经准备好
+            pass
+
         if mode in ('map', 'graph') and (not ctx or not ctx.strip()):
             async with aiohttp.ClientSession() as session:
                 if mode == 'map':
@@ -168,6 +176,13 @@ async def start_evaluation(request: EvaluationRequestModel):
                     "3. 距离近似：|Δi|、|Δj|×grid_cell_size_m；路径为步数×grid_cell_size_m\n"
                     "4. 解释首行标注grid_size=<数值>米（若未提供则写未提供）；不得引入未出现字段\n"
                 )
+            elif mode == 'raw':
+                prompt_rules = (
+                    "1. 这是AI探索者与环境交互的原始日志（Raw Log），包含用户的指令、AI的思考过程(Thought)、工具调用(Action)和工具返回结果(Observation)。\n"
+                    "2. 请通过阅读这些日志来还原AI的探索路径和所见所闻。\n"
+                    "3. 关注日志中的 'Found ... visible POIs' (视野感知) 和 'Successfully moved to ...' (移动行为) 等关键信息。\n"
+                    "4. 仅依据日志内容回答问题，不要引入外部知识。\n"
+                )
             else:
                 prompt_rules = (
                     "1. 方位角以地理正北为0°、顺时针递增\n"
@@ -177,7 +192,8 @@ async def start_evaluation(request: EvaluationRequestModel):
                 )
         await evaluation_agent.initialize(
             questions=request.questions,
-            exploration_data={"context_text": ctx, "context_mode": mode, "prompt_rules": prompt_rules}
+            exploration_data={"context_text": ctx, "context_mode": mode, "prompt_rules": prompt_rules},
+            model_provider=request.model_provider
         )
         
         # 异步启动评估过程，不等待完成

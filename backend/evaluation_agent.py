@@ -5,7 +5,10 @@ import uuid
 from datetime import datetime
 from typing import List, Dict, Any, Optional
 from dashscope import Generation
+from openai import AsyncOpenAI
 from langchain.prompts import PromptTemplate
+from langchain_community.chat_models import ChatTongyi, ChatOpenAI
+from langchain_core.messages import HumanMessage
 
 import sys
 import os
@@ -19,6 +22,7 @@ class EvaluationAgent:
         self.api_key = Config.DASHSCOPE_API_KEY
         self.model = "qwen-turbo"
         self.temperature = 0.1
+        self.model_provider = "qwen"
         
         self.evaluation_id = None
         self.questions = []
@@ -169,14 +173,41 @@ class EvaluationAgent:
             return self.evaluation_prompt_graph
         return self.evaluation_prompt_text
     
-    async def initialize(self, questions: List[Dict], exploration_data: Dict):
+    async def initialize(self, questions: List[Dict], exploration_data: Dict, model_provider: str = "qwen"):
         """初始化评估代理"""
         self.evaluation_id = str(uuid.uuid4())
         self.questions = questions
         self.exploration_data = exploration_data
+        self.model_provider = model_provider
         self.answers = []
         self.status = "idle"
         self.result = None
+        
+        # Initialize LLM based on provider
+        if self.model_provider == "deepseek":
+            if not Config.DEEPSEEK_API_KEY:
+                print("Error: DeepSeek API Key is missing")
+            self.llm = ChatOpenAI(
+                openai_api_key=Config.DEEPSEEK_API_KEY,
+                openai_api_base="https://api.deepseek.com",
+                model_name="deepseek-chat",
+                temperature=self.temperature
+            )
+        elif self.model_provider == "openai":
+            if not Config.OPENAI_API_KEY:
+                print("Error: OpenAI API Key is missing")
+            self.llm = ChatOpenAI(
+                openai_api_key=Config.OPENAI_API_KEY,
+                model_name="gpt-4o",
+                temperature=self.temperature
+            )
+        else:
+            # Default to Qwen
+            self.llm = ChatTongyi(
+                dashscope_api_key=Config.DASHSCOPE_API_KEY,
+                model_name="qwen-turbo",
+                temperature=self.temperature
+            )
     
     async def start_evaluation(self):
         """开始评估过程"""
@@ -261,8 +292,9 @@ class EvaluationAgent:
         # 调试：输入摘要
         try:
             is_dict = isinstance(new_data, dict)
-            print(f"[DEBUG] 输入数据: new_data_is_dict={is_dict}, keys={list(new_data.keys()) if is_dict else 'N/A'}", flush=True)
-            print(f"[DEBUG] exploration_paths_len={len(exploration_paths) if isinstance(exploration_paths, list) else 'N/A'}", flush=True)
+            # print(f"[DEBUG] 输入数据: new_data_is_dict={is_dict}, keys={list(new_data.keys()) if is_dict else 'N/A'}", flush=True)
+            # print(f"[DEBUG] exploration_paths_len={len(exploration_paths) if isinstance(exploration_paths, list) else 'N/A'}", flush=True)
+            pass
         except Exception:
             pass
         # 过滤掉首段“道路→POI”的路径，直接从第一个POI开始
@@ -318,8 +350,9 @@ class EvaluationAgent:
             full_route = new_data.get('full_route') or {}
             # 调试：新结构长度
             try:
-                print(f"[DEBUG] poi_units_len={len(poi_units) if isinstance(poi_units, list) else 'N/A'}", flush=True)
-                print(f"[DEBUG] full_route_segments_len={len(full_route.get('segments', [])) if isinstance(full_route, dict) else 'N/A'}", flush=True)
+                # print(f"[DEBUG] poi_units_len={len(poi_units) if isinstance(poi_units, list) else 'N/A'}", flush=True)
+                # print(f"[DEBUG] full_route_segments_len={len(full_route.get('segments', [])) if isinstance(full_route, dict) else 'N/A'}", flush=True)
+                pass
             except Exception:
                 pass
 
@@ -423,22 +456,45 @@ class EvaluationAgent:
         
         for attempt in range(retry_count):
             try:
-                response = Generation.call(
-                    model=self.model,
-                    prompt=prompt,
-                    api_key=self.api_key,
-                    temperature=self.temperature
-                )
-                
-                if response.status_code == 200:
-                    return response.output.text
+                if self.model_provider == "deepseek":
+                    client = AsyncOpenAI(
+                        api_key=Config.DEEPSEEK_API_KEY,
+                        base_url="https://api.deepseek.com"
+                    )
+                    response = await client.chat.completions.create(
+                        model="deepseek-chat",
+                        messages=[{"role": "user", "content": prompt}],
+                        temperature=self.temperature
+                    )
+                    return response.choices[0].message.content
+                elif self.model_provider == "openai":
+                    client = AsyncOpenAI(
+                        api_key=Config.OPENAI_API_KEY
+                    )
+                    response = await client.chat.completions.create(
+                        model="gpt-4o",
+                        messages=[{"role": "user", "content": prompt}],
+                        temperature=self.temperature
+                    )
+                    return response.choices[0].message.content
                 else:
-                    last_error = f"API返回错误状态码: {response.status_code}, 消息: {response.message}"
-                    print(f"LLM调用失败 (尝试 {attempt + 1}/{retry_count}): {last_error}")
+                    # Default to Qwen (DashScope)
+                    response = Generation.call(
+                        model=self.model,
+                        prompt=prompt,
+                        api_key=self.api_key,
+                        temperature=self.temperature
+                    )
                     
-                    if attempt < retry_count - 1:
-                        await asyncio.sleep(1)
-                        
+                    if response.status_code == 200:
+                        return response.output.text
+                    else:
+                        last_error = f"API返回错误状态码: {response.status_code}, 消息: {response.message}"
+                        print(f"LLM调用失败 (尝试 {attempt + 1}/{retry_count}): {last_error}")
+                        if attempt < retry_count - 1:
+                            await asyncio.sleep(1)
+                        continue
+
             except Exception as e:
                 last_error = str(e)
                 print(f"LLM调用异常 (尝试 {attempt + 1}/{retry_count}): {e}")

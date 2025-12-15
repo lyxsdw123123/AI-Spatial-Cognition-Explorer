@@ -8,6 +8,7 @@ from datetime import datetime
 import os
 
 from langchain_community.chat_models import ChatTongyi
+from langchain_openai import ChatOpenAI
 from langchain.agents import AgentExecutor, create_openai_tools_agent
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.messages import SystemMessage
@@ -57,32 +58,69 @@ class ExplorerAgent:
         self.min_move_distance = 50
         self.avoid_radius = 100
         
+        # Exploration Settings
+        self.max_exploration_rounds = 1
+        
+        # Model Settings
+        self.model_provider = "qwen"  # qwen, deepseek, openai
+        
         # LangChain Setup
         self.setup_agent()
         self._current_action = "Initializing"
         self._last_decision = None
+        self.raw_conversation_history = []  # 存储LangChain原始对话历史
 
     def setup_agent(self):
         """Initialize LangChain Agent"""
-        self.llm = ChatTongyi(
-            dashscope_api_key=Config.DASHSCOPE_API_KEY,
-            model_name="qwen-turbo", # or qwen-max
-            temperature=0.7
-        )
+        print(f"Initializing Agent with Provider: {self.model_provider}")
+        
+        if self.model_provider == "deepseek":
+            if not Config.DEEPSEEK_API_KEY:
+                raise ValueError("DeepSeek API Key is missing in .env. Please configure DEEPSEEK_API_KEY.")
+            self.llm = ChatOpenAI(
+                openai_api_key=Config.DEEPSEEK_API_KEY,
+                openai_api_base="https://api.deepseek.com",
+                model_name="deepseek-chat",
+                temperature=0.7
+            )
+        elif self.model_provider == "openai":
+            if not Config.OPENAI_API_KEY:
+                raise ValueError("OpenAI API Key is missing in .env. Please configure OPENAI_API_KEY.")
+            self.llm = ChatOpenAI(
+                openai_api_key=Config.OPENAI_API_KEY,
+                model_name="gpt-4o",
+                temperature=0.7
+            )
+        elif self.model_provider == "qwen":
+            # Explicit Qwen
+            self.llm = ChatTongyi(
+                dashscope_api_key=Config.DASHSCOPE_API_KEY,
+                model_name="qwen-turbo", # or qwen-max
+                temperature=0.7
+            )
+        else:
+            # If unknown provider, raise error instead of defaulting to Qwen
+            raise ValueError(f"Unknown model provider: {self.model_provider}. Supported: qwen, deepseek, openai")
         
         self.tools = get_exploration_tools(self)
         
         prompt = ChatPromptTemplate.from_messages([
             ("system", """You are an AI explorer in a map environment.
-Your goal is to explore the area, visit interesting POIs (Points of Interest), and build a mental map.
-You have access to tools to scan the environment, move to POIs, explore directions, and check your memory.
+The environment consists of:
+1. POI Points (Points of Interest): Specific locations like shops, parks, and landmarks that you can visit.
+2. Road Nodes: Key points on the road network (intersections, endpoints) that define where you can move.
+3. Road Data: Connectivity information that allows you to navigate along actual paths and streets.
+
+Your goal is to explore the area, visit interesting POIs.
+You have access to tools to scan the environment, move to POIs, explore directions, plan paths, and check your memory.
 
 Rules:
-1. ALWAYS scan the environment first to see what is around you.
-2. If you see unvisited interesting POIs, move to them using 'move_to_poi'.
-3. If no interesting POIs are visible, use 'explore_direction' to move to a new area.
-4. Do not visit the same POI twice unless necessary.
-5. Keep track of your exploration path.
+1. STRICT SEQUENCE: First use 'scan_environment'. THEN, if interesting POIs are found, use 'move_to_poi' or 'plan_path'.
+2. DO NOT move randomly if you have not scanned recently or if there are unvisited POIs visible.
+3. If you see unvisited interesting POIs, you MUST visit them. Use 'move_to_poi' directly if close, or 'plan_path' if far/complex.
+4. Only use 'explore_direction' if 'scan_environment' returns NO interesting unvisited POIs.
+5. Do not visit the same POI twice unless absolutely necessary for navigation.
+6. Keep track of your exploration path and avoid backtracking unnecessarily.
 """),
             ("user", "{input}"),
             MessagesPlaceholder(variable_name="agent_scratchpad"),
@@ -95,7 +133,7 @@ Rules:
         # But create_openai_tools_agent is the standard for "tool calling" models.
         try:
             agent = create_openai_tools_agent(self.llm, self.tools, prompt)
-            self.agent_executor = AgentExecutor(agent=agent, tools=self.tools, verbose=True)
+            self.agent_executor = AgentExecutor(agent=agent, tools=self.tools, verbose=True, return_intermediate_steps=True)
         except Exception:
             # Fallback for models without native tool calling API support (if any)
             # But qwen-turbo usually supports it.
@@ -106,18 +144,27 @@ Rules:
                 MessagesPlaceholder(variable_name="agent_scratchpad"),
             ])
             agent = create_react_agent(self.llm, self.tools, react_prompt)
-            self.agent_executor = AgentExecutor(agent=agent, tools=self.tools, verbose=True)
+            self.agent_executor = AgentExecutor(agent=agent, tools=self.tools, verbose=True, return_intermediate_steps=True)
 
     async def initialize(self, start_location: Tuple[float, float], 
                         boundary: List[Tuple[float, float]],
                         use_local_data: bool = False,
                         exploration_mode: str = "随机POI探索",
-                        local_data_service = None):
+                        local_data_service = None,
+                        max_rounds: int = 1,
+                        model_provider: str = "qwen"):
+        # Update model if changed
+        if model_provider != self.model_provider:
+            self.model_provider = model_provider
+            self.setup_agent()
+
         self.current_location = list(start_location)
         self.exploration_boundary = boundary
         self.use_local_data = use_local_data
         self.local_data_service = local_data_service
+        self.max_exploration_rounds = max_rounds
         self.path_memory.initialize(start_location, boundary, exploration_mode)
+        self.raw_conversation_history = []  # 重置历史记录
         
         self.mental_map = {
             'start_location': self.current_location.copy(),
@@ -160,11 +207,33 @@ Rules:
                 
                 # Execute agent
                 # The agent should call tools and finally return a summary of what it did.
+                input_text = f"{status_desc} Analyze surroundings and perform the next move."
                 result = await self.agent_executor.ainvoke({
-                    "input": f"{status_desc} Analyze surroundings and perform the next move."
+                    "input": input_text
                 })
                 
+                # Record conversation history
+                step_log = []
+                step_log.append(f"--- Step {len(self.raw_conversation_history) + 1} ---")
+                step_log.append(f"User Input: {input_text}")
+                
+                intermediate_steps = result.get('intermediate_steps', [])
+                for action, observation in intermediate_steps:
+                    if hasattr(action, 'log'):
+                        step_log.append(f"AI Thought: {action.log}")
+                    else:
+                        step_log.append(f"AI Action: {action.tool} with {action.tool_input}")
+                    step_log.append(f"Tool Output: {str(observation)}")
+                
+                step_log.append(f"AI Final Answer: {result.get('output')}")
+                step_log.append("") # Empty line separator
+                
+                self.raw_conversation_history.extend(step_log)
+                
                 print(f"Agent Result: {result.get('output')}")
+                
+                # 执行系统级轮次检查（对LLM不可见，仅在后端控制逻辑流）
+                await self._check_and_handle_round_completion()
                 
                 # Sleep a bit between steps
                 await asyncio.sleep(2)
@@ -176,7 +245,7 @@ Rules:
 
     def stop_exploration(self):
         self.is_exploring = False
-        print("AI Stop Exploration")
+        # print("AI Stop Exploration")
         return self._generate_exploration_report()
 
     def get_current_status(self) -> Dict:
@@ -540,3 +609,48 @@ Rules:
 
     def get_memory_summary(self):
         return self.path_memory.get_memory_stats()
+
+    def get_raw_memory_text(self) -> str:
+        """Get the raw conversation history as text"""
+        if not self.raw_conversation_history:
+            return "No exploration history available."
+        return "\n".join(self.raw_conversation_history)
+
+    async def _check_and_handle_round_completion(self):
+        """
+        [System Internal Logic]
+        检查当前轮次是否完成，并处理轮次切换。
+        注意：此方法运行在后端Python层面，拥有全局上帝视角（访问mental_map），
+        但其判断结果仅用于重置 visited_pois 过滤器，绝不会将全局数据（如POI总数、剩余POI列表）
+        传递给 LLM 的 Prompt 或 Context。
+        LLM 依然保持"盲人"视角，只通过 tool_scan_environment 感知环境。
+        """
+        # 1. 获取上帝视角的全量POI ID
+        available_ids = set()
+        for p in self.mental_map.get('available_pois', []):
+            if p.get('id'):
+                available_ids.add(p['id'])
+        
+        # 2. 判断是否完成本轮（已访问集合 包含 全量集合）
+        if available_ids and self.visited_pois and self.visited_pois.issuperset(available_ids):
+            print(f"\n[System] Round {self.exploration_round} Completed! Visited all {len(available_ids)} POIs.")
+            
+            if self.exploration_round < self.max_exploration_rounds:
+                # === 进入下一轮 ===
+                self.rounds_completed += 1
+                self.exploration_round += 1
+                
+                # 将本轮的访问记录归档到 ever_visited_pois（长期统计）
+                self.ever_visited_pois |= set(self.visited_pois)
+                
+                # === 关键操作：重置当前轮次的 visited_pois ===
+                # 这只是重置了"过滤器"，让 scan_environment 工具再次对所有 POI 可见。
+                # LLM 的记忆（PathMemory）不受影响，依然保留之前的所有探索记录。
+                self.visited_pois = set()
+                
+                print(f"[System] Starting Round {self.exploration_round} of {self.max_exploration_rounds}...")
+                # 此时不通知LLM，LLM在下一次 scan 时会自然发现周围又有"新"POI了
+            else:
+                # === 所有轮次完成 ===
+                print(f"[System] All {self.max_exploration_rounds} rounds completed. Stopping exploration.")
+                self.stop_exploration()

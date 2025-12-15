@@ -395,6 +395,22 @@ def sidebar_controls():
     """侧边栏控制组件"""
     st.sidebar.title("🗺️ AI地图探索控制")
     
+    # 模型选择
+    st.sidebar.header("0. 模型选择")
+    model_display = st.sidebar.selectbox(
+        "选择大模型",
+        ["通义千问", "DeepSeek", "ChatGPT"],
+        index=0,
+        help="选择用于探索和评估的大语言模型"
+    )
+    
+    provider_map = {
+        "通义千问": "qwen",
+        "DeepSeek": "deepseek",
+        "ChatGPT": "openai"
+    }
+    st.session_state.model_provider = provider_map[model_display]
+    
     # 区域选择部分
     st.sidebar.header("1. 区域选择")
     
@@ -650,6 +666,16 @@ def sidebar_controls():
     # 探索控制
     st.sidebar.header("3. 探索控制")
     
+    # 探索参数设置
+    st.sidebar.subheader("探索参数")
+    exploration_rounds = st.sidebar.number_input(
+        "探索轮数", 
+        min_value=1, 
+        max_value=10, 
+        value=1,
+        help="AI在完成所有POI探索后，是否继续进行下一轮探索以完善记忆"
+    )
+    
     # 初始化探索
     if st.sidebar.button("初始化探索", disabled=len(st.session_state.exploration_boundary) < 3):
         init_data = {
@@ -665,7 +691,9 @@ def sidebar_controls():
             },
             "use_local_data": getattr(st.session_state, 'local_data_mode', False),
             "exploration_mode": getattr(st.session_state, 'exploration_mode', 'random_poi'),
-            "memory_mode": (lambda: {"普通": "context", "图": "graph", "地图": "map"}.get(st.session_state.get('selected_memory_mode','普通'), 'context'))()
+            "memory_mode": (lambda: {"原始": "raw", "普通": "context", "图": "graph", "地图": "map"}.get(st.session_state.get('selected_memory_mode','普通'), 'context'))(),
+            "max_rounds": int(exploration_rounds),
+            "model_provider": st.session_state.get('model_provider', 'qwen')
         }
         
         result = call_backend_api("/exploration/init", "POST", init_data)
@@ -692,7 +720,7 @@ def sidebar_controls():
                 st.session_state.selected_memory_mode = '普通'
                 
             # 获取当前选择的模式
-            current_mode = {"普通": "context", "图": "graph", "地图": "map"}.get(
+            current_mode = {"原始": "raw", "普通": "context", "图": "graph", "地图": "map"}.get(
                 st.session_state.selected_memory_mode, 'context'
             )
             print(f"[DEBUG] 前端开始探索-当前选择={st.session_state.selected_memory_mode}, 映射={current_mode}")
@@ -813,8 +841,8 @@ def sidebar_controls():
     print(f"[DEBUG] 前端UI-当前session_state.selected_memory_mode={st.session_state.get('selected_memory_mode')}")
     
     # 使用index参数确保radio显示正确的选中状态
-    mode_options = ["普通", "图", "地图"]
-    current_index = mode_options.index(st.session_state.selected_memory_mode)
+    mode_options = ["原始", "普通", "图", "地图"]
+    current_index = mode_options.index(st.session_state.selected_memory_mode) if st.session_state.selected_memory_mode in mode_options else 1
     
     memory_mode_display = st.sidebar.radio(
         "选择记忆模式",
@@ -830,7 +858,7 @@ def sidebar_controls():
     
     print(f"[DEBUG] 前端UI-用户选择={memory_mode_display}, session_state值={st.session_state.get('selected_memory_mode')}")
     
-    mode_mapping = {"普通": "context", "图": "graph", "地图": "map"}
+    mode_mapping = {"原始": "raw", "普通": "context", "图": "graph", "地图": "map"}
     selected_mode = mode_mapping[memory_mode_display]
     try:
         prev_mode = st.session_state.get('selected_memory_mode_backend', None)
@@ -968,7 +996,8 @@ def start_ai_evaluation():
             "visited_pois": visited_poi_details,
             "exploration_report": st.session_state.exploration_report,
             "road_memory": road_memory_summary
-        }
+        },
+        "model_provider": st.session_state.get('model_provider', 'qwen')
     }
     try:
         mem = call_backend_api("/qa/memory", "GET")
