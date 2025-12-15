@@ -174,6 +174,27 @@ class EvaluationAgent:
 """
         )
 
+        # ToT 阶段3：选择提示词
+        self.tot_select_prompt = PromptTemplate(
+            input_variables=["question", "plan", "candidates"],
+            template="""
+问题：{question}
+
+已制定的推理计划：
+{plan}
+
+基于该计划生成的多个候选答案：
+{candidates}
+
+请仔细评估上述候选答案，判断哪一个最符合推理计划且逻辑最严密。
+请选出你认为最可信的一个作为最终预测。
+
+输出格式：
+答案：<A/B/C/D>
+解释：<你的最终解释>
+"""
+        )
+
     def _build_exploration_context(self) -> str:
         """构建探索上下文（兼容旧版API调用）"""
         # 优先使用已存在的 context_text
@@ -314,14 +335,16 @@ class EvaluationAgent:
                     
                 elif strategy == "CoT":
                     # Zero-Shot CoT
-                    cot_prompt = base_prompt + "\n\n请一步步思考（Let's think step by step），然后给出你的答案和解释。"
+                    # Strict Requirement: append a short instruction ‘Let’s think step by step’ to the end of each task prompt.
+                    cot_prompt = base_prompt + "\n\nLet's think step by step."
                     response = await self._call_llm_async(cot_prompt)
                     ai_answer = self._extract_answer(response)
                     ai_explanation = self._extract_explanation(response)
                     
                 elif strategy == "Self-Consistency":
                     # Self-Consistency with CoT (5 samples, temp=1.0)
-                    cot_prompt = base_prompt + "\n\n请一步步思考（Let's think step by step），然后给出你的答案和解释。"
+                    # Strict Requirement: sample multiple reasoning chains by setting the model temperature to 1.0 and generating several CoT answers (five).
+                    cot_prompt = base_prompt + "\n\nLet's think step by step."
                     responses = []
                     # 并行请求以节省时间
                     tasks = [self._call_llm_async(cot_prompt, temperature=1.0) for _ in range(5)]
@@ -346,7 +369,11 @@ class EvaluationAgent:
                         ai_explanation = "无法获取有效响应"
                         
                 elif strategy == "ToT":
-                    # Tree-of-Thoughts (2 Stages)
+                    # Tree-of-Thoughts (ToT)
+                    # Strict Requirement:
+                    # Stage 1: propose and select a tentative reasoning plan.
+                    # Stage 2: conditioned on the chosen plan, the model generates several candidate answers and then selects the one it judges most plausible.
+                    
                     # Stage 1: Planning
                     plan_prompt = self.tot_plan_prompt.format(
                         exploration_context=exploration_context,
@@ -355,11 +382,31 @@ class EvaluationAgent:
                     )
                     plan = await self._call_llm_async(plan_prompt)
                     
-                    # Stage 2: Solving based on plan
-                    tot_solve_prompt = base_prompt + f"\n\n请基于以下推理计划进行分析并给出答案：\n{plan}\n\n"
-                    response = await self._call_llm_async(tot_solve_prompt)
-                    ai_answer = self._extract_answer(response)
-                    ai_explanation = f"[推理计划]\n{plan}\n\n[最终解释]\n{self._extract_explanation(response)}"
+                    # Stage 2: Generate several candidate answers (we use 3 for "several")
+                    candidate_gen_prompt = base_prompt + f"\n\n请严格遵循以下推理计划进行思考：\n{plan}\n\nLet's think step by step."
+                    
+                    cand_tasks = [self._call_llm_async(candidate_gen_prompt, temperature=1.0) for _ in range(3)]
+                    candidate_responses = await asyncio.gather(*cand_tasks, return_exceptions=True)
+                    valid_candidates = [r for r in candidate_responses if isinstance(r, str) and r.strip()]
+                    
+                    if not valid_candidates:
+                         ai_answer = "A"
+                         ai_explanation = "ToT生成候选失败"
+                    else:
+                        # Stage 3: Selection (Select the most plausible one)
+                        candidates_text = ""
+                        for idx, cand in enumerate(valid_candidates, 1):
+                            candidates_text += f"候选答案 {idx}:\n{cand}\n{'-'*20}\n"
+                        
+                        select_prompt = self.tot_select_prompt.format(
+                            question=qtext,
+                            plan=plan,
+                            candidates=candidates_text
+                        )
+                        
+                        selection_response = await self._call_llm_async(select_prompt, temperature=0.1)
+                        ai_answer = self._extract_answer(selection_response)
+                        ai_explanation = f"[推理计划]\n{plan}\n\n[最终选定]\n{self._extract_explanation(selection_response)}"
 
                 # 记录结果
                 is_correct = ai_answer == question['correct_answer']
