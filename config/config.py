@@ -1,11 +1,19 @@
 # 项目配置文件
 
 import os
+from pathlib import Path
 from typing import Dict, Any
 from dotenv import load_dotenv
 
 # 加载.env文件
-load_dotenv(override=True)
+# 获取当前文件所在的目录
+current_dir = Path(__file__).resolve().parent
+# 获取项目根目录（假设.env在项目根目录下）
+root_dir = current_dir.parent
+env_path = root_dir / '.env'
+
+# 显式指定 .env 文件路径
+load_dotenv(dotenv_path=env_path, override=True)
 
 class Config:
     """项目配置类"""
@@ -15,11 +23,14 @@ class Config:
     AMAP_BASE_URL = 'https://restapi.amap.com/v3'
     
     # 通义千问配置
-    DASHSCOPE_API_KEY = os.getenv('DASHSCOPE_API_KEY', 'your_dashscope_api_key_here')
+    DASHSCOPE_API_KEY = os.getenv('DASHSCOPE_API_KEY', '')
     
     # 其他大模型配置
     DEEPSEEK_API_KEY = os.getenv('DEEPSEEK_API_KEY', '')
     OPENAI_API_KEY = os.getenv('OPENAI_API_KEY', '')
+    ZHIPUAI_API_KEY = os.getenv('ZHIPUAI_API_KEY', '')
+    GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY', '')
+    ANTHROPIC_API_KEY = os.getenv('ANTHROPIC_API_KEY', '')
     
     # AI探索配置
     AI_VISION_RADIUS = 1000  # AI视野半径（米）
@@ -54,6 +65,9 @@ class Config:
             'dashscope_api_key': cls.DASHSCOPE_API_KEY,
             'deepseek_api_key': cls.DEEPSEEK_API_KEY,
             'openai_api_key': cls.OPENAI_API_KEY,
+            'zhipuai_api_key': cls.ZHIPUAI_API_KEY,
+            'google_api_key': cls.GOOGLE_API_KEY,
+            'anthropic_api_key': cls.ANTHROPIC_API_KEY,
             'ai_vision_radius': cls.AI_VISION_RADIUS,
             'ai_move_speed': cls.AI_MOVE_SPEED,
             'ai_move_interval': cls.AI_MOVE_INTERVAL,

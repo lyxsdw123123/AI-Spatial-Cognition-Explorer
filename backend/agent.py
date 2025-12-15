@@ -7,8 +7,6 @@ from typing import List, Dict, Tuple, Optional, Set, Any
 from datetime import datetime
 import os
 
-from langchain_community.chat_models import ChatTongyi
-from langchain_openai import ChatOpenAI
 from langchain.agents import AgentExecutor, create_openai_tools_agent
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.messages import SystemMessage
@@ -17,6 +15,7 @@ from config.config import Config
 from backend.map_service.amap_service import AmapService
 from backend.path_memory.path_memory_manager import PathMemoryManager
 from backend.tools import get_exploration_tools
+from backend.model_factory import ModelFactory
 
 class ExplorerAgent:
     """AI探索智能体 (LangChain ReAct Architecture)"""
@@ -74,33 +73,8 @@ class ExplorerAgent:
         """Initialize LangChain Agent"""
         print(f"Initializing Agent with Provider: {self.model_provider}")
         
-        if self.model_provider == "deepseek":
-            if not Config.DEEPSEEK_API_KEY:
-                raise ValueError("DeepSeek API Key is missing in .env. Please configure DEEPSEEK_API_KEY.")
-            self.llm = ChatOpenAI(
-                openai_api_key=Config.DEEPSEEK_API_KEY,
-                openai_api_base="https://api.deepseek.com",
-                model_name="deepseek-chat",
-                temperature=0.7
-            )
-        elif self.model_provider == "openai":
-            if not Config.OPENAI_API_KEY:
-                raise ValueError("OpenAI API Key is missing in .env. Please configure OPENAI_API_KEY.")
-            self.llm = ChatOpenAI(
-                openai_api_key=Config.OPENAI_API_KEY,
-                model_name="gpt-4o",
-                temperature=0.7
-            )
-        elif self.model_provider == "qwen":
-            # Explicit Qwen
-            self.llm = ChatTongyi(
-                dashscope_api_key=Config.DASHSCOPE_API_KEY,
-                model_name="qwen-turbo", # or qwen-max
-                temperature=0.7
-            )
-        else:
-            # If unknown provider, raise error instead of defaulting to Qwen
-            raise ValueError(f"Unknown model provider: {self.model_provider}. Supported: qwen, deepseek, openai")
+        # Use Factory to create model
+        self.llm = ModelFactory.create_model(self.model_provider)
         
         self.tools = get_exploration_tools(self)
         
@@ -150,7 +124,7 @@ Rules:
                         boundary: List[Tuple[float, float]],
                         use_local_data: bool = False,
                         exploration_mode: str = "随机POI探索",
-                        local_data_service = None,
+                        local_data_service: Optional[Any] = None,
                         max_rounds: int = 1,
                         model_provider: str = "qwen"):
         # Update model if changed

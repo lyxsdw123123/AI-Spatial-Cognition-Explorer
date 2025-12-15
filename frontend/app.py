@@ -12,6 +12,7 @@ import time
 from typing import List, Dict, Tuple
 import pandas as pd
 from datetime import datetime
+import uuid
 
 import sys
 import os
@@ -399,7 +400,7 @@ def sidebar_controls():
     st.sidebar.header("0. 模型选择")
     model_display = st.sidebar.selectbox(
         "选择大模型",
-        ["通义千问", "DeepSeek", "ChatGPT"],
+        ["通义千问", "DeepSeek", "ChatGPT", "Claude", "Gemini", "智谱AI"],
         index=0,
         help="选择用于探索和评估的大语言模型"
     )
@@ -407,7 +408,10 @@ def sidebar_controls():
     provider_map = {
         "通义千问": "qwen",
         "DeepSeek": "deepseek",
-        "ChatGPT": "openai"
+        "ChatGPT": "openai",
+        "Claude": "claude",
+        "Gemini": "gemini",
+        "智谱AI": "zhipu"
     }
     st.session_state.model_provider = provider_map[model_display]
     
@@ -891,6 +895,49 @@ def _get_eval_questions_list():
         return qs
     return EVALUATION_QUESTIONS
 
+def generate_report_text(results: Dict) -> str:
+    """生成评估报告文本"""
+    lines = []
+    lines.append("AI空间意识评估报告")
+    lines.append(f"生成时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    lines.append("=" * 50)
+    
+    strategies = ["Direct", "CoT", "Self-Consistency", "ToT"]
+    
+    for strategy in strategies:
+        if strategy not in results:
+            continue
+            
+        res = results[strategy]
+        lines.append(f"\n【策略: {strategy}】")
+        
+        if res.get("status") == "failed":
+             lines.append(f"执行失败: {res.get('error')}")
+             lines.append("-" * 30)
+             continue
+
+        lines.append(f"总分: {res.get('total_score')}/{res.get('total_questions')} (准确率: {res.get('accuracy', 0):.1f}%)")
+        
+        # 添加各类型得分详情
+        type_scores = res.get('type_scores', {})
+        if type_scores:
+            lines.append("\n各类型得分详情:")
+            for type_name, score in type_scores.items():
+                lines.append(f"  • {type_name}: {score.get('correct', 0)}/{score.get('total', 0)} ({score.get('percentage', 0):.1f}%)")
+        
+        lines.append("-" * 30)
+        
+        for i, answer in enumerate(res.get('answers', []), 1):
+            lines.append(f"问题 {i}: {answer.get('question', '')}")
+            lines.append(f"正确答案: {answer.get('correct_answer', '')}")
+            lines.append(f"AI回答: {answer.get('ai_answer', '')} ({'正确' if answer.get('is_correct') else '错误'})")
+            lines.append(f"AI解释: {answer.get('ai_explanation', '')}")
+            lines.append("")
+            
+        lines.append("=" * 50)
+        
+    return "\n".join(lines)
+
 def show_evaluation_module():
     """显示评估模块"""
     print(f"show_evaluation_module被调用，show_evaluation状态: {st.session_state.show_evaluation}")
@@ -923,9 +970,18 @@ def show_evaluation_module():
     with eval_col2:
         st.write("**🤖 AI答题区域**")
         
+        # 选择评估策略
+        available_strategies = ["Direct", "CoT", "Self-Consistency", "ToT"]
+        selected_strategies = st.multiselect(
+            "选择评估策略 (多选)",
+            available_strategies,
+            default=["Direct", "CoT"],
+            key="eval_strategies_selector"
+        )
+        
         if not st.session_state.ai_answering and not st.session_state.evaluation_result:
-            if st.button("🚀 开始AI评估", type="primary"):
-                start_ai_evaluation()
+            if st.button("🚀 开始AI评估", type="primary", disabled=len(selected_strategies)==0):
+                start_ai_evaluation(selected_strategies)
         
         elif st.session_state.ai_answering:
             st.info("🤖 AI正在思考和答题中...")
@@ -935,7 +991,7 @@ def show_evaluation_module():
         elif st.session_state.evaluation_result:
             show_evaluation_results()
 
-def start_ai_evaluation():
+def start_ai_evaluation(strategies: List[str] = None):
     """开始AI评估"""
     st.session_state.ai_answering = True
     st.session_state.evaluation_result = None
@@ -997,7 +1053,8 @@ def start_ai_evaluation():
             "exploration_report": st.session_state.exploration_report,
             "road_memory": road_memory_summary
         },
-        "model_provider": st.session_state.get('model_provider', 'qwen')
+        "model_provider": st.session_state.get('model_provider', 'qwen'),
+        "strategies": strategies
     }
     try:
         mem = call_backend_api("/qa/memory", "GET")
@@ -1123,14 +1180,17 @@ def monitor_evaluation_progress():
     
     if result and result.get('success'):
         status = result.get('status')
-        progress = result.get('progress', 0)
         current_question = result.get('current_question', 0)
         total_questions = result.get('total_questions', 0)
         
+        # 新增：获取当前策略信息
+        current_strategy = result.get('current_strategy', 'Unknown')
+        strategy_progress = result.get('strategy_progress', '')
+        
         # 显示进度信息
         if total_questions > 0:
-            st.progress(progress / 100.0)
-            st.write(f"正在回答第 {current_question}/{total_questions} 题...")
+            # 计算总进度 (粗略估计)
+            st.write(f"正在进行评估 {strategy_progress}: {current_strategy} - 第 {current_question}/{total_questions} 题...")
         
         if status == 'completed':
             # 获取评估结果
@@ -1162,16 +1222,43 @@ def show_evaluation_results():
     if not st.session_state.evaluation_result:
         return
     
-    result = st.session_state.evaluation_result
+    results = st.session_state.evaluation_result
     
     st.success("🎉 评估完成！")
     
+    # 下载按钮
+    report_text = generate_report_text(results)
+    st.download_button(
+        label="📥 下载评估报告 (TXT)",
+        data=report_text,
+        file_name=f"evaluation_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt",
+        mime="text/plain"
+    )
+    
+    # 标签页显示四种策略
+    strategies = ["Direct", "CoT", "Self-Consistency", "ToT"]
+    tab_names = ["直接提问 (Direct)", "思维链 (CoT)", "自洽性 (Self-Consistency)", "思维树 (ToT)"]
+    tabs = st.tabs(tab_names)
+    
+    for i, strategy in enumerate(strategies):
+        with tabs[i]:
+            if strategy in results:
+                display_single_strategy_result(results[strategy])
+            else:
+                st.info(f"{strategy} 策略结果未找到")
+
+def display_single_strategy_result(result):
+    """显示单个策略的评估结果"""
+    if result.get("status") == "failed":
+        st.error(f"该策略执行失败: {result.get('error')}")
+        return
+
     # 显示总体得分
     total_score = result.get('total_score', 0)
-    max_score = len(_get_eval_questions_list())
-    score_percentage = (total_score / max_score) * 100
+    total_questions = result.get('total_questions', 0)
+    score_percentage = (total_score / total_questions) * 100 if total_questions > 0 else 0
     
-    st.metric("总体得分", f"{total_score}/{max_score}", f"{score_percentage:.1f}%")
+    st.metric("总体得分", f"{total_score}/{total_questions}", f"{score_percentage:.1f}%")
     
     # 显示各类型得分
     type_scores = result.get('type_scores', {})
@@ -1181,13 +1268,13 @@ def show_evaluation_results():
             st.write(f"- **{eval_type}：** {score_info['correct']}/{score_info['total']} ({score_info['percentage']:.1f}%)")
     
     # 显示详细答题结果
-    with st.expander("📝 详细答题结果"):
+    with st.expander("📝 详细答题结果", expanded=True):
         answers = result.get('answers', [])
         for i, answer_info in enumerate(answers, 1):
-            question = answer_info['question']
-            ai_answer = answer_info['ai_answer']
-            correct_answer = answer_info['correct_answer']
-            is_correct = answer_info['is_correct']
+            question = answer_info.get('question', '')
+            ai_answer = answer_info.get('ai_answer', '')
+            correct_answer = answer_info.get('correct_answer', '')
+            is_correct = answer_info.get('is_correct', False)
             ai_exp = answer_info.get('ai_explanation') or ""
             
             status_icon = "✅" if is_correct else "❌"
@@ -1197,7 +1284,7 @@ def show_evaluation_results():
                 st.write(f"AI解释：{ai_exp}")
     
     # 重新评估按钮
-    if st.button("🔄 重新评估"):
+    if st.button("🔄 重新评估", key=f"restart_{uuid.uuid4()}"):
         st.session_state.evaluation_result = None
         st.session_state.ai_answering = False
         st.session_state.show_evaluation = False
@@ -1292,4 +1379,5 @@ def main():
         st.rerun()  # 重新运行页面
 
 if __name__ == "__main__":
+    import uuid
     main()

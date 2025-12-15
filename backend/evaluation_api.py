@@ -39,6 +39,7 @@ class EvaluationRequestModel(BaseModel):
     questions: List[Dict[str, Any]]
     exploration_data: ExplorationDataModel
     model_provider: str = "qwen"
+    strategies: Optional[List[str]] = None
 
 @router.post("/start")
 async def start_evaluation(request: EvaluationRequestModel):
@@ -193,7 +194,8 @@ async def start_evaluation(request: EvaluationRequestModel):
         await evaluation_agent.initialize(
             questions=request.questions,
             exploration_data={"context_text": ctx, "context_mode": mode, "prompt_rules": prompt_rules},
-            model_provider=request.model_provider
+            model_provider=request.model_provider,
+            strategies=request.strategies
         )
         
         # 异步启动评估过程，不等待完成

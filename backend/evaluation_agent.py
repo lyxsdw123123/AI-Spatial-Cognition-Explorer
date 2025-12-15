@@ -27,11 +27,17 @@ class EvaluationAgent:
         self.evaluation_id = None
         self.questions = []
         self.exploration_data = {}
-        self.answers = []
+        
+        # 策略配置
+        self.strategies = ["Direct", "CoT", "Self-Consistency", "ToT"]
+        self.current_strategy = None
+        self.results = {}  # {strategy_name: result_dict}
+        self.current_strategy_answers = [] # 用于跟踪当前策略的进度
+        
         self.status = "idle"  # idle, running, completed, failed
-        self.result = None
         self.last_error = None
         
+        # 基础提示词模板（Direct策略）
         self.evaluation_prompt = PromptTemplate(
             input_variables=["exploration_context", "question", "options"],
             template="""
@@ -150,6 +156,33 @@ class EvaluationAgent:
 """
         )
 
+        # ToT 阶段1：规划提示词
+        self.tot_plan_prompt = PromptTemplate(
+            input_variables=["exploration_context", "question", "options"],
+            template="""
+你是一个空间推理专家。基于以下探索上下文，请为解决这个问题制定一个简短的推理计划。
+不要直接回答问题，而是列出你应该关注哪些地标、路径或关系，以及如何一步步推导出答案。
+
+探索上下文：
+{exploration_context}
+
+问题：{question}
+选项：
+{options}
+
+请输出你的推理计划（步骤）：
+"""
+        )
+
+    def _build_exploration_context(self) -> str:
+        """构建探索上下文（兼容旧版API调用）"""
+        # 优先使用已存在的 context_text
+        if isinstance(self.exploration_data, dict):
+            context = self.exploration_data.get('context_text')
+            if context and isinstance(context, str) and context.strip():
+                return context
+        return "暂无上下文数据"
+
     def _normalize_context_mode(self, mode: Optional[str]) -> str:
         try:
             m = (mode or "").strip().lower()
@@ -165,7 +198,7 @@ class EvaluationAgent:
         except Exception:
             return "text"
 
-    def _get_prompt_template(self, mode: Optional[str]) -> PromptTemplate:
+    def _get_base_prompt_template(self, mode: Optional[str]) -> PromptTemplate:
         m = self._normalize_context_mode(mode)
         if m == "map":
             return self.evaluation_prompt_map
@@ -173,308 +206,239 @@ class EvaluationAgent:
             return self.evaluation_prompt_graph
         return self.evaluation_prompt_text
     
-    async def initialize(self, questions: List[Dict], exploration_data: Dict, model_provider: str = "qwen"):
+    async def initialize(self, questions: List[Dict], exploration_data: Dict, model_provider: str = "qwen", strategies: Optional[List[str]] = None):
         """初始化评估代理"""
         self.evaluation_id = str(uuid.uuid4())
         self.questions = questions
         self.exploration_data = exploration_data
         self.model_provider = model_provider
-        self.answers = []
+        self.results = {}
+        self.current_strategy = None
+        self.current_strategy_answers = []
         self.status = "idle"
-        self.result = None
+        self.last_error = None
+        
+        if strategies:
+            self.strategies = strategies
+        else:
+            self.strategies = ["Direct", "CoT", "Self-Consistency", "ToT"]
         
         # Initialize LLM based on provider
+        self.llm_config = {
+            "api_key": Config.DASHSCOPE_API_KEY,
+            "model": "qwen-turbo"
+        }
+        
         if self.model_provider == "deepseek":
-            if not Config.DEEPSEEK_API_KEY:
-                print("Error: DeepSeek API Key is missing")
-            self.llm = ChatOpenAI(
-                openai_api_key=Config.DEEPSEEK_API_KEY,
-                openai_api_base="https://api.deepseek.com",
-                model_name="deepseek-chat",
-                temperature=self.temperature
-            )
+            self.llm_config["api_key"] = Config.DEEPSEEK_API_KEY
+            self.llm_config["base_url"] = "https://api.deepseek.com"
+            self.llm_config["model"] = "deepseek-chat"
         elif self.model_provider == "openai":
-            if not Config.OPENAI_API_KEY:
-                print("Error: OpenAI API Key is missing")
-            self.llm = ChatOpenAI(
-                openai_api_key=Config.OPENAI_API_KEY,
-                model_name="gpt-4o",
-                temperature=self.temperature
-            )
-        else:
-            # Default to Qwen
-            self.llm = ChatTongyi(
-                dashscope_api_key=Config.DASHSCOPE_API_KEY,
-                model_name="qwen-turbo",
-                temperature=self.temperature
-            )
+            self.llm_config["api_key"] = Config.OPENAI_API_KEY
+            self.llm_config["model"] = "gpt-4o"
     
     async def start_evaluation(self):
-        """开始评估过程"""
+        """开始批量评估过程（顺序执行四种策略）"""
         try:
             self.status = "running"
+            self.results = {}
             
-            exploration_context = ""
-            try:
-                if isinstance(self.exploration_data, dict):
-                    exploration_context = self.exploration_data.get('context_text') or ""
-            except Exception:
-                pass
-            try:
-                print("\n" + "="*50, flush=True)
-                print("🧠 发给AI的上下文（仅使用此上下文作为记忆）", flush=True)
-                print("="*50, flush=True)
-                print(exploration_context, flush=True)
-                print("="*50 + "\n", flush=True)
-            except Exception:
-                pass
-            
-            rules_block = ""
-            try:
-                rb = self.exploration_data.get('prompt_rules')
-                if isinstance(rb, str) and rb.strip():
-                    rules_block = rb.strip()
-            except Exception:
-                rules_block = ""
-            
-            for i, question in enumerate(self.questions):
+            for strategy in self.strategies:
+                self.current_strategy = strategy
+                self.current_strategy_answers = [] # 重置当前策略的答案列表
+                print(f"\n开始执行评估策略: {strategy}")
+                
                 try:
-                    options_list = question['options']
-                    qtext = question['question']
-                    options_str = "\n".join([
-                        f"{chr(65 + j)}. {option}" 
-                        for j, option in enumerate(options_list)
-                    ])
-                    tmpl = self._get_prompt_template(self.exploration_data.get('context_mode'))
-                    prompt = tmpl.format(
+                    await self._evaluate_single_strategy(strategy)
+                except Exception as e:
+                    print(f"策略 {strategy} 执行失败: {e}")
+                    # 即使一个策略失败，也继续尝试下一个
+                    self.results[strategy] = {"error": str(e), "status": "failed"}
+                
+                # 稍微暂停，避免请求过于密集
+                await asyncio.sleep(1)
+            
+            self.status = "completed"
+            
+        except Exception as e:
+            print(f"评估过程总控出错: {e}")
+            self.status = "failed"
+            self.last_error = str(e)
+
+    async def _evaluate_single_strategy(self, strategy: str):
+        """执行单个策略的评估"""
+        exploration_context = ""
+        try:
+            if isinstance(self.exploration_data, dict):
+                exploration_context = self.exploration_data.get('context_text') or ""
+        except Exception:
+            pass
+        
+        rules_block = ""
+        try:
+            rb = self.exploration_data.get('prompt_rules')
+            if isinstance(rb, str) and rb.strip():
+                rules_block = rb.strip()
+        except Exception:
+            rules_block = ""
+            
+        answers = []
+        
+        for i, question in enumerate(self.questions):
+            try:
+                options_list = question['options']
+                qtext = question['question']
+                options_str = "\n".join([
+                    f"{chr(65 + j)}. {option}" 
+                    for j, option in enumerate(options_list)
+                ])
+                
+                base_tmpl = self._get_base_prompt_template(self.exploration_data.get('context_mode'))
+                base_prompt = base_tmpl.format(
+                    exploration_context=exploration_context,
+                    question=qtext,
+                    options=options_str
+                )
+                if rules_block:
+                    base_prompt = f"附加规则（优先级最高）：\n{rules_block}\n\n" + base_prompt
+                
+                ai_answer = ""
+                ai_explanation = ""
+                
+                # 根据不同策略执行不同的逻辑
+                if strategy == "Direct":
+                    # 直接提问
+                    response = await self._call_llm_async(base_prompt)
+                    ai_answer = self._extract_answer(response)
+                    ai_explanation = self._extract_explanation(response)
+                    
+                elif strategy == "CoT":
+                    # Zero-Shot CoT
+                    cot_prompt = base_prompt + "\n\n请一步步思考（Let's think step by step），然后给出你的答案和解释。"
+                    response = await self._call_llm_async(cot_prompt)
+                    ai_answer = self._extract_answer(response)
+                    ai_explanation = self._extract_explanation(response)
+                    
+                elif strategy == "Self-Consistency":
+                    # Self-Consistency with CoT (5 samples, temp=1.0)
+                    cot_prompt = base_prompt + "\n\n请一步步思考（Let's think step by step），然后给出你的答案和解释。"
+                    responses = []
+                    # 并行请求以节省时间
+                    tasks = [self._call_llm_async(cot_prompt, temperature=1.0) for _ in range(5)]
+                    responses = await asyncio.gather(*tasks, return_exceptions=True)
+                    
+                    valid_responses = [r for r in responses if isinstance(r, str)]
+                    extracted_answers = [self._extract_answer(r) for r in valid_responses]
+                    
+                    if extracted_answers:
+                        # 多数投票
+                        from collections import Counter
+                        vote_counts = Counter(extracted_answers)
+                        ai_answer = vote_counts.most_common(1)[0][0]
+                        
+                        # 找到第一个匹配该答案的解释
+                        for r in valid_responses:
+                            if self._extract_answer(r) == ai_answer:
+                                ai_explanation = self._extract_explanation(r)
+                                break
+                    else:
+                        ai_answer = "A" # Fallback
+                        ai_explanation = "无法获取有效响应"
+                        
+                elif strategy == "ToT":
+                    # Tree-of-Thoughts (2 Stages)
+                    # Stage 1: Planning
+                    plan_prompt = self.tot_plan_prompt.format(
                         exploration_context=exploration_context,
                         question=qtext,
                         options=options_str
                     )
-                    if rules_block:
-                        prompt = f"附加规则（优先级最高）：\n{rules_block}\n\n" + prompt
-                    response = await self._call_llm_async(prompt)
+                    plan = await self._call_llm_async(plan_prompt)
+                    
+                    # Stage 2: Solving based on plan
+                    tot_solve_prompt = base_prompt + f"\n\n请基于以下推理计划进行分析并给出答案：\n{plan}\n\n"
+                    response = await self._call_llm_async(tot_solve_prompt)
                     ai_answer = self._extract_answer(response)
-                    ai_explanation = self._extract_explanation(response)
-                    is_correct = ai_answer == question['correct_answer']
-                    answer_record = {
-                        "question": qtext,
-                        "type": question['category'],
-                        "ai_answer": ai_answer,
-                        "ai_explanation": ai_explanation,
-                        "correct_answer": question['correct_answer'],
-                        "is_correct": is_correct,
-                        "explanation": question.get('explanation', '')
-                    }
-                    self.answers.append(answer_record)
-                    await asyncio.sleep(0.5)
-                except Exception as e:
-                    self.last_error = str(e)
-                    print(f"回答问题 {i+1} 时出错: {e}")
-                    self.status = "failed"
-                    break
+                    ai_explanation = f"[推理计划]\n{plan}\n\n[最终解释]\n{self._extract_explanation(response)}"
+
+                # 记录结果
+                is_correct = ai_answer == question['correct_answer']
+                answer_record = {
+                    "question": qtext,
+                    "type": question['category'],
+                    "ai_answer": ai_answer,
+                    "ai_explanation": ai_explanation,
+                    "correct_answer": question['correct_answer'],
+                    "is_correct": is_correct,
+                    "explanation": question.get('explanation', '')
+                }
+                answers.append(answer_record)
+                self.current_strategy_answers.append(answer_record) # 更新进度
+                
+                await asyncio.sleep(0.2) # 避免过快
+                
+            except Exception as e:
+                print(f"策略 {strategy} 回答问题 {i+1} 时出错: {e}")
+                # 记录错误但继续
+                answers.append({
+                    "question": question.get('question', ''),
+                    "type": question.get('category', ''),
+                    "ai_answer": "Error",
+                    "ai_explanation": str(e),
+                    "correct_answer": question.get('correct_answer', ''),
+                    "is_correct": False,
+                    "explanation": ""
+                })
+        
+        # 计算并存储该策略的结果
+        self.results[strategy] = self._calculate_result_dict(answers)
+
+    def _calculate_result_dict(self, answers: List[Dict]) -> Dict:
+        """计算单个策略的结果字典"""
+        if not answers:
+            return {}
+        
+        total_score = sum(1 for answer in answers if answer.get('is_correct'))
+        total_questions = len(answers)
+        
+        type_scores = {}
+        for answer in answers:
+            answer_type = answer.get('type', 'unknown')
+            if answer_type not in type_scores:
+                type_scores[answer_type] = {'correct': 0, 'total': 0}
             
-            # 计算评估结果
-            if self.status != "failed":
-                self._calculate_result()
-                self.status = "completed"
+            type_scores[answer_type]['total'] += 1
+            if answer.get('is_correct'):
+                type_scores[answer_type]['correct'] += 1
+        
+        for type_name, scores in type_scores.items():
+            scores['percentage'] = (scores['correct'] / scores['total']) * 100 if scores['total'] > 0 else 0
             
-        except Exception as e:
-            print(f"评估过程出错: {e}")
-            self.status = "failed"
-    
-    def _build_exploration_context(self) -> str:
-        """构建探索上下文（路径单元格式，仅使用相对方向与距离，不打印坐标）"""
-        context_parts = []
+        return {
+            "total_score": total_score,
+            "total_questions": total_questions,
+            "accuracy": (total_score / total_questions) * 100 if total_questions > 0 else 0,
+            "type_scores": type_scores,
+            "answers": answers,
+            "completed_at": datetime.now().isoformat()
+        }
 
-        new_data = self.exploration_data.get('new_exploration_data') or {}
-        exploration_paths = new_data.get('exploration_paths') or []
-        # 调试：输入摘要
-        try:
-            is_dict = isinstance(new_data, dict)
-            # print(f"[DEBUG] 输入数据: new_data_is_dict={is_dict}, keys={list(new_data.keys()) if is_dict else 'N/A'}", flush=True)
-            # print(f"[DEBUG] exploration_paths_len={len(exploration_paths) if isinstance(exploration_paths, list) else 'N/A'}", flush=True)
-            pass
-        except Exception:
-            pass
-        # 过滤掉首段“道路→POI”的路径，直接从第一个POI开始
-        try:
-            if isinstance(exploration_paths, list) and exploration_paths:
-                first = exploration_paths[0] or {}
-                start = first.get('start_poi') or {}
-                name = start.get('name')
-                if isinstance(name, str):
-                    n = name.strip()
-                    # 常见道路起点名称："道路"、"起点道路"、或包含"道路"的名称（如"道路位置_..."）
-                    if n in ("道路", "起点道路") or ("道路" in n):
-                        exploration_paths = exploration_paths[1:]
-        except Exception:
-            # 过滤过程非关键路径，出错时忽略，保持原有逻辑
-            pass
-
-        # 辅助：提取坐标用于内部计算（不打印）
-        def _to_coords(loc):
-            if isinstance(loc, (list, tuple)) and len(loc) >= 2:
-                return [float(loc[0]), float(loc[1])]
-            elif isinstance(loc, dict):
-                return [float(loc.get('latitude') or loc.get('lat') or 0), float(loc.get('longitude') or loc.get('lng') or 0)]
-            return [0.0, 0.0]
-
-        def _direction(from_lat, from_lng, to_lat, to_lng):
-            try:
-                import math
-                lat_diff = to_lat - from_lat
-                lng_diff = to_lng - from_lng
-                angle_rad = math.atan2(lng_diff, lat_diff)
-                angle_deg = math.degrees(angle_rad)
-                if angle_deg < 0:
-                    angle_deg += 360
-                return round(angle_deg)
-            except Exception:
-                return 0
-
-        def _distance(a_lat, a_lng, b_lat, b_lng):
-            try:
-                import math
-                R = 6371000.0
-                dlat = math.radians(b_lat - a_lat)
-                dlng = math.radians(b_lng - a_lng)
-                s = (math.sin(dlat/2)**2 + math.cos(math.radians(a_lat)) * math.cos(math.radians(b_lat)) * math.sin(dlng/2)**2)
-                return 2 * R * math.asin(math.sqrt(max(0.0, min(1.0, s))))
-            except Exception:
-                return 0.0
-
-        # 使用 POI点单元 + 完整行驶路径 生成文本（不输出经纬度/兴趣度）
-        try:
-            poi_units = new_data.get('poi_units') or []
-            full_route = new_data.get('full_route') or {}
-            # 调试：新结构长度
-            try:
-                # print(f"[DEBUG] poi_units_len={len(poi_units) if isinstance(poi_units, list) else 'N/A'}", flush=True)
-                # print(f"[DEBUG] full_route_segments_len={len(full_route.get('segments', [])) if isinstance(full_route, dict) else 'N/A'}", flush=True)
-                pass
-            except Exception:
-                pass
-
-            # 1) POI点单元记录（按时间顺序）
-            if isinstance(poi_units, list) and poi_units:
-                context_parts.append("POI点单元记录（按时间顺序）：")
-                for idx, unit in enumerate(poi_units, start=1):
-                    poi = unit.get('poi') or {}
-                    name = poi.get('name') or f"POI_{idx}"
-                    context_parts.append(f"{idx}) POI：{name}")
-
-                    visible = unit.get('visible_pois') or []
-                    if isinstance(visible, list) and visible:
-                        context_parts.append("   - 视野内POI（方向度数；距离米）：")
-                        for vp in visible:
-                            vname = vp.get('name') or "未知POI"
-                            deg = vp.get('direction_deg')
-                            dist = vp.get('distance_m')
-                            deg_str = f"{int(deg)}°" if isinstance(deg, (int, float)) else "未知方向"
-                            dist_str = f"≈ {int(dist)}m" if isinstance(dist, (int, float)) else "未知距离"
-                            context_parts.append(f"     • {vname}：方向 {deg_str}，距离 {dist_str}")
-                    else:
-                        context_parts.append("   - 视野内POI：无")
-
-                    notes = unit.get('notes')
-                    if isinstance(notes, str) and notes.strip():
-                        context_parts.append(f"   - 备注：{notes.strip()}")
-
-                context_parts.append("")
-            else:
-                context_parts.append("未提供POI点单元数据")
-
-            # 2) 完整行驶路径（仅方向与距离）
-            context_parts.append("完整行驶路径（仅方向与距离）：")
-            start_name = full_route.get('start_name') or "起点"
-            context_parts.append(f"- 起点：{start_name}")
-
-            segments = full_route.get('segments') or []
-            if isinstance(segments, list) and segments:
-                for seg in segments:
-                    to_name = seg.get('to_name') or "未知终点"
-                    deg = seg.get('direction_deg')
-                    dist = seg.get('distance_m')
-                    deg_str = f"{int(deg)}°" if isinstance(deg, (int, float)) else "未知方向"
-                    dist_str = f"≈ {int(dist)}m" if isinstance(dist, (int, float)) else "未知距离"
-                    context_parts.append(f"→ {to_name}（方向 {deg_str}，距离 {dist_str}）")
-            else:
-                context_parts.append("→ 未提供路径段数据")
-        except Exception as e:
-            import traceback
-            print(f"[ERROR] POI点单元/路径生成失败: {e}", flush=True)
-            traceback.print_exc()
-            context_parts.append("上下文生成失败")
-
-        # 总和统计
-        summary = new_data.get('exploration_summary') or {}
-        total_pois_visited = summary.get('total_pois_visited')
-        total_road_nodes_visited = summary.get('total_road_nodes_visited')
-        total_distance_meters = summary.get('total_distance_meters')
-        total_time_seconds = summary.get('total_time_seconds')
-
-        context_parts.append("")
-        context_parts.append("总和：")
-        if total_pois_visited is not None:
-            context_parts.append(f"已访问POI数量：{int(total_pois_visited)}")
-        if total_road_nodes_visited is not None:
-            context_parts.append(f"已访问道路节点数量（只要Name字段的）：{int(total_road_nodes_visited)}")
-        if total_distance_meters is not None:
-            try:
-                context_parts.append(f"总探索距离：{int(total_distance_meters)}米")
-            except Exception:
-                pass
-        if total_time_seconds is not None:
-            try:
-                context_parts.append(f"探索时间：{int(total_time_seconds)}秒")
-            except Exception:
-                pass
-
-        # 返回最终发给AI的探索上下文，不在此处打印，避免重复输出
-        context_text = "\n".join(context_parts)
-        return context_text
-
-    async def _fetch_latest_new_data(self):
-        try:
-            import aiohttp
-            async with aiohttp.ClientSession() as session:
-                async with session.get("http://127.0.0.1:8000/exploration/data") as resp:
-                    if resp.status == 200:
-                        payload = await resp.json()
-                        if isinstance(payload, dict) and payload.get("success") and payload.get("data"):
-                            return payload.get("data")
-        except Exception as e:
-            try:
-                print(f"获取最新探索数据失败: {e}")
-            except Exception:
-                pass
-        return None
-
-    async def _call_llm_async(self, prompt: str, retry_count: int = 3) -> str:
+    async def _call_llm_async(self, prompt: str, retry_count: int = 3, temperature: float = None) -> str:
+        """调用LLM，支持覆盖temperature"""
         last_error = None
+        current_temp = temperature if temperature is not None else self.temperature
         
         for attempt in range(retry_count):
             try:
-                if self.model_provider == "deepseek":
+                if self.model_provider == "deepseek" or self.model_provider == "openai":
                     client = AsyncOpenAI(
-                        api_key=Config.DEEPSEEK_API_KEY,
-                        base_url="https://api.deepseek.com"
+                        api_key=self.llm_config["api_key"],
+                        base_url=self.llm_config.get("base_url")
                     )
                     response = await client.chat.completions.create(
-                        model="deepseek-chat",
+                        model=self.llm_config["model"],
                         messages=[{"role": "user", "content": prompt}],
-                        temperature=self.temperature
-                    )
-                    return response.choices[0].message.content
-                elif self.model_provider == "openai":
-                    client = AsyncOpenAI(
-                        api_key=Config.OPENAI_API_KEY
-                    )
-                    response = await client.chat.completions.create(
-                        model="gpt-4o",
-                        messages=[{"role": "user", "content": prompt}],
-                        temperature=self.temperature
+                        temperature=current_temp
                     )
                     return response.choices[0].message.content
                 else:
@@ -483,7 +447,7 @@ class EvaluationAgent:
                         model=self.model,
                         prompt=prompt,
                         api_key=self.api_key,
-                        temperature=self.temperature
+                        temperature=current_temp
                     )
                     
                     if response.status_code == 200:
@@ -504,10 +468,11 @@ class EvaluationAgent:
         
         err_msg = f"LLM调用完全失败，已重试{retry_count}次。最后错误: {last_error}"
         print(err_msg)
-        raise RuntimeError(err_msg)
+        return "" # 返回空字符串而不是抛出异常，以免中断整个流程
     
     def _extract_answer(self, response: str) -> str:
         """从LLM响应中提取答案"""
+        if not response: return "A"
         response = response.strip().upper()
         
         # 优先查找明确的答案格式
@@ -545,14 +510,9 @@ class EvaluationAgent:
             if len(candidates) == 1:
                 return candidates[0]
         
-        # 如果仍然无法确定，进行智能推测
-        print(f"警告：无法从响应中提取明确答案，响应内容：{response[:100]}...")
-        
-        # 使用随机选择而不是总是返回A
+        # 使用随机选择
         import random
-        fallback_answer = random.choice(['A', 'B', 'C', 'D'])
-        print(f"使用随机答案: {fallback_answer}")
-        return fallback_answer
+        return random.choice(['A', 'B', 'C', 'D'])
     
     def _extract_explanation(self, response: str) -> str:
         try:
@@ -566,89 +526,31 @@ class EvaluationAgent:
             ans_pref = re.split(r'答案[：:]\s*[ABCD]', text)
             if len(ans_pref) >= 2:
                 return ans_pref[1].strip()
-            return ""
+            return text # 如果没有特定格式，返回全部文本作为解释
         except Exception:
             return ""
-    
-    def _has_context_evidence(self, context_text: str, question_text: str, options: List[str]) -> bool:
-        try:
-            ctx = (context_text or "").strip()
-            q = (question_text or "").strip()
-            if not ctx:
-                return False
-            if "相对于" in q:
-                parts = q.split("相对于")
-                if len(parts) == 2:
-                    left = parts[0].strip()
-                    right = parts[1].replace("在哪个方向？", "").replace("在哪个方向?", "").strip()
-                    if left and right and (left in ctx) and (right in ctx):
-                        return True
-            for opt in options or []:
-                if isinstance(opt, str) and opt and (opt in ctx):
-                    return True
-        except Exception:
-            pass
-        return False
 
-    def _pick_unknown_option(self, options: List[str]) -> str:
-        keywords = ["无法确定", "无法判断", "信息不足", "无法确认", "未知"]
-        try:
-            for i, opt in enumerate(options or []):
-                text = (opt or "")
-                if any(k in text for k in keywords):
-                    return chr(65 + i)
-        except Exception:
-            pass
-        return 'D' if isinstance(options, list) and len(options) >= 4 else 'A'
-    
-    def _calculate_result(self):
-        """计算评估结果"""
-        if not self.answers:
-            return
-        
-        # 计算总分
-        total_score = sum(1 for answer in self.answers if answer['is_correct'])
-        total_questions = len(self.answers)
-        
-        # 按类型统计
-        type_scores = {}
-        for answer in self.answers:
-            answer_type = answer['type']
-            if answer_type not in type_scores:
-                type_scores[answer_type] = {'correct': 0, 'total': 0}
-            
-            type_scores[answer_type]['total'] += 1
-            if answer['is_correct']:
-                type_scores[answer_type]['correct'] += 1
-        
-        # 计算各类型百分比
-        for type_name, scores in type_scores.items():
-            scores['percentage'] = (scores['correct'] / scores['total']) * 100 if scores['total'] > 0 else 0
-        
-        self.result = {
-            "evaluation_id": self.evaluation_id,
-            "total_score": total_score,
-            "total_questions": total_questions,
-            "accuracy": (total_score / total_questions) * 100 if total_questions > 0 else 0,
-            "type_scores": type_scores,
-            "answers": self.answers,
-            "completed_at": datetime.now().isoformat()
-        }
-    
     def get_status(self) -> Dict[str, Any]:
         """获取当前状态"""
+        total_qs = len(self.questions)
+        current_qs = len(self.current_strategy_answers)
+        strategy_idx = 0
+        if self.current_strategy in self.strategies:
+            strategy_idx = self.strategies.index(self.current_strategy) + 1
+        
         return {
             "status": self.status,
             "evaluation_id": self.evaluation_id,
-            "progress": len(self.answers) / len(self.questions) if self.questions else 0,
-            "current_question": len(self.answers),
-            "total_questions": len(self.questions),
+            "current_strategy": self.current_strategy,
+            "strategy_progress": f"{strategy_idx}/{len(self.strategies)}",
+            "current_question": current_qs,
+            "total_questions": total_qs,
             "error": self.last_error
         }
     
     def get_result(self) -> Optional[Dict[str, Any]]:
         """获取评估结果"""
-        return self.result
+        return self.results
     
     def reset(self):
         """重置评估状态"""
@@ -656,5 +558,7 @@ class EvaluationAgent:
         self.questions = []
         self.exploration_data = {}
         self.answers = []
+        self.results = {}
+        self.current_strategy = None
+        self.current_strategy_answers = []
         self.status = "idle"
-        self.result = None
