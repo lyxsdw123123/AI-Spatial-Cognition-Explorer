@@ -50,6 +50,7 @@ explorer_agent = ExplorerAgent()
 map_service_manager = MapServiceManager()
 local_data_service = LocalDataService()
 connected_clients = set()
+current_exploration_task = None
 
 # 数据模型
 class LocationModel(BaseModel):
@@ -317,7 +318,8 @@ async def start_exploration(payload: Dict = None):
             return {"success": False, "message": "探索已在进行中"}
         
         # 在后台启动探索任务
-        asyncio.create_task(exploration_task())
+        global current_exploration_task
+        current_exploration_task = asyncio.create_task(exploration_task())
         
         return {
             "success": True,
@@ -347,6 +349,18 @@ async def stop_exploration():
         # print("正在停止探索...")
         report = explorer_agent.stop_exploration()
         # print(f"探索已停止，生成报告: {report}")
+
+        # 立即取消正在运行的探索任务（停止LLM思维链）
+        global current_exploration_task
+        if current_exploration_task and not current_exploration_task.done():
+            print("正在取消探索任务以停止LLM思维链...", flush=True)
+            current_exploration_task.cancel()
+            try:
+                await current_exploration_task
+            except asyncio.CancelledError:
+                print("探索任务已成功取消", flush=True)
+            except Exception as e:
+                print(f"取消探索任务时出错: {e}", flush=True)
         
         # 新增：打印探索上下文到终端
         try:
@@ -2322,6 +2336,8 @@ async def exploration_task():
     """探索任务"""
     try:
         await explorer_agent.start_exploration()
+    except asyncio.CancelledError:
+        print("探索任务已被取消 (LLM思维链停止)")
     except Exception as e:
         print(f"探索任务出错：{e}")
         await manager.broadcast(json.dumps({

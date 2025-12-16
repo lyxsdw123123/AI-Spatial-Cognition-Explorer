@@ -597,7 +597,16 @@ class EvaluationAgent:
     
     def get_result(self) -> Optional[Dict[str, Any]]:
         """获取评估结果"""
-        return self.results
+        if not self.results:
+            return self.results
+            
+        # 返回结果副本并注入上下文信息
+        final_result = self.results.copy()
+        if self.exploration_data and isinstance(self.exploration_data, dict):
+            final_result['context_text'] = self.exploration_data.get('context_text')
+            final_result['context_mode'] = self.exploration_data.get('context_mode')
+            
+        return final_result
     
     def reset(self):
         """重置评估状态"""

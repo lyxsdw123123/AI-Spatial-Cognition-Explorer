@@ -70,6 +70,8 @@ if 'selected_memory_mode' not in st.session_state:
     st.session_state.selected_memory_mode = '普通'
 if 'selected_memory_mode_backend' not in st.session_state:
     st.session_state.selected_memory_mode_backend = 'context'
+if 'evaluation_context_text' not in st.session_state:
+    st.session_state.evaluation_context_text = None
 
 # 后端API基础URL
 BACKEND_URL = f"http://{Config.BACKEND_HOST}:{Config.BACKEND_PORT}"
@@ -935,6 +937,17 @@ def generate_report_text(results: Dict) -> str:
             lines.append("")
             
         lines.append("=" * 50)
+    
+    # 添加探索上下文
+    # 优先从results获取（后端返回的真实上下文），其次尝试session_state
+    context_text = results.get('context_text') or st.session_state.get('evaluation_context_text')
+    if context_text:
+        lines.append("\n")
+        lines.append("=" * 50)
+        lines.append("🧠 探索上下文")
+        lines.append("=" * 50)
+        lines.append(context_text)
+        lines.append("=" * 50)
         
     return "\n".join(lines)
 
@@ -1083,6 +1096,7 @@ def start_ai_evaluation(strategies: List[str] = None):
                 lines.append("[回答规则]\n1) 仅使用图连通性与POI相对关系\n2) 路径比较按edges的length_m累加\n3) 方向使用direction_deg\n4) 输出不引入未提供字段")
                 evaluation_data["exploration_data"]["context_text"] = "\n".join(lines)
                 evaluation_data["exploration_data"]["context_mode"] = "graph"
+                st.session_state.evaluation_context_text = "\n".join(lines)
             elif mode == "map":
                 m = call_backend_api("/memory/map", "GET")
                 snap = m.get("data") if (m and m.get("success")) else {}
@@ -1103,6 +1117,7 @@ def start_ai_evaluation(strategies: List[str] = None):
                 lines.append("[回答规则]\n1) 仅使用(i,j)与cells\n2) 连通以cells为道路\n3) 相对位置以栅格差值\n4) 输出不引入未提供字段")
                 evaluation_data["exploration_data"]["context_text"] = "\n".join(lines)
                 evaluation_data["exploration_data"]["context_mode"] = "map"
+                st.session_state.evaluation_context_text = "\n".join(lines)
     except Exception:
         pass
     
@@ -1162,6 +1177,7 @@ def start_ai_evaluation(strategies: List[str] = None):
                     lines.append(f"探索时间：{int(sm.get('total_time_seconds'))}秒")
                 evaluation_data["exploration_data"]["context_text"] = "\n".join(lines)
                 evaluation_data["exploration_data"]["context_mode"] = "context"
+                st.session_state.evaluation_context_text = "\n".join(lines)
     except Exception:
         pass
     result = call_backend_api("/evaluation/start", "POST", evaluation_data)
