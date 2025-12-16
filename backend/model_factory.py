@@ -1,8 +1,5 @@
 from langchain_openai import ChatOpenAI
 from langchain_community.chat_models import ChatTongyi
-from backend.custom_zhipu import CustomChatZhipuAI
-from langchain_anthropic import ChatAnthropic
-from langchain_google_genai import ChatGoogleGenerativeAI
 from config.config import Config
 
 class ModelFactory:
@@ -24,7 +21,7 @@ class ModelFactory:
                  raise ValueError("DashScope API Key is missing. Please configure DASHSCOPE_API_KEY.")
             return ChatTongyi(
                 dashscope_api_key=Config.DASHSCOPE_API_KEY,
-                model_name="qwen-turbo", # or qwen-max
+                model_name="qwen-max-latest", # or qwen-max
                 **common_kwargs
             )
             
@@ -33,7 +30,7 @@ class ModelFactory:
                 raise ValueError("OpenAI API Key is missing. Please configure OPENAI_API_KEY.")
             return ChatOpenAI(
                 openai_api_key=Config.OPENAI_API_KEY,
-                model_name="gpt-4o",
+                model_name="gpt-5.2",
                 **common_kwargs
             )
             
@@ -48,30 +45,32 @@ class ModelFactory:
             )
             
         elif provider == "claude":
-            if not Config.ANTHROPIC_API_KEY:
-                 raise ValueError("Anthropic API Key is missing. Please configure ANTHROPIC_API_KEY.")
-            return ChatAnthropic(
-                anthropic_api_key=Config.ANTHROPIC_API_KEY,
-                model_name="claude-3-sonnet-20240229",
+            if not Config.OPENROUTER_API_KEY:
+                 raise ValueError("OpenRouter API Key is missing. Please configure OPENROUTER_API_KEY.")
+            return ChatOpenAI(
+                openai_api_key=Config.OPENROUTER_API_KEY,
+                openai_api_base="https://openrouter.ai/api/v1",
+                model_name="anthropic/claude-sonnet-4.5",
                 **common_kwargs
             )
             
         elif provider == "gemini":
-            if not Config.GOOGLE_API_KEY:
-                 raise ValueError("Google API Key is missing. Please configure GOOGLE_API_KEY.")
-            return ChatGoogleGenerativeAI(
-                google_api_key=Config.GOOGLE_API_KEY,
-                model="gemini-pro",
-                convert_system_message_to_human=True, # 解决一些模型对System Message支持的问题
+            if not Config.OPENROUTER_API_KEY:
+                 raise ValueError("OpenRouter API Key is missing. Please configure OPENROUTER_API_KEY.")
+            return ChatOpenAI(
+                openai_api_key=Config.OPENROUTER_API_KEY,
+                openai_api_base="https://openrouter.ai/api/v1",
+                model_name="google/gemini-2.5-pro",
                 **common_kwargs
             )
             
         elif provider == "zhipu":
-            if not Config.ZHIPUAI_API_KEY:
-                 raise ValueError("ZhipuAI API Key is missing. Please configure ZHIPUAI_API_KEY.")
-            return CustomChatZhipuAI(
-                api_key=Config.ZHIPUAI_API_KEY,
-                model_name="glm-4",
+            if not Config.OPENROUTER_API_KEY:
+                 raise ValueError("OpenRouter API Key is missing. Please configure OPENROUTER_API_KEY.")
+            return ChatOpenAI(
+                openai_api_key=Config.OPENROUTER_API_KEY,
+                openai_api_base="https://openrouter.ai/api/v1",
+                model_name="z-ai/glm-4.6",
                 **common_kwargs
             )
             

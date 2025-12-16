@@ -31,6 +31,7 @@ class Config:
     ZHIPUAI_API_KEY = os.getenv('ZHIPUAI_API_KEY', '')
     GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY', '')
     ANTHROPIC_API_KEY = os.getenv('ANTHROPIC_API_KEY', '')
+    OPENROUTER_API_KEY = os.getenv('OPENROUTER_API_KEY', '')
     
     # AI探索配置
     AI_VISION_RADIUS = 1000  # AI视野半径（米）
@@ -68,6 +69,7 @@ class Config:
             'zhipuai_api_key': cls.ZHIPUAI_API_KEY,
             'google_api_key': cls.GOOGLE_API_KEY,
             'anthropic_api_key': cls.ANTHROPIC_API_KEY,
+            'openrouter_api_key': cls.OPENROUTER_API_KEY,
             'ai_vision_radius': cls.AI_VISION_RADIUS,
             'ai_move_speed': cls.AI_MOVE_SPEED,
             'ai_move_interval': cls.AI_MOVE_INTERVAL,
