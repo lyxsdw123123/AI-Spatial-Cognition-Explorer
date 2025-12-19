@@ -40,6 +40,9 @@ class ExplorerAgent:
         self.rounds_completed = 0
         self.ever_visited_pois = set()
         self.exploration_complete = False
+        self.poi_not_found_error_count = 0
+        self.max_poi_not_found_errors = 5
+        self.failed_poi_names = set()
         
         # Services
         self.path_memory = PathMemoryManager(data_dir="data/mental_maps")
@@ -62,6 +65,7 @@ class ExplorerAgent:
         
         # Model Settings
         self.model_provider = "qwen"  # qwen, deepseek, openai
+        self.exploration_mode = "随机POI探索"
         
         # LangChain Setup
         self.setup_agent()
@@ -77,6 +81,36 @@ class ExplorerAgent:
         self.llm = ModelFactory.create_model(self.model_provider)
         
         self.tools = get_exploration_tools(self)
+        
+        mode = (getattr(self, "exploration_mode", "") or "").strip()
+        m = mode.replace(" ", "")
+        mode_hint = ""
+        if "最近" in m:
+            mode_hint = (
+                "\nMode: Nearest-POI exploration."
+                " After each scan_environment call, you MUST choose the single nearest"
+                " unvisited visible POI as your next target and move there."
+                " Do not skip a closer unvisited POI in favour of a farther one."
+                " Never call explore_direction while any unvisited visible POIs exist."
+            )
+        elif "最短" in m:
+            mode_hint = (
+                "\nMode: Shortest-path exploration between POI pairs."
+                " Repeatedly do the following cycle:"
+                " (1) pick two distinct POIs (start and end), which you may choose randomly"
+                " from the currently visible or otherwise known POIs;"
+                " (2) plan a road-aware path that approximately minimises total travel distance"
+                " between them (using move_to_poi and any path-planning tools);"
+                " (3) follow that path step by step until you reach the end POI, then choose a new pair."
+                " In this mode, focus on path optimality between the chosen pair, rather than greedily"
+                " visiting whichever POI is locally nearest."
+            )
+        else:
+            mode_hint = (
+                "\nMode: Random exploration."
+                " You may choose among visible POIs or directions more freely,"
+                " while still respecting the basic rules above."
+            )
         
         prompt = ChatPromptTemplate.from_messages([
             ("system", """You are an AI explorer in a map environment.
@@ -94,8 +128,7 @@ Rules:
 3. If you see unvisited interesting POIs, you MUST visit them. Use 'move_to_poi' directly if close, or 'plan_path' if far/complex.
 4. Only use 'explore_direction' if 'scan_environment' returns NO interesting unvisited POIs.
 5. Do not visit the same POI twice unless absolutely necessary for navigation.
-6. Keep track of your exploration path and avoid backtracking unnecessarily.
-"""),
+6. Keep track of your exploration path and avoid backtracking unnecessarily.""" + mode_hint),
             ("user", "{input}"),
             MessagesPlaceholder(variable_name="agent_scratchpad"),
         ])
@@ -127,16 +160,20 @@ Rules:
                         local_data_service: Optional[Any] = None,
                         max_rounds: int = 1,
                         model_provider: str = "qwen"):
-        # Update model if changed
-        if model_provider != self.model_provider:
+        if model_provider != self.model_provider or exploration_mode != getattr(self, "exploration_mode", None):
             self.model_provider = model_provider
+            self.exploration_mode = exploration_mode
             self.setup_agent()
+        else:
+            self.exploration_mode = exploration_mode
 
         self.current_location = list(start_location)
         self.exploration_boundary = boundary
         self.use_local_data = use_local_data
         self.local_data_service = local_data_service
         self.max_exploration_rounds = max_rounds
+        self.poi_not_found_error_count = 0
+        self.failed_poi_names = set()
         self.path_memory.initialize(start_location, boundary, exploration_mode)
         self.raw_conversation_history = []  # 重置历史记录
         
@@ -266,18 +303,50 @@ Rules:
         """Logic for moving to POI"""
         self._current_action = f"Moving to {poi_name}"
         
-        # Find POI object
-        target_poi = None
-        for p in self.mental_map.get('available_pois', []):
-            if p.get('name') == poi_name:
-                target_poi = p
-                break
+        original_name = poi_name
+        base_name = poi_name.split(" (")[0].strip()
+        norm_input = self._normalize_poi_name(base_name)
         
-        if not target_poi:
-            return f"Error: POI '{poi_name}' not found in known map data."
-            
-        if target_poi['id'] in self.visited_pois:
-             return f"POI '{poi_name}' already visited."
+        if norm_input in self.failed_poi_names:
+            self.poi_not_found_error_count += 1
+            if self.poi_not_found_error_count >= self.max_poi_not_found_errors:
+                self.is_exploring = False
+                self._current_action = f"Stopped due to repeated unknown POI '{original_name}'"
+                return f"POI '{original_name}' not found repeatedly. Stopping exploration and proceeding to evaluation."
+            return f"Skipping move_to_poi: POI '{original_name}' is known to be missing. Consider choosing another target or changing direction."
+        
+        candidates = []
+        for p in self.mental_map.get('available_pois', []):
+            name = p.get('name')
+            if not name:
+                continue
+            if self._normalize_poi_name(name) == norm_input:
+                candidates.append(p)
+        
+        if candidates:
+            poi_name = base_name
+        if not candidates:
+            self.failed_poi_names.add(norm_input)
+            self.poi_not_found_error_count += 1
+            if self.poi_not_found_error_count >= self.max_poi_not_found_errors:
+                self.is_exploring = False
+                self._current_action = f"Stopped due to repeated unknown POIs (last: '{original_name}')"
+                return f"Error: POI '{original_name}' not found multiple times. Exploration stopped; proceed to evaluation."
+            return f"Error: POI '{original_name}' not found in known map data. Skipping move_to_poi."
+        
+        unvisited = [p for p in candidates if p.get('id') not in self.visited_pois]
+        if not unvisited:
+            return f"All POIs named '{poi_name}' are already visited. Choose another target or explore a direction instead."
+        
+        self.poi_not_found_error_count = 0
+        
+        def distance_to_poi(poi):
+            loc = poi.get('location')
+            if not isinstance(loc, (list, tuple)) or len(loc) < 2:
+                return float('inf')
+            return self.map_service.calculate_distance(self.current_location, loc)
+        
+        target_poi = min(unvisited, key=distance_to_poi)
 
         # Execute Move
         target_loc = target_poi['location'] # [lat, lng]
@@ -377,8 +446,14 @@ Rules:
 
     def tool_check_memory(self) -> str:
         return f"Visited {len(self.visited_pois)} POIs. Path length: {len(self.exploration_path)} points."
-
+    
     # ================= Helper Methods (Migrated) =================
+    
+    def _normalize_poi_name(self, name: str) -> str:
+        if not isinstance(name, str):
+            name = str(name)
+        name = name.replace("’", "'").replace("‘", "'").replace("`", "'")
+        return name.strip().lower()
     
     async def _load_boundary_pois(self):
         if not self.exploration_boundary:

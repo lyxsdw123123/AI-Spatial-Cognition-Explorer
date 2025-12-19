@@ -1,0 +1,37 @@
+.\.venv\Scripts\python nearest_3memory.py
+.\.venv\Scripts\python start_backend.py
+
+REGIONS = [
+    "上海外滩",
+    "伦敦大本钟",
+    "北京天安门",
+    "多伦多CN塔",
+    "巴黎埃菲尔铁塔",
+    "广州塔",
+    "旧金山联合广场",
+    "柏林勃兰登堡门",
+    "武汉黄鹤楼",
+    "洛杉矶好莱坞",
+    "纽约时代广场",
+    "维也纳美泉宫",
+    "罗马斗兽场",
+    "芝加哥千禧公园",
+    "长沙五一广场"
+]
+
+MODELS = [
+    "qwen",
+    "openai",
+    "deepseek",
+    "claude",
+    "gemini",
+    "zhipu"
+]
+
+MEMORY_MODES = [
+    "context",
+    "graph",
+    "map",
+]
+
+QUESTION_STRATEGIES = ["Direct", "CoT", "Self-Consistency", "ToT"]

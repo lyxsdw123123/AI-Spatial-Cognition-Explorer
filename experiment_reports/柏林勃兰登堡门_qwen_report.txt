@@ -1,0 +1,3476 @@
+{
+  "region": "柏林勃兰登堡门",
+  "model": "qwen",
+  "exploration_report": {
+    "exploration_path": [
+      {
+        "location": [
+          52.516353686723924,
+          13.379298184437697
+        ],
+        "timestamp": "2025-12-17T21:53:26.256532",
+        "action": "move_start",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Starbucks",
+          "target_location": [
+            52.51623457200003,
+            13.379164058000072
+          ]
+        }
+      },
+      {
+        "location": [
+          52.51623457200003,
+          13.379164058000072
+        ],
+        "timestamp": "2025-12-17T21:53:26.256532",
+        "action": "move_final_approach",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Starbucks",
+          "target_location": [
+            52.51623457200003,
+            13.379164058000072
+          ]
+        }
+      },
+      {
+        "location": [
+          52.51716767100004,
+          13.380214753000075
+        ],
+        "timestamp": "2025-12-17T21:53:33.353625",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Viale dei Tigli",
+          "target_location": [
+            52.51547774200003,
+            13.380161716000032
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          52.51641014100005,
+          13.38097248400004
+        ],
+        "timestamp": "2025-12-17T21:53:33.865404",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Viale dei Tigli",
+          "target_location": [
+            52.51547774200003,
+            13.380161716000032
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          52.51570750700006,
+          13.381115716000068
+        ],
+        "timestamp": "2025-12-17T21:53:34.378662",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Viale dei Tigli",
+          "target_location": [
+            52.51547774200003,
+            13.380161716000032
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          52.51552994200006,
+          13.381127925000044
+        ],
+        "timestamp": "2025-12-17T21:53:34.891476",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Viale dei Tigli",
+          "target_location": [
+            52.51547774200003,
+            13.380161716000032
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          52.51547774200003,
+          13.380161716000032
+        ],
+        "timestamp": "2025-12-17T21:53:35.390299",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Viale dei Tigli",
+          "target_location": [
+            52.51547774200003,
+            13.380161716000032
+          ],
+          "step_index": 5
+        }
+      },
+      {
+        "location": [
+          52.51552994200006,
+          13.381127925000044
+        ],
+        "timestamp": "2025-12-17T21:53:42.790459",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Hopfingerbräu im Palais",
+          "target_location": [
+            52.51716890000006,
+            13.377604400000052
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          52.51570750700006,
+          13.381115716000068
+        ],
+        "timestamp": "2025-12-17T21:53:43.294843",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Hopfingerbräu im Palais",
+          "target_location": [
+            52.51716890000006,
+            13.377604400000052
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          52.51641014100005,
+          13.38097248400004
+        ],
+        "timestamp": "2025-12-17T21:53:43.773683",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Hopfingerbräu im Palais",
+          "target_location": [
+            52.51716890000006,
+            13.377604400000052
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          52.51716767100004,
+          13.380214753000075
+        ],
+        "timestamp": "2025-12-17T21:53:44.286449",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Hopfingerbräu im Palais",
+          "target_location": [
+            52.51716890000006,
+            13.377604400000052
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          52.51797311900003,
+          13.380188579000048
+        ],
+        "timestamp": "2025-12-17T21:53:44.786685",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Hopfingerbräu im Palais",
+          "target_location": [
+            52.51716890000006,
+            13.377604400000052
+          ],
+          "step_index": 5
+        }
+      },
+      {
+        "location": [
+          52.51716890000006,
+          13.377604400000052
+        ],
+        "timestamp": "2025-12-17T21:53:45.287603",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Hopfingerbräu im Palais",
+          "target_location": [
+            52.51716890000006,
+            13.377604400000052
+          ],
+          "step_index": 6
+        }
+      },
+      {
+        "location": [
+          52.51544691300006,
+          13.377519719000077
+        ],
+        "timestamp": "2025-12-17T21:53:52.619942",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Commerzbank",
+          "target_location": [
+            52.51544691300006,
+            13.377519719000077
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          52.51550799700004,
+          13.375832976000027
+        ],
+        "timestamp": "2025-12-17T21:54:00.346441",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Maman",
+          "target_location": [
+            52.51464808600008,
+            13.379260010000053
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          52.51407437200004,
+          13.376671736000048
+        ],
+        "timestamp": "2025-12-17T21:54:00.856721",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Maman",
+          "target_location": [
+            52.51464808600008,
+            13.379260010000053
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          52.51440578000006,
+          13.378191231000073
+        ],
+        "timestamp": "2025-12-17T21:54:01.369688",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Maman",
+          "target_location": [
+            52.51464808600008,
+            13.379260010000053
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          52.51464808600008,
+          13.379260010000053
+        ],
+        "timestamp": "2025-12-17T21:54:01.867674",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Maman",
+          "target_location": [
+            52.51464808600008,
+            13.379260010000053
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          52.51382907200008,
+          13.380092038000043
+        ],
+        "timestamp": "2025-12-17T21:54:09.642189",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Alt-Berliner Wirtshaus",
+          "target_location": [
+            52.51382907200008,
+            13.380092038000043
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          52.51395575200007,
+          13.38107496400005
+        ],
+        "timestamp": "2025-12-17T21:54:17.105163",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Café Lebensart",
+          "target_location": [
+            52.51637449900005,
+            13.382759940000028
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          52.51469762600004,
+          13.380994487000066
+        ],
+        "timestamp": "2025-12-17T21:54:17.622888",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Café Lebensart",
+          "target_location": [
+            52.51637449900005,
+            13.382759940000028
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          52.51552994200006,
+          13.381127925000044
+        ],
+        "timestamp": "2025-12-17T21:54:18.122602",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Café Lebensart",
+          "target_location": [
+            52.51637449900005,
+            13.382759940000028
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          52.51570750700006,
+          13.381115716000068
+        ],
+        "timestamp": "2025-12-17T21:54:18.623813",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Café Lebensart",
+          "target_location": [
+            52.51637449900005,
+            13.382759940000028
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          52.51641014100005,
+          13.38097248400004
+        ],
+        "timestamp": "2025-12-17T21:54:19.124402",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Café Lebensart",
+          "target_location": [
+            52.51637449900005,
+            13.382759940000028
+          ],
+          "step_index": 5
+        }
+      },
+      {
+        "location": [
+          52.51637449900005,
+          13.382759940000028
+        ],
+        "timestamp": "2025-12-17T21:54:19.610245",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Café Lebensart",
+          "target_location": [
+            52.51637449900005,
+            13.382759940000028
+          ],
+          "step_index": 6
+        }
+      },
+      {
+        "location": [
+          52.516365947000054,
+          13.385232906000056
+        ],
+        "timestamp": "2025-12-17T21:54:29.572244",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "flamingo",
+          "target_location": [
+            52.51960268500005,
+            13.386150239000074
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          52.51960268500005,
+          13.386150239000074
+        ],
+        "timestamp": "2025-12-17T21:54:30.081972",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "flamingo",
+          "target_location": [
+            52.51960268500005,
+            13.386150239000074
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          52.51971845300005,
+          13.384437107000053
+        ],
+        "timestamp": "2025-12-17T21:54:42.336875",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Cinque",
+          "target_location": [
+            52.522871707000036,
+            13.38269903500003
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          52.52124899300003,
+          13.386130643000058
+        ],
+        "timestamp": "2025-12-17T21:54:42.862628",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Cinque",
+          "target_location": [
+            52.522871707000036,
+            13.38269903500003
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          52.52341954900004,
+          13.38605448100003
+        ],
+        "timestamp": "2025-12-17T21:54:43.365027",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Cinque",
+          "target_location": [
+            52.522871707000036,
+            13.38269903500003
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          52.522871707000036,
+          13.38269903500003
+        ],
+        "timestamp": "2025-12-17T21:54:43.877341",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Cinque",
+          "target_location": [
+            52.522871707000036,
+            13.38269903500003
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          52.52216737200007,
+          13.380123080000033
+        ],
+        "timestamp": "2025-12-17T21:54:54.355055",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Bistro im Haus der Bundespressekonferenz",
+          "target_location": [
+            52.522114257000055,
+            13.376658058000032
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          52.522114257000055,
+          13.376658058000032
+        ],
+        "timestamp": "2025-12-17T21:54:54.875396",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Bistro im Haus der Bundespressekonferenz",
+          "target_location": [
+            52.522114257000055,
+            13.376658058000032
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          52.52216737200007,
+          13.380123080000033
+        ],
+        "timestamp": "2025-12-17T21:55:05.008601",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Berlin Pavillon am Reichstag",
+          "target_location": [
+            52.51719779200005,
+            13.373319992000063
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          52.52046917400003,
+          13.379988110000056
+        ],
+        "timestamp": "2025-12-17T21:55:05.511311",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Berlin Pavillon am Reichstag",
+          "target_location": [
+            52.51719779200005,
+            13.373319992000063
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          52.51882434800007,
+          13.380139151000037
+        ],
+        "timestamp": "2025-12-17T21:55:06.026672",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Berlin Pavillon am Reichstag",
+          "target_location": [
+            52.51719779200005,
+            13.373319992000063
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          52.51797311900003,
+          13.380188579000048
+        ],
+        "timestamp": "2025-12-17T21:55:06.527790",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Berlin Pavillon am Reichstag",
+          "target_location": [
+            52.51719779200005,
+            13.373319992000063
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          52.51716890000006,
+          13.377604400000052
+        ],
+        "timestamp": "2025-12-17T21:55:07.043823",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Berlin Pavillon am Reichstag",
+          "target_location": [
+            52.51719779200005,
+            13.373319992000063
+          ],
+          "step_index": 5
+        }
+      },
+      {
+        "location": [
+          52.51725690100005,
+          13.375779438000052
+        ],
+        "timestamp": "2025-12-17T21:55:07.559782",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Berlin Pavillon am Reichstag",
+          "target_location": [
+            52.51719779200005,
+            13.373319992000063
+          ],
+          "step_index": 6
+        }
+      },
+      {
+        "location": [
+          52.51719779200005,
+          13.373319992000063
+        ],
+        "timestamp": "2025-12-17T21:55:08.074529",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Berlin Pavillon am Reichstag",
+          "target_location": [
+            52.51719779200005,
+            13.373319992000063
+          ],
+          "step_index": 7
+        }
+      },
+      {
+        "location": [
+          52.51725690100005,
+          13.375779438000052
+        ],
+        "timestamp": "2025-12-17T21:55:19.694008",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Café Lebensart",
+          "target_location": [
+            52.51142302900007,
+            13.376716000000044
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          52.51641564700003,
+          13.375792096000055
+        ],
+        "timestamp": "2025-12-17T21:55:20.202727",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Café Lebensart",
+          "target_location": [
+            52.51142302900007,
+            13.376716000000044
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          52.51635287400006,
+          13.375238677000027
+        ],
+        "timestamp": "2025-12-17T21:55:20.684629",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Café Lebensart",
+          "target_location": [
+            52.51142302900007,
+            13.376716000000044
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          52.51571080700006,
+          13.375166668000077
+        ],
+        "timestamp": "2025-12-17T21:55:21.199802",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Café Lebensart",
+          "target_location": [
+            52.51142302900007,
+            13.376716000000044
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          52.51550799700004,
+          13.375832976000027
+        ],
+        "timestamp": "2025-12-17T21:55:21.695604",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Café Lebensart",
+          "target_location": [
+            52.51142302900007,
+            13.376716000000044
+          ],
+          "step_index": 5
+        }
+      },
+      {
+        "location": [
+          52.51407437200004,
+          13.376671736000048
+        ],
+        "timestamp": "2025-12-17T21:55:22.195324",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Café Lebensart",
+          "target_location": [
+            52.51142302900007,
+            13.376716000000044
+          ],
+          "step_index": 6
+        }
+      },
+      {
+        "location": [
+          52.51306905000007,
+          13.376713377000044
+        ],
+        "timestamp": "2025-12-17T21:55:22.722091",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Café Lebensart",
+          "target_location": [
+            52.51142302900007,
+            13.376716000000044
+          ],
+          "step_index": 7
+        }
+      },
+      {
+        "location": [
+          52.51142302900007,
+          13.376716000000044
+        ],
+        "timestamp": "2025-12-17T21:55:23.216664",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Café Lebensart",
+          "target_location": [
+            52.51142302900007,
+            13.376716000000044
+          ],
+          "step_index": 8
+        }
+      },
+      {
+        "location": [
+          52.51046515400003,
+          13.376582856000027
+        ],
+        "timestamp": "2025-12-17T21:55:31.194229",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Saravanaa Bhavan",
+          "target_location": [
+            52.510523757000044,
+            13.374962132000064
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          52.510523757000044,
+          13.374962132000064
+        ],
+        "timestamp": "2025-12-17T21:55:31.702543",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Saravanaa Bhavan",
+          "target_location": [
+            52.510523757000044,
+            13.374962132000064
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          52.51046515400003,
+          13.376582856000027
+        ],
+        "timestamp": "2025-12-17T21:55:38.880016",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Lindenbräu",
+          "target_location": [
+            52.50979241300007,
+            13.37250093800003
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          52.51142302900007,
+          13.376716000000044
+        ],
+        "timestamp": "2025-12-17T21:55:39.354018",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Lindenbräu",
+          "target_location": [
+            52.50979241300007,
+            13.37250093800003
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          52.51306905000007,
+          13.376713377000044
+        ],
+        "timestamp": "2025-12-17T21:55:39.864784",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Lindenbräu",
+          "target_location": [
+            52.50979241300007,
+            13.37250093800003
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          52.51192556900003,
+          13.375500112000054
+        ],
+        "timestamp": "2025-12-17T21:55:40.351111",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Lindenbräu",
+          "target_location": [
+            52.50979241300007,
+            13.37250093800003
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          52.51137959000005,
+          13.372341433000031
+        ],
+        "timestamp": "2025-12-17T21:55:40.877417",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Lindenbräu",
+          "target_location": [
+            52.50979241300007,
+            13.37250093800003
+          ],
+          "step_index": 5
+        }
+      },
+      {
+        "location": [
+          52.50979241300007,
+          13.37250093800003
+        ],
+        "timestamp": "2025-12-17T21:55:41.390898",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Lindenbräu",
+          "target_location": [
+            52.50979241300007,
+            13.37250093800003
+          ],
+          "step_index": 6
+        }
+      },
+      {
+        "location": [
+          52.51137959000005,
+          13.372341433000031
+        ],
+        "timestamp": "2025-12-17T21:55:51.594787",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "eleven",
+          "target_location": [
+            52.50977395100006,
+            13.379257819000031
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          52.51192556900003,
+          13.375500112000054
+        ],
+        "timestamp": "2025-12-17T21:55:52.097717",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "eleven",
+          "target_location": [
+            52.50977395100006,
+            13.379257819000031
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          52.51306905000007,
+          13.376713377000044
+        ],
+        "timestamp": "2025-12-17T21:55:52.611314",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "eleven",
+          "target_location": [
+            52.50977395100006,
+            13.379257819000031
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          52.51142302900007,
+          13.376716000000044
+        ],
+        "timestamp": "2025-12-17T21:55:53.126078",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "eleven",
+          "target_location": [
+            52.50977395100006,
+            13.379257819000031
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          52.51046515400003,
+          13.376582856000027
+        ],
+        "timestamp": "2025-12-17T21:55:53.625565",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "eleven",
+          "target_location": [
+            52.50977395100006,
+            13.379257819000031
+          ],
+          "step_index": 5
+        }
+      },
+      {
+        "location": [
+          52.50960751800005,
+          13.376588835000064
+        ],
+        "timestamp": "2025-12-17T21:55:54.121700",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "eleven",
+          "target_location": [
+            52.50977395100006,
+            13.379257819000031
+          ],
+          "step_index": 6
+        }
+      },
+      {
+        "location": [
+          52.50977395100006,
+          13.379257819000031
+        ],
+        "timestamp": "2025-12-17T21:55:54.632404",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "eleven",
+          "target_location": [
+            52.50977395100006,
+            13.379257819000031
+          ],
+          "step_index": 7
+        }
+      },
+      {
+        "location": [
+          52.50977402640117,
+          13.380304538946886
+        ],
+        "timestamp": "2025-12-17T21:56:06.154765",
+        "action": "move_final_approach",
+        "decision": {
+          "action": "explore_direction",
+          "target": 45.0,
+          "reason": "No visible POIs nearby"
+        }
+      },
+      {
+        "location": [
+          52.50977420300006,
+          13.382756089000054
+        ],
+        "timestamp": "2025-12-17T21:56:11.903392",
+        "action": "move_road_step",
+        "decision": {
+          "action": "explore_direction",
+          "target": 135.0,
+          "reason": "Still no visible POIs nearby",
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          52.509774101795664,
+          13.381351167117398
+        ],
+        "timestamp": "2025-12-17T21:56:12.400300",
+        "action": "move_final_approach",
+        "decision": {
+          "action": "explore_direction",
+          "target": 135.0,
+          "reason": "Still no visible POIs nearby"
+        }
+      },
+      {
+        "location": [
+          52.50977395100006,
+          13.379257819000031
+        ],
+        "timestamp": "2025-12-17T21:56:19.293102",
+        "action": "move_road_step",
+        "decision": {
+          "action": "explore_direction",
+          "target": 225.0,
+          "reason": "Continued lack of visible POIs",
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          52.50977402639455,
+          13.380304447166951
+        ],
+        "timestamp": "2025-12-17T21:56:19.799773",
+        "action": "move_final_approach",
+        "decision": {
+          "action": "explore_direction",
+          "target": 225.0,
+          "reason": "Continued lack of visible POIs"
+        }
+      }
+    ],
+    "visited_pois": [
+      "11",
+      "0",
+      "7",
+      "5",
+      "3",
+      "6",
+      "1",
+      "13",
+      "14",
+      "4",
+      "12",
+      "9",
+      "2",
+      "8",
+      "10"
+    ],
+    "interesting_pois": [
+      {
+        "poi": {
+          "id": "0",
+          "name": "信德商务大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.129027244000042,
+            113.26615307700001
+          ],
+          "address": "中山四路246号(近北京路)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:11:50.188531"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "金德大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.125044788000025,
+            113.26662735700006
+          ],
+          "address": "文德北路67号(北京路地铁站出入口步行480米)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:11:57.457645"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "捷登都会",
+          "type": "商务住宅;楼宇;商住两用楼宇",
+          "location": [
+            23.128399535000028,
+            113.26046430100007
+          ],
+          "address": "中山五路70号",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:12:10.034137"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "珠江国际大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.13250689000006,
+            113.26232709400006
+          ],
+          "address": "越华路112号(公园前地铁站出入口步行500米)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:12:19.090020"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "越秀城市广场南塔",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.134190339000043,
+            113.26684690700006
+          ],
+          "address": "东风中路437-439号",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:12:30.015708"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "宝升商业大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.123917410000047,
+            113.26415476000011
+          ],
+          "address": "文明路8号(北京路地铁站B口步行390米)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:12:39.816267"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "景腾商业大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.124387376000072,
+            113.26165948200003
+          ],
+          "address": "惠福东路455号(公园前地铁站D口步行450米)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:12:49.246352"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "信德商务大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.129027244000042,
+            113.26615307700001
+          ],
+          "address": "中山四路246号(近北京路)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:13:54.248351"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "金德大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.125044788000025,
+            113.26662735700006
+          ],
+          "address": "文德北路67号(北京路地铁站出入口步行480米)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:14:02.784106"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "宝升商业大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.123917410000047,
+            113.26415476000011
+          ],
+          "address": "文明路8号(北京路地铁站B口步行390米)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:14:11.256444"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "景腾商业大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.124387376000072,
+            113.26165948200003
+          ],
+          "address": "惠福东路455号(公园前地铁站D口步行450米)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:14:21.437131"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "捷登都会",
+          "type": "商务住宅;楼宇;商住两用楼宇",
+          "location": [
+            23.128399535000028,
+            113.26046430100007
+          ],
+          "address": "中山五路70号",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:14:30.451205"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "珠江国际大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.13250689000006,
+            113.26232709400006
+          ],
+          "address": "越华路112号(公园前地铁站出入口步行500米)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:14:39.419240"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "越秀城市广场南塔",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.134190339000043,
+            113.26684690700006
+          ],
+          "address": "东风中路437-439号",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:14:44.945311"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "信德商务大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.129027244000042,
+            113.26615307700001
+          ],
+          "address": "中山四路246号(近北京路)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:16:48.624217"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "金德大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.125044788000025,
+            113.26662735700006
+          ],
+          "address": "文德北路67号(北京路地铁站出入口步行480米)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:16:57.414251"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "宝升商业大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.123917410000047,
+            113.26415476000011
+          ],
+          "address": "文明路8号(北京路地铁站B口步行390米)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:17:05.932340"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "景腾商业大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.124387376000072,
+            113.26165948200003
+          ],
+          "address": "惠福东路455号(公园前地铁站D口步行450米)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:17:14.614435"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "捷登都会",
+          "type": "商务住宅;楼宇;商住两用楼宇",
+          "location": [
+            23.128399535000028,
+            113.26046430100007
+          ],
+          "address": "中山五路70号",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:17:23.582879"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "珠江国际大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.13250689000006,
+            113.26232709400006
+          ],
+          "address": "越华路112号(公园前地铁站出入口步行500米)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:17:32.688861"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "越秀城市广场南塔",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.134190339000043,
+            113.26684690700006
+          ],
+          "address": "东风中路437-439号",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:17:44.172680"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "信德商务大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.129027244000042,
+            113.26615307700001
+          ],
+          "address": "中山四路246号(近北京路)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:21:32.575697"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "金德大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.125044788000025,
+            113.26662735700006
+          ],
+          "address": "文德北路67号(北京路地铁站出入口步行480米)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:21:40.419324"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "宝升商业大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.123917410000047,
+            113.26415476000011
+          ],
+          "address": "文明路8号(北京路地铁站B口步行390米)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:21:47.419641"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "景腾商业大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.124387376000072,
+            113.26165948200003
+          ],
+          "address": "惠福东路455号(公园前地铁站D口步行450米)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:21:55.784220"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "捷登都会",
+          "type": "商务住宅;楼宇;商住两用楼宇",
+          "location": [
+            23.128399535000028,
+            113.26046430100007
+          ],
+          "address": "中山五路70号",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:22:04.833745"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "珠江国际大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.13250689000006,
+            113.26232709400006
+          ],
+          "address": "越华路112号(公园前地铁站出入口步行500米)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:22:11.942478"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "越秀城市广场南塔",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.134190339000043,
+            113.26684690700006
+          ],
+          "address": "东风中路437-439号",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:22:21.198318"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "信德商务大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.129027244000042,
+            113.26615307700001
+          ],
+          "address": "中山四路246号(近北京路)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:23:29.094142"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "金德大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.125044788000025,
+            113.26662735700006
+          ],
+          "address": "文德北路67号(北京路地铁站出入口步行480米)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:23:37.677524"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "宝升商业大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.123917410000047,
+            113.26415476000011
+          ],
+          "address": "文明路8号(北京路地铁站B口步行390米)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:23:43.168380"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "景腾商业大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.124387376000072,
+            113.26165948200003
+          ],
+          "address": "惠福东路455号(公园前地铁站D口步行450米)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:23:48.618678"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "捷登都会",
+          "type": "商务住宅;楼宇;商住两用楼宇",
+          "location": [
+            23.128399535000028,
+            113.26046430100007
+          ],
+          "address": "中山五路70号",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:23:54.594980"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "珠江国际大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.13250689000006,
+            113.26232709400006
+          ],
+          "address": "越华路112号(公园前地铁站出入口步行500米)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:24:00.138382"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "越秀城市广场南塔",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.134190339000043,
+            113.26684690700006
+          ],
+          "address": "东风中路437-439号",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:24:09.522511"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "信德商务大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.129027244000042,
+            113.26615307700001
+          ],
+          "address": "中山四路246号(近北京路)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:25:35.886042"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "金德大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.125044788000025,
+            113.26662735700006
+          ],
+          "address": "文德北路67号(北京路地铁站出入口步行480米)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:25:42.746616"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "宝升商业大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.123917410000047,
+            113.26415476000011
+          ],
+          "address": "文明路8号(北京路地铁站B口步行390米)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:25:47.549296"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "景腾商业大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.124387376000072,
+            113.26165948200003
+          ],
+          "address": "惠福东路455号(公园前地铁站D口步行450米)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:25:54.655356"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "捷登都会",
+          "type": "商务住宅;楼宇;商住两用楼宇",
+          "location": [
+            23.128399535000028,
+            113.26046430100007
+          ],
+          "address": "中山五路70号",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:26:04.678847"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "珠江国际大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.13250689000006,
+            113.26232709400006
+          ],
+          "address": "越华路112号(公园前地铁站出入口步行500米)",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:26:09.020530"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "越秀城市广场南塔",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            23.134190339000043,
+            113.26684690700006
+          ],
+          "address": "东风中路437-439号",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:26:17.948635"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "Wells Fargo",
+          "type": "银行",
+          "location": [
+            37.78719472100005,
+            -122.40508374899997
+          ],
+          "address": "2, Grant Avenue, San Francisco",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:27:15.563629"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "John's Grill Live Jazz",
+          "type": "餐厅",
+          "location": [
+            37.78548293600005,
+            -122.40701924999996
+          ],
+          "address": "63, Ellis Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:27:20.902411"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "Citibank",
+          "type": "银行",
+          "location": [
+            37.78892775000003,
+            -122.40375412799995
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:27:27.165664"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "Walgreens",
+          "type": "药店",
+          "location": [
+            37.78899502200005,
+            -122.40892662099998
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:27:33.081963"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "Cafe Mason",
+          "type": "餐厅",
+          "location": [
+            37.78660720000005,
+            -122.40959299999997
+          ],
+          "address": "320, Mason Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:27:37.671205"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "Pinecrest Diner",
+          "type": "餐厅",
+          "location": [
+            37.78662368600004,
+            -122.41022172799995
+          ],
+          "address": "401, Geary Street",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:27:41.667363"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "AMC Loews Metreon 16",
+          "type": "电影院",
+          "location": [
+            37.78446400000007,
+            -122.40370679999995
+          ],
+          "address": "135, 4th Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:27:49.577283"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "Biscuits & Blues",
+          "type": "餐厅",
+          "location": [
+            37.78718225000006,
+            -122.41022822099995
+          ],
+          "address": "401, Mason Street, San Francisco, CA, US",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:27:57.828566"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "Zingari",
+          "type": "餐厅",
+          "location": [
+            37.78830467800003,
+            -122.41022428599996
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:28:01.622066"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "Akiko's Sushi Bar",
+          "type": "餐厅",
+          "location": [
+            37.788905957000054,
+            -122.41020024999995
+          ],
+          "address": "542, Mason Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:28:05.834888"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "Union Bank of California",
+          "type": "银行",
+          "location": [
+            37.790035414000045,
+            -122.40193585699996
+          ],
+          "address": "44, Montgomery Street",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:28:13.793185"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "Notre Dame Des Victoires Grammar School",
+          "type": "学校",
+          "location": [
+            37.791205035000075,
+            -122.406335679
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:28:18.727254"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "Cogswell College",
+          "type": "大学",
+          "location": [
+            37.79183949900005,
+            -122.40564427899994
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:28:24.155679"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "Tú Lan",
+          "type": "餐厅",
+          "location": [
+            37.78193380700003,
+            -122.41017617799997
+          ],
+          "address": "8, 6th Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:28:33.138828"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "Wells Fargo",
+          "type": "银行",
+          "location": [
+            37.78952797800008,
+            -122.40817027099996
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:28:46.765348"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "John's Grill Live Jazz",
+          "type": "餐厅",
+          "location": [
+            37.78548293600005,
+            -122.40701924999996
+          ],
+          "address": "63, Ellis Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:30:11.359595"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "Cafe Mason",
+          "type": "餐厅",
+          "location": [
+            37.78660720000005,
+            -122.40959299999997
+          ],
+          "address": "320, Mason Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:30:20.242573"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "Pinecrest Diner",
+          "type": "餐厅",
+          "location": [
+            37.78662368600004,
+            -122.41022172799995
+          ],
+          "address": "401, Geary Street",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:30:27.486524"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "Biscuits & Blues",
+          "type": "餐厅",
+          "location": [
+            37.78718225000006,
+            -122.41022822099995
+          ],
+          "address": "401, Mason Street, San Francisco, CA, US",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:30:33.794736"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "Zingari",
+          "type": "餐厅",
+          "location": [
+            37.78830467800003,
+            -122.41022428599996
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:30:40.416124"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "Akiko's Sushi Bar",
+          "type": "餐厅",
+          "location": [
+            37.788905957000054,
+            -122.41020024999995
+          ],
+          "address": "542, Mason Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:30:46.904766"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "Walgreens",
+          "type": "药店",
+          "location": [
+            37.78899502200005,
+            -122.40892662099998
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:30:53.826855"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "Wells Fargo",
+          "type": "银行",
+          "location": [
+            37.78952797800008,
+            -122.40817027099996
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:31:00.996848"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "AMC Loews Metreon 16",
+          "type": "电影院",
+          "location": [
+            37.78446400000007,
+            -122.40370679999995
+          ],
+          "address": "135, 4th Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:31:11.600083"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "Tú Lan",
+          "type": "餐厅",
+          "location": [
+            37.78193380700003,
+            -122.41017617799997
+          ],
+          "address": "8, 6th Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:31:21.422353"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "Wells Fargo",
+          "type": "银行",
+          "location": [
+            37.78719472100005,
+            -122.40508374899997
+          ],
+          "address": "2, Grant Avenue, San Francisco",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:31:30.203852"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "Citibank",
+          "type": "银行",
+          "location": [
+            37.78892775000003,
+            -122.40375412799995
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:31:38.194781"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "Notre Dame Des Victoires Grammar School",
+          "type": "学校",
+          "location": [
+            37.791205035000075,
+            -122.406335679
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:31:46.624438"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "Cogswell College",
+          "type": "大学",
+          "location": [
+            37.79183949900005,
+            -122.40564427899994
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:31:56.556441"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "Union Bank of California",
+          "type": "银行",
+          "location": [
+            37.790035414000045,
+            -122.40193585699996
+          ],
+          "address": "44, Montgomery Street",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:32:01.822707"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "Wells Fargo",
+          "type": "银行",
+          "location": [
+            37.78719472100005,
+            -122.40508374899997
+          ],
+          "address": "2, Grant Avenue, San Francisco",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:34:08.945110"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "Citibank",
+          "type": "银行",
+          "location": [
+            37.78892775000003,
+            -122.40375412799995
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:34:17.618783"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "Union Bank of California",
+          "type": "银行",
+          "location": [
+            37.790035414000045,
+            -122.40193585699996
+          ],
+          "address": "44, Montgomery Street",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:34:24.664665"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "Cogswell College",
+          "type": "大学",
+          "location": [
+            37.79183949900005,
+            -122.40564427899994
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:34:34.380829"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "Notre Dame Des Victoires Grammar School",
+          "type": "学校",
+          "location": [
+            37.791205035000075,
+            -122.406335679
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:34:42.204954"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "Walgreens",
+          "type": "药店",
+          "location": [
+            37.78899502200005,
+            -122.40892662099998
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:34:54.724978"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "Akiko's Sushi Bar",
+          "type": "餐厅",
+          "location": [
+            37.788905957000054,
+            -122.41020024999995
+          ],
+          "address": "542, Mason Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:35:02.344628"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "Zingari",
+          "type": "餐厅",
+          "location": [
+            37.78830467800003,
+            -122.41022428599996
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:35:17.445412"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "Biscuits & Blues",
+          "type": "餐厅",
+          "location": [
+            37.78718225000006,
+            -122.41022822099995
+          ],
+          "address": "401, Mason Street, San Francisco, CA, US",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:35:26.892848"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "Pinecrest Diner",
+          "type": "餐厅",
+          "location": [
+            37.78662368600004,
+            -122.41022172799995
+          ],
+          "address": "401, Geary Street",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:35:34.779815"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "Cafe Mason",
+          "type": "餐厅",
+          "location": [
+            37.78660720000005,
+            -122.40959299999997
+          ],
+          "address": "320, Mason Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:35:42.259294"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "John's Grill Live Jazz",
+          "type": "餐厅",
+          "location": [
+            37.78548293600005,
+            -122.40701924999996
+          ],
+          "address": "63, Ellis Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:35:51.996829"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "AMC Loews Metreon 16",
+          "type": "电影院",
+          "location": [
+            37.78446400000007,
+            -122.40370679999995
+          ],
+          "address": "135, 4th Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:36:02.201586"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "Tú Lan",
+          "type": "餐厅",
+          "location": [
+            37.78193380700003,
+            -122.41017617799997
+          ],
+          "address": "8, 6th Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:36:13.392822"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "Wells Fargo",
+          "type": "银行",
+          "location": [
+            37.78952797800008,
+            -122.40817027099996
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:36:32.652346"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "Wells Fargo",
+          "type": "银行",
+          "location": [
+            37.78719472100005,
+            -122.40508374899997
+          ],
+          "address": "2, Grant Avenue, San Francisco",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:40:44.469518"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "Citibank",
+          "type": "银行",
+          "location": [
+            37.78892775000003,
+            -122.40375412799995
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:40:51.789122"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "Union Bank of California",
+          "type": "银行",
+          "location": [
+            37.790035414000045,
+            -122.40193585699996
+          ],
+          "address": "44, Montgomery Street",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:40:57.953684"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "Cogswell College",
+          "type": "大学",
+          "location": [
+            37.79183949900005,
+            -122.40564427899994
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:41:04.994528"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "Notre Dame Des Victoires Grammar School",
+          "type": "学校",
+          "location": [
+            37.791205035000075,
+            -122.406335679
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:41:10.573762"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "Wells Fargo",
+          "type": "银行",
+          "location": [
+            37.78952797800008,
+            -122.40817027099996
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:41:17.567784"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "Walgreens",
+          "type": "药店",
+          "location": [
+            37.78899502200005,
+            -122.40892662099998
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:41:23.784247"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "Akiko's Sushi Bar",
+          "type": "餐厅",
+          "location": [
+            37.788905957000054,
+            -122.41020024999995
+          ],
+          "address": "542, Mason Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:41:35.316674"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "Zingari",
+          "type": "餐厅",
+          "location": [
+            37.78830467800003,
+            -122.41022428599996
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:41:49.554245"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "Biscuits & Blues",
+          "type": "餐厅",
+          "location": [
+            37.78718225000006,
+            -122.41022822099995
+          ],
+          "address": "401, Mason Street, San Francisco, CA, US",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:42:03.241950"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "Pinecrest Diner",
+          "type": "餐厅",
+          "location": [
+            37.78662368600004,
+            -122.41022172799995
+          ],
+          "address": "401, Geary Street",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:42:14.946890"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "Cafe Mason",
+          "type": "餐厅",
+          "location": [
+            37.78660720000005,
+            -122.40959299999997
+          ],
+          "address": "320, Mason Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:42:30.970638"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "John's Grill Live Jazz",
+          "type": "餐厅",
+          "location": [
+            37.78548293600005,
+            -122.40701924999996
+          ],
+          "address": "63, Ellis Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:42:46.314904"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "AMC Loews Metreon 16",
+          "type": "电影院",
+          "location": [
+            37.78446400000007,
+            -122.40370679999995
+          ],
+          "address": "135, 4th Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:43:02.358492"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "Tú Lan",
+          "type": "餐厅",
+          "location": [
+            37.78193380700003,
+            -122.41017617799997
+          ],
+          "address": "8, 6th Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:43:15.685310"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "Wells Fargo",
+          "type": "银行",
+          "location": [
+            37.78719472100005,
+            -122.40508374899997
+          ],
+          "address": "2, Grant Avenue, San Francisco",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:45:13.106639"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "Citibank",
+          "type": "银行",
+          "location": [
+            37.78892775000003,
+            -122.40375412799995
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:45:20.774131"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "Union Bank of California",
+          "type": "银行",
+          "location": [
+            37.790035414000045,
+            -122.40193585699996
+          ],
+          "address": "44, Montgomery Street",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:45:26.707186"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "Cogswell College",
+          "type": "大学",
+          "location": [
+            37.79183949900005,
+            -122.40564427899994
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:45:34.942698"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "Notre Dame Des Victoires Grammar School",
+          "type": "学校",
+          "location": [
+            37.791205035000075,
+            -122.406335679
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:45:45.921410"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "Wells Fargo",
+          "type": "银行",
+          "location": [
+            37.78952797800008,
+            -122.40817027099996
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:45:52.118551"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "Walgreens",
+          "type": "药店",
+          "location": [
+            37.78899502200005,
+            -122.40892662099998
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:46:28.499700"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "Akiko's Sushi Bar",
+          "type": "餐厅",
+          "location": [
+            37.788905957000054,
+            -122.41020024999995
+          ],
+          "address": "542, Mason Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:46:42.888318"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "Zingari",
+          "type": "餐厅",
+          "location": [
+            37.78830467800003,
+            -122.41022428599996
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:46:49.902312"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "Biscuits & Blues",
+          "type": "餐厅",
+          "location": [
+            37.78718225000006,
+            -122.41022822099995
+          ],
+          "address": "401, Mason Street, San Francisco, CA, US",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:47:00.800690"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "Pinecrest Diner",
+          "type": "餐厅",
+          "location": [
+            37.78662368600004,
+            -122.41022172799995
+          ],
+          "address": "401, Geary Street",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:47:11.259891"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "Cafe Mason",
+          "type": "餐厅",
+          "location": [
+            37.78660720000005,
+            -122.40959299999997
+          ],
+          "address": "320, Mason Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:47:21.990372"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "John's Grill Live Jazz",
+          "type": "餐厅",
+          "location": [
+            37.78548293600005,
+            -122.40701924999996
+          ],
+          "address": "63, Ellis Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:47:34.022636"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "AMC Loews Metreon 16",
+          "type": "电影院",
+          "location": [
+            37.78446400000007,
+            -122.40370679999995
+          ],
+          "address": "135, 4th Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:47:39.759566"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "Tú Lan",
+          "type": "餐厅",
+          "location": [
+            37.78193380700003,
+            -122.41017617799997
+          ],
+          "address": "8, 6th Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:47:49.347524"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "Wells Fargo",
+          "type": "银行",
+          "location": [
+            37.78719472100005,
+            -122.40508374899997
+          ],
+          "address": "2, Grant Avenue, San Francisco",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:49:45.617805"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "Citibank",
+          "type": "银行",
+          "location": [
+            37.78892775000003,
+            -122.40375412799995
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:49:54.373557"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "Union Bank of California",
+          "type": "银行",
+          "location": [
+            37.790035414000045,
+            -122.40193585699996
+          ],
+          "address": "44, Montgomery Street",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:50:00.578740"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "Cogswell College",
+          "type": "大学",
+          "location": [
+            37.79183949900005,
+            -122.40564427899994
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:50:20.759748"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "Notre Dame Des Victoires Grammar School",
+          "type": "学校",
+          "location": [
+            37.791205035000075,
+            -122.406335679
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:50:24.144729"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "Wells Fargo",
+          "type": "银行",
+          "location": [
+            37.78952797800008,
+            -122.40817027099996
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:50:29.938701"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "Walgreens",
+          "type": "药店",
+          "location": [
+            37.78899502200005,
+            -122.40892662099998
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:50:55.445122"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "Akiko's Sushi Bar",
+          "type": "餐厅",
+          "location": [
+            37.788905957000054,
+            -122.41020024999995
+          ],
+          "address": "542, Mason Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:51:03.047708"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "Zingari",
+          "type": "餐厅",
+          "location": [
+            37.78830467800003,
+            -122.41022428599996
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:51:07.963058"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "Biscuits & Blues",
+          "type": "餐厅",
+          "location": [
+            37.78718225000006,
+            -122.41022822099995
+          ],
+          "address": "401, Mason Street, San Francisco, CA, US",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:51:15.437414"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "Pinecrest Diner",
+          "type": "餐厅",
+          "location": [
+            37.78662368600004,
+            -122.41022172799995
+          ],
+          "address": "401, Geary Street",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:51:18.317271"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "Cafe Mason",
+          "type": "餐厅",
+          "location": [
+            37.78660720000005,
+            -122.40959299999997
+          ],
+          "address": "320, Mason Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:51:24.911863"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "John's Grill Live Jazz",
+          "type": "餐厅",
+          "location": [
+            37.78548293600005,
+            -122.40701924999996
+          ],
+          "address": "63, Ellis Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:51:31.245057"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "AMC Loews Metreon 16",
+          "type": "电影院",
+          "location": [
+            37.78446400000007,
+            -122.40370679999995
+          ],
+          "address": "135, 4th Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:51:45.935870"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "Tú Lan",
+          "type": "餐厅",
+          "location": [
+            37.78193380700003,
+            -122.41017617799997
+          ],
+          "address": "8, 6th Street, San Francisco, CA",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:51:53.924588"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "Starbucks",
+          "type": "咖啡厅",
+          "location": [
+            52.51623457200003,
+            13.379164058000072
+          ],
+          "address": "4A, Pariser Platz, Berlin",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:53:26.472209"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "Viale dei Tigli",
+          "type": "餐厅",
+          "location": [
+            52.51547774200003,
+            13.380161716000032
+          ],
+          "address": "75, Wilhelmstraße, Berlin, DE",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:53:35.905440"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "Hopfingerbräu im Palais",
+          "type": "餐厅",
+          "location": [
+            52.51716890000006,
+            13.377604400000052
+          ],
+          "address": "24, Ebertstraße, Berlin, DE",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:53:45.805154"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "Commerzbank",
+          "type": "银行",
+          "location": [
+            52.51544691300006,
+            13.377519719000077
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-17T21:53:53.133592"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "Maman",
+          "type": "餐厅",
+          "location": [
+            52.51464808600008,
+            13.379260010000053
+          ],
+          "address": "77, Wilhelmstraße, Berlin, DE",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:54:02.366700"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "Alt-Berliner Wirtshaus",
+          "type": "餐厅",
+          "location": [
+            52.51382907200008,
+            13.380092038000043
+          ],
+          "address": "77, Wilhelmstraße, Berlin, DE",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:54:10.140542"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "Café Lebensart",
+          "type": "咖啡厅",
+          "location": [
+            52.51637449900005,
+            13.382759940000028
+          ],
+          "address": "69, Unter den Linden, Berlin, DE",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:54:20.124271"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "flamingo",
+          "type": "餐厅",
+          "location": [
+            52.51960268500005,
+            13.386150239000074
+          ],
+          "address": "8, Neustädtische Kirchstraße, Berlin, DE",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:54:30.584671"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "Cinque",
+          "type": "餐厅",
+          "location": [
+            52.522871707000036,
+            13.38269903500003
+          ],
+          "address": "27 D, Reinhardtstraße, Berlin, DE",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:54:44.385989"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "Bistro im Haus der Bundespressekonferenz",
+          "type": "咖啡厅",
+          "location": [
+            52.522114257000055,
+            13.376658058000032
+          ],
+          "address": "40, Schiffbauerdamm, Berlin, DE",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:54:55.387815"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "Berlin Pavillon am Reichstag",
+          "type": "咖啡厅",
+          "location": [
+            52.51719779200005,
+            13.373319992000063
+          ],
+          "address": "1, Scheidemannstraße, Berlin, DE",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:55:08.574185"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "Café Lebensart",
+          "type": "咖啡厅",
+          "location": [
+            52.51142302900007,
+            13.376716000000044
+          ],
+          "address": "1, Lennéstraße, Berlin, DE",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:55:23.731501"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "Saravanaa Bhavan",
+          "type": "餐厅",
+          "location": [
+            52.510523757000044,
+            13.374962132000064
+          ],
+          "address": "5, Potsdamer Platz, Berlin, DE",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:55:32.202436"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "Lindenbräu",
+          "type": "餐厅",
+          "location": [
+            52.50979241300007,
+            13.37250093800003
+          ],
+          "address": "3-5, Bellevuestraße, Berlin, DE",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:55:41.901158"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "eleven",
+          "type": "咖啡厅",
+          "location": [
+            52.50977395100006,
+            13.379257819000031
+          ],
+          "address": "11, Leipziger Platz, Berlin, DE",
+          "distance": 0
+        },
+        "time": "2025-12-17T21:55:55.160680"
+      }
+    ],
+    "total_distance": 1360,
+    "exploration_time": 0,
+    "poi_count": 147
+  },
+  "evaluation_result": {
+    "total_score": 10,
+    "total_questions": 24,
+    "accuracy": 41.66666666666667,
+    "type_scores": {
+      "定位与定向": {
+        "correct": 3,
+        "total": 8,
+        "percentage": 37.5
+      },
+      "空间距离估算": {
+        "correct": 1,
+        "total": 4,
+        "percentage": 25.0
+      },
+      "邻近关系判断": {
+        "correct": 3,
+        "total": 4,
+        "percentage": 75.0
+      },
+      "POI密度识别": {
+        "correct": 0,
+        "total": 4,
+        "percentage": 0.0
+      },
+      "路径规划": {
+        "correct": 3,
+        "total": 4,
+        "percentage": 75.0
+      }
+    },
+    "answers": [
+      {
+        "question": "Hopfingerbräu im Palais相对于Commerzbank在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "B",
+        "ai_explanation": "根据上下文，Commerzbank (银行) 的方向为 230.0429285895047°，而 Hopfingerbräu im Palais (餐厅) 的方向为 308.3417878379311°。根据方位角标准，308.34°位于 Commerzbank 的东南方向（因为 308.34° 介于 270°（正西）和 360°（正北）之间，且比 230.04° 更接近正东方向）。因此，Hopfingerbräu im Palais 相对于 Commerzbank 在东南方向。",
+        "correct_answer": "A",
+        "is_correct": false,
+        "explanation": "Hopfingerbräu im Palais位于Commerzbank的东北面。"
+      },
+      {
+        "question": "Viale dei Tigli相对于Hopfingerbräu im Palais在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "B",
+        "ai_explanation": "根据上下文，Viale dei Tigli (餐厅) 的方向为 149.03938556339506°，而 Hopfingerbräu im Palais (餐厅) 的方向为 308.3417878379311°。根据方位角标准，149°位于东南方向，而308°位于西北方向。因此，Viale dei Tigli 相对于 Hopfingerbräu im Palais 在东南方向。",
+        "correct_answer": "B",
+        "is_correct": true,
+        "explanation": "Viale dei Tigli位于Hopfingerbräu im Palais的东南面。"
+      },
+      {
+        "question": "Starbucks相对于Viale dei Tigli在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "D",
+        "ai_explanation": "根据上下文，Starbucks (咖啡厅) 的方向为 214.42008476637514°，而 Viale dei Tigli (餐厅) 的方向为 149.03938556339506°。Starbucks 的方向比 Viale dei Tigli 更偏南，且位于其西南方向。因此，Starbucks 相对于 Viale dei Tigli 在西南方向。",
+        "correct_answer": "C",
+        "is_correct": false,
+        "explanation": "Starbucks位于Viale dei Tigli的西北面。"
+      },
+      {
+        "question": "Berlin Pavillon am Reichstag相对于Starbucks在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "D",
+        "ai_explanation": "根据上下文，Starbucks (咖啡厅) 的方向为 214.42008476637514°，而 Berlin Pavillon am Reichstag (咖啡厅) 的方向为 283.06558957554796°。根据方位角标准，214.42°位于西南方向，而 283.07°位于西北方向。因此，Berlin Pavillon am Reichstag 相对于 Starbucks 位于西北方向。但根据实际角度差值计算，从 Starbucks 的方向（214.42°）到 Berlin Pavillon am Reichstag 的方向（283.07°）的夹角为 68.65°，这表明 Berlin Pavillon am Reichstag 位于 Starbucks 的西北方向。然而，由于选项中没有“西北”作为正确答案，而根据方位角的相对位置，柏林宫广场（Berlin Pavillon am Reichstag）相对于星巴克（Starbucks）位于西南方向。因此，正确答案是 D. 西南。",
+        "correct_answer": "C",
+        "is_correct": false,
+        "explanation": "Berlin Pavillon am Reichstag位于Starbucks的西北面。"
+      },
+      {
+        "question": "Commerzbank相对于Hopfingerbräu im Palais在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "D",
+        "ai_explanation": "根据上下文，Hopfingerbräu im Palais (餐厅) 的方向为 308.3417878379311°，而 Commerzbank (银行) 的方向为 230.0429285895047°。根据方位角标准，230.04°位于西南方向（180°-270°），而 308.34°位于西北方向（270°-360°）。因此，Commerzbank 相对于 Hopfingerbräu im Palais 在西南方向。",
+        "correct_answer": "D",
+        "is_correct": true,
+        "explanation": "Commerzbank位于Hopfingerbräu im Palais的西南面。"
+      },
+      {
+        "question": "Hopfingerbräu im Palais相对于Viale dei Tigli在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "B",
+        "ai_explanation": "<根据上下文，Viale dei Tigli (餐厅) 的方向为 149.03938556339506°，而 Hopfingerbräu im Palais (餐厅) 的方向为 308.3417878379311°。根据方位角标准，308.34°位于西北方向，而 149.04°位于东南方向。因此，Hopfingerbräu im Palais 相对于 Viale dei Tigli 位于西北方向，但根据选项中提供的方向描述，最接近的选项是 B（东南），因为从 Viale dei Tigli 的方向来看，Hopfingerbräu im Palais 位于其西北方向，而从 Hopfingerbräu im Palais 的方向来看，Viale dei Tigli 位于其东南方向。>",
+        "correct_answer": "C",
+        "is_correct": false,
+        "explanation": "Hopfingerbräu im Palais位于Viale dei Tigli的西北面。"
+      },
+      {
+        "question": "Viale dei Tigli相对于Starbucks在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "B",
+        "ai_explanation": "<Starbucks (咖啡厅) 的方向为 214.42°，而 Viale dei Tigli (餐厅) 的方向为 149.04°。根据方位角标准，149.04°位于 Starbuck 的东北方向（因为 149.04° < 214.42°，且两者均在 90°~180°之间）。但根据实际角度差值计算，Viale dei Tigli 相对于 Starbucks 的方向为 149.04° - 214.42° = -65.38°，即相当于 294.62°（顺时针方向），这表明 Viale dei Tigli 位于 Starbucks 的东南方向。因此，正确答案是 B. 东南。>",
+        "correct_answer": "B",
+        "is_correct": true,
+        "explanation": "Viale dei Tigli位于Starbucks的东南面。"
+      },
+      {
+        "question": "Starbucks相对于Berlin Pavillon am Reichstag在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "D",
+        "ai_explanation": "根据上下文，Starbucks (咖啡厅) 的方向为 214.42008476637514°，而 Berlin Pavillon am Reichstag (咖啡厅) 的方向为 278.1597754738972°。Starbucks 的方向更接近 180°（正南），而 Berlin Pavillon am Reichstag 的方向更接近 270°（正西）。因此，Starbucks 相对于 Berlin Pavillon am Reichstag 在西南方向。",
+        "correct_answer": "B",
+        "is_correct": false,
+        "explanation": "Starbucks位于Berlin Pavillon am Reichstag的东南面。"
+      },
+      {
+        "question": "Commerzbank到Viale dei Tigli的直线距离大约是多少？",
+        "type": "空间距离估算",
+        "ai_answer": "C",
+        "ai_explanation": "<根据上下文，Commerzbank (银行) 的距离为 157m，而 Viale dei Tigli (餐厅) 的距离为 114m。两者均以当前位置为参考点，因此无法直接得出两者之间的直线距离。但根据两者距离当前位置的数值，可以推测它们之间的直线距离可能在 200-300 米范围内。依据不足，但基于现有数据，最接近的选项为 C。>",
+        "correct_answer": "B",
+        "is_correct": false,
+        "explanation": "Commerzbank到Viale dei Tigli的直线距离约为178米。"
+      },
+      {
+        "question": "Hopfingerbräu im Palais到Starbucks的直线距离大约是多少？",
+        "type": "空间距离估算",
+        "ai_answer": "A",
+        "ai_explanation": "根据上下文，Starbucks (咖啡厅) 距离当前位置仅16米，而 Hopfingerbräu im Palais (餐厅) 距离当前位置146米。由于两者均位于同一位置附近，且 Starbuck 的距离非常近，可以推断 Hopfingerbräu im Palais 到 Starbucks 的直线距离大约在0-100米范围内。",
+        "correct_answer": "B",
+        "is_correct": false,
+        "explanation": "Hopfingerbräu im Palais到Starbucks的直线距离约为148米。"
+      },
+      {
+        "question": "Viale dei Tigli到Berlin Pavillon am Reichstag的直线距离大约是多少？",
+        "type": "空间距离估算",
+        "ai_answer": "C",
+        "ai_explanation": "<根据上下文，Viale dei Tigli (餐厅) 在 Step 1 中被描述为距离当前地点 114 米，而 Berlin Pavillon am Reichstag (咖啡厅) 在 Step 35 中被描述为距离当前地点 645 米。由于这两个 POI 分别位于不同的位置，且没有直接提供两者之间的直线距离，因此无法精确计算。但根据两个 POI 的距离与方向信息推测，它们之间的直线距离可能在 400-800 米范围内。依据不足，此答案基于上下文信息的合理推断。>",
+        "correct_answer": "C",
+        "is_correct": true,
+        "explanation": "Viale dei Tigli到Berlin Pavillon am Reichstag的直线距离约为500米。"
+      },
+      {
+        "question": "Starbucks到Café Lebensart的直线距离大约是多少？",
+        "type": "空间距离估算",
+        "ai_answer": "B",
+        "ai_explanation": "根据上下文，Starbucks (咖啡厅) 与 Café Lebensart (咖啡厅) 分别被提及为不同的 POI。在 Step 1 中，Starbucks 被描述为距离 16 米；而在后续步骤中，Café Lebensart 被描述为距离 234 米（从当前位置）。然而，上下文中并未直接提供 Starbucks 到 Café Lebensart 的直线距离。因此，依据不足，无法精确计算两者之间的直线距离。但考虑到两者分别位于不同位置，且距离当前点分别为 16 米和 234 米，可以推测两者之间的直线距离可能在 100-200 米范围内。因此，选择 B 作为最合理的选项。",
+        "correct_answer": "C",
+        "is_correct": false,
+        "explanation": "Starbucks到Café Lebensart的直线距离约为243米。"
+      },
+      {
+        "question": "在以下POI中，哪个距离Commerzbank最近？",
+        "type": "邻近关系判断",
+        "ai_answer": "C",
+        "ai_explanation": "根据文本中的信息，Starbucks (咖啡厅) 距离当前位置仅 16 米，而 Commerzbank (银行) 的距离为 157 米。因此，Starbucks 是距离 Commerzbank 最近的 POI。",
+        "correct_answer": "C",
+        "is_correct": true,
+        "explanation": "Starbucks距离Commerzbank最近，约141米。"
+      },
+      {
+        "question": "在以下POI中，哪个距离Hopfingerbräu im Palais最近？",
+        "type": "邻近关系判断",
+        "ai_answer": "A",
+        "ai_explanation": "根据文本中的信息，Hopfingerbräu im Palais (餐厅) 的距离为 146m。在选项中，Viale dei Tigli (餐厅) 的距离为 114m，是最近的。因此，Viale dei Tigli 距离 Hopfingerbräu im Palais 最近。",
+        "correct_answer": "B",
+        "is_correct": false,
+        "explanation": "Starbucks距离Hopfingerbräu im Palais最近，约148米。"
+      },
+      {
+        "question": "在以下POI中，哪个距离Viale dei Tigli最远？",
+        "type": "邻近关系判断",
+        "ai_answer": "B",
+        "ai_explanation": "根据文本中的信息，Viale dei Tigli (餐厅) 的距离为 114m。而 Berlin Pavillon am Reichstag (咖啡厅) 的距离为 415m（在 Step 1 中），Café Lebensart (咖啡厅) 的距离为 234m（在 Step 1 中）和 575m（在 Step 1 中）。因此，Berlin Pavillon am Reichstag 距离 Viale dei Tigli 最远。",
+        "correct_answer": "B",
+        "is_correct": true,
+        "explanation": "Berlin Pavillon am Reichstag距离Viale dei Tigli最远，约500米。"
+      },
+      {
+        "question": "在以下POI中，哪个距离Starbucks最远？",
+        "type": "邻近关系判断",
+        "ai_answer": "A",
+        "ai_explanation": "根据文本中的信息，Starbucks (咖啡厅) 距离为16米。而 Berlin Pavillon am Reichstag (咖啡厅) 的距离为415米，Café Lebensart (咖啡厅) 的距离为234米，Maman (餐厅) 的距离为190米。因此，Berlin Pavillon am Reichstag 距离 Starbucks 最远。",
+        "correct_answer": "A",
+        "is_correct": true,
+        "explanation": "Berlin Pavillon am Reichstag距离Starbucks最远，约409米。"
+      },
+      {
+        "question": "在当前区域内，哪个POI周围的POI密度最高？",
+        "type": "POI密度识别",
+        "ai_answer": "C",
+        "ai_explanation": "根据文本中的信息，Café Lebensart (咖啡厅) 在多个扫描环境中被多次提及为附近的POI。例如，在Step 1中，Café Lebensart (咖啡厅) 被列为距离234米的POI；在Step 35中，Café Lebensart (咖啡厅) 被列为距离686米的POI；在后续步骤中，Café Lebensart (咖啡厅) 又被列为距离1111米、1336米、1189米等的POI。这表明Café Lebensart周围存在较多的POI，因此其周围的POI密度最高。",
+        "correct_answer": "A",
+        "is_correct": false,
+        "explanation": "Maman周围的POI密度最高，500米范围内有8个其他POI。"
+      },
+      {
+        "question": "在当前区域内，哪个POI周围的POI密度最高？",
+        "type": "POI密度识别",
+        "ai_answer": "C",
+        "ai_explanation": "根据文本中的信息，Café Lebensart (咖啡厅) 在多个扫描环境中被多次提及，且在不同步骤中显示其周围有多个POI。例如，在Step 1中，Café Lebensart (咖啡厅) 距离当前位置234米；在Step 35中，Café Lebensart (咖啡厅) 距离当前位置686米；在Step 69中，Café Lebensart (咖啡厅) 距离当前位置682米。此外，在Step 35中，Café Lebensart (咖啡厅) 被列为附近POI之一，表明其周围存在较多的POI。因此，Café Lebensart (咖啡厅) 周围的POI密度最高。",
+        "correct_answer": "A",
+        "is_correct": false,
+        "explanation": "Commerzbank周围的POI密度最高，500米范围内有8个其他POI。"
+      },
+      {
+        "question": "在当前区域内，哪个POI周围的POI密度最低？",
+        "type": "POI密度识别",
+        "ai_answer": "D",
+        "ai_explanation": "根据文本，Viale dei Tigli (餐厅) 在初始步骤中被描述为“114米 away”，并且在后续步骤中没有提到其他POI围绕它。相比之下，其他选项如Bistro im Haus der Bundespressekonferenz、Café Lebensart和Berlin Pavillon am Reichstag在后续步骤中被多次提及与其他POI相关联，表明它们周围的POI密度较高。因此，Viale dei Tigli周围的POI密度最低。",
+        "correct_answer": "A",
+        "is_correct": false,
+        "explanation": "Bistro im Haus der Bundespressekonferenz周围的POI密度最低，500米范围内只有0个其他POI。"
+      },
+      {
+        "question": "在当前区域内，哪个POI周围的POI密度最低？",
+        "type": "POI密度识别",
+        "ai_answer": "D",
+        "ai_explanation": "根据文本记忆，Viale dei Tigli (餐厅) 在初始步骤中被描述为“114m, Dir: 149.03938556339506”，并且在后续步骤中没有提到其周围有其他POI的密集分布。相比之下，其他选项如Café Lebensart、Bistro im Haus der Bundespressekonferenz和Berlin Pavillon am Reichstag在后续扫描中均被多次提及，且与多个其他POI存在距离和方向信息。因此，Viale dei Tigli周围的POI密度最低。",
+        "correct_answer": "A",
+        "is_correct": false,
+        "explanation": "Café Lebensart周围的POI密度最低，500米范围内只有3个其他POI。"
+      },
+      {
+        "question": "从Commerzbank到Hopfingerbräu im Palais，以下哪种路径最短？",
+        "type": "路径规划",
+        "ai_answer": "A",
+        "ai_explanation": "根据上下文，Commerzbank (银行) 和 Hopfingerbräu im Palais (餐厅) 之间的路径在原始日志中被描述为“Path planned via road network: 2 steps, approx 191m”，而其他选项中提到的路径均未在文本中明确提及或提供具体距离信息。因此，直接从 Commerzbank 移动到 Hopfingerbräu im Palais 的路径最短，且已被确认可行。",
+        "correct_answer": "A",
+        "is_correct": true,
+        "explanation": "最短路径是：Commerzbank -> Hopfingerbräu im Palais，总距离约191米。"
+      },
+      {
+        "question": "从Hopfingerbräu im Palais到Viale dei Tigli，以下哪种路径最短？",
+        "type": "路径规划",
+        "ai_answer": "B",
+        "ai_explanation": "根据上下文，从Hopfingerbräu im Palais到Viale dei Tigli的路径中，选项B中的路径涉及Starbucks (咖啡厅)和Café Lebensart (咖啡厅)，这些POI在Hopfingerbräu im Palais附近，并且与Viale dei Tigli有直接或间接的连接。其他选项中的节点（如marsch节点、reichtagufer节点等）未在上下文中提及，因此无法确定其有效性。而选项B中的路径符合上下文中提到的POI之间的相对位置和移动逻辑。",
+        "correct_answer": "B",
+        "is_correct": true,
+        "explanation": "最短路径是：Hopfingerbräu im Palais -> (Hopfingerbräu im Palais and marsch节点) -> (Starbucks and marsch节点) -> (Café Lebensart and marsch节点) -> (Viale dei Tigli and marsch节点) -> (Viale dei Tigli and marsch节点) -> Viale dei Tigli，总距离约548米。"
+      },
+      {
+        "question": "从Viale dei Tigli到Starbucks，以下哪种路径最短？",
+        "type": "路径规划",
+        "ai_answer": "D",
+        "ai_explanation": "根据上下文，从Viale dei Tigli到Starbucks的最短路径未在选项中直接提及。但根据文本中提到的“Successfully moved to and visited Starbucks”和“Successfully moved to and visited Viale dei Tigli”，可以推断出两者之间存在直接或间接的路径。然而，选项D中的路径涉及“Saravanaa Bhavan”和“reichtagufer”等实体，这些实体在上下文中并未出现，因此无法确定其有效性。由于所有选项均未提供足够的信息来验证其路径长度，因此无法确定哪条路径最短。依据不足。",
+        "correct_answer": "C",
+        "is_correct": false,
+        "explanation": "最短路径是：Viale dei Tigli -> (Viale dei Tigli and marsch节点) -> (Viale dei Tigli and marsch节点) -> (Café Lebensart and marsch节点) -> (Starbucks and marsch节点) -> Starbucks，总距离约388米。"
+      },
+      {
+        "question": "从Starbucks到Berlin Pavillon am Reichstag，以下哪种路径最短？",
+        "type": "路径规划",
+        "ai_answer": "D",
+        "ai_explanation": "根据文本记忆规则，路径的最短性应基于直线距离而非路径步骤数。从Starbucks (16m)到Berlin Pavillon am Reichstag (415m)的直线距离为415米，而选项D中路径的起点和终点分别为Starbucks和Berlin Pavillon am Reichstag，符合直接连接的最短路径逻辑。其他选项涉及中间节点，未明确提及与柏林宫的直接距离关系，因此无法确认其路径最短性。依据不足。",
+        "correct_answer": "D",
+        "is_correct": true,
+        "explanation": "最短路径是：Starbucks -> (Starbucks and marsch节点) -> (Hopfingerbräu im Palais and marsch节点) -> (ebert and Hopfingerbräu im Palais节点) -> (ebert and Hopfingerbräu im Palais节点) -> Berlin Pavillon am Reichstag，总距离约702米。"
+      }
+    ],
+    "completed_at": "2025-12-17T21:57:17.447437"
+  },
+  "context_text": "--- Step 1 ---\nUser Input: Current Location: [52.516353686723924, 13.379298184437697].  Analyze surroundings and perform the next move.\nAI Thought: \nInvoking: `scan_environment` with `{}`\n\n\n\nTool Output: Found 15 visible POIs.\n- Commerzbank (银行), Dist: 157m, Dir: 230.0429285895047\n- Hopfingerbräu im Palais (餐厅), Dist: 146m, Dir: 308.3417878379311\n- Starbucks (咖啡厅), Dist: 16m, Dir: 214.42008476637514\n- Berlin Pavillon am Reichstag (咖啡厅), Dist: 415m, Dir: 283.06558957554796\n- Viale dei Tigli (餐厅), Dist: 114m, Dir: 149.03938556339506\n- Café Lebensart (咖啡厅), Dist: 234m, Dir: 89.43258763515422\n- Maman (餐厅), Dist: 190m, Dir: 180.78035720985253\n- Alt-Berliner Wirtshaus (餐厅), Dist: 286m, Dir: 169.16672099733069\n- Café Lebensart (咖啡厅), Dist: 575m, Dir: 197.67849573500266\n- Bistro im Haus der Bundespressekonferenz (咖啡厅), Dist: 665m, Dir: 344.4183605424939\n- flamingo (餐厅), Dist: 588m, Dir: 52.07090430140039\n- Saravanaa Bhavan (餐厅), Dist: 712m, Dir: 204.35476420254133\n- Lindenbräu (餐厅), Dist: 862m, Dir: 212.23280243637862\n- Cinque (餐厅), Dist: 760m, Dir: 17.61258738116669\n- eleven (咖啡厅), Dist: 732m, Dir: 180.21393034515853\n\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'Starbucks (咖啡厅)'}`\nresponded: There are multiple visible POIs around the current location. The closest POI is **Starbucks (咖啡厅)**, which is only 16 meters away. I will move to this POI first.\n\n\nTool Output: Path planned via road network: 1 steps, approx 0m. Successfully moved to and visited Starbucks.\nAI Thought: \nInvoking: `check_memory` with `{}`\nresponded: I have successfully moved to and visited **Starbucks (咖啡厅)**. Now, I will check my memory to review the exploration status.\n\n\nTool Output: Visited 1 POIs. Path length: 2 points.\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'Viale dei Tigli (餐厅)'}`\nresponded: So far, I have visited 1 POI. Next, I will move to another nearby POI. The next closest unvisited POI is **Viale dei Tigli (餐厅)**, which is 114 meters away.\n\n\nTool Output: Path planned via road network: 6 steps, approx 482m. Successfully moved to and visited Viale dei Tigli.\nAI Thought: \nInvoking: `check_memory` with `{}`\nresponded: I have successfully moved to and visited **Viale dei Tigli (餐厅)**. Now, I will check my memory again to review the exploration status.\n\n\nTool Output: Visited 2 POIs. Path length: 7 points.\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'Hopfingerbräu im Palais (餐厅)'}`\nresponded: I have now visited 2 POIs. The next closest unvisited POI is **Hopfingerbräu im Palais (餐厅)**, which is 146 meters away. I will move there next.\n\n\nTool Output: Path planned via road network: 7 steps, approx 716m. Successfully moved to and visited Hopfingerbräu im Palais.\nAI Thought: \nInvoking: `check_memory` with `{}`\nresponded: I have successfully moved to and visited **Hopfingerbräu im Palais (餐厅)**. Now, I will check my memory again to review the exploration status.\n\n\nTool Output: Visited 3 POIs. Path length: 13 points.\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'Commerzbank (银行)'}`\nresponded: I have now visited 3 POIs. The next closest unvisited POI is **Commerzbank (银行)**, which is 157 meters away. I will move there next.\n\n\nTool Output: Path planned via road network: 2 steps, approx 191m. Successfully moved to and visited Commerzbank.\nAI Thought: \nInvoking: `check_memory` with `{}`\nresponded: I have successfully moved to and visited **Commerzbank (银行)**. Now, I will check my memory again to review the exploration status.\n\n\nTool Output: Visited 4 POIs. Path length: 14 points.\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'Maman (餐厅)'}`\nresponded: I have now visited 4 POIs. The next closest unvisited POI is **Maman (餐厅)**, which is 190 meters away. I will move there next.\n\n\nTool Output: Path planned via road network: 5 steps, approx 666m. Successfully moved to and visited Maman.\nAI Thought: \nInvoking: `check_memory` with `{}`\nresponded: I have successfully moved to and visited **Maman (餐厅)**. Now, I will check my memory again to review the exploration status.\n\n\nTool Output: Visited 5 POIs. Path length: 18 points.\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'Alt-Berliner Wirtshaus (餐厅)'}`\nresponded: I have now visited 5 POIs. The next closest unvisited POI is **Alt-Berliner Wirtshaus (餐厅)**, which is 286 meters away. I will move there next.\n\n\nTool Output: Path planned via road network: 2 steps, approx 130m. Successfully moved to and visited Alt-Berliner Wirtshaus.\nAI Thought: \nInvoking: `check_memory` with `{}`\nresponded: I have successfully moved to and visited **Alt-Berliner Wirtshaus (餐厅)**. Now, I will check my memory again to review the exploration status.\n\n\nTool Output: Visited 6 POIs. Path length: 19 points.\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'Café Lebensart (咖啡厅)'}`\nresponded: I have now visited 6 POIs. The next closest unvisited POI is **Café Lebensart (咖啡厅)**, which is 234 meters away. I will move there next.\n\n\nTool Output: Path planned via road network: 7 steps, approx 584m. Successfully moved to and visited Café Lebensart.\nAI Thought: \nInvoking: `check_memory` with `{}`\nresponded: I have successfully moved to and visited **Café Lebensart (咖啡厅)**. Now, I will check my memory again to review the exploration status.\n\n\nTool Output: Visited 7 POIs. Path length: 25 points.\nAI Final Answer: Agent stopped due to max iterations.\n\n--- Step 35 ---\nUser Input: Current Location: [52.51637449900005, 13.382759940000028]. Visited POIs count: 7.  Analyze surroundings and perform the next move.\nAI Thought: \nInvoking: `scan_environment` with `{}`\n\n\n\nTool Output: Found 8 visible POIs.\n- Berlin Pavillon am Reichstag (咖啡厅), Dist: 645m, Dir: 278.1597754738972\n- Café Lebensart (咖啡厅), Dist: 686m, Dir: 216.6088719489695\n- Bistro im Haus der Bundespressekonferenz (咖啡厅), Dist: 760m, Dir: 327.10419266360907\n- flamingo (餐厅), Dist: 426m, Dir: 32.58010401538547\n- Saravanaa Bhavan (餐厅), Dist: 838m, Dir: 219.04869470226689\n- Lindenbräu (餐厅), Dist: 1009m, Dir: 223.4915162739067\n- Cinque (餐厅), Dist: 722m, Dir: 359.6732126763424\n- eleven (咖啡厅), Dist: 771m, Dir: 197.89669832761962\n\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'flamingo'}`\nresponded: Several interesting POIs have been found nearby. I will prioritize visiting the closest unvisited POI, which is **flamingo (餐厅)** located 426 meters away at a direction of approximately 32.58°.\n\n\nTool Output: Path planned via road network: 3 steps, approx 648m. Successfully moved to and visited flamingo.\nAI Thought: \nInvoking: `check_memory` with `{}`\nresponded: I have successfully moved to and visited **flamingo (餐厅)**. \n\nNext, I will check my memory to review the exploration status and decide on the subsequent steps.\n\n\nTool Output: Visited 8 POIs. Path length: 27 points.\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: Having visited **flamingo**, I now have a total of 8 visited POIs. \n\nI will now scan the environment again to identify any other interesting unvisited POIs and continue exploration.\n\n\nTool Output: Found 7 visible POIs.\n- Berlin Pavillon am Reichstag (咖啡厅), Dist: 908m, Dir: 252.8845986797718\n- Café Lebensart (咖啡厅), Dist: 1111m, Dir: 215.06816666210628\n- Bistro im Haus der Bundespressekonferenz (咖啡厅), Dist: 700m, Dir: 293.505537947353\n- Saravanaa Bhavan (餐厅), Dist: 1262m, Dir: 216.8717444852987\n- Lindenbräu (餐厅), Dist: 1429m, Dir: 220.26011580661697\n- Cinque (餐厅), Dist: 432m, Dir: 327.2856091212937\n- eleven (咖啡厅), Dist: 1188m, Dir: 203.1132253180294\n\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'Cinque'}`\nresponded: After scanning the environment again, I found **Cinque (餐厅)** to be the closest unvisited POI at a distance of approximately 432 meters in the direction of about 327.29°.\n\nI will now move to **Cinque**.\n\n\nTool Output: Path planned via road network: 5 steps, approx 1062m. Successfully moved to and visited Cinque.\nAI Thought: \nInvoking: `check_memory` with `{}`\nresponded: I have successfully moved to and visited **Cinque (餐厅)**.\n\nNext, I will check my memory again to assess the overall exploration status and determine the next steps.\n\n\nTool Output: Visited 9 POIs. Path length: 31 points.\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: Having visited **Cinque**, I now have a total of 9 visited POIs.\n\nI will scan the environment once more to identify any remaining interesting unvisited POIs and continue exploration.\n\n\nTool Output: Found 6 visible POIs.\n- Berlin Pavillon am Reichstag (咖啡厅), Dist: 895m, Dir: 225.17027023149873\n- Café Lebensart (咖啡厅), Dist: 1336m, Dir: 197.64367693659526\n- Bistro im Haus der Bundespressekonferenz (咖啡厅), Dist: 417m, Dir: 258.358262224678\n- Saravanaa Bhavan (餐厅), Dist: 1469m, Dir: 200.87437497419535\n- Lindenbräu (餐厅), Dist: 1610m, Dir: 205.38758705196\n- eleven (咖啡厅), Dist: 1475m, Dir: 189.08507685462018\n\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'Bistro im Haus der Bundespressekonferenz'}`\nresponded: After scanning the environment again, I found **Bistro im Haus der Bundespressekonferenz (咖啡厅)** to be the closest unvisited POI at a distance of approximately 417 meters in the direction of about 258.36°.\n\nI will now move to **Bistro im Haus der Bundespressekonferenz**.\n\n\nTool Output: Path planned via road network: 3 steps, approx 681m. Successfully moved to and visited Bistro im Haus der Bundespressekonferenz.\nAI Thought: \nInvoking: `check_memory` with `{}`\nresponded: I have successfully moved to and visited **Bistro im Haus der Bundespressekonferenz (咖啡厅)**.\n\nNext, I will check my memory again to assess the overall exploration status and determine the next steps.\n\n\nTool Output: Visited 10 POIs. Path length: 33 points.\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: Having visited **Bistro im Haus der Bundespressekonferenz**, I now have a total of 10 visited POIs.\n\nI will scan the environment once more to identify any remaining interesting unvisited POIs and continue exploration.\n\n\nTool Output: Found 5 visible POIs.\n- Berlin Pavillon am Reichstag (咖啡厅), Dist: 592m, Dir: 202.44869088561083\n- Café Lebensart (咖啡厅), Dist: 1189m, Dir: 179.81101766277789\n- Saravanaa Bhavan (餐厅), Dist: 1294m, Dir: 185.08893433623783\n- Lindenbräu (餐厅), Dist: 1399m, Dir: 191.6037223074693\n- eleven (咖啡厅), Dist: 1383m, Dir: 172.69334740740032\n\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'Berlin Pavillon am Reichstag'}`\nresponded: After scanning the environment again, I found **Berlin Pavillon am Reichstag (咖啡厅)** to be the closest unvisited POI at a distance of approximately 592 meters in the direction of about 202.45°.\n\nI will now move to **Berlin Pavillon am Reichstag**.\n\n\nTool Output: Path planned via road network: 8 steps, approx 1628m. Successfully moved to and visited Berlin Pavillon am Reichstag.\nAI Thought: \nInvoking: `check_memory` with `{}`\nresponded: I have successfully moved to and visited **Berlin Pavillon am Reichstag (咖啡厅)**.\n\nNext, I will check my memory again to assess the overall exploration status and determine the next steps.\n\n\nTool Output: Visited 11 POIs. Path length: 40 points.\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: Having visited **Berlin Pavillon am Reichstag**, I now have a total of 11 visited POIs.\n\nI will scan the environment once more to identify any remaining interesting unvisited POIs and continue exploration.\n\n\nTool Output: Found 4 visible POIs.\n- Café Lebensart (咖啡厅), Dist: 682m, Dir: 160.30726100401432\n- Saravanaa Bhavan (餐厅), Dist: 750m, Dir: 171.4832675925777\n- Lindenbräu (餐厅), Dist: 825m, Dir: 183.85109047557032\n- eleven (咖啡厅), Dist: 918m, Dir: 154.04278830363694\n\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'Café Lebensart'}`\nresponded: After scanning the environment again, I found **Café Lebensart (咖啡厅)** to be the closest unvisited POI at a distance of approximately 682 meters in the direction of about 160.31°.\n\nI will now move to **Café Lebensart**.\n\n\nTool Output: Path planned via road network: 9 steps, approx 1056m. Successfully moved to and visited Café Lebensart.\nAI Thought: \nInvoking: `check_memory` with `{}`\nresponded: I have successfully moved to and visited **Café Lebensart (咖啡厅)**.\n\nNext, I will check my memory again to assess the overall exploration status and determine the next steps.\n\n\nTool Output: Visited 12 POIs. Path length: 48 points.\nAI Final Answer: Agent stopped due to max iterations.\n\n--- Step 69 ---\nUser Input: Current Location: [52.51142302900007, 13.376716000000044]. Visited POIs count: 12.  Analyze surroundings and perform the next move.\nAI Thought: \nInvoking: `scan_environment` with `{}`\n\n\n\nTool Output: Found 3 visible POIs.\n- Saravanaa Bhavan (餐厅), Dist: 155m, Dir: 229.88749742515873\n- Lindenbräu (餐厅), Dist: 338m, Dir: 237.56034726448854\n- eleven (咖啡厅), Dist: 251m, Dir: 136.8285279670003\n\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'Saravanaa Bhavan'}`\n\n\n\nTool Output: Path planned via road network: 3 steps, approx 287m. Successfully moved to and visited Saravanaa Bhavan.\nAI Thought: \nInvoking: `check_memory` with `{}`\nresponded: I have successfully moved to and visited Saravanaa Bhavan. Now, I will check my memory to review what has been visited and the current exploration status.\n\n\nTool Output: Visited 13 POIs. Path length: 50 points.\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: After visiting Saravanaa Bhavan, I have now visited a total of 13 POIs. My exploration path consists of 50 points. I will continue to explore the area by analyzing the surroundings again.\n\n\nTool Output: Found 2 visible POIs.\n- Lindenbräu (餐厅), Dist: 185m, Dir: 243.9777173818881\n- eleven (咖啡厅), Dist: 302m, Dir: 106.00084727471045\n\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'Lindenbräu'}`\n\n\n\nTool Output: Path planned via road network: 7 steps, approx 1188m. Successfully moved to and visited Lindenbräu.\nAI Thought: \nInvoking: `check_memory` with `{}`\nresponded: I have successfully moved to and visited Lindenbräu. Now, I will check my memory again to review the updated exploration status.\n\n\nTool Output: Visited 14 POIs. Path length: 56 points.\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: After visiting Lindenbräu, I have now visited a total of 14 POIs. My exploration path consists of 56 points. Next, I will scan the environment again to find any other interesting POIs to visit.\n\n\nTool Output: Found 1 visible POIs.\n- eleven (咖啡厅), Dist: 457m, Dir: 90.25453756749528\n\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'eleven'}`\n\n\n\nTool Output: Path planned via road network: 8 steps, approx 1400m. Successfully moved to and visited eleven.\nAI Thought: \nInvoking: `check_memory` with `{}`\nresponded: I have successfully moved to and visited the coffee shop 'eleven'. Now, I will check my memory again to review the updated exploration status.\n\n\nTool Output: Visited 15 POIs. Path length: 63 points.\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: After visiting 'eleven', I have now visited a total of 15 POIs. My exploration path consists of 63 points. Next, I will scan the environment again to find any other interesting POIs to visit.\n\n\nTool Output: Found 0 visible POIs.\nNo POIs visible nearby. Suggest exploring a direction.\nAI Thought: \nInvoking: `explore_direction` with `{'direction': 45, 'reason': 'No visible POIs nearby'}`\nresponded: Since there are no visible POIs nearby, I will explore in a direction. I will move in the direction of 45 degrees to see if I can find any interesting locations.\n\n\nTool Output: Explored direction 45°. New location: [52.50977402640117, 13.380304538946886]\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: I have explored in the direction of 45 degrees and arrived at a new location. Next, I will scan the environment again to see if there are any visible POIs from this new position.\n\n\nTool Output: Found 0 visible POIs.\nNo POIs visible nearby. Suggest exploring a direction.\nAI Thought: \nInvoking: `explore_direction` with `{'direction': 135, 'reason': 'Still no visible POIs nearby'}`\nresponded: Since there are still no visible POIs nearby, I will explore in another direction. This time, I will move in the direction of 135 degrees to continue my exploration.\n\n\nTool Output: Explored direction 135°. New location: [52.509774101795664, 13.381351167117398]\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: After exploring in the direction of 135 degrees, I have arrived at another new location. Since I am still not seeing any visible POIs nearby, I will perform another scan of the environment to reassess the situation.\n\n\nTool Output: Found 0 visible POIs.\nNo POIs visible nearby. Suggest exploring a direction.\nAI Thought: \nInvoking: `explore_direction` with `{'direction': 225, 'reason': 'Continued lack of visible POIs'}`\nresponded: The area still seems to be lacking visible POIs. I will explore in another direction, this time heading 225 degrees, to see if I can find any points of interest.\n\n\nTool Output: Explored direction 225°. New location: [52.50977402639455, 13.380304447166951]\nAI Final Answer: Agent stopped due to max iterations."
+}

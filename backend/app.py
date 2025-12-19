@@ -247,6 +247,8 @@ async def init_exploration(init_data: InitExplorationModel):
                                           model_provider=init_data.model_provider)
         else:
             await explorer_agent.initialize(start_location, boundary, 
+                                          use_local_data=False,
+                                          exploration_mode=init_data.exploration_mode,
                                           max_rounds=init_data.max_rounds,
                                           model_provider=init_data.model_provider)
         
@@ -256,7 +258,7 @@ async def init_exploration(init_data: InitExplorationModel):
             "start_location": start_location,
             "boundary": boundary,
             "use_local_data": init_data.use_local_data,
-            "exploration_mode": init_data.exploration_mode if init_data.use_local_data else None,
+            "exploration_mode": init_data.exploration_mode,
             "memory_mode": getattr(explorer_agent, 'memory_mode', 'context'),
             "max_rounds": init_data.max_rounds,
             "model_provider": init_data.model_provider
@@ -337,15 +339,7 @@ async def stop_exploration():
     try:
         # print("收到停止探索请求")
         
-        # 检查探索状态
-        if not explorer_agent.is_exploring:
-            # print("探索未在进行中")
-            return {
-                "success": False,
-                "message": "探索未在进行中",
-                "report": None
-            }
-        
+        # 无论是否正在探索，都尝试生成报告和停止逻辑
         # print("正在停止探索...")
         report = explorer_agent.stop_exploration()
         # print(f"探索已停止，生成报告: {report}")
@@ -2188,6 +2182,8 @@ async def stop_exploration():
                 region_name = None
             if not region_name:
                 region_name = "北京天安门"
+            
+            print(f"[DEBUG] Generating questions for region: {region_name}")
             eq = EvaluationQuestions(region_name)
             eq_questions = eq.to_dict_list()
             eq_summary = eq.get_questions_summary()
@@ -2206,7 +2202,10 @@ async def stop_exploration():
                 "questions": eq_questions,
                 "markdown_path": md_rel_path,
             }
-        except Exception:
+        except Exception as e:
+            print(f"[ERROR] Failed to generate evaluation questions: {e}")
+            import traceback
+            traceback.print_exc()
             eq_payload = None
 
         return {

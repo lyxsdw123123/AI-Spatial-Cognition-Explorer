@@ -1,0 +1,264 @@
+{
+  "region": "多伦多CN塔",
+  "model": "zhipu",
+  "exploration_report": {
+    "exploration_path": [],
+    "visited_pois": [],
+    "interesting_pois": [],
+    "total_distance": 0,
+    "exploration_time": 0,
+    "poi_count": 0
+  },
+  "evaluation_result": {
+    "total_score": 7,
+    "total_questions": 24,
+    "accuracy": 29.166666666666668,
+    "type_scores": {
+      "定位与定向": {
+        "correct": 4,
+        "total": 8,
+        "percentage": 50.0
+      },
+      "空间距离估算": {
+        "correct": 0,
+        "total": 4,
+        "percentage": 0.0
+      },
+      "邻近关系判断": {
+        "correct": 1,
+        "total": 4,
+        "percentage": 25.0
+      },
+      "POI密度识别": {
+        "correct": 0,
+        "total": 4,
+        "percentage": 0.0
+      },
+      "路径规划": {
+        "correct": 2,
+        "total": 4,
+        "percentage": 50.0
+      }
+    },
+    "answers": [
+      {
+        "question": "东方广场W1座相对于北京东方广场在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "D",
+        "ai_explanation": "依据不足。上下文中未提及“东方广场W1座”或“北京东方广场”的具体方位关系，无法判断其相对方向。",
+        "correct_answer": "D",
+        "is_correct": true,
+        "explanation": "东方广场W1座位于北京东方广场的西南面。"
+      },
+      {
+        "question": "正义路1号院相对于东方广场W1座在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "D",
+        "ai_explanation": "<依据不足。上下文中未提及“正义路1号院”或“东方广场W1座”的方位或距离信息，无法判断两者之间的相对方向。>",
+        "correct_answer": "D",
+        "is_correct": true,
+        "explanation": "正义路1号院位于东方广场W1座的西南面。"
+      },
+      {
+        "question": "前门东大街23号院相对于正义路1号院在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "D",
+        "ai_explanation": "依据不足。上下文中未出现“前门东大街23号院”和“正义路1号院”的方位或距离信息，无法判断二者之间的相对方向。",
+        "correct_answer": "D",
+        "is_correct": true,
+        "explanation": "前门东大街23号院位于正义路1号院的西南面。"
+      },
+      {
+        "question": "霞公府相对于前门东大街23号院在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "D",
+        "ai_explanation": "依据不足。上下文中未提及“霞公府”与“前门东大街23号院”的相对方向或距离信息，无法判断其方位。",
+        "correct_answer": "A",
+        "is_correct": false,
+        "explanation": "霞公府位于前门东大街23号院的东北面。"
+      },
+      {
+        "question": "北京东方广场相对于东方广场W1座在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "D",
+        "ai_explanation": "依据不足。上下文中未提及“北京东方广场”与“东方广场W1座”的相对方位关系，无法判断其方向。",
+        "correct_answer": "A",
+        "is_correct": false,
+        "explanation": "北京东方广场位于东方广场W1座的东北面。"
+      },
+      {
+        "question": "东方广场W1座相对于正义路1号院在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "D",
+        "ai_explanation": "依据不足。上下文中未提及“东方广场W1座”或“正义路1号院”的方向或距离关系，无法判断其相对方位。",
+        "correct_answer": "A",
+        "is_correct": false,
+        "explanation": "东方广场W1座位于正义路1号院的东北面。"
+      },
+      {
+        "question": "正义路1号院相对于前门东大街23号院在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "D",
+        "ai_explanation": "依据不足。上下文中未提及“正义路1号院”和“前门东大街23号院”的相对方向或距离信息，无法判断其相对方位。",
+        "correct_answer": "A",
+        "is_correct": false,
+        "explanation": "正义路1号院位于前门东大街23号院的东北面。"
+      },
+      {
+        "question": "前门东大街23号院相对于霞公府在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "D",
+        "ai_explanation": "依据不足。上下文中未提及“前门东大街23号院”或“霞公府”的方位关系，无法判断前门东大街23号院相对于霞公府的方向。",
+        "correct_answer": "D",
+        "is_correct": true,
+        "explanation": "前门东大街23号院位于霞公府的西南面。"
+      },
+      {
+        "question": "北京东方广场到正义路1号院的直线距离大约是多少？",
+        "type": "空间距离估算",
+        "ai_answer": "B",
+        "ai_explanation": "依据不足。上下文中未提及“北京东方广场”或“正义路1号院”的具体方向或距离信息，无法判断两者之间的直线距离。",
+        "correct_answer": "C",
+        "is_correct": false,
+        "explanation": "北京东方广场到正义路1号院的直线距离约为696米。"
+      },
+      {
+        "question": "东方广场W1座到前门东大街23号院的直线距离大约是多少？",
+        "type": "空间距离估算",
+        "ai_answer": "A",
+        "ai_explanation": "依据不足。上下文中未提及“东方广场W1座”或“前门东大街23号院”的相关距离信息，无法判断两者之间的直线距离。",
+        "correct_answer": "D",
+        "is_correct": false,
+        "explanation": "东方广场W1座到前门东大街23号院的直线距离约为1298米。"
+      },
+      {
+        "question": "正义路1号院到霞公府的直线距离大约是多少？",
+        "type": "空间距离估算",
+        "ai_answer": "D",
+        "ai_explanation": "依据不足。上下文中未提供正义路1号院与霞公府之间的直线距离或方向信息，无法进行准确判断。",
+        "correct_answer": "C",
+        "is_correct": false,
+        "explanation": "正义路1号院到霞公府的直线距离约为388米。"
+      },
+      {
+        "question": "前门东大街23号院到新怡家园的直线距离大约是多少？",
+        "type": "空间距离估算",
+        "ai_answer": "B",
+        "ai_explanation": "依据不足。上下文中未提及“前门东大街23号院”或“新怡家园”的具体距离信息，无法确定两者之间的直线距离。",
+        "correct_answer": "C",
+        "is_correct": false,
+        "explanation": "前门东大街23号院到新怡家园的直线距离约为1144米。"
+      },
+      {
+        "question": "在以下POI中，哪个距离北京东方广场最近？",
+        "type": "邻近关系判断",
+        "ai_answer": "C",
+        "ai_explanation": "上下文中未提供任何关于北京东方广场或选项中POI（东方广场W1座、正义路1号院、前门东大街23号院）之间的方向或距离信息，因此无法判断哪个POI距离北京东方广场最近。",
+        "correct_answer": "A",
+        "is_correct": false,
+        "explanation": "东方广场W1座距离北京东方广场最近，约126米。"
+      },
+      {
+        "question": "在以下POI中，哪个距离东方广场W1座最近？",
+        "type": "邻近关系判断",
+        "ai_answer": "D",
+        "ai_explanation": "上下文中未提及东方广场W1座，也未提供与东方广场W1座相关的方向或距离信息，因此无法判断哪个POI距离其最近。",
+        "correct_answer": "C",
+        "is_correct": false,
+        "explanation": "霞公府距离东方广场W1座最近，约431米。"
+      },
+      {
+        "question": "在以下POI中，哪个距离正义路1号院最远？",
+        "type": "邻近关系判断",
+        "ai_answer": "C",
+        "ai_explanation": "根据上下文，未直接提及“正义路1号院”与选项中各POI之间的距离信息。因此，无法明确判断哪个POI距离正义路1号院最远。依据不足。",
+        "correct_answer": "C",
+        "is_correct": true,
+        "explanation": "新怡家园距离正义路1号院最远，约1054米。"
+      },
+      {
+        "question": "在以下POI中，哪个距离前门东大街23号院最远？",
+        "type": "邻近关系判断",
+        "ai_answer": "C",
+        "ai_explanation": "根据上下文，天安门东(地铁站)位于金德大厦正南方向，距离金德大厦约1200米。而霞公府和新怡家园未在上下文中提及与前门东大街23号院的距离或方向信息，依据不足。因此，天安门东(地铁站)是唯一可比较的选项，且其距离金德大厦较远，推测其距离前门东大街23号院也较远。",
+        "correct_answer": "B",
+        "is_correct": false,
+        "explanation": "新怡家园距离前门东大街23号院最远，约1144米。"
+      },
+      {
+        "question": "在当前区域内，哪个POI周围的POI密度最高？",
+        "type": "POI密度识别",
+        "ai_answer": "D",
+        "ai_explanation": "依据不足。上下文中未提及任何关于POI周围POI密度的信息，也未提供各选项POI之间的相对位置或距离数据，因此无法判断哪个POI周围的POI密度最高。",
+        "correct_answer": "A",
+        "is_correct": false,
+        "explanation": "东方捷路地下停车场周围的POI密度最高，500米范围内有5个其他POI。"
+      },
+      {
+        "question": "在当前区域内，哪个POI周围的POI密度最高？",
+        "type": "POI密度识别",
+        "ai_answer": "D",
+        "ai_explanation": "依据不足。上下文中未提供关于各选项POI周围其他POI的方位或距离信息，无法判断哪个POI周围的POI密度最高。",
+        "correct_answer": "A",
+        "is_correct": false,
+        "explanation": "天安门东地铁站B东北口周围的POI密度最高，500米范围内有3个其他POI。"
+      },
+      {
+        "question": "在当前区域内，哪个POI周围的POI密度最低？",
+        "type": "POI密度识别",
+        "ai_answer": "D",
+        "ai_explanation": "依据不足。上下文中未提及东方广场W1座周围的POI信息，无法判断其周围POI密度。其他选项同样缺乏相关描述，但根据问题要求选择一个答案，故选D。",
+        "correct_answer": "A",
+        "is_correct": false,
+        "explanation": "前门东大街23号院周围的POI密度最低，500米范围内只有0个其他POI。"
+      },
+      {
+        "question": "在当前区域内，哪个POI周围的POI密度最低？",
+        "type": "POI密度识别",
+        "ai_answer": "D",
+        "ai_explanation": "依据不足。上下文中未提及东方广场W1座周围的POI信息，无法判断其周围POI密度。其他选项同样缺乏相关描述，但根据问题要求选择一个答案，因此选择D作为默认答案。",
+        "correct_answer": "A",
+        "is_correct": false,
+        "explanation": "新怡家园周围的POI密度最低，500米范围内只有0个其他POI。"
+      },
+      {
+        "question": "从北京东方广场到东方广场W1座，以下哪种路径最短？",
+        "type": "路径规划",
+        "ai_answer": "A",
+        "ai_explanation": "根据上下文，仅提供了POI点单元记录和完整行驶路径的信息，但未提及任何关于北京东方广场、东方广场W1座或各选项中提到的道路节点的具体方向或距离信息。因此，无法依据上下文判断各选项路径的长短。然而，选项A描述的路径最直接，仅涉及从北京东方广场到东方广场W1座的两个主要节点，而其他选项包含更多中间节点，可能意味着更长的路径。但由于上下文中无具体数据支持，此结论基于逻辑推理而非文本依据。依据不足。",
+        "correct_answer": "A",
+        "is_correct": true,
+        "explanation": "最短路径是：北京东方广场 -> (东长安街与北京东方广场的节点) -> (东长安街与东方广场W1座道路的节点) -> 东方广场W1座，总距离约405米。"
+      },
+      {
+        "question": "从东方广场W1座到正义路1号院，以下哪种路径最短？",
+        "type": "路径规划",
+        "ai_answer": "D",
+        "ai_explanation": "根据上下文，没有提供任何关于各选项路径中具体距离或方向的信息，因此无法判断哪条路径的直线距离最短。依据不足。",
+        "correct_answer": "B",
+        "is_correct": false,
+        "explanation": "最短路径是：东方广场W1座 -> (东长安街与东方广场W1座道路的节点) -> (东长安街与台基厂大街的节点) -> (东长安街与长安大厦道路的节点) -> (东长安街与正义路的节点) -> (正义路与正义路1号院道路的节点) -> 正义路1号院，总距离约967米。"
+      },
+      {
+        "question": "从正义路1号院到前门东大街23号院，以下哪种路径最短？",
+        "type": "路径规划",
+        "ai_answer": "D",
+        "ai_explanation": "根据上下文，无法直接获取从“正义路1号院”到“前门东大街23号院”的具体路径距离或方向信息。所有选项中提到的节点和道路名称均未在上下文中明确提及或提供距离数据，因此无法依据文本判断哪条路径最短。依据不足。",
+        "correct_answer": "C",
+        "is_correct": false,
+        "explanation": "最短路径是：正义路1号院 -> (正义路与正义路1号院道路的节点) -> (正义路与四季回头特色菜馆道路的节) -> (正义路与正义路3号院道路的节点) -> (正义路与隆和居道路的节点) -> (正义路与正义路10号院道路的节点) -> (正义路与正义路社区服务站道路的节) -> (正义路与前门东大街的节点) -> (前门东大街与前门道路的节点) -> 前门东大街23号院，总距离约1184米。"
+      },
+      {
+        "question": "从前门东大街23号院到霞公府，以下哪种路径最短？",
+        "type": "路径规划",
+        "ai_answer": "D",
+        "ai_explanation": "根据上下文，仅能依据提供的POI点单元记录和完整行驶路径信息进行判断。然而，上下文中并未提供任何关于“前门东大街23号院”或“霞公府”的具体方向、距离或路径信息，也未提及选项中提到的任何道路节点或POI名称。因此，所有选项的路径长度均无法通过上下文中的数据进行比较。依据不足，无法确定哪条路径最短。",
+        "correct_answer": "D",
+        "is_correct": true,
+        "explanation": "最短路径是：前门东大街23号院 -> (前门东大街与前门道路的节点) -> (正义路与前门东大街的节点) -> (正义路与正义路社区服务站道路的节) -> (正义路与正义路10号院道路的节点) -> (正义路与隆和居道路的节点) -> (正义路与正义路3号院道路的节点) -> (正义路与四季回头特色菜馆道路的节) -> (正义路与正义路1号院道路的节点) -> (东长安街与正义路的节点) -> (南河沿大街与霞公府道路的节点) -> 霞公府，总距离约1614米。"
+      }
+    ],
+    "completed_at": "2025-12-17T20:19:02.439258"
+  },
+  "context_text": "POI点单元记录（按时间顺序）：\n\n完整行驶路径（仅方向与距离）：\n- 起点：起点\n\n总和：\n已访问POI数量：0\n已访问道路节点数量（只要Name字段的）：0\n总探索距离：0米\n探索时间：0秒"
+}
