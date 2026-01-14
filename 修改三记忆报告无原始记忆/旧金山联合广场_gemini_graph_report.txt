@@ -1,0 +1,265 @@
+{
+  "region": "旧金山联合广场",
+  "model": "gemini",
+  "memory_mode": "graph",
+  "exploration_report": {
+    "total_distance": 880,
+    "exploration_time": 0,
+    "poi_count": 876
+  },
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 8,
+      "total_questions": 24,
+      "accuracy": 33.33333333333333,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 1,
+          "total": 8,
+          "percentage": 12.5
+        },
+        "空间距离估算": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "邻近关系判断": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "POI密度识别": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "路径规划": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Wells Fargo相对于Wells Fargo在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "根据提供的节点和边信息，Wells Fargo是同一个地点，因此其相对于自身的方位角为0°（地理正北）。由于问题中没有提供其他节点或路径信息来支持方向判断，因此无法确定Wells Fargo相对于自身的位置。然而，根据题目选项的逻辑，若必须选择一个方向，则“西南”（D）是唯一可能的答案，因为其他方向与0°（正北）矛盾。依据不足。",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Wells Fargo位于Wells Fargo的东南面。"
+        },
+        {
+          "question": "Walgreens相对于Wells Fargo在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文中的节点和边信息，Walgreens（节点ID未明确给出）与Wells Fargo（节点ID未明确给出）之间的相对方向可以通过路径规划和方位角推断。在多次移动过程中，例如从Wells Fargo到Walgreens的路径中，工具输出显示Walgreens位于Wells Fargo的228.27852446181114°方向（即东南方向）。因此，Walgreens相对于Wells Fargo位于东南方向。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Walgreens位于Wells Fargo的西北面。"
+        },
+        {
+          "question": "Biscuits & Blues相对于Walgreens在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文中的节点与边信息，Biscuits & Blues 和 Walgreens 均为 POI 节点。在用户移动到 Walgreens 后的扫描结果中，Biscuits & Blues 的方向为 209.57°（相对于地理正北顺时针递增）。该角度位于 180°（正南）和 270°（正西）之间，因此属于东南方向。故 Biscuits & Blues 相对于 Walgreens 在东南方向。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Biscuits & Blues位于Walgreens的西南面。"
+        },
+        {
+          "question": "Akiko's Sushi Bar相对于Biscuits & Blues在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文提供的信息，Akiko's Sushi Bar与Biscuits & Blues之间的相对位置关系可以通过路径推理得出。在步骤35中，AI从Walgreens移动到Akiko's Sushi Bar，随后在步骤43中从Akiko's Sushi Bar移动到Biscuits & Blues。根据工具输出中的方向信息，Akiko's Sushi Bar的方位角为264.94°（相对于地理正北），而Biscuits & Blues的方位角为209.57°。由于264.94°位于209.57°的顺时针方向，且两者之间的角度差约为55.37°，表明Akiko's Sushi Bar位于Biscuits & Blues的东南方向。因此，正确答案是B. 东南。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Akiko's Sushi Bar位于Biscuits & Blues的东北面。"
+        },
+        {
+          "question": "Wells Fargo相对于Wells Fargo在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "根据上下文提供的节点与边信息，Wells Fargo是唯一一个名称为\"Wells Fargo\"的POI，因此它无法相对于自身存在方向。题目中提到的“Wells Fargo相对于Wells Fargo”在逻辑上不成立，因此该问题本身存在矛盾。若假设题意为“Wells Fargo相对于其他POI的方向”，则需明确具体参照物。但基于当前问题描述，答案无法确定，因此选择最符合逻辑的选项D（西南）作为默认答案，以表明问题存在歧义。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Wells Fargo位于Wells Fargo的西北面。"
+        },
+        {
+          "question": "Wells Fargo相对于Walgreens在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文中的节点与边信息，无法直接获取Wells Fargo与Walgreens之间的方位角。但根据工具输出中提供的相对位置信息，当在Wells Fargo时，Walgreens位于228.27852446181114°方向（即东南方向）。因此，Wells Fargo相对于Walgreens的方向为西北方向（与东南方向相反）。因此，正确答案是C. 西北。然而，根据工具输出中提供的相对位置信息，当在Walgreens时，Wells Fargo位于228.27852446181114°方向（即东南方向），因此，Wells Fargo相对于Walgreens的方向为东南方向。因此，正确答案是B. 东南。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Wells Fargo位于Walgreens的东南面。"
+        },
+        {
+          "question": "Walgreens相对于Biscuits & Blues在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "<根据上下文提供的POI信息，Walgreens位于Biscuits & Blues的东南方向。具体来说，从Biscuits & Blues到Walgreens的方位角为209.57°，这属于东南方向（90°-180°）。因此，正确答案是B. 东南。>",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Walgreens位于Biscuits & Blues的东北面。"
+        },
+        {
+          "question": "Biscuits & Blues相对于Akiko's Sushi Bar在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文提供的节点与边信息，Biscuits & Blues（NODE[? ,POI]）和Akiko's Sushi Bar（NODE[? ,POI]）之间的相对方向可以通过路径规划推断。在路径移动过程中，当AI从Akiko's Sushi Bar移动到Biscuits & Blues时，工具输出显示Biscuits & Blues的方位角为209.57°（相对于地理正北顺时针递增）。209.57°位于正南（180°）与正西（270°）之间，因此属于东南方向。故答案为B. 东南。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Biscuits & Blues位于Akiko's Sushi Bar的西南面。"
+        },
+        {
+          "question": "Wells Fargo到Walgreens的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文提供的节点与边信息，Wells Fargo（节点ID为1）和Walgreens（节点ID为2）之间没有直接的边连接。但通过路径规划，可以发现从Wells Fargo到Walgreens的路径经过多个节点，总长度约为212米（如步骤中提到的“Path planned via road network: 4 steps, approx 212m”）。因此，Wells Fargo到Walgreens的直线距离大约在100-200米范围内。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Wells Fargo到Walgreens的直线距离约为89米。"
+        },
+        {
+          "question": "Wells Fargo到Biscuits & Blues的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文提供的路径信息，Wells Fargo（节点ID未明确给出，但根据上下文可推断为某个POI）到Biscuits & Blues的路径经过多个节点。在最后一次移动中，AI从Zingari移动到Biscuits & Blues，路径长度为125m。由于Biscuits & Blues与Zingari之间的距离为125m，且Zingari与Wells Fargo之间存在路径（如从Wells Fargo到Walgreens再到Zingari），可以推断Wells Fargo到Biscuits & Blues的直线距离约为0-200米。因此，选项A最合理。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Wells Fargo到Biscuits & Blues的直线距离约为452米。"
+        },
+        {
+          "question": "Walgreens到Akiko's Sushi Bar的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "<根据上下文提供的信息，Walgreens和Akiko's Sushi Bar均为POI节点。虽然没有直接的边描述两者之间的连接，但通过路径规划记录可知，从Walgreens到Akiko's Sushi Bar的路径为：Walgreens → ... → Akiko's Sushi Bar，总长度为217m。因此，直线距离应小于或接近该路径长度，属于100-200米范围。>",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Walgreens到Akiko's Sushi Bar的直线距离约为112米。"
+        },
+        {
+          "question": "Biscuits & Blues到Notre Dame Des Victoires Grammar School的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "根据提供的节点和边信息，无法直接获取Biscuits & Blues到Notre Dame Des Victoires Grammar School的直线距离。但通过路径规划可以推断出两者之间的大致距离。在探索过程中，当AI位于Biscuits & Blues时，发现Notre Dame Des Victoires Grammar School距离为563m（见工具输出）。因此，Biscuits & Blues到Notre Dame Des Victoires Grammar School的直线距离大约在200-400米范围内，符合选项B。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Biscuits & Blues到Notre Dame Des Victoires Grammar School的直线距离约为563米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Wells Fargo最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "<根据上下文提供的节点与边信息，Wells Fargo的节点ID为1（假设在节点列表中），而Walgreens的节点ID为2。通过查找边列表中的路径，可以确定从Wells Fargo到Walgreens的最短路径长度为89m，因此Walgreens是距离Wells Fargo最近的POI。>",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Walgreens距离Wells Fargo最近，约89米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Wells Fargo最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文提供的路径信息，从Wells Fargo（节点ID未明确给出，但根据上下文可推断为某个POI）到Akiko's Sushi Bar的路径规划为3步，约217m。而到Walgreens的路径为4步，约212m，到Biscuits & Blues的路径为3步，约232m。虽然Walgreens的距离数值更小，但根据路径选择策略，优先考虑总边权最小，因此Akiko's Sushi Bar的路径总边权更小，故距离Wells Fargo最近。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Walgreens距离Wells Fargo最近，约392米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Walgreens最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文提供的POI与路径信息，Walgreens的可见POI中，Notre Dame Des Victoires Grammar School的距离为408m（在Cogswell College的扫描结果中），而Biscuits & Blues距离为317m（在Wells Fargo的扫描结果中），Akiko's Sushi Bar距离为191m（在Walgreens的扫描结果中）。因此，Notre Dame Des Victoires Grammar School是距离Walgreens最远的选项。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Notre Dame Des Victoires Grammar School距离Walgreens最远，约334米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Biscuits & Blues最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文提供的节点与边信息，Biscuits & Blues 的位置在 NODE[14,POI]（假设为 Biscuits & Blues 的 ID）。通过路径规划和距离计算，Akiko's Sushi Bar 的距离为 112m，Notre Dame Des Victoires Grammar School 的距离为 93m，而 Cogswell College 的距离为 383m。因此，Cogswell College 是距离 Biscuits & Blues 最远的选项。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Cogswell College距离Biscuits & Blues最远，约656米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "根据提供的节点和边信息，分析各POI周围的POI密度。通过观察每个POI在扫描环境中发现的可见POI数量，可以推断其周围POI的密集程度。例如，Walgreens在多个扫描步骤中显示了较多的可见POI（如Biscuits & Blues、Akiko's Sushi Bar、Cafe Mason等），表明其周围POI密度较高。相比之下，其他选项中的POI（如AMC Loews Metreon 16、Cogswell College、Notre Dame Des Victoires Grammar School）在扫描中显示的可见POI数量较少，因此密度较低。因此，选择A作为答案。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Walgreens周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "根据提供的节点与边信息，\"Notre Dame Des Victoires Grammar School\"（节点10）周围有多个POI与其相连。具体而言，从该节点出发，可到达以下POI：Wells Fargo（节点1）、Walgreens（节点2）、Biscuits & Blues（节点3）、Akiko's Sushi Bar（节点4）、Cafe Mason（节点5）、Pinecrest Diner（节点6）、Zingari（节点7）、John's Grill Live Jazz（节点8）、AMC Loews Metreon 16（节点9）。这些POI均在该节点的邻近范围内，且通过道路连接，表明其周围POI密度较高。相比之下，其他选项中的POI（如Wells Fargo、AMC Loews Metreon 16、Cogswell College）虽然也有多个邻近POI，但数量和连通性均不如Notre Dame Des Victoires Grammar School。因此，Notre Dame Des Victoires Grammar School周围的POI密度最高。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Wells Fargo周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "根据提供的节点与边信息，Biscuits & Blues（NODE[4,POI]）在路径规划中被发现时，周围仅可见5个POI（Biscuits & Blues、Akiko's Sushi Bar、Cafe Mason、Pinecrest Diner、Zingari），且这些POI之间的连通性未明确说明。相比之下，其他选项中的POI如AMC Loews Metreon 16（NODE[13,POI]）在路径规划中周围可见多个POI，Cogswell College（NODE[12,POI]）和Notre Dame Des Victoires Grammar School（NODE[10,POI]）也均显示有较多邻近POI。因此，Biscuits & Blues的POI密度最低。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "AMC Loews Metreon 16周围的POI密度最低，500米范围内只有1个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "根据提供的节点与边信息，Biscuits & Blues（NODE[4,POI]）在路径规划中被多次访问，且其周围POI数量较少。例如，在路径移动过程中，Biscuits & Blues附近的可见POI包括Akiko's Sushi Bar、Cafe Mason、Pinecrest Diner、Zingari等，但这些POI的分布较为稀疏，且没有形成密集的POI网络。相比之下，其他选项中的POI如Cogswell College、AMC Loews Metreon 16、Notre Dame Des Victoires Grammar School周围的可见POI数量更多，密度更高。因此，Biscuits & Blues周围的POI密度最低。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Cogswell College周围的POI密度最低，500米范围内只有3个其他POI。"
+        },
+        {
+          "question": "从Wells Fargo到Wells Fargo，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "根据提供的节点与边列表，Wells Fargo的ID为1（从上下文中的NODE[1,POI,name=Wells Fargo]可得）。选项D中提到的路径为：\n\n- Wells Fargo -> (Wells Fargo and stockton street的节点) -> (bush street and Walgreens的节点) -> (market street and Wells Fargo的节点) -> Wells Fargo\n\n虽然这些中间节点未在给定的节点列表中明确列出，但根据图记忆规则，仅允许使用上下文中提供的节点和边。因此，我们只能基于已知的节点和边来判断路径长度。\n\n在没有具体边信息的情况下，我们无法验证选项中提到的中间节点是否真实存在或是否连通。然而，选项D的路径最短，因为它直接连接Wells Fargo到其他节点再返回Wells Fargo，而其他选项涉及更多中间节点，可能需要更多的边权或步数。\n\n因此，基于路径长度优先的原则，选项D是最短的路径。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "最短路径是：Wells Fargo -> (sutter street and Wells Fargo的节点) -> (sutter street and stockton street的节点) -> (post street and stockton street的节点) -> (Wells Fargo and stockton street的节点) -> Wells Fargo，总距离约521米。"
+        },
+        {
+          "question": "从Wells Fargo到Walgreens，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "根据提供的节点与边列表，Wells Fargo（NODE[1,POI]）与Walgreens（NODE[2,POI]）之间没有直接连接。需要通过中间节点进行路径规划。\n\n选项 D 的路径为：\nWells Fargo -> (Farrell street西节点) -> (post street and Biscuits的节点) -> (market street and AMC Loews Metreon 16的节点) -> Walgreens\n\n虽然上下文中未明确给出这些中间节点的具体ID，但根据图记忆规则，路径规划需基于已有的节点和边集合。在现有数据中，Wells Fargo（NODE[1]）与Walgreens（NODE[2]）之间的最短路径可以通过以下方式推断：\n\n- 根据工具输出中的移动记录，Wells Fargo到Walgreens的路径是通过多个中间节点完成的，且路径长度为212m（4步）。\n- 选项 D 中描述的路径包含4步，符合该路径长度，因此是最短路径。\n\n其他选项涉及的节点或边未在上下文中出现，无法验证其有效性，因此排除。\n\n综上，选项 D 是最短路径。",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "最短路径是：Wells Fargo -> (Wells Fargo and stockton street的节点) -> (post street and stockton street的节点) -> (sutter street and stockton street的节点) -> (sutter street and Wells Fargo的节点) -> (sutter street and Wells Fargo的节点) -> Walgreens，总距离约553米。"
+        },
+        {
+          "question": "从Walgreens到Biscuits & Blues，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "根据提供的节点和边列表，Walgreens对应节点ID为10（NODE[10,POI,name=Wild Wing]），Biscuits & Blues未在给定的节点列表中出现。因此，选项A、B、D中提到的“Wells Fargo and stockton street的节点”、“market street and AMC Loews Metreon 16的节点”、“sutter street and Union Bank of California的节点”等均未在上下文中定义，属于未出现的连接或节点，违反了图记忆规则第4条。而选项C中的路径仅涉及已知节点（如Walgreens和Biscuits & Blues），虽然Biscuits & Blues本身未出现在节点列表中，但该选项未引入未出现的节点或连接，符合规则。因此，选项C是唯一合法的路径选择。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：Walgreens -> (post street and Walgreens的节点) -> (post street and Biscuits的节点) -> Biscuits & Blues，总距离约357米。"
+        },
+        {
+          "question": "从Biscuits & Blues到Akiko's Sushi Bar，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "根据提供的节点和边列表，无法确认选项A、B、C中提到的“sutter street and Akiko's Sushi Bar的节点”、“John's Grill Live Jazz and bush street的节点”、“market street and Tú Lan的节点”、“post street and Biscuits的节点”等具体节点信息，因此这些路径的连通性无法验证。而选项D中的路径“Biscuits & Blues -> (post street and Biscuits的节点) -> (post street and Biscuits的节点) -> Akiko's Sushi Bar”虽然描述不够清晰，但若假设“post street and Biscuits的节点”为一个实际存在的节点，则该路径可能基于已知的节点和边进行推理。由于其他选项涉及未在上下文中明确提及的节点，依据不足，因此选择D作为最短路径。",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：Biscuits & Blues -> (post street and Biscuits的节点) -> (post street and Biscuits的节点) -> Akiko's Sushi Bar，总距离约191米。"
+        }
+      ],
+      "completed_at": "2025-12-20T17:25:36.025715"
+    },
+    "context_mode": "graph"
+  },
+  "context_text": "# 第二种记忆道路连通图描述\n## 节点列表\nNODE[id,类型,附加属性]\nNODE[1,POI,name=Wells Fargo]\nNODE[2,POI,name=Citibank]\nNODE[3,POI,name=Union Bank of California]\nNODE[4,POI,name=Notre Dame Des Victoires Grammar School]\nNODE[5,POI,name=Cogswell College]\nNODE[6,POI,name=Walgreens]\nNODE[7,POI,name=Akiko's Sushi Bar]\nNODE[8,POI,name=Zingari]\nNODE[9,POI,name=Biscuits & Blues]\nNODE[10,POI,name=Pinecrest Diner]\nNODE[11,POI,name=Cafe Mason]\nNODE[12,POI,name=John's Grill Live Jazz]\nNODE[13,POI,name=AMC Loews Metreon 16]\nNODE[14,POI,name=Tú Lan]\nNODE[15,ROAD,name=起点]\nNODE[16,ROAD,name=market street and Wells Fargo的节点]\nNODE[17,ROAD,name=market street and Citibank的节点]\nNODE[18,ROAD,name=sutter street and Union Bank of California的节点]\nNODE[19,ROAD,name=bush street的节点]\nNODE[20,ROAD,name=bush street and Notre Dame Des Victoires Grammar School的节点]\nNODE[21,ROAD,name=bush street and stockton street的节点]\nNODE[22,ROAD,name=Wells Fargo and stockton street的节点]\nNODE[23,ROAD,name=sutter street and Wells Fargo的节点]\nNODE[24,ROAD,name=位置_18]\nNODE[25,ROAD,name=sutter street and Akiko's Sushi Bar的节点]\nNODE[26,ROAD,name=post street and Biscuits的节点]\nNODE[27,ROAD,name=Farrell street and Cafe Mason的节点]\nNODE[28,ROAD,name=Farrell street and bush street的节点]\nNODE[29,ROAD,name=John's Grill Live Jazz and bush street的节点]\nNODE[30,ROAD,name=market street and stockton street的节点]\nNODE[31,ROAD,name=market street and AMC Loews Metreon 16的节点]\nNODE[32,ROAD,name=AMC Loews Metreon 16节点]\nNODE[33,ROAD,name=market street and bush street的节点]\nNODE[34,ROAD,name=market street and Mason street的节点]\nNODE[35,ROAD,name=market street and Tú Lan的节点]\n\n## 边列表\nEDGE[起点ID,终点ID,道路长度,方向]\nEDGE[15,1,94m,67°]\nEDGE[1,16,70m,134°]\nEDGE[16,17,140m,36°]\nEDGE[17,2,130m,352°]\nEDGE[2,18,75m,2°]\nEDGE[18,3,164m,73°]\nEDGE[3,18,164m,253°]\nEDGE[18,19,121m,2°]\nEDGE[19,20,244m,255°]\nEDGE[20,4,117m,1°]\nEDGE[4,5,93m,40°]\nEDGE[5,4,93m,220°]\nEDGE[4,20,117m,181°]\nEDGE[20,21,64m,270°]\nEDGE[21,22,68m,182°]\nEDGE[22,1,90m,269°]\nEDGE[1,23,73m,148°]\nEDGE[23,24,50m,271°]\nEDGE[24,6,55m,271°]\nEDGE[6,25,127m,294°]\nEDGE[25,7,62m,176°]\nEDGE[7,8,66m,181°]\nEDGE[8,26,69m,179°]\nEDGE[26,9,54m,180°]\nEDGE[9,10,62m,179°]\nEDGE[10,11,55m,91°]\nEDGE[11,27,60m,175°]\nEDGE[27,28,135m,70°]\nEDGE[28,29,131m,168°]\nEDGE[29,12,68m,74°]\nEDGE[12,30,75m,79°]\nEDGE[30,31,62m,43°]\nEDGE[31,32,213m,145°]\nEDGE[32,32,38m,145°]\nEDGE[32,13,45m,40°]\nEDGE[13,32,45m,220°]\nEDGE[32,32,38m,325°]\nEDGE[32,31,213m,325°]\nEDGE[31,30,62m,223°]\nEDGE[30,33,174m,223°]\nEDGE[33,34,167m,223°]\nEDGE[34,35,147m,230°]\nEDGE[35,14,69m,179°]"
+}

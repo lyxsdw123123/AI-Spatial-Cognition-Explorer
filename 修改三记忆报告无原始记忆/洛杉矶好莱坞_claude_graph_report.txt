@@ -1,0 +1,265 @@
+{
+  "region": "洛杉矶好莱坞",
+  "model": "claude",
+  "memory_mode": "graph",
+  "exploration_report": {
+    "total_distance": 780,
+    "exploration_time": 0,
+    "poi_count": 1710
+  },
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 8,
+      "total_questions": 24,
+      "accuracy": 33.33333333333333,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 1,
+          "total": 8,
+          "percentage": 12.5
+        },
+        "空间距离估算": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "邻近关系判断": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "POI密度识别": {
+          "correct": 0,
+          "total": 4,
+          "percentage": 0.0
+        },
+        "路径规划": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Hard Rock Cafe相对于Whealthy在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "根据上下文提供的节点与边信息，无法直接获取Hard Rock Cafe与Whealthy之间的相对方向。但根据工具输出中提供的方位角信息，Whealthy位于Hard Rock Cafe的213.66°方向（即西南方向）。因此，Hard Rock Cafe相对于Whealthy的方向为相反方向，即213.66° - 180° = 33.66°，但此方向描述不符合选项中的方位。依据不足，但根据工具输出中Whealthy的方位角为213.66°，可推断Hard Rock Cafe位于Whealthy的西北方向。然而，由于工具输出中未提供直接的相对方向信息，最终答案基于方位角的反向推断，选择D（西南）作为最接近的合理答案。",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Hard Rock Cafe位于Whealthy的东南面。"
+        },
+        {
+          "question": "TCL Chinese 6 Theatre相对于Hard Rock Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文提供的节点与边信息，TCL Chinese 6 Theatre（NODE[4,POI]）和Hard Rock Cafe（NODE[1,POI]）之间的相对方向可以通过路径规划推断。从TCL Chinese 6 Theatre到Hard Rock Cafe的路径中，通过分析已知的方位角数据，TCL Chinese 6 Theatre位于Hard Rock Cafe的东南方向。因此，正确答案是B. 东南。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "TCL Chinese 6 Theatre位于Hard Rock Cafe的东北面。"
+        },
+        {
+          "question": "Chado Tea Room相对于TCL Chinese 6 Theatre在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "根据上下文提供的节点与边信息，Chado Tea Room（NODE[3,POI]）和TCL Chinese 6 Theatre（NODE[4,POI]）之间的相对方向可以通过路径规划推断。从工具输出的移动记录中可以看到，Chado Tea Room位于TCL Chinese 6 Theatre的正西方向（方位角292.14°），而TCL Chinese 6 Theatre位于Chado Tea Room的正东方向（方位角112.14°）。因此，Chado Tea Room相对于TCL Chinese 6 Theatre在**西南**方向。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Chado Tea Room位于TCL Chinese 6 Theatre的东北面。"
+        },
+        {
+          "question": "The Coffee Bean & Tea Leaf相对于Chado Tea Room在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据提供的节点和边信息，Chado Tea Room对应NODE[10,POI,name=Chado Tea Room]，The Coffee Bean & Tea Leaf对应NODE[14,POI,name=The Coffee Bean & Tea Leaf]。通过上下文中的路径规划信息，可以推断出从Chado Tea Room到The Coffee Bean & Tea Leaf的方位角为211.97830159769504°（根据工具输出中“Dir: 211.97830159769504”）。该角度位于东南方向（90°~180°），因此选择B选项。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "The Coffee Bean & Tea Leaf位于Chado Tea Room的西南面。"
+        },
+        {
+          "question": "Whealthy相对于Hard Rock Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "根据上下文中的节点和边信息，Whealthy（NODE[1,POI]）与Hard Rock Cafe（NODE[2,POI]）之间没有直接的边连接。但根据工具输出中提供的相对位置信息，Whealthy位于Hard Rock Cafe的方位角为183.5132410548666°，该方向接近正南偏西，因此Whealthy相对于Hard Rock Cafe位于西南方向。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Whealthy位于Hard Rock Cafe的西北面。"
+        },
+        {
+          "question": "Hard Rock Cafe相对于TCL Chinese 6 Theatre在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "根据上下文提供的边信息，无法直接获取Hard Rock Cafe与TCL Chinese 6 Theatre之间的方位角。但通过工具输出的扫描数据可知，Hard Rock Cafe位于TCL Chinese 6 Theatre的213.66°方向（即西南方向）。因此，Hard Rock Cafe相对于TCL Chinese 6 Theatre在西南方向。",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "Hard Rock Cafe位于TCL Chinese 6 Theatre的西南面。"
+        },
+        {
+          "question": "TCL Chinese 6 Theatre相对于Chado Tea Room在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文提供的节点与边信息，Chado Tea Room对应NODE[10,POI,name=Chado Tea Room]，TCL Chinese 6 Theatre对应NODE[3,POI,name=TCL Chinese 6 Theatre]。在探索过程中，AI从Chado Tea Room移动到TCL Chinese 6 Theatre时，工具输出显示方向为189.2599748688271°（即正南偏东约9.26°）。根据方位角标准（正北为0°，顺时针递增），该方向属于东南方向。因此，TCL Chinese 6 Theatre相对于Chado Tea Room位于东南方向。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "TCL Chinese 6 Theatre位于Chado Tea Room的西南面。"
+        },
+        {
+          "question": "Chado Tea Room相对于The Coffee Bean & Tea Leaf在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "根据上下文提供的节点与边信息，Chado Tea Room对应NODE[3,POI,name=Chado Tea Room]，The Coffee Bean & Tea Leaf对应NODE[10,POI,name=The Coffee Bean & Tea Leaf]。由于上下文中未提供直接连接这两个节点的边，因此无法通过边的方位角直接判断相对方向。然而，在工具输出中，Chado Tea Room的方位角为292.14°（接近正北偏西），而The Coffee Bean & Tea Leaf的方位角为211.978°（接近正南偏西）。因此，Chado Tea Room相对于The Coffee Bean & Tea Leaf位于西南方向。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Chado Tea Room位于The Coffee Bean & Tea Leaf的东北面。"
+        },
+        {
+          "question": "Whealthy到TCL Chinese 6 Theatre的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "A",
+          "ai_explanation": "根据提供的节点和边信息，Whealthy和TCL Chinese 6 Theatre均属于POI节点。虽然没有直接的边连接这两个节点，但通过上下文中的路径规划信息可以推断出它们之间的相对位置。在探索过程中，Whealthy被标记为距离42米，而TCL Chinese 6 Theatre被标记为距离47米。由于这两个点的距离均小于100米，因此它们的直线距离大约在0-100米范围内。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Whealthy到TCL Chinese 6 Theatre的直线距离约为42米。"
+        },
+        {
+          "question": "Hard Rock Cafe到Chado Tea Room的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "A",
+          "ai_explanation": "根据提供的节点和边信息，无法直接获取Hard Rock Cafe（节点ID未在给定的节点列表中）与Chado Tea Room（节点ID未在给定的节点列表中）之间的具体路径或距离。因此，依据不足，无法准确计算两者之间的直线距离。然而，在探索上下文中，用户提到Chado Tea Room距离当前位置41米，而Hard Rock Cafe距离当前位置45米。由于这两个POI可能位于相近区域，可以推测它们之间的直线距离可能在0-100米范围内。但需注意，此推断基于有限信息，实际距离可能不同。",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Hard Rock Cafe到Chado Tea Room的直线距离约为133米。"
+        },
+        {
+          "question": "TCL Chinese 6 Theatre到The Coffee Bean & Tea Leaf的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "根据提供的节点和边信息，TCL Chinese 6 Theatre对应节点ID为14（假设在节点列表中），而The Coffee Bean & Tea Leaf对应节点ID为15（假设在节点列表中）。由于上下文中未提供直接连接这两点的边信息，因此无法通过现有边计算精确的直线距离。然而，根据工具输出中的描述，The Coffee Bean & Tea Leaf在某个位置的可见距离为247米（方向211.97830159769504°），而TCL Chinese 6 Theatre的可见距离为55米（方向236.29014628923377°）。结合这些信息，可以推断两者之间的直线距离大约在100-200米范围内。因此，选项B是合理的选择。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "TCL Chinese 6 Theatre到The Coffee Bean & Tea Leaf的直线距离约为201米。"
+        },
+        {
+          "question": "Chado Tea Room到JINYA Ramen Bar的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文提供的节点与边信息，Chado Tea Room（NODE[3,POI]）和JINYA Ramen Bar（NODE[4,POI]）之间没有直接的边连接。因此，无法通过边权直接计算两者之间的直线距离。然而，根据工具输出中提供的相对位置信息，Chado Tea Room位于41米处，方向为292.14°，而JINYA Ramen Bar位于76米处，方向为171.00°。这两个点之间的直线距离可以通过几何方法估算，但根据实际路径规划和工具输出中的距离信息，两者的直线距离应小于100米，因此选择选项A。",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Chado Tea Room到JINYA Ramen Bar的直线距离约为103米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Whealthy最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文提供的节点与边信息，Whealthy位于NODE[1]。通过路径推理，从Whealthy到Chado Tea Room的最短路径为EDGE[1, 3, 41m]，即距离为41米。而到Hard Rock Cafe和TCL Chinese 6 Theatre的距离分别为45米和47米。因此，Chado Tea Room是距离Whealthy最近的POI。",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "TCL Chinese 6 Theatre距离Whealthy最近，约42米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Hard Rock Cafe最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "根据提供的节点和边信息，Hard Rock Cafe对应的节点为NODE[2,POI]。通过路径比较，Chado Tea Room（NODE[4,POI]）与Hard Rock Cafe之间的路径长度最短。具体路径为EDGE[4,2,180m]，总长度为180米，方向为从Chado Tea Room到Hard Rock Cafe的方位角为180°（正南）。其他选项的距离均大于180米，因此Chado Tea Room是距离Hard Rock Cafe最近的POI。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "TCL Chinese 6 Theatre距离Hard Rock Cafe最近，约87米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离TCL Chinese 6 Theatre最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "根据提供的节点与边信息，TCL Chinese 6 Theatre的ID未在给定的节点列表中明确标识，但根据上下文中的路径规划记录，可以推断其对应节点为某个未直接列出的节点。通过比较各选项POI与TCL Chinese 6 Theatre之间的路径长度：\n\n- **Chado Tea Room**（A）：在路径规划中被描述为距离TCL Chinese 6 Theatre 41m，路径长度较短。\n- **JINYA Ramen Bar**（C）：在路径规划中被描述为距离TCL Chinese 6 Theatre 73m，路径长度中等。\n- **The Coffee Bean & Tea Leaf**（B）：在路径规划中被描述为距离TCL Chinese 6 Theatre 247m，路径长度最长。\n\n因此，**The Coffee Bean & Tea Leaf**（B）是距离TCL Chinese 6 Theatre最远的POI。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "The Coffee Bean & Tea Leaf距离TCL Chinese 6 Theatre最远，约201米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Chado Tea Room最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文提供的节点与边信息，Chado Tea Room对应的是NODE[3,POI,name=Chado Tea Room]。通过路径规划规则，需在给定的边集合中查找从Chado Tea Room到各选项POI的最短路径长度。\n\n- **The Coffee Bean & Tea Leaf**：根据工具输出中的距离信息，其距离为251m（初始扫描时）或247m（后续扫描时），且路径规划显示需要2步，约251m。\n- **JINYA Ramen Bar**：距离为76m（初始扫描时），路径规划显示需要2步，约76m。\n- **Hooters**：距离为229m（初始扫描时），路径规划显示需要2步，约229m。\n\n综上，**The Coffee Bean & Tea Leaf**（选项A）距离Chado Tea Room最远，约为251m。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "The Coffee Bean & Tea Leaf距离Chado Tea Room最远，约247米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "根据提供的节点和边信息，TCL Chinese 6 Theatre（NODE[4,POI]）周围有多个POI直接相连或通过较短路径可达。例如，从TCL Chinese 6 Theatre出发，可直接到达Chado Tea Room（NODE[3,POI]）、Whealthy（NODE[1,POI]）等POI，且这些POI之间的路径长度较短，表明其周围POI密度较高。相比之下，其他选项中的POI（如Greco's Pizza、Whealthy、Hard Rock Cafe）周围的直接连接或短路径POI数量较少，因此TCL Chinese 6 Theatre的POI密度最高。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Greco's Pizza周围的POI密度最高，500米范围内有9个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "根据提供的节点和边信息，TCL Chinese 6 Theatre（NODE[4,POI]）周围有多个POI直接相连。具体而言，从TCL Chinese 6 Theatre出发，可直接到达Chado Tea Room（NODE[3,POI]）、Whealthy（NODE[1,POI]）、Hard Rock Cafe（NODE[2,POI]）等POI，且这些连接的边长度较短，表明其周围POI密度较高。其他选项如Dave & Buster's（NODE[8,POI]）虽然也有多个连接，但其周围POI数量和密度不如TCL Chinese 6 Theatre。因此，TCL Chinese 6 Theatre周围的POI密度最高。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Dave & Buster's周围的POI密度最高，500米范围内有9个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "根据提供的节点与边信息，Chado Tea Room（NODE[3,POI]）在上下文中没有与其他POI直接相连的边，表明其周围POI密度最低。而其他选项中的POI（如Whealthy、Hard Rock Cafe、TCL Chinese 6 Theatre）均存在至少一条边连接到其他节点，说明它们周围有更多POI或道路连接。因此，Chado Tea Room的POI密度最低。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Whealthy周围的POI密度最低，500米范围内只有9个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "根据提供的节点列表和边列表，可以分析每个POI周围的POI密度。通过观察各POI的邻近关系，发现Chado Tea Room（NODE[4,POI]）周围没有直接相连的其他POI节点，而其他选项中的POI（如Hard Rock Cafe、Whealthy、TCL Chinese 6 Theatre）均与至少一个其他POI有直接连接。因此，Chado Tea Room周围的POI密度最低。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Hard Rock Cafe周围的POI密度最低，500米范围内只有9个其他POI。"
+        },
+        {
+          "question": "从Whealthy到Hard Rock Cafe，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "根据提供的节点和边列表，Whealthy（节点ID未在给定节点列表中明确标识，但根据上下文推断为某个POI节点）到Hard Rock Cafe（节点ID未在给定节点列表中明确标识，但根据上下文推断为某个POI节点）之间直接存在路径。选项A表示直接路径，无需经过其他节点，因此路径长度最短。其他选项涉及额外节点和边，导致路径长度增加。由于未提供具体节点ID和边信息，无法验证选项B、C、D的具体路径长度，但根据规则，直接路径优先于多节点路径。因此，选项A是最短路径。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：Whealthy -> Hard Rock Cafe，总距离约45米。"
+        },
+        {
+          "question": "从Hard Rock Cafe到TCL Chinese 6 Theatre，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "根据提供的节点和边列表，从Hard Rock Cafe（节点ID为5）到TCL Chinese 6 Theatre（节点ID为4）的最短路径是直接通过一条边连接。在边列表中，存在EDGE[5,4,105m]，表示从节点5（Hard Rock Cafe）到节点4（TCL Chinese 6 Theatre）有一条长度为105米的边。因此，选项B中的路径“Hard Rock Cafe -> (Hard Rock Cafe and hollywood bouldvard的节点) -> TCL Chinese 6 Theatre”是最短路径，总长度为105米。其他选项涉及未在上下文中提供的节点或路径，不符合图记忆规则。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：Hard Rock Cafe -> (Hard Rock Cafe and hollywood bouldvard的节点) -> TCL Chinese 6 Theatre，总距离约87米。"
+        },
+        {
+          "question": "从TCL Chinese 6 Theatre到Chado Tea Room，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "根据提供的节点和边列表，TCL Chinese 6 Theatre（假设对应节点ID为4）与Chado Tea Room（假设对应节点ID为10）之间存在直接连接。在给定的边列表中，未提供任何其他路径的边信息，因此无法确认选项A、B或D中的中间节点和路径是否存在。根据规则，仅允许使用上下文提供的节点与边进行推理，而选项C直接连接了TCL Chinese 6 Theatre和Chado Tea Room，符合最短路径的条件。因此，选项C是最短路径。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：TCL Chinese 6 Theatre -> Chado Tea Room，总距离约46米。"
+        },
+        {
+          "question": "从Chado Tea Room到The Coffee Bean & Tea Leaf，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "根据提供的节点与边列表，无法确认选项A、B、C中提到的“north high avenue”、“hollywood bouldvard”等节点或道路，因此这些路径的连通性依据不足。而选项D中的路径涉及的节点（如Chado Tea Room、Hard Rock Cafe、Hooters、Tea Leaf）均在上下文的节点列表中出现，且路径中的节点间可能存在边连接。虽然具体边信息未明确给出，但根据图记忆规则，路径选择优先考虑总边权最小，若缺失边权则按边数最少。选项D的路径包含6条边，可能为最短路径。因此，选项D是唯一符合图记忆规则的路径。",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：Chado Tea Room -> (Hard Rock Cafe and hollywood bouldvard的节点) -> (Hard Rock Cafe and hollywood bouldvard的节点) -> (Hard Rock Cafe and hollywood bouldvard的节点) -> (Hard Rock Cafe and hollywood bouldvard的节点) -> (Hooters and hollywood bouldvard的节点) -> (Tea Leaf and hollywood bouldvard的节点) -> The Coffee Bean & Tea Leaf，总距离约309米。"
+        }
+      ],
+      "completed_at": "2025-12-20T23:16:26.560083"
+    },
+    "context_mode": "graph"
+  },
+  "context_text": "# 第二种记忆道路连通图描述\n## 节点列表\nNODE[id,类型,附加属性]\nNODE[1,POI,name=Chado Tea Room]\nNODE[2,POI,name=TCL Chinese 6 Theatre]\nNODE[3,POI,name=Whealthy]\nNODE[4,POI,name=Hard Rock Cafe]\nNODE[5,POI,name=JINYA Ramen Bar]\nNODE[6,POI,name=California Pizza Kitchen]\nNODE[7,POI,name=Dave & Buster's]\nNODE[8,POI,name=Lucky Strike]\nNODE[9,POI,name=Greco's Pizza]\nNODE[10,POI,name=Hooters]\nNODE[11,POI,name=The Coffee Bean & Tea Leaf]\nNODE[12,POI,name=25 Degrees]\nNODE[13,POI,name=Restorant]\nNODE[14,POI,name=Kensho]\nNODE[15,POI,name=Starbucks]\nNODE[16,ROAD,name=起点]\nNODE[17,ROAD,name=California Pizza Kitchen and north high avenue的节点]\nNODE[18,ROAD,name=Lucky Strike and north high avenue的节点]\nNODE[19,ROAD,name=hollywood bouldvard and north high avenue的节点]\nNODE[20,ROAD,name=Greco's Pizza and hollywood bouldvard的节点]\nNODE[21,ROAD,name=JINYA Ramen Bar and hollywood bouldvard的节点]\nNODE[22,ROAD,name=Hard Rock Cafe and hollywood bouldvard的节点]\nNODE[23,ROAD,name=Hooters and hollywood bouldvard的节点]\nNODE[24,ROAD,name=25 Degrees and hollywood bouldvard的节点]\nNODE[25,ROAD,name=Restorant and hollywood bouldvard的节点]\nNODE[26,ROAD,name=north orange and hollywood bouldvard的节点]\nNODE[27,ROAD,name=north orange and franklin avenue的节点]\nNODE[28,ROAD,name=north high avenue的节点]\nNODE[29,ROAD,name=位置_35]\nNODE[30,ROAD,name=Starbucks道路节点]\n\n## 边列表\nEDGE[起点ID,终点ID,道路长度,方向]\nEDGE[16,1,41m,292°]\nEDGE[1,2,46m,189°]\nEDGE[2,3,42m,183°]\nEDGE[3,4,45m,178°]\nEDGE[4,5,72m,54°]\nEDGE[5,2,73m,307°]\nEDGE[2,1,46m,9°]\nEDGE[1,6,96m,112°]\nEDGE[6,7,59m,174°]\nEDGE[7,8,50m,140°]\nEDGE[8,7,50m,320°]\nEDGE[7,6,59m,354°]\nEDGE[6,17,57m,93°]\nEDGE[17,18,47m,175°]\nEDGE[18,19,94m,177°]\nEDGE[19,20,61m,274°]\nEDGE[20,9,68m,180°]\nEDGE[9,20,68m,0°]\nEDGE[20,21,55m,268°]\nEDGE[21,22,47m,271°]\nEDGE[22,23,37m,271°]\nEDGE[23,10,52m,176°]\nEDGE[10,11,49m,269°]\nEDGE[11,12,93m,268°]\nEDGE[12,24,64m,0°]\nEDGE[24,25,50m,252°]\nEDGE[25,13,53m,357°]\nEDGE[13,25,53m,177°]\nEDGE[25,24,50m,72°]\nEDGE[24,26,48m,100°]\nEDGE[26,27,286m,7°]\nEDGE[27,14,151m,3°]\nEDGE[14,27,151m,183°]\nEDGE[27,28,242m,89°]\nEDGE[28,29,129m,48°]\nEDGE[29,30,45m,63°]\nEDGE[30,30,34m,359°]\nEDGE[30,15,48m,91°]"
+}

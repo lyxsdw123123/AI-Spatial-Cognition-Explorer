@@ -1,0 +1,261 @@
+{
+  "region": "维也纳美泉宫",
+  "source_file": "维也纳美泉宫_qwen_map_report.txt",
+  "evaluation_time": "2025-12-26T02:56:58.864276",
+  "context_text": "# 第三种记忆map描述\n## 节点列表\nNODE[id,类型,附加属性，ij坐标]\n[栅格参数]\n- grid_size: 30\nNODE[1,POI,name=Hypo-Bank Vorarlberg，（13，16）]\nNODE[2,POI,name=Cheng Chinese Cuisine，（13，18）]\nNODE[3,POI,name=Restaurant SURA，（13，20）]\nNODE[4,POI,name=Ma Creperie，（13，21）]\nNODE[5,POI,name=Cafe-Restaurant Ronacher，（7，20）]\nNODE[6,POI,name=Zur goldenen Krone，（6，14）]\nNODE[7,POI,name=Cafe Mozart，（4，3）]\nNODE[8,POI,name=Raiffeisenlandesbank Niederösterreich-Wien，（12，5）]\nNODE[9,POI,name=aïda，（16，10）]\nNODE[10,POI,name=Alte Feldapotheke，（18，9）]\nNODE[11,POI,name=Pizza Bizi，（21，11）]\nNODE[12,POI,name=Zum Rothen Krebs，（24，14）]\nNODE[13,POI,name=Castelletto，（24，25）]\nNODE[14,POI,name=Kaffee Alt Wien，（19，25）]\nNODE[15,ROAD,name=Cheng Chinese Cuisine节点，（12，18）]\nNODE[16,ROAD,name=Restaurant SURA节点，（12，20）]\nNODE[17,ROAD,name=Ma Creperie节点，（11，21）]\nNODE[18,ROAD,name=Hypo-Bank Vorarlberg and aïda节点，（13，14）]\nNODE[19,ROAD,name=Cafe-Restaurant Ronacher and Weih节点，（10，14）]\nNODE[20,ROAD,name=Cafe-Restaurant Ronacher and joha节点，（6，21）]\nNODE[21,ROAD,name=位置_18，（3，21）]\nNODE[22,ROAD,name=Zur goldenen Krone and joha节点，（7，12）]\nNODE[23,ROAD,name=strabe and joha节点，（9，7）]\nNODE[24,ROAD,name=strabe and Cafe Mozart，（3，5）]\nNODE[25,ROAD,name=strabe and Raiffeisenlandesbank节点，（10，8）]\nNODE[26,ROAD,name=strabe and Weih节点，（12，9）]\nNODE[27,ROAD,name=strabe and aïda节点，（15，10）]\nNODE[28,ROAD,name=aïda and schouler节点，（18，12）]\nNODE[29,ROAD,name=Korb (No.4) and Alte Feldapotheke节点，（20，7）]\nNODE[30,ROAD,name=位置_35，（22，8）]\nNODE[31,ROAD,name=roten and Pizza Bizi节点，（21，14）]\nNODE[32,ROAD,name=lichten and Zum Rothen Krebs节点，（21，18）]\nNODE[33,ROAD,name=位置_40，（25，18）]\nNODE[34,ROAD,name=roten and Castelletto节点，（22，20）]\nNODE[35,ROAD,name=roten中节点，（19，14）]\nNODE[36,ROAD,name=strobe and roten节点，（18，20）]\nNODE[37,ROAD,name=Kaffee Alt Wien节点，（18，22）]\nNODE[38,ROAD,name=位置_58，（22，16）]\nNODE[39,ROAD,name=位置_62，（22，8）]\nNODE[40,ROAD,name=位置_63，（22，8）]\n\n## 道路列表\nROAD[道路坐标]\nROAD[（3，5），（3，20），（3，21），（4，3），（4，4），（4，5），（4，18），（4，19），（4，21），（5，6），（5，16），（5，17），（5，21），（6，6），（6，13），（6，14），（6，15），（6，21），（7，6），（7，11），（7，12），（7，20），（8，7），（8，9），（8，10），（8，17），（8，18），（8，19），（9，7），（9，8），（9，16），（10，8），（10，14），（10，15），（10，21），（11，6），（11，7），（11，8），（11，14），（11，21），（12，5），（12，9），（12，14），（12，17），（12，18），（12，19），（12，20），（12，21），（13，9），（13，14），（13，15），（13，16），（13，18），（13，19），（13，20），（13，21），（14，10），（15，10），（16，10），（17，11），（18，9），（18，10），（18，11），（18，12），（18，17），（18，18），（18，19），（18，20），（18，21），（18，22），（18，23），（19，8），（19，14），（19，15），（19，16），（19，17），（19，24），（19，25），（20，7），（20，14），（21，8），（21，10），（21，11），（21，12），（21，13），（21，14），（21，15），（21，16），（21，17），（21，18），（21，19），（22，8），（22，9），（22，10），（22，15），（22，16），（22，17），（22，19），（22，20），（22，21），（22，22），（23，15），（23，20），（23，23），（24，14），（24，15），（24，16），（24，19），（24，24），（24，25），（25，17），（25，18）]",
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 15,
+      "total_questions": 24,
+      "accuracy": 62.5,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 3,
+          "total": 8,
+          "percentage": 37.5
+        },
+        "空间距离估算": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "邻近关系判断": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        },
+        "POI密度识别": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "路径规划": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Raiffeisenlandesbank Niederösterreich-Wien相对于Hypo-Bank Vorarlberg在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "Raiffeisenlandesbank Niederösterreich-Wien位于Hypo-Bank Vorarlberg的西南面。"
+        },
+        {
+          "question": "Cheng Chinese Cuisine相对于Raiffeisenlandesbank Niederösterreich-Wien在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Cheng Chinese Cuisine位于Raiffeisenlandesbank Niederösterreich-Wien的东北面。"
+        },
+        {
+          "question": "Restaurant SURA相对于Cheng Chinese Cuisine在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Restaurant SURA位于Cheng Chinese Cuisine的东南面。"
+        },
+        {
+          "question": "aïda相对于Restaurant SURA在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "aïda位于Restaurant SURA的西北面。"
+        },
+        {
+          "question": "Hypo-Bank Vorarlberg相对于Raiffeisenlandesbank Niederösterreich-Wien在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Hypo-Bank Vorarlberg位于Raiffeisenlandesbank Niederösterreich-Wien的东北面。"
+        },
+        {
+          "question": "Raiffeisenlandesbank Niederösterreich-Wien相对于Cheng Chinese Cuisine在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Raiffeisenlandesbank Niederösterreich-Wien位于Cheng Chinese Cuisine的西南面。"
+        },
+        {
+          "question": "Cheng Chinese Cuisine相对于Restaurant SURA在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Cheng Chinese Cuisine位于Restaurant SURA的西北面。"
+        },
+        {
+          "question": "Restaurant SURA相对于aïda在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Restaurant SURA位于aïda的东南面。"
+        },
+        {
+          "question": "Hypo-Bank Vorarlberg到Cheng Chinese Cuisine的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Hypo-Bank Vorarlberg到Cheng Chinese Cuisine的直线距离约为43米。"
+        },
+        {
+          "question": "Raiffeisenlandesbank Niederösterreich-Wien到Restaurant SURA的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Raiffeisenlandesbank Niederösterreich-Wien到Restaurant SURA的直线距离约为341米。"
+        },
+        {
+          "question": "Cheng Chinese Cuisine到aïda的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Cheng Chinese Cuisine到aïda的直线距离约为199米。"
+        },
+        {
+          "question": "Restaurant SURA到Kaffee Alt Wien的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Restaurant SURA到Kaffee Alt Wien的直线距离约为254米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Hypo-Bank Vorarlberg最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Cheng Chinese Cuisine距离Hypo-Bank Vorarlberg最近，约43米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Raiffeisenlandesbank Niederösterreich-Wien最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "aïda距离Raiffeisenlandesbank Niederösterreich-Wien最近，约205米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Cheng Chinese Cuisine最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Kaffee Alt Wien距离Cheng Chinese Cuisine最远，约276米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Restaurant SURA最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Alte Feldapotheke距离Restaurant SURA最远，约299米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Ma Creperie周围的POI密度最高，500米范围内有9个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Alte Feldapotheke周围的POI密度最高，500米范围内有9个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Kaffee Alt Wien周围的POI密度最低，500米范围内只有7个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Zur goldenen Krone周围的POI密度最低，500米范围内只有7个其他POI。"
+        },
+        {
+          "question": "从Hypo-Bank Vorarlberg到Raiffeisenlandesbank Niederösterreich-Wien，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：Hypo-Bank Vorarlberg -> (Hypo-Bank Vorarlberg and aïda节点) -> (strabe and aïda节点) -> (strabe and Weih节点) -> (strabe and Raiffeisenlandesbank节点) -> Raiffeisenlandesbank Niederösterreich-Wien，总距离约407米。"
+        },
+        {
+          "question": "从Raiffeisenlandesbank Niederösterreich-Wien到Cheng Chinese Cuisine，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：Raiffeisenlandesbank Niederösterreich-Wien -> (strabe and Raiffeisenlandesbank节点) -> (strabe and Weih节点) -> (strabe and aïda节点) -> (Hypo-Bank Vorarlberg and aïda节点) -> (Hypo-Bank Vorarlberg and aïda节点) -> (Cheng Chinese Cuisine节点) -> Cheng Chinese Cuisine，总距离约539米。"
+        },
+        {
+          "question": "从Cheng Chinese Cuisine到Restaurant SURA，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：Cheng Chinese Cuisine -> Restaurant SURA，总距离约42米。"
+        },
+        {
+          "question": "从Restaurant SURA到aïda，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：Restaurant SURA -> (Restaurant SURA节点) -> (Cheng Chinese Cuisine节点) -> (Hypo-Bank Vorarlberg and aïda节点) -> (Hypo-Bank Vorarlberg and aïda节点) -> (strabe and aïda节点) -> aïda，总距离约381米。"
+        }
+      ],
+      "completed_at": "2025-12-26T02:56:57.039027"
+    },
+    "context_text": "# 第三种记忆map描述\n## 节点列表\nNODE[id,类型,附加属性，ij坐标]\n[栅格参数]\n- grid_size: 30\nNODE[1,POI,name=Hypo-Bank Vorarlberg，（13，16）]\nNODE[2,POI,name=Cheng Chinese Cuisine，（13，18）]\nNODE[3,POI,name=Restaurant SURA，（13，20）]\nNODE[4,POI,name=Ma Creperie，（13，21）]\nNODE[5,POI,name=Cafe-Restaurant Ronacher，（7，20）]\nNODE[6,POI,name=Zur goldenen Krone，（6，14）]\nNODE[7,POI,name=Cafe Mozart，（4，3）]\nNODE[8,POI,name=Raiffeisenlandesbank Niederösterreich-Wien，（12，5）]\nNODE[9,POI,name=aïda，（16，10）]\nNODE[10,POI,name=Alte Feldapotheke，（18，9）]\nNODE[11,POI,name=Pizza Bizi，（21，11）]\nNODE[12,POI,name=Zum Rothen Krebs，（24，14）]\nNODE[13,POI,name=Castelletto，（24，25）]\nNODE[14,POI,name=Kaffee Alt Wien，（19，25）]\nNODE[15,ROAD,name=Cheng Chinese Cuisine节点，（12，18）]\nNODE[16,ROAD,name=Restaurant SURA节点，（12，20）]\nNODE[17,ROAD,name=Ma Creperie节点，（11，21）]\nNODE[18,ROAD,name=Hypo-Bank Vorarlberg and aïda节点，（13，14）]\nNODE[19,ROAD,name=Cafe-Restaurant Ronacher and Weih节点，（10，14）]\nNODE[20,ROAD,name=Cafe-Restaurant Ronacher and joha节点，（6，21）]\nNODE[21,ROAD,name=位置_18，（3，21）]\nNODE[22,ROAD,name=Zur goldenen Krone and joha节点，（7，12）]\nNODE[23,ROAD,name=strabe and joha节点，（9，7）]\nNODE[24,ROAD,name=strabe and Cafe Mozart，（3，5）]\nNODE[25,ROAD,name=strabe and Raiffeisenlandesbank节点，（10，8）]\nNODE[26,ROAD,name=strabe and Weih节点，（12，9）]\nNODE[27,ROAD,name=strabe and aïda节点，（15，10）]\nNODE[28,ROAD,name=aïda and schouler节点，（18，12）]\nNODE[29,ROAD,name=Korb (No.4) and Alte Feldapotheke节点，（20，7）]\nNODE[30,ROAD,name=位置_35，（22，8）]\nNODE[31,ROAD,name=roten and Pizza Bizi节点，（21，14）]\nNODE[32,ROAD,name=lichten and Zum Rothen Krebs节点，（21，18）]\nNODE[33,ROAD,name=位置_40，（25，18）]\nNODE[34,ROAD,name=roten and Castelletto节点，（22，20）]\nNODE[35,ROAD,name=roten中节点，（19，14）]\nNODE[36,ROAD,name=strobe and roten节点，（18，20）]\nNODE[37,ROAD,name=Kaffee Alt Wien节点，（18，22）]\nNODE[38,ROAD,name=位置_58，（22，16）]\nNODE[39,ROAD,name=位置_62，（22，8）]\nNODE[40,ROAD,name=位置_63，（22，8）]\n\n## 道路列表\nROAD[道路坐标]\nROAD[（3，5），（3，20），（3，21），（4，3），（4，4），（4，5），（4，18），（4，19），（4，21），（5，6），（5，16），（5，17），（5，21），（6，6），（6，13），（6，14），（6，15），（6，21），（7，6），（7，11），（7，12），（7，20），（8，7），（8，9），（8，10），（8，17），（8，18），（8，19），（9，7），（9，8），（9，16），（10，8），（10，14），（10，15），（10，21），（11，6），（11，7），（11，8），（11，14），（11，21），（12，5），（12，9），（12，14），（12，17），（12，18），（12，19），（12，20），（12，21），（13，9），（13，14），（13，15），（13，16），（13，18），（13，19），（13，20），（13，21），（14，10），（15，10），（16，10），（17，11），（18，9），（18，10），（18，11），（18，12），（18，17），（18，18），（18，19），（18，20），（18，21），（18，22），（18，23），（19，8），（19，14），（19，15），（19，16），（19，17），（19，24），（19，25），（20，7），（20，14），（21，8），（21，10），（21，11），（21，12），（21，13），（21，14），（21，15），（21，16），（21，17），（21，18），（21，19），（22，8），（22，9），（22，10），（22，15），（22，16），（22，17），（22，19），（22，20），（22，21），（22，22），（23，15），（23，20），（23，23），（24，14），（24，15），（24，16），（24，19），（24，24），（24，25），（25，17），（25，18）]",
+    "context_mode": "map"
+  }
+}

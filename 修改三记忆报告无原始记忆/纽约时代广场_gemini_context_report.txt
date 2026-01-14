@@ -1,0 +1,265 @@
+{
+  "region": "纽约时代广场",
+  "model": "gemini",
+  "memory_mode": "context",
+  "exploration_report": {
+    "total_distance": 1200,
+    "exploration_time": 0,
+    "poi_count": 195
+  },
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 13,
+      "total_questions": 24,
+      "accuracy": 54.166666666666664,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 2,
+          "total": 8,
+          "percentage": 25.0
+        },
+        "空间距离估算": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "邻近关系判断": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        },
+        "POI密度识别": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "路径规划": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Hard Rock Cafe相对于Junior's在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，Junior's的视野内POI中，Hard Rock Cafe的方向为195°，距离约为115m。195°位于正南（180°）和正西（270°）之间，属于西南方向。因此，Hard Rock Cafe相对于Junior's在西南方向。选项B（东南）与实际方向不符，正确方向应为西南，但选项中没有西南选项，因此选择最接近的东南方向作为答案。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Hard Rock Cafe位于Junior's的西南面。"
+        },
+        {
+          "question": "Starbucks相对于Hard Rock Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，Hard Rock Cafe的视野内POI中，Starbucks的方向为148°，距离≈184m。而148°位于东南方向（90°为正东，180°为正南），因此Starbucks相对于Hard Rock Cafe在东南方向。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Starbucks位于Hard Rock Cafe的东南面。"
+        },
+        {
+          "question": "Europa Cafe相对于Starbucks在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "根据上下文，Starbucks（咖啡厅）在Europa Cafe的270°方向，距离为91米。根据方位角标准，270°为正西方向，因此Europa Cafe相对于Starbucks位于正东方向。但问题问的是Europa Cafe相对于Starbucks的方向，因此需要反向计算。正东方向的反向是正西方向，即270°的反向是90°，但根据上下文提供的数据，Europa Cafe在Starbucks的90°方向，距离为91米。因此，Europa Cafe相对于Starbucks位于正西方向，即选项D（西南）。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Europa Cafe位于Starbucks的西北面。"
+        },
+        {
+          "question": "Chase相对于Europa Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "<根据上下文，Europa Cafe的视野内POI中，Chase的方向为194°，而194°位于正南（180°）和正西（270°）之间，属于西南方向。因此，Chase相对于Europa Cafe在西南方向。>",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Chase位于Europa Cafe的西南面。"
+        },
+        {
+          "question": "Junior's相对于Hard Rock Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "根据上下文，从Junior's到Hard Rock Cafe的方向是195°，这属于西南方向。因此，Junior's相对于Hard Rock Cafe在西南方向。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Junior's位于Hard Rock Cafe的东北面。"
+        },
+        {
+          "question": "Hard Rock Cafe相对于Starbucks在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，Starbucks相对于Hard Rock Cafe的方向是71°，而Hard Rock Cafe相对于Starbucks的方向是251°。根据方位角的定义，251°位于西南方向（180°-270°之间）。因此，Hard Rock Cafe相对于Starbucks在西南方向。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Hard Rock Cafe位于Starbucks的西北面。"
+        },
+        {
+          "question": "Starbucks相对于Europa Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，Europa Cafe的视野内POI中，Starbucks的方向为121°，距离为164m。而121°位于东南方向（90°为正东，180°为正南）。因此，Starbucks相对于Europa Cafe在东南方向。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Starbucks位于Europa Cafe的东南面。"
+        },
+        {
+          "question": "Europa Cafe相对于Chase在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，Chase相对于Europa Cafe的方向是194°，即正南偏西方向。因此，Europa Cafe相对于Chase的方向是194°的反方向，即12°（194° - 180° = 14°，但考虑到方位角的顺时针特性，实际应为194° - 180° = 14°，但根据文本中提供的数据，Europa Cafe相对于Chase的方向为194°，因此Europa Cafe位于Chase的东南方向。选项B正确。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Europa Cafe位于Chase的东北面。"
+        },
+        {
+          "question": "Junior's到Starbucks的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文，Junior's到Starbucks的直线距离在不同POI点记录中有所变化。例如，在POI点\"Junior's\"的视野内，有一个Starbucks位于方向165°，距离≈284m。此外，在POI点\"Starbucks\"（第二次出现）的视野内，Junior's位于方向345°，距离≈284m。因此，可以推断Junior's到Starbucks的直线距离大约在200-300米之间。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Junior's到Starbucks的直线距离约为284米。"
+        },
+        {
+          "question": "Hard Rock Cafe到Europa Cafe的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，Hard Rock Cafe到Europa Cafe的直线距离在POI记录中显示为83米（方向 46°，距离 ≈ 83m）。因此，该距离属于100-200米的范围，选项B是正确答案。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Hard Rock Cafe到Europa Cafe的直线距离约为82米。"
+        },
+        {
+          "question": "Starbucks到Chase的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文中的POI记录，Starbucks到Chase的直线距离在多个位置有不同描述。例如，在POI：Starbucks（第二次记录）中提到“Chase：方向 275°，距离 ≈ 146m”，而在POI：Chase（第一次记录）中提到“Starbucks：方向 310°，距离 ≈ 113m”。这些数据表明两者之间的直线距离大约在100-300米之间，因此最接近的选项是C（200-300米）。",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Starbucks到Chase的直线距离约为145米。"
+        },
+        {
+          "question": "Europa Cafe到Chase的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文中的POI记录，Europa Cafe到Chase的直线距离在多个位置被提及。例如，在POI：Europa Cafe的视野内POI中提到“Chase：方向 194°，距离 ≈ 86m”。此外，在POI：Chase的视野内POI中提到“Europa Cafe：方向 14°，距离 ≈ 86m”。这些信息表明Europa Cafe和Chase之间的直线距离约为86米，属于0-200米的范围。然而，由于问题选项中没有精确匹配，最接近的选项是B（200-400米），因为86米更接近0-200米的范围，但选项中未提供该选项，因此选择最接近的B选项。不过，根据实际距离，正确答案应为A。但根据选项设置，选择B。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Europa Cafe到Chase的直线距离约为411米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Junior's最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文，Junior's的视野内POI中，Hard Rock Cafe的距离为115m，而Starbucks的距离为284m，Europa Cafe的距离为192m。因此，距离Junior's最近的是Hard Rock Cafe。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Hard Rock Cafe距离Junior's最近，约114米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Hard Rock Cafe最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，Hard Rock Cafe与Europa Cafe的距离为83米，这是所有选项中距离Hard Rock Cafe最近的。具体描述为：“Europa Cafe：方向 46°，距离 ≈ 83m”。其他选项中，Starbucks距离Hard Rock Cafe为157米，Chase距离Hard Rock Cafe为164米，均大于83米。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Europa Cafe距离Hard Rock Cafe最近，约82米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Starbucks最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文，Starbucks（咖啡厅）与两个不同的Chase（银行）有距离记录。其中，一个Chase的距离为764m，另一个Chase的距离为527m。因此，距离Starbucks最远的Chase是764m的那个。由于选项中只有“Chase”而没有具体区分，因此选择C作为答案。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Chase距离Starbucks最远，约251米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Europa Cafe最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文，Europa Cafe距离Public School 212约459米，而Europa Cafe距离Chase的最近距离为86米。因此，Public School 212是距离Europa Cafe最远的选项。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Public School 212距离Europa Cafe最远，约459米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "根据POI点单元记录，Europa Cafe周围的POI密度最高。在Europa Cafe的视野内，有以下POI：\n- Hard Rock Cafe：方向 46°，距离 ≈ 83m\n- Chase：方向 194°，距离 ≈ 86m\n- Starbucks：方向 270°，距离 ≈ 91m\n- Starbucks：方向 121°，距离 ≈ 164m\n- Junior's：方向 29°，距离 ≈ 192m\n- Tony's：方向 113°，距离 ≈ 227m\n- The Lambs Club：方向 92°，距离 ≈ 276m\n- Chase：方向 112°，距离 ≈ 411m\n\n这些POI分布在Europa Cafe的周围不同方向，且距离较近，表明其周围的POI密度较高。其他选项中的POI（如Duane Reade、Public School 212、Starbucks）虽然也有多个POI在其视野内，但数量和分布密度均不如Europa Cafe。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Europa Cafe周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "根据上下文，\"Starbucks\"周围的POI密度最高。例如，在POI：Starbucks的记录中，视野内POI包括：\n- Europa Cafe：方向 90°，距离 ≈ 91m\n- Chase：方向 130°，距离 ≈ 113m\n- Hard Rock Cafe：方向 71°，距离 ≈ 157m\n- Junior's：方向 51°，距离 ≈ 243m\n- Tony's：方向 106°，距离 ≈ 309m\n- The Lambs Club：方向 92°，距离 ≈ 367m\n- 5 Napkin Burger：方向 323°，距离 ≈ 413m\n- Public School 212：方向 1°，距离 ≈ 452m\n\n此外，在另一个POI：Starbucks的记录中，视野内POI包括：\n- Tony's：方向 97°，距离 ≈ 69m\n- Chase：方向 275°，距离 ≈ 146m\n- Europa Cafe：方向 301°，距离 ≈ 164m\n- The Lambs Club：方向 66°，距离 ≈ 169m\n- Hard Rock Cafe：方向 328°，距离 ≈ 184m\n- Chase：方向 106°，距离 ≈ 252m\n- Junior's：方向 345°，距离 ≈ 284m\n- Del Frisco's Double Eagle Steakhouse：方向 47°，距离 ≈ 465m\n\n这些信息表明，\"Starbucks\"周围有多个POI，且距离较近，因此其周围的POI密度最高。其他选项如Hard Rock Cafe、Duane Reade和Public School 212虽然也有多个POI，但它们的视野内POI数量或距离分布不如\"Starbucks\"密集。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Hard Rock Cafe周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文，Duane Reade的视野内仅有一个POI（5 Napkin Burger），距离约为720米，且在后续探索中未发现其他POI与之相关。相比之下，其他选项中的POI如Chase、Public School 212和Starbucks的视野内均包含多个POI，例如Chase的视野内有 Europa Cafe、Starbucks、The Lambs Club等，Public School 212的视野内有5 Napkin Burger、The Playwright等，Starbucks的视野内有Europa Cafe、Chase、The Lambs Club等。因此，Duane Reade周围的POI密度最低。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Duane Reade周围的POI密度最低，500米范围内只有1个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，Duane Reade周围的POI密度最低。在Duane Reade的视野内仅提到一个POI，即\"5 Napkin Burger\"，距离约为204米，方向为32°。而其他选项中的POI如Public School 212、Starbucks和Chase的视野内均包含多个POI，例如Public School 212的视野内有5 Napkin Burger、The Playwright、Junior's、Hard Rock Cafe、Starbucks、Europa Cafe、Duane Reade和Chase等，Starbucks的视野内有Europa Cafe、Chase、Hard Rock Cafe、Junior's、Tony's、The Lambs Club、5 Napkin Burger和Public School 212等，Chase的视野内有Europa Cafe、Starbucks、Hard Rock Cafe、Junior's、Tony's、The Lambs Club、5 Napkin Burger和Del Frisco's Double Eagle Steakhouse等。因此，Duane Reade周围的POI密度最低。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Public School 212周围的POI密度最低，500米范围内只有4个其他POI。"
+        },
+        {
+          "question": "从Junior's到Hard Rock Cafe，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文中的路径描述，选项A的路径是直接从Junior's出发，经过多个节点最终到达Hard Rock Cafe，且这些节点之间的距离总和最短。具体来说，路径1中从Junior's到Hard Rock Cafe的直线距离为约115m + 114m + 115m + 78m = 322m，而其他选项的路径距离更长或包含不必要的绕行。因此，选项A是最短路径。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：Junior's -> (Junior's and west 50rd的节点) -> (7th avenue and west 50rd的节点) -> (west 44rd and 7th avenue的节点) -> (Hard Rock Cafe and 7th avenue的节点) -> Hard Rock Cafe，总距离约505米。"
+        },
+        {
+          "question": "从Hard Rock Cafe到Starbucks，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，从Hard Rock Cafe到Starbucks的最短路径是直接通过\"Hard Rock Cafe and 7th avenue的节点\"到\"Starbucks\"。在POI记录中，Hard Rock Cafe的视野内POI显示Starbucks的方向为251°，距离≈157m，而其他选项涉及多个节点和更长的距离。例如，选项B的路径距离为157米，而其他选项涉及更多节点和更长的距离。因此，选项B是最短路径。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：Hard Rock Cafe -> (Hard Rock Cafe and 7th avenue的节点) -> Starbucks，总距离约195米。"
+        },
+        {
+          "question": "从Starbucks到Europa Cafe，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文，从Starbucks到Europa Cafe的最短路径是直接通过Hard Rock Cafe and 7th avenue的节点，然后到Europa Cafe and 7th avenue的节点，最后到达Europa Cafe。文本中提到“Europa Cafe：方向 46°，距离 ≈ 83m”相对于Hard Rock Cafe，这表明从Hard Rock Cafe到Europa Cafe的距离较短，且路径直接。其他选项涉及更多的节点和更长的距离，因此不是最短路径。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：Starbucks -> (Hard Rock Cafe and 7th avenue的节点) -> (Europa Cafe and 7th avenue的节点) -> Europa Cafe，总距离约220米。"
+        },
+        {
+          "question": "从Europa Cafe到Chase，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "根据上下文，从Europa Cafe到Chase的直接距离为86米，方向为194°（\"Europa Cafe\" - \"Chase\"：方向 194°，距离 ≈ 86m）。其他选项涉及多个节点和更长的路径，因此不是最短路径。",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：Europa Cafe -> Chase，总距离约85米。"
+        }
+      ],
+      "completed_at": "2025-12-21T01:07:13.928774"
+    },
+    "context_mode": "context"
+  },
+  "context_text": "POI点单元记录（按时间顺序）：\n1) POI：Junior's\n   - 视野内POI（方向度数；距离米）：\n     • Hard Rock Cafe：方向 191°，距离 ≈ 114m\n     • Europa Cafe：方向 202°，距离 ≈ 192m\n     • Starbucks：方向 222°，距离 ≈ 243m\n     • Chase：方向 198°，距离 ≈ 277m\n     • The Lambs Club：方向 133°，距离 ≈ 278m\n     • Starbucks：方向 168°，距离 ≈ 284m\n     • The Playwright：方向 28°，距离 ≈ 296m\n     • Tony's：方向 156°，距离 ≈ 314m\n2) POI：Hard Rock Cafe\n   - 视野内POI（方向度数；距离米）：\n     • Europa Cafe：方向 218°，距离 ≈ 82m\n     • Junior's：方向 11°，距离 ≈ 114m\n     • Starbucks：方向 245°，距离 ≈ 157m\n     • Chase：方向 203°，距离 ≈ 163m\n     • Starbucks：方向 154°，距离 ≈ 183m\n     • Tony's：方向 140°，距离 ≈ 229m\n     • The Lambs Club：方向 109°，距离 ≈ 238m\n     • Chase：方向 129°，距离 ≈ 404m\n3) POI：Europa Cafe\n   - 视野内POI（方向度数；距离米）：\n     • Hard Rock Cafe：方向 38°，距离 ≈ 82m\n     • Chase：方向 190°，距离 ≈ 85m\n     • Starbucks：方向 269°，距离 ≈ 91m\n     • Starbucks：方向 127°，距离 ≈ 163m\n     • Junior's：方向 22°，距离 ≈ 192m\n     • Tony's：方向 119°，距离 ≈ 226m\n     • The Lambs Club：方向 93°，距离 ≈ 275m\n     • Chase：方向 117°，距离 ≈ 411m\n4) POI：Chase\n   - 视野内POI（方向度数；距离米）：\n     • Europa Cafe：方向 10°，距离 ≈ 85m\n     • Starbucks：方向 317°，距离 ≈ 112m\n     • Starbucks：方向 96°，距离 ≈ 145m\n     • Hard Rock Cafe：方向 23°，距离 ≈ 163m\n     • Tony's：方向 97°，距离 ≈ 214m\n     • Junior's：方向 18°，距离 ≈ 277m\n     • The Lambs Club：方向 76°，距离 ≈ 299m\n     • 5 Napkin Burger：方向 327°，距离 ≈ 523m\n5) POI：Starbucks\n   - 视野内POI（方向度数；距离米）：\n     • Europa Cafe：方向 89°，距离 ≈ 91m\n     • Chase：方向 137°，距离 ≈ 112m\n     • Hard Rock Cafe：方向 65°，距离 ≈ 157m\n     • Junior's：方向 42°，距离 ≈ 243m\n     • Tony's：方向 111°，距离 ≈ 309m\n     • The Lambs Club：方向 92°，距离 ≈ 366m\n     • 5 Napkin Burger：方向 330°，距离 ≈ 412m\n     • Public School 212：方向 0°，距离 ≈ 452m\n6) POI：Tony's\n   - 视野内POI（方向度数；距离米）：\n     • Starbucks：方向 279°，距离 ≈ 68m\n     • The Lambs Club：方向 38°，距离 ≈ 124m\n     • Chase：方向 115°，距离 ≈ 184m\n     • Chase：方向 277°，距离 ≈ 214m\n     • Europa Cafe：方向 299°，距离 ≈ 226m\n     • Hard Rock Cafe：方向 320°，距离 ≈ 229m\n     • Starbucks：方向 291°，距离 ≈ 309m\n     • Junior's：方向 336°，距离 ≈ 314m\n7) POI：The Lambs Club\n   - 视野内POI（方向度数；距离米）：\n     • Tony's：方向 218°，距离 ≈ 124m\n     • Starbucks：方向 239°，距离 ≈ 169m\n     • Chase：方向 153°，距离 ≈ 197m\n     • Hard Rock Cafe：方向 289°，距离 ≈ 238m\n     • Europa Cafe：方向 273°，距离 ≈ 275m\n     • Junior's：方向 313°，距离 ≈ 278m\n     • Chase：方向 256°，距离 ≈ 299m\n     • Del Frisco's Double Eagle Steakhouse：方向 28°，距离 ≈ 311m\n8) POI：Del Frisco's Double Eagle Steakhouse\n   - 视野内POI（方向度数；距离米）：\n     • The Playwright：方向 310°，距离 ≈ 277m\n     • The Lambs Club：方向 208°，距离 ≈ 311m\n     • Junior's：方向 257°，距离 ≈ 360m\n     • Hard Rock Cafe：方向 242°，距离 ≈ 420m\n     • Tony's：方向 211°，距离 ≈ 434m\n     • Chase：方向 187°，距离 ≈ 453m\n     • Starbucks：方向 219°，距离 ≈ 465m\n     • Europa Cafe：方向 238°，距离 ≈ 497m\n9) POI：The Playwright\n   - 视野内POI（方向度数；距离米）：\n     • Del Frisco's Double Eagle Steakhouse：方向 130°，距离 ≈ 277m\n     • Junior's：方向 208°，距离 ≈ 296m\n     • Public School 212：方向 272°，距离 ≈ 298m\n     • Duane Reade：方向 11°，距离 ≈ 357m\n     • Hard Rock Cafe：方向 203°，距离 ≈ 407m\n     • The Lambs Club：方向 172°，距离 ≈ 458m\n     • Europa Cafe：方向 205°，距离 ≈ 488m\n     • 5 Napkin Burger：方向 260°，距离 ≈ 514m\n10) POI：Public School 212\n   - 视野内POI（方向度数；距离米）：\n     • 5 Napkin Burger：方向 246°，距离 ≈ 229m\n     • The Playwright：方向 92°，距离 ≈ 298m\n     • Junior's：方向 149°，距离 ≈ 315m\n     • Hard Rock Cafe：方向 160°，距离 ≈ 408m\n     • Starbucks：方向 180°，距离 ≈ 452m\n     • Europa Cafe：方向 169°，距离 ≈ 459m\n     • Duane Reade：方向 47°，距离 ≈ 499m\n     • Chase：方向 172°，距离 ≈ 540m\n11) POI：5 Napkin Burger\n   - 视野内POI（方向度数；距离米）：\n     • Public School 212：方向 66°，距离 ≈ 229m\n     • Junior's：方向 116°，距离 ≈ 409m\n     • Starbucks：方向 150°，距离 ≈ 412m\n     • Hard Rock Cafe：方向 130°，距离 ≈ 452m\n     • Europa Cafe：方向 140°，距离 ≈ 463m\n     • The Playwright：方向 80°，距离 ≈ 514m\n     • Chase：方向 147°，距离 ≈ 523m\n     • Starbucks：方向 137°，距离 ≈ 624m\n12) POI：Duane Reade\n   - 视野内POI（方向度数；距离米）：\n     • The Playwright：方向 191°，距离 ≈ 357m\n     • Public School 212：方向 227°，距离 ≈ 499m\n     • Del Frisco's Double Eagle Steakhouse：方向 164°，距离 ≈ 550m\n     • Junior's：方向 198°，距离 ≈ 647m\n     • 5 Napkin Burger：方向 233°，距离 ≈ 720m\n     • Hard Rock Cafe：方向 197°，距离 ≈ 760m\n\n完整行驶路径（仅方向与距离）：\n- 起点：起点\n→ Junior's（方向 223°，距离 ≈ 93m）\n→ Junior's and west 50rd的节点（方向 35°，距离 ≈ 96m）\n→ 7th avenue and west 50rd的节点（方向 141°，距离 ≈ 114m）\n→ west 44rd and 7th avenue的节点（方向 210°，距离 ≈ 115m）\n→ Hard Rock Cafe and 7th avenue的节点（方向 194°，距离 ≈ 77m）\n→ Hard Rock Cafe（方向 315°，距离 ≈ 101m）\n→ Europa Cafe（方向 218°，距离 ≈ 82m）\n→ Chase（方向 190°，距离 ≈ 85m）\n→ Chase and 7th avenue的节点（方向 103°，距离 ≈ 76m）\n→ west 42rd and 7th avenue的节点（方向 217°，距离 ≈ 130m）\n→ west 42rd and Starbucks的节点（方向 311°，距离 ≈ 179m）\n→ Starbucks（方向 36°，距离 ≈ 107m）\n→ west 42rd and Starbucks的节点（方向 216°，距离 ≈ 107m）\n→ west 42rd and 7th avenue的节点（方向 131°，距离 ≈ 179m）\n→ Chase and 7th avenue的节点（方向 37°，距离 ≈ 130m）\n→ Europa Cafe and 7th avenue的节点（方向 2°，距离 ≈ 80m）\n→ Hard Rock Cafe and 7th avenue的节点（方向 76°，距离 ≈ 61m）\n→ Starbucks（方向 175°，距离 ≈ 93m）\n→ Tony's（方向 99°，距离 ≈ 68m）\n→ west 44rd and The Lambs Club的节点（方向 5°，距离 ≈ 98m）\n→ The Lambs Club（方向 90°，距离 ≈ 68m）\n→ west 50rd and The Lambs Club的节点（方向 6°，距离 ≈ 87m）\n→ west 50rd and 6th avenue的节点（方向 146°，距离 ≈ 119m）\n→ Chase and 6th avenue的节点（方向 184°，距离 ≈ 66m）\n→ Chase（方向 169°，距离 ≈ 98m）\n→ west 50rd and Chase的节点（方向 38°，距离 ≈ 102m）\n→ west 50rd and Chase的节点（方向 138°，距离 ≈ 229m）\n→ Chase（方向 37°，距离 ≈ 113m）\n→ west 50rd and Chase的节点（方向 217°，距离 ≈ 113m）\n→ west 50rd and Chase的节点（方向 318°，距离 ≈ 229m）\n→ west 50rd and 6th avenue的节点（方向 317°，距离 ≈ 113m）\n→ west 46rd and 6th avenue的节点（方向 30°，距离 ≈ 333m）\n→ west 46rd and Del Frisco's Double Eagle Steakhouse的节点（方向 314°，距离 ≈ 114m）\n→ Del Frisco's Double Eagle Steakhouse（方向 190°，距离 ≈ 81m）\n→ west 46rd and Del Frisco's Double Eagle Steakhouse的节点（方向 10°，距离 ≈ 81m）\n→ west 46rd and 7th avenue的节点（方向 317°，距离 ≈ 130m）\n→ 7th avenue and The Playwright的节点（方向 216°，距离 ≈ 112m）\n→ The Playwright（方向 322°，距离 ≈ 118m）\n→ 7th avenue and The Playwright的节点（方向 142°，距离 ≈ 118m）\n→ 7th avenue and west 50rd的节点（方向 205°，距离 ≈ 197m）\n→ Junior's and west 50rd的节点（方向 321°，距离 ≈ 114m）\n→ west 50rd and 50th street的节点（方向 277°，距离 ≈ 207m）\n→ west 50rd and Public School 212的节点（方向 324°，距离 ≈ 107m）\n→ Public School 212（方向 33°，距离 ≈ 96m）\n→ west 50rd and Public School 212的节点（方向 213°，距离 ≈ 96m）\n→ west 50rd and 50th street的节点（方向 144°，距离 ≈ 107m）\n→ west 44rd and 50th street的节点（方向 212°，距离 ≈ 133m）\n→ 5 Napkin Burger（方向 321°，距离 ≈ 239m）\n→ west 44rd and 50th street的节点（方向 141°，距离 ≈ 239m）\n→ west 50rd and 50th street的节点（方向 32°，距离 ≈ 133m）\n→ west 46rd and 50th street的节点（方向 31°，距离 ≈ 403m）\n→ Duane Reade与50th street的节点（方向 25°，距离 ≈ 204m）\n→ Duane Reade（方向 109°，距离 ≈ 66m）\n→ Duane Reade（方向 289°，距离 ≈ 20m）\n→ Duane Reade（方向 109°，距离 ≈ 20m）\n→ Duane Reade与50th street的节点（方向 289°，距离 ≈ 66m）\n→ Duane Reade与50th street的节点（方向 205°，距离 ≈ 42m）\n→ Duane Reade与50th street的节点（方向 25°，距离 ≈ 42m）\n→ Duane Reade（方向 109°，距离 ≈ 66m）"
+}

@@ -1,0 +1,6243 @@
+{
+  "region": "多伦多CN塔",
+  "model": "deepseek",
+  "exploration_report": {
+    "exploration_path": [
+      {
+        "location": [
+          43.64391546648463,
+          -79.38790464204213
+        ],
+        "timestamp": "2025-12-18T19:13:22.679314",
+        "action": "move_start",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Boston Pizza",
+          "target_location": [
+            43.64445342800008,
+            -79.38843089299996
+          ]
+        }
+      },
+      {
+        "location": [
+          43.64445342800008,
+          -79.38843089299996
+        ],
+        "timestamp": "2025-12-18T19:13:22.679314",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Boston Pizza",
+          "target_location": [
+            43.64445342800008,
+            -79.38843089299996
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          43.64501314900008,
+          -79.38786339999996
+        ],
+        "timestamp": "2025-12-18T19:13:36.657635",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Second Cup",
+          "target_location": [
+            43.64501314900008,
+            -79.38786339999996
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          43.64571662800006,
+          -79.38779691399998
+        ],
+        "timestamp": "2025-12-18T19:13:50.598054",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Starbucks",
+          "target_location": [
+            43.645659471000045,
+            -79.38934188599995
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          43.645659471000045,
+          -79.38934188599995
+        ],
+        "timestamp": "2025-12-18T19:13:51.096692",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Starbucks",
+          "target_location": [
+            43.645659471000045,
+            -79.38934188599995
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          43.64497690700006,
+          -79.39075836499995
+        ],
+        "timestamp": "2025-12-18T19:14:04.807340",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "259 host ...a fine indian restaurant",
+          "target_location": [
+            43.64497690700006,
+            -79.39075836499995
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          43.64443447700006,
+          -79.39150988299997
+        ],
+        "timestamp": "2025-12-18T19:14:17.474400",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Tim Hortons",
+          "target_location": [
+            43.64371996400007,
+            -79.39211472099998
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          43.64367633100005,
+          -79.39129649199998
+        ],
+        "timestamp": "2025-12-18T19:14:17.980310",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Tim Hortons",
+          "target_location": [
+            43.64371996400007,
+            -79.39211472099998
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          43.64371996400007,
+          -79.39211472099998
+        ],
+        "timestamp": "2025-12-18T19:14:18.481251",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Tim Hortons",
+          "target_location": [
+            43.64371996400007,
+            -79.39211472099998
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          43.64306746700004,
+          -79.39220788499995
+        ],
+        "timestamp": "2025-12-18T19:14:32.191510",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "St. Louis Bar & Grill",
+          "target_location": [
+            43.640580757000066,
+            -79.39061724299995
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          43.64256029000006,
+          -79.39368255899996
+        ],
+        "timestamp": "2025-12-18T19:14:32.708356",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "St. Louis Bar & Grill",
+          "target_location": [
+            43.640580757000066,
+            -79.39061724299995
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          43.64136700300003,
+          -79.39378810199997
+        ],
+        "timestamp": "2025-12-18T19:14:33.210041",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "St. Louis Bar & Grill",
+          "target_location": [
+            43.640580757000066,
+            -79.39061724299995
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          43.640636190000066,
+          -79.39368189899994
+        ],
+        "timestamp": "2025-12-18T19:14:33.725597",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "St. Louis Bar & Grill",
+          "target_location": [
+            43.640580757000066,
+            -79.39061724299995
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          43.64003218600004,
+          -79.39316555899995
+        ],
+        "timestamp": "2025-12-18T19:14:34.227800",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "St. Louis Bar & Grill",
+          "target_location": [
+            43.640580757000066,
+            -79.39061724299995
+          ],
+          "step_index": 5
+        }
+      },
+      {
+        "location": [
+          43.640580757000066,
+          -79.39061724299995
+        ],
+        "timestamp": "2025-12-18T19:14:34.716262",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "St. Louis Bar & Grill",
+          "target_location": [
+            43.640580757000066,
+            -79.39061724299995
+          ],
+          "step_index": 6
+        }
+      },
+      {
+        "location": [
+          43.64003218600004,
+          -79.39316555899995
+        ],
+        "timestamp": "2025-12-18T19:14:48.031334",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "RBC Royal Bank",
+          "target_location": [
+            43.63999978000004,
+            -79.39440730599995
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          43.640636190000066,
+          -79.39368189899994
+        ],
+        "timestamp": "2025-12-18T19:14:48.528952",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "RBC Royal Bank",
+          "target_location": [
+            43.63999978000004,
+            -79.39440730599995
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          43.63999978000004,
+          -79.39440730599995
+        ],
+        "timestamp": "2025-12-18T19:14:49.027333",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "RBC Royal Bank",
+          "target_location": [
+            43.63999978000004,
+            -79.39440730599995
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          43.640636190000066,
+          -79.39368189899994
+        ],
+        "timestamp": "2025-12-18T19:15:05.588031",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "The Rec Room",
+          "target_location": [
+            43.64058250800008,
+            -79.38631926499994
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          43.64003218600004,
+          -79.39316555899995
+        ],
+        "timestamp": "2025-12-18T19:15:06.080696",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "The Rec Room",
+          "target_location": [
+            43.64058250800008,
+            -79.38631926499994
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          43.640580757000066,
+          -79.39061724299995
+        ],
+        "timestamp": "2025-12-18T19:15:06.584713",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "The Rec Room",
+          "target_location": [
+            43.64058250800008,
+            -79.38631926499994
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          43.63975981100003,
+          -79.38960233499995
+        ],
+        "timestamp": "2025-12-18T19:15:07.074311",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "The Rec Room",
+          "target_location": [
+            43.64058250800008,
+            -79.38631926499994
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          43.63988276600003,
+          -79.38850227899997
+        ],
+        "timestamp": "2025-12-18T19:15:07.577119",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "The Rec Room",
+          "target_location": [
+            43.64058250800008,
+            -79.38631926499994
+          ],
+          "step_index": 5
+        }
+      },
+      {
+        "location": [
+          43.640110348000064,
+          -79.38756502499996
+        ],
+        "timestamp": "2025-12-18T19:15:08.062889",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "The Rec Room",
+          "target_location": [
+            43.64058250800008,
+            -79.38631926499994
+          ],
+          "step_index": 6
+        }
+      },
+      {
+        "location": [
+          43.64130995700003,
+          -79.38678463799994
+        ],
+        "timestamp": "2025-12-18T19:15:08.582934",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "The Rec Room",
+          "target_location": [
+            43.64058250800008,
+            -79.38631926499994
+          ],
+          "step_index": 7
+        }
+      },
+      {
+        "location": [
+          43.64058250800008,
+          -79.38631926499994
+        ],
+        "timestamp": "2025-12-18T19:15:09.083280",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "The Rec Room",
+          "target_location": [
+            43.64058250800008,
+            -79.38631926499994
+          ],
+          "step_index": 8
+        }
+      },
+      {
+        "location": [
+          43.64130995700003,
+          -79.38678463799994
+        ],
+        "timestamp": "2025-12-18T19:15:17.869634",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Swiss Chalet",
+          "target_location": [
+            43.639422671000034,
+            -79.38626718599994
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          43.640110348000064,
+          -79.38756502499996
+        ],
+        "timestamp": "2025-12-18T19:15:18.381100",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Swiss Chalet",
+          "target_location": [
+            43.639422671000034,
+            -79.38626718599994
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          43.63988276600003,
+          -79.38850227899997
+        ],
+        "timestamp": "2025-12-18T19:15:18.881644",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Swiss Chalet",
+          "target_location": [
+            43.639422671000034,
+            -79.38626718599994
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          43.63975981100003,
+          -79.38960233499995
+        ],
+        "timestamp": "2025-12-18T19:15:19.383313",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Swiss Chalet",
+          "target_location": [
+            43.639422671000034,
+            -79.38626718599994
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          43.640580757000066,
+          -79.39061724299995
+        ],
+        "timestamp": "2025-12-18T19:15:19.884659",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Swiss Chalet",
+          "target_location": [
+            43.639422671000034,
+            -79.38626718599994
+          ],
+          "step_index": 5
+        }
+      },
+      {
+        "location": [
+          43.64003218600004,
+          -79.39316555899995
+        ],
+        "timestamp": "2025-12-18T19:15:20.370589",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Swiss Chalet",
+          "target_location": [
+            43.639422671000034,
+            -79.38626718599994
+          ],
+          "step_index": 6
+        }
+      },
+      {
+        "location": [
+          43.63687123900007,
+          -79.39234781899995
+        ],
+        "timestamp": "2025-12-18T19:15:20.887468",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Swiss Chalet",
+          "target_location": [
+            43.639422671000034,
+            -79.38626718599994
+          ],
+          "step_index": 7
+        }
+      },
+      {
+        "location": [
+          43.63873162300007,
+          -79.38630386699998
+        ],
+        "timestamp": "2025-12-18T19:15:21.387805",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Swiss Chalet",
+          "target_location": [
+            43.639422671000034,
+            -79.38626718599994
+          ],
+          "step_index": 8
+        }
+      },
+      {
+        "location": [
+          43.639422671000034,
+          -79.38626718599994
+        ],
+        "timestamp": "2025-12-18T19:15:21.904135",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Swiss Chalet",
+          "target_location": [
+            43.639422671000034,
+            -79.38626718599994
+          ],
+          "step_index": 9
+        }
+      },
+      {
+        "location": [
+          43.63873162300007,
+          -79.38630386699998
+        ],
+        "timestamp": "2025-12-18T19:15:29.177013",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Wild Wing",
+          "target_location": [
+            43.64001383500005,
+            -79.38478054299998
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          43.639216031000046,
+          -79.38488106899996
+        ],
+        "timestamp": "2025-12-18T19:15:29.697004",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Wild Wing",
+          "target_location": [
+            43.64001383500005,
+            -79.38478054299998
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          43.64001383500005,
+          -79.38478054299998
+        ],
+        "timestamp": "2025-12-18T19:15:30.212094",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Wild Wing",
+          "target_location": [
+            43.64001383500005,
+            -79.38478054299998
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          43.639216031000046,
+          -79.38488106899996
+        ],
+        "timestamp": "2025-12-18T19:15:36.759446",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Aroma Espresso Bar",
+          "target_location": [
+            43.642417228000056,
+            -79.38333236499994
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          43.63873162300007,
+          -79.38630386699998
+        ],
+        "timestamp": "2025-12-18T19:15:37.256240",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Aroma Espresso Bar",
+          "target_location": [
+            43.642417228000056,
+            -79.38333236499994
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          43.63687123900007,
+          -79.39234781899995
+        ],
+        "timestamp": "2025-12-18T19:15:37.755943",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Aroma Espresso Bar",
+          "target_location": [
+            43.642417228000056,
+            -79.38333236499994
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          43.64003218600004,
+          -79.39316555899995
+        ],
+        "timestamp": "2025-12-18T19:15:38.255043",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Aroma Espresso Bar",
+          "target_location": [
+            43.642417228000056,
+            -79.38333236499994
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          43.640580757000066,
+          -79.39061724299995
+        ],
+        "timestamp": "2025-12-18T19:15:38.742676",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Aroma Espresso Bar",
+          "target_location": [
+            43.642417228000056,
+            -79.38333236499994
+          ],
+          "step_index": 5
+        }
+      },
+      {
+        "location": [
+          43.63975981100003,
+          -79.38960233499995
+        ],
+        "timestamp": "2025-12-18T19:15:39.231870",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Aroma Espresso Bar",
+          "target_location": [
+            43.642417228000056,
+            -79.38333236499994
+          ],
+          "step_index": 6
+        }
+      },
+      {
+        "location": [
+          43.63988276600003,
+          -79.38850227899997
+        ],
+        "timestamp": "2025-12-18T19:15:39.732401",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Aroma Espresso Bar",
+          "target_location": [
+            43.642417228000056,
+            -79.38333236499994
+          ],
+          "step_index": 7
+        }
+      },
+      {
+        "location": [
+          43.640110348000064,
+          -79.38756502499996
+        ],
+        "timestamp": "2025-12-18T19:15:40.250626",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Aroma Espresso Bar",
+          "target_location": [
+            43.642417228000056,
+            -79.38333236499994
+          ],
+          "step_index": 8
+        }
+      },
+      {
+        "location": [
+          43.64130995700003,
+          -79.38678463799994
+        ],
+        "timestamp": "2025-12-18T19:15:40.754330",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Aroma Espresso Bar",
+          "target_location": [
+            43.642417228000056,
+            -79.38333236499994
+          ],
+          "step_index": 9
+        }
+      },
+      {
+        "location": [
+          43.641947164000044,
+          -79.38408041099996
+        ],
+        "timestamp": "2025-12-18T19:15:41.269929",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Aroma Espresso Bar",
+          "target_location": [
+            43.642417228000056,
+            -79.38333236499994
+          ],
+          "step_index": 10
+        }
+      },
+      {
+        "location": [
+          43.642417228000056,
+          -79.38333236499994
+        ],
+        "timestamp": "2025-12-18T19:15:41.785231",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Aroma Espresso Bar",
+          "target_location": [
+            43.642417228000056,
+            -79.38333236499994
+          ],
+          "step_index": 11
+        }
+      },
+      {
+        "location": [
+          43.641947164000044,
+          -79.38408041099996
+        ],
+        "timestamp": "2025-12-18T19:15:49.552342",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Starbucks",
+          "target_location": [
+            43.640011300000026,
+            -79.38097629999999
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          43.64130995700003,
+          -79.38678463799994
+        ],
+        "timestamp": "2025-12-18T19:15:50.059386",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Starbucks",
+          "target_location": [
+            43.640011300000026,
+            -79.38097629999999
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          43.640110348000064,
+          -79.38756502499996
+        ],
+        "timestamp": "2025-12-18T19:15:50.561334",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Starbucks",
+          "target_location": [
+            43.640011300000026,
+            -79.38097629999999
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          43.63988276600003,
+          -79.38850227899997
+        ],
+        "timestamp": "2025-12-18T19:15:51.077728",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Starbucks",
+          "target_location": [
+            43.640011300000026,
+            -79.38097629999999
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          43.63975981100003,
+          -79.38960233499995
+        ],
+        "timestamp": "2025-12-18T19:15:51.583050",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Starbucks",
+          "target_location": [
+            43.640011300000026,
+            -79.38097629999999
+          ],
+          "step_index": 5
+        }
+      },
+      {
+        "location": [
+          43.640580757000066,
+          -79.39061724299995
+        ],
+        "timestamp": "2025-12-18T19:15:52.084895",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Starbucks",
+          "target_location": [
+            43.640011300000026,
+            -79.38097629999999
+          ],
+          "step_index": 6
+        }
+      },
+      {
+        "location": [
+          43.64003218600004,
+          -79.39316555899995
+        ],
+        "timestamp": "2025-12-18T19:15:52.585984",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Starbucks",
+          "target_location": [
+            43.640011300000026,
+            -79.38097629999999
+          ],
+          "step_index": 7
+        }
+      },
+      {
+        "location": [
+          43.63687123900007,
+          -79.39234781899995
+        ],
+        "timestamp": "2025-12-18T19:15:53.072841",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Starbucks",
+          "target_location": [
+            43.640011300000026,
+            -79.38097629999999
+          ],
+          "step_index": 8
+        }
+      },
+      {
+        "location": [
+          43.63873162300007,
+          -79.38630386699998
+        ],
+        "timestamp": "2025-12-18T19:15:53.576224",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Starbucks",
+          "target_location": [
+            43.640011300000026,
+            -79.38097629999999
+          ],
+          "step_index": 9
+        }
+      },
+      {
+        "location": [
+          43.639216031000046,
+          -79.38488106899996
+        ],
+        "timestamp": "2025-12-18T19:15:54.061916",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Starbucks",
+          "target_location": [
+            43.640011300000026,
+            -79.38097629999999
+          ],
+          "step_index": 10
+        }
+      },
+      {
+        "location": [
+          43.639376396000046,
+          -79.38339100899998
+        ],
+        "timestamp": "2025-12-18T19:15:54.564632",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Starbucks",
+          "target_location": [
+            43.640011300000026,
+            -79.38097629999999
+          ],
+          "step_index": 11
+        }
+      },
+      {
+        "location": [
+          43.639315070000066,
+          -79.38106820099995
+        ],
+        "timestamp": "2025-12-18T19:15:55.083947",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Starbucks",
+          "target_location": [
+            43.640011300000026,
+            -79.38097629999999
+          ],
+          "step_index": 12
+        }
+      },
+      {
+        "location": [
+          43.640011300000026,
+          -79.38097629999999
+        ],
+        "timestamp": "2025-12-18T19:15:55.597607",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Starbucks",
+          "target_location": [
+            43.640011300000026,
+            -79.38097629999999
+          ],
+          "step_index": 13
+        }
+      },
+      {
+        "location": [
+          43.639315070000066,
+          -79.38106820099995
+        ],
+        "timestamp": "2025-12-18T19:16:02.525426",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Scaddabush",
+          "target_location": [
+            43.64500258600003,
+            -79.38564522799999
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          43.639376396000046,
+          -79.38339100899998
+        ],
+        "timestamp": "2025-12-18T19:16:03.017027",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Scaddabush",
+          "target_location": [
+            43.64500258600003,
+            -79.38564522799999
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          43.639216031000046,
+          -79.38488106899996
+        ],
+        "timestamp": "2025-12-18T19:16:03.533496",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Scaddabush",
+          "target_location": [
+            43.64500258600003,
+            -79.38564522799999
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          43.63873162300007,
+          -79.38630386699998
+        ],
+        "timestamp": "2025-12-18T19:16:04.035342",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Scaddabush",
+          "target_location": [
+            43.64500258600003,
+            -79.38564522799999
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          43.63687123900007,
+          -79.39234781899995
+        ],
+        "timestamp": "2025-12-18T19:16:04.537364",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Scaddabush",
+          "target_location": [
+            43.64500258600003,
+            -79.38564522799999
+          ],
+          "step_index": 5
+        }
+      },
+      {
+        "location": [
+          43.64003218600004,
+          -79.39316555899995
+        ],
+        "timestamp": "2025-12-18T19:16:05.051996",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Scaddabush",
+          "target_location": [
+            43.64500258600003,
+            -79.38564522799999
+          ],
+          "step_index": 6
+        }
+      },
+      {
+        "location": [
+          43.640636190000066,
+          -79.39368189899994
+        ],
+        "timestamp": "2025-12-18T19:16:05.568105",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Scaddabush",
+          "target_location": [
+            43.64500258600003,
+            -79.38564522799999
+          ],
+          "step_index": 7
+        }
+      },
+      {
+        "location": [
+          43.64136700300003,
+          -79.39378810199997
+        ],
+        "timestamp": "2025-12-18T19:16:06.066994",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Scaddabush",
+          "target_location": [
+            43.64500258600003,
+            -79.38564522799999
+          ],
+          "step_index": 8
+        }
+      },
+      {
+        "location": [
+          43.64256029000006,
+          -79.39368255899996
+        ],
+        "timestamp": "2025-12-18T19:16:06.580410",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Scaddabush",
+          "target_location": [
+            43.64500258600003,
+            -79.38564522799999
+          ],
+          "step_index": 9
+        }
+      },
+      {
+        "location": [
+          43.64306746700004,
+          -79.39220788499995
+        ],
+        "timestamp": "2025-12-18T19:16:07.081533",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Scaddabush",
+          "target_location": [
+            43.64500258600003,
+            -79.38564522799999
+          ],
+          "step_index": 10
+        }
+      },
+      {
+        "location": [
+          43.64309343600007,
+          -79.39143273699995
+        ],
+        "timestamp": "2025-12-18T19:16:07.580563",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Scaddabush",
+          "target_location": [
+            43.64500258600003,
+            -79.38564522799999
+          ],
+          "step_index": 11
+        }
+      },
+      {
+        "location": [
+          43.64367257400005,
+          -79.38919906799998
+        ],
+        "timestamp": "2025-12-18T19:16:08.081364",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Scaddabush",
+          "target_location": [
+            43.64500258600003,
+            -79.38564522799999
+          ],
+          "step_index": 12
+        }
+      },
+      {
+        "location": [
+          43.64380908900006,
+          -79.38843931799994
+        ],
+        "timestamp": "2025-12-18T19:16:08.564266",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Scaddabush",
+          "target_location": [
+            43.64500258600003,
+            -79.38564522799999
+          ],
+          "step_index": 13
+        }
+      },
+      {
+        "location": [
+          43.64439767700003,
+          -79.38548094899994
+        ],
+        "timestamp": "2025-12-18T19:16:09.080851",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Scaddabush",
+          "target_location": [
+            43.64500258600003,
+            -79.38564522799999
+          ],
+          "step_index": 14
+        }
+      },
+      {
+        "location": [
+          43.64500258600003,
+          -79.38564522799999
+        ],
+        "timestamp": "2025-12-18T19:16:09.582245",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Scaddabush",
+          "target_location": [
+            43.64500258600003,
+            -79.38564522799999
+          ],
+          "step_index": 15
+        }
+      },
+      {
+        "location": [
+          43.64439767700003,
+          -79.38548094899994
+        ],
+        "timestamp": "2025-12-18T19:16:16.311126",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Starbucks",
+          "target_location": [
+            43.64626871300004,
+            -79.38684204899994
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          43.64445548800006,
+          -79.38490705399994
+        ],
+        "timestamp": "2025-12-18T19:16:16.811778",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Starbucks",
+          "target_location": [
+            43.64626871300004,
+            -79.38684204899994
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          43.64618883900005,
+          -79.38537649699998
+        ],
+        "timestamp": "2025-12-18T19:16:17.313315",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Starbucks",
+          "target_location": [
+            43.64626871300004,
+            -79.38684204899994
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          43.64626871300004,
+          -79.38684204899994
+        ],
+        "timestamp": "2025-12-18T19:16:17.832094",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Starbucks",
+          "target_location": [
+            43.64626871300004,
+            -79.38684204899994
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          43.64618883900005,
+          -79.38537649699998
+        ],
+        "timestamp": "2025-12-18T19:16:28.194307",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Jack Astor's",
+          "target_location": [
+            43.645598849000066,
+            -79.38338185799995
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          43.64445548800006,
+          -79.38490705399994
+        ],
+        "timestamp": "2025-12-18T19:16:28.699009",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Jack Astor's",
+          "target_location": [
+            43.645598849000066,
+            -79.38338185799995
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          43.64494720300007,
+          -79.38329533899997
+        ],
+        "timestamp": "2025-12-18T19:16:29.228379",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Jack Astor's",
+          "target_location": [
+            43.645598849000066,
+            -79.38338185799995
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          43.645598849000066,
+          -79.38338185799995
+        ],
+        "timestamp": "2025-12-18T19:16:29.714620",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "Jack Astor's",
+          "target_location": [
+            43.645598849000066,
+            -79.38338185799995
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          43.64543641551952,
+          -79.38336029171657
+        ],
+        "timestamp": "2025-12-18T19:16:53.352516",
+        "action": "move_final_approach",
+        "decision": {
+          "action": "explore_direction",
+          "target": 90.0,
+          "reason": "No visible POIs from current location. Continuing exploration eastward."
+        }
+      },
+      {
+        "location": [
+          43.64494720300007,
+          -79.38329533899997
+        ],
+        "timestamp": "2025-12-18T19:16:59.947237",
+        "action": "move_road_step",
+        "decision": {
+          "action": "explore_direction",
+          "target": 180.0,
+          "reason": "No visible POIs from current location. Exploring southward to continue systematic coverage.",
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          43.64489401769336,
+          -79.38346966672357
+        ],
+        "timestamp": "2025-12-18T19:17:00.451353",
+        "action": "move_final_approach",
+        "decision": {
+          "action": "explore_direction",
+          "target": 180.0,
+          "reason": "No visible POIs from current location. Exploring southward to continue systematic coverage."
+        }
+      },
+      {
+        "location": [
+          43.64445548800006,
+          -79.38490705399994
+        ],
+        "timestamp": "2025-12-18T19:17:07.692486",
+        "action": "move_road_step",
+        "decision": {
+          "action": "explore_direction",
+          "target": 270.0,
+          "reason": "No visible POIs from current location. Exploring westward to complete systematic directional exploration.",
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          43.64481549959245,
+          -79.38500455584578
+        ],
+        "timestamp": "2025-12-18T19:17:08.213092",
+        "action": "move_final_approach",
+        "decision": {
+          "action": "explore_direction",
+          "target": 270.0,
+          "reason": "No visible POIs from current location. Exploring westward to complete systematic directional exploration."
+        }
+      },
+      {
+        "location": [
+          43.64494720300007,
+          -79.38329533899997
+        ],
+        "timestamp": "2025-12-18T19:17:17.235151",
+        "action": "move_road_step",
+        "decision": {
+          "action": "explore_direction",
+          "target": 45.0,
+          "reason": "No visible POIs from current location. Exploring northeast to cover intermediate directions after cardinal directions yielded no POIs.",
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          43.6447588827232,
+          -79.38391260431631
+        ],
+        "timestamp": "2025-12-18T19:17:17.732663",
+        "action": "move_final_approach",
+        "decision": {
+          "action": "explore_direction",
+          "target": 45.0,
+          "reason": "No visible POIs from current location. Exploring northeast to cover intermediate directions after cardinal directions yielded no POIs."
+        }
+      },
+      {
+        "location": [
+          43.64494720300007,
+          -79.38329533899997
+        ],
+        "timestamp": "2025-12-18T19:17:25.646033",
+        "action": "move_final_approach",
+        "decision": {
+          "action": "explore_direction",
+          "target": 135.0,
+          "reason": "No visible POIs from current location. Continuing systematic exploration in southeast direction."
+        }
+      }
+    ],
+    "visited_pois": [
+      "7",
+      "0",
+      "3",
+      "5",
+      "13",
+      "8",
+      "9",
+      "11",
+      "10",
+      "4",
+      "6",
+      "14",
+      "12",
+      "1",
+      "2"
+    ],
+    "interesting_pois": [
+      {
+        "poi": {
+          "id": "0",
+          "name": "金钟广场",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.227518195000073,
+            121.47435677800001
+          ],
+          "address": "淮海中路98号(近柳林路)(大世界地铁站3号口步行80米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:40:51.251054"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "普安路延安东路(公交站)",
+          "type": "交通设施服务;公交车站;公交车站相关",
+          "location": [
+            31.228637666000054,
+            121.4716006320001
+          ],
+          "address": "775路;782路;783路;934路;DZ普南线;沪朱高速定班线",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:41:01.155346"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "香港广场北座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.225913330000026,
+            121.47040318600011
+          ],
+          "address": "淮海中路282号",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:41:11.581608"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "东淮海国际大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.227988152000023,
+            121.47777120800004
+          ],
+          "address": "淮海东路45-47号(大世界地铁站5号口步行220米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:41:20.690203"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "露香园",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            31.228072952000048,
+            121.47999372400011
+          ],
+          "address": "露香苑路88(豫园地铁站3号口步行420米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:41:28.566246"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "黄浦区机关办公大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.233631914000057,
+            121.48001820100001
+          ],
+          "address": "山东中路1号(豫园地铁站5号口步行460米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:41:38.431586"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "上海市青莲阁大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.234747723000055,
+            121.47607018500003
+          ],
+          "address": "福州路515号",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:41:48.201739"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "上海黄浦区图书馆大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.234101490000057,
+            121.47438925300003
+          ],
+          "address": "福州路655号(人民广场地铁站15号口步行360米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:41:55.851148"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "人民广场地铁站1号口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            31.233123699000032,
+            121.47207070000002
+          ],
+          "address": "1号线",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:42:01.741963"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "金钟广场",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.227518195000073,
+            121.47435677800001
+          ],
+          "address": "淮海中路98号(近柳林路)(大世界地铁站3号口步行80米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:44:00.319640"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "普安路延安东路(公交站)",
+          "type": "交通设施服务;公交车站;公交车站相关",
+          "location": [
+            31.228637666000054,
+            121.4716006320001
+          ],
+          "address": "775路;782路;783路;934路;DZ普南线;沪朱高速定班线",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:44:10.228135"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "香港广场北座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.225913330000026,
+            121.47040318600011
+          ],
+          "address": "淮海中路282号",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:44:20.309126"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "东淮海国际大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.227988152000023,
+            121.47777120800004
+          ],
+          "address": "淮海东路45-47号(大世界地铁站5号口步行220米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:44:28.826258"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "露香园",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            31.228072952000048,
+            121.47999372400011
+          ],
+          "address": "露香苑路88(豫园地铁站3号口步行420米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:44:37.261757"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "黄浦区机关办公大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.233631914000057,
+            121.48001820100001
+          ],
+          "address": "山东中路1号(豫园地铁站5号口步行460米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:44:46.487031"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "上海市青莲阁大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.234747723000055,
+            121.47607018500003
+          ],
+          "address": "福州路515号",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:44:55.399403"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "上海黄浦区图书馆大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.234101490000057,
+            121.47438925300003
+          ],
+          "address": "福州路655号(人民广场地铁站15号口步行360米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:45:03.577874"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "人民广场地铁站1号口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            31.233123699000032,
+            121.47207070000002
+          ],
+          "address": "1号线",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:45:05.861748"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "金钟广场",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.227518195000073,
+            121.47435677800001
+          ],
+          "address": "淮海中路98号(近柳林路)(大世界地铁站3号口步行80米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:47:51.764582"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "普安路延安东路(公交站)",
+          "type": "交通设施服务;公交车站;公交车站相关",
+          "location": [
+            31.228637666000054,
+            121.4716006320001
+          ],
+          "address": "775路;782路;783路;934路;DZ普南线;沪朱高速定班线",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:48:02.956746"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "香港广场北座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.225913330000026,
+            121.47040318600011
+          ],
+          "address": "淮海中路282号",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:48:13.511410"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "东淮海国际大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.227988152000023,
+            121.47777120800004
+          ],
+          "address": "淮海东路45-47号(大世界地铁站5号口步行220米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:48:22.281403"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "露香园",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            31.228072952000048,
+            121.47999372400011
+          ],
+          "address": "露香苑路88(豫园地铁站3号口步行420米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:48:31.181205"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "黄浦区机关办公大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.233631914000057,
+            121.48001820100001
+          ],
+          "address": "山东中路1号(豫园地铁站5号口步行460米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:48:40.536596"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "上海市青莲阁大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.234747723000055,
+            121.47607018500003
+          ],
+          "address": "福州路515号",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:48:49.915173"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "上海黄浦区图书馆大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.234101490000057,
+            121.47438925300003
+          ],
+          "address": "福州路655号(人民广场地铁站15号口步行360米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:49:01.876900"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "人民广场地铁站1号口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            31.233123699000032,
+            121.47207070000002
+          ],
+          "address": "1号线",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:49:10.305741"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "金钟广场",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.227518195000073,
+            121.47435677800001
+          ],
+          "address": "淮海中路98号(近柳林路)(大世界地铁站3号口步行80米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:53:15.065990"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "普安路延安东路(公交站)",
+          "type": "交通设施服务;公交车站;公交车站相关",
+          "location": [
+            31.228637666000054,
+            121.4716006320001
+          ],
+          "address": "775路;782路;783路;934路;DZ普南线;沪朱高速定班线",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:53:28.038235"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "香港广场北座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.225913330000026,
+            121.47040318600011
+          ],
+          "address": "淮海中路282号",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:53:42.883229"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "东淮海国际大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.227988152000023,
+            121.47777120800004
+          ],
+          "address": "淮海东路45-47号(大世界地铁站5号口步行220米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:53:51.046105"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "露香园",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            31.228072952000048,
+            121.47999372400011
+          ],
+          "address": "露香苑路88(豫园地铁站3号口步行420米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:54:02.450608"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "黄浦区机关办公大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.233631914000057,
+            121.48001820100001
+          ],
+          "address": "山东中路1号(豫园地铁站5号口步行460米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:54:14.884914"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "上海市青莲阁大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.234747723000055,
+            121.47607018500003
+          ],
+          "address": "福州路515号",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:54:28.386842"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "上海黄浦区图书馆大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.234101490000057,
+            121.47438925300003
+          ],
+          "address": "福州路655号(人民广场地铁站15号口步行360米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:54:40.692005"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "人民广场地铁站1号口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            31.233123699000032,
+            121.47207070000002
+          ],
+          "address": "1号线",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:54:53.589536"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "金钟广场",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.227518195000073,
+            121.47435677800001
+          ],
+          "address": "淮海中路98号(近柳林路)(大世界地铁站3号口步行80米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:56:59.049649"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "普安路延安东路(公交站)",
+          "type": "交通设施服务;公交车站;公交车站相关",
+          "location": [
+            31.228637666000054,
+            121.4716006320001
+          ],
+          "address": "775路;782路;783路;934路;DZ普南线;沪朱高速定班线",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:57:13.768718"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "香港广场北座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.225913330000026,
+            121.47040318600011
+          ],
+          "address": "淮海中路282号",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:57:22.454633"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "东淮海国际大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.227988152000023,
+            121.47777120800004
+          ],
+          "address": "淮海东路45-47号(大世界地铁站5号口步行220米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:57:30.656241"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "露香园",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            31.228072952000048,
+            121.47999372400011
+          ],
+          "address": "露香苑路88(豫园地铁站3号口步行420米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:57:50.041710"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "黄浦区机关办公大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.233631914000057,
+            121.48001820100001
+          ],
+          "address": "山东中路1号(豫园地铁站5号口步行460米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:57:57.469335"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "上海市青莲阁大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.234747723000055,
+            121.47607018500003
+          ],
+          "address": "福州路515号",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:58:18.361233"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "上海黄浦区图书馆大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.234101490000057,
+            121.47438925300003
+          ],
+          "address": "福州路655号(人民广场地铁站15号口步行360米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:58:29.827192"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "人民广场地铁站1号口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            31.233123699000032,
+            121.47207070000002
+          ],
+          "address": "1号线",
+          "distance": 0
+        },
+        "time": "2025-12-18T17:58:50.451850"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "金钟广场",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.227518195000073,
+            121.47435677800001
+          ],
+          "address": "淮海中路98号(近柳林路)(大世界地铁站3号口步行80米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:00:47.605517"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "普安路延安东路(公交站)",
+          "type": "交通设施服务;公交车站;公交车站相关",
+          "location": [
+            31.228637666000054,
+            121.4716006320001
+          ],
+          "address": "775路;782路;783路;934路;DZ普南线;沪朱高速定班线",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:01:03.203090"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "香港广场北座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.225913330000026,
+            121.47040318600011
+          ],
+          "address": "淮海中路282号",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:01:26.389858"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "东淮海国际大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.227988152000023,
+            121.47777120800004
+          ],
+          "address": "淮海东路45-47号(大世界地铁站5号口步行220米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:01:39.144328"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "露香园",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            31.228072952000048,
+            121.47999372400011
+          ],
+          "address": "露香苑路88(豫园地铁站3号口步行420米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:01:45.971336"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "黄浦区机关办公大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.233631914000057,
+            121.48001820100001
+          ],
+          "address": "山东中路1号(豫园地铁站5号口步行460米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:02:08.151564"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "上海市青莲阁大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.234747723000055,
+            121.47607018500003
+          ],
+          "address": "福州路515号",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:02:15.130805"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "上海黄浦区图书馆大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.234101490000057,
+            121.47438925300003
+          ],
+          "address": "福州路655号(人民广场地铁站15号口步行360米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:02:24.742316"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "人民广场地铁站1号口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            31.233123699000032,
+            121.47207070000002
+          ],
+          "address": "1号线",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:02:35.731205"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "Quirinale",
+          "type": "餐厅",
+          "location": [
+            51.49782865000003,
+            -0.12702302599996074
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:04:14.906559"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "Crussh Bar",
+          "type": "咖啡厅",
+          "location": [
+            51.49707674900003,
+            -0.1262974909999457
+          ],
+          "address": "4, Millbank",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:04:21.327173"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "Lloyds Bank",
+          "type": "银行",
+          "location": [
+            51.49564831300006,
+            -0.12697717799994734
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:04:28.838951"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "Footstool",
+          "type": "餐厅",
+          "location": [
+            51.49492566600003,
+            -0.12714988899995205
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:04:37.400390"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "PizzaExpress",
+          "type": "餐厅",
+          "location": [
+            51.492804868000064,
+            -0.1255464779999329
+          ],
+          "address": "25, Millbank, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:04:44.483644"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "Riverside Cafe",
+          "type": "咖啡厅",
+          "location": [
+            51.49488533200008,
+            -0.1216719799999737
+          ],
+          "address": "Albert Embankment, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:04:51.345679"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "Shepherds Hall",
+          "type": "咖啡厅",
+          "location": [
+            51.498400642000036,
+            -0.11991549099997201
+          ],
+          "address": "249, Westminster Bridge Road, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:04:58.275682"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "Aji Zen Canteen",
+          "type": "餐厅",
+          "location": [
+            51.501338012000076,
+            -0.11849747899992735
+          ],
+          "address": "London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:05:09.024934"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "Zen China",
+          "type": "餐厅",
+          "location": [
+            51.50203248400004,
+            -0.1191967999999406
+          ],
+          "address": "Westminster Bridge Road, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:05:18.951030"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "Caffè Nero",
+          "type": "咖啡厅",
+          "location": [
+            51.50144796600006,
+            -0.12475896799998054
+          ],
+          "address": "70, Bridge Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:05:27.914960"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "Milne’s House",
+          "type": "学校",
+          "location": [
+            51.49845720700006,
+            -0.13007887299994536
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:05:36.793535"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "Ashburnham House",
+          "type": "学校",
+          "location": [
+            51.49779130600007,
+            -0.13010317299995222
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:05:43.322875"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "The Cinnamon Club",
+          "type": "餐厅",
+          "location": [
+            51.49712265100004,
+            -0.12939284899994163
+          ],
+          "address": "30, Great Smith Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:05:49.699123"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "Wash House",
+          "type": "咖啡厅",
+          "location": [
+            51.496357603000035,
+            -0.1294433629999503
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:06:02.291342"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "Café Fresco",
+          "type": "咖啡厅",
+          "location": [
+            51.49995134200003,
+            -0.13091964599993844
+          ],
+          "address": "11A, Tothill Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:06:15.166571"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "Crussh Bar",
+          "type": "咖啡厅",
+          "location": [
+            51.49707674900003,
+            -0.1262974909999457
+          ],
+          "address": "4, Millbank",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:08:24.183523"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "Quirinale",
+          "type": "餐厅",
+          "location": [
+            51.49782865000003,
+            -0.12702302599996074
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:08:31.552680"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "The Cinnamon Club",
+          "type": "餐厅",
+          "location": [
+            51.49712265100004,
+            -0.12939284899994163
+          ],
+          "address": "30, Great Smith Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:08:39.475899"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "Wash House",
+          "type": "咖啡厅",
+          "location": [
+            51.496357603000035,
+            -0.1294433629999503
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:08:46.692170"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "Ashburnham House",
+          "type": "学校",
+          "location": [
+            51.49779130600007,
+            -0.13010317299995222
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:08:53.088147"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "Milne’s House",
+          "type": "学校",
+          "location": [
+            51.49845720700006,
+            -0.13007887299994536
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:08:59.365092"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "Café Fresco",
+          "type": "咖啡厅",
+          "location": [
+            51.49995134200003,
+            -0.13091964599993844
+          ],
+          "address": "11A, Tothill Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:09:06.150804"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "Caffè Nero",
+          "type": "咖啡厅",
+          "location": [
+            51.50144796600006,
+            -0.12475896799998054
+          ],
+          "address": "70, Bridge Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:09:14.654533"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "Zen China",
+          "type": "餐厅",
+          "location": [
+            51.50203248400004,
+            -0.1191967999999406
+          ],
+          "address": "Westminster Bridge Road, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:09:22.785033"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "Aji Zen Canteen",
+          "type": "餐厅",
+          "location": [
+            51.501338012000076,
+            -0.11849747899992735
+          ],
+          "address": "London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:09:30.005298"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "Shepherds Hall",
+          "type": "咖啡厅",
+          "location": [
+            51.498400642000036,
+            -0.11991549099997201
+          ],
+          "address": "249, Westminster Bridge Road, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:09:38.124520"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "Riverside Cafe",
+          "type": "咖啡厅",
+          "location": [
+            51.49488533200008,
+            -0.1216719799999737
+          ],
+          "address": "Albert Embankment, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:09:45.132529"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "PizzaExpress",
+          "type": "餐厅",
+          "location": [
+            51.492804868000064,
+            -0.1255464779999329
+          ],
+          "address": "25, Millbank, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:09:53.090991"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "Footstool",
+          "type": "餐厅",
+          "location": [
+            51.49492566600003,
+            -0.12714988899995205
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:10:01.482702"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "Lloyds Bank",
+          "type": "银行",
+          "location": [
+            51.49564831300006,
+            -0.12697717799994734
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:10:07.625395"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "Crussh Bar",
+          "type": "咖啡厅",
+          "location": [
+            51.49707674900003,
+            -0.1262974909999457
+          ],
+          "address": "4, Millbank",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:12:17.362757"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "Quirinale",
+          "type": "餐厅",
+          "location": [
+            51.49782865000003,
+            -0.12702302599996074
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:12:30.372644"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "The Cinnamon Club",
+          "type": "餐厅",
+          "location": [
+            51.49712265100004,
+            -0.12939284899994163
+          ],
+          "address": "30, Great Smith Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:12:47.579647"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "Wash House",
+          "type": "咖啡厅",
+          "location": [
+            51.496357603000035,
+            -0.1294433629999503
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:13:00.087869"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "Ashburnham House",
+          "type": "学校",
+          "location": [
+            51.49779130600007,
+            -0.13010317299995222
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:13:12.793606"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "Milne’s House",
+          "type": "学校",
+          "location": [
+            51.49845720700006,
+            -0.13007887299994536
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:13:24.359033"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "Café Fresco",
+          "type": "咖啡厅",
+          "location": [
+            51.49995134200003,
+            -0.13091964599993844
+          ],
+          "address": "11A, Tothill Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:13:35.777916"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "Caffè Nero",
+          "type": "咖啡厅",
+          "location": [
+            51.50144796600006,
+            -0.12475896799998054
+          ],
+          "address": "70, Bridge Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:13:50.646086"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "Zen China",
+          "type": "餐厅",
+          "location": [
+            51.50203248400004,
+            -0.1191967999999406
+          ],
+          "address": "Westminster Bridge Road, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:14:00.131213"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "Aji Zen Canteen",
+          "type": "餐厅",
+          "location": [
+            51.501338012000076,
+            -0.11849747899992735
+          ],
+          "address": "London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:14:09.099508"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "Shepherds Hall",
+          "type": "咖啡厅",
+          "location": [
+            51.498400642000036,
+            -0.11991549099997201
+          ],
+          "address": "249, Westminster Bridge Road, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:14:17.640490"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "Riverside Cafe",
+          "type": "咖啡厅",
+          "location": [
+            51.49488533200008,
+            -0.1216719799999737
+          ],
+          "address": "Albert Embankment, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:14:25.366432"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "PizzaExpress",
+          "type": "餐厅",
+          "location": [
+            51.492804868000064,
+            -0.1255464779999329
+          ],
+          "address": "25, Millbank, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:14:34.033678"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "Footstool",
+          "type": "餐厅",
+          "location": [
+            51.49492566600003,
+            -0.12714988899995205
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:14:42.482682"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "Lloyds Bank",
+          "type": "银行",
+          "location": [
+            51.49564831300006,
+            -0.12697717799994734
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:14:54.459940"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "Crussh Bar",
+          "type": "咖啡厅",
+          "location": [
+            51.49707674900003,
+            -0.1262974909999457
+          ],
+          "address": "4, Millbank",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:19:26.116961"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "Quirinale",
+          "type": "餐厅",
+          "location": [
+            51.49782865000003,
+            -0.12702302599996074
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:19:32.532913"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "The Cinnamon Club",
+          "type": "餐厅",
+          "location": [
+            51.49712265100004,
+            -0.12939284899994163
+          ],
+          "address": "30, Great Smith Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:19:40.244241"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "Wash House",
+          "type": "咖啡厅",
+          "location": [
+            51.496357603000035,
+            -0.1294433629999503
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:19:46.633062"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "Ashburnham House",
+          "type": "学校",
+          "location": [
+            51.49779130600007,
+            -0.13010317299995222
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:19:52.572502"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "Milne’s House",
+          "type": "学校",
+          "location": [
+            51.49845720700006,
+            -0.13007887299994536
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:19:58.205981"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "Café Fresco",
+          "type": "咖啡厅",
+          "location": [
+            51.49995134200003,
+            -0.13091964599993844
+          ],
+          "address": "11A, Tothill Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:20:05.521334"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "Caffè Nero",
+          "type": "咖啡厅",
+          "location": [
+            51.50144796600006,
+            -0.12475896799998054
+          ],
+          "address": "70, Bridge Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:20:16.312806"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "Zen China",
+          "type": "餐厅",
+          "location": [
+            51.50203248400004,
+            -0.1191967999999406
+          ],
+          "address": "Westminster Bridge Road, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:20:29.713813"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "Aji Zen Canteen",
+          "type": "餐厅",
+          "location": [
+            51.501338012000076,
+            -0.11849747899992735
+          ],
+          "address": "London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:20:42.880257"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "Shepherds Hall",
+          "type": "咖啡厅",
+          "location": [
+            51.498400642000036,
+            -0.11991549099997201
+          ],
+          "address": "249, Westminster Bridge Road, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:20:57.951740"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "Riverside Cafe",
+          "type": "咖啡厅",
+          "location": [
+            51.49488533200008,
+            -0.1216719799999737
+          ],
+          "address": "Albert Embankment, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:21:10.406011"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "PizzaExpress",
+          "type": "餐厅",
+          "location": [
+            51.492804868000064,
+            -0.1255464779999329
+          ],
+          "address": "25, Millbank, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:21:23.996294"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "Footstool",
+          "type": "餐厅",
+          "location": [
+            51.49492566600003,
+            -0.12714988899995205
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:21:30.685268"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "Lloyds Bank",
+          "type": "银行",
+          "location": [
+            51.49564831300006,
+            -0.12697717799994734
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:21:35.548287"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "Crussh Bar",
+          "type": "咖啡厅",
+          "location": [
+            51.49707674900003,
+            -0.1262974909999457
+          ],
+          "address": "4, Millbank",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:23:14.443767"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "Quirinale",
+          "type": "餐厅",
+          "location": [
+            51.49782865000003,
+            -0.12702302599996074
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:23:22.759067"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "The Cinnamon Club",
+          "type": "餐厅",
+          "location": [
+            51.49712265100004,
+            -0.12939284899994163
+          ],
+          "address": "30, Great Smith Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:23:32.378704"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "Wash House",
+          "type": "咖啡厅",
+          "location": [
+            51.496357603000035,
+            -0.1294433629999503
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:23:44.113854"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "Ashburnham House",
+          "type": "学校",
+          "location": [
+            51.49779130600007,
+            -0.13010317299995222
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:24:04.202003"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "Milne’s House",
+          "type": "学校",
+          "location": [
+            51.49845720700006,
+            -0.13007887299994536
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:24:11.510124"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "Café Fresco",
+          "type": "咖啡厅",
+          "location": [
+            51.49995134200003,
+            -0.13091964599993844
+          ],
+          "address": "11A, Tothill Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:24:21.385408"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "Caffè Nero",
+          "type": "咖啡厅",
+          "location": [
+            51.50144796600006,
+            -0.12475896799998054
+          ],
+          "address": "70, Bridge Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:24:38.700849"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "Zen China",
+          "type": "餐厅",
+          "location": [
+            51.50203248400004,
+            -0.1191967999999406
+          ],
+          "address": "Westminster Bridge Road, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:24:46.122118"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "Aji Zen Canteen",
+          "type": "餐厅",
+          "location": [
+            51.501338012000076,
+            -0.11849747899992735
+          ],
+          "address": "London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:24:55.026919"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "Shepherds Hall",
+          "type": "咖啡厅",
+          "location": [
+            51.498400642000036,
+            -0.11991549099997201
+          ],
+          "address": "249, Westminster Bridge Road, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:25:01.624295"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "Riverside Cafe",
+          "type": "咖啡厅",
+          "location": [
+            51.49488533200008,
+            -0.1216719799999737
+          ],
+          "address": "Albert Embankment, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:25:09.924884"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "PizzaExpress",
+          "type": "餐厅",
+          "location": [
+            51.492804868000064,
+            -0.1255464779999329
+          ],
+          "address": "25, Millbank, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:25:24.951635"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "Footstool",
+          "type": "餐厅",
+          "location": [
+            51.49492566600003,
+            -0.12714988899995205
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:25:34.892486"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "Lloyds Bank",
+          "type": "银行",
+          "location": [
+            51.49564831300006,
+            -0.12697717799994734
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:25:48.905410"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "Crussh Bar",
+          "type": "咖啡厅",
+          "location": [
+            51.49707674900003,
+            -0.1262974909999457
+          ],
+          "address": "4, Millbank",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:27:56.627227"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "Quirinale",
+          "type": "餐厅",
+          "location": [
+            51.49782865000003,
+            -0.12702302599996074
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:27:59.122345"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "The Cinnamon Club",
+          "type": "餐厅",
+          "location": [
+            51.49712265100004,
+            -0.12939284899994163
+          ],
+          "address": "30, Great Smith Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:28:03.664328"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "Wash House",
+          "type": "咖啡厅",
+          "location": [
+            51.496357603000035,
+            -0.1294433629999503
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:28:05.915090"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "Ashburnham House",
+          "type": "学校",
+          "location": [
+            51.49779130600007,
+            -0.13010317299995222
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:28:09.250396"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "Milne’s House",
+          "type": "学校",
+          "location": [
+            51.49845720700006,
+            -0.13007887299994536
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:28:12.114722"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "Café Fresco",
+          "type": "咖啡厅",
+          "location": [
+            51.49995134200003,
+            -0.13091964599993844
+          ],
+          "address": "11A, Tothill Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:28:15.347774"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "Caffè Nero",
+          "type": "咖啡厅",
+          "location": [
+            51.50144796600006,
+            -0.12475896799998054
+          ],
+          "address": "70, Bridge Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:28:22.520719"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "Zen China",
+          "type": "餐厅",
+          "location": [
+            51.50203248400004,
+            -0.1191967999999406
+          ],
+          "address": "Westminster Bridge Road, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:28:31.121303"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "Aji Zen Canteen",
+          "type": "餐厅",
+          "location": [
+            51.501338012000076,
+            -0.11849747899992735
+          ],
+          "address": "London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:28:35.137721"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "Shepherds Hall",
+          "type": "咖啡厅",
+          "location": [
+            51.498400642000036,
+            -0.11991549099997201
+          ],
+          "address": "249, Westminster Bridge Road, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:28:47.205008"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "Riverside Cafe",
+          "type": "咖啡厅",
+          "location": [
+            51.49488533200008,
+            -0.1216719799999737
+          ],
+          "address": "Albert Embankment, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:28:50.016385"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "PizzaExpress",
+          "type": "餐厅",
+          "location": [
+            51.492804868000064,
+            -0.1255464779999329
+          ],
+          "address": "25, Millbank, London",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:28:54.962795"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "Footstool",
+          "type": "餐厅",
+          "location": [
+            51.49492566600003,
+            -0.12714988899995205
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:28:58.759813"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "Lloyds Bank",
+          "type": "银行",
+          "location": [
+            51.49564831300006,
+            -0.12697717799994734
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T18:29:16.900973"
+      },
+      {
+        "poi": {
+          "id": "17",
+          "name": "正义路3号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90376120500008,
+            116.40739646000009
+          ],
+          "address": "正义路与东交民巷交叉口北约140米",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:30:51.614253"
+      },
+      {
+        "poi": {
+          "id": "16",
+          "name": "四季回头特色菜馆",
+          "type": "餐饮服务;中餐厅;中餐厅",
+          "location": [
+            39.904328433000046,
+            116.40752500000008
+          ],
+          "address": "西四西五条路之间爱民街门市454",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:30:57.873876"
+      },
+      {
+        "poi": {
+          "id": "15",
+          "name": "北京东交民巷饭店写字楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90313513000007,
+            116.40809412500005
+          ],
+          "address": "东交民巷丙23号",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:31:04.081140"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "隆和居",
+          "type": "餐饮服务;中餐厅;中餐厅",
+          "location": [
+            39.903160951000075,
+            116.40601931300012
+          ],
+          "address": "东华门街道正义路8号(原市政府斜对面)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:31:13.336216"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "正义路10号院",
+          "type": "商务住宅;住宅区;住宅区",
+          "location": [
+            39.90257634000005,
+            116.4060098000001
+          ],
+          "address": "正义路与东交民巷交叉口北80米",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:31:20.279087"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "正义路社区服务站",
+          "type": "商务住宅;住宅区;社区中心|生活服务;生活服务场所;生活服务场所",
+          "location": [
+            39.90201115700006,
+            116.40607625900009
+          ],
+          "address": "东交民巷32号",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:31:26.736563"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "前门东大街23号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90141217000007,
+            116.40167232100009
+          ],
+          "address": "前门东大街23号(前门地铁站E2北口步行250米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:31:35.581620"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "前门(公交站)",
+          "type": "交通设施服务;公交车站;公交车站相关",
+          "location": [
+            39.89897088300006,
+            116.40162254300003
+          ],
+          "address": "120路;137路;141路;141路区间;22路;2路;332路;48路;599路;59路;5路;5路加车德胜门区间;622路;66路;67路;82路;8路;93路;前门故宫环线观光巴士;前门有轨电车;前门王府井观光专线;北京夜景观光北线;夜18路;夜2",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:31:52.751670"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "宝鼎中心",
+          "type": "商务住宅;楼宇;商住两用楼宇",
+          "location": [
+            39.89959012500003,
+            116.41310850900004
+          ],
+          "address": "东打磨厂街7号(崇文门地铁站D西南口步行480米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:32:01.784952"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "新怡家园",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            39.89829283300003,
+            116.41446191800003
+          ],
+          "address": "东打磨厂街36号(崇文门地铁站H西南口步行250米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:32:08.344176"
+      },
+      {
+        "poi": {
+          "id": "18",
+          "name": "长安大厦(东长安街)",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90723864300003,
+            116.40890471400007
+          ],
+          "address": "东华门街道东长安街10号",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:32:18.007309"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "正义路1号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90618000000006,
+            116.40760000000012
+          ],
+          "address": "正义路与东长安街交叉口东南200米",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:32:26.663970"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "霞公府",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            39.90964891100003,
+            116.40813283000011
+          ],
+          "address": "东长安街(王府井地铁站F1东口步行430米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:32:35.496147"
+      },
+      {
+        "poi": {
+          "id": "20",
+          "name": "王府井喜悦购物中心地下停车场",
+          "type": "交通设施服务;停车场;公共停车场",
+          "location": [
+            39.90959060700004,
+            116.41088510700001
+          ],
+          "address": "王府井大街301号(王府井地铁站E1口旁)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:32:46.594367"
+      },
+      {
+        "poi": {
+          "id": "19",
+          "name": "东方广场W3座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90965078600004,
+            116.41233635700007
+          ],
+          "address": "东长安街1号西区3号楼(王府井地铁站A东北口旁)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:32:56.173422"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "东方广场W1座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.909092000000044,
+            116.41313400000001
+          ],
+          "address": "东长安街1号西区1号楼(王府井地铁站B1东北口步行110米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:33:02.620952"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "北京东方广场",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.909489000000065,
+            116.41452800000002
+          ],
+          "address": "东长安街1号(东单地铁站E西北口步行240米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:33:09.431532"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "天安门东地铁站B东北口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            39.90845953500008,
+            116.40240138400009
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:33:22.942576"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "东方捷路地下停车场",
+          "type": "交通设施服务;停车场;公共停车场",
+          "location": [
+            39.90907167900008,
+            116.40320401800011
+          ],
+          "address": "南池子大街菖蒲河公园(天安门东地铁站B东北口步行260米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:33:30.394277"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "天安门东(地铁站)",
+          "type": "交通设施服务;地铁站;地铁站",
+          "location": [
+            39.908479562000025,
+            116.40105895600004
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:33:37.687701"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "天安门东地铁站D西南口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            39.90723208900005,
+            116.40103181200004
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:33:44.412139"
+      },
+      {
+        "poi": {
+          "id": "17",
+          "name": "正义路3号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90376120500008,
+            116.40739646000009
+          ],
+          "address": "正义路与东交民巷交叉口北约140米",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:35:12.240355"
+      },
+      {
+        "poi": {
+          "id": "16",
+          "name": "四季回头特色菜馆",
+          "type": "餐饮服务;中餐厅;中餐厅",
+          "location": [
+            39.904328433000046,
+            116.40752500000008
+          ],
+          "address": "西四西五条路之间爱民街门市454",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:35:19.036039"
+      },
+      {
+        "poi": {
+          "id": "15",
+          "name": "北京东交民巷饭店写字楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90313513000007,
+            116.40809412500005
+          ],
+          "address": "东交民巷丙23号",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:35:25.719156"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "隆和居",
+          "type": "餐饮服务;中餐厅;中餐厅",
+          "location": [
+            39.903160951000075,
+            116.40601931300012
+          ],
+          "address": "东华门街道正义路8号(原市政府斜对面)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:35:33.712950"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "正义路10号院",
+          "type": "商务住宅;住宅区;住宅区",
+          "location": [
+            39.90257634000005,
+            116.4060098000001
+          ],
+          "address": "正义路与东交民巷交叉口北80米",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:35:43.579690"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "正义路社区服务站",
+          "type": "商务住宅;住宅区;社区中心|生活服务;生活服务场所;生活服务场所",
+          "location": [
+            39.90201115700006,
+            116.40607625900009
+          ],
+          "address": "东交民巷32号",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:35:50.913368"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "前门东大街23号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90141217000007,
+            116.40167232100009
+          ],
+          "address": "前门东大街23号(前门地铁站E2北口步行250米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:35:59.011056"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "前门(公交站)",
+          "type": "交通设施服务;公交车站;公交车站相关",
+          "location": [
+            39.89897088300006,
+            116.40162254300003
+          ],
+          "address": "120路;137路;141路;141路区间;22路;2路;332路;48路;599路;59路;5路;5路加车德胜门区间;622路;66路;67路;82路;8路;93路;前门故宫环线观光巴士;前门有轨电车;前门王府井观光专线;北京夜景观光北线;夜18路;夜2",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:36:06.002391"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "天安门东地铁站D西南口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            39.90723208900005,
+            116.40103181200004
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:36:18.816209"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "天安门东(地铁站)",
+          "type": "交通设施服务;地铁站;地铁站",
+          "location": [
+            39.908479562000025,
+            116.40105895600004
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:36:25.584109"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "天安门东地铁站B东北口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            39.90845953500008,
+            116.40240138400009
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:36:33.255085"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "东方捷路地下停车场",
+          "type": "交通设施服务;停车场;公共停车场",
+          "location": [
+            39.90907167900008,
+            116.40320401800011
+          ],
+          "address": "南池子大街菖蒲河公园(天安门东地铁站B东北口步行260米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:36:40.986793"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "霞公府",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            39.90964891100003,
+            116.40813283000011
+          ],
+          "address": "东长安街(王府井地铁站F1东口步行430米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:36:49.035794"
+      },
+      {
+        "poi": {
+          "id": "20",
+          "name": "王府井喜悦购物中心地下停车场",
+          "type": "交通设施服务;停车场;公共停车场",
+          "location": [
+            39.90959060700004,
+            116.41088510700001
+          ],
+          "address": "王府井大街301号(王府井地铁站E1口旁)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:36:59.956152"
+      },
+      {
+        "poi": {
+          "id": "19",
+          "name": "东方广场W3座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90965078600004,
+            116.41233635700007
+          ],
+          "address": "东长安街1号西区3号楼(王府井地铁站A东北口旁)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:37:06.904191"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "东方广场W1座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.909092000000044,
+            116.41313400000001
+          ],
+          "address": "东长安街1号西区1号楼(王府井地铁站B1东北口步行110米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:37:10.629021"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "北京东方广场",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.909489000000065,
+            116.41452800000002
+          ],
+          "address": "东长安街1号(东单地铁站E西北口步行240米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:37:20.205943"
+      },
+      {
+        "poi": {
+          "id": "18",
+          "name": "长安大厦(东长安街)",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90723864300003,
+            116.40890471400007
+          ],
+          "address": "东华门街道东长安街10号",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:37:28.530962"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "正义路1号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90618000000006,
+            116.40760000000012
+          ],
+          "address": "正义路与东长安街交叉口东南200米",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:37:36.748731"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "宝鼎中心",
+          "type": "商务住宅;楼宇;商住两用楼宇",
+          "location": [
+            39.89959012500003,
+            116.41310850900004
+          ],
+          "address": "东打磨厂街7号(崇文门地铁站D西南口步行480米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:37:48.529480"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "新怡家园",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            39.89829283300003,
+            116.41446191800003
+          ],
+          "address": "东打磨厂街36号(崇文门地铁站H西南口步行250米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:37:51.558163"
+      },
+      {
+        "poi": {
+          "id": "17",
+          "name": "正义路3号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90376120500008,
+            116.40739646000009
+          ],
+          "address": "正义路与东交民巷交叉口北约140米",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:40:22.388229"
+      },
+      {
+        "poi": {
+          "id": "16",
+          "name": "四季回头特色菜馆",
+          "type": "餐饮服务;中餐厅;中餐厅",
+          "location": [
+            39.904328433000046,
+            116.40752500000008
+          ],
+          "address": "西四西五条路之间爱民街门市454",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:40:32.076438"
+      },
+      {
+        "poi": {
+          "id": "15",
+          "name": "北京东交民巷饭店写字楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90313513000007,
+            116.40809412500005
+          ],
+          "address": "东交民巷丙23号",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:40:42.359282"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "隆和居",
+          "type": "餐饮服务;中餐厅;中餐厅",
+          "location": [
+            39.903160951000075,
+            116.40601931300012
+          ],
+          "address": "东华门街道正义路8号(原市政府斜对面)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:40:53.129792"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "正义路10号院",
+          "type": "商务住宅;住宅区;住宅区",
+          "location": [
+            39.90257634000005,
+            116.4060098000001
+          ],
+          "address": "正义路与东交民巷交叉口北80米",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:41:02.255410"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "正义路社区服务站",
+          "type": "商务住宅;住宅区;社区中心|生活服务;生活服务场所;生活服务场所",
+          "location": [
+            39.90201115700006,
+            116.40607625900009
+          ],
+          "address": "东交民巷32号",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:41:12.510318"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "前门东大街23号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90141217000007,
+            116.40167232100009
+          ],
+          "address": "前门东大街23号(前门地铁站E2北口步行250米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:41:23.779093"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "前门(公交站)",
+          "type": "交通设施服务;公交车站;公交车站相关",
+          "location": [
+            39.89897088300006,
+            116.40162254300003
+          ],
+          "address": "120路;137路;141路;141路区间;22路;2路;332路;48路;599路;59路;5路;5路加车德胜门区间;622路;66路;67路;82路;8路;93路;前门故宫环线观光巴士;前门有轨电车;前门王府井观光专线;北京夜景观光北线;夜18路;夜2",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:41:36.586970"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "宝鼎中心",
+          "type": "商务住宅;楼宇;商住两用楼宇",
+          "location": [
+            39.89959012500003,
+            116.41310850900004
+          ],
+          "address": "东打磨厂街7号(崇文门地铁站D西南口步行480米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:41:46.529429"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "新怡家园",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            39.89829283300003,
+            116.41446191800003
+          ],
+          "address": "东打磨厂街36号(崇文门地铁站H西南口步行250米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:41:55.912105"
+      },
+      {
+        "poi": {
+          "id": "18",
+          "name": "长安大厦(东长安街)",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90723864300003,
+            116.40890471400007
+          ],
+          "address": "东华门街道东长安街10号",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:42:07.160607"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "正义路1号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90618000000006,
+            116.40760000000012
+          ],
+          "address": "正义路与东长安街交叉口东南200米",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:42:17.235168"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "霞公府",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            39.90964891100003,
+            116.40813283000011
+          ],
+          "address": "东长安街(王府井地铁站F1东口步行430米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:42:26.395756"
+      },
+      {
+        "poi": {
+          "id": "20",
+          "name": "王府井喜悦购物中心地下停车场",
+          "type": "交通设施服务;停车场;公共停车场",
+          "location": [
+            39.90959060700004,
+            116.41088510700001
+          ],
+          "address": "王府井大街301号(王府井地铁站E1口旁)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:42:36.883315"
+      },
+      {
+        "poi": {
+          "id": "19",
+          "name": "东方广场W3座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90965078600004,
+            116.41233635700007
+          ],
+          "address": "东长安街1号西区3号楼(王府井地铁站A东北口旁)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:42:52.399242"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "东方广场W1座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.909092000000044,
+            116.41313400000001
+          ],
+          "address": "东长安街1号西区1号楼(王府井地铁站B1东北口步行110米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:43:00.276363"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "北京东方广场",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.909489000000065,
+            116.41452800000002
+          ],
+          "address": "东长安街1号(东单地铁站E西北口步行240米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:43:09.072262"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "东方捷路地下停车场",
+          "type": "交通设施服务;停车场;公共停车场",
+          "location": [
+            39.90907167900008,
+            116.40320401800011
+          ],
+          "address": "南池子大街菖蒲河公园(天安门东地铁站B东北口步行260米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:43:19.517807"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "天安门东地铁站B东北口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            39.90845953500008,
+            116.40240138400009
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:43:27.207155"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "天安门东(地铁站)",
+          "type": "交通设施服务;地铁站;地铁站",
+          "location": [
+            39.908479562000025,
+            116.40105895600004
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:43:34.338860"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "天安门东地铁站D西南口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            39.90723208900005,
+            116.40103181200004
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:43:41.073645"
+      },
+      {
+        "poi": {
+          "id": "17",
+          "name": "正义路3号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90376120500008,
+            116.40739646000009
+          ],
+          "address": "正义路与东交民巷交叉口北约140米",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:47:29.107874"
+      },
+      {
+        "poi": {
+          "id": "16",
+          "name": "四季回头特色菜馆",
+          "type": "餐饮服务;中餐厅;中餐厅",
+          "location": [
+            39.904328433000046,
+            116.40752500000008
+          ],
+          "address": "西四西五条路之间爱民街门市454",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:47:36.001662"
+      },
+      {
+        "poi": {
+          "id": "15",
+          "name": "北京东交民巷饭店写字楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90313513000007,
+            116.40809412500005
+          ],
+          "address": "东交民巷丙23号",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:47:42.899060"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "隆和居",
+          "type": "餐饮服务;中餐厅;中餐厅",
+          "location": [
+            39.903160951000075,
+            116.40601931300012
+          ],
+          "address": "东华门街道正义路8号(原市政府斜对面)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:47:51.019162"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "正义路10号院",
+          "type": "商务住宅;住宅区;住宅区",
+          "location": [
+            39.90257634000005,
+            116.4060098000001
+          ],
+          "address": "正义路与东交民巷交叉口北80米",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:47:58.432985"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "正义路社区服务站",
+          "type": "商务住宅;住宅区;社区中心|生活服务;生活服务场所;生活服务场所",
+          "location": [
+            39.90201115700006,
+            116.40607625900009
+          ],
+          "address": "东交民巷32号",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:48:05.942782"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "前门东大街23号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90141217000007,
+            116.40167232100009
+          ],
+          "address": "前门东大街23号(前门地铁站E2北口步行250米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:48:13.617263"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "前门(公交站)",
+          "type": "交通设施服务;公交车站;公交车站相关",
+          "location": [
+            39.89897088300006,
+            116.40162254300003
+          ],
+          "address": "120路;137路;141路;141路区间;22路;2路;332路;48路;599路;59路;5路;5路加车德胜门区间;622路;66路;67路;82路;8路;93路;前门故宫环线观光巴士;前门有轨电车;前门王府井观光专线;北京夜景观光北线;夜18路;夜2",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:48:25.259790"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "天安门东地铁站D西南口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            39.90723208900005,
+            116.40103181200004
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:48:48.380402"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "天安门东(地铁站)",
+          "type": "交通设施服务;地铁站;地铁站",
+          "location": [
+            39.908479562000025,
+            116.40105895600004
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:49:00.354859"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "天安门东地铁站B东北口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            39.90845953500008,
+            116.40240138400009
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:49:13.518870"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "东方捷路地下停车场",
+          "type": "交通设施服务;停车场;公共停车场",
+          "location": [
+            39.90907167900008,
+            116.40320401800011
+          ],
+          "address": "南池子大街菖蒲河公园(天安门东地铁站B东北口步行260米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:49:27.514693"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "霞公府",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            39.90964891100003,
+            116.40813283000011
+          ],
+          "address": "东长安街(王府井地铁站F1东口步行430米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:49:40.660238"
+      },
+      {
+        "poi": {
+          "id": "20",
+          "name": "王府井喜悦购物中心地下停车场",
+          "type": "交通设施服务;停车场;公共停车场",
+          "location": [
+            39.90959060700004,
+            116.41088510700001
+          ],
+          "address": "王府井大街301号(王府井地铁站E1口旁)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:49:53.207183"
+      },
+      {
+        "poi": {
+          "id": "19",
+          "name": "东方广场W3座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90965078600004,
+            116.41233635700007
+          ],
+          "address": "东长安街1号西区3号楼(王府井地铁站A东北口旁)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:50:06.912011"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "东方广场W1座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.909092000000044,
+            116.41313400000001
+          ],
+          "address": "东长安街1号西区1号楼(王府井地铁站B1东北口步行110米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:50:21.040339"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "北京东方广场",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.909489000000065,
+            116.41452800000002
+          ],
+          "address": "东长安街1号(东单地铁站E西北口步行240米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:50:34.374375"
+      },
+      {
+        "poi": {
+          "id": "18",
+          "name": "长安大厦(东长安街)",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90723864300003,
+            116.40890471400007
+          ],
+          "address": "东华门街道东长安街10号",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:50:48.153093"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "正义路1号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90618000000006,
+            116.40760000000012
+          ],
+          "address": "正义路与东长安街交叉口东南200米",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:51:00.181766"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "宝鼎中心",
+          "type": "商务住宅;楼宇;商住两用楼宇",
+          "location": [
+            39.89959012500003,
+            116.41310850900004
+          ],
+          "address": "东打磨厂街7号(崇文门地铁站D西南口步行480米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:51:10.435637"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "新怡家园",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            39.89829283300003,
+            116.41446191800003
+          ],
+          "address": "东打磨厂街36号(崇文门地铁站H西南口步行250米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:51:20.878825"
+      },
+      {
+        "poi": {
+          "id": "17",
+          "name": "正义路3号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90376120500008,
+            116.40739646000009
+          ],
+          "address": "正义路与东交民巷交叉口北约140米",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:53:43.923949"
+      },
+      {
+        "poi": {
+          "id": "16",
+          "name": "四季回头特色菜馆",
+          "type": "餐饮服务;中餐厅;中餐厅",
+          "location": [
+            39.904328433000046,
+            116.40752500000008
+          ],
+          "address": "西四西五条路之间爱民街门市454",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:54:07.066927"
+      },
+      {
+        "poi": {
+          "id": "15",
+          "name": "北京东交民巷饭店写字楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90313513000007,
+            116.40809412500005
+          ],
+          "address": "东交民巷丙23号",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:54:17.660667"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "隆和居",
+          "type": "餐饮服务;中餐厅;中餐厅",
+          "location": [
+            39.903160951000075,
+            116.40601931300012
+          ],
+          "address": "东华门街道正义路8号(原市政府斜对面)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:54:29.190998"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "正义路10号院",
+          "type": "商务住宅;住宅区;住宅区",
+          "location": [
+            39.90257634000005,
+            116.4060098000001
+          ],
+          "address": "正义路与东交民巷交叉口北80米",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:54:39.391646"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "正义路社区服务站",
+          "type": "商务住宅;住宅区;社区中心|生活服务;生活服务场所;生活服务场所",
+          "location": [
+            39.90201115700006,
+            116.40607625900009
+          ],
+          "address": "东交民巷32号",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:54:51.645493"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "前门东大街23号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90141217000007,
+            116.40167232100009
+          ],
+          "address": "前门东大街23号(前门地铁站E2北口步行250米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:55:02.527674"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "前门(公交站)",
+          "type": "交通设施服务;公交车站;公交车站相关",
+          "location": [
+            39.89897088300006,
+            116.40162254300003
+          ],
+          "address": "120路;137路;141路;141路区间;22路;2路;332路;48路;599路;59路;5路;5路加车德胜门区间;622路;66路;67路;82路;8路;93路;前门故宫环线观光巴士;前门有轨电车;前门王府井观光专线;北京夜景观光北线;夜18路;夜2",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:55:11.672895"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "天安门东地铁站D西南口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            39.90723208900005,
+            116.40103181200004
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:55:32.250758"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "天安门东(地铁站)",
+          "type": "交通设施服务;地铁站;地铁站",
+          "location": [
+            39.908479562000025,
+            116.40105895600004
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:55:59.319821"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "天安门东地铁站B东北口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            39.90845953500008,
+            116.40240138400009
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:56:05.770248"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "东方捷路地下停车场",
+          "type": "交通设施服务;停车场;公共停车场",
+          "location": [
+            39.90907167900008,
+            116.40320401800011
+          ],
+          "address": "南池子大街菖蒲河公园(天安门东地铁站B东北口步行260米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:56:14.394573"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "霞公府",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            39.90964891100003,
+            116.40813283000011
+          ],
+          "address": "东长安街(王府井地铁站F1东口步行430米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:56:22.858499"
+      },
+      {
+        "poi": {
+          "id": "20",
+          "name": "王府井喜悦购物中心地下停车场",
+          "type": "交通设施服务;停车场;公共停车场",
+          "location": [
+            39.90959060700004,
+            116.41088510700001
+          ],
+          "address": "王府井大街301号(王府井地铁站E1口旁)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:56:36.289629"
+      },
+      {
+        "poi": {
+          "id": "19",
+          "name": "东方广场W3座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90965078600004,
+            116.41233635700007
+          ],
+          "address": "东长安街1号西区3号楼(王府井地铁站A东北口旁)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:56:48.877779"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "东方广场W1座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.909092000000044,
+            116.41313400000001
+          ],
+          "address": "东长安街1号西区1号楼(王府井地铁站B1东北口步行110米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:57:01.456044"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "北京东方广场",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.909489000000065,
+            116.41452800000002
+          ],
+          "address": "东长安街1号(东单地铁站E西北口步行240米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:57:21.516658"
+      },
+      {
+        "poi": {
+          "id": "18",
+          "name": "长安大厦(东长安街)",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90723864300003,
+            116.40890471400007
+          ],
+          "address": "东华门街道东长安街10号",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:57:40.147339"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "正义路1号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90618000000006,
+            116.40760000000012
+          ],
+          "address": "正义路与东长安街交叉口东南200米",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:57:49.357648"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "宝鼎中心",
+          "type": "商务住宅;楼宇;商住两用楼宇",
+          "location": [
+            39.89959012500003,
+            116.41310850900004
+          ],
+          "address": "东打磨厂街7号(崇文门地铁站D西南口步行480米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:58:01.129996"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "新怡家园",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            39.89829283300003,
+            116.41446191800003
+          ],
+          "address": "东打磨厂街36号(崇文门地铁站H西南口步行250米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T18:58:07.905116"
+      },
+      {
+        "poi": {
+          "id": "17",
+          "name": "正义路3号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90376120500008,
+            116.40739646000009
+          ],
+          "address": "正义路与东交民巷交叉口北约140米",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:00:18.392769"
+      },
+      {
+        "poi": {
+          "id": "16",
+          "name": "四季回头特色菜馆",
+          "type": "餐饮服务;中餐厅;中餐厅",
+          "location": [
+            39.904328433000046,
+            116.40752500000008
+          ],
+          "address": "西四西五条路之间爱民街门市454",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:00:24.072509"
+      },
+      {
+        "poi": {
+          "id": "15",
+          "name": "北京东交民巷饭店写字楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90313513000007,
+            116.40809412500005
+          ],
+          "address": "东交民巷丙23号",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:00:26.536525"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "隆和居",
+          "type": "餐饮服务;中餐厅;中餐厅",
+          "location": [
+            39.903160951000075,
+            116.40601931300012
+          ],
+          "address": "东华门街道正义路8号(原市政府斜对面)",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:00:38.656120"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "正义路10号院",
+          "type": "商务住宅;住宅区;住宅区",
+          "location": [
+            39.90257634000005,
+            116.4060098000001
+          ],
+          "address": "正义路与东交民巷交叉口北80米",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:00:41.792033"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "正义路社区服务站",
+          "type": "商务住宅;住宅区;社区中心|生活服务;生活服务场所;生活服务场所",
+          "location": [
+            39.90201115700006,
+            116.40607625900009
+          ],
+          "address": "东交民巷32号",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:00:45.406384"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "前门东大街23号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90141217000007,
+            116.40167232100009
+          ],
+          "address": "前门东大街23号(前门地铁站E2北口步行250米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:00:49.639260"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "前门(公交站)",
+          "type": "交通设施服务;公交车站;公交车站相关",
+          "location": [
+            39.89897088300006,
+            116.40162254300003
+          ],
+          "address": "120路;137路;141路;141路区间;22路;2路;332路;48路;599路;59路;5路;5路加车德胜门区间;622路;66路;67路;82路;8路;93路;前门故宫环线观光巴士;前门有轨电车;前门王府井观光专线;北京夜景观光北线;夜18路;夜2",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:01:11.339983"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "天安门东地铁站D西南口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            39.90723208900005,
+            116.40103181200004
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:01:22.475160"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "天安门东(地铁站)",
+          "type": "交通设施服务;地铁站;地铁站",
+          "location": [
+            39.908479562000025,
+            116.40105895600004
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:01:26.880595"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "天安门东地铁站B东北口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            39.90845953500008,
+            116.40240138400009
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:01:34.002205"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "东方捷路地下停车场",
+          "type": "交通设施服务;停车场;公共停车场",
+          "location": [
+            39.90907167900008,
+            116.40320401800011
+          ],
+          "address": "南池子大街菖蒲河公园(天安门东地铁站B东北口步行260米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:01:41.572994"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "霞公府",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            39.90964891100003,
+            116.40813283000011
+          ],
+          "address": "东长安街(王府井地铁站F1东口步行430米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:01:45.914540"
+      },
+      {
+        "poi": {
+          "id": "20",
+          "name": "王府井喜悦购物中心地下停车场",
+          "type": "交通设施服务;停车场;公共停车场",
+          "location": [
+            39.90959060700004,
+            116.41088510700001
+          ],
+          "address": "王府井大街301号(王府井地铁站E1口旁)",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:01:55.224063"
+      },
+      {
+        "poi": {
+          "id": "19",
+          "name": "东方广场W3座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90965078600004,
+            116.41233635700007
+          ],
+          "address": "东长安街1号西区3号楼(王府井地铁站A东北口旁)",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:02:04.618737"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "东方广场W1座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.909092000000044,
+            116.41313400000001
+          ],
+          "address": "东长安街1号西区1号楼(王府井地铁站B1东北口步行110米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:02:09.477668"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "北京东方广场",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.909489000000065,
+            116.41452800000002
+          ],
+          "address": "东长安街1号(东单地铁站E西北口步行240米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:02:14.393793"
+      },
+      {
+        "poi": {
+          "id": "18",
+          "name": "长安大厦(东长安街)",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90723864300003,
+            116.40890471400007
+          ],
+          "address": "东华门街道东长安街10号",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:02:20.161848"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "正义路1号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90618000000006,
+            116.40760000000012
+          ],
+          "address": "正义路与东长安街交叉口东南200米",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:02:25.659267"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "宝鼎中心",
+          "type": "商务住宅;楼宇;商住两用楼宇",
+          "location": [
+            39.89959012500003,
+            116.41310850900004
+          ],
+          "address": "东打磨厂街7号(崇文门地铁站D西南口步行480米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:02:34.454529"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "新怡家园",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            39.89829283300003,
+            116.41446191800003
+          ],
+          "address": "东打磨厂街36号(崇文门地铁站H西南口步行250米)",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:02:39.335237"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "Boston Pizza",
+          "type": "餐厅",
+          "location": [
+            43.64445342800008,
+            -79.38843089299996
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T19:04:10.080364"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "Second Cup",
+          "type": "咖啡厅",
+          "location": [
+            43.64501314900008,
+            -79.38786339999996
+          ],
+          "address": "287, King Street West, Toronto",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:04:16.765582"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "Starbucks",
+          "type": "咖啡厅",
+          "location": [
+            43.645659471000045,
+            -79.38934188599995
+          ],
+          "address": "224, Wellington Street West",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:04:22.654686"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "259 host ...a fine indian restaurant",
+          "type": "餐厅",
+          "location": [
+            43.64497690700006,
+            -79.39075836499995
+          ],
+          "address": "259, Wellington Street West, Toronto",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:04:29.889508"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "Tim Hortons",
+          "type": "咖啡厅",
+          "location": [
+            43.64371996400007,
+            -79.39211472099998
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T19:04:37.580916"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "St. Louis Bar & Grill",
+          "type": "餐厅",
+          "location": [
+            43.640580757000066,
+            -79.39061724299995
+          ],
+          "address": "313, Bremner Boulevard, Toronto",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:04:46.778969"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "The Rec Room",
+          "type": "餐厅",
+          "location": [
+            43.64058250800008,
+            -79.38631926499994
+          ],
+          "address": "255, Bremner Boulevard, Toronto",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:04:55.338780"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "Swiss Chalet",
+          "type": "餐厅",
+          "location": [
+            43.639422671000034,
+            -79.38626718599994
+          ],
+          "address": "266, Queens Quay West, Toronto",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:05:11.124531"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "Wild Wing",
+          "type": "餐厅",
+          "location": [
+            43.64001383500005,
+            -79.38478054299998
+          ],
+          "address": "246, Queens Quay West, Toronto",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:05:16.566907"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "Aroma Espresso Bar",
+          "type": "咖啡厅",
+          "location": [
+            43.642417228000056,
+            -79.38333236499994
+          ],
+          "address": "137, Bremner Boulevard",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:05:28.035659"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "Scaddabush",
+          "type": "餐厅",
+          "location": [
+            43.64500258600003,
+            -79.38564522799999
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T19:05:35.695960"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "Starbucks",
+          "type": "咖啡厅",
+          "location": [
+            43.64626871300004,
+            -79.38684204899994
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T19:05:42.749506"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "Jack Astor's",
+          "type": "餐厅",
+          "location": [
+            43.645598849000066,
+            -79.38338185799995
+          ],
+          "address": "144, Front Street West, Toronto",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:05:49.150300"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "Starbucks",
+          "type": "咖啡厅",
+          "location": [
+            43.640011300000026,
+            -79.38097629999999
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T19:06:02.259587"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "RBC Royal Bank",
+          "type": "银行",
+          "location": [
+            43.63999978000004,
+            -79.39440730599995
+          ],
+          "address": "6, Fort York Boulevard, Toronto",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:06:18.280687"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "Boston Pizza",
+          "type": "餐厅",
+          "location": [
+            43.64445342800008,
+            -79.38843089299996
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T19:08:14.111619"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "Second Cup",
+          "type": "咖啡厅",
+          "location": [
+            43.64501314900008,
+            -79.38786339999996
+          ],
+          "address": "287, King Street West, Toronto",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:08:20.420689"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "Starbucks",
+          "type": "咖啡厅",
+          "location": [
+            43.645659471000045,
+            -79.38934188599995
+          ],
+          "address": "224, Wellington Street West",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:08:26.998861"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "259 host ...a fine indian restaurant",
+          "type": "餐厅",
+          "location": [
+            43.64497690700006,
+            -79.39075836499995
+          ],
+          "address": "259, Wellington Street West, Toronto",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:08:33.227320"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "Tim Hortons",
+          "type": "咖啡厅",
+          "location": [
+            43.64371996400007,
+            -79.39211472099998
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T19:08:40.288625"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "St. Louis Bar & Grill",
+          "type": "餐厅",
+          "location": [
+            43.640580757000066,
+            -79.39061724299995
+          ],
+          "address": "313, Bremner Boulevard, Toronto",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:08:49.029596"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "RBC Royal Bank",
+          "type": "银行",
+          "location": [
+            43.63999978000004,
+            -79.39440730599995
+          ],
+          "address": "6, Fort York Boulevard, Toronto",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:08:55.763161"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "The Rec Room",
+          "type": "餐厅",
+          "location": [
+            43.64058250800008,
+            -79.38631926499994
+          ],
+          "address": "255, Bremner Boulevard, Toronto",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:09:05.036060"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "Swiss Chalet",
+          "type": "餐厅",
+          "location": [
+            43.639422671000034,
+            -79.38626718599994
+          ],
+          "address": "266, Queens Quay West, Toronto",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:09:15.774837"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "Wild Wing",
+          "type": "餐厅",
+          "location": [
+            43.64001383500005,
+            -79.38478054299998
+          ],
+          "address": "246, Queens Quay West, Toronto",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:09:18.911271"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "Aroma Espresso Bar",
+          "type": "咖啡厅",
+          "location": [
+            43.642417228000056,
+            -79.38333236499994
+          ],
+          "address": "137, Bremner Boulevard",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:09:30.677760"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "Starbucks",
+          "type": "咖啡厅",
+          "location": [
+            43.640011300000026,
+            -79.38097629999999
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T19:09:43.020311"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "Jack Astor's",
+          "type": "餐厅",
+          "location": [
+            43.645598849000066,
+            -79.38338185799995
+          ],
+          "address": "144, Front Street West, Toronto",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:09:57.904541"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "Scaddabush",
+          "type": "餐厅",
+          "location": [
+            43.64500258600003,
+            -79.38564522799999
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T19:10:07.887859"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "Starbucks",
+          "type": "咖啡厅",
+          "location": [
+            43.64626871300004,
+            -79.38684204899994
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T19:10:15.911397"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "Boston Pizza",
+          "type": "餐厅",
+          "location": [
+            43.64445342800008,
+            -79.38843089299996
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T19:13:23.170490"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "Second Cup",
+          "type": "咖啡厅",
+          "location": [
+            43.64501314900008,
+            -79.38786339999996
+          ],
+          "address": "287, King Street West, Toronto",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:13:37.159420"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "Starbucks",
+          "type": "咖啡厅",
+          "location": [
+            43.645659471000045,
+            -79.38934188599995
+          ],
+          "address": "224, Wellington Street West",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:13:51.600203"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "259 host ...a fine indian restaurant",
+          "type": "餐厅",
+          "location": [
+            43.64497690700006,
+            -79.39075836499995
+          ],
+          "address": "259, Wellington Street West, Toronto",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:14:05.303326"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "Tim Hortons",
+          "type": "咖啡厅",
+          "location": [
+            43.64371996400007,
+            -79.39211472099998
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T19:14:18.994588"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "St. Louis Bar & Grill",
+          "type": "餐厅",
+          "location": [
+            43.640580757000066,
+            -79.39061724299995
+          ],
+          "address": "313, Bremner Boulevard, Toronto",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:14:35.218917"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "RBC Royal Bank",
+          "type": "银行",
+          "location": [
+            43.63999978000004,
+            -79.39440730599995
+          ],
+          "address": "6, Fort York Boulevard, Toronto",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:14:49.513218"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "The Rec Room",
+          "type": "餐厅",
+          "location": [
+            43.64058250800008,
+            -79.38631926499994
+          ],
+          "address": "255, Bremner Boulevard, Toronto",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:15:09.586484"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "Swiss Chalet",
+          "type": "餐厅",
+          "location": [
+            43.639422671000034,
+            -79.38626718599994
+          ],
+          "address": "266, Queens Quay West, Toronto",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:15:22.406698"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "Wild Wing",
+          "type": "餐厅",
+          "location": [
+            43.64001383500005,
+            -79.38478054299998
+          ],
+          "address": "246, Queens Quay West, Toronto",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:15:30.714426"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "Aroma Espresso Bar",
+          "type": "咖啡厅",
+          "location": [
+            43.642417228000056,
+            -79.38333236499994
+          ],
+          "address": "137, Bremner Boulevard",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:15:42.302129"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "Starbucks",
+          "type": "咖啡厅",
+          "location": [
+            43.640011300000026,
+            -79.38097629999999
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T19:15:56.111431"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "Scaddabush",
+          "type": "餐厅",
+          "location": [
+            43.64500258600003,
+            -79.38564522799999
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T19:16:10.083048"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "Starbucks",
+          "type": "咖啡厅",
+          "location": [
+            43.64626871300004,
+            -79.38684204899994
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-18T19:16:18.330688"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "Jack Astor's",
+          "type": "餐厅",
+          "location": [
+            43.645598849000066,
+            -79.38338185799995
+          ],
+          "address": "144, Front Street West, Toronto",
+          "distance": 0
+        },
+        "time": "2025-12-18T19:16:30.229115"
+      }
+    ],
+    "total_distance": 1860,
+    "exploration_time": 0,
+    "poi_count": 315
+  },
+  "evaluation_result": {
+    "total_score": 15,
+    "total_questions": 24,
+    "accuracy": 62.5,
+    "type_scores": {
+      "定位与定向": {
+        "correct": 6,
+        "total": 8,
+        "percentage": 75.0
+      },
+      "空间距离估算": {
+        "correct": 2,
+        "total": 4,
+        "percentage": 50.0
+      },
+      "邻近关系判断": {
+        "correct": 4,
+        "total": 4,
+        "percentage": 100.0
+      },
+      "POI密度识别": {
+        "correct": 1,
+        "total": 4,
+        "percentage": 25.0
+      },
+      "路径规划": {
+        "correct": 2,
+        "total": 4,
+        "percentage": 50.0
+      }
+    },
+    "answers": [
+      {
+        "question": "Boston Pizza相对于The Rec Room在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "C",
+        "ai_explanation": "根据上下文，在Step 1中，从初始位置扫描时可见“The Rec Room (餐厅), Dist: 392m, Dir: 161.00484277557962”，即The Rec Room位于初始位置的方位角约161°（南偏东方向）。同时，“Boston Pizza (餐厅), Dist: 73m, Dir: 324.70598697237114”，即Boston Pizza位于初始位置的方位角约324.7°（西北方向）。由于两者均从同一初始位置观测，且Boston Pizza的方向（324.7°）相对于The Rec Room的方向（161°）更偏西北，因此Boston Pizza相对于The Rec Room位于西北方向。",
+        "correct_answer": "C",
+        "is_correct": true,
+        "explanation": "Boston Pizza位于The Rec Room的西北面。"
+      },
+      {
+        "question": "Second Cup相对于Boston Pizza在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "A",
+        "ai_explanation": "根据探索上下文，在Step 1中，从初始位置扫描环境后，AI的思考过程列出了可见POI及其方向和距离，其中“Second Cup (咖啡厅), Dist: 122m, Dir: 1.5573834140318468”。随后AI移动到Boston Pizza。在Step 1的第二次扫描（从Boston Pizza位置）中，可见POI列表显示“Second Cup (咖啡厅), Dist: 77m, Dir: 36.26660183710351”。方向36.27°（以正北为0°顺时针递增）对应于东北方向（0°-90°之间为东北象限）。因此，Second Cup相对于Boston Pizza位于东北方向。",
+        "correct_answer": "A",
+        "is_correct": true,
+        "explanation": "Second Cup位于Boston Pizza的东北面。"
+      },
+      {
+        "question": "Aroma Espresso Bar相对于Second Cup在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "B",
+        "ai_explanation": "根据探索上下文，在Step 1中AI从Second Cup扫描环境时，可见POI包括“Aroma Espresso Bar (咖啡厅), Dist: 465m, Dir: 128.36758059072963”。方向128.37°（以正北为0°顺时针递增）对应东南方向（90°至180°之间为东南象限），因此Aroma Espresso Bar相对于Second Cup位于东南方向。",
+        "correct_answer": "B",
+        "is_correct": true,
+        "explanation": "Aroma Espresso Bar位于Second Cup的东南面。"
+      },
+      {
+        "question": "RBC Royal Bank相对于Aroma Espresso Bar在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "C",
+        "ai_explanation": "根据上下文，在Aroma Espresso Bar扫描环境时，可见POI列表中未包含RBC Royal Bank。在RBC Royal Bank扫描环境时，可见POI列表中包含Aroma Espresso Bar，但未提供其相对于RBC Royal Bank的方向度数。因此，无法从上下文中直接得知RBC Royal Bank相对于Aroma Espresso Bar的方向。然而，根据文本记忆规则第5条，若上下文未出现相关实体或数值，解释中需明确指出“依据不足”。由于上下文未提供两者之间的方向关系，无法判断具体方向。",
+        "correct_answer": "D",
+        "is_correct": false,
+        "explanation": "RBC Royal Bank位于Aroma Espresso Bar的西南面。"
+      },
+      {
+        "question": "The Rec Room相对于Boston Pizza在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "B",
+        "ai_explanation": "根据探索上下文，在Step 1中，从初始位置（即Boston Pizza附近）扫描环境时，可见POI列表显示“The Rec Room (餐厅), Dist: 392m, Dir: 161.00484277557962”。方向度数161°位于正南（180°）以东、正东（90°）以南，属于东南方向。因此，The Rec Room相对于Boston Pizza在东南方向。",
+        "correct_answer": "B",
+        "is_correct": true,
+        "explanation": "The Rec Room位于Boston Pizza的东南面。"
+      },
+      {
+        "question": "Boston Pizza相对于Second Cup在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "D",
+        "ai_explanation": "根据探索上下文，在Step 1中AI从初始位置扫描后，发现Boston Pizza距离73米、方向324.7°，Second Cup距离122米、方向1.56°。随后AI移动到Boston Pizza，在Step 2中从Boston Pizza位置扫描时，看到Second Cup距离77米、方向36.27°。由于方位角以正北为0°顺时针递增，方向36.27°表示Second Cup位于Boston Pizza的东北方向（因为36°在0°-90°之间，属于东北象限）。因此，Boston Pizza相对于Second Cup位于相反方向，即西南方向。",
+        "correct_answer": "D",
+        "is_correct": true,
+        "explanation": "Boston Pizza位于Second Cup的西南面。"
+      },
+      {
+        "question": "Second Cup相对于Aroma Espresso Bar在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "C",
+        "ai_explanation": "根据上下文，在Step 1的扫描结果中，Aroma Espresso Bar的方向为114.36°，距离404米；Second Cup的方向为1.56°，距离122米。以Aroma Espresso Bar为参考点，Second Cup位于其西北方向（因为Second Cup的方向接近正北，而Aroma Espresso Bar的方向为东偏南）。",
+        "correct_answer": "C",
+        "is_correct": true,
+        "explanation": "Second Cup位于Aroma Espresso Bar的西北面。"
+      },
+      {
+        "question": "Aroma Espresso Bar相对于RBC Royal Bank在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "B",
+        "ai_explanation": "根据探索上下文，在 Step 35 中，当 AI 位于 RBC Royal Bank 时扫描环境，可见 POI 包括 “Aroma Espresso Bar (咖啡厅), Dist: 931m, Dir: 73.21139374084589”。方向 73.21° 是以正北为 0° 顺时针递增，属于 0°–90° 范围，即东北象限。因此 Aroma Espresso Bar 相对于 RBC Royal Bank 位于东北方向。",
+        "correct_answer": "A",
+        "is_correct": false,
+        "explanation": "Aroma Espresso Bar位于RBC Royal Bank的东北面。"
+      },
+      {
+        "question": "The Rec Room到Second Cup的直线距离大约是多少？",
+        "type": "空间距离估算",
+        "ai_answer": "C",
+        "ai_explanation": "根据探索上下文，在Step 1中AI从初始位置扫描时，The Rec Room距离为392米，Second Cup距离为122米。两者均以同一位置为参考点，但未直接给出两者之间的直线距离。然而，在Step 35中，当AI位于The Rec Room时扫描环境，可见POI中已无Second Cup（因为Second Cup已在之前被访问），此时最近的POI是Swiss Chalet（129米）和Wild Wing（139米），而其他POI如Scaddabush为494米、Aroma Espresso Bar为315米等。结合Step 1中两者相对于同一原点的距离差（392米与122米相差约270米），以及后续步骤中The Rec Room与其他POI的距离多在数百米范围，可推断The Rec Room到Second Cup的直线距离应在400-800米区间。上下文未提供精确值，但依据可见POI的距离分布，选项C最符合。",
+        "correct_answer": "C",
+        "is_correct": true,
+        "explanation": "The Rec Room到Second Cup的直线距离约为508米。"
+      },
+      {
+        "question": "Boston Pizza到Aroma Espresso Bar的直线距离大约是多少？",
+        "type": "空间距离估算",
+        "ai_answer": "B",
+        "ai_explanation": "根据日志，在Step 1中AI从初始位置扫描环境时，Boston Pizza距离为73米，Aroma Espresso Bar距离为404米。由于两者均以同一位置（初始点）为参照，且方向不同（Boston Pizza方向324.7°，Aroma Espresso Bar方向114.4°），可通过两点与参照点的距离及方向差估算直线距离。两者距离差约为331米（404−73），且方向相差约150°，结合三角形边长关系，其直线距离应在200-400米范围内，故选择B。",
+        "correct_answer": "C",
+        "is_correct": false,
+        "explanation": "Boston Pizza到Aroma Espresso Bar的直线距离约为468米。"
+      },
+      {
+        "question": "Second Cup到RBC Royal Bank的直线距离大约是多少？",
+        "type": "空间距离估算",
+        "ai_answer": "C",
+        "ai_explanation": "根据探索上下文，在Step 1中AI从初始位置扫描时，Second Cup距离为122米，RBC Royal Bank距离为681米。虽然两者未直接给出直线距离，但AI在Step 35从RBC Royal Bank扫描时，可见POI中已无Second Cup（说明距离超出视野范围），而Step 1中Second Cup与RBC Royal Bank的距离差为681m - 122m = 559米，且Step 35中RBC Royal Bank附近最近POI（The Rec Room）距离为654米，可推断Second Cup到RBC Royal Bank的直线距离应在400-800米范围内。",
+        "correct_answer": "C",
+        "is_correct": true,
+        "explanation": "Second Cup到RBC Royal Bank的直线距离约为766米。"
+      },
+      {
+        "question": "Aroma Espresso Bar到Scaddabush的直线距离大约是多少？",
+        "type": "空间距离估算",
+        "ai_answer": "D",
+        "ai_explanation": "根据探索上下文，在Step 35中，当AI位于Aroma Espresso Bar时扫描环境，发现“Scaddabush (餐厅), Dist: 342m, Dir: 327.0828363687104”。这表明从Aroma Espresso Bar到Scaddabush的直线距离为342米。根据选项范围，342米属于200-400米（C选项）和400-800米（D选项）之间，但更接近C选项的上限。然而，在Step 69中，当AI从Aroma Espresso Bar移动到Scaddabush时，路径规划显示“Path planned via road network: 16 steps, approx 3042m”，这虽然是路径距离而非直线距离，但提示实际空间分布可能较远。不过，依据直线距离判断规则，应直接采用扫描结果中的342米，因此应选C。但需注意，在Step 1的初始扫描中，从起始位置到Scaddabush的距离为218米，而Aroma Espresso Bar为404米，两者直线距离估算可能超过400米。综合上下文，342米是唯一明确的直线距离数值，故正确答案为C。但选项C为200-400米，342米在此范围内，因此选C。然而，问题要求“直线距离大约是多少”，且上下文中有多个距离参考，但最直接的是342米，属于C选项。因此，答案应为C。但最终输出格式要求选择，且依据是342米，故选择C。",
+        "correct_answer": "C",
+        "is_correct": false,
+        "explanation": "Aroma Espresso Bar到Scaddabush的直线距离约为342米。"
+      },
+      {
+        "question": "在以下POI中，哪个距离The Rec Room最近？",
+        "type": "邻近关系判断",
+        "ai_answer": "C",
+        "ai_explanation": "根据上下文，在Step 35中AI从The Rec Room扫描环境后，可见POI包括“Aroma Espresso Bar (咖啡厅), Dist: 315m, Dir: 49.67425059769289”，而Boston Pizza和Second Cup在之前的步骤中已被访问且未出现在The Rec Room的视野列表中。因此，在给出的选项中，Aroma Espresso Bar是距离The Rec Room最近的POI，直线距离约为315米。",
+        "correct_answer": "C",
+        "is_correct": true,
+        "explanation": "Aroma Espresso Bar距离The Rec Room最近，约315米。"
+      },
+      {
+        "question": "在以下POI中，哪个距离Boston Pizza最近？",
+        "type": "邻近关系判断",
+        "ai_answer": "A",
+        "ai_explanation": "根据探索上下文，在Step 1的扫描结果中，Boston Pizza周围可见的POI包括：Second Cup距离122米、Aroma Espresso Bar距离404米、RBC Royal Bank距离681米。其中Second Cup的距离（122米）小于Aroma Espresso Bar（404米）和RBC Royal Bank（681米），因此Second Cup是距离Boston Pizza最近的POI。",
+        "correct_answer": "A",
+        "is_correct": true,
+        "explanation": "Second Cup距离Boston Pizza最近，约77米。"
+      },
+      {
+        "question": "在以下POI中，哪个距离Second Cup最远？",
+        "type": "邻近关系判断",
+        "ai_answer": "B",
+        "ai_explanation": "根据探索上下文，在Step 1中AI从初始位置扫描环境时，可见POI包括Second Cup（距离122m）以及选项中的三个POI：Aroma Espresso Bar（距离404m）、RBC Royal Bank（距离681m）、Scaddabush（距离218m）。其中RBC Royal Bank距离Second Cup 681米，是三个选项中距离最远的。",
+        "correct_answer": "B",
+        "is_correct": true,
+        "explanation": "RBC Royal Bank距离Second Cup最远，约766米。"
+      },
+      {
+        "question": "在以下POI中，哪个距离Aroma Espresso Bar最远？",
+        "type": "邻近关系判断",
+        "ai_answer": "A",
+        "ai_explanation": "根据上下文，在Aroma Espresso Bar扫描环境时，可见POI的距离如下：  \n- Scaddabush：342m  \n- Starbucks：328m  \n- Jack Astor's：354m  \n- Starbucks：328m（另一个）  \n而RBC Royal Bank在Aroma Espresso Bar的扫描结果中未出现，但在之前从其他位置（如St. Louis Bar & Grill）扫描时，RBC Royal Bank的距离为312m，但该距离并非相对于Aroma Espresso Bar。由于上下文中未提供RBC Royal Bank相对于Aroma Espresso Bar的直接距离，但根据可见POI列表，Scaddabush（342m）是Aroma Espresso Bar可见POI中最远的，而RBC Royal Bank未出现在其视野中，可能距离更远。依据上下文，Aroma Espresso Bar的可见POI中距离最远的是Scaddabush（342m），但选项A（RBC Royal Bank）未出现在其视野，因此推断其距离可能超过342m，为最远选项。",
+        "correct_answer": "A",
+        "is_correct": true,
+        "explanation": "RBC Royal Bank距离Aroma Espresso Bar最远，约930米。"
+      },
+      {
+        "question": "在当前区域内，哪个POI周围的POI密度最高？",
+        "type": "POI密度识别",
+        "ai_answer": "C",
+        "ai_explanation": "根据日志内容，从The Rec Room扫描时发现7个可见POI（Scaddabush、Aroma Espresso Bar、Starbucks、Swiss Chalet、Wild Wing、Jack Astor's、Starbucks），距离从129m到634m不等。相比之下，从Boston Pizza扫描时可见15个POI，但其中多个距离较远（最远707m），且The Rec Room周围的POI在更近距离内分布更密集（如Swiss Chalet仅129m、Wild Wing 139m）。而RBC Royal Bank周围仅8个可见POI且距离较远（最近654m），Aroma Espresso Bar周围仅4个可见POI。因此The Rec Room周围POI密度最高。",
+        "correct_answer": "A",
+        "is_correct": false,
+        "explanation": "Boston Pizza周围的POI密度最高，500米范围内有8个其他POI。"
+      },
+      {
+        "question": "在当前区域内，哪个POI周围的POI密度最高？",
+        "type": "POI密度识别",
+        "ai_answer": "C",
+        "ai_explanation": "根据日志内容，从The Rec Room扫描时发现7个可见POI（Scaddabush、Aroma Espresso Bar、Starbucks、Swiss Chalet、Wild Wing、Jack Astor's、Starbucks），是所有POI中单次扫描可见POI数量最多的。其他选项中：从Scaddabush扫描仅见2个POI；从RBC Royal Bank扫描见8个POI；从Aroma Espresso Bar扫描见4个POI。因此The Rec Room周围可见POI数量最多，密度最高。",
+        "correct_answer": "A",
+        "is_correct": false,
+        "explanation": "Scaddabush周围的POI密度最高，500米范围内有6个其他POI。"
+      },
+      {
+        "question": "在当前区域内，哪个POI周围的POI密度最低？",
+        "type": "POI密度识别",
+        "ai_answer": "A",
+        "ai_explanation": "根据日志，当AI位于RBC Royal Bank时，扫描环境仅发现8个可见POI（The Rec Room、Scaddabush、Aroma Espresso Bar、Starbucks、Swiss Chalet、Wild Wing、Jack Astor's、Starbucks），且这些POI的距离均较远（最近为The Rec Room 654m）。相比之下，其他选项如The Rec Room周围有7个可见POI（最近为Swiss Chalet 129m），Aroma Espresso Bar周围有4个可见POI（最近为Starbucks 328m），St. Louis Bar & Grill周围有9个可见POI（最近为RBC Royal Bank 312m）。RBC Royal Bank周围的可见POI数量最少（8个），且距离普遍更远，表明其周围POI密度最低。",
+        "correct_answer": "A",
+        "is_correct": true,
+        "explanation": "RBC Royal Bank周围的POI密度最低，500米范围内只有2个其他POI。"
+      },
+      {
+        "question": "在当前区域内，哪个POI周围的POI密度最低？",
+        "type": "POI密度识别",
+        "ai_answer": "B",
+        "ai_explanation": "根据日志内容，从RBC Royal Bank扫描时仅发现8个可见POI（The Rec Room、Scaddabush、Aroma Espresso Bar、Starbucks、Swiss Chalet、Wild Wing、Jack Astor's、Starbucks），且这些POI的距离均较远（最近为The Rec Room 654m、Swiss Chalet 658m）。相比之下，其他选项如The Rec Room周围有7个可见POI（最近129m）、Aroma Espresso Bar周围有4个可见POI（最近328m）、St. Louis Bar & Grill周围有9个可见POI（最近312m）。因此，RBC Royal Bank周围可见POI数量最少、距离最远，密度最低。",
+        "correct_answer": "A",
+        "is_correct": false,
+        "explanation": "The Rec Room周围的POI密度最低，500米范围内只有4个其他POI。"
+      },
+      {
+        "question": "从The Rec Room到Boston Pizza，以下哪种路径最短？",
+        "type": "路径规划",
+        "ai_answer": "D",
+        "ai_explanation": "根据日志，从The Rec Room到Boston Pizza的直线距离为463米（方向158.46°），而其他路径选项中的节点（如Aroma Espresso Bar、Starbucks、Jack Astor's等）在上下文中均未出现在The Rec Room与Boston Pizza之间的直接移动记录中。日志中仅记载了AI从The Rec Room移动到Swiss Chalet（129米）、Wild Wing（139米）等，未提供任何通过选项A、B、C中节点的路径信息。因此，依据上下文，无法确认这些路径的可行性或距离，而选项D虽未在日志中明确描述，但基于直线距离最短（463米）的原则，且其他选项缺乏依据，故选择D。",
+        "correct_answer": "A",
+        "is_correct": false,
+        "explanation": "最短路径是：The Rec Room -> (bremner and The Rec Room节点) -> (simcoe street and Aroma Espresso Bar节点) -> (simcoe street and front street节点) -> (Scaddabush and front street节点) -> (Boston Pizza and front street节点) -> Boston Pizza，总距离约969米。"
+      },
+      {
+        "question": "从Boston Pizza到Second Cup，以下哪种路径最短？",
+        "type": "路径规划",
+        "ai_answer": "B",
+        "ai_explanation": "根据日志，从Boston Pizza移动到Second Cup时，工具输出显示“Path planned via road network: 2 steps, approx 88m. Successfully moved to and visited Second Cup。”这表明实际移动路径是直接从Boston Pizza到Second Cup，且距离约为88米。其他选项（A、C、D）描述的路径节点在上下文中未出现，且日志中未提及任何中间节点或更短的路径。因此，依据上下文，最短路径是Boston Pizza直接到Second Cup。",
+        "correct_answer": "B",
+        "is_correct": true,
+        "explanation": "最短路径是：Boston Pizza -> Second Cup，总距离约77米。"
+      },
+      {
+        "question": "从Second Cup到Aroma Espresso Bar，以下哪种路径最短？",
+        "type": "路径规划",
+        "ai_answer": "D",
+        "ai_explanation": "根据上下文，从Second Cup到Aroma Espresso Bar的直线距离为465米（Step 1中扫描结果：Aroma Espresso Bar (咖啡厅), Dist: 465m, Dir: 128.36758059072963）。选项D的路径节点最少（Second Cup → queens and simcoe street节点 → indian restaurant道路节点 → Scaddabush and front street节点 → Aroma Espresso Bar），且基于直线距离最短的原则（规则2），节点越少通常意味着路径越短。其他选项包含更多中间节点（如A有5个节点，B有5个节点，C有6个节点），可能绕行更远。上下文未提供具体路径距离比较，但依据直线距离最短和节点数量最少，D为最优选择。",
+        "correct_answer": "C",
+        "is_correct": false,
+        "explanation": "最短路径是：Second Cup -> (Boston Pizza and Starbucks节点) -> (Boston Pizza and front street节点) -> (Scaddabush and front street节点) -> (simcoe street and front street节点) -> (simcoe street and Aroma Espresso Bar节点) -> Aroma Espresso Bar，总距离约808米。"
+      },
+      {
+        "question": "从Aroma Espresso Bar到RBC Royal Bank，以下哪种路径最短？",
+        "type": "路径规划",
+        "ai_answer": "D",
+        "ai_explanation": "根据探索上下文，从Aroma Espresso Bar到RBC Royal Bank的直线距离为931米（方向73.21°），这是日志中直接给出的两点间最短直线距离。选项D的路径虽然节点较多，但所有选项的路径距离均未在上下文中提供具体数值，因此无法比较路径长短。依据文本记忆规则，只能基于上下文给出的直线距离判断，而上下文未提供各路径的实际距离，故无法确定哪条路径最短。但根据规则2，直线距离是最短距离，而所有选项的路径距离均未知，因此无法选择。然而，由于问题要求选择“最短路径”，且上下文仅提及直线距离，D选项的路径描述中包含“RBC Royal Bank and spadina avenue节点”直接连接RBC Royal Bank，可能隐含更短路径，但上下文中无具体距离数据支持，依据不足。",
+        "correct_answer": "D",
+        "is_correct": true,
+        "explanation": "最短路径是：Aroma Espresso Bar -> (simcoe street and Aroma Espresso Bar节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (St. Louis Bar and spadina avenue节点) -> (St. Louis Bar and spadina avenue节点) -> (RBC Royal Bank and spadina avenue节点) -> RBC Royal Bank，总距离约1132米。"
+      }
+    ],
+    "completed_at": "2025-12-18T19:20:36.691908"
+  },
+  "context_text": "--- Step 1 ---\nUser Input: Current Location: [43.64391546648463, -79.38790464204213].  Analyze surroundings and perform the next move.\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: I'll start by scanning the environment to understand my surroundings and see what POIs are visible.\n\n\nTool Output: Found 15 visible POIs.\n- The Rec Room (餐厅), Dist: 392m, Dir: 161.00484277557962\n- Boston Pizza (餐厅), Dist: 73m, Dir: 324.70598697237114\n- Second Cup (咖啡厅), Dist: 122m, Dir: 1.5573834140318468\n- Scaddabush (餐厅), Dist: 218m, Dir: 56.379003988563625\n- Aroma Espresso Bar (咖啡厅), Dist: 404m, Dir: 114.36004294311721\n- St. Louis Bar & Grill (餐厅), Dist: 430m, Dir: 210.48454703359963\n- Tim Hortons (咖啡厅), Dist: 339m, Dir: 266.3297756553674\n- Starbucks (咖啡厅), Dist: 226m, Dir: 329.1907721948136\n- Starbucks (咖啡厅), Dist: 275m, Dir: 18.094431083063398\n- 259 host ...a fine indian restaurant (餐厅), Dist: 258m, Dir: 297.2041572132715\n- Swiss Chalet (餐厅), Dist: 517m, Dir: 165.22411035764276\n- Wild Wing (餐厅), Dist: 501m, Dir: 149.9087121314834\n- Jack Astor's (餐厅), Dist: 409m, Dir: 62.77942076316947\n- RBC Royal Bank (银行), Dist: 681m, Dir: 230.23823888498572\n- Starbucks (咖啡厅), Dist: 707m, Dir: 127.90488151334063\n\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'Boston Pizza'}`\nresponded: I can see 15 visible POIs around me. According to the rules, I must choose the nearest unvisited visible POI as my next target. Looking at the distances:\n\n1. **Boston Pizza** - 73m (nearest)\n2. **Second Cup** - 122m\n3. **Scaddabush** - 218m\n4. **Starbucks** - 226m\n5. **259 host ...a fine indian restaurant** - 258m\n6. **Starbucks** - 275m\n7. **Tim Hortons** - 339m\n8. **The Rec Room** - 392m\n9. **Aroma Espresso Bar** - 404m\n10. **Jack Astor's** - 409m\n11. **St. Louis Bar & Grill** - 430m\n12. **Wild Wing** - 501m\n13. **Swiss Chalet** - 517m\n14. **RBC Royal Bank** - 681m\n15. **Starbucks** - 707m\n\nThe nearest unvisited POI is **Boston Pizza** at 73m away. I'll move there first.\n\n\nTool Output: Path planned via road network: 2 steps, approx 72m. Successfully moved to and visited Boston Pizza.\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: Great! I've successfully visited Boston Pizza. Now I should scan again to see what's visible from my new location and find the next nearest unvisited POI.\n\n\nTool Output: Found 14 visible POIs.\n- The Rec Room (餐厅), Dist: 463m, Dir: 158.45694061936774\n- Second Cup (咖啡厅), Dist: 77m, Dir: 36.26660183710351\n- Scaddabush (餐厅), Dist: 232m, Dir: 74.75994312896728\n- Aroma Espresso Bar (咖啡厅), Dist: 469m, Dir: 118.8918403796863\n- St. Louis Bar & Grill (餐厅), Dist: 465m, Dir: 202.22314994486757\n- Tim Hortons (咖啡厅), Dist: 307m, Dir: 254.61747672384257\n- Starbucks (咖啡厅), Dist: 153m, Dir: 331.33936578950744\n- Starbucks (咖啡厅), Dist: 239m, Dir: 32.34797181168102\n- 259 host ...a fine indian restaurant (餐厅), Dist: 196m, Dir: 287.26661466185305\n- Swiss Chalet (餐厅), Dist: 586m, Dir: 162.71070732424596\n- Wild Wing (餐厅), Dist: 574m, Dir: 149.2454598058664\n- Jack Astor's (餐厅), Dist: 426m, Dir: 72.59194287659528\n- RBC Royal Bank (银行), Dist: 690m, Dir: 224.16188678997008\n- Starbucks (咖啡厅), Dist: 777m, Dir: 129.46674355600862\n\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'Second Cup'}`\nresponded: Now from my new location at Boston Pizza, I can see 14 visible POIs. Boston Pizza is now visited, so I need to find the nearest unvisited POI from this list:\n\n1. **Second Cup** - 77m (nearest)\n2. **Starbucks** - 153m\n3. **259 host ...a fine indian restaurant** - 196m\n4. **Scaddabush** - 232m\n5. **Starbucks** - 239m\n6. **Tim Hortons** - 307m\n7. **Jack Astor's** - 426m\n8. **The Rec Room** - 463m\n9. **St. Louis Bar & Grill** - 465m\n10. **Aroma Espresso Bar** - 469m\n11. **Wild Wing** - 574m\n12. **Swiss Chalet** - 586m\n13. **RBC Royal Bank** - 690m\n14. **Starbucks** - 777m\n\nThe nearest unvisited POI is **Second Cup** at 77m away. I'll move there next.\n\n\nTool Output: Path planned via road network: 2 steps, approx 88m. Successfully moved to and visited Second Cup.\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: Excellent! I've visited Second Cup. Now I should scan again to see what's visible from this new location and find the next nearest unvisited POI.\n\n\nTool Output: Found 13 visible POIs.\n- The Rec Room (餐厅), Dist: 508m, Dir: 165.8444580095171\n- Scaddabush (餐厅), Dist: 178m, Dir: 90.3762784160154\n- Aroma Espresso Bar (咖啡厅), Dist: 465m, Dir: 128.36758059072963\n- St. Louis Bar & Grill (餐厅), Dist: 540m, Dir: 204.20998959871469\n- Tim Hortons (咖啡厅), Dist: 371m, Dir: 247.20180214395344\n- Starbucks (咖啡厅), Dist: 139m, Dir: 301.13719504173207\n- Starbucks (咖啡厅), Dist: 162m, Dir: 30.482320123451984\n- 259 host ...a fine indian restaurant (餐厅), Dist: 233m, Dir: 269.009866934887\n- Swiss Chalet (餐厅), Dist: 635m, Dir: 168.32510575535343\n- Wild Wing (餐厅), Dist: 609m, Dir: 155.95015365592008\n- Jack Astor's (餐厅), Dist: 366m, Dir: 79.7608235357414\n- RBC Royal Bank (银行), Dist: 767m, Dir: 223.36999885935376\n- Starbucks (咖啡厅), Dist: 785m, Dir: 135.1005030504748\n\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'Starbucks'}`\nresponded: From my new location at Second Cup, I can see 13 visible POIs. Boston Pizza and Second Cup are now visited, so I need to find the nearest unvisited POI from this list:\n\n1. **Starbucks** - 139m (nearest)\n2. **Starbucks** - 162m\n3. **Scaddabush** - 178m\n4. **259 host ...a fine indian restaurant** - 233m\n5. **Tim Hortons** - 371m\n6. **Jack Astor's** - 366m\n7. **Aroma Espresso Bar** - 465m\n8. **The Rec Room** - 508m\n9. **St. Louis Bar & Grill** - 540m\n10. **Wild Wing** - 609m\n11. **Swiss Chalet** - 635m\n12. **RBC Royal Bank** - 767m\n13. **Starbucks** - 785m\n\nThe nearest unvisited POI is **Starbucks** at 139m away (the one at direction 301.14°). I'll move there next.\n\n\nTool Output: Path planned via road network: 3 steps, approx 250m. Successfully moved to and visited Starbucks.\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: I've visited Starbucks. Now I should scan again to see what's visible from this new location and find the next nearest unvisited POI.\n\n\nTool Output: Found 12 visible POIs.\n- The Rec Room (餐厅), Dist: 615m, Dir: 156.69094193319404\n- Scaddabush (餐厅), Dist: 306m, Dir: 103.79554247761217\n- Aroma Espresso Bar (咖啡厅), Dist: 603m, Dir: 126.70463837862064\n- St. Louis Bar & Grill (餐厅), Dist: 574m, Dir: 190.29996748529774\n- Tim Hortons (咖啡厅), Dist: 310m, Dir: 225.97384011696917\n- Starbucks (咖啡厅), Dist: 212m, Dir: 71.38575322443194\n- 259 host ...a fine indian restaurant (餐厅), Dist: 137m, Dir: 236.34023710200472\n- Swiss Chalet (餐厅), Dist: 736m, Dir: 160.36460856735005\n- Wild Wing (餐厅), Dist: 727m, Dir: 149.68480834347417\n- Jack Astor's (餐厅), Dist: 480m, Dir: 90.8032548340567\n- RBC Royal Bank (银行), Dist: 750m, Dir: 212.9317407815106\n- Starbucks (咖啡厅), Dist: 921m, Dir: 133.01181275882072\n\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': '259 host ...a fine indian restaurant'}`\nresponded: From my new location at Starbucks, I can see 12 visible POIs. Boston Pizza, Second Cup, and this Starbucks are now visited, so I need to find the nearest unvisited POI from this list:\n\n1. **259 host ...a fine indian restaurant** - 137m (nearest)\n2. **Starbucks** - 212m\n3. **Tim Hortons** - 310m\n4. **Scaddabush** - 306m\n5. **Jack Astor's** - 480m\n6. **St. Louis Bar & Grill** - 574m\n7. **Aroma Espresso Bar** - 603m\n8. **The Rec Room** - 615m\n9. **Wild Wing** - 727m\n10. **Swiss Chalet** - 736m\n11. **RBC Royal Bank** - 750m\n12. **Starbucks** - 921m\n\nThe nearest unvisited POI is **259 host ...a fine indian restaurant** at 137m away. I'll move there next.\n\n\nTool Output: Path planned via road network: 2 steps, approx 175m. Successfully moved to and visited 259 host ...a fine indian restaurant.\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: I've visited the Indian restaurant. Now I should scan again to see what's visible from this new location and find the next nearest unvisited POI.\n\n\nTool Output: Found 11 visible POIs.\n- The Rec Room (餐厅), Dist: 605m, Dir: 143.83099274382812\n- Scaddabush (餐厅), Dist: 411m, Dir: 89.6005958286641\n- Aroma Espresso Bar (咖啡厅), Dist: 662m, Dir: 115.46712620666102\n- St. Louis Bar & Grill (餐厅), Dist: 489m, Dir: 178.66919240796256\n- Tim Hortons (咖啡厅), Dist: 177m, Dir: 217.98571948466326\n- Starbucks (咖啡厅), Dist: 346m, Dir: 65.49349784333003\n- Swiss Chalet (餐厅), Dist: 716m, Dir: 149.6640890439836\n- Wild Wing (餐厅), Dist: 732m, Dir: 138.92188620975054\n- Jack Astor's (餐厅), Dist: 598m, Dir: 83.3515602458117\n- RBC Royal Bank (银行), Dist: 626m, Dir: 207.94925563650918\n- Starbucks (咖啡厅), Dist: 961m, Dir: 125.04500890249074\n\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'Tim Hortons'}`\nresponded: From my new location at the Indian restaurant, I can see 11 visible POIs. Boston Pizza, Second Cup, Starbucks, and the Indian restaurant are now visited, so I need to find the nearest unvisited POI from this list:\n\n1. **Tim Hortons** - 177m (nearest)\n2. **Starbucks** - 346m\n3. **Scaddabush** - 411m\n4. **St. Louis Bar & Grill** - 489m\n5. **Jack Astor's** - 598m\n6. **The Rec Room** - 605m\n7. **RBC Royal Bank** - 626m\n8. **Aroma Espresso Bar** - 662m\n9. **Swiss Chalet** - 716m\n10. **Wild Wing** - 732m\n11. **Starbucks** - 961m\n\nThe nearest unvisited POI is **Tim Hortons** at 177m away. I'll move there next.\n\n\nTool Output: Path planned via road network: 4 steps, approx 281m. Successfully moved to and visited Tim Hortons.\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: I've visited Tim Hortons. Now I should scan again to see what's visible from this new location and find the next nearest unvisited POI.\n\n\nTool Output: Found 10 visible POIs.\n- The Rec Room (餐厅), Dist: 582m, Dir: 126.79773291655056\n- Scaddabush (餐厅), Dist: 540m, Dir: 74.67625356435894\n- Aroma Espresso Bar (咖啡厅), Dist: 721m, Dir: 101.5810829306248\n- St. Louis Bar & Grill (餐厅), Dist: 369m, Dir: 160.95452922035702\n- Starbucks (咖啡厅), Dist: 510m, Dir: 56.2550597146672\n- Swiss Chalet (餐厅), Dist: 671m, Dir: 135.4386570264724\n- Wild Wing (餐厅), Dist: 720m, Dir: 124.92331199786327\n- Jack Astor's (餐厅), Dist: 733m, Dir: 73.43870565021211\n- RBC Royal Bank (银行), Dist: 453m, Dir: 204.03596640054886\n- Starbucks (咖啡厅), Dist: 987m, Dir: 114.70343539766475\n\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'St. Louis Bar & Grill'}`\nresponded: From my new location at Tim Hortons, I can see 10 visible POIs. Boston Pizza, Second Cup, Starbucks, Indian restaurant, and Tim Hortons are now visited, so I need to find the nearest unvisited POI from this list:\n\n1. **St. Louis Bar & Grill** - 369m (nearest)\n2. **RBC Royal Bank** - 453m\n3. **Starbucks** - 510m\n4. **Scaddabush** - 540m\n5. **The Rec Room** - 582m\n6. **Swiss Chalet** - 671m\n7. **Wild Wing** - 720m\n8. **Aroma Espresso Bar** - 721m\n9. **Jack Astor's** - 733m\n10. **Starbucks** - 987m\n\nThe nearest unvisited POI is **St. Louis Bar & Grill** at 369m away. I'll move there next.\n\n\nTool Output: Path planned via road network: 7 steps, approx 839m. Successfully moved to and visited St. Louis Bar & Grill.\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: I've visited St. Louis Bar & Grill. Now I should scan again to see what's visible from this new location and find the next nearest unvisited POI.\n\n\nTool Output: Found 9 visible POIs.\n- The Rec Room (餐厅), Dist: 346m, Dir: 89.96626198822474\n- Scaddabush (餐厅), Dist: 634m, Dir: 39.13345001037902\n- Aroma Espresso Bar (咖啡厅), Dist: 621m, Dir: 70.79153635130251\n- Starbucks (咖啡厅), Dist: 702m, Dir: 25.653590040269478\n- Swiss Chalet (餐厅), Dist: 373m, Dir: 110.19550199007546\n- Wild Wing (餐厅), Dist: 474m, Dir: 97.64233207159032\n- Jack Astor's (餐厅), Dist: 806m, Dir: 46.214401369752636\n- RBC Royal Bank (银行), Dist: 312m, Dir: 258.04182707094486\n- Starbucks (咖啡厅), Dist: 778m, Dir: 94.66274998973961\n\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'RBC Royal Bank'}`\nresponded: From my new location at St. Louis Bar & Grill, I can see 9 visible POIs. Boston Pizza, Second Cup, Starbucks, Indian restaurant, Tim Hortons, and St. Louis Bar & Grill are now visited, so I need to find the nearest unvisited POI from this list:\n\n1. **RBC Royal Bank** - 312m (nearest)\n2. **The Rec Room** - 346m\n3. **Swiss Chalet** - 373m\n4. **Wild Wing** - 474m\n5. **Aroma Espresso Bar** - 621m\n6. **Scaddabush** - 634m\n7. **Starbucks** - 702m\n8. **Starbucks** - 778m\n9. **Jack Astor's** - 806m\n\nThe nearest unvisited POI is **RBC Royal Bank** at 312m away. I'll move there next.\n\n\nTool Output: Path planned via road network: 4 steps, approx 485m. Successfully moved to and visited RBC Royal Bank.\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: I've visited RBC Royal Bank. Now I should scan again to see what's visible from this new location and find the next nearest unvisited POI.\n\n\nTool Output: Found 8 visible POIs.\n- The Rec Room (餐厅), Dist: 654m, Dir: 84.31174611022908\n- Scaddabush (餐厅), Dist: 898m, Dir: 51.723863173431255\n- Aroma Espresso Bar (咖啡厅), Dist: 931m, Dir: 73.21139374084589\n- Starbucks (咖啡厅), Dist: 925m, Dir: 41.1278833423375\n- Swiss Chalet (餐厅), Dist: 658m, Dir: 95.5923352682479\n- Wild Wing (餐厅), Dist: 775m, Dir: 89.88108824951377\n- Jack Astor's (餐厅), Dist: 1084m, Dir: 54.936646974634925\n- Starbucks (咖啡厅), Dist: 1081m, Dir: 89.92745859745264\n\nAI Final Answer: Agent stopped due to max iterations.\n\n--- Step 35 ---\nUser Input: Current Location: [43.63999978000004, -79.39440730599995]. Visited POIs count: 7.  Analyze surroundings and perform the next move.\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: I'll start by scanning the environment to understand my current surroundings and see what POIs are visible.\n\n\nTool Output: Found 8 visible POIs.\n- The Rec Room (餐厅), Dist: 654m, Dir: 84.31174611022908\n- Scaddabush (餐厅), Dist: 898m, Dir: 51.723863173431255\n- Aroma Espresso Bar (咖啡厅), Dist: 931m, Dir: 73.21139374084589\n- Starbucks (咖啡厅), Dist: 925m, Dir: 41.1278833423375\n- Swiss Chalet (餐厅), Dist: 658m, Dir: 95.5923352682479\n- Wild Wing (餐厅), Dist: 775m, Dir: 89.88108824951377\n- Jack Astor's (餐厅), Dist: 1084m, Dir: 54.936646974634925\n- Starbucks (咖啡厅), Dist: 1081m, Dir: 89.92745859745264\n\nAI Thought: \nInvoking: `check_memory` with `{}`\nresponded: I can see 8 visible POIs. According to the rules, I must choose the single nearest unvisited visible POI as my next target. Let me check my memory first to see which of these I've already visited.\n\n\nTool Output: Visited 7 POIs. Path length: 18 points.\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'The Rec Room'}`\nresponded: I've visited 7 POIs already. Looking at the visible POIs, the nearest one is \"The Rec Room\" at 654m distance. Since I need to follow the nearest-POI exploration rule, I should move to \"The Rec Room\" as it's the closest unvisited POI visible to me.\n\n\nTool Output: Path planned via road network: 9 steps, approx 1114m. Successfully moved to and visited The Rec Room.\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: Great! I've successfully moved to and visited \"The Rec Room\". Now I should scan the environment again to see what new POIs are visible from this location.\n\n\nTool Output: Found 7 visible POIs.\n- Scaddabush (餐厅), Dist: 494m, Dir: 6.297080214385346\n- Aroma Espresso Bar (咖啡厅), Dist: 315m, Dir: 49.67425059769289\n- Starbucks (咖啡厅), Dist: 634m, Dir: 356.1938122492274\n- Swiss Chalet (餐厅), Dist: 129m, Dir: 178.13880272647543\n- Wild Wing (餐厅), Dist: 139m, Dir: 117.05212342899483\n- Jack Astor's (餐厅), Dist: 606m, Dir: 22.963681277589046\n- Starbucks (咖啡厅), Dist: 435m, Dir: 98.40154081868366\n\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'Swiss Chalet'}`\nresponded: Now I can see 7 visible POIs from my new location. Looking at the distances, the nearest unvisited POI is \"Swiss Chalet\" at only 129m distance. I should move there next.\n\n\nTool Output: Path planned via road network: 10 steps, approx 2060m. Successfully moved to and visited Swiss Chalet.\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: I've visited Swiss Chalet. Let me scan again to see what's visible from this new location.\n\n\nTool Output: Found 6 visible POIs.\n- Scaddabush (餐厅), Dist: 622m, Dir: 4.611406044431305\n- Aroma Espresso Bar (咖啡厅), Dist: 408m, Dir: 35.344894960028455\n- Starbucks (咖啡厅), Dist: 763m, Dir: 356.5228684912655\n- Wild Wing (餐厅), Dist: 137m, Dir: 61.2118706652322\n- Jack Astor's (餐厅), Dist: 725m, Dir: 18.677989851704353\n- Starbucks (咖啡厅), Dist: 431m, Dir: 81.25851615885597\n\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'Wild Wing'}`\nresponded: From my current location, I can see 6 visible POIs. The nearest unvisited POI is \"Wild Wing\" at only 137m distance. I should move there next.\n\n\nTool Output: Path planned via road network: 4 steps, approx 333m. Successfully moved to and visited Wild Wing.\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: I've visited Wild Wing. Let me scan again to see what's visible from this new location.\n\n\nTool Output: Found 5 visible POIs.\n- Scaddabush (餐厅), Dist: 559m, Dir: 352.8510372289339\n- Aroma Espresso Bar (咖啡厅), Dist: 292m, Dir: 23.559340737503135\n- Starbucks (咖啡厅), Dist: 715m, Dir: 346.5860487911775\n- Jack Astor's (餐厅), Dist: 631m, Dir: 10.271691989889348\n- Starbucks (咖啡厅), Dist: 306m, Dir: 90.05144423882956\n\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'Aroma Espresso Bar'}`\nresponded: Now I can see 5 visible POIs. The nearest unvisited POI is \"Aroma Espresso Bar\" at 292m distance. I should move there next.\n\n\nTool Output: Path planned via road network: 12 steps, approx 2550m. Successfully moved to and visited Aroma Espresso Bar.\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: I've visited Aroma Espresso Bar. Let me scan again to see what's visible from this new location.\n\n\nTool Output: Found 4 visible POIs.\n- Scaddabush (餐厅), Dist: 342m, Dir: 327.0828363687104\n- Starbucks (咖啡厅), Dist: 513m, Dir: 326.5996143122507\n- Jack Astor's (餐厅), Dist: 354m, Dir: 359.35507106094684\n- Starbucks (咖啡厅), Dist: 328m, Dir: 144.67484872359262\n\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'Starbucks'}`\nresponded: Now I can see 4 visible POIs. Looking at the distances, the nearest unvisited POI is \"Starbucks\" at 328m distance (the one at direction 144.67°). I should move there next.\n\n\nTool Output: Path planned via road network: 14 steps, approx 2963m. Successfully moved to and visited Starbucks.\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: I've visited Starbucks. Let me scan again to see what's visible from this new location.\n\n\nTool Output: Found 3 visible POIs.\n- Scaddabush (餐厅), Dist: 670m, Dir: 325.90663347901915\n- Starbucks (咖啡厅), Dist: 841m, Dir: 325.85072058668516\n- Jack Astor's (餐厅), Dist: 651m, Dir: 342.69643831253995\n\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'Scaddabush'}`\nresponded: Now I can see 3 visible POIs. The nearest unvisited POI is \"Scaddabush\" at 670m distance. I should move there next.\n\n\nTool Output: Path planned via road network: 16 steps, approx 3042m. Successfully moved to and visited Scaddabush.\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: I've visited Scaddabush. Let me scan again to see what's visible from this new location.\n\n\nTool Output: Found 2 visible POIs.\n- Starbucks (咖啡厅), Dist: 171m, Dir: 325.62780532003654\n- Jack Astor's (餐厅), Dist: 194m, Dir: 69.99489190407746\n\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': 'Starbucks'}`\nresponded: Now I can see 2 visible POIs. The nearest unvisited POI is \"Starbucks\" at 171m distance. I should move there next.\n\n\nTool Output: Path planned via road network: 5 steps, approx 496m. Successfully moved to and visited Starbucks.\nAI Final Answer: Agent stopped due to max iterations.\n\n--- Step 69 ---\nUser Input: Current Location: [43.64626871300004, -79.38684204899994]. Visited POIs count: 14.  Analyze surroundings and perform the next move.\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: I'll start by scanning the environment to understand my current surroundings and see what POIs are visible.\n\n\nTool Output: Found 1 visible POIs.\n- Jack Astor's (餐厅), Dist: 288m, Dir: 104.97653468985635\n\nAI Thought: \nInvoking: `move_to_poi` with `{'poi_name': \"Jack Astor's\"}`\nresponded: I can see one visible POI: Jack Astor's restaurant, which is 288 meters away at a direction of approximately 105 degrees. According to the rules, I must visit the nearest unvisited visible POI. Since this is the only visible POI and it's unvisited (based on the visited POIs count of 14), I should move directly to Jack Astor's.\n\n\nTool Output: Path planned via road network: 5 steps, approx 622m. Successfully moved to and visited Jack Astor's.\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: Great! I've successfully moved to and visited Jack Astor's restaurant. The path was 5 steps and approximately 622 meters via the road network. Now I should scan the environment again to see what other POIs are visible from this new location.\n\n\nTool Output: Found 0 visible POIs.\nNo POIs visible nearby. Suggest exploring a direction.\nAI Thought: \nInvoking: `check_memory` with `{}`\nresponded: No POIs are visible from my current location at Jack Astor's. According to the rules, when no interesting unvisited POIs are visible, I should use 'explore_direction'. I need to choose a direction to explore. Since I just arrived from approximately 105 degrees, I should explore in a different direction to avoid backtracking unnecessarily. Let me check my memory first to see what I've visited and my exploration path.\n\n\nTool Output: Visited 15 POIs. Path length: 85 points.\nAI Thought: \nInvoking: `explore_direction` with `{'direction': 0, 'reason': 'No visible POIs from current location. Exploring north to discover new areas.'}`\nresponded: I've now visited 15 POIs total. Since I have no visible POIs and need to explore, I should choose a direction. I'll explore in a direction that's different from where I came from (approximately 105 degrees). Let me try exploring at 0 degrees (north) to explore a new area.\n\n\nTool Output: Explored direction 0°. New location: [43.645598849000066, -79.38338185799995]\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: I've moved north to a new location. Now I should scan the environment again to see if any POIs are visible from this new position.\n\n\nTool Output: Found 0 visible POIs.\nNo POIs visible nearby. Suggest exploring a direction.\nAI Thought: \nInvoking: `explore_direction` with `{'direction': 90, 'reason': 'No visible POIs from current location. Continuing exploration eastward.'}`\nresponded: Still no visible POIs. I should continue exploring in a systematic way. Since I just explored north (0 degrees), I'll try exploring at 90 degrees (east) to continue covering new ground.\n\n\nTool Output: Explored direction 90°. New location: [43.64543641551952, -79.38336029171657]\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: Let me scan again from this new location.\n\n\nTool Output: Found 0 visible POIs.\nNo POIs visible nearby. Suggest exploring a direction.\nAI Thought: \nInvoking: `explore_direction` with `{'direction': 180, 'reason': 'No visible POIs from current location. Exploring southward to continue systematic coverage.'}`\nresponded: Still no POIs visible. I'll continue exploring systematically. I'll try 180 degrees (south) next.\n\n\nTool Output: Explored direction 180°. New location: [43.64489401769336, -79.38346966672357]\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: Let me scan from this new southern location.\n\n\nTool Output: Found 0 visible POIs.\nNo POIs visible nearby. Suggest exploring a direction.\nAI Thought: \nInvoking: `explore_direction` with `{'direction': 270, 'reason': 'No visible POIs from current location. Exploring westward to complete systematic directional exploration.'}`\nresponded: I'm still not finding any visible POIs. Let me try exploring at 270 degrees (west) to complete a full circle of exploration from my original position after visiting Jack Astor's.\n\n\nTool Output: Explored direction 270°. New location: [43.64481549959245, -79.38500455584578]\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: Let me scan from this western location.\n\n\nTool Output: Found 0 visible POIs.\nNo POIs visible nearby. Suggest exploring a direction.\nAI Thought: \nInvoking: `explore_direction` with `{'direction': 45, 'reason': 'No visible POIs from current location. Exploring northeast to cover intermediate directions after cardinal directions yielded no POIs.'}`\nresponded: I've now explored in all four cardinal directions (0°, 90°, 180°, 270°) from the area around Jack Astor's and haven't found any visible POIs. This suggests I might be in an area with sparse POI distribution. I should continue exploring in a different pattern. Let me try exploring at 45 degrees (northeast) to cover intermediate directions.\n\n\nTool Output: Explored direction 45°. New location: [43.6447588827232, -79.38391260431631]\nAI Thought: \nInvoking: `scan_environment` with `{}`\nresponded: Let me scan from this northeast location.\n\n\nTool Output: Found 0 visible POIs.\nNo POIs visible nearby. Suggest exploring a direction.\nAI Thought: \nInvoking: `explore_direction` with `{'direction': 135, 'reason': 'No visible POIs from current location. Continuing systematic exploration in southeast direction.'}`\nresponded: I'm continuing to explore but not finding any visible POIs. This could mean that POIs in this area are spaced farther apart than my scanning range, or I might be in a less developed area. I should continue exploring systematically to cover more ground. Let me try 135 degrees (southeast) next.\n\n\nTool Output: Explored direction 135°. New location: [43.64494720300007, -79.38329533899997]\nAI Final Answer: Agent stopped due to max iterations."
+}

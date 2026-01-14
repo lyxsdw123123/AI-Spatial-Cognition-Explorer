@@ -1,0 +1,261 @@
+{
+  "region": "北京天安门",
+  "source_file": "北京天安门_qwen_graph_report.txt",
+  "evaluation_time": "2025-12-25T15:01:01.733372",
+  "context_text": "# 第二种记忆道路连通图描述\n## 节点列表\nNODE[id,类型,附加属性]\nNODE[1,POI,name=正义路3号院]\nNODE[2,POI,name=四季回头特色菜馆]\nNODE[3,POI,name=北京东交民巷饭店写字楼]\nNODE[4,POI,name=隆和居]\nNODE[5,POI,name=正义路10号院]\nNODE[6,POI,name=正义路社区服务站]\nNODE[7,POI,name=前门东大街23号院]\nNODE[8,POI,name=前门(公交站)]\nNODE[9,POI,name=宝鼎中心]\nNODE[10,POI,name=新怡家园]\nNODE[11,POI,name=长安大厦(东长安街)]\nNODE[12,POI,name=正义路1号院]\nNODE[13,POI,name=霞公府]\nNODE[14,POI,name=王府井喜悦购物中心地下停车场]\nNODE[15,POI,name=东方广场W3座]\nNODE[16,POI,name=东方广场W1座]\nNODE[17,POI,name=北京东方广场]\nNODE[18,POI,name=东方捷路地下停车场]\nNODE[19,POI,name=天安门东地铁站B东北口]\nNODE[20,POI,name=天安门东(地铁站)]\nNODE[21,POI,name=天安门东地铁站D西南口]\nNODE[22,ROAD,name=起点]\nNODE[23,ROAD,name=正义路与正义路3号院道路的节点]\nNODE[24,ROAD,name=正义路与隆和居道路的节点]\nNODE[25,ROAD,name=正义路与正义路10号院道路的节点]\nNODE[26,ROAD,name=正义路与正义路社区服务站道路的节]\nNODE[27,ROAD,name=正义路与前门东大街的节点]\nNODE[28,ROAD,name=前门东大街与前门道路的节点]\nNODE[29,ROAD,name=崇文门西大街与祈年大街的节点]\nNODE[30,ROAD,name=祈年大街与宝鼎中心道路的节点]\nNODE[31,ROAD,name=祈年大街与新怡家园道路的节点]\nNODE[32,ROAD,name=东长安街与台基厂大街的节点]\nNODE[33,ROAD,name=东长安街与长安大厦道路的节点]\nNODE[34,ROAD,name=东长安街与正义路的节点]\nNODE[35,ROAD,name=正义路与正义路1号院道路的节点]\nNODE[36,ROAD,name=南河沿大街与霞公府道路的节点]\nNODE[37,ROAD,name=王府井大街与东方广场W3座道路的节点]\nNODE[38,ROAD,name=东长安街与东方广场W1座道路的节点]\nNODE[39,ROAD,name=东长安街与北京东方广场的节点]\nNODE[40,ROAD,name=东长安街与南池子大街的节点]\nNODE[41,ROAD,name=东长安街与天安门东地铁站B口道路的]\nNODE[42,ROAD,name=东长安街与天安门东地铁站道路的节]\n\n## 边列表\nEDGE[起点ID,终点ID,道路长度,方向]\nEDGE[22,1,33m,233°]\nEDGE[1,2,64m,9°]\nEDGE[2,3,141m,159°]\nEDGE[3,2,141m,339°]\nEDGE[2,1,64m,189°]\nEDGE[1,23,58m,270°]\nEDGE[23,24,66m,179°]\nEDGE[24,4,60m,270°]\nEDGE[4,5,65m,180°]\nEDGE[5,25,61m,85°]\nEDGE[25,26,64m,179°]\nEDGE[26,6,55m,266°]\nEDGE[6,26,55m,86°]\nEDGE[26,27,133m,179°]\nEDGE[27,28,433m,268°]\nEDGE[28,7,77m,0°]\nEDGE[7,28,77m,180°]\nEDGE[28,8,193m,180°]\nEDGE[8,28,193m,0°]\nEDGE[28,27,433m,88°]\nEDGE[27,29,430m,88°]\nEDGE[29,30,131m,177°]\nEDGE[30,9,108m,99°]\nEDGE[9,30,108m,279°]\nEDGE[30,31,153m,178°]\nEDGE[31,10,217m,91°]\nEDGE[10,31,217m,271°]\nEDGE[31,30,153m,358°]\nEDGE[30,29,131m,357°]\nEDGE[29,32,782m,358°]\nEDGE[32,33,211m,268°]\nEDGE[33,11,75m,189°]\nEDGE[11,33,75m,9°]\nEDGE[33,34,217m,267°]\nEDGE[34,35,189m,177°]\nEDGE[35,12,84m,86°]\nEDGE[12,35,84m,266°]\nEDGE[35,34,189m,357°]\nEDGE[34,36,204m,5°]\nEDGE[36,13,119m,91°]\nEDGE[13,36,119m,271°]\nEDGE[36,34,204m,185°]\nEDGE[34,33,217m,87°]\nEDGE[33,32,211m,88°]\nEDGE[32,37,203m,358°]\nEDGE[37,14,54m,245°]\nEDGE[14,37,54m,65°]\nEDGE[37,15,75m,102°]\nEDGE[15,37,75m,282°]\nEDGE[37,32,203m,178°]\nEDGE[32,38,147m,86°]\nEDGE[38,16,118m,355°]\nEDGE[16,38,118m,175°]\nEDGE[38,39,128m,87°]\nEDGE[39,17,158m,353°]\nEDGE[17,39,158m,173°]\nEDGE[39,38,128m,267°]\nEDGE[38,16,118m,355°]\nEDGE[16,38,118m,175°]\nEDGE[38,32,147m,266°]\nEDGE[32,33,211m,268°]\nEDGE[33,34,217m,267°]\nEDGE[34,40,289m,266°]\nEDGE[40,18,155m,2°]\nEDGE[18,40,155m,182°]\nEDGE[40,41,65m,277°]\nEDGE[41,19,78m,3°]\nEDGE[19,41,78m,183°]\nEDGE[41,42,109m,273°]\nEDGE[42,20,73m,359°]\nEDGE[20,42,73m,179°]\nEDGE[42,21,65m,182°]\nEDGE[21,42,65m,2°]\nEDGE[42,42,35m,359°]\nEDGE[42,41,117m,111°]\nEDGE[41,19,78m,3°]\nEDGE[19,19,37m,183°]\nEDGE[19,41,41m,183°]\nEDGE[41,41,6m,97°]\nEDGE[41,42,115m,273°]\nEDGE[42,42,15m,93°]\nEDGE[42,41,93m,93°]\nEDGE[41,19,78m,3°]\nEDGE[19,19,4m,183°]\nEDGE[19,41,74m,183°]\nEDGE[41,40,65m,97°]\nEDGE[40,40,10m,86°]",
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 17,
+      "total_questions": 24,
+      "accuracy": 70.83333333333334,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 5,
+          "total": 8,
+          "percentage": 62.5
+        },
+        "空间距离估算": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "邻近关系判断": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        },
+        "POI密度识别": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "路径规划": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        }
+      },
+      "answers": [
+        {
+          "question": "东方广场W1座相对于北京东方广场在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "东方广场W1座位于北京东方广场的西南面。"
+        },
+        {
+          "question": "正义路1号院相对于东方广场W1座在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "正义路1号院位于东方广场W1座的西南面。"
+        },
+        {
+          "question": "前门东大街23号院相对于正义路1号院在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "前门东大街23号院位于正义路1号院的西南面。"
+        },
+        {
+          "question": "霞公府相对于前门东大街23号院在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "霞公府位于前门东大街23号院的东北面。"
+        },
+        {
+          "question": "北京东方广场相对于东方广场W1座在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "北京东方广场位于东方广场W1座的东北面。"
+        },
+        {
+          "question": "东方广场W1座相对于正义路1号院在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "东方广场W1座位于正义路1号院的东北面。"
+        },
+        {
+          "question": "正义路1号院相对于前门东大街23号院在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "正义路1号院位于前门东大街23号院的东北面。"
+        },
+        {
+          "question": "前门东大街23号院相对于霞公府在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "前门东大街23号院位于霞公府的西南面。"
+        },
+        {
+          "question": "北京东方广场到正义路1号院的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "北京东方广场到正义路1号院的直线距离约为696米。"
+        },
+        {
+          "question": "东方广场W1座到前门东大街23号院的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "东方广场W1座到前门东大街23号院的直线距离约为1298米。"
+        },
+        {
+          "question": "正义路1号院到霞公府的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "正义路1号院到霞公府的直线距离约为388米。"
+        },
+        {
+          "question": "前门东大街23号院到新怡家园的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "前门东大街23号院到新怡家园的直线距离约为1144米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离北京东方广场最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "东方广场W1座距离北京东方广场最近，约126米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离东方广场W1座最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "霞公府距离东方广场W1座最近，约431米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离正义路1号院最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "新怡家园距离正义路1号院最远，约1054米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离前门东大街23号院最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "新怡家园距离前门东大街23号院最远，约1144米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "东方捷路地下停车场周围的POI密度最高，500米范围内有5个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "天安门东地铁站B东北口周围的POI密度最高，500米范围内有3个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "前门东大街23号院周围的POI密度最低，500米范围内只有0个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "新怡家园周围的POI密度最低，500米范围内只有0个其他POI。"
+        },
+        {
+          "question": "从北京东方广场到东方广场W1座，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：北京东方广场 -> (东长安街与北京东方广场的节点) -> (东长安街与东方广场W1座道路的节点) -> 东方广场W1座，总距离约405米。"
+        },
+        {
+          "question": "从东方广场W1座到正义路1号院，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：东方广场W1座 -> (东长安街与东方广场W1座道路的节点) -> (东长安街与台基厂大街的节点) -> (东长安街与长安大厦道路的节点) -> (东长安街与正义路的节点) -> (正义路与正义路1号院道路的节点) -> 正义路1号院，总距离约967米。"
+        },
+        {
+          "question": "从正义路1号院到前门东大街23号院，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：正义路1号院 -> (正义路与正义路1号院道路的节点) -> (正义路与四季回头特色菜馆道路的节) -> (正义路与正义路3号院道路的节点) -> (正义路与隆和居道路的节点) -> (正义路与正义路10号院道路的节点) -> (正义路与正义路社区服务站道路的节) -> (正义路与前门东大街的节点) -> (前门东大街与前门道路的节点) -> 前门东大街23号院，总距离约1184米。"
+        },
+        {
+          "question": "从前门东大街23号院到霞公府，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：前门东大街23号院 -> (前门东大街与前门道路的节点) -> (正义路与前门东大街的节点) -> (正义路与正义路社区服务站道路的节) -> (正义路与正义路10号院道路的节点) -> (正义路与隆和居道路的节点) -> (正义路与正义路3号院道路的节点) -> (正义路与四季回头特色菜馆道路的节) -> (正义路与正义路1号院道路的节点) -> (东长安街与正义路的节点) -> (南河沿大街与霞公府道路的节点) -> 霞公府，总距离约1614米。"
+        }
+      ],
+      "completed_at": "2025-12-25T15:01:01.308257"
+    },
+    "context_text": "# 第二种记忆道路连通图描述\n## 节点列表\nNODE[id,类型,附加属性]\nNODE[1,POI,name=正义路3号院]\nNODE[2,POI,name=四季回头特色菜馆]\nNODE[3,POI,name=北京东交民巷饭店写字楼]\nNODE[4,POI,name=隆和居]\nNODE[5,POI,name=正义路10号院]\nNODE[6,POI,name=正义路社区服务站]\nNODE[7,POI,name=前门东大街23号院]\nNODE[8,POI,name=前门(公交站)]\nNODE[9,POI,name=宝鼎中心]\nNODE[10,POI,name=新怡家园]\nNODE[11,POI,name=长安大厦(东长安街)]\nNODE[12,POI,name=正义路1号院]\nNODE[13,POI,name=霞公府]\nNODE[14,POI,name=王府井喜悦购物中心地下停车场]\nNODE[15,POI,name=东方广场W3座]\nNODE[16,POI,name=东方广场W1座]\nNODE[17,POI,name=北京东方广场]\nNODE[18,POI,name=东方捷路地下停车场]\nNODE[19,POI,name=天安门东地铁站B东北口]\nNODE[20,POI,name=天安门东(地铁站)]\nNODE[21,POI,name=天安门东地铁站D西南口]\nNODE[22,ROAD,name=起点]\nNODE[23,ROAD,name=正义路与正义路3号院道路的节点]\nNODE[24,ROAD,name=正义路与隆和居道路的节点]\nNODE[25,ROAD,name=正义路与正义路10号院道路的节点]\nNODE[26,ROAD,name=正义路与正义路社区服务站道路的节]\nNODE[27,ROAD,name=正义路与前门东大街的节点]\nNODE[28,ROAD,name=前门东大街与前门道路的节点]\nNODE[29,ROAD,name=崇文门西大街与祈年大街的节点]\nNODE[30,ROAD,name=祈年大街与宝鼎中心道路的节点]\nNODE[31,ROAD,name=祈年大街与新怡家园道路的节点]\nNODE[32,ROAD,name=东长安街与台基厂大街的节点]\nNODE[33,ROAD,name=东长安街与长安大厦道路的节点]\nNODE[34,ROAD,name=东长安街与正义路的节点]\nNODE[35,ROAD,name=正义路与正义路1号院道路的节点]\nNODE[36,ROAD,name=南河沿大街与霞公府道路的节点]\nNODE[37,ROAD,name=王府井大街与东方广场W3座道路的节点]\nNODE[38,ROAD,name=东长安街与东方广场W1座道路的节点]\nNODE[39,ROAD,name=东长安街与北京东方广场的节点]\nNODE[40,ROAD,name=东长安街与南池子大街的节点]\nNODE[41,ROAD,name=东长安街与天安门东地铁站B口道路的]\nNODE[42,ROAD,name=东长安街与天安门东地铁站道路的节]\n\n## 边列表\nEDGE[起点ID,终点ID,道路长度,方向]\nEDGE[22,1,33m,233°]\nEDGE[1,2,64m,9°]\nEDGE[2,3,141m,159°]\nEDGE[3,2,141m,339°]\nEDGE[2,1,64m,189°]\nEDGE[1,23,58m,270°]\nEDGE[23,24,66m,179°]\nEDGE[24,4,60m,270°]\nEDGE[4,5,65m,180°]\nEDGE[5,25,61m,85°]\nEDGE[25,26,64m,179°]\nEDGE[26,6,55m,266°]\nEDGE[6,26,55m,86°]\nEDGE[26,27,133m,179°]\nEDGE[27,28,433m,268°]\nEDGE[28,7,77m,0°]\nEDGE[7,28,77m,180°]\nEDGE[28,8,193m,180°]\nEDGE[8,28,193m,0°]\nEDGE[28,27,433m,88°]\nEDGE[27,29,430m,88°]\nEDGE[29,30,131m,177°]\nEDGE[30,9,108m,99°]\nEDGE[9,30,108m,279°]\nEDGE[30,31,153m,178°]\nEDGE[31,10,217m,91°]\nEDGE[10,31,217m,271°]\nEDGE[31,30,153m,358°]\nEDGE[30,29,131m,357°]\nEDGE[29,32,782m,358°]\nEDGE[32,33,211m,268°]\nEDGE[33,11,75m,189°]\nEDGE[11,33,75m,9°]\nEDGE[33,34,217m,267°]\nEDGE[34,35,189m,177°]\nEDGE[35,12,84m,86°]\nEDGE[12,35,84m,266°]\nEDGE[35,34,189m,357°]\nEDGE[34,36,204m,5°]\nEDGE[36,13,119m,91°]\nEDGE[13,36,119m,271°]\nEDGE[36,34,204m,185°]\nEDGE[34,33,217m,87°]\nEDGE[33,32,211m,88°]\nEDGE[32,37,203m,358°]\nEDGE[37,14,54m,245°]\nEDGE[14,37,54m,65°]\nEDGE[37,15,75m,102°]\nEDGE[15,37,75m,282°]\nEDGE[37,32,203m,178°]\nEDGE[32,38,147m,86°]\nEDGE[38,16,118m,355°]\nEDGE[16,38,118m,175°]\nEDGE[38,39,128m,87°]\nEDGE[39,17,158m,353°]\nEDGE[17,39,158m,173°]\nEDGE[39,38,128m,267°]\nEDGE[38,16,118m,355°]\nEDGE[16,38,118m,175°]\nEDGE[38,32,147m,266°]\nEDGE[32,33,211m,268°]\nEDGE[33,34,217m,267°]\nEDGE[34,40,289m,266°]\nEDGE[40,18,155m,2°]\nEDGE[18,40,155m,182°]\nEDGE[40,41,65m,277°]\nEDGE[41,19,78m,3°]\nEDGE[19,41,78m,183°]\nEDGE[41,42,109m,273°]\nEDGE[42,20,73m,359°]\nEDGE[20,42,73m,179°]\nEDGE[42,21,65m,182°]\nEDGE[21,42,65m,2°]\nEDGE[42,42,35m,359°]\nEDGE[42,41,117m,111°]\nEDGE[41,19,78m,3°]\nEDGE[19,19,37m,183°]\nEDGE[19,41,41m,183°]\nEDGE[41,41,6m,97°]\nEDGE[41,42,115m,273°]\nEDGE[42,42,15m,93°]\nEDGE[42,41,93m,93°]\nEDGE[41,19,78m,3°]\nEDGE[19,19,4m,183°]\nEDGE[19,41,74m,183°]\nEDGE[41,40,65m,97°]\nEDGE[40,40,10m,86°]",
+    "context_mode": "graph"
+  }
+}

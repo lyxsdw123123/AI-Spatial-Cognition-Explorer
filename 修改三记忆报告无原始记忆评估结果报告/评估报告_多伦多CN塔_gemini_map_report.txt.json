@@ -1,0 +1,261 @@
+{
+  "region": "多伦多CN塔",
+  "source_file": "多伦多CN塔_gemini_map_report.txt",
+  "evaluation_time": "2025-12-25T16:17:48.028648",
+  "context_text": "# 第三种记忆map描述\n## 节点列表\nNODE[id,类型,附加属性，ij坐标]\n[栅格参数]\n- grid_size: 30\nNODE[1,POI,name=Boston Pizza，（21，13）]\nNODE[2,POI,name=Second Cup，（23，14）]\nNODE[3,POI,name=Starbucks，（24，12）]\nNODE[4,POI,name=259 host ...a fine indian restaurant，（23，8）]\nNODE[5,POI,name=Tim Hortons，（19，6）]\nNODE[6,POI,name=St. Louis Bar & Grill，（11，9）]\nNODE[7,POI,name=RBC Royal Bank，（10，1）]\nNODE[8,POI,name=The Rec Room，（11，17）]\nNODE[9,POI,name=Swiss Chalet，（9，17）]\nNODE[10,POI,name=Wild Wing，（10，19）]\nNODE[11,POI,name=Aroma Espresso Bar，（16，22）]\nNODE[12,POI,name=Jack Astor's，（24，22）]\nNODE[13,POI,name=Scaddabush，（23，18）]\nNODE[14,ROAD,name=Starbucks and Second Cup节点，（25，13）]\nNODE[15,ROAD,name=indian restaurant道路节点，（21，7）]\nNODE[16,ROAD,name=Tim Hortons and indian restaurant节点，（19，7）]\nNODE[17,ROAD,name=Tim Hortons and front street节点，（18，6）]\nNODE[18,ROAD,name=front street西节点，（17，3）]\nNODE[19,ROAD,name=spadina avenue节点，（13，3）]\nNODE[20,ROAD,name=RBC Royal Bank and spadina avenue节点，（12，3）]\nNODE[21,ROAD,name=St. Louis Bar and spadina avenue节点，（10，4）]\nNODE[22,ROAD,name=位置_21，（9，10）]\nNODE[23,ROAD,name=位置_22，（10，12）]\nNODE[24,ROAD,name=位置_23，（10，14）]\nNODE[25,ROAD,name=bremner and The Rec Room节点，（13，16）]\nNODE[26,ROAD,name=位置_27，（10，14）]\nNODE[27,ROAD,name=位置_28，（10，12）]\nNODE[28,ROAD,name=位置_29，（9，10）]\nNODE[29,ROAD,name=spadina avenue南节点，（2，5）]\nNODE[30,ROAD,name=queens and Swiss Chalet节点，（7，17）]\nNODE[31,ROAD,name=queens and Wild Wing节点，（8，19）]\nNODE[32,ROAD,name=位置_43，（9，10）]\nNODE[33,ROAD,name=位置_44，（10，12）]\nNODE[34,ROAD,name=位置_45，（10，14）]\nNODE[35,ROAD,name=simcoe street and Aroma Espresso Bar节点，（15，21）]\nNODE[36,ROAD,name=位置_51，（10，14）]\nNODE[37,ROAD,name=位置_52，（10，12）]\nNODE[38,ROAD,name=位置_53，（9，10）]\nNODE[39,ROAD,name=queens and simcoe street节点，（8，22）]\nNODE[40,ROAD,name=queens and Starbucks节点，（8，26）]\nNODE[41,ROAD,name=indian restaurant and front street节点，（18，7）]\nNODE[42,ROAD,name=Starbucks and front street节点，（19，11）]\nNODE[43,ROAD,name=Boston Pizza and front street节点，（20，13）]\nNODE[44,ROAD,name=Scaddabush and front street节点，（21，18）]\nNODE[45,ROAD,name=simcoe street and front street节点，（21，19）]\nNODE[46,ROAD,name=front street and Jack Astor's节点，（23，22）]\nNODE[47,ROAD,name=simcoe street and Starbucks节点，（26，18）]\n\n## 道路列表\nROAD[道路坐标]\nROAD[（2，5），（2，6），（3，5），（3，7），（3，8），（4，5），（4，9），（4，10），（4，11），（5，5），（5，12），（5，13），（6，4），（6，14），（6，15），（7，4），（7，16），（7，17），（8，4），（8，17），（8，18），（8，19），（8，20），（8，21），（8，22），（8，23），（8，24），（8，25），（8，26），（9，4），（9，10），（9，17），（9，19），（9，26），（10，1），（10，4），（10，5），（10，6），（10，10），（10，11），（10，12），（10，13），（10，14），（10，19），（10，27），（11，2），（11，4），（11，7），（11，8），（11，9），（11，15），（11，17），（12，3），（12，15），（12，16），（13，3），（13，16），（13，17），（14，3），（14，18），（14，19），（15，3），（15，20），（15，21），（16，3），（16，22），（17，3），（17，4），（18，5），（18，6），（18，7），（18，8），（18，9），（19，6），（19，7），（19，10），（19，11），（20，7），（20，12），（20，13），（20，14），（20，15），（21，7），（21，13），（21，16），（21，17），（21，18），（21，19），（22，8），（22，14），（22，18），（22，19），（22，20），（22，21），（23，8），（23，9），（23，14），（23，18），（23，19），（23，22），（24，10），（24，11），（24，12），（24，13），（24，14），（24，18），（24，22），（25，13），（25，14），（25，18），（26，15），（26，16），（26，17），（26，18）]",
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 21,
+      "total_questions": 24,
+      "accuracy": 87.5,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 8,
+          "total": 8,
+          "percentage": 100.0
+        },
+        "空间距离估算": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "邻近关系判断": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        },
+        "POI密度识别": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "路径规划": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Boston Pizza相对于The Rec Room在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Boston Pizza位于The Rec Room的西北面。"
+        },
+        {
+          "question": "Second Cup相对于Boston Pizza在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Second Cup位于Boston Pizza的东北面。"
+        },
+        {
+          "question": "Aroma Espresso Bar相对于Second Cup在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Aroma Espresso Bar位于Second Cup的东南面。"
+        },
+        {
+          "question": "RBC Royal Bank相对于Aroma Espresso Bar在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "RBC Royal Bank位于Aroma Espresso Bar的西南面。"
+        },
+        {
+          "question": "The Rec Room相对于Boston Pizza在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "The Rec Room位于Boston Pizza的东南面。"
+        },
+        {
+          "question": "Boston Pizza相对于Second Cup在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "Boston Pizza位于Second Cup的西南面。"
+        },
+        {
+          "question": "Second Cup相对于Aroma Espresso Bar在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Second Cup位于Aroma Espresso Bar的西北面。"
+        },
+        {
+          "question": "Aroma Espresso Bar相对于RBC Royal Bank在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Aroma Espresso Bar位于RBC Royal Bank的东北面。"
+        },
+        {
+          "question": "The Rec Room到Second Cup的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "The Rec Room到Second Cup的直线距离约为508米。"
+        },
+        {
+          "question": "Boston Pizza到Aroma Espresso Bar的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Boston Pizza到Aroma Espresso Bar的直线距离约为468米。"
+        },
+        {
+          "question": "Second Cup到RBC Royal Bank的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Second Cup到RBC Royal Bank的直线距离约为766米。"
+        },
+        {
+          "question": "Aroma Espresso Bar到Scaddabush的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Aroma Espresso Bar到Scaddabush的直线距离约为342米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离The Rec Room最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Aroma Espresso Bar距离The Rec Room最近，约315米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Boston Pizza最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Second Cup距离Boston Pizza最近，约77米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Second Cup最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "RBC Royal Bank距离Second Cup最远，约766米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Aroma Espresso Bar最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "RBC Royal Bank距离Aroma Espresso Bar最远，约930米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Boston Pizza周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Scaddabush周围的POI密度最高，500米范围内有6个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "RBC Royal Bank周围的POI密度最低，500米范围内只有2个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "The Rec Room周围的POI密度最低，500米范围内只有4个其他POI。"
+        },
+        {
+          "question": "从The Rec Room到Boston Pizza，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：The Rec Room -> (bremner and The Rec Room节点) -> (simcoe street and Aroma Espresso Bar节点) -> (simcoe street and front street节点) -> (Scaddabush and front street节点) -> (Boston Pizza and front street节点) -> Boston Pizza，总距离约969米。"
+        },
+        {
+          "question": "从Boston Pizza到Second Cup，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：Boston Pizza -> Second Cup，总距离约77米。"
+        },
+        {
+          "question": "从Second Cup到Aroma Espresso Bar，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：Second Cup -> (Boston Pizza and Starbucks节点) -> (Boston Pizza and front street节点) -> (Scaddabush and front street节点) -> (simcoe street and front street节点) -> (simcoe street and Aroma Espresso Bar节点) -> Aroma Espresso Bar，总距离约808米。"
+        },
+        {
+          "question": "从Aroma Espresso Bar到RBC Royal Bank，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：Aroma Espresso Bar -> (simcoe street and Aroma Espresso Bar节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (St. Louis Bar and spadina avenue节点) -> (St. Louis Bar and spadina avenue节点) -> (RBC Royal Bank and spadina avenue节点) -> RBC Royal Bank，总距离约1132米。"
+        }
+      ],
+      "completed_at": "2025-12-25T16:17:46.078401"
+    },
+    "context_text": "# 第三种记忆map描述\n## 节点列表\nNODE[id,类型,附加属性，ij坐标]\n[栅格参数]\n- grid_size: 30\nNODE[1,POI,name=Boston Pizza，（21，13）]\nNODE[2,POI,name=Second Cup，（23，14）]\nNODE[3,POI,name=Starbucks，（24，12）]\nNODE[4,POI,name=259 host ...a fine indian restaurant，（23，8）]\nNODE[5,POI,name=Tim Hortons，（19，6）]\nNODE[6,POI,name=St. Louis Bar & Grill，（11，9）]\nNODE[7,POI,name=RBC Royal Bank，（10，1）]\nNODE[8,POI,name=The Rec Room，（11，17）]\nNODE[9,POI,name=Swiss Chalet，（9，17）]\nNODE[10,POI,name=Wild Wing，（10，19）]\nNODE[11,POI,name=Aroma Espresso Bar，（16，22）]\nNODE[12,POI,name=Jack Astor's，（24，22）]\nNODE[13,POI,name=Scaddabush，（23，18）]\nNODE[14,ROAD,name=Starbucks and Second Cup节点，（25，13）]\nNODE[15,ROAD,name=indian restaurant道路节点，（21，7）]\nNODE[16,ROAD,name=Tim Hortons and indian restaurant节点，（19，7）]\nNODE[17,ROAD,name=Tim Hortons and front street节点，（18，6）]\nNODE[18,ROAD,name=front street西节点，（17，3）]\nNODE[19,ROAD,name=spadina avenue节点，（13，3）]\nNODE[20,ROAD,name=RBC Royal Bank and spadina avenue节点，（12，3）]\nNODE[21,ROAD,name=St. Louis Bar and spadina avenue节点，（10，4）]\nNODE[22,ROAD,name=位置_21，（9，10）]\nNODE[23,ROAD,name=位置_22，（10，12）]\nNODE[24,ROAD,name=位置_23，（10，14）]\nNODE[25,ROAD,name=bremner and The Rec Room节点，（13，16）]\nNODE[26,ROAD,name=位置_27，（10，14）]\nNODE[27,ROAD,name=位置_28，（10，12）]\nNODE[28,ROAD,name=位置_29，（9，10）]\nNODE[29,ROAD,name=spadina avenue南节点，（2，5）]\nNODE[30,ROAD,name=queens and Swiss Chalet节点，（7，17）]\nNODE[31,ROAD,name=queens and Wild Wing节点，（8，19）]\nNODE[32,ROAD,name=位置_43，（9，10）]\nNODE[33,ROAD,name=位置_44，（10，12）]\nNODE[34,ROAD,name=位置_45，（10，14）]\nNODE[35,ROAD,name=simcoe street and Aroma Espresso Bar节点，（15，21）]\nNODE[36,ROAD,name=位置_51，（10，14）]\nNODE[37,ROAD,name=位置_52，（10，12）]\nNODE[38,ROAD,name=位置_53，（9，10）]\nNODE[39,ROAD,name=queens and simcoe street节点，（8，22）]\nNODE[40,ROAD,name=queens and Starbucks节点，（8，26）]\nNODE[41,ROAD,name=indian restaurant and front street节点，（18，7）]\nNODE[42,ROAD,name=Starbucks and front street节点，（19，11）]\nNODE[43,ROAD,name=Boston Pizza and front street节点，（20，13）]\nNODE[44,ROAD,name=Scaddabush and front street节点，（21，18）]\nNODE[45,ROAD,name=simcoe street and front street节点，（21，19）]\nNODE[46,ROAD,name=front street and Jack Astor's节点，（23，22）]\nNODE[47,ROAD,name=simcoe street and Starbucks节点，（26，18）]\n\n## 道路列表\nROAD[道路坐标]\nROAD[（2，5），（2，6），（3，5），（3，7），（3，8），（4，5），（4，9），（4，10），（4，11），（5，5），（5，12），（5，13），（6，4），（6，14），（6，15），（7，4），（7，16），（7，17），（8，4），（8，17），（8，18），（8，19），（8，20），（8，21），（8，22），（8，23），（8，24），（8，25），（8，26），（9，4），（9，10），（9，17），（9，19），（9，26），（10，1），（10，4），（10，5），（10，6），（10，10），（10，11），（10，12），（10，13），（10，14），（10，19），（10，27），（11，2），（11，4），（11，7），（11，8），（11，9），（11，15），（11，17），（12，3），（12，15），（12，16），（13，3），（13，16），（13，17），（14，3），（14，18），（14，19），（15，3），（15，20），（15，21），（16，3），（16，22），（17，3），（17，4），（18，5），（18，6），（18，7），（18，8），（18，9），（19，6），（19，7），（19，10），（19，11），（20，7），（20，12），（20，13），（20，14），（20，15），（21，7），（21，13），（21，16），（21，17），（21，18），（21，19），（22，8），（22，14），（22，18），（22，19），（22，20），（22，21），（23，8），（23，9），（23，14），（23，18），（23，19），（23，22），（24，10），（24，11），（24，12），（24，13），（24，14），（24，18），（24，22），（25，13），（25，14），（25，18），（26，15），（26，16），（26，17），（26，18）]",
+    "context_mode": "map"
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "region": "多伦多CN塔",
+  "model": "deepseek",
+  "memory_mode": "map",
+  "exploration_report": {
+    "total_distance": 2040,
+    "exploration_time": 0,
+    "poi_count": 135
+  },
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 17,
+      "total_questions": 24,
+      "accuracy": 70.83333333333334,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 6,
+          "total": 8,
+          "percentage": 75.0
+        },
+        "空间距离估算": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "邻近关系判断": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        },
+        "POI密度识别": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "路径规划": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Boston Pizza相对于The Rec Room在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "grid_size=68米  \n根据节点列表，Boston Pizza坐标为(12,9)，The Rec Room坐标为(7,11)。  \n计算坐标差：Δi = 12‑7 = 5（向北为正），Δj = 9‑11 = ‑2（向东为正，负值表示向西）。  \n因此Boston Pizza位于The Rec Room的北偏西方向。  \n按方位角标准：正北为0°，顺时针递增，北偏西对应西北象限（270°‑360°或0°‑90°的北侧偏西），故为西北方向。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Boston Pizza位于The Rec Room的西北面。"
+        },
+        {
+          "question": "Second Cup相对于Boston Pizza在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "grid_size=68米  \n根据节点列表，Boston Pizza坐标为(12,9)，Second Cup坐标为(13,9)。计算坐标差：Δi=13-12=1（向北），Δj=9-9=0（向东无变化）。因此Second Cup位于Boston Pizza的正北方向。  \n由于方位角以正北为0°、顺时针递增，正北方向对应0°，故Second Cup相对于Boston Pizza的方向为0°（正北）。  \n在选项中，正北属于“东北”象限（0°至90°之间），因此选择A（东北）。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Second Cup位于Boston Pizza的东北面。"
+        },
+        {
+          "question": "Aroma Espresso Bar相对于Second Cup在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "grid_size=68米  \n根据节点列表，Aroma Espresso Bar（节点10）坐标为（9，15），Second Cup（节点2）坐标为（13，9）。  \n计算坐标差：Δi = 9 - 13 = -4（向南），Δj = 15 - 9 = +6（向东）。  \n由于Δi为负（南向）、Δj为正（东向），因此Aroma Espresso Bar位于Second Cup的东南方向。  \n方位角计算：atan2(Δj, Δi)需注意坐标系i向北递增，实际向量为（-4, +6），转换为地理方位角约为123.7°（东南象限），符合东南方向。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Aroma Espresso Bar位于Second Cup的东南面。"
+        },
+        {
+          "question": "RBC Royal Bank相对于Aroma Espresso Bar在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "grid_size=68米  \n根据节点列表，RBC Royal Bank（节点15）坐标为（6，1），Aroma Espresso Bar（节点10）坐标为（9，15）。  \n坐标差 Δi = 6 - 9 = -3（向南3格），Δj = 1 - 15 = -14（向西14格）。  \n由于 i 向北递增、j 向东递增，负的 Δi 表示向南，负的 Δj 表示向西，因此 RBC Royal Bank 位于 Aroma Espresso Bar 的西南方向。  \n依据道路列表，存在连通路径（如 ROAD[（9，15），（9，14），…，（6，1）] 等），但方向判断仅需坐标差即可确定。",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "RBC Royal Bank位于Aroma Espresso Bar的西南面。"
+        },
+        {
+          "question": "The Rec Room相对于Boston Pizza在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "grid_size=68米  \n根据节点列表，Boston Pizza坐标为(12,9)，The Rec Room坐标为(7,11)。计算坐标差：Δi = 7-12 = -5（向南5格），Δj = 11-9 = 2（向东2格）。因此The Rec Room位于Boston Pizza的南偏东方向。按方位角标准，正北为0°顺时针递增，向量角度为arctan(Δj/|Δi|) = arctan(2/5) ≈ 21.8°，位于第一象限（0°~90°）内，属于东南方向。故答案为东南（B）。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "The Rec Room位于Boston Pizza的东南面。"
+        },
+        {
+          "question": "Boston Pizza相对于Second Cup在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "grid_size=68米  \n根据节点列表，Boston Pizza坐标为(12,9)，Second Cup坐标为(13,9)。计算坐标差：Δi = 12‑13 = ‑1（向南1格），Δj = 9‑9 = 0（东西无偏移）。因此Boston Pizza位于Second Cup的正南方向。  \n按照方位角标准（正北为0°顺时针递增），正南为180°。但本题选项为象限方向，正南属于“南”，而坐标差Δi为负、Δj为零，严格而言是正南。然而选项中无正南，最接近的是“西北”或“西南”。由于Δj=0，仅从东西方向看无偏，但结合地图通常将正南归为“南偏西”或“南偏东”不适用。  \n检查道路列表：ROAD[（12，9），（13，9），（14，9）]显示两节点直接相连，且(12,9)在(13,9)的北向（因i值更小）。实际上i向北递增，故(12,9)在(13,9)的北侧，即Boston Pizza在Second Cup的正北。但坐标差计算Δi=‑1表示向南，这与i向北递增的约定矛盾。  \n依据节点坐标定义“i向北递增”，则(12,9)的i值小于(13,9)，应位于其南侧。然而道路序列（12,9）→（13,9）表示从Boston Pizza到Second Cup是向南移动（i增加），这与“i向北递增”一致。因此Boston Pizza（i=12）在Second Cup（i=13）的北侧（正北）。  \n正北方向属于“北”，选项中无正北，最接近的是“西北”（北偏西）。由于Δj=0，无东西偏移，故严格为正北，但只能选择最接近的选项C（西北）。  \n综上，基于栅格坐标差（Δi=‑1, Δj=0）和i向北递增的坐标系，Boston Pizza在Second Cup的正北方向，对应选项C（西北）为最接近的表述。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Boston Pizza位于Second Cup的西南面。"
+        },
+        {
+          "question": "Second Cup相对于Aroma Espresso Bar在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "grid_size=68米  \n根据节点列表，Second Cup坐标为(13,9)，Aroma Espresso Bar坐标为(9,15)。  \n计算坐标差：Δi = 13-9 = 4（向北），Δj = 9-15 = -6（向西）。  \n因此Second Cup位于Aroma Espresso Bar的北偏西方向。  \n按方位角标准，正北为0°、顺时针递增，向量角度约为arctan(|-6|/4)≈56.3°偏西，即约303.7°，属于西北象限（315°~45°为北，270°~90°含西北）。  \n故Second Cup在Aroma Espresso Bar的西北方向。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Second Cup位于Aroma Espresso Bar的西北面。"
+        },
+        {
+          "question": "Aroma Espresso Bar相对于RBC Royal Bank在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "grid_size=68米  \n根据节点列表，Aroma Espresso Bar（NODE[10]）坐标为（9，15），RBC Royal Bank（NODE[15]）坐标为（6，1）。  \n坐标差 Δi = 9‑6 = 3（向北为正），Δj = 15‑1 = 14（向东为正）。  \n因 i 向北递增、j 向东递增，Δi>0 且 Δj>0，故 Aroma Espresso Bar 位于 RBC Royal Bank 的东北方向。  \n但需注意：题目选项中的“东北”对应 Δi>0、Δj>0，与计算结果一致，故选 B（东北）。  \n\n（注：原题选项为 A.东北 B.东南 C.西北 D.西南，计算结果为东北，对应选项 A。）",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Aroma Espresso Bar位于RBC Royal Bank的东北面。"
+        },
+        {
+          "question": "The Rec Room到Second Cup的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "grid_size=68米  \n根据节点列表，The Rec Room坐标为(7,11)，Second Cup坐标为(13,9)。  \n计算栅格坐标差：Δi = 13-7 = 6，Δj = 9-11 = -2。  \n直线距离近似为 √(|Δi|²+|Δj|²)×grid_cell_size_m = √(6²+2²)×68 ≈ √40×68 ≈ 6.324×68 ≈ 430米。  \n该距离落在400-800米区间，故选择C。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "The Rec Room到Second Cup的直线距离约为508米。"
+        },
+        {
+          "question": "Boston Pizza到Aroma Espresso Bar的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "grid_size=68米  \n根据节点列表，Boston Pizza坐标为(12,9)，Aroma Espresso Bar坐标为(9,15)。  \n计算栅格坐标差：Δi = 9-12 = -3（向南3格），Δj = 15-9 = 6（向东6格）。  \n直线距离近似为 √(|Δi|² + |Δj|²) × grid_cell_size_m = √(3² + 6²) × 68 ≈ √45 × 68 ≈ 6.708 × 68 ≈ 456米。  \n该距离落在200-400米范围之外，但更接近400-800米的下限。然而，选项B为200-400米，C为400-800米，456米应属于C范围。但根据计算，456米在400-800米区间，因此正确答案应为C。  \n\n**注意**：计算结果显示456米，属于400-800米范围，故应选C。但用户提供的选项B为200-400米，与计算结果不符。根据计算，正确选项应为C。  \n\n**最终答案基于计算**：456米 ∈ (400, 800)，故选C。  \n\n答案：C",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Boston Pizza到Aroma Espresso Bar的直线距离约为468米。"
+        },
+        {
+          "question": "Second Cup到RBC Royal Bank的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "grid_size=68米  \n根据节点列表，Second Cup坐标为(13,9)，RBC Royal Bank坐标为(6,1)。  \n计算栅格坐标差：Δi = 6-13 = -7（向南7格），Δj = 1-9 = -8（向西8格）。  \n直线距离近似为 √(|Δi|²+|Δj|²)×grid_cell_size_m = √(7²+8²)×68 ≈ √(49+64)×68 ≈ √113×68 ≈ 10.63×68 ≈ 723米。  \n723米落在400-800米区间，故选择C。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Second Cup到RBC Royal Bank的直线距离约为766米。"
+        },
+        {
+          "question": "Aroma Espresso Bar到Scaddabush的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "grid_size=68米  \n根据节点列表，Aroma Espresso Bar坐标为(9,15)，Scaddabush坐标为(13,12)。  \n坐标差Δi=13-9=4（向北），Δj=12-15=-3（向东负值即向西）。  \n直线距离近似为√(|Δi|²+|Δj|²)×grid_cell_size_m = √(4²+3²)×68 = √25×68 = 5×68 = 340米。  \n该距离落在200-400米区间，故选择C。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Aroma Espresso Bar到Scaddabush的直线距离约为342米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离The Rec Room最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "grid_size=68米  \n根据节点列表，The Rec Room（节点7）坐标为(7,11)，Aroma Espresso Bar（节点10）坐标为(9,15)。  \n两点的栅格坐标差为Δi=2（向南）、Δj=4（向东），直线距离近似为√(2²+4²)×68≈√20×68≈4.472×68≈304米。  \n在道路列表中，存在ROAD[(8,11),(8,12),(9,13),(9,14)]和ROAD[(9,14),(9,15)]等路径，表明(8,11)与(9,15)之间可通过道路连通，且(8,11)与The Rec Room所在(7,11)相邻（ROAD[(8,11),(7,11)]），因此Aroma Espresso Bar是三个选项中距离The Rec Room最近的POI。  \n其他选项：Boston Pizza(12,9)与(7,11)的坐标差Δi=5、Δj=-2，直线距离≈√29×68≈5.385×68≈366米；Second Cup(13,9)与(7,11)的坐标差Δi=6、Δj=-2，直线距离≈√40×68≈6.325×68≈430米，均大于Aroma Espresso Bar的近似距离。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Aroma Espresso Bar距离The Rec Room最近，约315米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Boston Pizza最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "grid_size=68米  \n根据节点列表，Boston Pizza坐标为(12,9)，Second Cup坐标为(13,9)，两者在栅格中仅相差Δi=1、Δj=0，即向北1个栅格，直线距离约为1×68=68米。  \nAroma Espresso Bar坐标为(9,15)，与Boston Pizza差Δi=-3、Δj=6，直线距离约为(|-3|+|6|)×68=9×68=612米。  \nRBC Royal Bank坐标为(6,1)，与Boston Pizza差Δi=-6、Δj=-8，直线距离约为(|-6|+|-8|)×68=14×68=952米。  \n因此Second Cup距离最近。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Second Cup距离Boston Pizza最近，约77米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Second Cup最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "grid_size=68米  \n根据节点列表坐标：Second Cup在(13,9)，Aroma Espresso Bar在(9,15)，RBC Royal Bank在(6,1)，Scaddabush在(13,12)。  \n计算各点与Second Cup的栅格坐标差（Δi, Δj）：  \n- Aroma Espresso Bar：(9-13, 15-9)=(-4,6)，距离近似为(|-4|+|6|)×68=10×68=680米  \n- RBC Royal Bank：(6-13, 1-9)=(-7,-8)，距离近似为(|-7|+|-8|)×68=15×68=1020米  \n- Scaddabush：(13-13, 12-9)=(0,3)，距离近似为(|0|+|3|)×68=3×68=204米  \n比较得RBC Royal Bank的近似距离1020米最远，故选择B。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "RBC Royal Bank距离Second Cup最远，约766米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Aroma Espresso Bar最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "grid_size=68米  \n根据节点列表，Aroma Espresso Bar坐标为(9,15)。  \n- RBC Royal Bank坐标为(6,1)：Δi=3（北向差），Δj=14（东向差）；直线栅格距离为|3|+|14|=17格，约17×68=1156米。  \n- Scaddabush坐标为(13,12)：Δi=4（南向差），Δj=3（西向差）；直线栅格距离为|4|+|3|=7格，约7×68=476米。  \n- St. Louis Bar & Grill坐标为(7,6)：Δi=2（北向差），Δj=9（西向差）；直线栅格距离为|2|+|9|=11格，约11×68=748米。  \n比较三者，RBC Royal Bank的直线栅格距离（17格）最大，因此距离Aroma Espresso Bar最远。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "RBC Royal Bank距离Aroma Espresso Bar最远，约930米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "grid_size=68米  \n根据节点列表坐标，The Rec Room位于(7,11)，其周围存在多个POI：  \n- Swiss Chalet在(5,11)，Δi=-2, Δj=0，距离约2×68=136米  \n- Wild Wing在(6,13)，Δi=-1, Δj=+2，距离约(1+2)×68≈204米  \n- St. Louis Bar & Grill在(7,6)，Δi=0, Δj=-5，距离约5×68=340米  \n- Aroma Espresso Bar在(9,15)，Δi=+2, Δj=+4，距离约(2+4)×68≈408米  \n- 此外，道路列表显示(8,11)为The Rec Room的邻接道路节点，该节点通过ROAD路径可连通至多个其他POI节点。  \n\n相比之下：  \n- Boston Pizza(12,9)周围仅有Second Cup(13,9)和Starbucks(12,8)较近；  \n- RBC Royal Bank(6,1)周边无其他POI节点；  \n- Aroma Espresso Bar(9,15)周围仅有Starbucks(6,18)、Jack Astor's(14,15)等少数POI。  \n\nThe Rec Room在栅格坐标中与多个POI的直线栅格距离更小，且通过道路网络连通密集，因此其周围POI密度最高。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Boston Pizza周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "grid_size=68米  \n根据节点列表坐标，The Rec Room位于(7,11)，其周围存在多个POI：  \n- Swiss Chalet在(5,11)，Δi=-2、Δj=0，距离约2×68=136米（正南方向）  \n- Wild Wing在(6,13)，Δi=-1、Δj=+2，距离约(1+2)×68≈204米（东南方向）  \n- St. Louis Bar & Grill在(7,6)，Δi=0、Δj=-5，距离约5×68=340米（正西方向）  \n- Aroma Espresso Bar在(9,15)，Δi=+2、Δj=+4，距离约(2+4)×68=408米（东北方向）  \n- 此外，道路节点37(8,11)与The Rec Room直接邻接，并通过ROAD路径连接至上述POI。  \n相比之下，Scaddabush(13,12)周围仅有Jack Astor's(14,15)较近；RBC Royal Bank(6,1)周边无邻近POI；Aroma Espresso Bar(9,15)周围仅有The Rec Room较近。因此The Rec Room周围POI密度最高。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Scaddabush周围的POI密度最高，500米范围内有6个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "grid_size=68米  \n根据节点列表，RBC Royal Bank（节点15）位于坐标（6,1），其周围最近的其他POI为：  \n- St. Louis Bar & Grill（节点6）位于（7,6），栅格差Δi=1、Δj=5，直线距离约|1|×68+|5|×68=408米，且需通过道路连通（如ROAD[（6,1）→（7,2）→（6,3）→…→（7,6）]）。  \n- Tim Hortons（节点5）位于（11,4），Δi=5、Δj=3，直线距离约|5|×68+|3|×68=544米。  \n- 其他POI如Boston Pizza（12,9）、Second Cup（13,9）等更远（Δi≥6、Δj≥8）。  \n相比之下，The Rec Room（7,11）周围有Swiss Chalet（5,11）、Wild Wing（6,13）等邻近POI（Δi≤2、Δj≤2）；Aroma Espresso Bar（9,15）邻近Jack Astor's（14,15）、Starbucks（6,18）等；St. Louis Bar & Grill（7,6）邻近The Rec Room（7,11）、RBC Royal Bank（6,1）等。  \nRBC Royal Bank的最近邻POI距离明显更大，且周围可通行栅格中POI节点稀少，因此其周围POI密度最低。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "RBC Royal Bank周围的POI密度最低，500米范围内只有2个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "grid_size=68米  \n根据节点列表，RBC Royal Bank位于(6,1)，其周围（上下左右邻接栅格）没有其他POI节点。其他选项的POI坐标分别为：The Rec Room(7,11)、Aroma Espresso Bar(9,15)、St. Louis Bar & Grill(7,6)。在道路连通规则下，RBC Royal Bank仅通过ROAD[（6,1），（7,2）]与道路节点(7,2)相连，而(7,2)为ROAD节点，最近的POI（如St. Louis Bar & Grill在(7,6)）需经过至少4步（Δi=1, Δj=5）才能到达，周围POI密度明显低于其他选项。因此RBC Royal Bank周围的POI密度最低。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "The Rec Room周围的POI密度最低，500米范围内只有4个其他POI。"
+        },
+        {
+          "question": "从The Rec Room到Boston Pizza，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "grid_size=68米\n\n根据MAP记忆中的节点坐标和道路连通关系分析：\n\n1. **起点与终点坐标**：\n   - The Rec Room：NODE[7,POI,name=The Rec Room，（7，11）]\n   - Boston Pizza：NODE[1,POI,name=Boston Pizza，（12，9）]\n   - 坐标差：Δi=5（北），Δj=-2（西）\n\n2. **各选项路径分析**：\n   - **选项A**：路径为 The Rec Room → NODE[37]（8,11）→ NODE[60]（9,14）→ NODE[63]（12,13）→ NODE[64]（12,12）→ NODE[78]（11,9）→ Boston Pizza（12,9）。\n     检查道路连通性：\n     - ROAD[（7，11），（8，11）] 存在（道路列表第13条）\n     - ROAD[（8，11），（8，12），（9，13），（9，14）] 存在（第33条）\n     - ROAD[（9，14），（10，14），（11，13），（12，13）] 存在（第37条）\n     - ROAD[（12，13），（12，12）] 存在（第38条）\n     - ROAD[（12，12），（12，11），（11，10），（11，9）] 存在（第49条）\n     - ROAD[（11，9），（12，9）] 存在（第78条与NODE[78]坐标（11,9）至（12,9）连通）\n     总步数：从（7,11）到（12,9）沿上述路径共约12步，距离≈12×68=816米。\n\n   - **选项B**：路径包含 NODE[79]（11,8）、NODE[89]（5,15）、NODE[80]（10,5）、NODE[60]（9,14）至 Boston Pizza。\n     关键问题：NODE[89]（5,15）与 NODE[80]（10,5）之间无直接连通道路（坐标差Δi=5, Δj=-10，非邻接），且道路列表中未见连续路径。依据不足，无法构成有效路径。\n\n   - **选项C**：路径包含 NODE[31]（6,3）、NODE[22]（12,5）、NODE[63]（12,13）、NODE[25]（11,5）至 Boston Pizza。\n     关键问题：NODE[31]（6,3）至 NODE[22]（12,5）需经过多步，但道路列表中未见直接连通；且 NODE[25]（11,5）至 Boston Pizza（12,9）无直接道路（需经 NODE[78] 等）。依据不足。\n\n   - **选项D**：路径包含 NODE[17]（14,9）、NODE[25]（11,5）、NODE[27]（10,4）至 Boston Pizza。\n     关键问题：NODE[17]（14,9）至 NODE[25]（11,5）无直接连通（坐标差Δi=-3, Δj=-4）；且 NODE[27]（10,4）至 Boston Pizza（12,9）无直接道路。依据不足。\n\n3. **结论**：仅选项A的路径在道路列表中全部连通，且步数较少（约12步）。其他选项均存在断裂或未连通的节点，无法构成有效路径。因此最短路径为A。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：The Rec Room -> (bremner and The Rec Room节点) -> (simcoe street and Aroma Espresso Bar节点) -> (simcoe street and front street节点) -> (Scaddabush and front street节点) -> (Boston Pizza and front street节点) -> Boston Pizza，总距离约969米。"
+        },
+        {
+          "question": "从Boston Pizza到Second Cup，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "grid_size=68米  \n根据节点列表，Boston Pizza坐标为(12,9)，Second Cup坐标为(13,9)。两者在栅格中相邻（Δi=1，Δj=0），且ROAD[（12，9），（13，9），（14，9）]直接连通两节点。路径步数为1步，距离约1×68=68米。  \n选项A、C、D均经过多个中间节点，路径步数远大于1步，因此B为最短路径。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：Boston Pizza -> Second Cup，总距离约77米。"
+        },
+        {
+          "question": "从Second Cup到Aroma Espresso Bar，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "grid_size=68米  \n\n首先确认起点Second Cup坐标为(13,9)，终点Aroma Espresso Bar坐标为(9,15)。  \n\n**选项C路径分析**（基于道路列表中的连通段）：  \n1. Second Cup(13,9) → Boston Pizza and Starbucks节点(12,8)：  \n   - 道路列表中有ROAD[(13,9),(14,9)]及ROAD[(14,9),(13,10),…,(12,8)]等，但需检查(13,9)到(12,8)的直接连通。从节点列表知Boston Pizza and Starbucks节点(12,8)与Second Cup(13,9)相邻（Δi=-1, Δj=-1），但道路规则要求上下左右邻接，此对角移动不满足。实际上道路列表中存在ROAD[(12,9),(13,9),(14,9)]及ROAD[(14,9),(13,10),…,(12,11),…,(11,8),(12,8)]等长路径，但选项C中直接写“Second Cup → Boston Pizza and Starbucks节点”在道路列表中无直接一步路径，需通过中间节点。不过选项C整体路径在道路列表中可找到对应段：  \n     - ROAD[(13,9),(14,9)]（Second Cup到Starbucks and Second Cup节点）  \n     - ROAD[(14,9),(13,10),…,(12,8)]（到Boston Pizza and Starbucks节点）  \n   但选项C未列Starbucks and Second Cup节点，此处依据不足，但后续段可连通。  \n\n2. 后续节点：Boston Pizza and Starbucks节点(12,8) → Boston Pizza and front street节点(11,9)：  \n   - 道路列表有ROAD[(12,8),(12,9)]及ROAD[(12,9),(11,9)]，可连通。  \n\n3. Boston Pizza and front street节点(11,9) → Scaddabush and front street节点(12,12)：  \n   - 道路列表有ROAD[(11,9),(11,10),(12,11),(12,12)]，可连通。  \n\n4. Scaddabush and front street节点(12,12) → simcoe street and front street节点(12,13)：  \n   - 道路列表有ROAD[(12,12),(12,13)]，可连通。  \n\n5. simcoe street and front street节点(12,13) → simcoe street and Aroma Espresso Bar节点(9,14)：  \n   - 道路列表有ROAD[(12,13),(11,13),(10,14),(9,14)]，可连通。  \n\n6. simcoe street and Aroma Espresso Bar节点(9,14) → Aroma Espresso Bar(9,15)：  \n   - 道路列表有ROAD[(9,14),(9,15)]，可连通。  \n\n总步数估算（按坐标差累加）：  \n- (13,9)→(12,8) 需多步（约3步），(12,8)→(11,9) 1步，(11,9)→(12,12) 3步，(12,12)→(12,13) 1步，(12,13)→(9,14) 3步，(9,14)→(9,15) 1步，合计约12步，约816米。  \n\n**其他选项问题**：  \n- A：路径绕经(8,11)、(8,2)、(5,18)等，步数明显更长（约20+步）。  \n- B：路径包含(indian restaurant and front street节点(10,5))到(Boston Pizza and front street节点(11,9))再到(bremner and The Rec Room节点(8,11))，方向迂回，步数多。  \n- D：路径中(queens and simcoe street节点(5,15))到(indian restaurant and front street节点(10,5))无直接连通道路（道路列表未见连续段），且(front street西节点(10,2))到Aroma Espresso Bar(9,15)无连通，依据不足。  \n\n因此，选项C在道路列表中连通段完整且路径相对最短。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：Second Cup -> (Boston Pizza and Starbucks节点) -> (Boston Pizza and front street节点) -> (Scaddabush and front street节点) -> (simcoe street and front street节点) -> (simcoe street and Aroma Espresso Bar节点) -> Aroma Espresso Bar，总距离约808米。"
+        },
+        {
+          "question": "从Aroma Espresso Bar到RBC Royal Bank，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "grid_size=68米\n\n根据节点列表，Aroma Espresso Bar坐标为(9,15)，RBC Royal Bank坐标为(6,1)。选项A路径的节点序列在道路列表中可找到连通依据：\n1. Aroma Espresso Bar(9,15)到queens and simcoe street节点(5,15)：存在ROAD[(9,15),(8,16),(7,17),(6,18)]和ROAD[(6,18),(5,18),(5,17),(5,16),(5,15)]，可连通，但需绕行。实际查看道路列表，有ROAD[(9,15),(9,14),(9,13),(8,12),(8,11)]及ROAD[(8,11),(8,10),(8,9),(7,8),(7,7),(7,6),(6,5),(6,4),(6,3)]和ROAD[(6,3),(5,3),(4,3),(3,4),(2,4),(1,4)]及ROAD[(1,4),(1,5),(2,6),(2,7),(3,8),(3,9),(4,10),(4,11)]及ROAD[(4,11),(4,12),(4,13)]及ROAD[(4,13),(4,14),(5,15)]，形成连通路径。\n2. queens and simcoe street节点(5,15)到St. Louis Bar and spadina avenue节点(6,3)：有ROAD[(5,15),(4,14),(4,13)]及ROAD[(4,13),(4,12),(4,11)]及ROAD[(4,11),(4,10),(3,9),(3,8),(2,7),(2,6),(1,5),(1,4)]及ROAD[(1,4),(2,4),(3,4),(4,3),(5,3),(6,3)]连通。\n3. St. Louis Bar and spadina avenue节点(6,3)到RBC Royal Bank and spadina avenue节点(7,2)：有ROAD[(6,3),(7,2)]直接连通。\n4. RBC Royal Bank and spadina avenue节点(7,2)到Starbucks and Second Cup节点(14,9)：依据不足，道路列表中未见直接连通路径，且方向相反，此段可能绕远。\n5. 后续到RBC Royal Bank更不合理。\n\n但比较各选项，其他选项包含明显无效或重复节点（如D中bremner and The Rec Room节点重复四次）或方向绕远。仅选项A的节点序列在坐标上相对接近直线方向：从(9,15)到(6,1)的Δi=-3、Δj=-14，直线栅格距离约为(|-3|+|-14|)×68=1156米。A路径虽非最优，但在给定选项中，其节点序列整体向西南方向移动，相对其他选项更直接。\n\n其他选项问题：B、C均包含向东或向北的节点（如Scaddabush(13,12)、front street and Jack Astor's(13,15)等），明显绕远；D包含重复节点且路径迂回。因此A为相对最短。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "最短路径是：Aroma Espresso Bar -> (simcoe street and Aroma Espresso Bar节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (St. Louis Bar and spadina avenue节点) -> (St. Louis Bar and spadina avenue节点) -> (RBC Royal Bank and spadina avenue节点) -> RBC Royal Bank，总距离约1132米。"
+        }
+      ],
+      "completed_at": "2025-12-20T12:32:59.013360"
+    },
+    "context_mode": "map"
+  },
+  "context_text": "# 第三种记忆map描述\n## 节点列表\nNODE[id,类型,附加属性，ij坐标]\n[栅格参数]\n- grid_size: 30\nNODE[1,POI,name=Boston Pizza，（21，13）]\nNODE[2,POI,name=Second Cup，（23，14）]\nNODE[3,POI,name=Starbucks，（26，16）]\nNODE[4,POI,name=259 host ...a fine indian restaurant，（23，8）]\nNODE[5,POI,name=Tim Hortons，（19，6）]\nNODE[6,POI,name=St. Louis Bar & Grill，（11，9）]\nNODE[7,POI,name=The Rec Room，（11，17）]\nNODE[8,POI,name=Swiss Chalet，（9，17）]\nNODE[9,POI,name=Wild Wing，（10，19）]\nNODE[10,POI,name=Aroma Espresso Bar，（16，22）]\nNODE[11,POI,name=Jack Astor's，（24，22）]\nNODE[12,POI,name=Scaddabush，（23，18）]\nNODE[13,POI,name=RBC Royal Bank，（10，1）]\nNODE[14,ROAD,name=Starbucks and Second Cup节点，（25，14）]\nNODE[15,ROAD,name=indian restaurant道路节点，（21，7）]\nNODE[16,ROAD,name=Tim Hortons and indian restaurant节点，（19，7）]\nNODE[17,ROAD,name=Tim Hortons and front street节点，（18，6）]\nNODE[18,ROAD,name=front street西节点，（17，3）]\nNODE[19,ROAD,name=spadina avenue节点，（13，3）]\nNODE[20,ROAD,name=RBC Royal Bank and spadina avenue节点，（11，2）]\nNODE[21,ROAD,name=St. Louis Bar and spadina avenue节点，（10，5）]\nNODE[22,ROAD,name=位置_15，（9，10）]\nNODE[23,ROAD,name=位置_16，（10，12）]\nNODE[24,ROAD,name=位置_17，（10，14）]\nNODE[25,ROAD,name=bremner and The Rec Room节点，（13，16）]\nNODE[26,ROAD,name=位置_21，（10，14）]\nNODE[27,ROAD,name=位置_22，（10，12）]\nNODE[28,ROAD,name=位置_23，（9，10）]\nNODE[29,ROAD,name=spadina avenue南节点，（2，5）]\nNODE[30,ROAD,name=queens and Swiss Chalet节点，（7，17）]\nNODE[31,ROAD,name=queens and Wild Wing节点，（8，19）]\nNODE[32,ROAD,name=位置_37，（9，10）]\nNODE[33,ROAD,name=位置_38，（10，12）]\nNODE[34,ROAD,name=位置_39，（10，14）]\nNODE[35,ROAD,name=simcoe street and Aroma Espresso Bar节点，（15，21）]\nNODE[36,ROAD,name=位置_45，（10，14）]\nNODE[37,ROAD,name=位置_46，（10，12）]\nNODE[38,ROAD,name=位置_47，（9，10）]\nNODE[39,ROAD,name=queens and simcoe street节点，（8，22）]\nNODE[40,ROAD,name=queens and Starbucks节点，（8，26）]\nNODE[41,ROAD,name=indian restaurant and front street节点，（18，7）]\nNODE[42,ROAD,name=Starbucks and front street节点，（19，11）]\nNODE[43,ROAD,name=Boston Pizza and front street节点，（20，13）]\nNODE[44,ROAD,name=Scaddabush and front street节点，（21，18）]\nNODE[45,ROAD,name=simcoe street and front street节点，（21，19）]\nNODE[46,ROAD,name=front street and Jack Astor's节点，（23，22）]\nNODE[47,ROAD,name=simcoe street and Starbucks节点，（26，18）]\nNODE[48,ROAD,name=位置_101，（8，4）]\n\n## 道路列表\nROAD[道路坐标]\nROAD[（2，5），（2，6），（3，5），（3，7），（3，8），（4，5），（4，9），（4，10），（4，11），（5，5），（5，12），（5，13），（6，4），（6，14），（6，15），（7，4），（7，16），（7，17），（8，4），（8，17），（8，18），（8，19），（8，20），（8，21），（8，22），（8，23），（8，24），（8，25），（8，26），（9，4），（9，10），（9，17），（9，19），（9，26），（10，1），（10，3），（10，4），（10，5），（10，6），（10，10），（10，11），（10，12），（10，13），（10，14），（10，19），（10，27），（11，2），（11，3），（11，4），（11，7），（11，8），（11，9），（11，15），（11，17），（12，3），（12，15），（12，16），（13，3），（13，16），（13，17），（14，3），（14，18），（14，19），（15，3），（15，20），（15，21），（16，3），（16，22），（17，3），（17，4），（18，5），（18，6），（18，7），（18，8），（18，9），（19，6），（19，7），（19，10），（19，11），（20，7），（20，12），（20，13），（20，14），（20，15），（21，7），（21，13），（21，16），（21，17），（21，18），（21，19），（22，8），（22，14），（22，18），（22，19），（22，20），（22，21），（23，8），（23，9），（23，14），（23，18），（23，19），（23，22），（24，10），（24，11），（24，12），（24，14），（24，18），（24，22），（25，13），（25，14），（25，18），（26，15），（26，16），（26，17），（26，18）]"
+}

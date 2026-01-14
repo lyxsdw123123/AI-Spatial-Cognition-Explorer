@@ -1,0 +1,261 @@
+{
+  "region": "罗马斗兽场",
+  "source_file": "罗马斗兽场_gemini_map_report.txt",
+  "evaluation_time": "2025-12-26T03:51:00.099126",
+  "context_text": "# 第三种记忆map描述\n## 节点列表\nNODE[id,类型,附加属性，ij坐标]\n[栅格参数]\n- grid_size: 30\nNODE[1,POI,name=Royal art café，（13，16）]\nNODE[2,POI,name=Gran Caffe Martini & Rossi，（13，15）]\nNODE[3,POI,name=Al Gladiatore，（13，13）]\nNODE[4,POI,name=Cafè Cafè，（11，16）]\nNODE[5,POI,name=La Pace del Cervello，（11，18）]\nNODE[6,POI,name=Oppio Caffè，（17，15）]\nNODE[7,POI,name=La Biga al Colosseo，（19，13）]\nNODE[8,POI,name=药店，（22，12）]\nNODE[9,POI,name=La Base，（21，10）]\nNODE[10,POI,name=Gustando Roma，（19，6）]\nNODE[11,POI,name=咖啡厅，（9，1）]\nNODE[12,POI,name=Biblioteca della Società geografica italiana，（2，14）]\nNODE[13,POI,name=Trattoria Morgana，（19，25）]\nNODE[14,POI,name=Sapori e Delizie，（24，22）]\nNODE[15,POI,name=Il Galeone，（26，18）]\nNODE[16,ROAD,name=saivi and Royal art café节点，（15，16）]\nNODE[17,ROAD,name=saivi and La Pace del Cervello节点，（14，18）]\nNODE[18,ROAD,name=saivi and Oppio Caffè节点，（15，14）]\nNODE[19,ROAD,name=saivi and La Biga al Colosseo节点，（17，12）]\nNODE[20,ROAD,name=La Base and Gustando Roma节点，（21，7）]\nNODE[21,ROAD,name=位置_23，（18，6）]\nNODE[22,ROAD,name=位置_24，（17，7）]\nNODE[23,ROAD,name=位置_25，（16，8）]\nNODE[24,ROAD,name=位置_26，（15，9）]\nNODE[25,ROAD,name=imperial and Gustando Roma节点，（15，10）]\nNODE[26,ROAD,name=位置_28，（16，11）]\nNODE[27,ROAD,name=claudia and Al Gladiatore节点，（8，15）]\nNODE[28,ROAD,name=位置_37，（8，13）]\nNODE[29,ROAD,name=位置_38，（8，10）]\nNODE[30,ROAD,name=位置_39，（8，9）]\nNODE[31,ROAD,name=位置_40，（7，9）]\nNODE[32,ROAD,name=cerchi and 咖啡厅节点，（2，6）]\nNODE[33,ROAD,name=位置_44，（7，9）]\nNODE[34,ROAD,name=位置_45，（8，9）]\nNODE[35,ROAD,name=位置_46，（8，10）]\nNODE[36,ROAD,name=位置_47，（8，13）]\nNODE[37,ROAD,name=claudia and Biblioteca节点，（2，16）]\nNODE[38,ROAD,name=位置_60，（18，15）]\nNODE[39,ROAD,name=位置_61，（17，17）]\nNODE[40,ROAD,name=位置_62，（18，21）]\nNODE[41,ROAD,name=oppio节点，（19，22）]\nNODE[42,ROAD,name=位置_64，（17，23）]\nNODE[43,ROAD,name=merulana and Trattoria Morgana节点，（20，27）]\nNODE[44,ROAD,name=merulana北节点，（24，27）]\nNODE[45,ROAD,name=lanza and Sapori e Delizie节点，（24，25）]\nNODE[46,ROAD,name=lanza and Il Galeone节点，（22，15）]\n\n## 道路列表\nROAD[道路坐标]\nROAD[（2，6），（2，14），（2，15），（2，16），（3，5），（3，7），（3，16），（4，5），（4，7），（4，16），（5，4），（5，8），（5，15），（5，16），（6，3），（6，8），（6，15），（7，2），（7，9），（7，14），（7，15），（8，2），（8，9），（8，10），（8，11），（8，12），（8，13），（8，15），（9，1），（9，15），（10，14），（11，14），（11，16），（11，17），（11，18），（12，13），（12，14），（12，15），（12，18），（13，13），（13，14），（13，15），（13，16），（13，18），（14，16），（14，17），（14，18），（15，9），（15，10），（15，14），（15，15），（15，16），（16，8），（16，11），（16，13），（16，14），（17，7），（17，12），（17，15），（17，17），（17，18），（17，23），（18，6），（18，12），（18，14），（18，15），（18，16），（18，19），（18，20），（18，21），（18，22），（18，24），（19，6），（19，12），（19，13），（19，22），（19，25），（20，6），（20，12），（20，26），（20，27），（21，7），（21，8），（21，9），（21，10），（21，12），（21，27），（22，11），（22，12），（22，15），（22，16），（22，27），（23，16），（23，17），（23，18），（23，19），（23，20），（23，27），（24，16），（24，21），（24，22），（24，23），（24，24），（24，25），（24，26），（24，27），（25，17），（26，18）]",
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 16,
+      "total_questions": 24,
+      "accuracy": 66.66666666666666,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 6,
+          "total": 8,
+          "percentage": 75.0
+        },
+        "空间距离估算": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "邻近关系判断": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "POI密度识别": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "路径规划": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Oppio Caffè相对于La Biga al Colosseo在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Oppio Caffè位于La Biga al Colosseo的东南面。"
+        },
+        {
+          "question": "Royal art café相对于Oppio Caffè在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Royal art café位于Oppio Caffè的东南面。"
+        },
+        {
+          "question": "Gran Caffe Martini & Rossi相对于Royal art café在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Gran Caffe Martini & Rossi位于Royal art café的西北面。"
+        },
+        {
+          "question": "药店相对于Gran Caffe Martini & Rossi在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "药店位于Gran Caffe Martini & Rossi的西北面。"
+        },
+        {
+          "question": "La Biga al Colosseo相对于Oppio Caffè在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "La Biga al Colosseo位于Oppio Caffè的西北面。"
+        },
+        {
+          "question": "Oppio Caffè相对于Royal art café在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Oppio Caffè位于Royal art café的西北面。"
+        },
+        {
+          "question": "Royal art café相对于Gran Caffe Martini & Rossi在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Royal art café位于Gran Caffe Martini & Rossi的东南面。"
+        },
+        {
+          "question": "Gran Caffe Martini & Rossi相对于药店在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Gran Caffe Martini & Rossi位于药店的东南面。"
+        },
+        {
+          "question": "La Biga al Colosseo到Royal art café的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "La Biga al Colosseo到Royal art café的直线距离约为354米。"
+        },
+        {
+          "question": "Oppio Caffè到Gran Caffe Martini & Rossi的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Oppio Caffè到Gran Caffe Martini & Rossi的直线距离约为228米。"
+        },
+        {
+          "question": "Royal art café到药店的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Royal art café到药店的直线距离约为570米。"
+        },
+        {
+          "question": "Gran Caffe Martini & Rossi到Biblioteca della Società geografica italiana的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Gran Caffe Martini & Rossi到Biblioteca della Società geografica italiana的直线距离约为626米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离La Biga al Colosseo最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Oppio Caffè距离La Biga al Colosseo最近，约111米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Oppio Caffè最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Gran Caffe Martini & Rossi距离Oppio Caffè最近，约228米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Royal art café最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Biblioteca della Società geografica italiana距离Royal art café最远，约627米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Gran Caffe Martini & Rossi最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Biblioteca della Società geografica italiana距离Gran Caffe Martini & Rossi最远，约626米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Oppio Caffè周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "La Biga al Colosseo周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Biblioteca della Società geografica italiana周围的POI密度最低，500米范围内只有0个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "药店周围的POI密度最低，500米范围内只有3个其他POI。"
+        },
+        {
+          "question": "从La Biga al Colosseo到Oppio Caffè，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：La Biga al Colosseo -> Oppio Caffè，总距离约111米。"
+        },
+        {
+          "question": "从Oppio Caffè到Royal art café，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：Oppio Caffè -> (saivi and Oppio Caffè节点) -> (saivi and Royal art café节点) -> Royal art café，总距离约405米。"
+        },
+        {
+          "question": "从Royal art café到Gran Caffe Martini & Rossi，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：Royal art café -> Gran Caffe Martini & Rossi，总距离约76米。"
+        },
+        {
+          "question": "从Gran Caffe Martini & Rossi到药店，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：Gran Caffe Martini & Rossi -> (saivi and Royal art café节点) -> (saivi and Royal art café节点) -> (saivi and Oppio Caffè节点) -> (saivi and La Biga al Colosseo节点) -> 药店，总距离约775米。"
+        }
+      ],
+      "completed_at": "2025-12-26T03:50:59.988338"
+    },
+    "context_text": "# 第三种记忆map描述\n## 节点列表\nNODE[id,类型,附加属性，ij坐标]\n[栅格参数]\n- grid_size: 30\nNODE[1,POI,name=Royal art café，（13，16）]\nNODE[2,POI,name=Gran Caffe Martini & Rossi，（13，15）]\nNODE[3,POI,name=Al Gladiatore，（13，13）]\nNODE[4,POI,name=Cafè Cafè，（11，16）]\nNODE[5,POI,name=La Pace del Cervello，（11，18）]\nNODE[6,POI,name=Oppio Caffè，（17，15）]\nNODE[7,POI,name=La Biga al Colosseo，（19，13）]\nNODE[8,POI,name=药店，（22，12）]\nNODE[9,POI,name=La Base，（21，10）]\nNODE[10,POI,name=Gustando Roma，（19，6）]\nNODE[11,POI,name=咖啡厅，（9，1）]\nNODE[12,POI,name=Biblioteca della Società geografica italiana，（2，14）]\nNODE[13,POI,name=Trattoria Morgana，（19，25）]\nNODE[14,POI,name=Sapori e Delizie，（24，22）]\nNODE[15,POI,name=Il Galeone，（26，18）]\nNODE[16,ROAD,name=saivi and Royal art café节点，（15，16）]\nNODE[17,ROAD,name=saivi and La Pace del Cervello节点，（14，18）]\nNODE[18,ROAD,name=saivi and Oppio Caffè节点，（15，14）]\nNODE[19,ROAD,name=saivi and La Biga al Colosseo节点，（17，12）]\nNODE[20,ROAD,name=La Base and Gustando Roma节点，（21，7）]\nNODE[21,ROAD,name=位置_23，（18，6）]\nNODE[22,ROAD,name=位置_24，（17，7）]\nNODE[23,ROAD,name=位置_25，（16，8）]\nNODE[24,ROAD,name=位置_26，（15，9）]\nNODE[25,ROAD,name=imperial and Gustando Roma节点，（15，10）]\nNODE[26,ROAD,name=位置_28，（16，11）]\nNODE[27,ROAD,name=claudia and Al Gladiatore节点，（8，15）]\nNODE[28,ROAD,name=位置_37，（8，13）]\nNODE[29,ROAD,name=位置_38，（8，10）]\nNODE[30,ROAD,name=位置_39，（8，9）]\nNODE[31,ROAD,name=位置_40，（7，9）]\nNODE[32,ROAD,name=cerchi and 咖啡厅节点，（2，6）]\nNODE[33,ROAD,name=位置_44，（7，9）]\nNODE[34,ROAD,name=位置_45，（8，9）]\nNODE[35,ROAD,name=位置_46，（8，10）]\nNODE[36,ROAD,name=位置_47，（8，13）]\nNODE[37,ROAD,name=claudia and Biblioteca节点，（2，16）]\nNODE[38,ROAD,name=位置_60，（18，15）]\nNODE[39,ROAD,name=位置_61，（17，17）]\nNODE[40,ROAD,name=位置_62，（18，21）]\nNODE[41,ROAD,name=oppio节点，（19，22）]\nNODE[42,ROAD,name=位置_64，（17，23）]\nNODE[43,ROAD,name=merulana and Trattoria Morgana节点，（20，27）]\nNODE[44,ROAD,name=merulana北节点，（24，27）]\nNODE[45,ROAD,name=lanza and Sapori e Delizie节点，（24，25）]\nNODE[46,ROAD,name=lanza and Il Galeone节点，（22，15）]\n\n## 道路列表\nROAD[道路坐标]\nROAD[（2，6），（2，14），（2，15），（2，16），（3，5），（3，7），（3，16），（4，5），（4，7），（4，16），（5，4），（5，8），（5，15），（5，16），（6，3），（6，8），（6，15），（7，2），（7，9），（7，14），（7，15），（8，2），（8，9），（8，10），（8，11），（8，12），（8，13），（8，15），（9，1），（9，15），（10，14），（11，14），（11，16），（11，17），（11，18），（12，13），（12，14），（12，15），（12，18），（13，13），（13，14），（13，15），（13，16），（13，18），（14，16），（14，17），（14，18），（15，9），（15，10），（15，14），（15，15），（15，16），（16，8），（16，11），（16，13），（16，14），（17，7），（17，12），（17，15），（17，17），（17，18），（17，23），（18，6），（18，12），（18，14），（18，15），（18，16），（18，19），（18，20），（18，21），（18，22），（18，24），（19，6），（19，12），（19，13），（19，22），（19，25），（20，6），（20，12），（20，26），（20，27），（21，7），（21，8），（21，9），（21，10），（21，12），（21，27），（22，11），（22，12），（22，15），（22，16），（22，27），（23，16），（23，17），（23，18），（23，19），（23，20），（23，27），（24，16），（24，21），（24，22），（24，23），（24，24），（24，25），（24，26），（24，27），（25，17），（26，18）]",
+    "context_mode": "map"
+  }
+}

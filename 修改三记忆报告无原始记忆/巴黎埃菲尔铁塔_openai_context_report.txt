@@ -1,0 +1,265 @@
+{
+  "region": "巴黎埃菲尔铁塔",
+  "model": "openai",
+  "memory_mode": "context",
+  "exploration_report": {
+    "total_distance": 720,
+    "exploration_time": 0,
+    "poi_count": 330
+  },
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 15,
+      "total_questions": 24,
+      "accuracy": 62.5,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 3,
+          "total": 8,
+          "percentage": 37.5
+        },
+        "空间距离估算": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "邻近关系判断": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        },
+        "POI密度识别": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "路径规划": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        }
+      },
+      "answers": [
+        {
+          "question": "20 Eiffel相对于Castel Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，20 Eiffel相对于Castel Cafe的方向是104.49°。根据方位角标准，90°为正东，180°为正南，因此104.49°位于东南方向。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "20 Eiffel位于Castel Cafe的东北面。"
+        },
+        {
+          "question": "Café Le Dôme相对于20 Eiffel在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文，Café Le Dôme相对于20 Eiffel的方向是142°。根据方位角标准，90°为正东，180°为正南，因此142°位于东南和东北之间，更接近于东北方向。",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Café Le Dôme位于20 Eiffel的东南面。"
+        },
+        {
+          "question": "Café de l'Alma相对于Café Le Dôme在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文，Café de l'Alma相对于Café Le Dôme的方向是19.5°。根据方位角标准，0°为正北，90°为正东，因此19.5°位于东北方向。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Café de l'Alma位于Café Le Dôme的东北面。"
+        },
+        {
+          "question": "Crédit du Nord相对于Café de l'Alma在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文，Café de l'Alma的方向是19.5°，而Crédit du Nord的方向是356.8°。由于356.8°接近360°，表示Crédit du Nord位于正北方向附近，而19.5°表示Café de l'Alma位于北偏东。因此，Crédit du Nord相对于Café de l'Alma在西北方向。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Crédit du Nord位于Café de l'Alma的西南面。"
+        },
+        {
+          "question": "Castel Cafe相对于20 Eiffel在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "根据上下文，Castel Cafe的方向是204.6°，而20 Eiffel的方向是202.8°。这两个方向都接近于正南（180°），但略偏西。因此，Castel Cafe相对于20 Eiffel在西南方向。",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "Castel Cafe位于20 Eiffel的西南面。"
+        },
+        {
+          "question": "20 Eiffel相对于Café Le Dôme在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，20 Eiffel相对于Café Le Dôme的方向是211°。根据方位角标准，211°位于东南方向。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "20 Eiffel位于Café Le Dôme的西北面。"
+        },
+        {
+          "question": "Café Le Dôme相对于Café de l'Alma在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，Café Le Dôme的方向是142.3974066539647°，而Café de l'Alma的方向是45.91713344737923°。由于Café Le Dôme的方向度数大于Café de l'Alma的方向度数，且两者的度数都在90°到180°之间，Café Le Dôme相对于Café de l'Alma在东南方向。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Café Le Dôme位于Café de l'Alma的西南面。"
+        },
+        {
+          "question": "Café de l'Alma相对于Crédit du Nord在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文，Café de l'Alma相对于Crédit du Nord的方向是19.5°。按照方位角标准，0°为正北，90°为正东，因此19.5°位于东北方向。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Café de l'Alma位于Crédit du Nord的东北面。"
+        },
+        {
+          "question": "Castel Cafe到Café Le Dôme的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文中的信息，Castel Cafe和Café Le Dôme都在探索路径中被访问过。在“Step 1”中，Castel Cafe被描述为距离当前位置约338米，而在“Step 89”中，Café Le Dôme被描述为距离当前位置约143米。虽然具体的直线距离没有直接给出，但从这些信息可以推测出两者之间的直线距离大约在400-800米之间。因此，选择C。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Castel Cafe到Café Le Dôme的直线距离约为569米。"
+        },
+        {
+          "question": "20 Eiffel到Café de l'Alma的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文，20 Eiffel和Café de l'Alma的距离信息如下：\n- 在步骤73中，20 Eiffel的坐标为[48.86068990000007, 2.300116067000033]。\n- 在步骤113中，Café de l'Alma的坐标为[48.85872866500006, 2.30101214900003]。\n\n通过计算这两个坐标之间的直线距离，可以得出它们的距离大约在200-400米之间。因此，选项C是正确的。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "20 Eiffel到Café de l'Alma的直线距离约为331米。"
+        },
+        {
+          "question": "Café Le Dôme到Crédit du Nord的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，Café Le Dôme和Crédit du Nord之间的直线距离在97步中提到为126米。因此，Café Le Dôme到Crédit du Nord的直线距离大约是100-200米。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Café Le Dôme到Crédit du Nord的直线距离约为126米。"
+        },
+        {
+          "question": "Café de l'Alma到Société Générale的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，Café de l'Alma和Société Générale都曾被访问过。Café de l'Alma的坐标是[48.85872866500006, 2.30101214900003]，而Société Générale的坐标是[48.85267425100005, 2.2904635620000704]。通过计算这两个坐标之间的直线距离，可以得出大约为683米。因此，Café de l'Alma到Société Générale的直线距离大约在400-800米之间。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Café de l'Alma到Société Générale的直线距离约为1249米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Castel Cafe最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文，20 Eiffel距离Castel Cafe约342米，而Café Le Dôme距离Castel Cafe约463米，Café de l'Alma距离Castel Cafe约588米。因此，20 Eiffel是距离Castel Cafe最近的POI。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "20 Eiffel距离Castel Cafe最近，约521米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离20 Eiffel最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文，20 Eiffel与Café Le Dôme的距离为230米（在第73步中提到），而Café de l'Alma与20 Eiffel的距离为150米（在第73步中提到），Crédit du Nord与20 Eiffel的距离为228米（在第73步中提到）。因此，Café Le Dôme距离20 Eiffel最近。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Café Le Dôme距离20 Eiffel最近，约142米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Café Le Dôme最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文，Café Le Dôme与其他POI的距离如下：\n- Café de l'Alma距离Café Le Dôme约376米（从Restaurant Doïna出发时的距离）。\n- Crédit du Nord距离Café Le Dôme约126米（从Restaurant Doïna出发时的距离）。\n- Société Générale距离Café Le Dôme约450米（从Le Casse Noix出发时的距离）。\n\n因此，Société Générale距离Café Le Dôme最远。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Société Générale距离Café Le Dôme最远，约903米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Café de l'Alma最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文信息：\n- Café de l'Alma到Crédit du Nord的距离为约115米（方向180°）。\n- Café de l'Alma到Société Générale的距离为约817米（方向200.5°）。\n- Café de l'Alma到Yes’N’You的距离为约547米（方向169.3°）。\n\n因此，Société Générale距离Café de l'Alma最远。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Société Générale距离Café de l'Alma最远，约1249米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文提供的信息，Café Le Dôme周围有多个POI在较近的距离内。例如，在探索步骤89中，Café Le Dôme附近有Crédit du Nord（距离155米）、Restaurant Doïna（距离199米）和Café de l'Alma（距离332米）。这些POI的距离都相对较近，表明Café Le Dôme周围的POI密度较高。相比之下，其他选项如Collège privé Saint-Louis de Gonzague、Pharmacie Galliera和Castel Cafe周围的POI数量和密度在上下文中没有明确的说明或不如Café Le Dôme密集。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Café Le Dôme周围的POI密度最高，500米范围内有5个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文，II Sorrentino周围有多个POI在较近的距离内。例如，在II Sorrentino附近的扫描中，发现了多个POI，包括20 Eiffel、Café Le Dôme、Crédit du Nord、Restaurant Doïna和Café de l'Alma，距离都在几百米内（如II Sorrentino到20 Eiffel的距离为93米）。相比之下，其他选项的POI周围的密度没有如此集中和紧密。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "II Sorrentino周围的POI密度最高，500米范围内有4个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文提供的信息，我们可以分析每个选项周围的POI密度：\n\n- **Collège privé Saint-Louis de Gonzague**：在其周围的扫描中，发现了10个可见POI。\n- **Pharmacie Galliera**：在其周围的扫描中，发现了7个可见POI。\n- **Castel Cafe**：在其周围的扫描中，发现了15个可见POI。\n- **Société Générale**：在其周围的扫描中，发现了12个可见POI。\n\n根据这些信息，**Castel Cafe**周围的POI密度最高，而不是最低。由于题目要求找出POI密度最低的选项，正确答案应为**Pharmacie Galliera**，因为在其周围的扫描中发现的POI数量最少。请注意，原问题的答案选项与解释不一致，解释中指出的密度最低应为**Pharmacie Galliera**。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Collège privé Saint-Louis de Gonzague周围的POI密度最低，500米范围内只有0个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，Collège privé Saint-Louis de Gonzague周围的POI数量较少。在其扫描结果中，仅有10个可见POI，而其他选项中的POI周围可见的POI数量都多于10个。因此，Collège privé Saint-Louis de Gonzague周围的POI密度最低。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Pharmacie Galliera周围的POI密度最低，500米范围内只有0个其他POI。"
+        },
+        {
+          "question": "从Castel Cafe到20 Eiffel，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，Castel Cafe 和 20 Eiffel 是两个已访问的 POI。虽然上下文中没有明确给出从 Castel Cafe 到 20 Eiffel 的直线距离或方向，但选项 B 中的路径经过的节点数量最少（3 个节点），因此可以推测这条路径可能是最短的。其他选项中经过的节点数量更多，因此路径可能更长。由于上下文中没有提供具体的距离或方向数据来进一步比较路径长度，因此只能基于节点数量进行推测。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "最短路径是：Castel Cafe -> (chirac and Castel Cafe节点) -> (chirac and bourdnail节点) -> (chirac and bourdnail节点) -> (20 Eiffel and bourdnail节点) -> 20 Eiffel，总距离约888米。"
+        },
+        {
+          "question": "从20 Eiffel到Café Le Dôme，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，20 Eiffel 和 Café Le Dôme 之间的路径选项中，选项 B 是最短的。选项 B 的路径是：20 Eiffel -> (20 Eiffel and bourdnail节点) -> (Café Le Dôme and pont节点) -> Café Le Dôme。这个路径直接连接了 20 Eiffel 和 Café Le Dôme，经过的节点数量最少，路径最短。其他选项涉及更多的节点和绕行，因此路径较长。由于上下文中没有提供具体的距离数据，只能根据路径的节点数量来判断。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：20 Eiffel -> (20 Eiffel and bourdnail节点) -> (Café Le Dôme and pont节点) -> Café Le Dôme，总距离约468米。"
+        },
+        {
+          "question": "从Café Le Dôme到Café de l'Alma，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文，Café Le Dôme和Café de l'Alma之间的路径信息如下：\n\n- 选项C的路径是：Café Le Dôme -> (Café Le Dôme and pont节点) -> (monttesuy and 20 Eiffel节点) -> (Crédit du Nord and pont节点) -> (russe and Café de l'Alma节点) -> Café de l'Alma。\n\n在上下文中，Café Le Dôme和Café de l'Alma的距离是143米和332米，分别在不同的方向上。选项C的路径经过的节点和方向与上下文中的信息一致，且路径长度较短。\n\n其他选项的路径中涉及的节点和方向在上下文中没有明确的距离信息，因此无法判断其路径长度。根据上下文提供的信息，选项C是最短的路径。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：Café Le Dôme -> (Café Le Dôme and pont节点) -> (monttesuy and 20 Eiffel节点) -> (Crédit du Nord and pont节点) -> (russe and Café de l'Alma节点) -> Café de l'Alma，总距离约489米。"
+        },
+        {
+          "question": "从Café de l'Alma到Crédit du Nord，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "根据上下文，Café de l'Alma和Crédit du Nord之间的路径信息如下：\n\n- 选项A涉及多个节点，但没有提供具体的距离信息。\n- 选项B涉及多个节点，但没有提供具体的距离信息。\n- 选项C涉及多个节点，但没有提供具体的距离信息。\n- 选项D中，Café de l'Alma -> (russe and Café de l'Alma节点) -> (Crédit du Nord and pont节点) -> Crédit du Nord，这条路径是直接连接的，且涉及的节点较少。\n\n由于上下文中没有提供具体的距离信息来比较各选项的路径长度，因此只能根据路径的节点数量来判断，选项D的路径节点最少，因此推测为最短路径。",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：Café de l'Alma -> (russe and Café de l'Alma节点) -> (Crédit du Nord and pont节点) -> Crédit du Nord，总距离约303米。"
+        }
+      ],
+      "completed_at": "2025-12-20T13:37:10.506114"
+    },
+    "context_mode": "context"
+  },
+  "context_text": "POI点单元记录（按时间顺序）：\n1) POI：Castel Cafe\n   - 视野内POI（方向度数；距离米）：\n     • Yes’N’You：方向 133°，距离 ≈ 334m\n     • Le Casse Noix：方向 146°，距离 ≈ 427m\n     • Société Générale：方向 197°，距离 ≈ 479m\n     • 20 Eiffel：方向 64°，距离 ≈ 521m\n     • Collège privé Saint-Louis de Gonzague：方向 304°，距离 ≈ 565m\n     • Café Le Dôme：方向 78°，距离 ≈ 569m\n     • Restaurant Doïna：方向 80°，距离 ≈ 641m\n     • II Sorrentino：方向 57°，距离 ≈ 643m\n2) POI：Yes’N’You\n   - 视野内POI（方向度数；距离米）：\n     • Le Casse Noix：方向 183°，距离 ≈ 128m\n     • Castel Cafe：方向 313°，距离 ≈ 334m\n     • Société Générale：方向 239°，距离 ≈ 449m\n     • Café Le Dôme：方向 43°，距离 ≈ 463m\n     • 20 Eiffel：方向 26°，距离 ≈ 506m\n     • Restaurant Doïna：方向 49°，距离 ≈ 513m\n     • Crédit du Nord：方向 40°，距离 ≈ 588m\n     • II Sorrentino：方向 27°，距离 ≈ 647m\n3) POI：Le Casse Noix\n   - 视野内POI（方向度数；距离米）：\n     • Yes’N’You：方向 3°，距离 ≈ 128m\n     • Société Générale：方向 255°，距离 ≈ 392m\n     • Castel Cafe：方向 326°，距离 ≈ 427m\n     • Café Le Dôme：方向 34°，距离 ≈ 568m\n     • Restaurant Doïna：方向 40°，距离 ≈ 610m\n     • 20 Eiffel：方向 22°，距离 ≈ 627m\n     • Crédit du Nord：方向 34°，距离 ≈ 695m\n     • II Sorrentino：方向 23°，距离 ≈ 766m\n4) POI：Société Générale\n   - 视野内POI（方向度数；距离米）：\n     • Le Casse Noix：方向 75°，距离 ≈ 392m\n     • Yes’N’You：方向 59°，距离 ≈ 449m\n     • Castel Cafe：方向 17°，距离 ≈ 479m\n5) POI：Collège privé Saint-Louis de Gonzague\n   - 视野内POI（方向度数；距离米）：\n     • L’Ancien Trocadéro：方向 18°，距离 ≈ 485m\n     • Castel Cafe：方向 124°，距离 ≈ 565m\n     • Shang Palace：方向 50°，距离 ≈ 718m\n6) POI：L’Ancien Trocadéro\n   - 视野内POI（方向度数；距离米）：\n     • Shang Palace：方向 90°，距离 ≈ 400m\n     • Collège privé Saint-Louis de Gonzague：方向 198°，距离 ≈ 485m\n     • Pharmacie Galliera：方向 55°，距离 ≈ 592m\n7) POI：Shang Palace\n   - 视野内POI（方向度数；距离米）：\n     • Pharmacie Galliera：方向 14°，距离 ≈ 348m\n     • L’Ancien Trocadéro：方向 270°，距离 ≈ 400m\n     • Linette：方向 126°，距离 ≈ 584m\n     • II Sorrentino：方向 133°，距离 ≈ 631m\n     • 20 Eiffel：方向 145°，距离 ≈ 676m\n     • Café de l'Alma：方向 117°，距离 ≈ 701m\n     • Collège privé Saint-Louis de Gonzague：方向 230°，距离 ≈ 718m\n     • Crédit du Nord：方向 136°，距离 ≈ 778m\n8) POI：Pharmacie Galliera\n   - 视野内POI（方向度数；距离米）：\n     • Shang Palace：方向 194°，距离 ≈ 348m\n     • L’Ancien Trocadéro：方向 235°，距离 ≈ 592m\n     • Linette：方向 150°，距离 ≈ 782m\n9) POI：Café de l'Alma\n   - 视野内POI（方向度数；距离米）：\n     • Linette：方向 262°，距离 ≈ 150m\n     • II Sorrentino：方向 236°，距离 ≈ 198m\n     • Crédit du Nord：方向 199°，距离 ≈ 251m\n     • 20 Eiffel：方向 225°，距离 ≈ 331m\n     • Restaurant Doïna：方向 192°，距离 ≈ 357m\n     • Café Le Dôme：方向 203°，距离 ≈ 375m\n     • Shang Palace：方向 297°，距离 ≈ 701m\n10) POI：Linette\n   - 视野内POI（方向度数；距离米）：\n     • II Sorrentino：方向 189°，距离 ≈ 92m\n     • Café de l'Alma：方向 82°，距离 ≈ 150m\n     • Crédit du Nord：方向 163°，距离 ≈ 227m\n     • 20 Eiffel：方向 202°，距离 ≈ 229m\n     • Café Le Dôme：方向 180°，距离 ≈ 325m\n     • Restaurant Doïna：方向 167°，距离 ≈ 337m\n     • Shang Palace：方向 306°，距离 ≈ 584m\n     • Castel Cafe：方向 232°，距离 ≈ 709m\n11) POI：II Sorrentino\n   - 视野内POI（方向度数；距离米）：\n     • Linette：方向 9°，距离 ≈ 92m\n     • 20 Eiffel：方向 211°，距离 ≈ 141m\n     • Crédit du Nord：方向 147°，距离 ≈ 150m\n     • Café de l'Alma：方向 56°，距离 ≈ 198m\n     • Café Le Dôme：方向 176°，距离 ≈ 234m\n     • Restaurant Doïna：方向 159°，距离 ≈ 254m\n     • Shang Palace：方向 313°，距离 ≈ 631m\n     • Castel Cafe：方向 237°，距离 ≈ 643m\n12) POI：20 Eiffel\n   - 视野内POI（方向度数；距离米）：\n     • II Sorrentino：方向 31°，距离 ≈ 141m\n     • Café Le Dôme：方向 142°，距离 ≈ 142m\n     • Crédit du Nord：方向 92°，距离 ≈ 154m\n     • Restaurant Doïna：方向 126°，距离 ≈ 199m\n     • Linette：方向 22°，距离 ≈ 229m\n     • Café de l'Alma：方向 45°，距离 ≈ 331m\n     • Yes’N’You：方向 206°，距离 ≈ 506m\n     • Castel Cafe：方向 244°，距离 ≈ 521m\n13) POI：Café Le Dôme\n   - 视野内POI（方向度数；距离米）：\n     • Restaurant Doïna：方向 93°，距离 ≈ 73m\n     • Crédit du Nord：方向 32°，距离 ≈ 126m\n     • 20 Eiffel：方向 322°，距离 ≈ 142m\n     • II Sorrentino：方向 356°，距离 ≈ 234m\n     • Linette：方向 0°，距离 ≈ 325m\n     • Café de l'Alma：方向 23°，距离 ≈ 375m\n     • Yes’N’You：方向 223°，距离 ≈ 463m\n     • Le Casse Noix：方向 214°，距离 ≈ 568m\n14) POI：Restaurant Doïna\n   - 视野内POI（方向度数；距离米）：\n     • Café Le Dôme：方向 273°，距离 ≈ 73m\n     • Crédit du Nord：方向 356°，距离 ≈ 112m\n     • 20 Eiffel：方向 306°，距离 ≈ 199m\n     • II Sorrentino：方向 339°，距离 ≈ 254m\n     • Linette：方向 347°，距离 ≈ 337m\n     • Café de l'Alma：方向 12°，距离 ≈ 357m\n     • Yes’N’You：方向 229°，距离 ≈ 513m\n     • Le Casse Noix：方向 220°，距离 ≈ 610m\n15) POI：Crédit du Nord\n   - 视野内POI（方向度数；距离米）：\n     • Restaurant Doïna：方向 176°，距离 ≈ 112m\n     • Café Le Dôme：方向 212°，距离 ≈ 126m\n     • II Sorrentino：方向 327°，距离 ≈ 150m\n     • 20 Eiffel：方向 272°，距离 ≈ 154m\n     • Linette：方向 343°，距离 ≈ 227m\n     • Café de l'Alma：方向 19°，距离 ≈ 251m\n     • Yes’N’You：方向 220°，距离 ≈ 588m\n     • Castel Cafe：方向 250°，距离 ≈ 662m\n\n完整行驶路径（仅方向与距离）：\n- 起点：起点\n→ Castel Cafe（方向 204°，距离 ≈ 338m）\n→ Yes’N’You（方向 133°，距离 ≈ 334m）\n→ Le Casse Noix（方向 183°，距离 ≈ 128m）\n→ rue de and Société Générale节点（方向 272°，距离 ≈ 375m）\n→ Société Générale（方向 181°，距离 ≈ 113m）\n→ hakeim（方向 324°，距离 ≈ 133m）\n→ franklin and Société Générale节点（方向 325°，距离 ≈ 421m）\n→ Collège privé Saint-Louis de Gonzague（方向 359°，距离 ≈ 323m）\n→ president avenue西节点（方向 13°，距离 ≈ 351m）\n→ president avenue and L’Ancien Trocadéro节点（方向 86°，距离 ≈ 81m）\n→ L’Ancien Trocadéro（方向 355°，距离 ≈ 113m）\n→ president avenue and L’Ancien Trocadéro节点（方向 175°，距离 ≈ 113m）\n→ president avenue and Shang Palace节点（方向 57°，距离 ≈ 383m）\n→ Shang Palace（方向 144°，距离 ≈ 119m）\n→ president avenue and Shang Palace节点（方向 324°，距离 ≈ 119m）\n→ president avenue and Pharmacie Galliera节点（方向 83°，距离 ≈ 212m）\n→ Pharmacie Galliera（方向 346°，距离 ≈ 220m）\n→ president avenue and Pharmacie Galliera节点（方向 166°，距离 ≈ 220m）\n→ 位置_19（方向 62°，距离 ≈ 422m）\n→ pont北节点（方向 135°，距离 ≈ 154m）\n→ Café de l'Alma and pont节点（方向 180°，距离 ≈ 427m）\n→ Café de l'Alma（方向 180°，距离 ≈ 110m）\n→ russe and Café de l'Alma节点（方向 263°，距离 ≈ 75m）\n→ Linette（方向 262°，距离 ≈ 75m）\n→ II Sorrentino（方向 189°，距离 ≈ 92m）\n→ monttesuy and 20 Eiffel节点（方向 183°，距离 ≈ 122m）\n→ 20 Eiffel（方向 271°，距离 ≈ 65m）\n→ 20 Eiffel and bourdnail节点（方向 269°，距离 ≈ 84m）\n→ Café Le Dôme and pont节点（方向 143°，距离 ≈ 274m）\n→ Café Le Dôme（方向 5°，距离 ≈ 108m）\n→ Restaurant Doïna（方向 93°，距离 ≈ 73m）\n→ Crédit du Nord（方向 356°，距离 ≈ 112m）\n→ Crédit du Nord and pont节点（方向 4°，距离 ≈ 113m）\n→ russe and Café de l'Alma节点（方向 359°，距离 ≈ 115m）\n→ Café de l'Alma（方向 83°，距离 ≈ 75m）"
+}

@@ -1,0 +1,261 @@
+{
+  "region": "武汉黄鹤楼",
+  "source_file": "武汉黄鹤楼_deepseek_graph_report.txt",
+  "evaluation_time": "2025-12-25T20:54:21.013230",
+  "context_text": "# 第二种记忆道路连通图描述\n## 节点列表\nNODE[id,类型,附加属性]\nNODE[1,POI,name=汉口江滩三阳广场停车点]\nNODE[2,POI,name=沿江大道三阳路(公交站)]\nNODE[3,POI,name=天悦外滩金融中心]\nNODE[4,POI,name=天悦外滩金融中心停车场]\nNODE[5,POI,name=匠心城-三阳中心B座]\nNODE[6,POI,name=三阳路中山大道(公交站)]\nNODE[7,POI,name=延庆小区]\nNODE[8,POI,name=包豪斯大厦]\nNODE[9,POI,name=延庆里停车场]\nNODE[10,POI,name=永胜大厦]\nNODE[11,POI,name=公安宿舍]\nNODE[12,POI,name=运征大厦]\nNODE[13,POI,name=九鼎集团对外停车场]\nNODE[14,POI,name=汉口江滩停车场]\nNODE[15,POI,name=汉口江滩西北7门停车场]\nNODE[16,POI,name=沿江大道粤汉码头(公交站)]\nNODE[17,POI,name=汉口江滩粤汉码头地面停车场]\nNODE[18,POI,name=两江游览·粤汉旅游码头]\nNODE[19,POI,name=柏林公寓]\nNODE[20,POI,name=知音号码头]\nNODE[21,ROAD,name=起点]\nNODE[22,ROAD,name=中山大道与三阳路的节点]\nNODE[23,ROAD,name=汉口江滩三阳广场停车点与三阳路的节点]\nNODE[24,ROAD,name=京汉大路与三阳路节点]\nNODE[25,ROAD,name=天悦外滩金融中心停车场节点]\nNODE[26,ROAD,name=天悦外滩金融中心节点]\nNODE[27,ROAD,name=沿江大道三阳路(公交站)道路节点]\nNODE[28,ROAD,name=九鼎集团对外停车场节点]\nNODE[29,ROAD,name=三阳中心B座与延庆小区的节点]\nNODE[30,ROAD,name=三阳路中山大道(公交站)道路节点]\nNODE[31,ROAD,name=京汉大路与建设街的节点]\nNODE[32,ROAD,name=运征大厦与京汉大路的节点]\nNODE[33,ROAD,name=京汉大路与一元路的节点]\nNODE[34,ROAD,name=柏林公寓与一元路的节点]\nNODE[35,ROAD,name=中山大道与建设街的节点]\nNODE[36,ROAD,name=中山大道与四唯路的节点]\n\n## 边列表\nEDGE[起点ID,终点ID,道路长度,方向]\nEDGE[21,22,205m,25°]\nEDGE[22,23,66m,312°]\nEDGE[23,23,27m,310°]\nEDGE[23,1,53m,200°]\nEDGE[1,23,53m,20°]\nEDGE[23,24,113m,283°]\nEDGE[24,25,43m,12°]\nEDGE[25,26,75m,7°]\nEDGE[26,27,93m,37°]\nEDGE[27,2,163m,148°]\nEDGE[2,27,163m,328°]\nEDGE[27,26,93m,217°]\nEDGE[26,3,81m,317°]\nEDGE[3,4,65m,190°]\nEDGE[4,3,65m,10°]\nEDGE[3,4,65m,190°]\nEDGE[4,25,91m,140°]\nEDGE[25,24,43m,192°]\nEDGE[24,24,23m,315°]\nEDGE[24,28,55m,312°]\nEDGE[28,29,80m,278°]\nEDGE[29,5,115m,7°]\nEDGE[5,6,78m,274°]\nEDGE[6,30,68m,189°]\nEDGE[30,29,91m,125°]\nEDGE[29,7,74m,252°]\nEDGE[7,8,55m,183°]\nEDGE[8,9,80m,221°]\nEDGE[9,10,64m,97°]\nEDGE[10,11,56m,173°]\nEDGE[11,12,65m,174°]\nEDGE[12,11,65m,354°]\nEDGE[11,10,56m,353°]\nEDGE[10,9,64m,277°]\nEDGE[9,8,80m,41°]\nEDGE[8,7,55m,3°]\nEDGE[7,29,74m,72°]\nEDGE[29,28,80m,98°]\nEDGE[28,13,58m,194°]\nEDGE[13,28,58m,14°]\nEDGE[28,24,55m,132°]\nEDGE[24,24,23m,135°]\nEDGE[24,24,40m,220°]\nEDGE[24,31,152m,216°]\nEDGE[31,32,79m,204°]\nEDGE[32,33,79m,218°]\nEDGE[33,34,74m,142°]\nEDGE[34,14,157m,141°]\nEDGE[14,15,139m,209°]\nEDGE[15,16,77m,271°]\nEDGE[16,17,135m,180°]\nEDGE[17,18,186m,86°]\nEDGE[18,18,43m,129°]\nEDGE[18,18,43m,309°]\nEDGE[18,17,186m,266°]\nEDGE[17,16,135m,0°]\nEDGE[16,15,77m,91°]\nEDGE[15,14,139m,29°]\nEDGE[14,34,157m,321°]\nEDGE[34,19,173m,228°]\nEDGE[19,34,173m,48°]\nEDGE[34,14,157m,141°]\nEDGE[14,35,169m,41°]\nEDGE[35,22,282m,25°]\nEDGE[22,36,165m,21°]\nEDGE[36,20,249m,108°]",
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 7,
+      "total_questions": 24,
+      "accuracy": 29.166666666666668,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 2,
+          "total": 8,
+          "percentage": 25.0
+        },
+        "空间距离估算": {
+          "correct": 0,
+          "total": 4,
+          "percentage": 0.0
+        },
+        "邻近关系判断": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "POI密度识别": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "路径规划": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        }
+      },
+      "answers": [
+        {
+          "question": "汉口江滩粤汉码头地面停车场相对于两江游览·粤汉旅游码头在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "汉口江滩粤汉码头地面停车场位于两江游览·粤汉旅游码头的西北面。"
+        },
+        {
+          "question": "汉口江滩西北7门停车场相对于汉口江滩粤汉码头地面停车场在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "汉口江滩西北7门停车场位于汉口江滩粤汉码头地面停车场的东北面。"
+        },
+        {
+          "question": "知音号码头相对于汉口江滩西北7门停车场在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "知音号码头位于汉口江滩西北7门停车场的东北面。"
+        },
+        {
+          "question": "天悦外滩金融中心相对于知音号码头在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "天悦外滩金融中心位于知音号码头的西北面。"
+        },
+        {
+          "question": "两江游览·粤汉旅游码头相对于汉口江滩粤汉码头地面停车场在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "两江游览·粤汉旅游码头位于汉口江滩粤汉码头地面停车场的东南面。"
+        },
+        {
+          "question": "汉口江滩粤汉码头地面停车场相对于汉口江滩西北7门停车场在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "汉口江滩粤汉码头地面停车场位于汉口江滩西北7门停车场的西南面。"
+        },
+        {
+          "question": "汉口江滩西北7门停车场相对于知音号码头在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "汉口江滩西北7门停车场位于知音号码头的西南面。"
+        },
+        {
+          "question": "知音号码头相对于天悦外滩金融中心在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "知音号码头位于天悦外滩金融中心的东南面。"
+        },
+        {
+          "question": "两江游览·粤汉旅游码头到汉口江滩西北7门停车场的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "依据不足",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "两江游览·粤汉旅游码头到汉口江滩西北7门停车场的直线距离约为205米。"
+        },
+        {
+          "question": "汉口江滩粤汉码头地面停车场到知音号码头的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "依据不足",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "汉口江滩粤汉码头地面停车场到知音号码头的直线距离约为984米。"
+        },
+        {
+          "question": "汉口江滩西北7门停车场到天悦外滩金融中心的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "依据不足",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "汉口江滩西北7门停车场到天悦外滩金融中心的直线距离约为775米。"
+        },
+        {
+          "question": "知音号码头到运征大厦的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "依据不足",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "知音号码头到运征大厦的直线距离约为692米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离两江游览·粤汉旅游码头最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "汉口江滩西北7门停车场距离两江游览·粤汉旅游码头最近，约205米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离汉口江滩粤汉码头地面停车场最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "汉口江滩西北7门停车场距离汉口江滩粤汉码头地面停车场最近，约155米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离汉口江滩西北7门停车场最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "知音号码头距离汉口江滩西北7门停车场最远，约833米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离知音号码头最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "运征大厦距离知音号码头最远，约692米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "运征大厦周围的POI密度最高，500米范围内有6个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "沿江大道粤汉码头(公交站)周围的POI密度最高，500米范围内有5个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "知音号码头周围的POI密度最低，500米范围内只有0个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "天悦外滩金融中心周围的POI密度最低，500米范围内只有3个其他POI。"
+        },
+        {
+          "question": "从两江游览·粤汉旅游码头到汉口江滩粤汉码头地面停车场，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：两江游览·粤汉旅游码头 -> (胜利街与汉口江滩停车场的节点) -> 汉口江滩粤汉码头地面停车场，总距离约230米。"
+        },
+        {
+          "question": "从汉口江滩粤汉码头地面停车场到汉口江滩西北7门停车场，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：汉口江滩粤汉码头地面停车场 -> (柏林公寓与一元路的节点) -> 汉口江滩西北7门停车场，总距离约213米。"
+        },
+        {
+          "question": "从汉口江滩西北7门停车场到知音号码头，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：汉口江滩西北7门停车场 -> (柏林公寓与一元路的节点) -> (中山大道与建设街的节点) -> (中山大道与三阳路的节点) -> (中山大道与四唯路的节点) -> 知音号码头，总距离约1006米。"
+        },
+        {
+          "question": "从知音号码头到天悦外滩金融中心，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "最短路径是：知音号码头 -> (中山大道与四唯路的节点) -> (中山大道与三阳路的节点) -> (汉口江滩三阳广场停车点与三阳路的节点) -> (汉口江滩三阳广场停车点与三阳路的节点) -> (京汉大路与三阳路节点) -> (天悦外滩金融中心停车场节点) -> (九鼎集团对外停车场节点) -> 天悦外滩金融中心，总距离约823米。"
+        }
+      ],
+      "completed_at": "2025-12-25T20:54:20.513284"
+    },
+    "context_text": "# 第二种记忆道路连通图描述\n## 节点列表\nNODE[id,类型,附加属性]\nNODE[1,POI,name=汉口江滩三阳广场停车点]\nNODE[2,POI,name=沿江大道三阳路(公交站)]\nNODE[3,POI,name=天悦外滩金融中心]\nNODE[4,POI,name=天悦外滩金融中心停车场]\nNODE[5,POI,name=匠心城-三阳中心B座]\nNODE[6,POI,name=三阳路中山大道(公交站)]\nNODE[7,POI,name=延庆小区]\nNODE[8,POI,name=包豪斯大厦]\nNODE[9,POI,name=延庆里停车场]\nNODE[10,POI,name=永胜大厦]\nNODE[11,POI,name=公安宿舍]\nNODE[12,POI,name=运征大厦]\nNODE[13,POI,name=九鼎集团对外停车场]\nNODE[14,POI,name=汉口江滩停车场]\nNODE[15,POI,name=汉口江滩西北7门停车场]\nNODE[16,POI,name=沿江大道粤汉码头(公交站)]\nNODE[17,POI,name=汉口江滩粤汉码头地面停车场]\nNODE[18,POI,name=两江游览·粤汉旅游码头]\nNODE[19,POI,name=柏林公寓]\nNODE[20,POI,name=知音号码头]\nNODE[21,ROAD,name=起点]\nNODE[22,ROAD,name=中山大道与三阳路的节点]\nNODE[23,ROAD,name=汉口江滩三阳广场停车点与三阳路的节点]\nNODE[24,ROAD,name=京汉大路与三阳路节点]\nNODE[25,ROAD,name=天悦外滩金融中心停车场节点]\nNODE[26,ROAD,name=天悦外滩金融中心节点]\nNODE[27,ROAD,name=沿江大道三阳路(公交站)道路节点]\nNODE[28,ROAD,name=九鼎集团对外停车场节点]\nNODE[29,ROAD,name=三阳中心B座与延庆小区的节点]\nNODE[30,ROAD,name=三阳路中山大道(公交站)道路节点]\nNODE[31,ROAD,name=京汉大路与建设街的节点]\nNODE[32,ROAD,name=运征大厦与京汉大路的节点]\nNODE[33,ROAD,name=京汉大路与一元路的节点]\nNODE[34,ROAD,name=柏林公寓与一元路的节点]\nNODE[35,ROAD,name=中山大道与建设街的节点]\nNODE[36,ROAD,name=中山大道与四唯路的节点]\n\n## 边列表\nEDGE[起点ID,终点ID,道路长度,方向]\nEDGE[21,22,205m,25°]\nEDGE[22,23,66m,312°]\nEDGE[23,23,27m,310°]\nEDGE[23,1,53m,200°]\nEDGE[1,23,53m,20°]\nEDGE[23,24,113m,283°]\nEDGE[24,25,43m,12°]\nEDGE[25,26,75m,7°]\nEDGE[26,27,93m,37°]\nEDGE[27,2,163m,148°]\nEDGE[2,27,163m,328°]\nEDGE[27,26,93m,217°]\nEDGE[26,3,81m,317°]\nEDGE[3,4,65m,190°]\nEDGE[4,3,65m,10°]\nEDGE[3,4,65m,190°]\nEDGE[4,25,91m,140°]\nEDGE[25,24,43m,192°]\nEDGE[24,24,23m,315°]\nEDGE[24,28,55m,312°]\nEDGE[28,29,80m,278°]\nEDGE[29,5,115m,7°]\nEDGE[5,6,78m,274°]\nEDGE[6,30,68m,189°]\nEDGE[30,29,91m,125°]\nEDGE[29,7,74m,252°]\nEDGE[7,8,55m,183°]\nEDGE[8,9,80m,221°]\nEDGE[9,10,64m,97°]\nEDGE[10,11,56m,173°]\nEDGE[11,12,65m,174°]\nEDGE[12,11,65m,354°]\nEDGE[11,10,56m,353°]\nEDGE[10,9,64m,277°]\nEDGE[9,8,80m,41°]\nEDGE[8,7,55m,3°]\nEDGE[7,29,74m,72°]\nEDGE[29,28,80m,98°]\nEDGE[28,13,58m,194°]\nEDGE[13,28,58m,14°]\nEDGE[28,24,55m,132°]\nEDGE[24,24,23m,135°]\nEDGE[24,24,40m,220°]\nEDGE[24,31,152m,216°]\nEDGE[31,32,79m,204°]\nEDGE[32,33,79m,218°]\nEDGE[33,34,74m,142°]\nEDGE[34,14,157m,141°]\nEDGE[14,15,139m,209°]\nEDGE[15,16,77m,271°]\nEDGE[16,17,135m,180°]\nEDGE[17,18,186m,86°]\nEDGE[18,18,43m,129°]\nEDGE[18,18,43m,309°]\nEDGE[18,17,186m,266°]\nEDGE[17,16,135m,0°]\nEDGE[16,15,77m,91°]\nEDGE[15,14,139m,29°]\nEDGE[14,34,157m,321°]\nEDGE[34,19,173m,228°]\nEDGE[19,34,173m,48°]\nEDGE[34,14,157m,141°]\nEDGE[14,35,169m,41°]\nEDGE[35,22,282m,25°]\nEDGE[22,36,165m,21°]\nEDGE[36,20,249m,108°]",
+    "context_mode": "graph"
+  }
+}

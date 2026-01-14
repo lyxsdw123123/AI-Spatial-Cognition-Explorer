@@ -1,0 +1,265 @@
+{
+  "region": "纽约时代广场",
+  "model": "openai",
+  "memory_mode": "map",
+  "exploration_report": {
+    "total_distance": 1080,
+    "exploration_time": 0,
+    "poi_count": 90
+  },
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 18,
+      "total_questions": 24,
+      "accuracy": 75.0,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 5,
+          "total": 8,
+          "percentage": 62.5
+        },
+        "空间距离估算": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "邻近关系判断": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        },
+        "POI密度识别": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "路径规划": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Hard Rock Cafe相对于Junior's在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "grid_size=86米。根据上下文，Junior's的坐标为(10, 8)，Hard Rock Cafe的坐标为(8, 7)。计算坐标差为Δi = 8 - 10 = -2，Δj = 7 - 8 = -1。根据方位角标准，负的Δi表示向南，负的Δj表示向西，因此Hard Rock Cafe相对于Junior's的方向为西南。",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "Hard Rock Cafe位于Junior's的西南面。"
+        },
+        {
+          "question": "Starbucks相对于Hard Rock Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "grid_size=86米。Starbucks的坐标为(8, 6)，Hard Rock Cafe的坐标为(8, 7)。根据坐标系定义，i向北递增、j向东递增，Starbucks在Hard Rock Cafe的正南方向。由于方位角以地理正北为0°、顺时针递增，正南方向对应180°。因此，Starbucks相对于Hard Rock Cafe在东南方向。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Starbucks位于Hard Rock Cafe的东南面。"
+        },
+        {
+          "question": "Europa Cafe相对于Starbucks在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "grid_size=86米。根据上下文，Europa Cafe的坐标是(8, 7)，Starbucks的坐标是(8, 6)。从坐标来看，Europa Cafe在Starbucks的西边，因为它们的i坐标相同，而Europa Cafe的j坐标比Starbucks大1。因此，Europa Cafe相对于Starbucks的方向是西北。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Europa Cafe位于Starbucks的西北面。"
+        },
+        {
+          "question": "Chase相对于Europa Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "grid_size=86米。Chase的坐标是(6, 15)，Europa Cafe的坐标是(8, 7)。从(8, 7)到(6, 15)，Δi = 6 - 8 = -2，Δj = 15 - 7 = 8。根据方位角标准，Δi为负表示向北，Δj为正表示向东，因此方向为东南。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Chase位于Europa Cafe的西南面。"
+        },
+        {
+          "question": "Junior's相对于Hard Rock Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "grid_size=86米。根据上下文提供的栅格坐标，Junior's位于(10,8)，Hard Rock Cafe位于(8,7)。计算坐标差为Δi=10-8=2，Δj=8-7=1。根据方位角标准，Δi为正表示向北，Δj为正表示向东，因此Junior's相对于Hard Rock Cafe的方向为西北。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Junior's位于Hard Rock Cafe的东北面。"
+        },
+        {
+          "question": "Hard Rock Cafe相对于Starbucks在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "grid_size=86米。根据上下文，Hard Rock Cafe的坐标是(8, 7)，而Starbucks的坐标是(8, 6)。坐标差为(0, 1)，即Hard Rock Cafe在Starbucks的正西方向。根据方位角标准，正西方向对应270°，因此Hard Rock Cafe相对于Starbucks在西北方向。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Hard Rock Cafe位于Starbucks的西北面。"
+        },
+        {
+          "question": "Starbucks相对于Europa Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "grid_size=86米。Starbucks的坐标为(8, 6)，Europa Cafe的坐标为(8, 7)。根据坐标系定义，i向北递增、j向东递增，Starbucks在Europa Cafe的正南方向。因此，Starbucks相对于Europa Cafe的方向为东南。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Starbucks位于Europa Cafe的东南面。"
+        },
+        {
+          "question": "Europa Cafe相对于Chase在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "grid_size=86米。Europa Cafe的坐标是(8, 7)，Chase的坐标是(6, 15)。计算坐标差：Δi = 8 - 6 = 2（向南），Δj = 7 - 15 = -8（向西）。因此，Europa Cafe相对于Chase的方向是西南。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Europa Cafe位于Chase的东北面。"
+        },
+        {
+          "question": "Junior's到Starbucks的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "grid_size=86米。根据上下文，Junior's的坐标为(10, 8)，Starbucks的坐标为(8, 6)。计算两者的直线距离时，栅格坐标差为|Δi|=|10-8|=2和|Δj|=|8-6|=2。使用距离近似规则，直线距离为√((2×86)² + (2×86)²) ≈ √(29584) ≈ 172.1米。因此，Junior's到Starbucks的直线距离大约在200-300米之间。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Junior's到Starbucks的直线距离约为284米。"
+        },
+        {
+          "question": "Hard Rock Cafe到Europa Cafe的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "grid_size=86米。Hard Rock Cafe的坐标为(8, 7)，Europa Cafe的坐标也为(8, 7)。根据上下文提供的信息，Hard Rock Cafe和Europa Cafe共享相同的坐标，因此它们之间的直线距离为0米。然而，工具输出中显示它们的距离为200米左右，这可能是由于实际地理位置的偏差或其他因素导致的。因此，选择C. 200-300米。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Hard Rock Cafe到Europa Cafe的直线距离约为82米。"
+        },
+        {
+          "question": "Starbucks到Chase的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "grid_size=86米。根据上下文，Starbucks的坐标为(8, 6)，Chase的坐标为(6, 15)。计算两者的直线距离：\n\n- Δi = |6 - 8| = 2\n- Δj = |15 - 6| = 9\n\n直线距离近似为 √(Δi² + Δj²) × grid_cell_size_m = √(2² + 9²) × 86 ≈ √(4 + 81) × 86 ≈ √85 × 86 ≈ 9.22 × 86 ≈ 793.92米。\n\n因此，Starbucks到Chase的直线距离大约在200-300米之间。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Starbucks到Chase的直线距离约为145米。"
+        },
+        {
+          "question": "Europa Cafe到Chase的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "grid_size=86米。Europa Cafe的坐标为(8, 7)，Chase的坐标为(6, 15)。计算两者的直线距离：\n\n- Δi = |6 - 8| = 2\n- Δj = |15 - 7| = 8\n\n直线距离近似为：  \n√((Δi × grid_cell_size_m)² + (Δj × grid_cell_size_m)²)  \n= √((2 × 86)² + (8 × 86)²)  \n= √((172)² + (688)²)  \n= √(29584 + 473344)  \n= √502928  \n≈ 709米\n\n因此，Europa Cafe到Chase的直线距离大约在200-400米之间。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Europa Cafe到Chase的直线距离约为411米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Junior's最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "grid_size=86米。  \nJunior's的坐标为(10, 8)，Hard Rock Cafe的坐标为(8, 7)，Starbucks的坐标为(8, 6)，Europa Cafe的坐标为(8, 7)。  \n计算各POI与Junior's的距离：  \n- Hard Rock Cafe与Junior's的栅格坐标差为|10-8| + |8-7| = 2 + 1 = 3，距离近似为3 × 86 = 258米。\n- Starbucks与Junior's的栅格坐标差为|10-8| + |8-6| = 2 + 2 = 4，距离近似为4 × 86 = 344米。\n- Europa Cafe与Junior's的栅格坐标差为|10-8| + |8-7| = 2 + 1 = 3，距离近似为3 × 86 = 258米。\n\n因此，Hard Rock Cafe和Europa Cafe距离Junior's最近，但根据选项，Hard Rock Cafe是正确答案。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Hard Rock Cafe距离Junior's最近，约114米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Hard Rock Cafe最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "grid_size=86米。根据上下文，Hard Rock Cafe的坐标为(8,7)，Starbucks的坐标为(8,6)，Europa Cafe的坐标为(8,7)，Chase的坐标为(6,15)。计算各POI与Hard Rock Cafe的距离：\n\n- Starbucks与Hard Rock Cafe的坐标差为|8-8| + |7-6| = 1，距离近似为1×86=86米。\n- Europa Cafe与Hard Rock Cafe的坐标差为|8-8| + |7-7| = 0，距离近似为0×86=0米。\n- Chase与Hard Rock Cafe的坐标差为|6-8| + |15-7| = 10，距离近似为10×86=860米。\n\n因此，Europa Cafe距离Hard Rock Cafe最近。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Europa Cafe距离Hard Rock Cafe最近，约82米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Starbucks最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "grid_size=86米。根据上下文，Starbucks的坐标为(8,6)。选项中的POI坐标为：\n- Europa Cafe: (8,7)\n- Chase: (6,15)\n- Chase: (5,14)\n\n计算各POI与Starbucks的栅格坐标差：\n- Europa Cafe: |8-8| + |7-6| = 1\n- Chase (6,15): |6-8| + |15-6| = 11\n- Chase (5,14): |5-8| + |14-6| = 11\n\n根据距离近似规则，距离近似为栅格差乘以grid_cell_size_m：\n- Europa Cafe: 1 × 86 = 86米\n- Chase (6,15): 11 × 86 = 946米\n- Chase (5,14): 11 × 86 = 946米\n\n因此，两个Chase的距离都比Europa Cafe远，且相等。选项C的Chase与Starbucks的距离最远。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Chase距离Starbucks最远，约251米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Europa Cafe最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "grid_size=86米。Europa Cafe的坐标为(8, 7)。\n\n- A. Chase的坐标为(6, 15)，与Europa Cafe的坐标差为|8-6|=2和|7-15|=8，距离近似为√(2²+8²)×86 ≈ 707.2米。\n- B. Chase的坐标为(6, 15)，与Europa Cafe的坐标差为|8-6|=2和|7-15|=8，距离近似为√(2²+8²)×86 ≈ 707.2米。\n- C. Public School 212的坐标为(12, 6)，与Europa Cafe的坐标差为|8-12|=4和|7-6|=1，距离近似为√(4²+1²)×86 ≈ 361.1米。\n\n因此，选项C的Public School 212距离Europa Cafe最远。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Public School 212距离Europa Cafe最远，约459米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "grid_size=86米。根据上下文提供的栅格坐标，Europa Cafe位于(8,7)处，其周围的POI包括Hard Rock Cafe (8,7)、Starbucks (8,6)、The Lambs Club (8,10)、Tony's (6,9)和Chase (6,15)。这些POI在Europa Cafe周围的栅格坐标差较小，且通过ROAD连通关系可以看出它们之间的距离较短，形成了一个较为密集的POI分布区域。相比之下，其他选项的POI周围分布较为分散，因此Europa Cafe周围的POI密度最高。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Europa Cafe周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "grid_size=86米。根据提供的节点信息和道路连通性，Hard Rock Cafe位于坐标(8, 7)，其周围的POI密度最高。具体分析如下：\n\n- Hard Rock Cafe (8, 7) 周围的 POI 包括：\n  - Europa Cafe (8, 7)\n  - Starbucks (8, 6)\n  - The Lambs Club (8, 10)\n  - Tony's (6, 9)\n  - Chase (6, 15)\n\n这些 POI 均在相对较近的栅格内，且通过道路连通性可以到达，说明其周围的 POI 密度较高。相比之下，其他选项的 POI 周围分布较为稀疏或距离较远。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Hard Rock Cafe周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "grid_size=86米。根据上下文信息，Duane Reade位于坐标(16,10)，其周围的POI数量较少。具体分析如下：\n\n- Duane Reade (16,10) 周围的POI：\n  - 最近的POI是The Playwright，距离约为1048米。\n  - 其他POI如Public School 212、5 Napkin Burger等距离更远。\n\n相比之下，其他选项的POI周围密度较高：\n- Public School 212 (12,6) 周围有多个POI，如5 Napkin Burger、The Playwright等。\n- Starbucks (8,6) 周围有多个POI，如Hard Rock Cafe、Europa Cafe等。\n- Chase (6,15) 周围有多个POI，如Tony's、The Lambs Club等。\n\n因此，Duane Reade周围的POI密度最低。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Duane Reade周围的POI密度最低，500米范围内只有1个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "grid_size=86米。根据上下文信息，Duane Reade位于坐标(16,10)。在其周围的POI有：\n\n1. The Playwright (12,9)\n2. Del Frisco's Double Eagle Steakhouse (10,12)\n3. Public School 212 (12,6)\n4. 5 Napkin Burger (11,3)\n\n这些POI的坐标与Duane Reade的坐标差较大，且在上下文中未提供更多的POI在其附近。因此，Duane Reade周围的POI密度相对较低。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Public School 212周围的POI密度最低，500米范围内只有4个其他POI。"
+        },
+        {
+          "question": "从Junior's到Hard Rock Cafe，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "grid_size=86米\n\n- 路径A：Junior's (10,8) -> (Junior's and west 50rd的节点) (10,8) -> (7th avenue and west 50rd的节点) (9,9) -> (west 44rd and 7th avenue的节点) (8,9) -> (Hard Rock Cafe and 7th avenue的节点) (8,8) -> Hard Rock Cafe (8,7)。路径步数为4，路径长度近似为4×86=344米。\n\n- 路径B：Junior's (10,8) -> (7th avenue and The Playwright的节点) (11,10) -> (Junior's and west 50rd的节点) (10,8) -> (west 46rd and 50th street的节点) (14,8) -> Hard Rock Cafe (8,7)。路径不符合连通规则，依据不足。\n\n- 路径C：Junior's (10,8) -> (west 50rd and Public School 212的节点) (12,5) -> (Hard Rock Cafe and 7th avenue的节点) (8,8) -> (Europa Cafe and 7th avenue的节点) (7,8) -> (west 46rd and 50th street的节点) (14,8) -> Hard Rock Cafe (8,7)。路径不符合连通规则，依据不足。\n\n- 路径D：Junior's (10,8) -> (west 42rd and 7th avenue的节点) (6,6) -> (west 44rd and 6th avenue的节点) (6,10) -> (Europa Cafe and 7th avenue的节点) (7,8) -> Hard Rock Cafe (8,7)。路径不符合连通规则，依据不足。\n\n因此，路径A是唯一符合连通规则且最短的路径。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：Junior's -> (Junior's and west 50rd的节点) -> (7th avenue and west 50rd的节点) -> (west 44rd and 7th avenue的节点) -> (Hard Rock Cafe and 7th avenue的节点) -> Hard Rock Cafe，总距离约505米。"
+        },
+        {
+          "question": "从Hard Rock Cafe到Starbucks，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "grid_size=86米\n\n- Hard Rock Cafe的坐标为(8,7)，Starbucks的坐标为(8,6)。\n- 选项B路径：Hard Rock Cafe -> (Hard Rock Cafe and 7th avenue的节点) -> Starbucks。\n  - 路径为(8,7) -> (8,6)，仅需1步。\n  - 距离近似为1步×86米=86米。\n\n其他选项：\n- 选项A路径：Hard Rock Cafe -> (west 50rd and Chase的节点) -> (Chase and 6th avenue的节点) -> (west 42rd and 50th street的节点) -> Starbucks。\n  - 路径为(8,7) -> (5,14) -> (7,11) -> (7,5) -> (8,6)。\n  - 距离为4步，近似为4步×86米=344米。\n\n- 选项C路径：Hard Rock Cafe -> (west 50rd and Chase的节点) -> (7th avenue and The Playwright的节点) -> (Hard Rock Cafe and 7th avenue的节点) -> (west 50rd and The Lambs Club的节点) -> Starbucks。\n  - 路径为(8,7) -> (5,14) -> (11,10) -> (8,8) -> (8,10) -> (8,6)。\n  - 距离为5步，近似为5步×86米=430米。\n\n- 选项D路径：Hard Rock Cafe -> (Europa Cafe and 7th avenue的节点) -> (7th avenue and west 50rd的节点) -> (west 50rd and 50th street的节点) -> Starbucks。\n  - 路径为(8,7) -> (7,8) -> (9,9) -> (11,6) -> (8,6)。\n  - 距离为4步，近似为4步×86米=344米。\n\n因此，选项B的路径最短。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：Hard Rock Cafe -> (Hard Rock Cafe and 7th avenue的节点) -> Starbucks，总距离约195米。"
+        },
+        {
+          "question": "从Starbucks到Europa Cafe，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "grid_size=86米\n\n从Starbucks到Europa Cafe的路径分析如下：\n\n- **选项A**：路径为Starbucks (8,6) -> (5,14) -> (10,8) -> (8,9) -> Europa Cafe (8,7)。路径经过的步数为：|8-5| + |6-14| + |10-8| + |8-9| = 3 + 8 + 2 + 1 = 14步。路径长度近似为14 × 86 = 1204米。\n\n- **选项B**：路径为Starbucks (8,6) -> (16,10) -> (6,10) -> (11,10) -> (7,11) -> Europa Cafe (8,7)。路径经过的步数为：|8-16| + |6-10| + |6-11| + |11-7| + |7-8| = 8 + 4 + 5 + 4 + 1 = 22步。路径长度近似为22 × 86 = 1892米。\n\n- **选项C**：路径为Starbucks (8,6) -> (8,8) -> (7,8) -> Europa Cafe (8,7)。路径经过的步数为：|8-8| + |6-8| + |8-7| + |7-8| = 0 + 2 + 1 + 1 = 4步。路径长度近似为4 × 86 = 344米。\n\n- **选项D**：路径为Starbucks (8,6) -> (7,11) -> (12,5) -> (5,14) -> Europa Cafe (8,7)。路径经过的步数为：|8-7| + |6-11| + |11-5| + |5-8| = 1 + 5 + 6 + 3 = 15步。路径长度近似为15 × 86 = 1290米。\n\n因此，选项C的路径最短，路径长度约为344米。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：Starbucks -> (Hard Rock Cafe and 7th avenue的节点) -> (Europa Cafe and 7th avenue的节点) -> Europa Cafe，总距离约220米。"
+        },
+        {
+          "question": "从Europa Cafe到Chase，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "grid_size=86米；Europa Cafe的坐标为(8,7)，Chase的坐标为(6,15)。根据ROAD连通规则，Europa Cafe到Chase的路径为ROAD[(8,7)，(7,7)，(7,8)，(7,9)，(7,10)，(6,11)，(6,12)，(6,13)，(6,14)，(6,15)]，共9步。路径长度近似为9×86=774米。选项D直接连接Europa Cafe和Chase，符合最短路径原则。",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：Europa Cafe -> Chase，总距离约85米。"
+        }
+      ],
+      "completed_at": "2025-12-21T00:20:18.760859"
+    },
+    "context_mode": "map"
+  },
+  "context_text": "# 第三种记忆map描述\n## 节点列表\nNODE[id,类型,附加属性，ij坐标]\n[栅格参数]\n- grid_size: 30\nNODE[1,POI,name=Junior's，（12，11）]\nNODE[2,POI,name=Hard Rock Cafe，（10，11）]\nNODE[3,POI,name=Europa Cafe，（8，9）]\nNODE[4,POI,name=Chase，（4，26）]\nNODE[5,POI,name=Starbucks，（6，13）]\nNODE[6,POI,name=Tony's，（6，15）]\nNODE[7,POI,name=The Lambs Club，（8，17）]\nNODE[8,POI,name=Del Frisco's Double Eagle Steakhouse，（14，20）]\nNODE[9,POI,name=The Playwright，（18，15）]\nNODE[10,POI,name=Public School 212，（18，7）]\nNODE[11,POI,name=5 Napkin Burger，（16，2）]\nNODE[12,POI,name=Duane Reade，（26，17）]\nNODE[13,ROAD,name=Junior's and west 50rd的节点，（14，13）]\nNODE[14,ROAD,name=7th avenue and west 50rd的节点，（12，15）]\nNODE[15,ROAD,name=west 44rd and 7th avenue的节点，（10，13）]\nNODE[16,ROAD,name=Hard Rock Cafe and 7th avenue的节点，（8，13）]\nNODE[17,ROAD,name=Chase and 7th avenue的节点，（6，11）]\nNODE[18,ROAD,name=west 42rd and 7th avenue的节点，（4，9）]\nNODE[19,ROAD,name=west 42rd and Starbucks的节点，（6，5）]\nNODE[20,ROAD,name=Europa Cafe and 7th avenue的节点，（8，11）]\nNODE[21,ROAD,name=west 44rd and The Lambs Club的节点，（8，15）]\nNODE[22,ROAD,name=west 50rd and The Lambs Club的节点，（10，17）]\nNODE[23,ROAD,name=west 50rd and 6th avenue的节点，（8，19）]\nNODE[24,ROAD,name=Chase and 6th avenue的节点，（6，18）]\nNODE[25,ROAD,name=west 50rd and Chase的节点，（6，21）]\nNODE[26,ROAD,name=west 46rd and 6th avenue的节点，（14，23）]\nNODE[27,ROAD,name=west 46rd and Del Frisco's Double Eagle Steakhouse的节点，（16，21）]\nNODE[28,ROAD,name=west 46rd and 7th avenue的节点，（18，19）]\nNODE[29,ROAD,name=7th avenue and The Playwright的节点，（16，17）]\nNODE[30,ROAD,name=west 50rd and 50th street的节点，（14，7）]\nNODE[31,ROAD,name=west 50rd and Public School 212的节点，（16，6）]\nNODE[32,ROAD,name=west 44rd and 50th street的节点，（12，6）]\nNODE[33,ROAD,name=west 46rd and 50th street的节点，（22，13）]\nNODE[34,ROAD,name=Duane Reade与50th street的节点，（26，15）]\n\n## 道路列表\nROAD[道路坐标]\nROAD[（2，25），（3，24），（3，26），（4，8），（4，9），（4，19），（4，23），（4，26），（5，7），（5，10），（5，18），（5，20），（5，22），（6，5），（6，6），（6，9），（6，10），（6，11），（6，13），（6，14），（6，15），（6，18），（6，21），（7，6），（7，9），（7，11），（7，13），（7，15），（7，18），（7，20），（8，7），（8，9），（8，11），（8，12），（8，13），（8，15），（8，16），（8，17），（8，19），（9，10），（9，12），（9，13），（9，17），（9，18），（9，20），（10，11），（10，13），（10，17），（10，20），（11，14），（11，21），（12，6），（12，11），（12，15），（12，22），（13，5），（13，6），（13，12），（13，14），（13，16），（13，22），（14，4），（14，7），（14，8），（14，9），（14，10），（14，11），（14，12），（14，13），（14，16），（14，20），（14，23），（15，3），（15，6），（15，8），（15，16），（15，20），（15，22），（16，2），（16，6），（16，8），（16，17），（16，21），（17，6），（17，9），（17，16），（17，18），（17，20），（18，7），（18，10），（18，15），（18，19），（19，11），（20，12），（21，12），（22，13），（23，14），（24，14），（25，14），（26，15），（26，16），（26，17）]"
+}

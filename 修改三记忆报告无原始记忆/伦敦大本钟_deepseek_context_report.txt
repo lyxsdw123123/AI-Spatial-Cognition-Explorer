@@ -1,0 +1,265 @@
+{
+  "region": "伦敦大本钟",
+  "model": "deepseek",
+  "memory_mode": "context",
+  "exploration_report": {
+    "total_distance": 1060,
+    "exploration_time": 0,
+    "poi_count": 15
+  },
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 18,
+      "total_questions": 24,
+      "accuracy": 75.0,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 6,
+          "total": 8,
+          "percentage": 75.0
+        },
+        "空间距离估算": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        },
+        "邻近关系判断": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        },
+        "POI密度识别": {
+          "correct": 0,
+          "total": 4,
+          "percentage": 0.0
+        },
+        "路径规划": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Crussh Bar相对于Caffè Nero在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "根据上下文，在Caffè Nero的视野内POI记录中，Crussh Bar的方向为199°（≈ 498m）。以地理正北为0°顺时针递增，199°位于180°（正南）与270°（正西）之间，属于西南方向。因此Crussh Bar相对于Caffè Nero位于西南方向。",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "Crussh Bar位于Caffè Nero的西南面。"
+        },
+        {
+          "question": "Quirinale相对于Crussh Bar在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "根据探索上下文POI点单元记录1)，从Crussh Bar视野内可以看到Quirinale的方向为316°。按照方位角标准（正北为0°顺时针递增），316°位于西北方向（270°-360°之间）。因此Quirinale相对于Crussh Bar在西北方向。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Quirinale位于Crussh Bar的西北面。"
+        },
+        {
+          "question": "The Cinnamon Club相对于Quirinale在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文POI点单元记录中Quirinale的视野内POI信息显示：“The Cinnamon Club：方向 253°，距离 ≈ 182m”。方位角253°位于180°（正南）与270°（正西）之间，属于西南方向。但选项中没有“西南”，而253°更接近270°（正西）而非180°（正南），且从地理方位判断，253°属于西偏南，但选项中只有“西北”、“西南”、“东北”、“东南”。由于253°在180°-270°区间，属于西南象限，但选项D为“西南”，C为“西北”。253°明显大于225°（西南正方向），更接近270°（正西），但仍属于西南象限。然而，根据附加规则第3条，只引用上下文出现的实体/方向/距离，不引入外部常识。上下文中未提供“西南”或“西北”的直接描述，仅提供了度数253°。依据不足，无法直接对应选项中的四个方向。但若必须选择，253°属于西南象限，应选D。但选项C为“西北”，253°不属于西北象限（西北为315°-360°或0°-45°？实际西北为315°-45°？不，西北应为315°-360°和0°-45°？不，西北是315°-45°？这不符合常规。常规地理方位：北0°、东90°、南180°、西270°。西北为315°（即北偏西45°），253°不在315°附近。因此253°不属于西北。但选项D为“西南”，253°在180°-270°之间，属于西南象限。然而，依据不足，因为上下文未明确“西南”二字。但根据度数253°可推断为西南方向。因此选D。但问题问的是“The Cinnamon Club相对于Quirinale在哪个方向？”，从Quirinale看The Cinnamon Club是253°，即西南方向。所以选D。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "The Cinnamon Club位于Quirinale的西南面。"
+        },
+        {
+          "question": "Milne’s House相对于The Cinnamon Club在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文POI点单元记录第3条，The Cinnamon Club的视野内POI包括“Milne’s House：方向 333°，距离 ≈ 156m”。方位角333°位于270°（正西）与360°（正北）之间，属于西北方向。因此Milne’s House相对于The Cinnamon Club在西北方向。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Milne’s House位于The Cinnamon Club的西北面。"
+        },
+        {
+          "question": "Caffè Nero相对于Crussh Bar在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文，在Crussh Bar的POI记录中，Caffè Nero并未出现在视野内POI列表中，因此无法直接获得Caffè Nero相对于Crussh Bar的方向。但是，在Caffè Nero的POI记录中，列出了“Crussh Bar：方向 199°，距离 ≈ 498m”。根据方位角标准（正北为0°顺时针递增），199°位于180°（正南）与270°（正西）之间，属于西南方向。这意味着从Caffè Nero看Crussh Bar在西南方向，因此反过来，Crussh Bar相对于Caffè Nero在东北方向。由于问题问的是“Caffè Nero相对于Crussh Bar”，即从Crussh Bar看向Caffè Nero，方向应与上述相反，即东北方向。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Caffè Nero位于Crussh Bar的东北面。"
+        },
+        {
+          "question": "Crussh Bar相对于Quirinale在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，从 Quirinale 的视野记录中可以看到：“Crussh Bar：方向 136°，距离 ≈ 98m”。方位角以地理正北为 0°、顺时针递增，136° 位于正东（90°）与正南（180°）之间，属于东南方向。因此 Crussh Bar 相对于 Quirinale 在东南方向。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Crussh Bar位于Quirinale的东南面。"
+        },
+        {
+          "question": "Quirinale相对于The Cinnamon Club在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，在POI点单元记录3) The Cinnamon Club的视野内POI中，有“Quirinale：方向 73°，距离 ≈ 182m”。方位角以地理正北为0°、顺时针递增，73°位于0°（北）与90°（东）之间，属于东北方向。因此Quirinale相对于The Cinnamon Club位于东北方向。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Quirinale位于The Cinnamon Club的东北面。"
+        },
+        {
+          "question": "The Cinnamon Club相对于Milne’s House在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，在 Milne’s House 的视野内 POI 记录中，The Cinnamon Club 的方向为 153°，距离 ≈ 156m。以地理正北为 0° 顺时针递增，153° 位于正东（90°）与正南（180°）之间，属于东南方向。因此 The Cinnamon Club 相对于 Milne’s House 在东南方向。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "The Cinnamon Club位于Milne’s House的东南面。"
+        },
+        {
+          "question": "Caffè Nero到Quirinale的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文，在POI点单元记录中，Caffè Nero的视野内POI包括Quirinale，方向212°，距离≈432m。这个距离在400-800米范围内，因此直线距离大约为432米。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Caffè Nero到Quirinale的直线距离约为431米。"
+        },
+        {
+          "question": "Crussh Bar到The Cinnamon Club的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "根据探索上下文中POI点单元记录的第1条，从Crussh Bar视野内POI列表可见：“The Cinnamon Club：方向 271°，距离 ≈ 214m”。该距离为直线距离，约为214米，属于200-300米范围。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Crussh Bar到The Cinnamon Club的直线距离约为214米。"
+        },
+        {
+          "question": "Quirinale到Milne’s House的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文，在Quirinale的视野内POI记录中，Milne’s House的方向为282°，距离≈223m。该距离属于200-300米的范围。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Quirinale到Milne’s House的直线距离约为222米。"
+        },
+        {
+          "question": "The Cinnamon Club到Ashburnham House的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文POI点单元记录第3条，The Cinnamon Club的视野内POI中明确列出“Ashburnham House：方向 313°，距离 ≈ 89m”。该距离为直线距离，约为89米，属于0-100米范围。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "The Cinnamon Club到Ashburnham House的直线距离约为89米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Caffè Nero最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，从Caffè Nero的视野内POI记录中可以看到：\n- Quirinale：方向 212°，距离 ≈ 432m\n- Crussh Bar：方向 199°，距离 ≈ 498m\n- The Cinnamon Club在Caffè Nero的视野内POI列表中未出现，因此无法直接比较距离。\n比较已出现的两个POI，Quirinale距离Caffè Nero约432米，Crussh Bar距离约498米，因此Quirinale是三个选项中距离Caffè Nero最近的。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Quirinale距离Caffè Nero最近，约431米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Crussh Bar最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "根据探索上下文POI点单元记录1)中Crussh Bar的视野内POI信息，Quirinale的方向为316°，距离≈98m；The Cinnamon Club的方向为271°，距离≈214m；Milne’s House的方向为290°，距离≈303m。比较三者距离，Quirinale（≈98m）最近，The Cinnamon Club（≈214m）次之，Milne’s House（≈303m）最远。因此距离Crussh Bar最近的POI是Quirinale。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Quirinale距离Crussh Bar最近，约97米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Quirinale最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文POI点单元记录中Quirinale的视野内POI信息：  \n- The Cinnamon Club：距离 ≈ 182m  \n- Ashburnham House：距离 ≈ 213m  \n- Milne’s House：距离 ≈ 223m  \n比较三者距离，Milne’s House（≈ 223m）最远。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Milne’s House距离Quirinale最远，约222米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离The Cinnamon Club最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文POI点单元记录3（The Cinnamon Club的视野内POI数据）：\n- Milne’s House：方向 333°，距离 ≈ 156m  \n- Ashburnham House：方向 313°，距离 ≈ 89m  \n- Lloyds Bank：方向 121°，距离 ≈ 234m  \n比较三者距离，Lloyds Bank（≈234m）大于Milne’s House（≈156m）和Ashburnham House（≈89m），因此Lloyds Bank距离The Cinnamon Club最远。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Lloyds Bank距离The Cinnamon Club最远，约234米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "根据上下文POI点单元记录，The Cinnamon Club 在视野内可见8个POI（Wash House、Ashburnham House、Milne’s House、Quirinale、Crussh Bar、Lloyds Bank、Footstool、Café Fresco），且这些POI的距离均较近（最近85m，最远332m）。相比之下，Quirinale 可见8个POI但距离范围较广（98m~358m），Shepherds Hall 可见8个POI但距离较远（最近341m，最远633m），Caffè Nero 可见8个POI但距离也较远（最近390m，最远550m）。The Cinnamon Club 周围的POI不仅数量多，而且距离更近，因此密度最高。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Quirinale周围的POI密度最高，500米范围内有9个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "根据上下文POI点单元记录，The Cinnamon Club 视野内可见8个POI（Wash House、Ashburnham House、Milne’s House、Quirinale、Crussh Bar、Lloyds Bank、Footstool、Café Fresco），且这些POI的距离均较近（最近85m，最远332m）。相比之下，Crussh Bar 视野内虽有8个POI，但最远距离达402m；Shepherds Hall 视野内8个POI中最远距离为633m；Caffè Nero 视野内8个POI中最远距离达550m。The Cinnamon Club 周围的POI不仅数量多，且距离更集中，因此密度最高。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Crussh Bar周围的POI密度最高，500米范围内有9个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，Caffè Nero 在视野内仅能观察到 8 个 POI（见 POI 点单元记录 8），而其他选项的视野内 POI 数量更多：Shepherds Hall 可见 8 个（记录 11），The Cinnamon Club 可见 8 个（记录 3），Ashburnham House 可见 8 个（记录 5）。虽然数量相同，但 Caffè Nero 的可见 POI 中距离普遍较远（如 Zen China 390m、Aji Zen Canteen 434m 等），且从探索路径看，其周围区域 POI 分布较稀疏（后续扫描中多次出现“0 visible POIs”）。因此，Caffè Nero 周围的 POI 密度相对最低。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Shepherds Hall周围的POI密度最低，500米范围内只有3个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，Shepherds Hall 视野内仅出现 4 个 POI（Lloyds Bank、Footstool、Riverside Cafe、PizzaExpress），而其他选项视野内 POI 数量更多：Caffè Nero 视野内有 8 个 POI（Zen China、Aji Zen Canteen 等），The Cinnamon Club 视野内有 12 个 POI（Wash House、Ashburnham House 等），Ashburnham House 视野内有 10 个 POI（Milne’s House、Café Fresco 等）。因此 Shepherds Hall 周围可见 POI 数量最少，密度最低。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Caffè Nero周围的POI密度最低，500米范围内只有4个其他POI。"
+        },
+        {
+          "question": "从Caffè Nero到Crussh Bar，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文“完整行驶路径”部分，从 Caffè Nero 出发的路径中，只有选项 A 的节点序列与已记录的路径一致：Caffè Nero → Caffè Nero and minster bridge节点 → margeret street and minster bridge节点 → Crussh Bar and margeret street节点 → Crussh Bar（对应路径中“Caffè Nero and minster bridge节点（方向 165°，距离 ≈ 84m）→ margeret street and minster bridge节点（方向 91°，距离 ≈ 124m）→ Crussh Bar and margeret street节点（方向 117°，距离 ≈ 146m）→ Crussh Bar”）。其他选项（B、C、D）的节点组合在上下文中未出现完整的对应行驶路径，无法判断其距离，且部分节点（如“Zen China节点”“palace road and minster bridge节点”“minster bridge东节点”）在从 Caffè Nero 到 Crussh Bar 的已知路径中未提及，依据不足。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：Caffè Nero -> (margeret street and minster bridge节点) -> (tothill street and margeret street节点) -> (Quirinale and margeret street节点) -> (Crussh Bar and margeret street节点) -> Crussh Bar，总距离约569米。"
+        },
+        {
+          "question": "从Crussh Bar到Quirinale，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，从Crussh Bar到Quirinale的直线距离约为98米（方向316°），这是两点之间的最短直线距离。选项B是直接路径，而其他选项都涉及绕行多个中间节点，路径更长。依据附加规则第2条，距离题用直线距离而非路径距离，因此最短路径是B。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：Crussh Bar -> Quirinale，总距离约97米。"
+        },
+        {
+          "question": "从Quirinale到The Cinnamon Club，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文，从Quirinale到The Cinnamon Club的直线距离约为182米（见POI：Quirinale中“The Cinnamon Club：方向 253°，距离 ≈ 182m”）。选项C的路径在“完整行驶路径”中出现过：从Quirinale出发，经过“Crussh Bar and margeret street节点”、“Crussh Bar and Lloyds Bank节点”、“Wash House南节点”后到达The Cinnamon Club，该路径是实际行驶过的路线。其他选项（A、B、D）中的节点组合在上下文中未出现于Quirinale到The Cinnamon Club的直接路径描述中，且依据不足判断其是否更短。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：Quirinale -> (Crussh Bar and margeret street节点) -> (Crussh Bar and Lloyds Bank节点) -> (Wash House南节点) -> (Wash House南节点) -> The Cinnamon Club，总距离约572米。"
+        },
+        {
+          "question": "从The Cinnamon Club到Milne’s House，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "根据上下文，在“完整行驶路径”中，从 The Cinnamon Club 出发后，直接经过 “node_51.497123_-0.129393” → “node_51.497791_-0.130103” → 路径5 Ashburnham House → “node_51.498457_-0.130079” → 路径6 Milne’s House，其中 “node_51.498457_-0.130079” 到 Milne’s House 的方向为 2°、距离 ≈ 74m，且 Ashburnham House 到 Milne’s House 的距离为 74m（见 POI：Ashburnham House 视野内POI）。选项 D 对应的路径 “The Cinnamon Club -> (tothill street and Milne’s House节点) -> Milne’s House” 在上下文中实际体现为从 The Cinnamon Club 经 Ashburnham House 直接到 Milne’s House，直线距离最短（仅 74m 段），而其他选项均涉及更多节点与更长距离，因此 D 为最短路径。",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：The Cinnamon Club -> (tothill street and Milne’s House节点) -> Milne’s House，总距离约163米。"
+        }
+      ],
+      "completed_at": "2025-12-19T18:28:44.042888"
+    },
+    "context_mode": "context"
+  },
+  "context_text": "POI点单元记录（按时间顺序）：\n1) POI：Crussh Bar\n   - 视野内POI（方向度数；距离米）：\n     • Quirinale：方向 329°，距离 ≈ 97m\n     • Lloyds Bank：方向 196°，距离 ≈ 165m\n     • The Cinnamon Club：方向 271°，距离 ≈ 214m\n     • Wash House：方向 249°，距离 ≈ 231m\n     • Footstool：方向 193°，距离 ≈ 246m\n     • Ashburnham House：方向 286°，距离 ≈ 275m\n     • Milne’s House：方向 300°，距离 ≈ 303m\n     • Riverside Cafe：方向 127°，距离 ≈ 402m\n2) POI：Quirinale\n   - 视野内POI（方向度数；距离米）：\n     • Crussh Bar：方向 149°，距离 ≈ 97m\n     • The Cinnamon Club：方向 244°，距离 ≈ 181m\n     • Ashburnham House：方向 268°，距离 ≈ 213m\n     • Milne’s House：方向 288°，距离 ≈ 222m\n     • Wash House：方向 225°，距离 ≈ 234m\n     • Lloyds Bank：方向 179°，距离 ≈ 242m\n     • Footstool：方向 181°，距离 ≈ 322m\n     • Café Fresco：方向 311°，距离 ≈ 358m\n3) POI：Wash House\n   - 视野内POI（方向度数；距离米）：\n     • The Cinnamon Club：方向 2°，距离 ≈ 85m\n     • Ashburnham House：方向 344°，距离 ≈ 165m\n     • Lloyds Bank：方向 114°，距离 ≈ 188m\n     • Footstool：方向 135°，距离 ≈ 224m\n     • Crussh Bar：方向 69°，距离 ≈ 231m\n     • Quirinale：方向 45°，距离 ≈ 234m\n     • Milne’s House：方向 349°，距离 ≈ 237m\n     • Café Fresco：方向 345°，距离 ≈ 412m\n4) POI：The Cinnamon Club\n   - 视野内POI（方向度数；距离米）：\n     • Wash House：方向 182°，距离 ≈ 85m\n     • Ashburnham House：方向 326°，距离 ≈ 89m\n     • Milne’s House：方向 342°，距离 ≈ 155m\n     • Quirinale：方向 64°，距离 ≈ 181m\n     • Crussh Bar：方向 91°，距离 ≈ 214m\n     • Lloyds Bank：方向 134°，距离 ≈ 234m\n     • Footstool：方向 147°，距离 ≈ 289m\n     • Café Fresco：方向 341°，距离 ≈ 331m\n5) POI：Ashburnham House\n   - 视野内POI（方向度数；距离米）：\n     • Milne’s House：方向 1°，距离 ≈ 74m\n     • The Cinnamon Club：方向 146°，距离 ≈ 89m\n     • Wash House：方向 164°，距离 ≈ 165m\n     • Quirinale：方向 88°，距离 ≈ 213m\n     • Café Fresco：方向 346°，距离 ≈ 246m\n     • Crussh Bar：方向 106°，距离 ≈ 275m\n     • Lloyds Bank：方向 137°，距离 ≈ 321m\n     • Footstool：方向 147°，距离 ≈ 378m\n6) POI：Milne’s House\n   - 视野内POI（方向度数；距离米）：\n     • Ashburnham House：方向 181°，距离 ≈ 74m\n     • The Cinnamon Club：方向 162°，距离 ≈ 155m\n     • Café Fresco：方向 340°，距离 ≈ 176m\n     • Quirinale：方向 108°，距离 ≈ 222m\n     • Wash House：方向 169°，距离 ≈ 237m\n     • Crussh Bar：方向 120°，距离 ≈ 303m\n     • Lloyds Bank：方向 145°，距离 ≈ 379m\n     • Footstool：方向 152°，距离 ≈ 441m\n7) POI：Café Fresco\n   - 视野内POI（方向度数；距离米）：\n     • Milne’s House：方向 160°，距离 ≈ 176m\n     • Ashburnham House：方向 166°，距离 ≈ 246m\n     • The Cinnamon Club：方向 161°，距离 ≈ 331m\n     • Quirinale：方向 131°，距离 ≈ 358m\n     • Wash House：方向 165°，距离 ≈ 412m\n     • Crussh Bar：方向 134°，距离 ≈ 452m\n     • Caffè Nero：方向 68°，距离 ≈ 457m\n     • Lloyds Bank：方向 150°，距离 ≈ 550m\n8) POI：Caffè Nero\n   - 视野内POI（方向度数；距离米）：\n     • Zen China：方向 80°，距离 ≈ 390m\n     • Quirinale：方向 201°，距离 ≈ 431m\n     • Aji Zen Canteen：方向 91°，距离 ≈ 433m\n     • Café Fresco：方向 248°，距离 ≈ 457m\n     • Shepherds Hall：方向 135°，距离 ≈ 476m\n     • Milne’s House：方向 227°，距离 ≈ 496m\n     • Crussh Bar：方向 192°，距离 ≈ 497m\n     • Ashburnham House：方向 222°，距离 ≈ 549m\n9) POI：Zen China\n   - 视野内POI（方向度数；距离米）：\n     • Aji Zen Canteen：方向 147°，距离 ≈ 91m\n     • Caffè Nero：方向 260°，距离 ≈ 390m\n     • Shepherds Hall：方向 187°，距离 ≈ 406m\n     • Quirinale：方向 229°，距离 ≈ 715m\n     • Crussh Bar：方向 221°，距离 ≈ 738m\n10) POI：Aji Zen Canteen\n   - 视野内POI（方向度数；距离米）：\n     • Zen China：方向 327°，距离 ≈ 91m\n     • Shepherds Hall：方向 196°，距离 ≈ 341m\n     • Caffè Nero：方向 271°，距离 ≈ 433m\n     • Quirinale：方向 236°，距离 ≈ 707m\n     • Crussh Bar：方向 228°，距离 ≈ 718m\n     • Riverside Cafe：方向 197°，距离 ≈ 750m\n11) POI：Shepherds Hall\n   - 视野内POI（方向度数；距离米）：\n     • Aji Zen Canteen：方向 16°，距离 ≈ 341m\n     • Zen China：方向 7°，距离 ≈ 406m\n     • Riverside Cafe：方向 197°，距离 ≈ 409m\n     • Crussh Bar：方向 251°，距离 ≈ 465m\n     • Caffè Nero：方向 315°，距离 ≈ 476m\n     • Quirinale：方向 262°，距离 ≈ 496m\n     • Lloyds Bank：方向 237°，距离 ≈ 576m\n     • Footstool：方向 232°，距离 ≈ 632m\n12) POI：Riverside Cafe\n   - 视野内POI（方向度数；距离米）：\n     • PizzaExpress：方向 229°，距离 ≈ 354m\n     • Lloyds Bank：方向 283°，距离 ≈ 376m\n     • Footstool：方向 270°，距离 ≈ 379m\n     • Crussh Bar：方向 307°，距离 ≈ 402m\n     • Shepherds Hall：方向 17°，距离 ≈ 409m\n     • Quirinale：方向 311°，距离 ≈ 494m\n     • Wash House：方向 286°，距离 ≈ 562m\n     • The Cinnamon Club：方向 294°，距离 ≈ 589m\n13) POI：PizzaExpress\n   - 视野内POI（方向度数；距离米）：\n     • Footstool：方向 334°，距离 ≈ 260m\n     • Lloyds Bank：方向 342°，距离 ≈ 331m\n     • Riverside Cafe：方向 49°，距离 ≈ 354m\n     • Crussh Bar：方向 353°，距离 ≈ 477m\n     • Wash House：方向 325°，距离 ≈ 478m\n     • The Cinnamon Club：方向 330°，距离 ≈ 549m\n     • Quirinale：方向 349°，距离 ≈ 567m\n     • Ashburnham House：方向 330°，距离 ≈ 637m\n14) POI：Footstool\n   - 视野内POI（方向度数；距离米）：\n     • Lloyds Bank：方向 8°，距离 ≈ 81m\n     • Wash House：方向 315°，距离 ≈ 224m\n     • Crussh Bar：方向 13°，距离 ≈ 246m\n     • PizzaExpress：方向 154°，距离 ≈ 260m\n     • The Cinnamon Club：方向 327°，距离 ≈ 289m\n     • Quirinale：方向 1°，距离 ≈ 322m\n     • Ashburnham House：方向 327°，距离 ≈ 378m\n     • Riverside Cafe：方向 90°，距离 ≈ 379m\n15) POI：Lloyds Bank\n   - 视野内POI（方向度数；距离米）：\n     • Footstool：方向 188°，距离 ≈ 81m\n     • Crussh Bar：方向 16°，距离 ≈ 165m\n     • Wash House：方向 294°，距离 ≈ 188m\n     • The Cinnamon Club：方向 314°，距离 ≈ 234m\n     • Quirinale：方向 359°，距离 ≈ 242m\n     • Ashburnham House：方向 317°，距离 ≈ 321m\n     • PizzaExpress：方向 162°，距离 ≈ 331m\n     • Riverside Cafe：方向 103°，距离 ≈ 376m\n\n完整行驶路径（仅方向与距离）：\n- 起点：起点\n→ Crussh Bar and margeret street节点（方向 226°，距离 ≈ 68m）\n→ Crussh Bar（方向 278°，距离 ≈ 62m）\n→ Quirinale（方向 329°，距离 ≈ 97m）\n→ Crussh Bar（方向 149°，距离 ≈ 97m）\n→ Crussh Bar and Lloyds Bank节点（方向 177°，距离 ≈ 73m）\n→ Wash House南节点（方向 248°，距离 ≈ 234m）\n→ Wash House（方向 358°，距离 ≈ 81m）\n→ The Cinnamon Club（方向 2°，距离 ≈ 85m）\n→ Wash House（方向 182°，距离 ≈ 85m）\n→ The Cinnamon Club（方向 2°，距离 ≈ 85m）\n→ Ashburnham House（方向 326°，距离 ≈ 89m）\n→ Milne’s House（方向 1°，距离 ≈ 74m）\n→ tothill street and Milne’s House节点（方向 18°，距离 ≈ 173m）\n→ Café Fresco（方向 270°，距离 ≈ 113m）\n→ tothill street and Milne’s House节点（方向 90°，距离 ≈ 113m）\n→ tothill street and minster bridge西节点的节点（方向 92°，距离 ≈ 148m）\n→ minster bridge西节点（方向 357°，距离 ≈ 91m）\n→ margeret street and minster bridge节点（方向 92°，距离 ≈ 123m）\n→ Caffè Nero（方向 27°，距离 ≈ 99m）\n→ Caffè Nero and minster bridge节点（方向 170°，距离 ≈ 83m）\n→ Zen China and minster bridge节点（方向 90°，距离 ≈ 325m）\n→ Zen China节点（方向 358°，距离 ≈ 160m）\n→ Zen China（方向 100°，距离 ≈ 50m）\n→ Zen China节点（方向 280°，距离 ≈ 50m）\n→ Zen China and minster bridge节点（方向 178°，距离 ≈ 160m）\n→ Aji Zen Canteen and minster bridge节点（方向 89°，距离 ≈ 82m）\n→ Aji Zen Canteen（方向 9°，距离 ≈ 73m）\n→ Aji Zen Canteen and minster bridge节点（方向 189°，距离 ≈ 73m）\n→ Zen China and minster bridge节点（方向 269°，距离 ≈ 82m）\n→ albert and Shepherds Hallj节点（方向 193°，距离 ≈ 263m）\n→ Shepherds Hall（方向 87°，距离 ≈ 57m）\n→ albert and Shepherds Hallj节点（方向 267°，距离 ≈ 57m）\n→ Riverside Cafe（方向 189°，距离 ≈ 393m）\n→ albert and Riverside Cafe节点（方向 176°，距离 ≈ 84m）\n→ the terrace and margeret street节点（方向 271°，距离 ≈ 222m）\n→ the terrace and PizzaExpress节点（方向 179°，距离 ≈ 153m）\n→ PizzaExpress（方向 271°，距离 ≈ 51m）\n→ the terrace and PizzaExpress节点（方向 91°，距离 ≈ 51m）\n→ the terrace and margeret street节点（方向 359°，距离 ≈ 153m）\n→ Footstool and margeret street节点（方向 332°，距离 ≈ 95m）\n→ Footstool（方向 269°，距离 ≈ 117m）\n→ Lloyds Bank（方向 8°，距离 ≈ 81m）\n→ Crussh Bar and Lloyds Bank节点（方向 4°，距离 ≈ 67m）\n→ Crussh Bar and Lloyds Bank节点（方向 68°，距离 ≈ 48m）\n→ Crussh Bar（方向 357°，距离 ≈ 73m）\n→ Crussh Bar（方向 98°，距离 ≈ 30m）\n→ Crussh Bar and margeret street节点（方向 98°，距离 ≈ 32m）\n→ Crussh Bar and margeret street节点（方向 82°，距离 ≈ 48m）\n→ Lloyds Bank and margeret street节点（方向 210°，距离 ≈ 95m）\n→ 位置_50（方向 71°，距离 ≈ 50m）\n→ Footstool and margeret street节点（方向 196°，距离 ≈ 175m）\n→ 位置_52（方向 34°，距离 ≈ 83m）"
+}

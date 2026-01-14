@@ -9,6 +9,7 @@ from openai import AsyncOpenAI
 from langchain.prompts import PromptTemplate
 from langchain_community.chat_models import ChatTongyi, ChatOpenAI
 from langchain_core.messages import HumanMessage
+from zhipuai import ZhipuAI
 
 import sys
 import os
@@ -31,6 +32,7 @@ class EvaluationAgent:
         # 策略配置
         self.strategies = ["Direct", "CoT", "Self-Consistency", "ToT"]
         self.current_strategy = None
+        self.enable_explanation = False # 控制是否生成文本解释的开关，设置为 False 可关闭解释
         self.results = {}  # {strategy_name: result_dict}
         self.current_strategy_answers = [] # 用于跟踪当前策略的进度
         
@@ -57,9 +59,9 @@ class EvaluationAgent:
 选项：
 {options}
 
-输出格式：
-答案：<A/B/C/D>
-解释：<基于上述探索上下文的简洁中文解释>
+输出要求（严格）：
+- 第一行：答案：<一个大写字母>
+- 第二行：解释：<基于上述探索上下文的简洁中文解释>
 """
         )
 
@@ -87,9 +89,9 @@ class EvaluationAgent:
 选项：
 {options}
 
-输出格式：
-答案：<A/B/C/D>
-解释：<引用文本中的实体/方向/距离进行说明>
+输出要求（严格）：
+- 第一行：答案：<一个大写字母>
+- 第二行：解释：<引用文本中的实体/方向/距离进行说明>
 """
         )
 
@@ -118,9 +120,9 @@ class EvaluationAgent:
 选项：
 {options}
 
-输出格式：
-答案：<A/B/C/D>
-解释：<引用节点、边与路径长度/方向来说明>
+输出要求（严格）：
+- 第一行：答案：<一个大写字母>
+- 第二行：解释：<引用节点、边与路径长度/方向来说明>
 """
         )
 
@@ -150,9 +152,9 @@ class EvaluationAgent:
 选项：
 {options}
 
-输出格式：
-答案：<A/B/C/D>
-解释：<第一行标注grid_size；随后引用栅格坐标差、grid_cell_size_m与连通关系进行说明>
+输出要求（严格）：
+- 第一行：答案：<一个大写字母>
+- 第二行：解释：<第一行标注grid_size；随后引用栅格坐标差、grid_cell_size_m与连通关系进行说明>
 """
         )
 
@@ -189,9 +191,9 @@ class EvaluationAgent:
 请仔细评估上述候选答案，判断哪一个最符合推理计划且逻辑最严密。
 请选出你认为最可信的一个作为最终预测。
 
-输出格式：
-答案：<A/B/C/D>
-解释：<你的最终解释>
+输出要求（严格）：
+- 第一行：答案：<一个大写字母>
+- 第二行：解释：<你的最终解释>
 """
         )
 
@@ -247,16 +249,44 @@ class EvaluationAgent:
         # Initialize LLM based on provider
         self.llm_config = {
             "api_key": Config.DASHSCOPE_API_KEY,
-            "model": "qwen-turbo"
+            "model": "qwen-max-latest"
         }
         
-        if self.model_provider == "deepseek":
+        if self.model_provider == "qwen":
+            self.llm_config["api_key"] = Config.DASHSCOPE_API_KEY
+            self.llm_config["model"] = "qwen-max-latest"
+        
+        elif self.model_provider.startswith("qwen3"):
+            self.llm_config["api_key"] = Config.DASHSCOPE_API_KEY
+            self.llm_config["model"] = self.model_provider
+            
+        elif self.model_provider == "deepseek":
             self.llm_config["api_key"] = Config.DEEPSEEK_API_KEY
             self.llm_config["base_url"] = "https://api.deepseek.com"
             self.llm_config["model"] = "deepseek-chat"
-        elif self.model_provider == "openai":
+            
+        elif self.model_provider == "openai" or self.model_provider == "chatgpt":
             self.llm_config["api_key"] = Config.OPENAI_API_KEY
-            self.llm_config["model"] = "gpt-4o"
+            self.llm_config["model"] = "gpt-5.2"
+
+        elif self.model_provider.startswith("anthropic/"):
+            self.llm_config["api_key"] = Config.OPENROUTER_API_KEY
+            self.llm_config["base_url"] = "https://openrouter.ai/api/v1"
+            self.llm_config["model"] = self.model_provider
+
+        elif self.model_provider == "claude":
+            self.llm_config["api_key"] = Config.OPENROUTER_API_KEY
+            self.llm_config["base_url"] = "https://openrouter.ai/api/v1"
+            self.llm_config["model"] = "anthropic/claude-3.5-sonnet"
+            
+        elif self.model_provider == "gemini":
+            self.llm_config["api_key"] = Config.OPENROUTER_API_KEY
+            self.llm_config["base_url"] = "https://openrouter.ai/api/v1"
+            self.llm_config["model"] = "google/gemini-2.5-pro"
+            
+        elif self.model_provider == "zhipu":
+            self.llm_config["api_key"] = Config.ZHIPU_API_KEY
+            self.llm_config["model"] = "glm-4.6"
     
     async def start_evaluation(self):
         """开始批量评估过程（顺序执行四种策略）"""
@@ -320,6 +350,11 @@ class EvaluationAgent:
                     question=qtext,
                     options=options_str
                 )
+                
+                # 如果关闭了解释功能，修改 Prompt 要求只输出答案
+                if not self.enable_explanation:
+                    base_prompt += "\n\n输出要求（严格）：只输出一个大写字母作为答案（对应选项标签），不要输出\"答案：\"前缀、不要输出解释、不要输出任何其他字符。"
+
                 if rules_block:
                     base_prompt = f"附加规则（优先级最高）：\n{rules_block}\n\n" + base_prompt
                 
@@ -404,6 +439,10 @@ class EvaluationAgent:
                             candidates=candidates_text
                         )
                         
+                        # 如果关闭了解释功能，修改 ToT 选择阶段的 Prompt 要求只输出答案
+                        if not self.enable_explanation:
+                            select_prompt += "\n\n输出要求（严格）：只输出一个大写字母作为答案（对应选项标签），不要输出\"答案：\"前缀、不要输出解释、不要输出任何其他字符。"
+                        
                         selection_response = await self._call_llm_async(select_prompt, temperature=0.1)
                         ai_answer = self._extract_answer(selection_response)
                         ai_explanation = f"[推理计划]\n{plan}\n\n[最终选定]\n{self._extract_explanation(selection_response)}"
@@ -477,7 +516,19 @@ class EvaluationAgent:
         
         for attempt in range(retry_count):
             try:
-                if self.model_provider == "deepseek" or self.model_provider == "openai":
+                if self.model_provider == "zhipu":
+                    def call_zhipu():
+                        client = ZhipuAI(api_key=self.llm_config["api_key"])
+                        response = client.chat.completions.create(
+                            model=self.llm_config["model"],
+                            messages=[{"role": "user", "content": prompt}],
+                            temperature=current_temp
+                        )
+                        return response.choices[0].message.content
+                    
+                    return await asyncio.to_thread(call_zhipu)
+
+                elif not self.model_provider.startswith("qwen"):
                     client = AsyncOpenAI(
                         api_key=self.llm_config["api_key"],
                         base_url=self.llm_config.get("base_url")
@@ -490,15 +541,30 @@ class EvaluationAgent:
                     return response.choices[0].message.content
                 else:
                     # Default to Qwen (DashScope)
+                    # For Qwen3, ensure enable_thinking is False for non-streaming calls
+                    kwargs = {}
+                    if self.model_provider.startswith("qwen3"):
+                        kwargs["enable_thinking"] = False
+                        
                     response = Generation.call(
-                        model=self.model,
+                        model=self.llm_config["model"],
                         prompt=prompt,
-                        api_key=self.api_key,
-                        temperature=current_temp
+                        api_key=self.llm_config["api_key"],
+                        temperature=current_temp,
+                        **kwargs
                     )
                     
                     if response.status_code == 200:
-                        return response.output.text
+                        if response.output.text:
+                            return response.output.text
+                        # Fallback for models that return content in choices but text is null
+                        elif response.output.choices and len(response.output.choices) > 0:
+                            msg = response.output.choices[0].message
+                            if hasattr(msg, 'content'):
+                                return msg.content
+                            elif isinstance(msg, dict):
+                                return msg.get('content', '')
+                        return ""
                     else:
                         last_error = f"API返回错误状态码: {response.status_code}, 消息: {response.message}"
                         print(f"LLM调用失败 (尝试 {attempt + 1}/{retry_count}): {last_error}")
@@ -519,47 +585,43 @@ class EvaluationAgent:
     
     def _extract_answer(self, response: str) -> str:
         """从LLM响应中提取答案"""
-        if not response: return "A"
-        response = response.strip().upper()
+        if not response:
+            return "A"
+        text = (response or "").strip().upper()
         
-        # 优先查找明确的答案格式
+        # 0. 如果直接是单个字母
+        if text in {"A", "B", "C", "D"}:
+            return text
+
         import re
-        
-        # 查找"答案：X"或"答案:X"格式
-        answer_pattern = r'答案[：:]\s*([ABCD])'
-        match = re.search(answer_pattern, response)
+
+        # 1. 查找"答案：X"或"答案:X"格式 (增强：支持括号等)
+        match = re.search(r"答案[：:]\s*[<（\[]?\s*([ABCD])\s*[>）\]]?", text)
         if match:
             return match.group(1)
-        
-        # 查找单独的选项字母（前后有空格或标点）
-        for option in ['A', 'B', 'C', 'D']:
-            # 查找独立的选项字母
-            pattern = r'\b' + option + r'\b'
-            if re.search(pattern, response):
-                return option
-        
-        # 查找选项格式 "选择X" 或 "我选择X"
-        choice_pattern = r'选择\s*([ABCD])'
-        match = re.search(choice_pattern, response)
+
+        # 2. 查找选项格式 "选择X" 或 "我选择X"
+        match = re.search(r"选择\s*([ABCD])", text)
         if match:
             return match.group(1)
-        
-        # 最后尝试简单包含检查，但要避免误判
-        option_counts = {}
-        for option in ['A', 'B', 'C', 'D']:
-            option_counts[option] = response.count(option)
-        
-        # 如果某个选项出现次数明显更多，选择它
+
+        # 3. 查找独立的选项字母
+        letters = re.findall(r"\b([ABCD])\b", text)
+        uniq = list(dict.fromkeys(letters)) # 去重保持顺序
+        if len(uniq) == 1:
+            return uniq[0]
+
+        # 4. 统计法
+        option_counts = {opt: text.count(opt) for opt in ["A", "B", "C", "D"]}
         max_count = max(option_counts.values())
         if max_count > 0:
-            # 找到出现次数最多且唯一的选项
             candidates = [opt for opt, count in option_counts.items() if count == max_count]
             if len(candidates) == 1:
                 return candidates[0]
-        
-        # 使用随机选择
+
+        # 5. 随机兜底 (仅在完全无法解析时)
         import random
-        return random.choice(['A', 'B', 'C', 'D'])
+        return random.choice(["A", "B", "C", "D"])
     
     def _extract_explanation(self, response: str) -> str:
         try:

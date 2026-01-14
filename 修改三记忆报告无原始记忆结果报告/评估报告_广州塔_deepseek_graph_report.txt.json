@@ -1,0 +1,261 @@
+{
+  "region": "广州塔",
+  "source_file": "广州塔_deepseek_graph_report.txt",
+  "evaluation_time": "2025-12-25T17:55:46.802061",
+  "context_text": "# 第二种记忆道路连通图描述\n## 节点列表\nNODE[id,类型,附加属性]\nNODE[1,POI,name=信德商务大厦]\nNODE[2,POI,name=金德大厦]\nNODE[3,POI,name=宝升商业大厦]\nNODE[4,POI,name=景腾商业大厦]\nNODE[5,POI,name=捷登都会]\nNODE[6,POI,name=珠江国际大厦]\nNODE[7,POI,name=越秀城市广场南塔]\nNODE[8,ROAD,name=起点]\nNODE[9,ROAD,name=信德商务大厦与吉祥路的节点]\nNODE[10,ROAD,name=吉祥路与中山五路的节点]\nNODE[11,ROAD,name=金德大厦与吉祥路的节点]\nNODE[12,ROAD,name=宝升商业大厦与中山五路的节点]\nNODE[13,ROAD,name=解放中路与中山五路的节点]\nNODE[14,ROAD,name=景腾商业大厦与中山五路的节点]\nNODE[15,ROAD,name=捷登都会道路与解放中路的节点]\nNODE[16,ROAD,name=位置_17]\nNODE[17,ROAD,name=位置_19]\nNODE[18,ROAD,name=珠江国际大厦道路与解放中路的节点]\nNODE[19,ROAD,name=越秀城市广场南塔道路与吉祥路的节点]\n\n## 边列表\nEDGE[起点ID,终点ID,道路长度,方向]\nEDGE[8,1,88m,98°]\nEDGE[1,9,86m,267°]\nEDGE[9,10,367m,180°]\nEDGE[10,11,129m,94°]\nEDGE[11,2,62m,174°]\nEDGE[2,11,62m,354°]\nEDGE[11,10,129m,274°]\nEDGE[10,12,158m,270°]\nEDGE[12,3,202m,168°]\nEDGE[3,12,202m,348°]\nEDGE[12,13,160m,267°]\nEDGE[13,14,64m,267°]\nEDGE[14,4,136m,175°]\nEDGE[4,14,136m,355°]\nEDGE[14,13,64m,87°]\nEDGE[13,15,529m,354°]\nEDGE[15,16,130m,256°]\nEDGE[16,5,188m,178°]\nEDGE[5,17,188m,358°]\nEDGE[17,15,130m,76°]\nEDGE[15,18,230m,357°]\nEDGE[18,6,79m,84°]\nEDGE[6,18,79m,264°]\nEDGE[18,15,230m,177°]\nEDGE[15,13,529m,174°]\nEDGE[13,12,160m,87°]\nEDGE[12,10,158m,90°]\nEDGE[10,9,367m,0°]\nEDGE[9,19,571m,356°]\nEDGE[19,7,187m,87°]",
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 11,
+      "total_questions": 24,
+      "accuracy": 45.83333333333333,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 3,
+          "total": 8,
+          "percentage": 37.5
+        },
+        "空间距离估算": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "邻近关系判断": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "POI密度识别": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "路径规划": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        }
+      },
+      "answers": [
+        {
+          "question": "金德大厦相对于信德商务大厦在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "金德大厦位于信德商务大厦的东南面。"
+        },
+        {
+          "question": "捷登都会相对于金德大厦在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "捷登都会位于金德大厦的西北面。"
+        },
+        {
+          "question": "珠江国际大厦相对于捷登都会在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "珠江国际大厦位于捷登都会的东北面。"
+        },
+        {
+          "question": "越秀城市广场南塔相对于珠江国际大厦在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "越秀城市广场南塔位于珠江国际大厦的东北面。"
+        },
+        {
+          "question": "信德商务大厦相对于金德大厦在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "信德商务大厦位于金德大厦的西北面。"
+        },
+        {
+          "question": "金德大厦相对于捷登都会在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "金德大厦位于捷登都会的东南面。"
+        },
+        {
+          "question": "捷登都会相对于珠江国际大厦在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "捷登都会位于珠江国际大厦的西南面。"
+        },
+        {
+          "question": "珠江国际大厦相对于越秀城市广场南塔在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "珠江国际大厦位于越秀城市广场南塔的西南面。"
+        },
+        {
+          "question": "信德商务大厦到捷登都会的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "信德商务大厦到捷登都会的直线距离约为585米。"
+        },
+        {
+          "question": "金德大厦到珠江国际大厦的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "依据不足",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "金德大厦到珠江国际大厦的直线距离约为939米。"
+        },
+        {
+          "question": "捷登都会到越秀城市广场南塔的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "依据不足",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "捷登都会到越秀城市广场南塔的直线距离约为916米。"
+        },
+        {
+          "question": "珠江国际大厦到宝升商业大厦的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "依据不足",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "珠江国际大厦到宝升商业大厦的直线距离约为973米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离信德商务大厦最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "金德大厦距离信德商务大厦最近，约445米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离金德大厦最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "捷登都会距离金德大厦最近，约732米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离捷登都会最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "越秀城市广场南塔距离捷登都会最远，约916米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离珠江国际大厦最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "宝升商业大厦距离珠江国际大厦最远，约973米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "景腾商业大厦周围的POI密度最高，500米范围内有2个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "宝升商业大厦周围的POI密度最高，500米范围内有2个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "信德商务大厦周围的POI密度最低，500米范围内只有1个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "越秀城市广场南塔周围的POI密度最低，500米范围内只有1个其他POI。"
+        },
+        {
+          "question": "从信德商务大厦到金德大厦，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：信德商务大厦 -> (信德商务大厦与吉祥路的节点) -> (吉祥路与中山五路的节点) -> (金德大厦与吉祥路的节点) -> 金德大厦，总距离约644米。"
+        },
+        {
+          "question": "从金德大厦到捷登都会，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：金德大厦 -> (金德大厦与吉祥路的节点) -> (吉祥路与中山五路的节点) -> (宝升商业大厦与中山五路的节点) -> (解放中路与中山五路的节点) -> (捷登都会道路与解放中路的节点) -> (捷登都会道路与解放中路的节点) -> 捷登都会，总距离约1359米。"
+        },
+        {
+          "question": "从捷登都会到珠江国际大厦，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：捷登都会 -> (捷登都会道路与解放中路的节点) -> (捷登都会道路与解放中路的节点) -> (珠江国际大厦道路与解放中路的节点) -> 珠江国际大厦，总距离约627米。"
+        },
+        {
+          "question": "从珠江国际大厦到越秀城市广场南塔，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "最短路径是：珠江国际大厦 -> (珠江国际大厦道路与解放中路的节点) -> (捷登都会道路与解放中路的节点) -> (解放中路与中山五路的节点) -> (宝升商业大厦与中山五路的节点) -> (吉祥路与中山五路的节点) -> (信德商务大厦与吉祥路的节点) -> (越秀城市广场南塔道路与吉祥路的节点) -> 越秀城市广场南塔，总距离约2284米。"
+        }
+      ],
+      "completed_at": "2025-12-25T17:55:46.262626"
+    },
+    "context_text": "# 第二种记忆道路连通图描述\n## 节点列表\nNODE[id,类型,附加属性]\nNODE[1,POI,name=信德商务大厦]\nNODE[2,POI,name=金德大厦]\nNODE[3,POI,name=宝升商业大厦]\nNODE[4,POI,name=景腾商业大厦]\nNODE[5,POI,name=捷登都会]\nNODE[6,POI,name=珠江国际大厦]\nNODE[7,POI,name=越秀城市广场南塔]\nNODE[8,ROAD,name=起点]\nNODE[9,ROAD,name=信德商务大厦与吉祥路的节点]\nNODE[10,ROAD,name=吉祥路与中山五路的节点]\nNODE[11,ROAD,name=金德大厦与吉祥路的节点]\nNODE[12,ROAD,name=宝升商业大厦与中山五路的节点]\nNODE[13,ROAD,name=解放中路与中山五路的节点]\nNODE[14,ROAD,name=景腾商业大厦与中山五路的节点]\nNODE[15,ROAD,name=捷登都会道路与解放中路的节点]\nNODE[16,ROAD,name=位置_17]\nNODE[17,ROAD,name=位置_19]\nNODE[18,ROAD,name=珠江国际大厦道路与解放中路的节点]\nNODE[19,ROAD,name=越秀城市广场南塔道路与吉祥路的节点]\n\n## 边列表\nEDGE[起点ID,终点ID,道路长度,方向]\nEDGE[8,1,88m,98°]\nEDGE[1,9,86m,267°]\nEDGE[9,10,367m,180°]\nEDGE[10,11,129m,94°]\nEDGE[11,2,62m,174°]\nEDGE[2,11,62m,354°]\nEDGE[11,10,129m,274°]\nEDGE[10,12,158m,270°]\nEDGE[12,3,202m,168°]\nEDGE[3,12,202m,348°]\nEDGE[12,13,160m,267°]\nEDGE[13,14,64m,267°]\nEDGE[14,4,136m,175°]\nEDGE[4,14,136m,355°]\nEDGE[14,13,64m,87°]\nEDGE[13,15,529m,354°]\nEDGE[15,16,130m,256°]\nEDGE[16,5,188m,178°]\nEDGE[5,17,188m,358°]\nEDGE[17,15,130m,76°]\nEDGE[15,18,230m,357°]\nEDGE[18,6,79m,84°]\nEDGE[6,18,79m,264°]\nEDGE[18,15,230m,177°]\nEDGE[15,13,529m,174°]\nEDGE[13,12,160m,87°]\nEDGE[12,10,158m,90°]\nEDGE[10,9,367m,0°]\nEDGE[9,19,571m,356°]\nEDGE[19,7,187m,87°]",
+    "context_mode": "graph"
+  }
+}

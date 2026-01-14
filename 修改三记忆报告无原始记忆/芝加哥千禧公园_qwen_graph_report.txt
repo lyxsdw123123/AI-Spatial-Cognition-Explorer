@@ -1,0 +1,265 @@
+{
+  "region": "芝加哥千禧公园",
+  "model": "qwen",
+  "memory_mode": "graph",
+  "exploration_report": {
+    "total_distance": 1560,
+    "exploration_time": 0,
+    "poi_count": 300
+  },
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 9,
+      "total_questions": 24,
+      "accuracy": 37.5,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 3,
+          "total": 8,
+          "percentage": 37.5
+        },
+        "空间距离估算": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "邻近关系判断": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "POI密度识别": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "路径规划": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Wildberry Pancakes and Cafe相对于The Park Grill在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文提供的节点与边信息，无法直接确定Wildberry Pancakes and Cafe相对于The Park Grill的具体方向。然而，在原始记忆中，当AI位于The Park Grill时，Wildberry Pancakes and Cafe的方位为9.76°（接近正东）。而当AI移动到Wildberry Pancakes and Cafe后，其相对于The Park Grill的位置可推断为东南方向（约112.8°）。因此，结合方位角标准（地理正北为0°、顺时针递增），Wildberry Pancakes and Cafe相对于The Park Grill在东南方向。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Wildberry Pancakes and Cafe位于The Park Grill的东北面。"
+        },
+        {
+          "question": "Starbucks相对于Wildberry Pancakes and Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文提供的信息，Starbucks位于Wildberry Pancakes and Cafe的东南方向。在路径规划中，从Wildberry Pancakes and Cafe到Starbucks的路径涉及多个节点和边，但根据工具输出中的方向信息，Starbucks相对于Wildberry Pancakes and Cafe的方向为34.26°（接近正东方向），因此属于东南方向。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Starbucks位于Wildberry Pancakes and Cafe的西南面。"
+        },
+        {
+          "question": "Pittsfield Cafe相对于Starbucks在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "<根据上下文提供的边列表，EDGE[5,4,362m,245°]表示从节点5（Starbucks）到节点4（Chase）的方向为245°，而节点4到节点5的方向为65°。Pittsfield Cafe位于节点10，但未直接与Starbucks相连。通过路径推理，从Starbucks（节点5）到Pittsfield Cafe（节点10）的路径可能经过多个节点，但根据工具输出中“Pittsfield Cafe (咖啡厅)”的方位角为6.9°，表明其相对于Starbucks的位置在正东方向附近。结合选项，最接近的方向是东南（B）。>",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Pittsfield Cafe位于Starbucks的西北面。"
+        },
+        {
+          "question": "Walgreens相对于Pittsfield Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据提供的边列表，没有直接连接Walgreens（节点12）和Pittsfield Cafe（节点5）的边。因此，需要通过其他节点进行路径推理。从节点5（Pittsfield Cafe）到节点12（Walgreens）的路径可以通过节点5→4→5→12，但该路径不符合连通性约束。因此，依据不足，无法确定准确方向。然而，在原始记忆中，当AI从Pittsfield Cafe移动到Walgreens时，方向为97.1°，这属于东南方向。因此，选择B（东南）。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Walgreens位于Pittsfield Cafe的东南面。"
+        },
+        {
+          "question": "The Park Grill相对于Wildberry Pancakes and Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "根据提供的节点和边信息，无法直接确定\"The Park Grill\"与\"Wildberry Pancakes and Cafe\"之间的相对方向。然而，在用户提供的探索上下文中，\"The Park Grill\"被描述为在0米处，方向为0°（正北），而\"Wildberry Pancakes and Cafe\"被描述为在87米处，方向为112.8°（东南偏南）。因此，\"The Park Grill\"相对于\"Wildberry Pancakes and Cafe\"位于西北方向（即相反方向）。",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "The Park Grill位于Wildberry Pancakes and Cafe的西南面。"
+        },
+        {
+          "question": "Wildberry Pancakes and Cafe相对于Starbucks在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文中的边信息，EDGE[5,4,362m,245°]表示从节点5（Starbucks）到节点4（Chase）的方向为245°。而根据路径规划和相对位置分析，Wildberry Pancakes and Cafe位于Starbucks的东南方向。因此，正确答案是B. 东南。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Wildberry Pancakes and Cafe位于Starbucks的东北面。"
+        },
+        {
+          "question": "Starbucks相对于Pittsfield Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "<根据上下文提供的边信息，EDGE[5,4,362m,245°]表示从节点5（Starbucks）到节点4（Chase）的方向为245°，而节点4（Chase）与节点2（Pittsfield Cafe）之间的路径未直接提供。但通过上下文中的移动记录可知，Starbucks位于Pittsfield Cafe的东南方向。因此，Starbucks相对于Pittsfield Cafe在东南方向。>",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Starbucks位于Pittsfield Cafe的东南面。"
+        },
+        {
+          "question": "Pittsfield Cafe相对于Walgreens在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文提供的节点与边信息，Pittsfield Cafe（节点ID为5）和Walgreens（节点ID为12）之间没有直接的边连接。但根据原始记忆中移动路径的信息，当AI从Walgreens移动到Pittsfield Cafe时，方向为6.9°（即正北顺时针约7°，接近正东）。因此，Pittsfield Cafe相对于Walgreens位于东南方向。选项B（东南）是正确答案。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Pittsfield Cafe位于Walgreens的西北面。"
+        },
+        {
+          "question": "The Park Grill到Starbucks的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文提供的节点和边信息，The Park Grill（节点ID未在给定的节点列表中）与Starbucks（节点5）之间的直接路径无法通过给定的边集合确定。然而，在用户提供的探索上下文中，当AI从The Park Grill移动到Starbucks时，工具输出显示“Path planned via road network: 3 steps, approx 174m”。这表明从The Park Grill到Starbucks的路径长度约为174米，因此直线距离应接近此数值。由于174米属于0-100米范围（选项A）的合理近似，故选择A。",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "The Park Grill到Starbucks的直线距离约为129米。"
+        },
+        {
+          "question": "Wildberry Pancakes and Cafe到Pittsfield Cafe的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "根据提供的节点与边信息，无法直接获取Wildberry Pancakes and Cafe和Pittsfield Cafe之间的直线距离。然而，在探索上下文中，当AI从Wildberry Pancakes and Cafe移动到Pittsfield Cafe时，工具输出显示路径规划为2 steps, approx 52m。这表明两者之间的道路距离约为52米，因此直线距离应小于或接近该数值。根据选项，最合理的范围是B（100-200米），因为52米属于该范围的下限。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Wildberry Pancakes and Cafe到Pittsfield Cafe的直线距离约为264米。"
+        },
+        {
+          "question": "Starbucks到Walgreens的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "根据提供的边列表，没有直接连接Starbucks（节点5）和Walgreens的边。然而，通过路径推理，可以找到一条经过多个节点的路径。例如，从Starbucks（节点5）到Chase（节点4），再到其他节点，最终到达Walgreens。根据路径规划规则，总边权最小优先。虽然具体路径未明确给出，但根据已知的路径长度和步数估算，Starbucks到Walgreens的直线距离大约在200-300米之间。因此，选项C是正确答案。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Starbucks到Walgreens的直线距离约为88米。"
+        },
+        {
+          "question": "Pittsfield Cafe到CVS Pharmacy的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文提供的节点与边信息，Pittsfield Cafe（NODE[6,POI]）和CVS Pharmacy（未在节点列表中直接出现）之间的路径无法通过给定的边集合直接计算。然而，在探索过程中，AI曾从Pittsfield Cafe移动到Walgreens（NODE[12,POI]），再从Walgreens移动到其他节点，最终到达CVS Pharmacy。根据路径规划的累计距离，Pittsfield Cafe到CVS Pharmacy的直线距离大约为400-800米。由于没有直接的边权数据，该估算基于路径推理中的累计步数和距离近似得出。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Pittsfield Cafe到CVS Pharmacy的直线距离约为528米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离The Park Grill最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文提供的节点与边信息，The Park Grill（NODE[1,POI]）与Starbucks（NODE[5,POI]）之间存在直接连接，即EDGE[4,5,362m,65°]和EDGE[5,4,362m,245°]。虽然The Park Grill本身未在边列表中直接连接到其他节点，但通过路径推理，Starbucks距离The Park Grill最近，且路径长度为362米。而Wildberry Pancakes and Cafe和Pittsfield Cafe未在给定的边集合中与The Park Grill直接或间接连接，因此无法确定其具体距离。依据不足的情况下，选择最接近的已知路径，即Starbucks。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Starbucks距离The Park Grill最近，约129米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Wildberry Pancakes and Cafe最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "<根据上下文提供的节点与边信息，Wildberry Pancakes and Cafe的ID为未直接给出，但根据路径推理和相对位置分析，可以推断其对应节点为某个POI。在路径规划中，从Wildberry Pancakes and Cafe到Pittsfield Cafe的路径长度为52m（根据工具输出中的“Path planned via road network: 2 steps, approx 52m”），而到Starbucks的路径长度为256m（根据工具输出中的“Path planned via road network: 4 steps, approx 251m”），到Walgreens的路径长度为39m（根据工具输出中的“Path planned via road network: 7 steps, approx 520m”）。因此，Pittsfield Cafe距离Wildberry Pancakes and Cafe最近。>",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Walgreens距离Wildberry Pancakes and Cafe最近，约237米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Starbucks最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "<根据上下文提供的边列表，Starbucks对应的节点为5。通过路径规划，可以计算出各选项POI到Starbucks的距离：  \n- Pittsfield Cafe（节点6）：从节点5到节点6的路径未直接提供，但根据工具输出中“move_to_poi”步骤，从Starbucks到Pittsfield Cafe的距离为52m。  \n- Walgreens（节点12）：从节点5到节点12的路径未直接提供，但根据工具输出中“move_to_poi”步骤，从Starbucks到Walgreens的距离为39m。  \n- CVS Pharmacy（节点13）：从节点5到节点13的路径未直接提供，但根据工具输出中“move_to_poi”步骤，从Starbucks到CVS Pharmacy的距离为467m。  \n\n因此，CVS Pharmacy距离Starbucks最远。>",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "CVS Pharmacy距离Starbucks最远，约559米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Pittsfield Cafe最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文提供的节点与边信息，Pittsfield Cafe（NODE[5,POI]）与其他选项的路径距离如下：\n\n- **Walgreens**：通过路径 NODE[5] → NODE[4] → NODE[12]，总长度为 362m + 158m = 520m。\n- **CVS Pharmacy**：通过路径 NODE[5] → NODE[4] → NODE[12] → NODE[10]，总长度为 362m + 158m + 197m = 717m。\n- **National College of Education Urban Campus**：通过路径 NODE[5] → NODE[4] → NODE[10]，总长度为 362m + 197m = 559m。\n\n因此，**CVS Pharmacy** 距离 Pittsfield Cafe 最远，为 717m。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "CVS Pharmacy距离Pittsfield Cafe最远，约528米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "根据提供的节点与边信息，星巴克（NODE[5]）与 Chase（NODE[4]）之间存在双向边，长度为362m。在探索过程中，星巴克被多次访问，并且在多个步骤中作为路径规划的中间节点。此外，从星巴克出发可以到达多个其他POI，如 Wildberry Pancakes and Cafe、Pittsfield Cafe、Walgreens等，表明其周围有较高的POI密度。因此，星巴克周围的POI密度最高。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Market Creations周围的POI密度最高，500米范围内有9个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "根据提供的节点和边信息，Chase（NODE[4]）与Starbucks（NODE[5]）之间存在直接连接（EDGE[4,5,362m]），且两者之间的距离为362米。此外，在探索过程中，Chase附近还出现了多个POI，如Walgreens、Pittsfield Cafe、Oasis Cafe等，表明其周围POI密度较高。相比之下，其他选项中的POI（如CVS Pharmacy、Starbucks、Pittsfield Cafe）虽然也有一定数量的邻近POI，但未形成像Chase那样密集的POI聚集区域。因此，Chase周围的POI密度最高。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Chase周围的POI密度最高，500米范围内有9个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "<Pittsfield Cafe（节点ID=？）周围的POI密度最低。根据提供的节点列表，Pittsfield Cafe的邻近POI数量最少。在路径规划过程中，Pittsfield Cafe被访问时，周围可见POI数量为52m，方向6.9°，表明其周围POI分布稀疏。相比之下，其他选项如CVS Pharmacy、Starbucks和Walgreens周围可见POI数量更多，因此Pittsfield Cafe的POI密度最低。>",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "CVS Pharmacy周围的POI密度最低，500米范围内只有4个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "根据提供的节点和边信息，可以分析各POI周围的连通性。在给定的边列表中，只有EDGE[4,5,362m,65°]和EDGE[5,4,362m,245°]涉及POI节点4（Chase）和POI节点5（Starbucks）。其他POI（如CVS Pharmacy、Pittsfield Cafe、Walgreens）没有直接连接到其他POI的边，因此它们周围的POI密度最低。其中，Walgreens（节点12）没有任何边连接到其他POI，因此其周围POI密度最低。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Starbucks周围的POI密度最低，500米范围内只有8个其他POI。"
+        },
+        {
+          "question": "从The Park Grill到Wildberry Pancakes and Cafe，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "根据提供的节点和边列表，只有NODE[1,POI,name=The Park Grill]和NODE[5,POI,name=Starbucks]之间存在直接连接（EDGE[4,5,362m,65°]和EDGE[5,4,362m,245°]），但其他选项中提到的节点（如\"machigan street节点\"、\"randoful river and machigan street节点\"、\"moron river and wabash avenue节点\"等）未在上下文中出现，因此无法确认其连通性。选项D中提到的路径仅使用了上下文中的节点（The Park Grill、Walgreens、Starbucks等）和边（如EDGE[4,5,362m,65°]），符合图记忆规则。其他选项均涉及未出现的节点或连接，依据不足。因此，选项D是唯一符合规则的路径。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "最短路径是：The Park Grill -> (The Park Grill and machigan street节点) -> (Walgreens and machigan street节点) -> (randoful river and machigan street节点) -> (randoful river and Market Creations节点) -> (randoful river and Wildberry Pancakes and Cafe) -> Wildberry Pancakes and Cafe，总距离约471米。"
+        },
+        {
+          "question": "从Wildberry Pancakes and Cafe到Starbucks，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "根据提供的节点与边列表，只有 EDGE[4,5,362m] 和 EDGE[5,4,362m] 是有效的连接。从 Wildberry Pancakes and Cafe 到 Starbucks 的路径必须基于这些已知的节点和边进行推理。选项 D 中的路径 \"Wildberry Pancakes and Cafe -> (lake street西节点) -> (moron river and wabash avenue节点) -> (randoful river and stetson avenue的节点) -> Starbucks\" 未在上下文中提供任何对应的节点或边信息，因此无法验证其有效性。然而，其他选项（A、B、C）均包含未在上下文出现的节点或路径，违反了图记忆规则第4条“禁止引入未出现的连接或节点”。因此，唯一可能符合规则的路径是选项 D，尽管其描述中存在未明确的节点名称，但其路径结构最接近已知的节点和边关系，且未引入额外的节点或边。",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "最短路径是：Wildberry Pancakes and Cafe -> (randoful river and Wildberry Pancakes and Cafe) -> (randoful river and Market Creations节点) -> (randoful river and machigan street节点) -> (Walgreens and machigan street节点) -> (Walgreens and machigan street节点) -> Starbucks，总距离约435米。"
+        },
+        {
+          "question": "从Starbucks到Pittsfield Cafe，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "根据提供的节点与边列表，Starbucks（节点5）与Pittsfield Cafe（节点6）之间没有直接连接。但根据路径规划规则，需在给定的节点与边集合内推理。\n\n选项D中的路径为：\nStarbucks (5) -> (Pizano's Pizza & Pasta and wabash avenue节点) -> (lake street and CVS Pharmacy的节点) -> (The Park Grill and machigan street节点) -> (east steet and machigan street节点) -> Pittsfield Cafe (6)\n\n虽然这些中间节点未在提供的节点列表中明确列出，但根据上下文提供的边信息，可以推断出以下可能的路径：\n\n- Starbucks (5) 与 Pizano's Pizza & Pasta (节点7) 之间有路径（通过已知的边关系可推测）。\n- Pizano's Pizza & Pasta (节点7) 可能连接到其他节点，如 Chase (节点4)，再连接到其他节点。\n- 最终，通过合理的路径选择，Starbucks (5) 到 Pittsfield Cafe (6) 的最短路径是通过节点5 → 节点7 → ... → 节点6，这符合选项D的描述。\n\n因此，选项D是最短路径。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "最短路径是：Starbucks -> (Walgreens and machigan street节点) -> (Walgreens and machigan street节点) -> (randoful river and machigan street节点) -> (randoful river and Chase节点) -> (randoful river西节点) -> (Pittsfield Cafe and wabash avenue节点) -> Pittsfield Cafe，总距离约532米。"
+        },
+        {
+          "question": "从Pittsfield Cafe到Walgreens，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "根据提供的节点和边列表，只有节点ID 1-12是有效的。选项中提到的“moron river and machigan street节点”、“National College and machigan street节点”、“east steet and Market Creations节点”、“randoful river西节点”、“lake street and Starbucks的节点”、“randoful river and Wildberry Pancakes and Cafe”、“randoful river and Chase节点”、“east steet and stetson avenue的节点”、“Pittsfield Cafe and wabash avenue节点”、“machigan street南节点”、“Walgreens and machigan street节点”等均未在上下文中出现，因此依据不足。  \n\n然而，选项D中提到的路径仅使用了上下文中的节点（如Pittsfield Cafe、Wabash Avenue节点、Randoful River西节点、Chase节点、Machigan Street节点、Walgreens节点），且这些节点与边的关系在上下文中存在。例如，从Pittsfield Cafe到Wabash Avenue节点、再到Randoful River西节点、Chase节点、Machigan Street节点，最后到达Walgreens，符合图记忆规则中的连通性约束。其他选项涉及的节点或路径关系未在上下文中提供，因此无法验证其有效性。  \n\n综上，选项D是唯一符合图记忆规则的路径。",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：Pittsfield Cafe -> (Pittsfield Cafe and wabash avenue节点) -> (randoful river西节点) -> (randoful river and Chase节点) -> (randoful river and machigan street节点) -> (Walgreens and machigan street节点) -> Walgreens，总距离约443米。"
+        }
+      ],
+      "completed_at": "2025-12-21T01:42:30.875484"
+    },
+    "context_mode": "graph"
+  },
+  "context_text": "# 第二种记忆道路连通图描述\n## 节点列表\nNODE[id,类型,附加属性]\nNODE[1,POI,name=The Park Grill]\nNODE[2,POI,name=Starbucks]\nNODE[3,POI,name=Walgreens]\nNODE[4,POI,name=Oasis Cafe]\nNODE[5,POI,name=Pittsfield Cafe]\nNODE[6,POI,name=Market Creations]\nNODE[7,POI,name=Wildberry Pancakes and Cafe]\nNODE[8,POI,name=Chase]\nNODE[9,POI,name=Pizano's Pizza & Pasta]\nNODE[10,POI,name=National College of Education Urban Campus]\nNODE[11,POI,name=Miller’s Pub]\nNODE[12,POI,name=Terzo Piano]\nNODE[13,POI,name=CVS Pharmacy]\nNODE[14,POI,name=Eggy's]\nNODE[15,ROAD,name=起点]\nNODE[16,ROAD,name=The Park Grill and machigan street节点]\nNODE[17,ROAD,name=Walgreens and machigan street节点]\nNODE[18,ROAD,name=randoful river and machigan street节点]\nNODE[19,ROAD,name=randoful river and Chase节点]\nNODE[20,ROAD,name=randoful river西节点]\nNODE[21,ROAD,name=Pittsfield Cafe and wabash avenue节点]\nNODE[22,ROAD,name=Oasis Cafe and wabash avenue节点]\nNODE[23,ROAD,name=randoful river and Market Creations节点]\nNODE[24,ROAD,name=east steet and Market Creations节点]\nNODE[25,ROAD,name=east steet and Wildberry Pancakes and Cafe的节点]\nNODE[26,ROAD,name=randoful river and Wildberry Pancakes and Cafe]\nNODE[27,ROAD,name=Pizano's Pizza & Pasta and wabash avenue节点]\nNODE[28,ROAD,name=moron river and wabash avenue节点]\nNODE[29,ROAD,name=moron river and machigan street节点]\nNODE[30,ROAD,name=National College and machigan street节点]\nNODE[31,ROAD,name=Miller’s Pub and wabash avenue节点]\nNODE[32,ROAD,name=moron river and Terzo Piano节点]\nNODE[33,ROAD,name=east steet and machigan street节点]\nNODE[34,ROAD,name=east steet and stetson avenue的节点]\nNODE[35,ROAD,name=lake street西节点]\nNODE[36,ROAD,name=lake street and Starbucks的节点]\nNODE[37,ROAD,name=lake street and CVS Pharmacy的节点]\nNODE[38,ROAD,name=位置_70]\nNODE[39,ROAD,name=east steet and Eggy's的节点]\nNODE[40,ROAD,name=randoful river and columbus street的节点]\nNODE[41,ROAD,name=randoful river and stetson avenue的节点]\nNODE[42,ROAD,name=位置_76]\n\n## 边列表\nEDGE[起点ID,终点ID,道路长度,方向]\nEDGE[15,16,76m,272°]\nEDGE[16,2,53m,265°]\nEDGE[2,3,88m,1°]\nEDGE[3,17,42m,82°]\nEDGE[17,18,111m,0°]\nEDGE[18,19,43m,264°]\nEDGE[19,20,86m,271°]\nEDGE[20,21,104m,182°]\nEDGE[21,22,57m,179°]\nEDGE[22,4,47m,90°]\nEDGE[4,5,52m,6°]\nEDGE[5,21,54m,275°]\nEDGE[21,20,104m,2°]\nEDGE[20,19,86m,91°]\nEDGE[19,18,43m,84°]\nEDGE[18,17,111m,180°]\nEDGE[17,3,42m,262°]\nEDGE[3,17,42m,82°]\nEDGE[17,18,111m,0°]\nEDGE[18,23,52m,94°]\nEDGE[23,6,84m,357°]\nEDGE[6,24,56m,2°]\nEDGE[24,25,77m,89°]\nEDGE[25,7,90m,180°]\nEDGE[7,26,54m,169°]\nEDGE[26,23,86m,271°]\nEDGE[23,18,52m,274°]\nEDGE[18,19,43m,264°]\nEDGE[19,8,48m,357°]\nEDGE[8,19,48m,177°]\nEDGE[19,20,86m,271°]\nEDGE[20,21,104m,182°]\nEDGE[21,22,57m,179°]\nEDGE[22,27,98m,179°]\nEDGE[27,9,42m,85°]\nEDGE[9,27,42m,265°]\nEDGE[27,28,152m,179°]\nEDGE[28,29,142m,91°]\nEDGE[29,30,106m,357°]\nEDGE[30,10,51m,272°]\nEDGE[10,30,51m,92°]\nEDGE[30,29,106m,177°]\nEDGE[29,28,142m,271°]\nEDGE[28,31,83m,179°]\nEDGE[31,11,42m,270°]\nEDGE[11,31,42m,90°]\nEDGE[31,28,83m,359°]\nEDGE[28,29,142m,91°]\nEDGE[29,32,170m,86°]\nEDGE[32,12,98m,181°]\nEDGE[12,32,98m,1°]\nEDGE[32,29,170m,266°]\nEDGE[29,30,106m,357°]\nEDGE[30,16,112m,2°]\nEDGE[16,17,90m,354°]\nEDGE[17,18,111m,0°]\nEDGE[18,33,140m,0°]\nEDGE[33,24,50m,93°]\nEDGE[24,25,77m,89°]\nEDGE[25,34,41m,93°]\nEDGE[34,35,48m,2°]\nEDGE[35,36,77m,91°]\nEDGE[36,2,56m,9°]\nEDGE[2,36,56m,189°]\nEDGE[36,37,52m,91°]\nEDGE[37,13,52m,83°]\nEDGE[13,14,137m,112°]\nEDGE[14,14,22m,292°]\nEDGE[14,13,114m,292°]\nEDGE[13,38,56m,173°]\nEDGE[38,37,76m,310°]\nEDGE[37,39,50m,178°]\nEDGE[39,40,135m,177°]\nEDGE[40,40,33m,357°]\nEDGE[40,41,132m,256°]\nEDGE[41,42,58m,91°]\nEDGE[42,40,71m,91°]"
+}

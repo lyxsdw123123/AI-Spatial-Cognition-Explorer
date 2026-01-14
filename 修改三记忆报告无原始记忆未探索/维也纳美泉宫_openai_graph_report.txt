@@ -1,0 +1,265 @@
+{
+  "region": "维也纳美泉宫",
+  "model": "openai",
+  "memory_mode": "graph",
+  "exploration_report": {
+    "total_distance": 1540,
+    "exploration_time": 0,
+    "poi_count": 70
+  },
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 14,
+      "total_questions": 24,
+      "accuracy": 58.333333333333336,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 3,
+          "total": 8,
+          "percentage": 37.5
+        },
+        "空间距离估算": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        },
+        "邻近关系判断": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "POI密度识别": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "路径规划": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Raiffeisenlandesbank Niederösterreich-Wien相对于Hypo-Bank Vorarlberg在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "根据给定的节点和边信息，我们需要找到从Hypo-Bank Vorarlberg（节点1）到Raiffeisenlandesbank Niederösterreich-Wien（节点8）的路径，并确定其方向。\n\n1. 从节点1（Hypo-Bank Vorarlberg）出发，有两条边：\n   - EDGE[1,2,44m,81°]：指向节点2（Cheng Chinese Cuisine），方向为81°。\n   - EDGE[1,9,171m,301°]：指向节点9（aïda），方向为301°。\n\n2. 从节点9（aïda）可以到达节点8（Raiffeisenlandesbank Niederösterreich-Wien）：\n   - EDGE[9,8,205m,229°]：方向为229°。\n\n3. 结合这两段路径：\n   - 从节点1到节点9的方向为301°（接近西北）。\n   - 从节点9到节点8的方向为229°（接近西南）。\n\n综合考虑，节点8相对于节点1的整体方向为东北（因为从节点1到节点9的方向为西北，而从节点9到节点8的方向为西南，整体上是从西北转向东南的过程，最终方向为东北）。\n\n因此，Raiffeisenlandesbank Niederösterreich-Wien相对于Hypo-Bank Vorarlberg的方向为东北。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Raiffeisenlandesbank Niederösterreich-Wien位于Hypo-Bank Vorarlberg的西南面。"
+        },
+        {
+          "question": "Cheng Chinese Cuisine相对于Raiffeisenlandesbank Niederösterreich-Wien在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据给定的边列表，Raiffeisenlandesbank Niederösterreich-Wien对应的节点ID是8，Cheng Chinese Cuisine对应的节点ID是2。我们需要找到从节点8到节点2的路径，并确定其方向。\n\n1. 从节点8到节点9有一条边，方向为49°。\n2. 从节点9到节点1有一条边，方向为301°。\n3. 从节点1到节点2有一条边，方向为81°。\n\n从节点8到节点2的路径是8 -> 9 -> 1 -> 2。根据路径上的方向，整体方向可以近似为东南方向。因此，Cheng Chinese Cuisine相对于Raiffeisenlandesbank Niederösterreich-Wien在东南方向。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Cheng Chinese Cuisine位于Raiffeisenlandesbank Niederösterreich-Wien的东北面。"
+        },
+        {
+          "question": "Restaurant SURA相对于Cheng Chinese Cuisine在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据给定的边列表，Cheng Chinese Cuisine（节点2）到Restaurant SURA（节点3）的边是EDGE[2,3,43m,94°]。方位角94°表示从正北顺时针方向接近正东，因此Restaurant SURA相对于Cheng Chinese Cuisine的方向是东南方向。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Restaurant SURA位于Cheng Chinese Cuisine的东南面。"
+        },
+        {
+          "question": "aïda相对于Restaurant SURA在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "根据给定的边列表和方位角标准，我们可以找到从Restaurant SURA（节点3）到aïda（节点9）的路径。首先，从节点3（Restaurant SURA）到节点4（Ma Creperie）有一条边，方向为94°（东）。然后，从节点4到节点14（Kaffee Alt Wien）有一条边，方向为31°（东北）。接着，从节点14到节点1（Hypo-Bank Vorarlberg）有一条边，方向为236°（西南）。最后，从节点1到节点9（aïda）有一条边，方向为301°（西北）。\n\n综合这些方向，从Restaurant SURA到aïda的整体方向为西北。因此，aïda相对于Restaurant SURA在西北方向。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "aïda位于Restaurant SURA的西北面。"
+        },
+        {
+          "question": "Hypo-Bank Vorarlberg相对于Raiffeisenlandesbank Niederösterreich-Wien在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "根据给定的边列表，Hypo-Bank Vorarlberg对应的节点是1，Raiffeisenlandesbank Niederösterreich-Wien对应的节点是8。我们需要找到从节点8到节点1的路径，并确定方向。\n\n1. 从节点8到节点9有一条边，方向为229°。\n2. 从节点9到节点1有一条边，方向为301°。\n\n从节点8到节点1的路径是8 -> 9 -> 1。根据方向角度：\n- 从8到9的方向是229°，接近西南方向。\n- 从9到1的方向是301°，接近西北方向。\n\n综合来看，从节点8到节点1的整体方向更接近西北。因此，Hypo-Bank Vorarlberg相对于Raiffeisenlandesbank Niederösterreich-Wien的方向是西北。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Hypo-Bank Vorarlberg位于Raiffeisenlandesbank Niederösterreich-Wien的东北面。"
+        },
+        {
+          "question": "Raiffeisenlandesbank Niederösterreich-Wien相对于Cheng Chinese Cuisine在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "根据给定的边列表，Cheng Chinese Cuisine对应的节点是2，Raiffeisenlandesbank Niederösterreich-Wien对应的节点是8。我们需要找到从节点2到节点8的路径并确定方向。\n\n1. 从节点2到节点3有一条边EDGE[2,3,43m,94°]。\n2. 从节点3到节点4有一条边EDGE[3,4,44m,94°]。\n3. 从节点4到节点14有一条边EDGE[4,14,239m,31°]。\n4. 从节点14到节点13有一条边EDGE[14,13,166m,358°]。\n5. 从节点13到节点12有一条边EDGE[13,12,254m,89°]。\n6. 从节点12到节点11有一条边EDGE[12,11,118m,35°]。\n7. 从节点11到节点10有一条边EDGE[11,10,135m,47°]。\n8. 从节点10到节点9有一条边EDGE[10,9,66m,311°]。\n9. 从节点9到节点8有一条边EDGE[9,8,205m,49°]。\n\n从节点2到节点8的路径方向主要由最后一段EDGE[9,8,205m,49°]决定，方向为49°，即东北方向。因此，Raiffeisenlandesbank Niederösterreich-Wien相对于Cheng Chinese Cuisine在东北方向。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Raiffeisenlandesbank Niederösterreich-Wien位于Cheng Chinese Cuisine的西南面。"
+        },
+        {
+          "question": "Cheng Chinese Cuisine相对于Restaurant SURA在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "根据给定的边列表，Cheng Chinese Cuisine（节点2）到Restaurant SURA（节点3）的边为EDGE[2,3,43m,94°]。方位角94°表示从Cheng Chinese Cuisine到Restaurant SURA的方向接近正东略偏北，因此Restaurant SURA相对于Cheng Chinese Cuisine在东北方向。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Cheng Chinese Cuisine位于Restaurant SURA的西北面。"
+        },
+        {
+          "question": "Restaurant SURA相对于aïda在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据给定的边列表，Restaurant SURA（节点3）到aïda（节点9）的路径为：3 -> 4 -> 14 -> 1 -> 9。我们可以分析每一段的方向：\n\n1. 从节点3到节点4，方向为94°（接近正东）。\n2. 从节点4到节点14，方向为31°（接近东北）。\n3. 从节点14到节点1，方向为236°（接近西南）。\n4. 从节点1到节点9，方向为301°（接近西北）。\n\n综合这些方向，整体上从Restaurant SURA到aïda的方向是东南方向。因此，答案是B. 东南。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Restaurant SURA位于aïda的东南面。"
+        },
+        {
+          "question": "Hypo-Bank Vorarlberg到Cheng Chinese Cuisine的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "A",
+          "ai_explanation": "根据给定的边列表，Hypo-Bank Vorarlberg（节点1）到Cheng Chinese Cuisine（节点2）之间有一条直接的边，EDGE[1,2,44m,81°]。这条边的长度为44米，因此Hypo-Bank Vorarlberg到Cheng Chinese Cuisine的直线距离大约是44米，属于选项A的范围（0-100米）。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Hypo-Bank Vorarlberg到Cheng Chinese Cuisine的直线距离约为43米。"
+        },
+        {
+          "question": "Raiffeisenlandesbank Niederösterreich-Wien到Restaurant SURA的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "根据给定的边列表，从Raiffeisenlandesbank Niederösterreich-Wien（节点8）到Restaurant SURA（节点3）的路径可以通过以下节点和边：\n\n1. 从节点8到节点9，距离为205米。\n2. 从节点9到节点1，距离为171米。\n3. 从节点1到节点2，距离为44米。\n4. 从节点2到节点3，距离为43米。\n\n总距离为205m + 171m + 44m + 43m = 463米。\n\n因此，Raiffeisenlandesbank Niederösterreich-Wien到Restaurant SURA的直线距离大约在400-800米之间。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Raiffeisenlandesbank Niederösterreich-Wien到Restaurant SURA的直线距离约为341米。"
+        },
+        {
+          "question": "Cheng Chinese Cuisine到aïda的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "根据给定的边列表，从Cheng Chinese Cuisine（节点2）到aïda（节点9）的路径可以通过以下方式计算：\n\n1. 从节点2到节点1，距离为44米（EDGE[1,2,44m,81°]）。\n2. 从节点1到节点9，距离为171米（EDGE[1,9,171m,301°]）。\n\n因此，总距离为44米 + 171米 = 215米。\n\n根据选项，215米落在100-200米和200-300米之间，但更接近200-300米的范围。因此，选择B. 100-200米。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Cheng Chinese Cuisine到aïda的直线距离约为199米。"
+        },
+        {
+          "question": "Restaurant SURA到Kaffee Alt Wien的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "根据给定的边列表，从Restaurant SURA（节点3）到Kaffee Alt Wien（节点14）的路径可以通过以下节点和边到达：\n\n1. 从节点3到节点4，边长为44米。\n2. 从节点4到节点14，边长为239米。\n\n因此，总路径长度为44米 + 239米 = 283米。根据选项，283米落在200-300米的范围内。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Restaurant SURA到Kaffee Alt Wien的直线距离约为254米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Hypo-Bank Vorarlberg最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "根据给定的边列表，我们可以找到从Hypo-Bank Vorarlberg（节点1）到其他POI的路径：\n\n- 从节点1到Cheng Chinese Cuisine（节点2）的路径是直接通过边EDGE[1,2,44m,81°]，路径长度为44米。\n- 从节点1到Raiffeisenlandesbank Niederösterreich-Wien（节点8）的路径可以是通过节点9：EDGE[1,9,171m,301°] + EDGE[9,8,205m,229°]，总路径长度为376米。\n- 从节点1到Restaurant SURA（节点3）的路径是通过节点2：EDGE[1,2,44m,81°] + EDGE[2,3,43m,94°]，总路径长度为87米。\n\n因此，Cheng Chinese Cuisine（节点2）距离Hypo-Bank Vorarlberg最近，路径长度为44米。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Cheng Chinese Cuisine距离Hypo-Bank Vorarlberg最近，约43米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Raiffeisenlandesbank Niederösterreich-Wien最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "根据给定的边列表，Raiffeisenlandesbank Niederösterreich-Wien对应的节点是8。我们需要找到从节点8到选项中各个节点的最短路径。\n\n- Cheng Chinese Cuisine对应节点2。路径8 -> 9 -> 1 -> 2，总长度为205m + 171m + 44m = 420m。\n- Restaurant SURA对应节点3。路径8 -> 9 -> 1 -> 2 -> 3，总长度为205m + 171m + 44m + 43m = 463m。\n- aïda对应节点9。路径8 -> 9，总长度为205m。\n\n因此，aïda（节点9）距离Raiffeisenlandesbank Niederösterreich-Wien（节点8）最近，路径长度为205米。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "aïda距离Raiffeisenlandesbank Niederösterreich-Wien最近，约205米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Cheng Chinese Cuisine最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "- 从Cheng Chinese Cuisine（节点2）到Restaurant SURA（节点3）的路径是直接通过边EDGE[2,3,43m]，距离为43米。\n- 从Cheng Chinese Cuisine（节点2）到aïda（节点9）的路径是通过节点1，即EDGE[2,1,44m] + EDGE[1,9,171m]，总距离为44米 + 171米 = 215米。\n- 从Cheng Chinese Cuisine（节点2）到Kaffee Alt Wien（节点14）的路径是通过节点3和节点4，即EDGE[2,3,43m] + EDGE[3,4,44m] + EDGE[4,14,239m]，总距离为43米 + 44米 + 239米 = 326米。\n\n因此，Kaffee Alt Wien距离Cheng Chinese Cuisine最远。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Kaffee Alt Wien距离Cheng Chinese Cuisine最远，约276米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Restaurant SURA最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "1. 从Restaurant SURA（节点3）到aïda（节点9）的路径：\n   - 3 -> 4 (43m)\n   - 4 -> 14 (239m)\n   - 14 -> 1 (312m)\n   - 1 -> 9 (171m)\n   - 总长度 = 43m + 239m + 312m + 171m = 765m\n\n2. 从Restaurant SURA（节点3）到Kaffee Alt Wien（节点14）的路径：\n   - 3 -> 4 (43m)\n   - 4 -> 14 (239m)\n   - 总长度 = 43m + 239m = 282m\n\n3. 从Restaurant SURA（节点3）到Alte Feldapotheke（节点10）的路径：\n   - 3 -> 4 (43m)\n   - 4 -> 14 (239m)\n   - 14 -> 13 (166m)\n   - 13 -> 12 (254m)\n   - 12 -> 11 (118m)\n   - 11 -> 10 (135m)\n   - 总长度 = 43m + 239m + 166m + 254m + 118m + 135m = 955m\n\n综上所述，Alte Feldapotheke距离Restaurant SURA最远。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Alte Feldapotheke距离Restaurant SURA最远，约299米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "要确定哪个POI周围的POI密度最高，我们可以查看每个POI节点的直接连接数（即边的数量）。每个POI节点的直接连接数越多，说明其周围的POI密度越高。\n\n- Ma Creperie (节点4) 直接连接到两个POI节点：Restaurant SURA (节点3) 和 Cafe-Restaurant Ronacher (节点5)，以及Kaffee Alt Wien (节点14)。总共有3个直接连接。\n- Kaffee Alt Wien (节点14) 直接连接到两个POI节点：Ma Creperie (节点4) 和 Castelletto (节点13)，以及Hypo-Bank Vorarlberg (节点1)。总共有3个直接连接。\n- Zur goldenen Krone (节点6) 直接连接到一个POI节点：Cafe-Restaurant Ronacher (节点5) 和 Cafe Mozart (节点7)。总共有2个直接连接。\n- Raiffeisenlandesbank Niederösterreich-Wien (节点8) 直接连接到两个POI节点：Cafe Mozart (节点7) 和 aïda (节点9)。总共有2个直接连接。\n\n因此，Ma Creperie 和 Kaffee Alt Wien 都有3个直接连接的POI节点，但根据出现顺序优先的规则，选择Ma Creperie。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Ma Creperie周围的POI密度最高，500米范围内有9个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "根据给定的节点和边列表，我们可以分析每个选项周围的POI密度。\n\n- A. Alte Feldapotheke (节点10)：\n  - 连接的POI：Pizza Bizi (节点11) 和 aïda (节点9)\n  - 连接的边：EDGE[10,11,135m] 和 EDGE[9,10,66m]\n  - 周围POI数量：2\n\n- B. Kaffee Alt Wien (节点14)：\n  - 连接的POI：Ma Creperie (节点4) 和 Castelletto (节点13)\n  - 连接的边：EDGE[4,14,239m] 和 EDGE[14,13,166m]\n  - 周围POI数量：2\n  - 另外，Kaffee Alt Wien 通过节点1（Hypo-Bank Vorarlberg）形成一个环路，增加了连接的可能性。\n\n- C. Zur goldenen Krone (节点6)：\n  - 连接的POI：Cafe-Restaurant Ronacher (节点5) 和 Cafe Mozart (节点7)\n  - 连接的边：EDGE[5,6,146m] 和 EDGE[6,7,267m]\n  - 周围POI数量：2\n\n- D. Raiffeisenlandesbank Niederösterreich-Wien (节点8)：\n  - 连接的POI：aïda (节点9) 和 Cafe Mozart (节点7)\n  - 连接的边：EDGE[8,9,205m] 和 EDGE[7,8,279m]\n  - 周围POI数量：2\n\n虽然每个选项周围的直接连接POI数量相同，但Kaffee Alt Wien通过节点1形成的环路增加了其周围的POI密度。因此，Kaffee Alt Wien的POI密度最高。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Alte Feldapotheke周围的POI密度最高，500米范围内有9个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "要确定哪个POI周围的POI密度最低，我们需要查看每个POI的邻接节点数量以及这些邻接节点的距离。\n\n- **Kaffee Alt Wien (节点14)**：\n  - 邻接节点：节点4（239m），节点13（166m），节点1（312m）\n  - 邻接POI数量：3\n\n- **Zur goldenen Krone (节点6)**：\n  - 邻接节点：节点5（146m），节点7（267m）\n  - 邻接POI数量：2\n\n- **Raiffeisenlandesbank Niederösterreich-Wien (节点8)**：\n  - 邻接节点：节点7（279m），节点9（205m）\n  - 邻接POI数量：2\n\n- **Pizza Bizi (节点11)**：\n  - 邻接节点：节点10（135m），节点12（118m）\n  - 邻接POI数量：2\n\n在节点6、8和11中，所有节点都有2个邻接POI，但我们还需要考虑这些邻接POI的距离。Pizza Bizi的邻接POI距离较短（135m和118m），而Zur goldenen Krone和Raiffeisenlandesbank Niederösterreich-Wien的邻接POI距离较长。因此，Pizza Bizi周围的POI密度最低。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Kaffee Alt Wien周围的POI密度最低，500米范围内只有7个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "为了确定哪个POI周围的POI密度最低，我们需要查看每个选项中POI的邻接节点数量。\n\nA. Zur goldenen Krone (节点6)\n- 邻接节点：Cafe-Restaurant Ronacher (节点5), Cafe Mozart (节点7)\n- 邻接边数：2\n\nB. Kaffee Alt Wien (节点14)\n- 邻接节点：Ma Creperie (节点4), Castelletto (节点13), Hypo-Bank Vorarlberg (节点1)\n- 邻接边数：3\n\nC. Raiffeisenlandesbank Niederösterreich-Wien (节点8)\n- 邻接节点：Cafe Mozart (节点7), aïda (节点9)\n- 邻接边数：2\n\nD. Pizza Bizi (节点11)\n- 邻接节点：Alte Feldapotheke (节点10), Zum Rothen Krebs (节点12)\n- 邻接边数：2\n\n从邻接边数来看，Zur goldenen Krone、Raiffeisenlandesbank Niederösterreich-Wien和Pizza Bizi都有2条邻接边，而Kaffee Alt Wien有3条邻接边。因此，Kaffee Alt Wien的POI密度最高。\n\n为了进一步确定周围POI密度最低的POI，我们可以考虑这些POI的邻接节点的进一步连接情况。Pizza Bizi的邻接节点Alte Feldapotheke和Zum Rothen Krebs都没有进一步的直接连接到其他POI（除了它们之间的连接），这使得Pizza Bizi周围的POI密度最低。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Zur goldenen Krone周围的POI密度最低，500米范围内只有7个其他POI。"
+        },
+        {
+          "question": "从Hypo-Bank Vorarlberg到Raiffeisenlandesbank Niederösterreich-Wien，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "在给定的上下文中，节点和边的集合中并没有出现选项中提到的许多节点和路径，例如“strabe and aïda节点”、“roten中节点”、“lichten and Zum Rothen Krebs节点”等。这些节点和路径并未在上下文中定义，因此无法根据上下文提供的信息进行路径推理和比较。因此，无法确定从Hypo-Bank Vorarlberg到Raiffeisenlandesbank Niederösterreich-Wien的最短路径。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：Hypo-Bank Vorarlberg -> (Hypo-Bank Vorarlberg and aïda节点) -> (strabe and aïda节点) -> (strabe and Weih节点) -> (strabe and Raiffeisenlandesbank节点) -> Raiffeisenlandesbank Niederösterreich-Wien，总距离约407米。"
+        },
+        {
+          "question": "从Raiffeisenlandesbank Niederösterreich-Wien到Cheng Chinese Cuisine，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "在给定的节点和边集合中，Raiffeisenlandesbank Niederösterreich-Wien对应的节点ID为8，Cheng Chinese Cuisine对应的节点ID为2。根据上下文提供的边集合，无法找到从节点8到节点2的直接路径或明确的路径组合。选项A、B、C、D中提到的路径包含了未在上下文中出现的节点或连接（例如“strabe and aïda节点”、“Ma Creperie北节点”等），这些节点和连接未在上下文的节点列表和边列表中定义，因此无法进行路径推理。根据规则5和规则6，禁止引入未出现的连接或节点，路径推理仅限于上下文提供的节点与边集合。因此，无法确定从Raiffeisenlandesbank Niederösterreich-Wien到Cheng Chinese Cuisine的最短路径。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：Raiffeisenlandesbank Niederösterreich-Wien -> (strabe and Raiffeisenlandesbank节点) -> (strabe and Weih节点) -> (strabe and aïda节点) -> (Hypo-Bank Vorarlberg and aïda节点) -> (Hypo-Bank Vorarlberg and aïda节点) -> (Cheng Chinese Cuisine节点) -> Cheng Chinese Cuisine，总距离约539米。"
+        },
+        {
+          "question": "从Cheng Chinese Cuisine到Restaurant SURA，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "根据给定的节点和边列表，Cheng Chinese Cuisine对应的节点ID是2，Restaurant SURA对应的节点ID是3。根据边列表，存在一条直接的边从节点2到节点3，EDGE[2,3,43m,94°]，长度为43米。因此，直接从Cheng Chinese Cuisine到Restaurant SURA的路径是最短的。其他选项中提到的节点和路径在上下文中没有明确的定义或连接，无法进行合理的路径推理。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：Cheng Chinese Cuisine -> Restaurant SURA，总距离约42米。"
+        },
+        {
+          "question": "从Restaurant SURA到aïda，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "在给定的上下文中，节点和边的定义是明确的。然而，选项中提到的许多节点（如“Korb (No.4) and Alte Feldapotheke节点”、“roten and schouler节点”等）并未在上下文的节点列表中出现。因此，无法根据上下文提供的信息来判断这些路径的长度或方向。此外，选项中的路径描述不符合上下文中定义的节点和边的格式，因此无法进行有效的路径推理。根据上下文的规则，禁止引入未出现的连接或节点，因此无法确定哪个选项的路径最短。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "最短路径是：Restaurant SURA -> (Restaurant SURA节点) -> (Cheng Chinese Cuisine节点) -> (Hypo-Bank Vorarlberg and aïda节点) -> (Hypo-Bank Vorarlberg and aïda节点) -> (strabe and aïda节点) -> aïda，总距离约381米。"
+        }
+      ],
+      "completed_at": "2025-12-20T16:28:44.912248"
+    },
+    "context_mode": "graph"
+  },
+  "context_text": "# 第二种记忆道路连通图描述\n## 节点列表\nNODE[id,类型,附加属性]\nNODE[1,POI,name=Hypo-Bank Vorarlberg]\nNODE[2,POI,name=Cheng Chinese Cuisine]\nNODE[3,POI,name=Restaurant SURA]\nNODE[4,POI,name=Ma Creperie]\nNODE[5,POI,name=Cafe-Restaurant Ronacher]\nNODE[6,POI,name=Zur goldenen Krone]\nNODE[7,POI,name=Cafe Mozart]\nNODE[8,POI,name=Raiffeisenlandesbank Niederösterreich-Wien]\nNODE[9,POI,name=aïda]\nNODE[10,POI,name=Alte Feldapotheke]\nNODE[11,POI,name=Pizza Bizi]\nNODE[12,POI,name=Zum Rothen Krebs]\nNODE[13,POI,name=Castelletto]\nNODE[14,POI,name=Kaffee Alt Wien]\nNODE[15,POI,name=Korb (No.4)]\nNODE[16,ROAD,name=起点]\nNODE[17,ROAD,name=Cheng Chinese Cuisine节点]\nNODE[18,ROAD,name=Restaurant SURA节点]\nNODE[19,ROAD,name=Ma Creperie节点]\nNODE[20,ROAD,name=Hypo-Bank Vorarlberg and aïda节点]\nNODE[21,ROAD,name=Cafe-Restaurant Ronacher and Weih节点]\nNODE[22,ROAD,name=Cafe-Restaurant Ronacher and joha节点]\nNODE[23,ROAD,name=位置_18]\nNODE[24,ROAD,name=Zur goldenen Krone and joha节点]\nNODE[25,ROAD,name=strabe and joha节点]\nNODE[26,ROAD,name=strabe and Cafe Mozart]\nNODE[27,ROAD,name=strabe and Raiffeisenlandesbank节点]\nNODE[28,ROAD,name=strabe and Weih节点]\nNODE[29,ROAD,name=strabe and aïda节点]\nNODE[30,ROAD,name=aïda and schouler节点]\nNODE[31,ROAD,name=Korb (No.4) and Alte Feldapotheke节点]\nNODE[32,ROAD,name=位置_35]\nNODE[33,ROAD,name=roten and Pizza Bizi节点]\nNODE[34,ROAD,name=lichten and Zum Rothen Krebs节点]\nNODE[35,ROAD,name=位置_40]\nNODE[36,ROAD,name=roten and Castelletto节点]\nNODE[37,ROAD,name=roten中节点]\nNODE[38,ROAD,name=strobe and roten节点]\nNODE[39,ROAD,name=Kaffee Alt Wien节点]\nNODE[40,ROAD,name=位置_58]\nNODE[41,ROAD,name=位置_62]\nNODE[42,ROAD,name=位置_63]\nNODE[43,ROAD,name=位置_67]\nNODE[44,ROAD,name=位置_68]\nNODE[45,ROAD,name=位置_72]\nNODE[46,ROAD,name=位置_73]\n\n## 边列表\nEDGE[起点ID,终点ID,道路长度,方向]\nEDGE[16,1,49m,94°]\nEDGE[1,17,68m,143°]\nEDGE[17,2,64m,1°]\nEDGE[2,3,42m,95°]\nEDGE[3,18,59m,179°]\nEDGE[18,19,42m,137°]\nEDGE[19,19,29m,151°]\nEDGE[19,4,112m,0°]\nEDGE[4,19,112m,180°]\nEDGE[19,19,29m,331°]\nEDGE[19,18,42m,317°]\nEDGE[18,17,45m,269°]\nEDGE[17,1,68m,323°]\nEDGE[1,20,40m,268°]\nEDGE[20,21,101m,183°]\nEDGE[21,5,172m,127°]\nEDGE[5,22,74m,148°]\nEDGE[22,23,84m,187°]\nEDGE[23,6,182m,298°]\nEDGE[6,24,73m,321°]\nEDGE[24,25,128m,292°]\nEDGE[25,26,223m,193°]\nEDGE[26,7,70m,320°]\nEDGE[7,26,70m,140°]\nEDGE[26,25,223m,13°]\nEDGE[25,27,63m,31°]\nEDGE[27,8,96m,306°]\nEDGE[8,27,96m,126°]\nEDGE[27,28,55m,6°]\nEDGE[28,29,108m,19°]\nEDGE[29,9,62m,4°]\nEDGE[9,30,68m,37°]\nEDGE[30,10,81m,268°]\nEDGE[10,31,72m,324°]\nEDGE[31,32,97m,12°]\nEDGE[32,11,108m,113°]\nEDGE[11,33,49m,89°]\nEDGE[33,34,83m,92°]\nEDGE[34,12,137m,322°]\nEDGE[12,35,99m,58°]\nEDGE[35,36,136m,142°]\nEDGE[36,13,106m,54°]\nEDGE[13,36,106m,234°]\nEDGE[36,34,99m,237°]\nEDGE[34,33,83m,272°]\nEDGE[33,37,63m,180°]\nEDGE[37,38,143m,111°]\nEDGE[38,39,42m,82°]\nEDGE[39,14,101m,55°]\nEDGE[14,39,101m,235°]\nEDGE[39,38,42m,262°]\nEDGE[38,37,143m,291°]\nEDGE[37,33,63m,0°]\nEDGE[33,34,83m,92°]\nEDGE[34,36,99m,57°]\nEDGE[36,36,30m,237°]\nEDGE[36,34,68m,237°]\nEDGE[34,40,61m,322°]\nEDGE[40,33,65m,225°]\nEDGE[33,11,49m,269°]\nEDGE[11,11,13m,293°]\nEDGE[11,41,94m,293°]\nEDGE[41,42,13m,192°]\nEDGE[42,31,84m,192°]\nEDGE[31,15,116m,333°]\nEDGE[15,31,116m,153°]\nEDGE[31,43,97m,12°]\nEDGE[43,44,25m,113°]\nEDGE[44,31,95m,207°]\nEDGE[31,15,116m,333°]\nEDGE[15,31,116m,153°]\nEDGE[31,45,97m,12°]\nEDGE[45,46,25m,113°]\nEDGE[46,31,95m,207°]\nEDGE[31,10,72m,144°]\nEDGE[10,10,22m,324°]"
+}

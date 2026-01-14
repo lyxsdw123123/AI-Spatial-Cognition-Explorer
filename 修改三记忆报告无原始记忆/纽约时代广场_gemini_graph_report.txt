@@ -1,0 +1,265 @@
+{
+  "region": "纽约时代广场",
+  "model": "gemini",
+  "memory_mode": "graph",
+  "exploration_report": {
+    "total_distance": 1220,
+    "exploration_time": 0,
+    "poi_count": 210
+  },
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 10,
+      "total_questions": 24,
+      "accuracy": 41.66666666666667,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 2,
+          "total": 8,
+          "percentage": 25.0
+        },
+        "空间距离估算": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "邻近关系判断": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "POI密度识别": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "路径规划": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Hard Rock Cafe相对于Junior's在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据提供的边列表，EDGE[1,2,115m,195°]表示从节点1（Junior's）到节点2（Hard Rock Cafe）的方位角为195°。根据方位角标准，195°位于正南（180°）和正西南（225°）之间，因此Hard Rock Cafe相对于Junior's位于东南方向。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Hard Rock Cafe位于Junior's的西南面。"
+        },
+        {
+          "question": "Starbucks相对于Hard Rock Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文提供的边信息，EDGE[1,2,115m,195°]表示从节点1（Junior's）到节点2（Hard Rock Cafe）的方向为195°，即正南偏西15°。同时，EDGE[1,9,297m,35°]表示从节点1（Junior's）到节点9（The Playwright）的方向为35°，即正北偏东35°。而EDGE[2,3,83m,226°]表示从节点2（Hard Rock Cafe）到节点3（Europa Cafe）的方向为226°，即正南偏西46°。此外，EDGE[3,5,91m,270°]表示从节点3（Europa Cafe）到节点5（Starbucks）的方向为270°，即正西。因此，Starbucks相对于Hard Rock Cafe的方向为东南方向。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Starbucks位于Hard Rock Cafe的东南面。"
+        },
+        {
+          "question": "Europa Cafe相对于Starbucks在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据提供的边列表，Europa Cafe（NODE[3]）与Starbucks（NODE[5]）之间存在一条直接连接的边：EDGE[3,5,91m,270°]。该边的方向为270°，即正西方向。因此，Europa Cafe相对于Starbucks位于正西方向。然而，题目选项中没有“正西”，但最接近的选项是“东南”（B），因为从Starbucks到Europa Cafe的实际方位角为270°，而从Europa Cafe到Starbucks的反向方位角为90°（正东），这表明两者之间的相对位置关系为东西方向。由于选项中未提供“正西”，结合地理方位的常规划分，最合理的答案是“东南”（B）。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Europa Cafe位于Starbucks的西北面。"
+        },
+        {
+          "question": "Chase相对于Europa Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据边列表，Europa Cafe（NODE[3]）与Chase（NODE[4]）之间存在一条边 EDGE[3,4,676m,103°]。该边的方位角为103°，即从Europa Cafe指向Chase的方向为103°，位于东南方向（90°为正东，180°为正南）。因此，Chase相对于Europa Cafe位于东南方向。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Chase位于Europa Cafe的西南面。"
+        },
+        {
+          "question": "Junior's相对于Hard Rock Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据提供的边信息，EDGE[1,2,115m,195°] 表示从节点1（Junior's）到节点2（Hard Rock Cafe）的方位角为195°。根据方位角标准，195°位于正南（180°）与正西（270°）之间，属于东南方向。因此，Junior's相对于Hard Rock Cafe位于东南方向。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Junior's位于Hard Rock Cafe的东北面。"
+        },
+        {
+          "question": "Hard Rock Cafe相对于Starbucks在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据提供的边信息，EDGE[1,2,115m,195°] 表示从节点1（Junior's）到节点2（Hard Rock Cafe）的方向为195°，而 EDGE[1,5,297m,35°] 表示从节点1（Junior's）到节点5（Starbucks）的方向为35°。因此，Hard Rock Cafe 相对于 Starbucks 的方向可以通过计算两个方向的差值来确定。195° - 35° = 160°，这表明 Hard Rock Cafe 位于 Starbucks 的东南方向（160° 接近 180°，即正南方向，但略偏东）。因此，正确答案是 B. 东南。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Hard Rock Cafe位于Starbucks的西北面。"
+        },
+        {
+          "question": "Starbucks相对于Europa Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据边列表，Europa Cafe（NODE[3]）与Starbucks（NODE[5]）之间存在一条边EDGE[3,5,91m,270°]。该边的方位角为270°，即正西方向。因此，Starbucks相对于Europa Cafe位于正西方向。然而，选项中没有正西方向，但最接近的选项是东南（B），因为270°位于正西偏南的方向，符合东南方向的范围。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Starbucks位于Europa Cafe的东南面。"
+        },
+        {
+          "question": "Europa Cafe相对于Chase在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据提供的边列表，NODE[3,POI,name=Europa Cafe]与NODE[4,POI,name=Chase]之间存在一条边，即EDGE[3,4,676m,103°]。该边的方向为103°，表示从Europa Cafe到Chase的方位角为103°，即东南方向。因此，Europa Cafe相对于Chase位于西北方向，而Chase相对于Europa Cafe位于东南方向。选项B（东南）是正确答案。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Europa Cafe位于Chase的东北面。"
+        },
+        {
+          "question": "Junior's到Starbucks的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "<根据提供的节点和边信息，从NODE[1,POI,name=Junior's]到NODE[5,POI,name=Starbucks]的直接路径未在边列表中出现。因此，需通过图记忆规则中的路径规划策略进行推理。通过分析已知的边，可以找到从Junior's（节点1）到Starbucks（节点5）的可能路径：1→3→5，其中EDGE[1,3,297m]和EDGE[3,5,91m]。总长度为297m + 91m = 388m，属于选项B（100-200米）的范围。因此，直线距离大约为388米，选择B。>",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Junior's到Starbucks的直线距离约为284米。"
+        },
+        {
+          "question": "Hard Rock Cafe到Europa Cafe的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "根据提供的边列表，Hard Rock Cafe（节点2）与Europa Cafe（节点3）之间存在一条直接连接的边，即EDGE[2,3,83m,226°]。因此，两者之间的直线距离为83米，属于选项B（100-200米）的范围。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Hard Rock Cafe到Europa Cafe的直线距离约为82米。"
+        },
+        {
+          "question": "Starbucks到Chase的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "根据提供的边列表，从Starbucks（节点5）到Chase（节点4）存在直接的边EDGE[5,4,764m,281°]。因此，Starbucks到Chase的直线距离为764米，属于选项C（200-300米）的范围。",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Starbucks到Chase的直线距离约为145米。"
+        },
+        {
+          "question": "Europa Cafe到Chase的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "根据提供的边列表，Europa Cafe（节点3）到Chase（节点4）之间存在一条直接的边，其道路长度为676m。因此，Europa Cafe到Chase的直线距离大约为676米，属于选项C（400-800米）。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Europa Cafe到Chase的直线距离约为411米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Junior's最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "根据图记忆规则，从NODE[1,POI,name=Junior's]出发，通过边EDGE[1,3,297m]到达NODE[3,POI,name=Europa Cafe]，路径长度为297m。而到Hard Rock Cafe的路径为EDGE[1,2,115m]，长度为115m；到Starbucks的路径为EDGE[1,3,297m]→EDGE[3,5,91m]，总长度为297m+91m=388m。因此，Europa Cafe距离Junior's最近，为297m。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Hard Rock Cafe距离Junior's最近，约114米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Hard Rock Cafe最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "根据图记忆规则，Hard Rock Cafe 对应节点2。通过边列表查询到：\n- EDGE[2,3,83m,226°] 表示从节点2（Hard Rock Cafe）到节点3（Europa Cafe）的路径长度为83m。\n- 其他选项中，Starbucks 对应节点5，与节点2无直接连接；Chase 对应节点4，与节点2无直接连接。\n因此，Europa Cafe 是距离 Hard Rock Cafe 最近的 POI，路径长度为83m。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Europa Cafe距离Hard Rock Cafe最近，约82米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Starbucks最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "根据图记忆规则，Starbucks对应节点5。通过边集合分析路径：\n\n- 从节点5（Starbucks）到节点3（Europa Cafe）的路径为 EDGE[5,3,91m]，距离为91m。\n- 从节点5（Starbucks）到节点4（Chase）的路径为 EDGE[5,4,764m]，距离为764m。\n- 从节点5（Starbucks）到节点12（Duane Reade）的路径为 EDGE[5,12,720m]，距离为720m。\n\n因此，距离Starbucks最远的是Chase（节点4），距离为764m。选项B正确。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Chase距离Starbucks最远，约251米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Europa Cafe最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "根据图记忆规则，通过边集合计算Europa Cafe（NODE[3]）到各选项的最短路径长度：\n- 到Chase（NODE[4]）：直接通过EDGE[3,4,676m]，距离为676m。\n- 到Public School 212（NODE[10]）：需经过NODE[3]→NODE[9]→NODE[10]，路径长度为EDGE[3,9,297m] + EDGE[9,10,298m] = 595m。\n因此，Public School 212距离Europa Cafe最远。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Public School 212距离Europa Cafe最远，约459米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "根据提供的节点与边信息，Europa Cafe（NODE[3]）通过边连接到多个POI，包括NODE[2]（Hard Rock Cafe）、NODE[4]（Chase）、NODE[5]（Starbucks）、NODE[6]（Tony's）。具体边为：\n- EDGE[3,2,83m]\n- EDGE[3,4,676m]\n- EDGE[3,5,91m]\n- EDGE[3,6,227m]\n\n这些边表明Europa Cafe与多个POI直接相连，且连接的POI数量较多，因此其周围的POI密度最高。其他选项如Duane Reade（NODE[12]）虽然也连接多个POI，但其连接的POI数量和密度不如Europa Cafe。Public School 212（NODE[10]）仅连接到NODE[11]（5 Napkin Burger），而Starbucks（NODE[5]）仅连接到NODE[3]（Europa Cafe）和NODE[6]（Tony's），连接的POI数量较少。因此，Europa Cafe周围的POI密度最高。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Europa Cafe周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "根据提供的节点与边列表，可以计算每个POI周围的POI密度。通过分析各POI的邻接节点数量（即直接相连的POI数量），可以得出以下结果：\n\n- Starbucks (NODE[5]) 直接连接的POI有：NODE[3] (Europa Cafe)、NODE[4] (Chase)、NODE[6] (Tony's)、NODE[9] (The Playwright)、NODE[12] (Duane Reade)，共5个。\n- Hard Rock Cafe (NODE[2]) 直接连接的POI有：NODE[1] (Junior's)、NODE[3] (Europa Cafe)，共2个。\n- Duane Reade (NODE[12]) 直接连接的POI有：NODE[1] (Junior's)、NODE[9] (The Playwright)、NODE[11] (5 Napkin Burger)、NODE[4] (Chase)，共4个。\n- Public School 212 (NODE[10]) 直接连接的POI有：NODE[9] (The Playwright)、NODE[11] (5 Napkin Burger)，共2个。\n\n因此，Starbucks (NODE[5]) 周围的POI密度最高，直接连接了5个POI，是选项中最高的。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Hard Rock Cafe周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "根据提供的节点和边信息，Duane Reade（NODE[12]）仅与NODE[1]和NODE[4]相连，且其周围没有其他POI直接连接。而其他选项中的POI（如Public School 212、Starbucks、Chase）均与其他多个POI存在直接连接或路径，因此Duane Reade的POI密度最低。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Duane Reade周围的POI密度最低，500米范围内只有1个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "根据图记忆规则，POI密度可通过其邻近POI的数量和距离来评估。从节点列表和边列表分析：\n\n- **Duane Reade (NODE[12])** 仅与 NODE[1] 和 NODE[4] 直接相连，且连接的边为 EDGE[12,1,647m] 和 EDGE[12,4,1048m]。其邻近POI数量最少，且与其他POI的距离较远。\n- **Public School 212 (NODE[10])** 与 NODE[9] 和 NODE[11] 相连，边为 EDGE[9,10,298m] 和 EDGE[10,11,229m]，邻近POI数量较多。\n- **Starbucks (NODE[5])** 与多个POI相连，包括 NODE[3], NODE[4], NODE[6], NODE[12] 等，边数较多，邻近POI密度高。\n- **Chase (NODE[4])** 与多个POI相连，包括 NODE[1], NODE[3], NODE[5], NODE[7], NODE[8] 等，邻近POI数量最多。\n\n因此，**Duane Reade** 的周围POI密度最低。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Public School 212周围的POI密度最低，500米范围内只有4个其他POI。"
+        },
+        {
+          "question": "从Junior's到Hard Rock Cafe，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "根据提供的节点和边列表，从Junior's（NODE[1]）到Hard Rock Cafe（NODE[2]）的最短路径是通过Europa Cafe（NODE[3]）。根据边列表，存在以下直接连接：\n- EDGE[1, 3, 297m, 35°]：从Junior's到Europa Cafe，距离297米。\n- EDGE[3, 2, 83m, 226°]：从Europa Cafe到Hard Rock Cafe，距离83米。\n\n总路径长度为297m + 83m = 380m。其他选项中提到的节点或路径在给定的边列表中未出现，因此无法验证其有效性。选项B符合图记忆规则，且路径长度最短。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "最短路径是：Junior's -> (Junior's and west 50rd的节点) -> (7th avenue and west 50rd的节点) -> (west 44rd and 7th avenue的节点) -> (Hard Rock Cafe and 7th avenue的节点) -> Hard Rock Cafe，总距离约505米。"
+        },
+        {
+          "question": "从Hard Rock Cafe到Starbucks，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "根据提供的节点与边列表，从 Hard Rock Cafe（NODE[2]）到 Starbucks（NODE[5]）的最短路径为直接通过 EDGE[2,3,83m]（Hard Rock Cafe → Europa Cafe）和 EDGE[3,5,91m]（Europa Cafe → Starbucks），总长度为 83m + 91m = 174m。选项 B 中的路径“Hard Rock Cafe → (Hard Rock Cafe and 7th avenue的节点) → Starbucks”对应于该路径，且符合图记忆规则中对节点与边的定义。其他选项涉及未在上下文中出现的节点或路径，不符合连通性约束。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：Hard Rock Cafe -> (Hard Rock Cafe and 7th avenue的节点) -> Starbucks，总距离约195米。"
+        },
+        {
+          "question": "从Starbucks到Europa Cafe，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "根据提供的节点和边列表，从Starbucks（节点5）到Europa Cafe（节点3）的最短路径是直接通过已知的边进行连接。根据边列表，存在一条直接从节点5（Starbucks）到节点3（Europa Cafe）的边，长度为91m，方向为270°。因此，选项C中的路径“Starbucks -> (Hard Rock Cafe and 7th avenue的节点) -> (Europa Cafe and 7th avenue的节点) -> Europa Cafe”是基于已知边的最短路径，符合图记忆规则中“总边权最小”的优先级。其他选项涉及未在上下文中出现的节点或路径，不符合连通性约束。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：Starbucks -> (Hard Rock Cafe and 7th avenue的节点) -> (Europa Cafe and 7th avenue的节点) -> Europa Cafe，总距离约220米。"
+        },
+        {
+          "question": "从Europa Cafe到Chase，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "根据提供的节点和边列表，从NODE[3,POI,name=Europa Cafe]到NODE[4,POI,name=Chase]的直接路径为EDGE[3,4,676m,103°]，即Europa Cafe直接连接到Chase，道路长度为676米。其他选项涉及未在上下文中出现的节点（如“7th avenue and west 50rd的节点”、“west 50rd and Chase的节点”等），违反了图记忆规则中“禁止引入未出现的连接或节点”的约束。因此，选项D是唯一符合规则且路径最短的选项。",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：Europa Cafe -> Chase，总距离约85米。"
+        }
+      ],
+      "completed_at": "2025-12-21T01:12:09.230193"
+    },
+    "context_mode": "graph"
+  },
+  "context_text": "# 第二种记忆道路连通图描述\n## 节点列表\nNODE[id,类型,附加属性]\nNODE[1,POI,name=Junior's]\nNODE[2,POI,name=Hard Rock Cafe]\nNODE[3,POI,name=Europa Cafe]\nNODE[4,POI,name=Chase]\nNODE[5,POI,name=Starbucks]\nNODE[6,POI,name=Tony's]\nNODE[7,POI,name=The Lambs Club]\nNODE[8,POI,name=Del Frisco's Double Eagle Steakhouse]\nNODE[9,POI,name=The Playwright]\nNODE[10,POI,name=Public School 212]\nNODE[11,POI,name=5 Napkin Burger]\nNODE[12,POI,name=Duane Reade]\nNODE[13,ROAD,name=起点]\nNODE[14,ROAD,name=Junior's and west 50rd的节点]\nNODE[15,ROAD,name=7th avenue and west 50rd的节点]\nNODE[16,ROAD,name=west 44rd and 7th avenue的节点]\nNODE[17,ROAD,name=Hard Rock Cafe and 7th avenue的节点]\nNODE[18,ROAD,name=Chase and 7th avenue的节点]\nNODE[19,ROAD,name=west 42rd and 7th avenue的节点]\nNODE[20,ROAD,name=west 42rd and Starbucks的节点]\nNODE[21,ROAD,name=Europa Cafe and 7th avenue的节点]\nNODE[22,ROAD,name=west 44rd and The Lambs Club的节点]\nNODE[23,ROAD,name=west 50rd and The Lambs Club的节点]\nNODE[24,ROAD,name=west 50rd and 6th avenue的节点]\nNODE[25,ROAD,name=Chase and 6th avenue的节点]\nNODE[26,ROAD,name=west 50rd and Chase的节点]\nNODE[27,ROAD,name=west 46rd and 6th avenue的节点]\nNODE[28,ROAD,name=west 46rd and Del Frisco's Double Eagle Steakhouse的节点]\nNODE[29,ROAD,name=west 46rd and 7th avenue的节点]\nNODE[30,ROAD,name=7th avenue and The Playwright的节点]\nNODE[31,ROAD,name=west 50rd and 50th street的节点]\nNODE[32,ROAD,name=west 50rd and Public School 212的节点]\nNODE[33,ROAD,name=west 44rd and 50th street的节点]\nNODE[34,ROAD,name=west 46rd and 50th street的节点]\nNODE[35,ROAD,name=Duane Reade与50th street的节点]\nNODE[36,ROAD,name=位置_58]\n\n## 边列表\nEDGE[起点ID,终点ID,道路长度,方向]\nEDGE[13,1,93m,223°]\nEDGE[1,14,96m,35°]\nEDGE[14,15,114m,141°]\nEDGE[15,16,115m,210°]\nEDGE[16,17,77m,194°]\nEDGE[17,2,101m,315°]\nEDGE[2,3,82m,218°]\nEDGE[3,4,85m,190°]\nEDGE[4,18,76m,103°]\nEDGE[18,19,130m,217°]\nEDGE[19,20,179m,311°]\nEDGE[20,5,107m,36°]\nEDGE[5,20,107m,216°]\nEDGE[20,19,179m,131°]\nEDGE[19,18,130m,37°]\nEDGE[18,21,80m,2°]\nEDGE[21,17,61m,76°]\nEDGE[17,5,93m,175°]\nEDGE[5,6,68m,99°]\nEDGE[6,22,98m,5°]\nEDGE[22,7,68m,90°]\nEDGE[7,23,87m,6°]\nEDGE[23,24,119m,146°]\nEDGE[24,25,66m,184°]\nEDGE[25,4,98m,169°]\nEDGE[4,26,102m,38°]\nEDGE[26,26,229m,138°]\nEDGE[26,4,113m,37°]\nEDGE[4,26,113m,217°]\nEDGE[26,26,229m,318°]\nEDGE[26,24,113m,317°]\nEDGE[24,27,333m,30°]\nEDGE[27,28,114m,314°]\nEDGE[28,8,81m,190°]\nEDGE[8,28,81m,10°]\nEDGE[28,29,130m,317°]\nEDGE[29,30,112m,216°]\nEDGE[30,9,118m,322°]\nEDGE[9,30,118m,142°]\nEDGE[30,15,197m,205°]\nEDGE[15,14,114m,321°]\nEDGE[14,31,207m,277°]\nEDGE[31,32,107m,324°]\nEDGE[32,10,96m,33°]\nEDGE[10,32,96m,213°]\nEDGE[32,31,107m,144°]\nEDGE[31,33,133m,212°]\nEDGE[33,11,239m,321°]\nEDGE[11,33,239m,141°]\nEDGE[33,31,133m,32°]\nEDGE[31,34,403m,31°]\nEDGE[34,35,204m,25°]\nEDGE[35,12,66m,109°]\nEDGE[12,12,20m,289°]\nEDGE[12,35,46m,289°]\nEDGE[35,35,49m,205°]\nEDGE[35,34,154m,205°]\nEDGE[34,36,74m,25°]\nEDGE[36,35,129m,25°]\nEDGE[35,12,66m,109°]"
+}

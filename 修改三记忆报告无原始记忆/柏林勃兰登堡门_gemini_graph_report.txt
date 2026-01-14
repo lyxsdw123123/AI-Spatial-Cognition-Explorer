@@ -1,0 +1,265 @@
+{
+  "region": "柏林勃兰登堡门",
+  "model": "gemini",
+  "memory_mode": "graph",
+  "exploration_report": {
+    "total_distance": 1020,
+    "exploration_time": 0,
+    "poi_count": 1140
+  },
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 9,
+      "total_questions": 24,
+      "accuracy": 37.5,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 3,
+          "total": 8,
+          "percentage": 37.5
+        },
+        "空间距离估算": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "邻近关系判断": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "POI密度识别": {
+          "correct": 0,
+          "total": 4,
+          "percentage": 0.0
+        },
+        "路径规划": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Hopfingerbräu im Palais相对于Commerzbank在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文提供的节点与边信息，Hopfingerbräu im Palais（假设对应节点ID为2）和Commerzbank（假设对应节点ID为1）之间的相对方向可以通过路径推理得出。根据工具输出中的方位角数据，Hopfingerbräu im Palais相对于Commerzbank的方位角为1.7140623800723915°，该角度接近正东方向，但略偏北，因此属于东南方向。因此，正确答案是B. 东南。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Hopfingerbräu im Palais位于Commerzbank的东北面。"
+        },
+        {
+          "question": "Viale dei Tigli相对于Hopfingerbräu im Palais在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文提供的节点与边信息，Viale dei Tigli（节点ID未直接提供）和Hopfingerbräu im Palais（节点ID未直接提供）之间的相对方向无法通过直接的边关系确定。然而，根据工具输出中提供的方位角信息，Viale dei Tigli位于Hopfingerbräu im Palais的东南方向（方位角为149.03938556339506°）。因此，正确答案是 **B. 东南**。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Viale dei Tigli位于Hopfingerbräu im Palais的东南面。"
+        },
+        {
+          "question": "Starbucks相对于Viale dei Tigli在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "<根据上下文中的节点与边信息，Starbucks（NODE[3,POI]）与Viale dei Tigli（NODE[5,POI]）之间没有直接的边连接。因此，需要通过路径推理确定相对方向。从Starbucks到Viale dei Tigli的路径为：Starbucks → ... → Viale dei Tigli，根据路径中各边的方向信息，最终得出Starbucks相对于Viale dei Tigli位于东南方向。>",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Starbucks位于Viale dei Tigli的西北面。"
+        },
+        {
+          "question": "Berlin Pavillon am Reichstag相对于Starbucks在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文提供的节点和边信息，Starbucks（NODE[3]）与Berlin Pavillon am Reichstag（NODE[4]）之间没有直接的边连接。但通过路径推理，从Starbucks到Berlin Pavillon am Reichstag的路径经过多个节点，最终方向为东南方向。因此，Berlin Pavillon am Reichstag相对于Starbucks在东南方向。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Berlin Pavillon am Reichstag位于Starbucks的西北面。"
+        },
+        {
+          "question": "Commerzbank相对于Hopfingerbräu im Palais在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文中的`scan_environment`工具输出，Commerzbank相对于Hopfingerbräu im Palais的方位角为1.7140623800723915°，接近正东方向。然而，由于该方位角非常小（接近0°），表明Commerzbank位于Hopfingerbräu im Palais的正东方向附近。结合选项来看，最接近的方向是**东南**（B），因为正东方向可以被归类为东南方向的边界情况。此外，没有直接的边或路径信息提供更精确的方向描述，因此基于工具输出的方位角进行判断。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Commerzbank位于Hopfingerbräu im Palais的西南面。"
+        },
+        {
+          "question": "Hopfingerbräu im Palais相对于Viale dei Tigli在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "根据上下文中的节点与边信息，Hopfingerbräu im Palais（假设对应节点ID为某个未明确标注的节点）与Viale dei Tigli（节点ID为某个未明确标注的节点）之间的相对方向可以通过路径规划和方位角推断。根据工具输出中提供的方位角数据，Hopfingerbräu im Palais位于Viale dei Tigli的西南方向（方位角约为230°）。因此，正确答案是 D. 西南。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Hopfingerbräu im Palais位于Viale dei Tigli的西北面。"
+        },
+        {
+          "question": "Viale dei Tigli相对于Starbucks在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "<根据上下文提供的节点与边信息，Starbucks对应NODE[3]，Viale dei Tigli对应NODE[5]。在路径规划中，从Starbucks到Viale dei Tigli的路径为EDGE[3, 12, 16m]、EDGE[12, 5, 108m]，总长度为124m。根据方位角规则，从Starbucks（NODE[3]）到Viale dei Tigli（NODE[5]）的方向为从起点到终点的方位角。通过路径推理，该方向为东南方向（约149°），因此选项B正确。>",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Viale dei Tigli位于Starbucks的东南面。"
+        },
+        {
+          "question": "Starbucks相对于Berlin Pavillon am Reichstag在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文中的节点与边信息，Starbucks（NODE[3]）与Berlin Pavillon am Reichstag（NODE[4]）之间没有直接的边连接。但根据路径规划中多次出现的相对位置信息，例如在Starbucks之后移动至Viale dei Tigli，再移动至Maman，最后到达Alt-Berliner Wirtshaus，以及后续的路径推理，可以推断出Starbucks位于Berlin Pavillon am Reichstag的东南方向。此外，在扫描环境中，Berlin Pavillon am Reichstag的可见POI中，Starbucks未被提及，但通过路径推理和相对位置分析，可得出Starbucks相对于Berlin Pavillon am Reichstag位于东南方向。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Starbucks位于Berlin Pavillon am Reichstag的东南面。"
+        },
+        {
+          "question": "Commerzbank到Viale dei Tigli的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "根据提供的节点和边信息，Commerzbank（节点ID未直接给出）与Viale dei Tigli（节点ID未直接给出）之间的路径无法通过给定的边集合直接推导。然而，在探索上下文中，从Commerzbank到Viale dei Tigli的路径规划显示距离约为796米（在Step 1中，从Commerzbank的移动记录中可推断出该距离）。因此，直线距离应接近该数值，属于300-500米范围。",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Commerzbank到Viale dei Tigli的直线距离约为178米。"
+        },
+        {
+          "question": "Hopfingerbräu im Palais到Starbucks的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "根据提供的节点和边信息，Hopfingerbräu im Palais（假设对应节点ID为某个未明确标注的POI）与Starbucks（NODE[3,POI]）之间没有直接的边连接。但根据路径规划历史，从Starbucks到Viale dei Tigli（NODE[4,POI]）的路径长度为482m，而从Viale dei Tigli到Maman（NODE[6,POI]）的路径长度为136m，从Maman到Alt-Berliner Wirtshaus（NODE[7,POI]）的路径长度为130m，从Alt-Berliner Wirtshaus到Commerzbank（NODE[1,POI]）的路径长度为796m，从Commerzbank到Hopfingerbräu im Palais（假设对应节点ID为某个未明确标注的POI）的路径长度为191m。通过这些路径的累计长度可以推断出Hopfingerbräu im Palais到Starbucks的直线距离大约在100-200米之间。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Hopfingerbräu im Palais到Starbucks的直线距离约为148米。"
+        },
+        {
+          "question": "Viale dei Tigli到Berlin Pavillon am Reichstag的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文提供的节点与边信息，Viale dei Tigli（节点ID未知）到Berlin Pavillon am Reichstag（节点ID未知）的直线距离无法直接通过给定的边信息计算。然而，根据路径规划中提到的“Path planned via road network: 3 steps, approx 476m”（从Viale dei Tigli到Berlin Pavillon am Reichstag的路径长度约为476米），可以推断两者之间的直线距离应小于或接近该路径长度。因此，最合理的选项是C（400-800米）。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Viale dei Tigli到Berlin Pavillon am Reichstag的直线距离约为500米。"
+        },
+        {
+          "question": "Starbucks到Café Lebensart的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文提供的节点与边信息，Starbucks（NODE[3,POI]）到Café Lebensart（NODE[10,POI]）的路径需要通过中间节点进行推理。在已知的路径中，Starbucks到Café Lebensart的路径为：EDGE[3, 10, 16m]（直接连接），表明两者之间的直线距离约为16米，属于选项B（100-200米）范围内的合理近似值。因此，答案为B。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Starbucks到Café Lebensart的直线距离约为243米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Commerzbank最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "根据图记忆规则，通过节点与边集合进行路径推理。Commerzbank对应节点为NODE[1,POI,name=Commerzbank]，Viale dei Tigli对应节点为NODE[5,POI,name=Viale dei Tigli]。根据上下文提供的边列表，从Commerzbank到Viale dei Tigli的路径为EDGE[1,3,16m]（假设存在该边），总长度为16m，是选项中最近的距离。其他选项如Hopfingerbräu im Palais和Starbucks的路径长度均大于16m，因此Viale dei Tigli距离Commerzbank最近。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Starbucks距离Commerzbank最近，约141米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Hopfingerbräu im Palais最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "根据提供的节点和边信息，Hopfingerbräu im Palais 是一个 POI 节点。从上下文的路径规划记录中可以看到，AI 在移动过程中曾从 Starbucks 移动到 Hopfingerbräu im Palais，且路径长度为 191m（通过 2 步）。此外，从 Hopfingerbräu im Palais 到 Starbucks 的路径长度也为 191m（通过 2 步），表明两者之间的距离最短。相比之下，Viale dei Tigli 和 Berlin Pavillon am Reichstag 与 Hopfingerbräu im Palais 的距离更远，因此 Starbucks 是距离 Hopfingerbräu im Palais 最近的选项。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Starbucks距离Hopfingerbräu im Palais最近，约148米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Viale dei Tigli最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "根据提供的节点与边信息，Viale dei Tigli（NODE[4]）与其他POI之间的路径需要通过图记忆规则进行推理。根据上下文中的路径规划记录：\n\n- 从Viale dei Tigli到Starbucks（NODE[3]）的路径为0m（直接到达）。\n- 从Viale dei Tigli到Berlin Pavillon am Reichstag（未在节点列表中明确标识，但根据路径记录，其距离为410m）。\n- 从Viale dei Tigli到Café Lebensart（未在节点列表中明确标识，但根据路径记录，其距离为202m）。\n\n因此，根据路径长度比较，Berlin Pavillon am Reichstag距离Viale dei Tigli最远。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Berlin Pavillon am Reichstag距离Viale dei Tigli最远，约500米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Starbucks最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "根据提供的节点和边信息，需要计算每个选项到Starbucks（NODE[3,POI]）的距离。通过路径规划，发现：\n\n- **Berlin Pavillon am Reichstag**（假设对应节点为NODE[x,POI]）的路径长度为最长，经过多条边累加后总距离约为476m。\n- **Café Lebensart**（假设对应节点为NODE[y,POI]）的路径长度较短，约为645m。\n- **Maman**（NODE[6,POI]）的路径长度为136m。\n\n因此，**Berlin Pavillon am Reichstag**距离Starbucks最远。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Berlin Pavillon am Reichstag距离Starbucks最远，约409米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "根据提供的节点与边信息，Café Lebensart（节点ID未直接给出，但根据上下文可推断为某个POI）周围存在多个邻近的POI，例如Bistro im Haus der Bundespressekonferenz、flamingo、Saravanaa Bhavan、Lindenbräu等。通过路径规划和距离数据可以看出，Café Lebensart是多个POI之间的关键连接点，且在多个步骤中被多次访问，表明其周围POI密度较高。相比之下，其他选项中的POI如Maman、Bistro im Haus der Bundespressekonferenz、Berlin Pavillon am Reichstag的邻近POI数量较少，因此Café Lebensart的POI密度最高。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Maman周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "根据提供的节点和边信息，Café Lebensart（节点ID未直接给出，但根据上下文推断为某个POI）周围有多个邻近的POI，包括Bistro im Haus der Bundespressekonferenz、Berlin Pavillon am Reichstag、Saravanaa Bhavan等，且这些POI之间的路径较短，表明它们在空间上较为密集。相比之下，其他选项中的POI（如Commerzbank、Bistro im Haus der Bundespressekonferenz、Berlin Pavillon am Reichstag）虽然也有邻近的POI，但密度不如Café Lebensart高。因此，Café Lebensart周围的POI密度最高。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Commerzbank周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "根据提供的节点和边信息，Viale dei Tigli（NODE[4]）的邻近POI数量最少。从上下文可见，Viale dei Tigli在移动过程中仅与少量POI直接相连，且其周围可见POI数量较少。相比之下，其他选项中的POI（如Bistro im Haus der Bundespressekonferenz、Café Lebensart、Berlin Pavillon am Reichstag）均出现在更多路径中，且与多个其他POI有连接关系，表明它们的周围POI密度更高。因此，Viale dei Tigli是当前区域内POI密度最低的选项。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Bistro im Haus der Bundespressekonferenz周围的POI密度最低，500米范围内只有0个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "根据提供的节点和边信息，分析各POI周围的连通性。Viale dei Tigli（节点4）仅与节点3（Starbucks）相连，且无其他邻接节点，因此其周围POI密度最低。其他选项中的POI（如Café Lebensart、Bistro im Haus der Bundespressekonferenz、Berlin Pavillon am Reichstag）均与多个节点相连，表明周围有更高的POI密度。因此，选项D的POI密度最低。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Café Lebensart周围的POI密度最低，500米范围内只有3个其他POI。"
+        },
+        {
+          "question": "从Commerzbank到Hopfingerbräu im Palais，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "根据提供的节点与边列表，Commerzbank（NODE[1,POI]）与Hopfingerbräu im Palais（NODE[2,POI]）之间存在直接连接的边EDGE[1,2,191m]。该路径为最短路径，仅需1步，总长度为191米。其他选项涉及未在上下文中出现的节点或路径，如“ebert”、“lerper”、“reichtagufer”、“marsch”等，依据不足，无法验证其有效性。因此，选项A是最短路径。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：Commerzbank -> Hopfingerbräu im Palais，总距离约191米。"
+        },
+        {
+          "question": "从Hopfingerbräu im Palais到Viale dei Tigli，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "根据提供的节点与边列表，Hopfingerbräu im Palais（节点ID未明确给出）到Viale dei Tigli（节点ID未明确给出）的路径需基于现有边集合进行推理。选项D中提到的路径涉及的节点如“ebert and Saravanaa Bhavan节点”、“Maman and marsch节点”、“linden and flamingo节点”均未在给定的节点列表中出现，因此无法验证其连通性或路径长度。然而，其他选项中的节点如Starbucks（节点3）、Café Lebensart（未明确节点ID）、Alt-Berliner Wirtshaus（节点8）等在上下文中存在，但具体路径的边权信息缺失。由于选项D中提到的节点和路径关系未在上下文中出现，依据不足，无法判断其最短性。因此，答案为D，但需注意该选项的路径信息不完整。",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "最短路径是：Hopfingerbräu im Palais -> (Hopfingerbräu im Palais and marsch节点) -> (Starbucks and marsch节点) -> (Café Lebensart and marsch节点) -> (Viale dei Tigli and marsch节点) -> (Viale dei Tigli and marsch节点) -> Viale dei Tigli，总距离约548米。"
+        },
+        {
+          "question": "从Viale dei Tigli到Starbucks，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "<根据提供的节点与边集合，从Viale dei Tigli到Starbucks的最短路径为选项B。路径为：Viale dei Tigli -> (allee西节点) -> (marsch北节点) -> (ebert and Hopfingerbräu im Palais节点) -> (Lindenbräu节点) -> Starbucks。该路径总长度为1363m，且符合图记忆规则中“总边权最小”的优先级。其他选项中，A和C涉及未在上下文中出现的节点（如“strae and marsch节点”、“Viale dei Tigli and marsch节点”等），D中的“reichtagufer and Cinque节点”也未在上下文中出现，因此依据不足。>",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "最短路径是：Viale dei Tigli -> (Viale dei Tigli and marsch节点) -> (Viale dei Tigli and marsch节点) -> (Café Lebensart and marsch节点) -> (Starbucks and marsch节点) -> Starbucks，总距离约388米。"
+        },
+        {
+          "question": "从Starbucks到Berlin Pavillon am Reichstag，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "根据提供的节点与边集合，从Starbucks（NODE[3]）到Berlin Pavillon am Reichstag（NODE[4]）的最短路径为：Starbucks -> Viale dei Tigli -> ebert and Café Lebensart -> Berlin Pavillon am Reichstag。该路径通过以下边实现：\n- EDGE[3, 10, 16m]（Starbucks到Viale dei Tigli）\n- EDGE[10, 12, 114m]（Viale dei Tigli到ebert and Café Lebensart）\n- EDGE[12, 4, 415m]（ebert and Café Lebensart到Berlin Pavillon am Reichstag）\n\n总长度为16m + 114m + 415m = 545m。其他选项中涉及的节点或边未在上下文中出现，因此无法验证其有效性。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "最短路径是：Starbucks -> (Starbucks and marsch节点) -> (Hopfingerbräu im Palais and marsch节点) -> (ebert and Hopfingerbräu im Palais节点) -> (ebert and Hopfingerbräu im Palais节点) -> Berlin Pavillon am Reichstag，总距离约702米。"
+        }
+      ],
+      "completed_at": "2025-12-20T19:07:46.184561"
+    },
+    "context_mode": "graph"
+  },
+  "context_text": "# 第二种记忆道路连通图描述\n## 节点列表\nNODE[id,类型,附加属性]\nNODE[1,POI,name=Starbucks]\nNODE[2,POI,name=Viale dei Tigli]\nNODE[3,POI,name=Maman]\nNODE[4,POI,name=Alt-Berliner Wirtshaus]\nNODE[5,POI,name=Commerzbank]\nNODE[6,POI,name=Hopfingerbräu im Palais]\nNODE[7,POI,name=Berlin Pavillon am Reichstag]\nNODE[8,POI,name=Bistro im Haus der Bundespressekonferenz]\nNODE[9,POI,name=Cinque]\nNODE[10,POI,name=flamingo]\nNODE[11,POI,name=Café Lebensart]\nNODE[12,POI,name=eleven]\nNODE[13,POI,name=Saravanaa Bhavan]\nNODE[14,POI,name=Lindenbräu]\nNODE[15,ROAD,name=起点]\nNODE[16,ROAD,name=Starbucks and marsch节点]\nNODE[17,ROAD,name=Café Lebensart and marsch节点]\nNODE[18,ROAD,name=Viale dei Tigli and marsch节点]\nNODE[19,ROAD,name=位置_10]\nNODE[20,ROAD,name=ebert and Maman节点]\nNODE[21,ROAD,name=ebert and Commerzbank节点]\nNODE[22,ROAD,name=ebert and Hopfingerbräu im Palais节点]\nNODE[23,ROAD,name=Hopfingerbräu im Palais and marsch节点]\nNODE[24,ROAD,name=reichtagufer and marsch节点]\nNODE[25,ROAD,name=allee and marsch节点]\nNODE[26,ROAD,name=marsch北节点]\nNODE[27,ROAD,name=位置_26]\nNODE[28,ROAD,name=reichtagufer and Cinque节点]\nNODE[29,ROAD,name=reichtagufer and flamingo节点]\nNODE[30,ROAD,name=linden and flamingo节点]\nNODE[31,ROAD,name=Maman and marsch节点]\nNODE[32,ROAD,name=Alt-Berliner Wirtshaus and marsch节点]\nNODE[33,ROAD,name=strae and marsch节点]\nNODE[34,ROAD,name=and marsch南节点]\nNODE[35,ROAD,name=lerper and eleven节点]\nNODE[36,ROAD,name=ebert and Saravanaa Bhavan节点]\nNODE[37,ROAD,name=ebert and Café Lebensart节点]\nNODE[38,ROAD,name=位置_48]\nNODE[39,ROAD,name=Lindenbräu节点]\n\n## 边列表\nEDGE[起点ID,终点ID,道路长度,方向]\nEDGE[15,1,16m,214°]\nEDGE[1,16,125m,34°]\nEDGE[16,17,98m,148°]\nEDGE[17,18,78m,172°]\nEDGE[18,18,19m,177°]\nEDGE[18,2,65m,264°]\nEDGE[2,3,110m,213°]\nEDGE[3,4,107m,148°]\nEDGE[4,3,107m,328°]\nEDGE[3,19,77m,249°]\nEDGE[19,20,109m,250°]\nEDGE[20,21,169m,340°]\nEDGE[21,5,114m,93°]\nEDGE[5,6,191m,1°]\nEDGE[6,22,123m,274°]\nEDGE[22,7,166m,267°]\nEDGE[7,22,166m,87°]\nEDGE[22,6,123m,94°]\nEDGE[6,23,196m,62°]\nEDGE[23,24,94m,357°]\nEDGE[24,25,183m,356°]\nEDGE[25,26,189m,2°]\nEDGE[26,8,234m,268°]\nEDGE[8,26,234m,88°]\nEDGE[26,9,191m,65°]\nEDGE[9,27,235m,74°]\nEDGE[27,28,241m,178°]\nEDGE[28,29,205m,213°]\nEDGE[29,10,116m,96°]\nEDGE[10,30,365m,189°]\nEDGE[30,11,167m,270°]\nEDGE[11,17,121m,271°]\nEDGE[17,18,78m,172°]\nEDGE[18,18,19m,177°]\nEDGE[18,31,92m,185°]\nEDGE[31,32,82m,176°]\nEDGE[32,33,192m,164°]\nEDGE[33,34,285m,167°]\nEDGE[34,12,236m,269°]\nEDGE[12,35,181m,264°]\nEDGE[35,36,95m,359°]\nEDGE[36,11,106m,4°]\nEDGE[11,36,106m,184°]\nEDGE[36,13,109m,273°]\nEDGE[13,36,109m,93°]\nEDGE[36,11,106m,4°]\nEDGE[11,37,183m,359°]\nEDGE[37,38,151m,212°]\nEDGE[38,39,222m,254°]\nEDGE[39,14,176m,176°]"
+}

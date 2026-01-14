@@ -41,6 +41,10 @@ class EvaluationRequestModel(BaseModel):
     model_provider: str = "qwen"
     strategies: Optional[List[str]] = None
 
+
+class GenerateQuestionsRequestModel(BaseModel):
+    region_name: str
+
 @router.post("/start")
 async def start_evaluation(request: EvaluationRequestModel):
     """开始AI评估（异步模式）"""
@@ -51,22 +55,24 @@ async def start_evaluation(request: EvaluationRequestModel):
         mode = (request.exploration_data.context_mode or "").strip().lower()
 
         # 优先使用后端缓存的最新上下文，确保与停止探索时生成的上下文完全一致
-        try:
-            import aiohttp
-            async with aiohttp.ClientSession() as session:
-                async with session.get("http://127.0.0.1:8000/exploration/context") as resp:
-                    if resp.status == 200:
-                        payload = await resp.json()
-                        if isinstance(payload, dict) and payload.get("success"):
-                            data = payload.get("data") or {}
-                            cached_ctx = data.get("context_text")
-                            cached_mode = (data.get("context_mode") or "").strip().lower()
-                            if isinstance(cached_ctx, str) and cached_ctx.strip():
-                                ctx = cached_ctx
-                                if cached_mode:
-                                    mode = cached_mode
-        except Exception:
-            pass
+        # 仅当请求未提供上下文时，才回退到缓存
+        if not (isinstance(ctx, str) and ctx.strip()):
+            try:
+                import aiohttp
+                async with aiohttp.ClientSession() as session:
+                    async with session.get("http://127.0.0.1:8000/exploration/context") as resp:
+                        if resp.status == 200:
+                            payload = await resp.json()
+                            if isinstance(payload, dict) and payload.get("success"):
+                                data = payload.get("data") or {}
+                                cached_ctx = data.get("context_text")
+                                cached_mode = (data.get("context_mode") or "").strip().lower()
+                                if isinstance(cached_ctx, str) and cached_ctx.strip():
+                                    ctx = cached_ctx
+                                    if cached_mode:
+                                        mode = cached_mode
+            except Exception:
+                pass
 
         # 按记忆模式统一上下文格式
         import aiohttp
@@ -209,6 +215,28 @@ async def start_evaluation(request: EvaluationRequestModel):
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"启动评估失败: {str(e)}")
+
+
+@router.post("/questions")
+async def generate_questions(request: GenerateQuestionsRequestModel):
+    try:
+        region = (request.region_name or "").strip()
+        if not region:
+            raise HTTPException(status_code=400, detail="region_name is required")
+        eq = EvaluationQuestions(region)
+        questions = eq.to_dict_list()
+        return {
+            "success": True,
+            "data": {
+                "region": region,
+                "questions": questions,
+                "summary": eq.get_questions_summary(),
+            },
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"生成题目失败: {str(e)}")
 
 @router.get("/status")
 async def get_evaluation_status():

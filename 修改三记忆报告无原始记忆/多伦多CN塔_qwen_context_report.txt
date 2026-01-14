@@ -1,0 +1,265 @@
+{
+  "region": "多伦多CN塔",
+  "model": "qwen",
+  "memory_mode": "context",
+  "exploration_report": {
+    "total_distance": 1740,
+    "exploration_time": 0,
+    "poi_count": 15
+  },
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 12,
+      "total_questions": 24,
+      "accuracy": 50.0,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 2,
+          "total": 8,
+          "percentage": 25.0
+        },
+        "空间距离估算": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "邻近关系判断": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        },
+        "POI密度识别": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "路径规划": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Boston Pizza相对于The Rec Room在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "根据上下文，Boston Pizza相对于The Rec Room的方向为331°，即西北方偏北，但根据选项的范围，最接近的是西南方向。然而，根据实际方位角计算，331°更接近正北方向，因此正确答案应为西北方向。但根据选项中的描述，最符合的是西南方向（D）。不过，根据文本中提供的信息，Boston Pizza相对于The Rec Room的方向为331°，即西北方向，因此正确答案应为C。但根据选项的描述，最符合的是西南方向（D）。因此，最终答案为D。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Boston Pizza位于The Rec Room的西北面。"
+        },
+        {
+          "question": "Second Cup相对于Boston Pizza在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "<根据上下文，Boston Pizza的视野内POI中，Second Cup的方向为45°，而地理正北为0°，顺时针递增。45°位于东北方向，但问题问的是Second Cup相对于Boston Pizza的方向，因此需要反向计算。从Boston Pizza到Second Cup的方向是45°，则从Second Cup到Boston Pizza的方向为45° + 180° = 225°，即西南方向。因此，Second Cup相对于Boston Pizza在西南方向。>",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Second Cup位于Boston Pizza的东北面。"
+        },
+        {
+          "question": "Aroma Espresso Bar相对于Second Cup在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，Second Cup的视野内POI中包含Aroma Espresso Bar，方向为120°，距离≈465m。根据方位角标准，120°位于正东（90°）和正南（180°）之间，属于东南方向。因此，Aroma Espresso Bar相对于Second Cup在东南方向。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Aroma Espresso Bar位于Second Cup的东南面。"
+        },
+        {
+          "question": "RBC Royal Bank相对于Aroma Espresso Bar在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "根据上下文，Aroma Espresso Bar位于RBC Royal Bank的东南方向。具体来说，当在RBC Royal Bank时，Aroma Espresso Bar的方向为238°（即东南方向），而当在Aroma Espresso Bar时，RBC Royal Bank的方向为230°（即西南方向）。因此，RBC Royal Bank相对于Aroma Espresso Bar位于西南方向。",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "RBC Royal Bank位于Aroma Espresso Bar的西南面。"
+        },
+        {
+          "question": "The Rec Room相对于Boston Pizza在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "<根据上下文，Boston Pizza的视野内POI中，The Rec Room的方向为151°，而151°位于东南方向（90°为正东，180°为正南）。因此，The Rec Room相对于Boston Pizza位于东南方向。但根据选项中的描述，最接近的选项是D. 西南，这可能是由于对方向的理解存在偏差。然而，根据上下文提供的具体方向度数151°，更准确的答案应为东南方向，但选项中没有此选项，因此选择最接近的D. 西南。>",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "The Rec Room位于Boston Pizza的东南面。"
+        },
+        {
+          "question": "Boston Pizza相对于Second Cup在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，Second Cup位于Boston Pizza的225°方向，距离约为77米。根据方位角标准，225°为东南方向。因此，Boston Pizza相对于Second Cup在西北方向，而Second Cup相对于Boston Pizza在东南方向。选项B正确。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Boston Pizza位于Second Cup的西南面。"
+        },
+        {
+          "question": "Second Cup相对于Aroma Espresso Bar在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "根据上下文，Aroma Espresso Bar位于Second Cup的219°方向，距离为162米。根据方位角标准，219°位于西南方向（180°-270°之间）。因此，Second Cup相对于Aroma Espresso Bar位于西南方向。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Second Cup位于Aroma Espresso Bar的西北面。"
+        },
+        {
+          "question": "Aroma Espresso Bar相对于RBC Royal Bank在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "根据上下文，RBC Royal Bank位于259 host ...a fine indian restaurant的36°方向，距离约626m。而Aroma Espresso Bar位于259 host ...a fine indian restaurant的89°方向，距离约233m。因此，Aroma Espresso Bar相对于RBC Royal Bank位于西南方向。依据不足：上下文中未直接提供Aroma Espresso Bar与RBC Royal Bank之间的相对方向和距离，此结论基于两者与259 host ...a fine indian restaurant的相对位置进行推断。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Aroma Espresso Bar位于RBC Royal Bank的东北面。"
+        },
+        {
+          "question": "The Rec Room到Second Cup的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，从The Rec Room到Second Cup的直线距离在POI点单元记录中有明确说明。在POI：The Rec Room的视野内POI中，Second Cup的方向为341°，距离≈508m。因此，The Rec Room到Second Cup的直线距离大约是508米，属于选项B（200-400米）的范围。需要注意的是，虽然508米略高于400米，但根据选项的区间划分，最接近的选项为B。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "The Rec Room到Second Cup的直线距离约为508米。"
+        },
+        {
+          "question": "Boston Pizza到Aroma Espresso Bar的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文中的POI点单元记录，Boston Pizza到Aroma Espresso Bar的直线距离在多个位置被提及。例如，在POI：Scaddabush的视野内POI中提到“Aroma Espresso Bar：方向 318°，距离 ≈ 342m”，而在POI：Second Cup的视野内POI中提到“Aroma Espresso Bar：方向 120°，距离 ≈ 465m”。此外，在POI：Starbucks的视野内POI中提到“Aroma Espresso Bar：方向 118°，距离 ≈ 603m”。这些数据表明，Boston Pizza到Aroma Espresso Bar的直线距离大约在342米到603米之间，因此属于选项C（400-800米）。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Boston Pizza到Aroma Espresso Bar的直线距离约为468米。"
+        },
+        {
+          "question": "Second Cup到RBC Royal Bank的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文，Second Cup到RBC Royal Bank的直线距离未直接给出。但根据路径信息，从Second Cup到RBC Royal Bank的路径中，有多个中间节点和距离描述，其中最相关的描述是“RBC Royal Bank（银行）, Dist: 767m, Dir: 53°”来自Second Cup的视野内POI列表。因此，可以推断Second Cup到RBC Royal Bank的直线距离大约在400-800米之间。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Second Cup到RBC Royal Bank的直线距离约为766米。"
+        },
+        {
+          "question": "Aroma Espresso Bar到Scaddabush的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "<根据上下文，Aroma Espresso Bar到Scaddabush的直线距离在多个POI记录中被提及。例如，在POI：Aroma Espresso Bar的视野内POI中，Scaddabush的距离为342米；在POI：Scaddabush的视野内POI中，Aroma Espresso Bar的距离为342米。因此，Aroma Espresso Bar到Scaddabush的直线距离大约为342米，属于选项C（200-400米）的范围。>",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Aroma Espresso Bar到Scaddabush的直线距离约为342米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离The Rec Room最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文，The Rec Room的视野内POI中，Aroma Espresso Bar的距离为315米，这是三个选项中最近的距离。而Boston Pizza距离The Rec Room为463米，Second Cup距离The Rec Room为508米。因此，Aroma Espresso Bar是距离The Rec Room最近的选项。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Aroma Espresso Bar距离The Rec Room最近，约315米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Boston Pizza最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文，Boston Pizza的视野内POI中，Second Cup的距离为≈77m，是选项中距离Boston Pizza最近的实体。其他选项中，Aroma Espresso Bar的距离为≈469m，RBC Royal Bank的距离为≈690m，均大于77m。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Second Cup距离Boston Pizza最近，约77米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Second Cup最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，Second Cup的视野内POI中，Aroma Espresso Bar距离为465m，Scaddabush距离为178m，而RBC Royal Bank距离为767m。因此，RBC Royal Bank是距离Second Cup最远的选项。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "RBC Royal Bank距离Second Cup最远，约766米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Aroma Espresso Bar最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文，Aroma Espresso Bar与RBC Royal Bank的距离为931m，而与Scaddabush的距离为342m，与St. Louis Bar & Grill的距离为621m。因此，RBC Royal Bank是距离Aroma Espresso Bar最远的选项。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "RBC Royal Bank距离Aroma Espresso Bar最远，约930米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文，The Rec Room在视野内有多个POI，包括：\n- Swiss Chalet：方向 177°，距离 ≈ 129m\n- Wild Wing：方向 110°，距离 ≈ 139m\n- Aroma Espresso Bar：方向 58°，距离 ≈ 315m\n- St. Louis Bar & Grill：方向 270°，距离 ≈ 346m\n- Starbucks：方向 96°，距离 ≈ 435m\n- Boston Pizza：方向 331°，距离 ≈ 463m\n- Scaddabush：方向 9°，距离 ≈ 494m\n- Second Cup：方向 341°，距离 ≈ 508m\n\n相比之下，其他选项的POI周围可见的POI数量较少。例如，Boston Pizza的视野内有7个POI，RBC Royal Bank的视野内有5个POI，Aroma Espresso Bar的视野内有6个POI。因此，The Rec Room周围的POI密度最高。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Boston Pizza周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文，Scaddabush在多个POI的视野内被提及，包括：\n- Boston Pizza（方向 259°，距离 ≈ 232m）\n- Second Cup（方向 270°，距离 ≈ 178m）\n- Jack Astor's（方向 75°，距离 ≈ 194m）\n- Starbucks（方向 317°，距离 ≈ 171m）\n- Aroma Espresso Bar（方向 138°，距离 ≈ 342m）\n- 259 host ...a fine indian restaurant（方向 270°，距离 ≈ 411m）\n- The Rec Room（方向 189°，距离 ≈ 494m）\n\n这些信息表明Scaddabush周围有多个POI，因此其周围的POI密度最高。其他选项的POI在上下文中提及的周围POI数量较少。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Scaddabush周围的POI密度最高，500米范围内有6个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文，RBC Royal Bank的视野内POI数量最少，仅提到St. Louis Bar & Grill（距离≈312m，方向81°）、Tim Hortons（距离≈453m，方向32°）、259 host ...a fine indian restaurant（距离≈626m，方向36°）、The Rec Room（距离≈654m，方向86°）、Swiss Chalet（距离≈658m，方向94°）、Boston Pizza（距离≈690m，方向53°）、Starbucks（距离≈750m，方向42°）、Second Cup（距离≈767m，方向53°）。而其他POI如The Rec Room、Aroma Espresso Bar、St. Louis Bar & Grill的视野内POI数量均多于RBC Royal Bank。因此，RBC Royal Bank周围的POI密度最低。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "RBC Royal Bank周围的POI密度最低，500米范围内只有2个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，RBC Royal Bank的视野内POI数量最少。在POI记录中，RBC Royal Bank的视野内仅提到以下POI：\n- St. Louis Bar & Grill：方向 81°，距离 ≈ 312m\n- Tim Hortons：方向 32°，距离 ≈ 453m\n- 259 host ...a fine indian restaurant：方向 36°，距离 ≈ 626m\n- The Rec Room：方向 86°，距离 ≈ 654m\n- Swiss Chalet：方向 94°，距离 ≈ 658m\n- Boston Pizza：方向 53°，距离 ≈ 690m\n- Starbucks：方向 42°，距离 ≈ 750m\n- Second Cup：方向 53°，距离 ≈ 767m\n\n而其他选项中的POI（如The Rec Room、Aroma Espresso Bar、St. Louis Bar & Grill）的视野内POI数量均多于RBC Royal Bank。因此，RBC Royal Bank周围的POI密度最低。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "The Rec Room周围的POI密度最低，500米范围内只有4个其他POI。"
+        },
+        {
+          "question": "从The Rec Room到Boston Pizza，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "根据上下文中的行驶路径描述，从The Rec Room到Boston Pizza的最短路径为选项D。路径为：The Rec Room → (spadina avenue节点) → (indian restaurant and front street节点) → (Starbucks and Second Cup节点) → Boston Pizza。该路径直接连接了The Rec Room与Boston Pizza，且未经过额外节点，符合直线距离最短的原则。其他选项涉及更多节点或绕行，因此路径更长。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "最短路径是：The Rec Room -> (bremner and The Rec Room节点) -> (simcoe street and Aroma Espresso Bar节点) -> (simcoe street and front street节点) -> (Scaddabush and front street节点) -> (Boston Pizza and front street节点) -> Boston Pizza，总距离约969米。"
+        },
+        {
+          "question": "从Boston Pizza到Second Cup，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，从Boston Pizza到Second Cup的直接距离为77米，方向为36°。选项B直接连接这两个POI，符合上下文提供的最短直线距离信息。其他选项涉及多个节点和更长的路径，未在上下文中提供明确的最短路径依据。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：Boston Pizza -> Second Cup，总距离约77米。"
+        },
+        {
+          "question": "从Second Cup到Aroma Espresso Bar，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文中的路径描述，从Second Cup到Aroma Espresso Bar的路径B为：Second Cup -> (indian restaurant道路节点) -> (simcoe street and front street节点) -> (queens and simcoe street节点) -> (simcoe street and Aroma Espresso Bar节点) -> Aroma Espresso Bar。该路径中提到的节点和方向均在上下文中出现，且未提及更短的路径。其他选项中的路径节点或方向在上下文中未明确提及，因此无法判断其是否最短。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "最短路径是：Second Cup -> (Boston Pizza and Starbucks节点) -> (Boston Pizza and front street节点) -> (Scaddabush and front street节点) -> (simcoe street and front street节点) -> (simcoe street and Aroma Espresso Bar节点) -> Aroma Espresso Bar，总距离约808米。"
+        },
+        {
+          "question": "从Aroma Espresso Bar到RBC Royal Bank，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文中的路径描述，选项B中提到的路径涉及多个已知节点，如“indian restaurant道路节点”、“Starbucks and Second Cup节点”、“indian restaurant and front street节点”、“simcoe street and Aroma Espresso Bar节点”、“simcoe street and front street节点”、“spadina avenue南节点”和“front street西节点”，这些节点在上下文中均有提及。虽然没有直接给出Aroma Espresso Bar到RBC Royal Bank的直线距离，但选项B的路径包含了多个已知节点之间的明确方向和距离信息，因此可以推断该路径是基于已知数据的最短路径。其他选项中的路径或节点在上下文中未被明确提及，因此依据不足。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "最短路径是：Aroma Espresso Bar -> (simcoe street and Aroma Espresso Bar节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (St. Louis Bar and spadina avenue节点) -> (St. Louis Bar and spadina avenue节点) -> (RBC Royal Bank and spadina avenue节点) -> RBC Royal Bank，总距离约1132米。"
+        }
+      ],
+      "completed_at": "2025-12-20T11:40:28.084870"
+    },
+    "context_mode": "context"
+  },
+  "context_text": "POI点单元记录（按时间顺序）：\n1) POI：Boston Pizza\n   - 视野内POI（方向度数；距离米）：\n     • Second Cup：方向 36°，距离 ≈ 77m\n     • Starbucks：方向 331°，距离 ≈ 152m\n     • 259 host ...a fine indian restaurant：方向 287°，距离 ≈ 196m\n     • Scaddabush：方向 74°，距离 ≈ 232m\n     • Starbucks：方向 32°，距离 ≈ 238m\n     • Tim Hortons：方向 254°，距离 ≈ 307m\n     • Jack Astor's：方向 72°，距离 ≈ 425m\n     • The Rec Room：方向 158°，距离 ≈ 462m\n2) POI：Second Cup\n   - 视野内POI（方向度数；距离米）：\n     • Boston Pizza：方向 216°，距离 ≈ 77m\n     • Starbucks：方向 301°，距离 ≈ 138m\n     • Starbucks：方向 30°，距离 ≈ 162m\n     • Scaddabush：方向 90°，距离 ≈ 178m\n     • 259 host ...a fine indian restaurant：方向 269°，距离 ≈ 232m\n     • Jack Astor's：方向 79°，距离 ≈ 366m\n     • Tim Hortons：方向 247°，距离 ≈ 371m\n     • Aroma Espresso Bar：方向 128°，距离 ≈ 465m\n3) POI：Starbucks\n   - 视野内POI（方向度数；距离米）：\n     • 259 host ...a fine indian restaurant：方向 236°，距离 ≈ 136m\n     • Second Cup：方向 121°，距离 ≈ 138m\n     • Boston Pizza：方向 151°，距离 ≈ 152m\n     • Scaddabush：方向 103°，距离 ≈ 306m\n     • Tim Hortons：方向 225°，距离 ≈ 310m\n     • Jack Astor's：方向 90°，距离 ≈ 479m\n     • St. Louis Bar & Grill：方向 190°，距离 ≈ 573m\n     • Aroma Espresso Bar：方向 126°，距离 ≈ 603m\n4) POI：259 host ...a fine indian restaurant\n   - 视野内POI（方向度数；距离米）：\n     • Starbucks：方向 56°，距离 ≈ 136m\n     • Tim Hortons：方向 217°，距离 ≈ 177m\n     • Boston Pizza：方向 107°，距离 ≈ 196m\n     • Second Cup：方向 89°，距离 ≈ 232m\n     • Starbucks：方向 65°，距离 ≈ 346m\n     • Scaddabush：方向 89°，距离 ≈ 411m\n     • St. Louis Bar & Grill：方向 178°，距离 ≈ 488m\n     • Jack Astor's：方向 83°，距离 ≈ 597m\n5) POI：Tim Hortons\n   - 视野内POI（方向度数；距离米）：\n     • 259 host ...a fine indian restaurant：方向 37°，距离 ≈ 177m\n     • Boston Pizza：方向 74°，距离 ≈ 307m\n     • Starbucks：方向 45°，距离 ≈ 310m\n     • St. Louis Bar & Grill：方向 160°，距离 ≈ 369m\n     • Second Cup：方向 67°，距离 ≈ 371m\n     • RBC Royal Bank：方向 204°，距离 ≈ 452m\n     • Starbucks：方向 56°，距离 ≈ 510m\n     • Scaddabush：方向 74°，距离 ≈ 539m\n6) POI：St. Louis Bar & Grill\n   - 视野内POI（方向度数；距离米）：\n     • RBC Royal Bank：方向 258°，距离 ≈ 311m\n     • The Rec Room：方向 89°，距离 ≈ 345m\n     • Tim Hortons：方向 340°，距离 ≈ 369m\n     • Swiss Chalet：方向 110°，距离 ≈ 372m\n     • Boston Pizza：方向 22°，距离 ≈ 465m\n     • Wild Wing：方向 97°，距离 ≈ 473m\n     • 259 host ...a fine indian restaurant：方向 358°，距离 ≈ 488m\n     • Second Cup：方向 24°，距离 ≈ 540m\n7) POI：The Rec Room\n   - 视野内POI（方向度数；距离米）：\n     • Swiss Chalet：方向 178°，距离 ≈ 129m\n     • Wild Wing：方向 117°，距离 ≈ 139m\n     • Aroma Espresso Bar：方向 49°，距离 ≈ 315m\n     • St. Louis Bar & Grill：方向 269°，距离 ≈ 345m\n     • Starbucks：方向 98°，距离 ≈ 434m\n     • Boston Pizza：方向 338°，距离 ≈ 462m\n     • Scaddabush：方向 6°，距离 ≈ 494m\n     • Second Cup：方向 345°，距离 ≈ 508m\n8) POI：Swiss Chalet\n   - 视野内POI（方向度数；距离米）：\n     • The Rec Room：方向 358°，距离 ≈ 129m\n     • Wild Wing：方向 61°，距离 ≈ 136m\n     • St. Louis Bar & Grill：方向 290°，距离 ≈ 372m\n     • Aroma Espresso Bar：方向 35°，距离 ≈ 408m\n     • Starbucks：方向 81°，距离 ≈ 430m\n     • Boston Pizza：方向 342°，距离 ≈ 585m\n     • Scaddabush：方向 4°，距离 ≈ 622m\n     • Second Cup：方向 348°，距离 ≈ 634m\n9) POI：Wild Wing\n   - 视野内POI（方向度数；距离米）：\n     • Swiss Chalet：方向 241°，距离 ≈ 136m\n     • The Rec Room：方向 297°，距离 ≈ 139m\n     • Aroma Espresso Bar：方向 23°，距离 ≈ 291m\n     • Starbucks：方向 90°，距离 ≈ 306m\n     • St. Louis Bar & Grill：方向 277°，距离 ≈ 473m\n     • Scaddabush：方向 352°，距离 ≈ 559m\n     • Boston Pizza：方向 329°，距离 ≈ 574m\n     • Second Cup：方向 335°，距离 ≈ 608m\n10) POI：Aroma Espresso Bar\n   - 视野内POI（方向度数；距离米）：\n     • Wild Wing：方向 203°，距离 ≈ 291m\n     • The Rec Room：方向 229°，距离 ≈ 315m\n     • Starbucks：方向 144°，距离 ≈ 327m\n     • Scaddabush：方向 327°，距离 ≈ 342m\n     • Jack Astor's：方向 359°，距离 ≈ 353m\n     • Swiss Chalet：方向 215°，距离 ≈ 408m\n     • Second Cup：方向 308°，距离 ≈ 465m\n     • Boston Pizza：方向 298°，距离 ≈ 468m\n11) POI：Scaddabush\n   - 视野内POI（方向度数；距离米）：\n     • Starbucks：方向 325°，距离 ≈ 170m\n     • Second Cup：方向 270°，距离 ≈ 178m\n     • Jack Astor's：方向 69°，距离 ≈ 193m\n     • Boston Pizza：方向 254°，距离 ≈ 232m\n     • Starbucks：方向 283°，距离 ≈ 306m\n     • Aroma Espresso Bar：方向 147°，距离 ≈ 342m\n     • 259 host ...a fine indian restaurant：方向 269°，距离 ≈ 411m\n     • The Rec Room：方向 186°，距离 ≈ 494m\n12) POI：Jack Astor's\n   - 视野内POI（方向度数；距离米）：\n     • Scaddabush：方向 249°，距离 ≈ 193m\n     • Starbucks：方向 284°，距离 ≈ 288m\n     • Aroma Espresso Bar：方向 179°，距离 ≈ 353m\n     • Second Cup：方向 259°，距离 ≈ 366m\n     • Boston Pizza：方向 252°，距离 ≈ 425m\n     • Starbucks：方向 270°，距离 ≈ 479m\n     • 259 host ...a fine indian restaurant：方向 263°，距离 ≈ 597m\n     • The Rec Room：方向 202°，距离 ≈ 605m\n13) POI：RBC Royal Bank\n   - 视野内POI（方向度数；距离米）：\n     • St. Louis Bar & Grill：方向 78°，距离 ≈ 311m\n     • Tim Hortons：方向 24°，距离 ≈ 452m\n     • 259 host ...a fine indian restaurant：方向 27°，距离 ≈ 626m\n     • The Rec Room：方向 84°，距离 ≈ 654m\n     • Swiss Chalet：方向 95°，距离 ≈ 658m\n     • Boston Pizza：方向 44°，距离 ≈ 690m\n     • Starbucks：方向 32°，距离 ≈ 749m\n     • Second Cup：方向 43°，距离 ≈ 766m\n\n完整行驶路径（仅方向与距离）：\n- 起点：起点\n→ Boston Pizza（方向 324°，距离 ≈ 73m）\n→ Second Cup（方向 36°，距离 ≈ 77m）\n→ Starbucks and Second Cup节点（方向 3°，距离 ≈ 78m）\n→ Starbucks（方向 267°，距离 ≈ 124m）\n→ 259 host ...a fine indian restaurant（方向 236°，距离 ≈ 136m）\n→ indian restaurant道路节点（方向 225°，距离 ≈ 85m）\n→ Tim Hortons and indian restaurant节点（方向 168°，距离 ≈ 86m）\n→ Tim Hortons（方向 274°，距离 ≈ 66m）\n→ Tim Hortons and front street节点（方向 185°，距离 ≈ 72m）\n→ front street西节点（方向 244°，距离 ≈ 131m）\n→ spadina avenue节点（方向 183°，距离 ≈ 132m）\n→ RBC Royal Bank and spadina avenue节点（方向 173°，距离 ≈ 81m）\n→ St. Louis Bar and spadina avenue节点（方向 148°，距离 ≈ 78m）\n→ St. Louis Bar & Grill（方向 73°，距离 ≈ 213m）\n→ 位置_15（方向 138°，距离 ≈ 122m）\n→ 位置_16（方向 81°，距离 ≈ 89m）\n→ 位置_17（方向 71°，距离 ≈ 79m）\n→ bremner and The Rec Room节点（方向 25°，距离 ≈ 147m）\n→ The Rec Room（方向 155°，距离 ≈ 89m）\n→ bremner and The Rec Room节点（方向 335°，距离 ≈ 89m）\n→ 位置_21（方向 205°，距离 ≈ 147m）\n→ 位置_22（方向 251°，距离 ≈ 79m）\n→ 位置_23（方向 261°，距离 ≈ 89m）\n→ St. Louis Bar & Grill（方向 318°，距离 ≈ 122m）\n→ St. Louis Bar and spadina avenue节点（方向 253°，距离 ≈ 213m）\n→ spadina avenue南节点（方向 169°，距离 ≈ 357m）\n→ queens and Swiss Chalet节点（方向 66°，距离 ≈ 528m）\n→ Swiss Chalet（方向 2°，距离 ≈ 76m）\n→ queens and Swiss Chalet节点（方向 182°，距离 ≈ 76m）\n→ queens and Wild Wing节点（方向 64°，距离 ≈ 126m）\n→ Wild Wing（方向 5°，距离 ≈ 89m）\n→ queens and Wild Wing节点（方向 185°，距离 ≈ 89m）\n→ queens and Swiss Chalet节点（方向 244°，距离 ≈ 126m）\n→ spadina avenue南节点（方向 246°，距离 ≈ 528m）\n→ St. Louis Bar and spadina avenue节点（方向 349°，距离 ≈ 357m）\n→ St. Louis Bar & Grill（方向 73°，距离 ≈ 213m）\n→ 位置_37（方向 138°，距离 ≈ 122m）\n→ 位置_38（方向 81°，距离 ≈ 89m）\n→ 位置_39（方向 71°，距离 ≈ 79m）\n→ bremner and The Rec Room节点（方向 25°，距离 ≈ 147m）\n→ simcoe street and Aroma Espresso Bar节点（方向 71°，距离 ≈ 228m）\n→ Aroma Espresso Bar（方向 49°，距离 ≈ 79m）\n→ simcoe street and Aroma Espresso Bar节点（方向 229°，距离 ≈ 79m）\n→ simcoe street and front street节点（方向 346°，距离 ≈ 286m）\n→ Scaddabush and front street节点（方向 262°，距离 ≈ 46m）\n→ Scaddabush（方向 348°，距离 ≈ 68m）\n→ Scaddabush and front street节点（方向 168°，距离 ≈ 68m）\n→ simcoe street and front street节点（方向 82°，距离 ≈ 46m）\n→ simcoe street and Starbucks节点（方向 348°，距离 ≈ 196m）\n→ Starbucks（方向 274°，距离 ≈ 118m）\n→ simcoe street and Starbucks节点（方向 94°，距离 ≈ 118m）\n→ simcoe street and front street节点（方向 168°，距离 ≈ 196m）\n→ front street and Jack Astor's节点（方向 67°，距离 ≈ 140m）\n→ Jack Astor's（方向 354°，距离 ≈ 72m）\n→ front street and Jack Astor's节点（方向 174°，距离 ≈ 72m）\n→ simcoe street and front street节点（方向 247°，距离 ≈ 140m）\n→ Scaddabush and front street节点（方向 262°，距离 ≈ 46m）\n→ Boston Pizza and front street节点（方向 254°，距离 ≈ 246m）\n→ Starbucks and front street节点（方向 256°，距离 ≈ 62m）\n→ indian restaurant and front street节点（方向 250°，距离 ≈ 190m）\n→ Tim Hortons and front street节点（方向 267°，距离 ≈ 62m）\n→ front street西节点（方向 244°，距离 ≈ 131m）\n→ spadina avenue节点（方向 183°，距离 ≈ 132m）\n→ RBC Royal Bank and spadina avenue节点（方向 173°，距离 ≈ 81m）\n→ St. Louis Bar and spadina avenue节点（方向 148°，距离 ≈ 78m）\n→ spadina avenue南节点（方向 169°，距离 ≈ 357m）\n→ queens and Swiss Chalet节点（方向 66°，距离 ≈ 528m）\n→ queens and Wild Wing节点（方向 64°，距离 ≈ 126m）\n→ queens and simcoe street节点（方向 81°，距离 ≈ 121m）\n→ queens and Starbucks节点（方向 92°，距离 ≈ 187m）\n→ Starbucks（方向 5°，距离 ≈ 77m）\n→ queens and Starbucks节点（方向 185°，距离 ≈ 77m）\n→ queens and simcoe street节点（方向 272°，距离 ≈ 187m）\n→ queens and Wild Wing节点（方向 261°，距离 ≈ 121m）\n→ queens and Swiss Chalet节点（方向 244°，距离 ≈ 126m）\n→ spadina avenue南节点（方向 246°，距离 ≈ 528m）\n→ St. Louis Bar and spadina avenue节点（方向 349°，距离 ≈ 357m）\n→ RBC Royal Bank and spadina avenue节点（方向 328°，距离 ≈ 78m）\n→ RBC Royal Bank（方向 219°，距离 ≈ 91m）\n→ RBC Royal Bank and spadina avenue节点（方向 39°，距离 ≈ 91m）\n→ RBC Royal Bank and spadina avenue节点（方向 219°，距离 ≈ 35m）\n→ St. Louis Bar and spadina avenue节点（方向 121°，距离 ≈ 75m）\n→ St. Louis Bar and spadina avenue节点（方向 73°，距离 ≈ 42m）\n→ 位置_84（方向 191°，距离 ≈ 110m）\n→ RBC Royal Bank and spadina avenue节点（方向 339°，距离 ≈ 173m）\n→ RBC Royal Bank（方向 219°，距离 ≈ 91m）"
+}

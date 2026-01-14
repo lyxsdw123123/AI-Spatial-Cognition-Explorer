@@ -1,5 +1,6 @@
 .\.venv\Scripts\python nearest_3memory.py
 .\.venv\Scripts\python start_backend.py
+1153527809
 
 REGIONS = [
     "上海外滩",
@@ -35,3 +36,20 @@ MEMORY_MODES = [
 ]
 
 QUESTION_STRATEGIES = ["Direct", "CoT", "Self-Consistency", "ToT"]
+
+
+旧评估系统模型选择
+厂商标识 (Provider),具体模型型号 (Model Name),厂商/系列
+openai,gpt-4o,OpenAI
+claude,claude-3-5-sonnet-20240620,Anthropic
+gemini,gemini-1.5-pro,Google
+deepseek,deepseek-chat,DeepSeek (深度求索)
+qwen,qwen-plus,阿里巴巴 (通义千问)
+zhipu,glm-4-flash,智谱 AI
+
+
+Claude 4.5 Sonnet
+Claude Sonnet 4
+Claude 3.7 Sonnet
+Claude 3.5 Sonnet
+Claude 3 Sonnet

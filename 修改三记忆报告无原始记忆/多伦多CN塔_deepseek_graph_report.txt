@@ -1,0 +1,265 @@
+{
+  "region": "多伦多CN塔",
+  "model": "deepseek",
+  "memory_mode": "graph",
+  "exploration_report": {
+    "total_distance": 1880,
+    "exploration_time": 0,
+    "poi_count": 120
+  },
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 15,
+      "total_questions": 24,
+      "accuracy": 62.5,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 5,
+          "total": 8,
+          "percentage": 62.5
+        },
+        "空间距离估算": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "邻近关系判断": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        },
+        "POI密度识别": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "路径规划": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Boston Pizza相对于The Rec Room在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "根据边列表，EDGE[13,7,654m,86°] 表示从节点13（RBC Royal Bank）到节点7（The Rec Room）的方向为86°（接近正东偏北）。  \nEDGE[13,1,690m,53°] 表示从节点13到节点1（Boston Pizza）的方向为53°（东北偏北）。  \n由于 Boston Pizza（节点1）相对于节点13的方向（53°）比 The Rec Room（节点7）相对于节点13的方向（86°）更偏北，且两者均位于节点13的东侧，因此 Boston Pizza 相对于 The Rec Room 位于西北方向。  \n（注：此处通过公共参考点节点13推断相对方位，依据边方向角计算。）",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Boston Pizza位于The Rec Room的西北面。"
+        },
+        {
+          "question": "Second Cup相对于Boston Pizza在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "根据边列表中的 EDGE[1,2,77m,45°]，该边表示从 Boston Pizza（节点1）到 Second Cup（节点2）的方向为 45°。按照方位角标准（正北为0°顺时针递增），45°位于正北（0°）与正东（90°）之间，属于东北方向。因此 Second Cup 相对于 Boston Pizza 在东北方向。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Second Cup位于Boston Pizza的东北面。"
+        },
+        {
+          "question": "Aroma Espresso Bar相对于Second Cup在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据边列表，EDGE[2,11,178m,90°] 表示从 Second Cup（节点2）到 Scaddabush（节点11）的方向为 90°（正东）。  \nEDGE[11,10,342m,138°] 表示从 Scaddabush（节点11）到 Aroma Espresso Bar（节点10）的方向为 138°（东南方向）。  \n因此，从 Second Cup 到 Aroma Espresso Bar 的整体路径方向（通过节点2→11→10）主要指向东南方向。  \n故 Aroma Espresso Bar 相对于 Second Cup 在东南方向。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Aroma Espresso Bar位于Second Cup的东南面。"
+        },
+        {
+          "question": "RBC Royal Bank相对于Aroma Espresso Bar在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "根据边列表，EDGE[10,3,328m,136°] 表示从 Aroma Espresso Bar（节点10）到 Starbucks（节点3）的方向为 136°（东南方向）。  \nEDGE[3,13,1081m,270°] 表示从 Starbucks（节点3）到 RBC Royal Bank（节点13）的方向为 270°（正西方向）。  \n因此，从 Aroma Espresso Bar 到 RBC Royal Bank 的整体路径方向大致为：先向东南（136°）再向西（270°），综合方向偏向西南。  \n此外，从节点10到节点13的最短路径为 10→3→13，总长度 328m + 1081m = 1409m，方向变化表明终点（节点13）相对于起点（节点10）位于西南方向。",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "RBC Royal Bank位于Aroma Espresso Bar的西南面。"
+        },
+        {
+          "question": "The Rec Room相对于Boston Pizza在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据边列表，EDGE[1,4,196m,283°] 表示从 Boston Pizza（节点1）到 259 host（节点4）的方向为 283°（西偏北）。  \nEDGE[4,5,177m,227°] 表示从节点4到 Tim Hortons（节点5）的方向为 227°（西南）。  \nEDGE[5,6,369m,154°] 表示从节点5到 St. Louis Bar & Grill（节点6）的方向为 154°（东南）。  \nEDGE[6,7,346m,90°] 表示从节点6到 The Rec Room（节点7）的方向为 90°（正东）。  \n\n从 Boston Pizza（节点1）到 The Rec Room（节点7）的路径为 1→4→5→6→7，整体方向趋势为：先向西偏北（283°），再向西南（227°），再向东南（154°），最后向东（90°）。综合这些方向变化，终点 The Rec Room 相对于起点 Boston Pizza 位于东南方向。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "The Rec Room位于Boston Pizza的东南面。"
+        },
+        {
+          "question": "Boston Pizza相对于Second Cup在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "根据边列表中的 EDGE[1,2,77m,45°]，起点为 Boston Pizza（节点1），终点为 Second Cup（节点2），方向为 45°。该方向表示从 Boston Pizza 到 Second Cup 的方位角为 45°（即东北方向）。因此，从 Second Cup 看向 Boston Pizza 的方向正好相反，即 45° + 180° = 225°，属于西南方向？不对，需要重新计算：若从节点1到节点2是45°（东北），则从节点2到节点1的反方向是 45° + 180° = 225°（西南）。但题目问的是“Boston Pizza 相对于 Second Cup 的方向”，即从 Second Cup 到 Boston Pizza 的方向，应为 225°。225° 位于 180°（正南）与 270°（正西）之间，属于西南方向。然而选项中没有西南，只有西北、东南、东北、西南。检查边列表发现还有 EDGE[2,1] 吗？没有直接给出，但根据 EDGE[1,2,77m,45°] 可推知反向为 225°（西南）。但选项 D 是西南，C 是西北。  \n再核对：EDGE[1,2,77m,45°] 表示从节点1到节点2是45°（东北），因此从节点2到节点1是 45°+180°=225°（西南）。所以 Boston Pizza（节点1）相对于 Second Cup（节点2）在西南方向。  \n但选项 D 是西南，C 是西北。  \n然而，查看边列表是否有其他相关边？EDGE[2,3,785m,126°] 等与本题无关。因此唯一依据是 EDGE[1,2,77m,45°] 及其反向。  \n所以正确答案应为西南（D）。  \n但让我确认问题：“Boston Pizza相对于Second Cup在哪个方向？”即从 Second Cup 看 Boston Pizza 的方向，是 225° = 西南。  \n因此选 D。  \n\n答案：D  \n解释：依据边列表 EDGE[1,2,77m,45°]，该边从 Boston Pizza（节点1）指向 Second Cup（节点2）的方向为 45°（东北）。因此，反向从 Second Cup 指向 Boston Pizza 的方向为 45° + 180° = 225°，属于西南方向（225° 介于 180° 与 270° 之间）。故 Boston Pizza 相对于 Second Cup 位于西南方向。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Boston Pizza位于Second Cup的西南面。"
+        },
+        {
+          "question": "Second Cup相对于Aroma Espresso Bar在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据边列表，EDGE[10,11,342m,318°] 表示从 Aroma Espresso Bar（节点 10）到 Scaddabush（节点 11）的方向为 318°（以正北为 0° 顺时针递增）。但题目问的是 Second Cup（节点 2）相对于 Aroma Espresso Bar（节点 10）的方向。  \n从节点 10 到节点 2 没有直接边，需通过路径推理。最短路径为 10→11→2（长度 342m + 178m = 520m），其中 10→11 方向为 318°（西北偏北），11→2 方向为 90°（正东）。整体方向需综合判断：从 10 到 2 的连线方向大致在 318° 与 90° 之间，更接近东南象限。  \n另外，从扫描环境数据看，在 Second Cup 位置可见 Aroma Espresso Bar 方向为 128.36758059072963°（东南偏东），因此反向（Aroma 看 Second Cup）应在约 308°（西北偏西）附近，但此角度在 270°~360° 属于西北象限，与选项不符。  \n然而，依据边集合中唯一涉及两节点的间接路径（10→11→2）及方向角 318°（西北）与 90°（东）的组合，Second Cup 相对于 Aroma 更可能位于东南方向（因为从 Aroma 出发先向西北到 Scaddabush，再向东到 Second Cup，整体位移偏向东南）。  \n**依据不足**：上下文未提供节点 10 到节点 2 的直接方向或坐标，仅能通过间接路径推测。但基于可见性数据（Second Cup 处看 Aroma 为 128° 东南），反向推得 Aroma 看 Second Cup 应在 308° 左右（西北），与选项 B（东南）矛盾。若以边方向推理，则支持东南。综合题目选项，选择 B（东南）。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Second Cup位于Aroma Espresso Bar的西北面。"
+        },
+        {
+          "question": "Aroma Espresso Bar相对于RBC Royal Bank在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据边列表，EDGE[13,7,654m,86°] 表示从 RBC Royal Bank（节点13）到 The Rec Room（节点7）的方向为 86°（接近正东偏北）。而 Aroma Espresso Bar（节点10）与 The Rec Room 之间没有直接边，但通过节点9（Wild Wing）和节点3（Starbucks）可间接连接。从节点13到节点10的路径需经过节点7→8→9→10，其中关键方向信息来自 EDGE[13,7,654m,86°]（东偏北）以及后续 EDGE[9,10,292m,31°]（北偏东），整体路径走向为向东再向北，因此 Aroma Espresso Bar 相对于 RBC Royal Bank 位于东南方向。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Aroma Espresso Bar位于RBC Royal Bank的东北面。"
+        },
+        {
+          "question": "The Rec Room到Second Cup的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文提供的节点与边集合，The Rec Room对应节点ID 7，Second Cup对应节点ID 2。从边列表中查找直接连接两节点的边，但未发现EDGE[7,2]或EDGE[2,7]。因此需通过路径计算近似直线距离。  \n从已探索的路径记录中，当AI位于The Rec Room（节点7）时扫描环境，可见POI包括Second Cup，距离显示为508米（见Step 35后扫描结果：“The Rec Room (餐厅), Dist: 508m, Dir: 165.8444580095171”）。该距离是基于道路网络移动后的直线距离估计，且符合400-800米范围。  \n因此，The Rec Room到Second Cup的直线距离约为508米，属于选项C（400-800米）。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "The Rec Room到Second Cup的直线距离约为508米。"
+        },
+        {
+          "question": "Boston Pizza到Aroma Espresso Bar的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "根据给定的节点列表，Boston Pizza对应节点ID 1，Aroma Espresso Bar对应节点ID 10。上下文未直接提供两节点之间的直线距离，但可通过已知边与路径进行估算。从边集合可见，节点1与节点10之间没有直接边，需通过中间节点连通。最短路径之一为：1→2（77m）→11（178m）→10（342m），总路径长度约为77+178+342=597米。该路径总长在400-800米范围内，且其他可能路径（如1→4→5→6→7→8→9→10等）均更长，因此直线距离应接近该最短路径长度，属于400-800米区间。\n\n依据：  \n- NODE[1,POI,name=Boston Pizza]  \n- NODE[10,POI,name=Aroma Espresso Bar]  \n- EDGE[1,2,77m,45°]  \n- EDGE[2,11,178m,90°]  \n- EDGE[11,10,342m,318°]  \n（路径长度累加：77+178+342=597m）",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Boston Pizza到Aroma Espresso Bar的直线距离约为468米。"
+        },
+        {
+          "question": "Second Cup到RBC Royal Bank的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "根据给定的边列表，Second Cup对应节点ID 2，RBC Royal Bank对应节点ID 13。从边集合中查找，没有直接连接节点2和节点13的边，因此无法直接获得直线距离。但可以通过路径长度间接推断：从节点2到节点13的最短路径需要经过其他节点。例如，路径2→3→13的总长度为785m（EDGE[2,3,785m]） + 1081m（EDGE[3,13,1081m]） = 1866m，这远大于800米。虽然这是道路网络距离而非直线距离，但考虑到节点间方向差异（如EDGE[2,3]方向126°与EDGE[3,13]方向270°不同），直线距离通常小于路径长度，且其他可能路径（如2→11→3→13等）也均超过800米。因此，直线距离应在800-1200米范围内，对应选项D。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Second Cup到RBC Royal Bank的直线距离约为766米。"
+        },
+        {
+          "question": "Aroma Espresso Bar到Scaddabush的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "根据给定的节点列表，Aroma Espresso Bar 对应节点 ID 10，Scaddabush 对应节点 ID 11。边列表中直接存在 EDGE[10,11,342m,318°] 和 EDGE[11,10,342m,138°]，表明两点间有道路连接，长度为 342 米。虽然这是道路长度而非严格直线距离，但题目要求“大约”距离，且图中未提供其他更短路径或直线距离数据，因此以唯一已知的连通距离 342 米为依据，该值落在 200-400 米范围内。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Aroma Espresso Bar到Scaddabush的直线距离约为342米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离The Rec Room最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "根据给定的边集合，The Rec Room 对应节点7。需要计算从节点7到各选项对应节点的最短路径长度：  \n- 到Boston Pizza（节点1）：路径 7→6→13→1，总长度 = 346m + 312m + 690m = 1348m  \n- 到Second Cup（节点2）：路径 7→6→13→1→2，总长度 = 346m + 312m + 690m + 77m = 1425m  \n- 到Aroma Espresso Bar（节点10）：路径 7→8→9→10，总长度 = 129m + 137m + 292m = 558m  \n\n比较可知，Aroma Espresso Bar（558m）距离The Rec Room最近，因此选C。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Aroma Espresso Bar距离The Rec Room最近，约315米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Boston Pizza最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "根据给定的边列表，Boston Pizza（节点1）与Second Cup（节点2）之间直接存在一条边 EDGE[1,2,77m,45°]，道路长度为77米。而Boston Pizza到Aroma Espresso Bar（节点10）或RBC Royal Bank（节点13）均无直接边，需通过其他节点绕行，路径长度均大于77米（例如：1→2→11→10 总长77+178+342=597米；1→4→5→6→13 总长196+177+369+312=1054米）。因此，依据“路径比较以length_m累加最小为准”，Second Cup是距离Boston Pizza最近的POI。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Second Cup距离Boston Pizza最近，约77米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Second Cup最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "根据给定的边集合，计算从节点2（Second Cup）到各选项对应节点的最短路径长度：  \n\n1. **到Aroma Espresso Bar（节点10）**：  \n   - 路径：2 → 11 → 10  \n   - 边：EDGE[2,11,178m] + EDGE[11,10,342m]  \n   - 总长度：178 m + 342 m = **520 m**  \n\n2. **到RBC Royal Bank（节点13）**：  \n   - 路径：2 → 3 → 13  \n   - 边：EDGE[2,3,785m] + EDGE[3,13,1081m]  \n   - 总长度：785 m + 1081 m = **1866 m**  \n\n3. **到Scaddabush（节点11）**：  \n   - 路径：2 → 11  \n   - 边：EDGE[2,11,178m]  \n   - 总长度：**178 m**  \n\n比较三者，RBC Royal Bank（1866 m）远大于Aroma Espresso Bar（520 m）和Scaddabush（178 m），因此距离Second Cup最远的是RBC Royal Bank。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "RBC Royal Bank距离Second Cup最远，约766米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Aroma Espresso Bar最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "根据给定的节点与边集合，需要计算从节点10（Aroma Espresso Bar）到各选项POI的最短路径长度（按规则3以道路长度累加最小为准）。  \n\n1. **Aroma Espresso Bar（节点10）到RBC Royal Bank（节点13）**  \n   - 路径：10 → 3 → 13  \n   - 边：EDGE[10,3,328m] + EDGE[3,13,1081m] = 1409m  \n   - 或路径：10 → 11 → 3 → 13（328+342+1081=1751m，更长）  \n   - 最短路径长度：**1409m**  \n\n2. **Aroma Espresso Bar（节点10）到Scaddabush（节点11）**  \n   - 路径：10 → 11  \n   - 边：EDGE[10,11,342m]  \n   - 最短路径长度：**342m**  \n\n3. **Aroma Espresso Bar（节点10）到St. Louis Bar & Grill（节点6）**  \n   - 路径：10 → 3 → 4 → 5 → 6  \n   - 边：EDGE[10,3,328m] + EDGE[3,4,961m] + EDGE[4,5,177m] + EDGE[5,6,369m] = 1835m  \n   - 或路径：10 → 9 → 3 → 4 → 5 → 6（292+306+961+177+369=2105m，更长）  \n   - 最短路径长度：**1835m**  \n\n比较三个距离：  \n- 到RBC Royal Bank：1409m  \n- 到Scaddabush：342m  \n- 到St. Louis Bar & Grill：1835m  \n\n**最远的是St. Louis Bar & Grill（1835m）**，对应选项C。  \n\n注意：虽然St. Louis Bar & Grill的路径长度最大，但题目问“哪个距离Aroma Espresso Bar最远”，应选择距离最大的选项。若按选项字母对应：  \nA. RBC Royal Bank（1409m）  \nB. Scaddabush（342m）  \nC. St. Louis Bar & Grill（1835m）  \n最远为C。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "RBC Royal Bank距离Aroma Espresso Bar最远，约930米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "根据给定的节点与边集合，可以统计每个POI的直接邻居数量（通过边直接相连的POI节点数）来评估其周围的POI密度：  \n- **Boston Pizza (节点1)**：直接连接至节点2（Second Cup）和节点4（259 host...），共2个直接邻居。  \n- **RBC Royal Bank (节点13)**：直接连接至节点1（Boston Pizza）和节点7（The Rec Room），共2个直接邻居。  \n- **The Rec Room (节点7)**：直接连接至节点6（St. Louis Bar & Grill）、节点8（Swiss Chalet）和节点13（RBC Royal Bank），共3个直接邻居。  \n- **Aroma Espresso Bar (节点10)**：直接连接至节点3（Starbucks）、节点9（Wild Wing）和节点11（Scaddabush），共3个直接邻居。  \n\nThe Rec Room 与 Aroma Espresso Bar 均拥有3个直接邻居，但根据路径长度比较，The Rec Room 到其邻居的总边权更小（到节点6为346m、到节点8为129m、到节点13为654m，合计1129m），而 Aroma Espresso Bar 到其邻居的总边权更大（到节点3为328m、到节点9为292m、到节点11为342m，合计962m）。然而，问题问的是“POI密度最高”，通常以直接邻居数量为主要指标，总边权仅用于并列时比较。此处两者邻居数相同，但 The Rec Room 在给定的探索上下文中被多次扫描到大量邻近POI（如步骤35中从The Rec Room扫描到7个可见POI），且其位于多个POI的路径交汇处（如EDGE[7,6]、EDGE[7,8]、EDGE[13,7]），实际连通性更强，因此密度最高。  \n\n故选择 **C. The Rec Room**。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Boston Pizza周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "根据给定的节点与边集合，The Rec Room（节点7）直接连接至节点6（St. Louis Bar & Grill）、节点8（Swiss Chalet）和节点13（RBC Royal Bank），共3条边，且这些相邻POI的距离均在较短范围内（EDGE[7,6,346m]、EDGE[7,8,129m]、EDGE[7,13,654m]）。相比之下：  \n- Scaddabush（节点11）仅直接连接至节点2、3、10、12，共4条边，但相邻POI中包括道路节点（如节点3、10）且距离较长（如EDGE[11,3,670m]）。  \n- RBC Royal Bank（节点13）直接连接至节点1、3、6、7，共4条边，但部分相邻POI距离较远（如EDGE[13,3,1081m]）。  \n- Aroma Espresso Bar（节点10）直接连接至节点3、9、11，共3条边，相邻POI距离中等（如EDGE[10,3,328m]、EDGE[10,9,292m]）。  \n\nThe Rec Room 不仅直接连接的POI数量多（3个），且与最近POI（Swiss Chalet）的距离仅129m，周围POI分布密集，因此其周围POI密度最高。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Scaddabush周围的POI密度最高，500米范围内有6个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "根据给定的节点与边集合，可以统计每个POI的直接邻接POI数量（即通过一条边可达的POI数），以此衡量“周围POI密度”：  \n- **RBC Royal Bank（节点13）**：直接连接的边有 EDGE[13,1,690m] 和 EDGE[13,7,654m]，仅与 Boston Pizza（节点1）和 The Rec Room（节点7）相连，直接邻接POI数为 **2**。  \n- **The Rec Room（节点7）**：直接连接的边有 EDGE[7,6,346m]、EDGE[7,8,129m] 和 EDGE[13,7,654m]，与 St. Louis Bar & Grill（节点6）、Swiss Chalet（节点8）和 RBC Royal Bank（节点13）相连，直接邻接POI数为 **3**。  \n- **Aroma Espresso Bar（节点10）**：直接连接的边有 EDGE[10,3,328m]、EDGE[10,9,292m] 和 EDGE[10,11,342m]，与 Starbucks（节点3）、Wild Wing（节点9）和 Scaddabush（节点11）相连，直接邻接POI数为 **3**。  \n- **St. Louis Bar & Grill（节点6）**：直接连接的边有 EDGE[6,7,346m]、EDGE[6,13,312m] 和 EDGE[5,6,369m]，与 The Rec Room（节点7）、RBC Royal Bank（节点13）和 Tim Hortons（节点5）相连，直接邻接POI数为 **3**。  \n\n比较直接邻接POI数：RBC Royal Bank 仅与 2 个POI直接相连，其余三个选项均与 3 个POI直接相连。因此 **RBC Royal Bank 周围的POI密度最低**。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "RBC Royal Bank周围的POI密度最低，500米范围内只有2个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "根据给定的节点与边集合，可以统计每个POI的直接邻接POI数量（即通过一条边可达的其他POI节点）：  \n- **The Rec Room (节点7)**：通过边 EDGE[7,6,346m,270°] 和 EDGE[7,8,129m,177°] 连接至节点6（St. Louis Bar & Grill）和节点8（Swiss Chalet），共 **2个** 直接邻接POI。  \n- **RBC Royal Bank (节点13)**：通过边 EDGE[13,1,690m,53°] 和 EDGE[13,7,654m,86°] 连接至节点1（Boston Pizza）和节点7（The Rec Room），共 **2个** 直接邻接POI。  \n- **Aroma Espresso Bar (节点10)**：通过边 EDGE[10,3,328m,136°]、EDGE[10,9,292m,211°] 和 EDGE[10,11,342m,318°] 连接至节点3（Starbucks）、节点9（Wild Wing）和节点11（Scaddabush），共 **3个** 直接邻接POI。  \n- **St. Louis Bar & Grill (节点6)**：通过边 EDGE[6,7,346m,90°] 和 EDGE[6,13,312m,261°] 连接至节点7（The Rec Room）和节点13（RBC Royal Bank），共 **2个** 直接邻接POI。  \n\n若进一步考虑“周围密度”为直接邻接POI数量，则 A、B、D 均为2个，但题目要求选出“密度最低”。在并列情况下，需比较这些POI的邻接POI自身的邻接数（即二级邻接稀疏性）：  \n- **RBC Royal Bank** 的邻接POI为 Boston Pizza（邻接2个：Second Cup、259 host）和 The Rec Room（邻接2个：St. Louis Bar & Grill、Swiss Chalet），平均二级邻接数为 2。  \n- **The Rec Room** 的邻接POI为 St. Louis Bar & Grill（邻接2个：The Rec Room、RBC Royal Bank）和 Swiss Chalet（邻接2个：The Rec Room、Wild Wing），平均二级邻接数也为 2。  \n- **St. Louis Bar & Grill** 的邻接POI为 The Rec Room（邻接2个）和 RBC Royal Bank（邻接2个），平均二级邻接数同样为 2。  \n\n三者直接邻接数相同且二级邻接稀疏性相同，但 **RBC Royal Bank** 在边集合中仅有两条出边（EDGE[13,1] 和 EDGE[13,7]），且其位置相对孤立（从上下文扫描记录可见，在节点13处可见POI较少），结合探索历史中从 RBC Royal Bank 扫描时仅发现8个可见POI（少于其他POI扫描时的常见数量），因此其周围POI密度最低。  \n\n故选择 **B**。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "The Rec Room周围的POI密度最低，500米范围内只有4个其他POI。"
+        },
+        {
+          "question": "从The Rec Room到Boston Pizza，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "根据给定的节点与边集合，The Rec Room 对应节点 7，Boston Pizza 对应节点 1。  \n- 路径 A 可映射为：7 → 6 → 13 → 1（依据：EDGE[7,6,346m]、EDGE[6,13,312m]、EDGE[13,1,690m]），总长度 = 346 + 312 + 690 = 1348m。  \n- 路径 B 中“Boston Pizza and Starbucks节点”在图中无对应边直接连接 Boston Pizza（节点 1）与 Starbucks（节点 3），且“Tim Hortons and front street节点”未在节点列表中出现，违反规则 2 与 5。  \n- 路径 C 中“spadina avenue南节点”“queens and Wild Wing节点”等未在节点列表中出现，无法基于给定图计算。  \n- 路径 D 中“Starbucks and Second Cup节点”“indian restaurant道路节点”未在节点列表中出现，且节点 2（Second Cup）与节点 1（Boston Pizza）无直接边，需经多步绕行，长度必然大于 A。  \n\n因此，仅路径 A 完全基于给定节点与边集合可计算，且总长度 1348m 为最短可行路径。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：The Rec Room -> (bremner and The Rec Room节点) -> (simcoe street and Aroma Espresso Bar节点) -> (simcoe street and front street节点) -> (Scaddabush and front street节点) -> (Boston Pizza and front street节点) -> Boston Pizza，总距离约969米。"
+        },
+        {
+          "question": "从Boston Pizza到Second Cup，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "根据给定的节点与边集合，从 Boston Pizza（节点1）到 Second Cup（节点2）存在直接的边 EDGE[1,2,77m,45°]，长度为 77 米。其他选项 A、C、D 均引入了上下文中未出现的节点（如“front street西节点”“simcoe street and Starbucks节点”等），违反了规则“禁止引入未出现的连接或节点”。因此，唯一有效的路径是直接沿边 EDGE[1,2] 移动，其长度 77 米为最短。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：Boston Pizza -> Second Cup，总距离约77米。"
+        },
+        {
+          "question": "从Second Cup到Aroma Espresso Bar，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "根据给定的节点与边集合，Second Cup 对应节点 2，Aroma Espresso Bar 对应节点 10。  \n- 从节点 2 到节点 10 的最短路径可通过边集合计算：  \n  1. EDGE[2,11,178m,90°]（2 → 11）  \n  2. EDGE[11,10,342m,138°]（11 → 10）  \n  总长度 = 178 m + 342 m = 520 m，共 2 条边。  \n\n选项 B 描述的路径虽包含“Scaddabush and front street”等未在节点列表中出现的名称，但若将其对应到已知节点（Scaddabush 为节点 11，Aroma Espresso Bar 为节点 10），则实际路径 2 → 11 → 10 与上述最短路径一致，且长度 520 m 小于其他选项对应的路径（如 A、C、D 均需经过更多节点，总长度更长）。  \n\n其他选项均引入未在上下文中出现的节点（如“queens and Wild Wing节点”“Boston Pizza and front street节点”等），违反规则“禁止引入未出现的连接或节点”，且其路径长度均大于 520 m（例如通过节点 3、9 等绕行）。因此 B 为最短路径。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "最短路径是：Second Cup -> (Boston Pizza and Starbucks节点) -> (Boston Pizza and front street节点) -> (Scaddabush and front street节点) -> (simcoe street and front street节点) -> (simcoe street and Aroma Espresso Bar节点) -> Aroma Espresso Bar，总距离约808米。"
+        },
+        {
+          "question": "从Aroma Espresso Bar到RBC Royal Bank，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "根据给定的节点与边集合，Aroma Espresso Bar 对应节点 10，RBC Royal Bank 对应节点 13。  \n需要从节点 10 到节点 13 的最短路径（按道路长度累加最小）。  \n\n**检查选项 A 的路径**（使用实际节点编号对应关系）：  \n- Aroma Espresso Bar (节点10) → 节点3 (Starbucks) → 节点13 (RBC Royal Bank)  \n  路径：EDGE[10,3,328m] + EDGE[3,13,1081m] = 1409m  \n  或 节点10 → 节点11 → 节点3 → 节点13：  \n  EDGE[10,11,342m] + EDGE[11,3,670m] + EDGE[3,13,1081m] = 2093m  \n  但选项 A 描述的路径名称（如“queens and Swiss Chalet节点”）在上下文中无对应节点，无法直接计算。  \n  然而，从节点10到节点13的**最短路径**在给定边集合中为：  \n  节点10 → 节点3 → 节点13（1409m）  \n  或 节点10 → 节点9 → 节点3 → 节点13（292+306+1081=1679m）  \n  或 节点10 → 节点11 → 节点12 → 节点3 → 节点13（342+194+651+1081=2268m）  \n  其中最短为 1409m（节点10→3→13）。  \n\n**其他选项的问题**：  \n- B、C、D 中提到的节点名称（如“simcoe street and Aroma Espresso Bar节点”“bremner and The Rec Room节点”）在上下文节点列表中均未出现，违反规则“禁止引入未出现的节点”。  \n- 仅选项 A 中的节点名称（如“indian restaurant”“Starbucks”“Wild Wing”）在上下文中有对应（节点4、3、9），但路径描述中的中间节点（如“spadina avenue南节点”）仍无对应，因此无法完整验证。  \n\n**依据给定边集合的最短路径**：  \n从节点10到节点13只有两条直接连通路径：  \n1. 10→3→13（1409m）  \n2. 10→9→3→13（1679m）  \n因此最短路径为 10→3→13，对应选项 A 中“Aroma Espresso Bar → … → (queens and Starbucks节点) → RBC Royal Bank”的大致方向（节点3为Starbucks）。  \n\n综上，选项 A 是唯一可能接近最短路径的选项，且其总长度 1409m 小于其他选项可能引入的更长路径。  \n\n**注意**：选项 A 中部分节点名称未在上下文明确列出，但基于节点对应关系（Starbucks→节点3）可推断其路径接近最短；其他选项引入大量未定义节点，违反规则。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "最短路径是：Aroma Espresso Bar -> (simcoe street and Aroma Espresso Bar节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (St. Louis Bar and spadina avenue节点) -> (St. Louis Bar and spadina avenue节点) -> (RBC Royal Bank and spadina avenue节点) -> RBC Royal Bank，总距离约1132米。"
+        }
+      ],
+      "completed_at": "2025-12-20T12:23:37.854104"
+    },
+    "context_mode": "graph"
+  },
+  "context_text": "# 第二种记忆道路连通图描述\n## 节点列表\nNODE[id,类型,附加属性]\nNODE[1,POI,name=Boston Pizza]\nNODE[2,POI,name=Second Cup]\nNODE[3,POI,name=Starbucks]\nNODE[4,POI,name=259 host ...a fine indian restaurant]\nNODE[5,POI,name=Tim Hortons]\nNODE[6,POI,name=St. Louis Bar & Grill]\nNODE[7,POI,name=RBC Royal Bank]\nNODE[8,POI,name=The Rec Room]\nNODE[9,POI,name=Swiss Chalet]\nNODE[10,POI,name=Wild Wing]\nNODE[11,POI,name=Aroma Espresso Bar]\nNODE[12,POI,name=Jack Astor's]\nNODE[13,POI,name=Scaddabush]\nNODE[14,ROAD,name=起点]\nNODE[15,ROAD,name=Starbucks and Second Cup节点]\nNODE[16,ROAD,name=indian restaurant道路节点]\nNODE[17,ROAD,name=Tim Hortons and indian restaurant节点]\nNODE[18,ROAD,name=Tim Hortons and front street节点]\nNODE[19,ROAD,name=front street西节点]\nNODE[20,ROAD,name=spadina avenue节点]\nNODE[21,ROAD,name=RBC Royal Bank and spadina avenue节点]\nNODE[22,ROAD,name=St. Louis Bar and spadina avenue节点]\nNODE[23,ROAD,name=位置_21]\nNODE[24,ROAD,name=位置_22]\nNODE[25,ROAD,name=位置_23]\nNODE[26,ROAD,name=bremner and The Rec Room节点]\nNODE[27,ROAD,name=位置_27]\nNODE[28,ROAD,name=位置_28]\nNODE[29,ROAD,name=位置_29]\nNODE[30,ROAD,name=spadina avenue南节点]\nNODE[31,ROAD,name=queens and Swiss Chalet节点]\nNODE[32,ROAD,name=queens and Wild Wing节点]\nNODE[33,ROAD,name=位置_43]\nNODE[34,ROAD,name=位置_44]\nNODE[35,ROAD,name=位置_45]\nNODE[36,ROAD,name=simcoe street and Aroma Espresso Bar节点]\nNODE[37,ROAD,name=位置_51]\nNODE[38,ROAD,name=位置_52]\nNODE[39,ROAD,name=位置_53]\nNODE[40,ROAD,name=queens and simcoe street节点]\nNODE[41,ROAD,name=queens and Starbucks节点]\nNODE[42,ROAD,name=indian restaurant and front street节点]\nNODE[43,ROAD,name=Starbucks and front street节点]\nNODE[44,ROAD,name=Boston Pizza and front street节点]\nNODE[45,ROAD,name=Scaddabush and front street节点]\nNODE[46,ROAD,name=simcoe street and front street节点]\nNODE[47,ROAD,name=front street and Jack Astor's节点]\nNODE[48,ROAD,name=simcoe street and Starbucks节点]\nNODE[49,ROAD,name=位置_92]\n\n## 边列表\nEDGE[起点ID,终点ID,道路长度,方向]\nEDGE[14,1,73m,324°]\nEDGE[1,2,77m,36°]\nEDGE[2,15,78m,3°]\nEDGE[15,3,124m,267°]\nEDGE[3,4,136m,236°]\nEDGE[4,16,85m,225°]\nEDGE[16,17,86m,168°]\nEDGE[17,5,66m,274°]\nEDGE[5,18,72m,185°]\nEDGE[18,19,131m,244°]\nEDGE[19,20,132m,183°]\nEDGE[20,21,81m,173°]\nEDGE[21,22,78m,148°]\nEDGE[22,6,213m,73°]\nEDGE[6,22,213m,253°]\nEDGE[22,21,78m,328°]\nEDGE[21,7,91m,219°]\nEDGE[7,21,91m,39°]\nEDGE[21,22,78m,148°]\nEDGE[22,6,213m,73°]\nEDGE[6,23,122m,138°]\nEDGE[23,24,89m,81°]\nEDGE[24,25,79m,71°]\nEDGE[25,26,147m,25°]\nEDGE[26,8,89m,155°]\nEDGE[8,26,89m,335°]\nEDGE[26,27,147m,205°]\nEDGE[27,28,79m,251°]\nEDGE[28,29,89m,261°]\nEDGE[29,6,122m,318°]\nEDGE[6,22,213m,253°]\nEDGE[22,30,357m,169°]\nEDGE[30,31,528m,66°]\nEDGE[31,9,76m,2°]\nEDGE[9,31,76m,182°]\nEDGE[31,32,126m,64°]\nEDGE[32,10,89m,5°]\nEDGE[10,32,89m,185°]\nEDGE[32,31,126m,244°]\nEDGE[31,30,528m,246°]\nEDGE[30,22,357m,349°]\nEDGE[22,6,213m,73°]\nEDGE[6,33,122m,138°]\nEDGE[33,34,89m,81°]\nEDGE[34,35,79m,71°]\nEDGE[35,26,147m,25°]\nEDGE[26,36,228m,71°]\nEDGE[36,11,79m,49°]\nEDGE[11,36,79m,229°]\nEDGE[36,26,228m,251°]\nEDGE[26,37,147m,205°]\nEDGE[37,38,79m,251°]\nEDGE[38,39,89m,261°]\nEDGE[39,6,122m,318°]\nEDGE[6,22,213m,253°]\nEDGE[22,30,357m,169°]\nEDGE[30,31,528m,66°]\nEDGE[31,32,126m,64°]\nEDGE[32,40,121m,81°]\nEDGE[40,41,187m,92°]\nEDGE[41,3,77m,5°]\nEDGE[3,41,77m,185°]\nEDGE[41,40,187m,272°]\nEDGE[40,32,121m,261°]\nEDGE[32,31,126m,244°]\nEDGE[31,30,528m,246°]\nEDGE[30,22,357m,349°]\nEDGE[22,21,78m,328°]\nEDGE[21,20,81m,353°]\nEDGE[20,19,132m,3°]\nEDGE[19,18,131m,64°]\nEDGE[18,42,62m,87°]\nEDGE[42,43,190m,70°]\nEDGE[43,44,62m,76°]\nEDGE[44,45,246m,74°]\nEDGE[45,46,46m,82°]\nEDGE[46,47,140m,67°]\nEDGE[47,12,72m,354°]\nEDGE[12,47,72m,174°]\nEDGE[47,46,140m,247°]\nEDGE[46,45,46m,262°]\nEDGE[45,13,68m,348°]\nEDGE[13,45,68m,168°]\nEDGE[45,46,46m,82°]\nEDGE[46,48,196m,348°]\nEDGE[48,3,118m,274°]\nEDGE[3,3,40m,231°]\nEDGE[3,15,58m,231°]\nEDGE[15,15,22m,267°]\nEDGE[15,3,117m,57°]\nEDGE[3,3,24m,231°]\nEDGE[3,49,74m,81°]\nEDGE[49,3,93m,255°]"
+}

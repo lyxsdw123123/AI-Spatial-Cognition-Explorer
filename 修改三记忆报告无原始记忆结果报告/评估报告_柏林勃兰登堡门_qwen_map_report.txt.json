@@ -1,0 +1,261 @@
+{
+  "region": "柏林勃兰登堡门",
+  "source_file": "柏林勃兰登堡门_qwen_map_report.txt",
+  "evaluation_time": "2025-12-25T20:44:16.988893",
+  "context_text": "# 第三种记忆map描述\n## 节点列表\nNODE[id,类型,附加属性，ij坐标]\n[栅格参数]\n- grid_size: 30\nNODE[1,POI,name=Starbucks，（13，14）]\nNODE[2,POI,name=Viale dei Tigli，（12，16）]\nNODE[3,POI,name=Maman，（11，14）]\nNODE[4,POI,name=Alt-Berliner Wirtshaus，（9，16）]\nNODE[5,POI,name=Café Lebensart，（5，9）]\nNODE[6,POI,name=flamingo，（20，27）]\nNODE[7,POI,name=Cinque，（26，20）]\nNODE[8,POI,name=Bistro im Haus der Bundespressekonferenz，（24，9）]\nNODE[9,POI,name=Hopfingerbräu im Palais，（15，11）]\nNODE[10,POI,name=Commerzbank，（12，11）]\nNODE[11,POI,name=Berlin Pavillon am Reichstag，（15，3）]\nNODE[12,POI,name=Saravanaa Bhavan，（3，6）]\nNODE[13,POI,name=Lindenbräu，（2，2）]\nNODE[14,POI,name=eleven，（2，15）]\nNODE[15,ROAD,name=Starbucks and marsch节点，（15，16）]\nNODE[16,ROAD,name=Café Lebensart and marsch节点，（14，17）]\nNODE[17,ROAD,name=Viale dei Tigli and marsch节点，（13，17）]\nNODE[18,ROAD,name=Alt-Berliner Wirtshaus and marsch节点，（9，17）]\nNODE[19,ROAD,name=Maman and marsch节点，（11，17）]\nNODE[20,ROAD,name=linden and flamingo节点，（14，25）]\nNODE[21,ROAD,name=reichtagufer and flamingo节点，（20，24）]\nNODE[22,ROAD,name=reichtagufer and Cinque节点，（23，27）]\nNODE[23,ROAD,name=位置_19，（27，26）]\nNODE[24,ROAD,name=marsch北节点，（24，16）]\nNODE[25,ROAD,name=allee and marsch节点，（21，15）]\nNODE[26,ROAD,name=reichtagufer and marsch节点，（18，16）]\nNODE[27,ROAD,name=Hopfingerbräu im Palais and marsch节点，（17，16）]\nNODE[28,ROAD,name=ebert and Hopfingerbräu im Palais节点，（15，8）]\nNODE[29,ROAD,name=位置_33，（14，8）]\nNODE[30,ROAD,name=位置_34，（14，7）]\nNODE[31,ROAD,name=位置_35，（13，7）]\nNODE[32,ROAD,name=ebert and Commerzbank节点，（12，8）]\nNODE[33,ROAD,name=ebert and Maman节点，（10，9）]\nNODE[34,ROAD,name=ebert and Café Lebensart节点，（8，9）]\nNODE[35,ROAD,name=ebert and Saravanaa Bhavan节点，（3，9）]\nNODE[36,ROAD,name=位置_45，（6，7）]\nNODE[37,ROAD,name=Lindenbräu节点，（5，1）]\nNODE[38,ROAD,name=位置_49，（6，7）]\nNODE[39,ROAD,name=lerper and eleven节点，（1，9）]\nNODE[40,ROAD,name=位置_55，（2，16）]\nNODE[41,ROAD,name=and marsch南节点，（2，20）]\nNODE[42,ROAD,name=位置_57，（2，18）]\nNODE[43,ROAD,name=位置_63，（2，18）]\n\n## 道路列表\nROAD[道路坐标]\nROAD[（1，9），（1，10），（1，11），（2，2），（2，9），（2，12），（2，13），（2，14），（2，15），（2，16），（2，17），（2，18），（2，19），（2，20），（3，2），（3，6），（3，7），（3，8），（3，9），（4，1），（4，9），（5，1），（5，2），（5，3），（5，4），（5，9），（6，4），（6，5），（6，6），（6，7），（6，9），（7，8），（7，9），（8，9），（9，9），（9，16），（9，17），（10，9），（10，15），（10，17），（11，8），（11，14），（11，17），（12，8），（12，11），（12，15），（12，16），（12，17），（13，7），（13，11），（13，14），（13，17），（14，7），（14，8），（14，11），（14，15），（14，17），（14，18），（14，19），（14，20），（14，21），（14，22），（14，23），（14，24），（14，25），（15，3），（15，4），（15，5），（15，6），（15，7），（15，8），（15，9），（15，10），（15，11），（15，12），（15，16），（15，25），（16，13），（16，14），（16，26），（17，15），（17，16），（17，26），（18，16），（18，26），（19，16），（19，27），（20，15），（20，24），（20，25），（20，26），（20，27），（21，15），（21，25），（22，15），（22，26），（23，16），（23，27），（24，9），（24，10），（24，11），（24，12），（24，13），（24，14），（24，15），（24，16），（24，17），（24，27），（25，18），（25，26），（26，19），（26，20），（26，21），（26，22），（26，23），（26，26），（27，24），（27，25），（27，26）]",
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 8,
+      "total_questions": 24,
+      "accuracy": 33.33333333333333,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 2,
+          "total": 8,
+          "percentage": 25.0
+        },
+        "空间距离估算": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "邻近关系判断": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "POI密度识别": {
+          "correct": 0,
+          "total": 4,
+          "percentage": 0.0
+        },
+        "路径规划": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Hopfingerbräu im Palais相对于Commerzbank在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Hopfingerbräu im Palais位于Commerzbank的东北面。"
+        },
+        {
+          "question": "Viale dei Tigli相对于Hopfingerbräu im Palais在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Viale dei Tigli位于Hopfingerbräu im Palais的东南面。"
+        },
+        {
+          "question": "Starbucks相对于Viale dei Tigli在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Starbucks位于Viale dei Tigli的西北面。"
+        },
+        {
+          "question": "Berlin Pavillon am Reichstag相对于Starbucks在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Berlin Pavillon am Reichstag位于Starbucks的西北面。"
+        },
+        {
+          "question": "Commerzbank相对于Hopfingerbräu im Palais在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Commerzbank位于Hopfingerbräu im Palais的西南面。"
+        },
+        {
+          "question": "Hopfingerbräu im Palais相对于Viale dei Tigli在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Hopfingerbräu im Palais位于Viale dei Tigli的西北面。"
+        },
+        {
+          "question": "Viale dei Tigli相对于Starbucks在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Viale dei Tigli位于Starbucks的东南面。"
+        },
+        {
+          "question": "Starbucks相对于Berlin Pavillon am Reichstag在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Starbucks位于Berlin Pavillon am Reichstag的东南面。"
+        },
+        {
+          "question": "Commerzbank到Viale dei Tigli的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Commerzbank到Viale dei Tigli的直线距离约为178米。"
+        },
+        {
+          "question": "Hopfingerbräu im Palais到Starbucks的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Hopfingerbräu im Palais到Starbucks的直线距离约为148米。"
+        },
+        {
+          "question": "Viale dei Tigli到Berlin Pavillon am Reichstag的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Viale dei Tigli到Berlin Pavillon am Reichstag的直线距离约为500米。"
+        },
+        {
+          "question": "Starbucks到Café Lebensart的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Starbucks到Café Lebensart的直线距离约为243米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Commerzbank最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Starbucks距离Commerzbank最近，约141米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Hopfingerbräu im Palais最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Starbucks距离Hopfingerbräu im Palais最近，约148米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Viale dei Tigli最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Berlin Pavillon am Reichstag距离Viale dei Tigli最远，约500米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Starbucks最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Berlin Pavillon am Reichstag距离Starbucks最远，约409米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Maman周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Commerzbank周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Bistro im Haus der Bundespressekonferenz周围的POI密度最低，500米范围内只有0个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Café Lebensart周围的POI密度最低，500米范围内只有3个其他POI。"
+        },
+        {
+          "question": "从Commerzbank到Hopfingerbräu im Palais，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：Commerzbank -> Hopfingerbräu im Palais，总距离约191米。"
+        },
+        {
+          "question": "从Hopfingerbräu im Palais到Viale dei Tigli，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "最短路径是：Hopfingerbräu im Palais -> (Hopfingerbräu im Palais and marsch节点) -> (Starbucks and marsch节点) -> (Café Lebensart and marsch节点) -> (Viale dei Tigli and marsch节点) -> (Viale dei Tigli and marsch节点) -> Viale dei Tigli，总距离约548米。"
+        },
+        {
+          "question": "从Viale dei Tigli到Starbucks，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：Viale dei Tigli -> (Viale dei Tigli and marsch节点) -> (Viale dei Tigli and marsch节点) -> (Café Lebensart and marsch节点) -> (Starbucks and marsch节点) -> Starbucks，总距离约388米。"
+        },
+        {
+          "question": "从Starbucks到Berlin Pavillon am Reichstag，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "最短路径是：Starbucks -> (Starbucks and marsch节点) -> (Hopfingerbräu im Palais and marsch节点) -> (ebert and Hopfingerbräu im Palais节点) -> (ebert and Hopfingerbräu im Palais节点) -> Berlin Pavillon am Reichstag，总距离约702米。"
+        }
+      ],
+      "completed_at": "2025-12-25T20:44:16.409378"
+    },
+    "context_text": "# 第三种记忆map描述\n## 节点列表\nNODE[id,类型,附加属性，ij坐标]\n[栅格参数]\n- grid_size: 30\nNODE[1,POI,name=Starbucks，（13，14）]\nNODE[2,POI,name=Viale dei Tigli，（12，16）]\nNODE[3,POI,name=Maman，（11，14）]\nNODE[4,POI,name=Alt-Berliner Wirtshaus，（9，16）]\nNODE[5,POI,name=Café Lebensart，（5，9）]\nNODE[6,POI,name=flamingo，（20，27）]\nNODE[7,POI,name=Cinque，（26，20）]\nNODE[8,POI,name=Bistro im Haus der Bundespressekonferenz，（24，9）]\nNODE[9,POI,name=Hopfingerbräu im Palais，（15，11）]\nNODE[10,POI,name=Commerzbank，（12，11）]\nNODE[11,POI,name=Berlin Pavillon am Reichstag，（15，3）]\nNODE[12,POI,name=Saravanaa Bhavan，（3，6）]\nNODE[13,POI,name=Lindenbräu，（2，2）]\nNODE[14,POI,name=eleven，（2，15）]\nNODE[15,ROAD,name=Starbucks and marsch节点，（15，16）]\nNODE[16,ROAD,name=Café Lebensart and marsch节点，（14，17）]\nNODE[17,ROAD,name=Viale dei Tigli and marsch节点，（13，17）]\nNODE[18,ROAD,name=Alt-Berliner Wirtshaus and marsch节点，（9，17）]\nNODE[19,ROAD,name=Maman and marsch节点，（11，17）]\nNODE[20,ROAD,name=linden and flamingo节点，（14，25）]\nNODE[21,ROAD,name=reichtagufer and flamingo节点，（20，24）]\nNODE[22,ROAD,name=reichtagufer and Cinque节点，（23，27）]\nNODE[23,ROAD,name=位置_19，（27，26）]\nNODE[24,ROAD,name=marsch北节点，（24，16）]\nNODE[25,ROAD,name=allee and marsch节点，（21，15）]\nNODE[26,ROAD,name=reichtagufer and marsch节点，（18，16）]\nNODE[27,ROAD,name=Hopfingerbräu im Palais and marsch节点，（17，16）]\nNODE[28,ROAD,name=ebert and Hopfingerbräu im Palais节点，（15，8）]\nNODE[29,ROAD,name=位置_33，（14，8）]\nNODE[30,ROAD,name=位置_34，（14，7）]\nNODE[31,ROAD,name=位置_35，（13，7）]\nNODE[32,ROAD,name=ebert and Commerzbank节点，（12，8）]\nNODE[33,ROAD,name=ebert and Maman节点，（10，9）]\nNODE[34,ROAD,name=ebert and Café Lebensart节点，（8，9）]\nNODE[35,ROAD,name=ebert and Saravanaa Bhavan节点，（3，9）]\nNODE[36,ROAD,name=位置_45，（6，7）]\nNODE[37,ROAD,name=Lindenbräu节点，（5，1）]\nNODE[38,ROAD,name=位置_49，（6，7）]\nNODE[39,ROAD,name=lerper and eleven节点，（1，9）]\nNODE[40,ROAD,name=位置_55，（2，16）]\nNODE[41,ROAD,name=and marsch南节点，（2，20）]\nNODE[42,ROAD,name=位置_57，（2，18）]\nNODE[43,ROAD,name=位置_63，（2，18）]\n\n## 道路列表\nROAD[道路坐标]\nROAD[（1，9），（1，10），（1，11），（2，2），（2，9），（2，12），（2，13），（2，14），（2，15），（2，16），（2，17），（2，18），（2，19），（2，20），（3，2），（3，6），（3，7），（3，8），（3，9），（4，1），（4，9），（5，1），（5，2），（5，3），（5，4），（5，9），（6，4），（6，5），（6，6），（6，7），（6，9），（7，8），（7，9），（8，9），（9，9），（9，16），（9，17），（10，9），（10，15），（10，17），（11，8），（11，14），（11，17），（12，8），（12，11），（12，15），（12，16），（12，17），（13，7），（13，11），（13，14），（13，17），（14，7），（14，8），（14，11），（14，15），（14，17），（14，18），（14，19），（14，20），（14，21），（14，22），（14，23），（14，24），（14，25），（15，3），（15，4），（15，5），（15，6），（15，7），（15，8），（15，9），（15，10），（15，11），（15，12），（15，16），（15，25），（16，13），（16，14），（16，26），（17，15），（17，16），（17，26），（18，16），（18，26），（19，16），（19，27），（20，15），（20，24），（20，25），（20，26），（20，27），（21，15），（21，25），（22，15），（22，26），（23，16），（23，27），（24，9），（24，10），（24，11），（24，12），（24，13），（24，14），（24，15），（24，16），（24，17），（24，27），（25，18），（25，26），（26，19），（26，20），（26，21），（26，22），（26，23），（26，26），（27，24），（27，25），（27，26）]",
+    "context_mode": "map"
+  }
+}

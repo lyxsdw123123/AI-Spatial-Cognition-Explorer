@@ -1,0 +1,763 @@
+{
+  "region": "罗马斗兽场",
+  "source_file": "罗马斗兽场_openai_context_report.txt",
+  "evaluation_time": "2025-12-27T01:06:53.903059",
+  "context_text": "POI点单元记录（按时间顺序）：\n1) POI：Royal art café\n   - 视野内POI（方向度数；距离米）：\n     • Gran Caffe Martini & Rossi：方向 278°，距离 ≈ 76m\n     • Cafè Cafè：方向 180°，距离 ≈ 103m\n     • La Pace del Cervello：方向 139°，距离 ≈ 124m\n     • Al Gladiatore：方向 270°，距离 ≈ 145m\n     • Oppio Caffè：方向 342°，距离 ≈ 250m\n     • La Biga al Colosseo：方向 334°，距离 ≈ 354m\n     • La Base：方向 324°，距离 ≈ 528m\n     • Trattoria Morgana：方向 54°，距离 ≈ 554m\n2) POI：Gran Caffe Martini & Rossi\n   - 视野内POI（方向度数；距离米）：\n     • Al Gladiatore：方向 262°，距离 ≈ 71m\n     • Royal art café：方向 98°，距离 ≈ 76m\n     • Cafè Cafè：方向 146°，距离 ≈ 137m\n     • La Pace del Cervello：方向 124°，距离 ≈ 187m\n     • Oppio Caffè：方向 0°，距离 ≈ 228m\n     • La Biga al Colosseo：方向 346°，距离 ≈ 318m\n     • La Base：方向 331°，距离 ≈ 479m\n     • 药店：方向 343°，距离 ≈ 534m\n3) POI：Al Gladiatore\n   - 视野内POI（方向度数；距离米）：\n     • Gran Caffe Martini & Rossi：方向 82°，距离 ≈ 71m\n     • Royal art café：方向 90°，距离 ≈ 145m\n     • Cafè Cafè：方向 125°，距离 ≈ 179m\n     • La Pace del Cervello：方向 113°，距离 ≈ 245m\n     • Oppio Caffè：方向 16°，距离 ≈ 248m\n     • La Biga al Colosseo：方向 358°，距离 ≈ 318m\n     • La Base：方向 339°，距离 ≈ 458m\n     • Gustando Roma：方向 309°，距离 ≈ 505m\n4) POI：Cafè Cafè\n   - 视野内POI（方向度数；距离米）：\n     • La Pace del Cervello：方向 83°，距离 ≈ 80m\n     • Royal art café：方向 0°，距离 ≈ 103m\n     • Gran Caffe Martini & Rossi：方向 326°，距离 ≈ 137m\n     • Al Gladiatore：方向 305°，距离 ≈ 179m\n     • Oppio Caffè：方向 347°，距离 ≈ 351m\n     • La Biga al Colosseo：方向 340°，距离 ≈ 450m\n     • Biblioteca della Società geografica italiana：方向 195°，距离 ≈ 526m\n     • La Base：方向 330°，距离 ≈ 616m\n5) POI：La Pace del Cervello\n   - 视野内POI（方向度数；距离米）：\n     • Cafè Cafè：方向 263°，距离 ≈ 80m\n     • Royal art café：方向 319°，距离 ≈ 124m\n     • Gran Caffe Martini & Rossi：方向 304°，距离 ≈ 187m\n     • Al Gladiatore：方向 293°，距离 ≈ 245m\n     • Oppio Caffè：方向 335°，距离 ≈ 368m\n     • La Biga al Colosseo：方向 330°，距离 ≈ 475m\n     • Trattoria Morgana：方向 42°，距离 ≈ 557m\n     • Biblioteca della Società geografica italiana：方向 203°，距离 ≈ 561m\n6) POI：Oppio Caffè\n   - 视野内POI（方向度数；距离米）：\n     • La Biga al Colosseo：方向 316°，距离 ≈ 111m\n     • Gran Caffe Martini & Rossi：方向 180°，距离 ≈ 228m\n     • Al Gladiatore：方向 196°，距离 ≈ 248m\n     • Royal art café：方向 162°，距离 ≈ 250m\n     • La Base：方向 309°，距离 ≈ 301m\n     • 药店：方向 331°，距离 ≈ 321m\n     • Cafè Cafè：方向 167°，距离 ≈ 351m\n     • La Pace del Cervello：方向 155°，距离 ≈ 368m\n7) POI：La Biga al Colosseo\n   - 视野内POI（方向度数；距离米）：\n     • Oppio Caffè：方向 136°，距离 ≈ 111m\n     • La Base：方向 305°，距离 ≈ 190m\n     • 药店：方向 339°，距离 ≈ 216m\n     • Gran Caffe Martini & Rossi：方向 166°，距离 ≈ 318m\n     • Al Gladiatore：方向 178°，距离 ≈ 318m\n     • Royal art café：方向 154°，距离 ≈ 354m\n     • Gustando Roma：方向 270°，距离 ≈ 382m\n     • Cafè Cafè：方向 160°，距离 ≈ 450m\n8) POI：药店\n   - 视野内POI（方向度数；距离米）：\n     • La Base：方向 221°，距离 ≈ 123m\n     • La Biga al Colosseo：方向 159°，距离 ≈ 216m\n     • Oppio Caffè：方向 151°，距离 ≈ 321m\n     • Gustando Roma：方向 237°，距离 ≈ 365m\n     • Il Galeone：方向 53°，距离 ≈ 383m\n     • Al Gladiatore：方向 171°，距离 ≈ 528m\n     • Gran Caffe Martini & Rossi：方向 163°，距离 ≈ 534m\n     • Sapori e Delizie：方向 78°，距离 ≈ 547m\n9) POI：La Base\n   - 视野内POI（方向度数；距离米）：\n     • 药店：方向 41°，距离 ≈ 123m\n     • La Biga al Colosseo：方向 125°，距离 ≈ 190m\n     • Gustando Roma：方向 245°，距离 ≈ 249m\n     • Oppio Caffè：方向 129°，距离 ≈ 301m\n     • Al Gladiatore：方向 159°，距离 ≈ 458m\n     • Gran Caffe Martini & Rossi：方向 151°，距离 ≈ 479m\n     • Il Galeone：方向 50°，距离 ≈ 505m\n     • Royal art café：方向 144°，距离 ≈ 528m\n10) POI：Gustando Roma\n   - 视野内POI（方向度数；距离米）：\n     • La Base：方向 65°，距离 ≈ 249m\n     • 药店：方向 57°，距离 ≈ 365m\n     • La Biga al Colosseo：方向 90°，距离 ≈ 382m\n     • Oppio Caffè：方向 100°，距离 ≈ 467m\n     • Al Gladiatore：方向 129°，距离 ≈ 505m\n     • Gran Caffe Martini & Rossi：方向 124°，距离 ≈ 556m\n     • 咖啡厅：方向 204°，距离 ≈ 557m\n     • Royal art café：方向 121°，距离 ≈ 625m\n11) POI：咖啡厅\n   - 视野内POI（方向度数；距离米）：\n     • Gustando Roma：方向 24°，距离 ≈ 557m\n     • Al Gladiatore：方向 73°，距离 ≈ 646m\n     • Gran Caffe Martini & Rossi：方向 74°，距离 ≈ 717m\n     • Biblioteca della Società geografica italiana：方向 124°，距离 ≈ 758m\n     • La Base：方向 36°，距离 ≈ 764m\n     • Cafè Cafè：方向 84°，距离 ≈ 769m\n     • Royal art café：方向 76°，距离 ≈ 787m\n     • La Biga al Colosseo：方向 50°，距离 ≈ 793m\n12) POI：Biblioteca della Società geografica italiana\n   - 视野内POI（方向度数；距离米）：\n     • Cafè Cafè：方向 15°，距离 ≈ 526m\n     • La Pace del Cervello：方向 23°，距离 ≈ 561m\n     • Al Gladiatore：方向 359°，距离 ≈ 612m\n     • Gran Caffe Martini & Rossi：方向 6°，距离 ≈ 626m\n     • Royal art café：方向 13°，距离 ≈ 627m\n     • 咖啡厅：方向 304°，距离 ≈ 758m\n13) POI：Trattoria Morgana\n   - 视野内POI（方向度数；距离米）：\n     • Sapori e Delizie：方向 335°，距离 ≈ 342m\n     • Oppio Caffè：方向 261°，距离 ≈ 534m\n     • Royal art café：方向 234°，距离 ≈ 554m\n     • La Pace del Cervello：方向 222°，距离 ≈ 557m\n     • Il Galeone：方向 319°，距离 ≈ 570m\n     • La Biga al Colosseo：方向 270°，距离 ≈ 605m\n     • Gran Caffe Martini & Rossi：方向 239°，距离 ≈ 612m\n     • Cafè Cafè：方向 227°，距离 ≈ 620m\n14) POI：Sapori e Delizie\n   - 视野内POI（方向度数；距离米）：\n     • Il Galeone：方向 297°，距离 ≈ 259m\n     • Trattoria Morgana：方向 155°，距离 ≈ 342m\n     • 药店：方向 258°，距离 ≈ 547m\n     • Oppio Caffè：方向 224°，距离 ≈ 548m\n     • La Biga al Colosseo：方向 236°，距离 ≈ 556m\n     • La Base：方向 252°，距离 ≈ 649m\n     • Royal art café：方向 206°，距离 ≈ 702m\n     • Gran Caffe Martini & Rossi：方向 211°，距离 ≈ 729m\n15) POI：Il Galeone\n   - 视野内POI（方向度数；距离米）：\n     • Sapori e Delizie：方向 117°，距离 ≈ 259m\n     • 药店：方向 233°，距离 ≈ 383m\n     • La Biga al Colosseo：方向 208°，距离 ≈ 490m\n     • La Base：方向 230°，距离 ≈ 505m\n     • Oppio Caffè：方向 196°，距离 ≈ 535m\n     • Trattoria Morgana：方向 139°，距离 ≈ 570m\n     • Gustando Roma：方向 235°，距离 ≈ 748m\n     • Royal art café：方向 186°，距离 ≈ 756m\n\n完整行驶路径（仅方向与距离）：\n- 起点：起点\n→ saivi and Royal art café节点（方向 86°，距离 ≈ 141m）\n→ Royal art café（方向 179°，距离 ≈ 109m）\n→ Gran Caffe Martini & Rossi（方向 278°，距离 ≈ 76m）\n→ Al Gladiatore（方向 262°，距离 ≈ 71m）\n→ Gran Caffe Martini & Rossi（方向 82°，距离 ≈ 71m）\n→ Royal art café（方向 98°，距离 ≈ 76m）\n→ Gran Caffe Martini & Rossi（方向 278°，距离 ≈ 76m）\n→ Al Gladiatore（方向 262°，距离 ≈ 71m）\n→ Cafè Cafè（方向 125°，距离 ≈ 179m）\n→ La Pace del Cervello（方向 83°，距离 ≈ 80m）\n→ saivi and La Pace del Cervello节点（方向 359°，距离 ≈ 185m）\n→ saivi and Royal art café节点（方向 283°，距离 ≈ 82m）\n→ saivi and Oppio Caffè节点（方向 266°，距离 ≈ 141m）\n→ Oppio Caffè（方向 26°，距离 ≈ 154m）\n→ La Biga al Colosseo（方向 316°，距离 ≈ 111m）\n→ saivi and La Biga al Colosseo节点（方向 215°，距离 ≈ 124m）\n→ 药店（方向 359°，距离 ≈ 304m）\n→ La Base（方向 221°，距离 ≈ 123m）\n→ 药店（方向 41°，距离 ≈ 123m）\n→ La Base（方向 221°，距离 ≈ 123m）\n→ La Base and Gustando Roma节点（方向 272°，距离 ≈ 144m）\n→ Gustando Roma（方向 216°，距离 ≈ 136m）\n→ 位置_23（方向 158°，距离 ≈ 53m）\n→ 位置_24（方向 142°，距离 ≈ 51m）\n→ 位置_25（方向 139°，距离 ≈ 93m）\n→ 位置_26（方向 122°，距离 ≈ 63m）\n→ imperial and Gustando Roma节点（方向 112°，距离 ≈ 60m）\n→ 位置_28（方向 39°，距离 ≈ 68m）\n→ saivi and La Biga al Colosseo节点（方向 37°，距离 ≈ 73m）\n→ saivi and Oppio Caffè节点（方向 145°，距离 ≈ 143m）\n→ saivi and Royal art café节点（方向 86°，距离 ≈ 141m）\n→ Royal art café（方向 179°，距离 ≈ 109m）\n→ Gran Caffe Martini & Rossi（方向 278°，距离 ≈ 76m）\n→ Al Gladiatore（方向 262°，距离 ≈ 71m）\n→ claudia and Al Gladiatore节点（方向 167°，距离 ≈ 283m）\n→ claudia and Al Gladiatore节点（方向 247°，距离 ≈ 44m）\n→ 位置_37（方向 281°，距离 ≈ 61m）\n→ 位置_38（方向 279°，距离 ≈ 120m）\n→ 位置_39（方向 266°，距离 ≈ 54m）\n→ 位置_40（方向 192°，距离 ≈ 69m）\n→ cerchi and 咖啡厅节点（方向 206°，距离 ≈ 323m）\n→ 咖啡厅（方向 330°，距离 ≈ 502m）\n→ cerchi and 咖啡厅节点（方向 150°，距离 ≈ 502m）\n→ 位置_44（方向 26°，距离 ≈ 323m）\n→ 位置_45（方向 12°，距离 ≈ 69m）\n→ 位置_46（方向 86°，距离 ≈ 54m）\n→ 位置_47（方向 99°，距离 ≈ 120m）\n→ claudia and Al Gladiatore节点（方向 101°，距离 ≈ 61m）\n→ claudia and Al Gladiatore节点（方向 67°，距离 ≈ 44m）\n→ claudia and Biblioteca节点（方向 164°，距离 ≈ 346m）\n→ Biblioteca della Società geografica italiana（方向 269°，距离 ≈ 148m）\n→ claudia and Biblioteca节点（方向 89°，距离 ≈ 148m）\n→ claudia and Al Gladiatore节点（方向 344°，距离 ≈ 346m）\n→ Al Gladiatore（方向 347°，距离 ≈ 283m）\n→ Gran Caffe Martini & Rossi（方向 82°，距离 ≈ 71m）\n→ Royal art café（方向 98°，距离 ≈ 76m）\n→ saivi and Royal art café节点（方向 359°，距离 ≈ 109m）\n→ saivi and Oppio Caffè节点（方向 266°，距离 ≈ 141m）\n→ Oppio Caffè（方向 26°，距离 ≈ 154m）\n→ 位置_60（方向 13°，距离 ≈ 58m）\n→ 位置_61（方向 109°，距离 ≈ 127m）\n→ 位置_62（方向 79°，距离 ≈ 166m）\n→ oppio节点（方向 55°，距离 ≈ 59m）\n→ 位置_64（方向 148°，距离 ≈ 120m）\n→ Trattoria Morgana（方向 48°，距离 ≈ 159m）\n→ merulana and Trattoria Morgana节点（方向 36°，距离 ≈ 126m）\n→ merulana北节点（方向 0°，距离 ≈ 205m）\n→ lanza and Sapori e Delizie节点（方向 272°，距离 ≈ 77m）\n→ Sapori e Delizie（方向 269°，距离 ≈ 142m）\n→ lanza and Il Galeone节点（方向 255°，距离 ≈ 402m）\n→ Il Galeone（方向 35°，距离 ≈ 275m）\n→ Il Galeone（方向 215°，距离 ≈ 39m）\n→ 位置_73（方向 215°，距离 ≈ 82m）",
+  "evaluation_result": {
+    "CoT": {
+      "total_score": 22,
+      "total_questions": 24,
+      "accuracy": 91.66666666666666,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 7,
+          "total": 8,
+          "percentage": 87.5
+        },
+        "空间距离估算": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        },
+        "邻近关系判断": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        },
+        "POI密度识别": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "路径规划": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Oppio Caffè相对于La Biga al Colosseo在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Oppio Caffè位于La Biga al Colosseo的东南面。"
+        },
+        {
+          "question": "Royal art café相对于Oppio Caffè在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Royal art café位于Oppio Caffè的东南面。"
+        },
+        {
+          "question": "Gran Caffe Martini & Rossi相对于Royal art café在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Gran Caffe Martini & Rossi位于Royal art café的西北面。"
+        },
+        {
+          "question": "药店相对于Gran Caffe Martini & Rossi在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "药店位于Gran Caffe Martini & Rossi的西北面。"
+        },
+        {
+          "question": "La Biga al Colosseo相对于Oppio Caffè在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "La Biga al Colosseo位于Oppio Caffè的西北面。"
+        },
+        {
+          "question": "Oppio Caffè相对于Royal art café在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Oppio Caffè位于Royal art café的西北面。"
+        },
+        {
+          "question": "Royal art café相对于Gran Caffe Martini & Rossi在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Royal art café位于Gran Caffe Martini & Rossi的东南面。"
+        },
+        {
+          "question": "Gran Caffe Martini & Rossi相对于药店在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Gran Caffe Martini & Rossi位于药店的东南面。"
+        },
+        {
+          "question": "La Biga al Colosseo到Royal art café的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "La Biga al Colosseo到Royal art café的直线距离约为354米。"
+        },
+        {
+          "question": "Oppio Caffè到Gran Caffe Martini & Rossi的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Oppio Caffè到Gran Caffe Martini & Rossi的直线距离约为228米。"
+        },
+        {
+          "question": "Royal art café到药店的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Royal art café到药店的直线距离约为570米。"
+        },
+        {
+          "question": "Gran Caffe Martini & Rossi到Biblioteca della Società geografica italiana的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Gran Caffe Martini & Rossi到Biblioteca della Società geografica italiana的直线距离约为626米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离La Biga al Colosseo最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Oppio Caffè距离La Biga al Colosseo最近，约111米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Oppio Caffè最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Gran Caffe Martini & Rossi距离Oppio Caffè最近，约228米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Royal art café最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Biblioteca della Società geografica italiana距离Royal art café最远，约627米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Gran Caffe Martini & Rossi最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Biblioteca della Società geografica italiana距离Gran Caffe Martini & Rossi最远，约626米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Oppio Caffè周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "La Biga al Colosseo周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Biblioteca della Società geografica italiana周围的POI密度最低，500米范围内只有0个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "药店周围的POI密度最低，500米范围内只有3个其他POI。"
+        },
+        {
+          "question": "从La Biga al Colosseo到Oppio Caffè，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：La Biga al Colosseo -> Oppio Caffè，总距离约111米。"
+        },
+        {
+          "question": "从Oppio Caffè到Royal art café，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：Oppio Caffè -> (saivi and Oppio Caffè节点) -> (saivi and Royal art café节点) -> Royal art café，总距离约405米。"
+        },
+        {
+          "question": "从Royal art café到Gran Caffe Martini & Rossi，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：Royal art café -> Gran Caffe Martini & Rossi，总距离约76米。"
+        },
+        {
+          "question": "从Gran Caffe Martini & Rossi到药店，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：Gran Caffe Martini & Rossi -> (saivi and Royal art café节点) -> (saivi and Royal art café节点) -> (saivi and Oppio Caffè节点) -> (saivi and La Biga al Colosseo节点) -> 药店，总距离约775米。"
+        }
+      ],
+      "completed_at": "2025-12-27T00:55:46.115887"
+    },
+    "Self-Consistency": {
+      "total_score": 22,
+      "total_questions": 24,
+      "accuracy": 91.66666666666666,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 7,
+          "total": 8,
+          "percentage": 87.5
+        },
+        "空间距离估算": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        },
+        "邻近关系判断": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        },
+        "POI密度识别": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "路径规划": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Oppio Caffè相对于La Biga al Colosseo在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Oppio Caffè位于La Biga al Colosseo的东南面。"
+        },
+        {
+          "question": "Royal art café相对于Oppio Caffè在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Royal art café位于Oppio Caffè的东南面。"
+        },
+        {
+          "question": "Gran Caffe Martini & Rossi相对于Royal art café在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Gran Caffe Martini & Rossi位于Royal art café的西北面。"
+        },
+        {
+          "question": "药店相对于Gran Caffe Martini & Rossi在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "药店位于Gran Caffe Martini & Rossi的西北面。"
+        },
+        {
+          "question": "La Biga al Colosseo相对于Oppio Caffè在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "La Biga al Colosseo位于Oppio Caffè的西北面。"
+        },
+        {
+          "question": "Oppio Caffè相对于Royal art café在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Oppio Caffè位于Royal art café的西北面。"
+        },
+        {
+          "question": "Royal art café相对于Gran Caffe Martini & Rossi在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Royal art café位于Gran Caffe Martini & Rossi的东南面。"
+        },
+        {
+          "question": "Gran Caffe Martini & Rossi相对于药店在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Gran Caffe Martini & Rossi位于药店的东南面。"
+        },
+        {
+          "question": "La Biga al Colosseo到Royal art café的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "La Biga al Colosseo到Royal art café的直线距离约为354米。"
+        },
+        {
+          "question": "Oppio Caffè到Gran Caffe Martini & Rossi的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Oppio Caffè到Gran Caffe Martini & Rossi的直线距离约为228米。"
+        },
+        {
+          "question": "Royal art café到药店的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Royal art café到药店的直线距离约为570米。"
+        },
+        {
+          "question": "Gran Caffe Martini & Rossi到Biblioteca della Società geografica italiana的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Gran Caffe Martini & Rossi到Biblioteca della Società geografica italiana的直线距离约为626米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离La Biga al Colosseo最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Oppio Caffè距离La Biga al Colosseo最近，约111米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Oppio Caffè最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Gran Caffe Martini & Rossi距离Oppio Caffè最近，约228米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Royal art café最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Biblioteca della Società geografica italiana距离Royal art café最远，约627米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Gran Caffe Martini & Rossi最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Biblioteca della Società geografica italiana距离Gran Caffe Martini & Rossi最远，约626米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Oppio Caffè周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "La Biga al Colosseo周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Biblioteca della Società geografica italiana周围的POI密度最低，500米范围内只有0个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "药店周围的POI密度最低，500米范围内只有3个其他POI。"
+        },
+        {
+          "question": "从La Biga al Colosseo到Oppio Caffè，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：La Biga al Colosseo -> Oppio Caffè，总距离约111米。"
+        },
+        {
+          "question": "从Oppio Caffè到Royal art café，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：Oppio Caffè -> (saivi and Oppio Caffè节点) -> (saivi and Royal art café节点) -> Royal art café，总距离约405米。"
+        },
+        {
+          "question": "从Royal art café到Gran Caffe Martini & Rossi，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：Royal art café -> Gran Caffe Martini & Rossi，总距离约76米。"
+        },
+        {
+          "question": "从Gran Caffe Martini & Rossi到药店，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：Gran Caffe Martini & Rossi -> (saivi and Royal art café节点) -> (saivi and Royal art café节点) -> (saivi and Oppio Caffè节点) -> (saivi and La Biga al Colosseo节点) -> 药店，总距离约775米。"
+        }
+      ],
+      "completed_at": "2025-12-27T00:59:25.777272"
+    },
+    "ToT": {
+      "total_score": 22,
+      "total_questions": 24,
+      "accuracy": 91.66666666666666,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 8,
+          "total": 8,
+          "percentage": 100.0
+        },
+        "空间距离估算": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        },
+        "邻近关系判断": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "POI密度识别": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "路径规划": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Oppio Caffè相对于La Biga al Colosseo在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "[推理计划]\n1) **锁定相关地标对**：只关注“Oppio Caffè”和“La Biga al Colosseo”这两个POI之间的相对方位关系，优先使用它们彼此在“视野内POI”列表中的互相观测数据。  \n\n2) **从“La Biga al Colosseo”的记录取方位**：在第7条（POI：La Biga al Colosseo）里找到“Oppio Caffè：方向 136°，距离≈111m”。这表示**从La Biga看向Oppio**的方位角是136°。  \n\n3) **把方位角映射到象限/方位词**：采用常规定义：0°北、90°东、180°南、270°西。  \n   - 136°位于90°与180°之间，因此属于**东南象限**。  \n\n4) **用反向观测做一致性校验（可选但推荐）**：在第6条（POI：Oppio Caffè）里找到“La Biga al Colosseo：方向 316°”。  \n   - 316°位于270°与360°之间，为西北象限，表示**从Oppio看向La Biga是西北**；反过来从La Biga看向Oppio应为东南，与步骤3一致。  \n\n5) **将象限对应到选项**：东南对应选项 **B**。\n\n[最终选定]\n",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Oppio Caffè位于La Biga al Colosseo的东南面。"
+        },
+        {
+          "question": "Royal art café相对于Oppio Caffè在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "[推理计划]\n推理计划（步骤）：\n\n1) **锁定同一观测点的相对方位数据**  \n   - 优先使用“Oppio Caffè”这条POI记录中的“Royal art café：方向 162°，距离≈250m”，因为问题问的是“Royal art café 相对于 Oppio Caffè”。\n\n2) **确认方向度数的基准与象限划分**  \n   - 采用常规方位角：0°=正北，90°=正东，180°=正南，270°=正西。  \n   - 将 162° 判断落在哪个象限：介于 90° 与 180° 之间，属于“东南象限”（更靠近正南但仍偏东）。\n\n3) **把度数映射到选项的中文方向**  \n   - 90°~180° → 东南；180°~270° → 西南；270°~360° → 西北；0°~90° → 东北。  \n   - 因此 162° 对应“东南”，再与选项 A/B/C/D 对应。\n\n4) **用反向观测做一致性校验（可选但推荐）**  \n   - 在“Royal art café”记录中查“Oppio Caffè：方向 342°”。  \n   - 检查是否与 162° 近似互为反向：162° + 180° = 342°，完全吻合，确认方位判断无误。\n\n5) **输出最终选项**  \n   - 根据第3步的映射，选择对应“东南”的选项字母。\n\n[最终选定]\n",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Royal art café位于Oppio Caffè的东南面。"
+        },
+        {
+          "question": "Gran Caffe Martini & Rossi相对于Royal art café在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "[推理计划]\n1) **锁定同一观测点的相对方位记录**：在POI列表中找到“Royal art café”这一条目，查看其“视野内POI”里是否直接包含“Gran Caffe Martini & Rossi”，因为这能给出从Royal art café指向目标的方位角。\n\n2) **读取并解释方位角**：记录“Gran Caffe Martini & Rossi”在Royal art café视野内对应的方向度数（以0°=正北、90°=正东、180°=正南、270°=正西的常规定义来理解）。\n\n3) **将度数映射到象限/方位词**：判断该度数落在四个象限中的哪一个：\n   - 0°~90°：东北象限  \n   - 90°~180°：东南象限  \n   - 180°~270°：西南象限  \n   - 270°~360°：西北象限  \n   然后对应到选项A/B/C/D。\n\n4) **用反向观测做一致性校验（可选但推荐）**：在“Gran Caffe Martini & Rossi”条目中查看“Royal art café”的方向度数，确认两者大致相差180°（互为反方向），以验证没有读错观测点或方向定义。\n\n5) **输出最终选项**：根据第3步得到的象限，选择A/B/C/D中匹配的方向。\n\n[最终选定]\n",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Gran Caffe Martini & Rossi位于Royal art café的西北面。"
+        },
+        {
+          "question": "药店相对于Gran Caffe Martini & Rossi在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "[推理计划]\n推理计划（步骤）：\n\n1) **锁定关键地标与目标关系**\n   - 目标是判断“**药店**相对于**Gran Caffe Martini & Rossi**”的方位（东北/东南/西北/西南）。\n   - 优先使用同一POI记录里直接给出的“方向度数”，避免跨段路径累计误差。\n\n2) **在POI视野列表中寻找直接观测**\n   - 查看 **Gran Caffe Martini & Rossi** 的“视野内POI”列表，确认是否包含“药店”，并记录其方向度数与距离。\n   - 同时查看 **药店** 的“视野内POI”列表，确认是否包含“Gran Caffe Martini & Rossi”，作为交叉验证（两者方向应近似相差180°）。\n\n3) **将方向度数映射到象限（NE/SE/NW/SW）**\n   - 使用标准方位映射：  \n     - 0°=北，90°=东，180°=南，270°=西  \n     - 0°~90°：东北象限（NE）  \n     - 90°~180°：东南象限（SE）  \n     - 180°~270°：西南象限（SW）  \n     - 270°~360°：西北象限（NW）\n   - 把从 Gran Caffe Martini & Rossi 指向 药店 的方向度数放入对应区间，得到四选一结果。\n\n4) **一致性检查（可选但推荐）**\n   - 用“药店 → Gran Caffe Martini & Rossi”的方向度数反推：应≈（Gran→药店方向 + 180°）mod 360。\n   - 若两边都存在且吻合，则确认无误；若不吻合，再检查是否有同名歧义或记录误差。\n\n5) **输出选项**\n   - 将得到的象限（NE/SE/NW/SW）对应到题目选项 A/B/C/D，作为最终选择。\n\n[最终选定]\n",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "药店位于Gran Caffe Martini & Rossi的西北面。"
+        },
+        {
+          "question": "La Biga al Colosseo相对于Oppio Caffè在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "[推理计划]\n1) **锁定需要比较的两个地标**：起点为 **Oppio Caffè**，目标为 **La Biga al Colosseo**。只关心“从Oppio看La Biga”的相对方位。\n\n2) **优先使用同一POI视野内的方位数据**：在“Oppio Caffè”的视野列表中找到“**La Biga al Colosseo：方向 316°**（距离≈111m）”。这条记录直接给出从Oppio指向La Biga的方位角。\n\n3) **把方位角映射到象限/罗盘方向**：采用常规定义：0°=北，90°=东，180°=南，270°=西。  \n   - 316° 落在 **270°(西) 到 360°(北)** 之间，且更靠近北侧，因此属于 **西北象限**。\n\n4) **用反向观测做一致性校验（可选但推荐）**：在“La Biga al Colosseo”的视野列表中找到“**Oppio Caffè：方向 136°**”。  \n   - 316° 的反向应为 316°−180°=136°，与记录吻合，确认数据一致。\n\n5) **将象限方向对应到选项**：西北对应选项表中的 **C**。\n\n[最终选定]\n",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "La Biga al Colosseo位于Oppio Caffè的西北面。"
+        },
+        {
+          "question": "Oppio Caffè相对于Royal art café在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "[推理计划]\n推理计划（步骤）：\n\n1) **锁定同一参照系下的“相对方向”信息**  \n   - 优先使用在同一个POI记录里直接给出的“另一个POI的方位角”。  \n   - 重点查看：  \n     - 在 **Royal art café** 的视野内，是否直接出现 **Oppio Caffè** 的方向度数；  \n     - 以及在 **Oppio Caffè** 的视野内，是否直接出现 **Royal art café** 的方向度数（用于交叉验证）。\n\n2) **从Royal art café出发读取Oppio Caffè的方位角**  \n   - 在“POI：Royal art café”的可见列表中找到“Oppio Caffè：方向 342°”。  \n   - 记录该角度是“从Royal art café指向Oppio Caffè”的方位角。\n\n3) **将方位角映射到象限（东北/东南/西北/西南）**  \n   - 使用常规定义：0°=正北，90°=正东，180°=正南，270°=正西。  \n   - 判断 342° 落在哪个象限：它接近360°，意味着“偏北且偏西”（即北偏西）。  \n   - 将“北偏西”对应到四个选项中的象限方向（NW/西北）。\n\n4) **用反向观测做一致性校验（可选但推荐）**  \n   - 在“POI：Oppio Caffè”的可见列表中找到“Royal art café：方向 162°”。  \n   - 检查 162° 是否与 342° 近似相差180°（342-180=162），若一致则确认无误。\n\n5) **输出选项**  \n   - 根据第3步确定的象限方向，在A-D中选择对应项。\n\n[最终选定]\n",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Oppio Caffè位于Royal art café的西北面。"
+        },
+        {
+          "question": "Royal art café相对于Gran Caffe Martini & Rossi在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "[推理计划]\n1) **锁定相关地标与观测记录**  \n   - 只关注两个POI：**Royal art café** 与 **Gran Caffe Martini & Rossi**。  \n   - 在POI记录中分别查找“从A能看到B”的条目，优先使用**直接互相可见**的记录来避免中间推断误差。\n\n2) **提取“从Gran Caffe Martini & Rossi看Royal art café”的方位角**  \n   - 在“POI：Gran Caffe Martini & Rossi”的视野内POI列表里，找到 **Royal art café** 对应的方向度数（这是题目所需的“Royal art café相对于Gran…”）。\n\n3) **用反向记录做一致性校验（可选但推荐）**  \n   - 在“POI：Royal art café”的视野内POI列表里，找到 **Gran Caffe Martini & Rossi** 的方向度数。  \n   - 检查两者方向是否近似相差180°（互为反向），以确认读数可靠。\n\n4) **把方向度数映射到四象限（东北/东南/西北/西南）**  \n   - 使用常规定义：0°北、90°东、180°南、270°西。  \n   - 将第2步得到的度数判断落在哪个象限：  \n     - 0°~90°：东北；90°~180°：东南；180°~270°：西南；270°~360°：西北（边界按就近或题目习惯处理）。\n\n5) **在选项中选择对应象限**  \n   - 将第4步得到的象限直接对应到A/B/C/D，得到最终选项。\n\n[最终选定]\n",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Royal art café位于Gran Caffe Martini & Rossi的东南面。"
+        },
+        {
+          "question": "Gran Caffe Martini & Rossi相对于药店在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "[推理计划]\n推理计划（步骤）：\n\n1) **锁定包含两者相对关系的观测点（地标）**  \n   - 优先查看“药店”这个POI记录里，是否直接给出了“Gran Caffe Martini & Rossi”的方向与距离。  \n   - 同时备选查看“Gran Caffe Martini & Rossi”这个POI记录里，是否直接给出了“药店”的方向与距离（用于交叉验证）。\n\n2) **从“药店”POI记录读取目标方向**  \n   - 在“药店”的视野内POI列表中找到“Gran Caffe Martini & Rossi”，记录其**方向度数**（这是“Gran Caffe Martini & Rossi相对于药店”的方位角）。\n\n3) **把方位角映射到象限方向（东北/东南/西北/西南）**  \n   - 使用常规定义：0°=正北，90°=正东，180°=正南，270°=正西。  \n   - 判断该度数落在哪个区间：  \n     - 0°~90° → 东北象限  \n     - 90°~180° → 东南象限  \n     - 180°~270° → 西南象限  \n     - 270°~360° → 西北象限  \n   - 将其对应到题目选项A/B/C/D。\n\n4) **交叉验证（可选但推荐）**  \n   - 在“Gran Caffe Martini & Rossi”的视野内POI列表中找到“药店”的方向度数。  \n   - 检查两者是否近似满足“反向关系”：若A相对B为θ，则B相对A应约为(θ±180°) mod 360。  \n   - 若一致，确认象限判断无误；若不一致，回到步骤2检查是否读错条目或方向基准。\n\n[最终选定]\n",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Gran Caffe Martini & Rossi位于药店的东南面。"
+        },
+        {
+          "question": "La Biga al Colosseo到Royal art café的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "[推理计划]\n推理计划（步骤）：\n\n1) **锁定需要的两端地标**\n   - 起点：**La Biga al Colosseo**\n   - 终点：**Royal art café**\n\n2) **优先从“同一条观测记录的互相可见关系”读取直线距离**\n   - 在 POI 记录中查找：\n     - “La Biga al Colosseo 视野内是否直接给出 Royal art café 的距离”\n     - 以及反向验证：“Royal art café 视野内是否直接给出 La Biga al Colosseo 的距离”\n   - 这类“视野内POI（方向；距离）”通常就是两点的**直线距离**，无需沿路累计。\n\n3) **交叉核对（避免单条记录误差）**\n   - 对比两条独立观测：\n     - 记录(7) La Biga al Colosseo → Royal art café 的距离\n     - 记录(1) Royal art café → La Biga al Colosseo 的距离\n   - 若两者数值接近（允许几十米误差），即可确认直线距离量级。\n\n4) **用路径信息做合理性检查（可选但有用）**\n   - 在“完整行驶路径”里找到从 **Oppio Caffè → La Biga al Colosseo**、以及 **Royal art café ↔ Oppio Caffè / Gran Caffe Martini & Rossi** 等段落。\n   - 通过“路径累计距离”估一个上界：  \n     - 若沿路从 La Biga 到 Royal art café 需要经过 1-2 个中间点且总路程在几百米内，则直线距离不可能落到更大的区间（比如 >800m）。\n   - 这一步只用于确认选项区间，不作为主读数来源。\n\n5) **映射到选项区间**\n   - 将第2步得到的直线距离（约值）与选项区间对照：\n     - 0–100、100–200、200–400、400–800\n   - 选择包含该约值的区间作为答案。\n\n[最终选定]\n",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "La Biga al Colosseo到Royal art café的直线距离约为354米。"
+        },
+        {
+          "question": "Oppio Caffè到Gran Caffe Martini & Rossi的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "[推理计划]\n1) **锁定相关地标与观测记录**  \n   - 重点只看同时包含 **Oppio Caffè** 与 **Gran Caffe Martini & Rossi** 的POI视野列表（这是最直接的“直线距离”证据）。  \n   - 优先使用：  \n     - 记录6（POI：Oppio Caffè）里对 Gran Caffe Martini & Rossi 的距离  \n     - 记录2（POI：Gran Caffe Martini & Rossi）里对 Oppio Caffè 的距离（交叉验证）\n\n2) **从Oppio Caffè视角读取距离**  \n   - 在记录6中找到“Gran Caffe Martini & Rossi：方向 180°，距离 ≈ 228m”。  \n   - 记下该数值作为候选直线距离。\n\n3) **从Gran Caffe Martini & Rossi视角交叉验证**  \n   - 在记录2中找到“Oppio Caffè：方向 0°，距离 ≈ 228m”。  \n   - 检查两边距离是否一致（这里同为≈228m），确认这是同一对点的直线距离而非路径距离。\n\n4) **将数值映射到选项区间**  \n   - 把≈228m与选项区间对照：判断它落在哪个范围（0-100、100-200、200-300、300-500）。  \n   - 选择包含228m的那个区间对应的选项字母。\n\n5) **（可选）用行驶路径做合理性检查，但不作为主证据**  \n   - 查看路径中是否出现 Oppio Caffè ↔ Gran Caffe Martini & Rossi 的直接段；若没有，也可用 Oppio→Royal art café（≈250m）与 Royal→Gran（≈76m）等间接段估算，确认“直线≈228m”量级合理。\n\n[最终选定]\n",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Oppio Caffè到Gran Caffe Martini & Rossi的直线距离约为228米。"
+        },
+        {
+          "question": "Royal art café到药店的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "[推理计划]\n1) **锁定需要估算的两点**：起点为 **Royal art café**，终点为 **药店**。目标是它们的“直线距离”（不是沿路径行走距离）。\n\n2) **优先寻找两点在同一视野记录中的直接观测**：检查每个POI的“视野内POI”列表里是否出现“Royal art café ↔ 药店”的直接距离。  \n   - 若存在，直接用该距离与选项区间对照即可。\n\n3) **若没有直接观测，则选“共同可见的中间地标”做三角估算**：寻找同时与 Royal art café、药店都有距离记录的POI作为桥梁（例如 **Oppio Caffè / La Biga al Colosseo / La Base / Gran Caffe Martini & Rossi** 等）。  \n   - 记录：Royal art café → 中间点 的距离与方位；药店 → 同一中间点 的距离与方位（或反向）。\n\n4) **用“方位差 + 两边距离”推直线距离范围**：  \n   - 对同一个中间点，计算两条连线的**夹角**（用两个方位角相减并取最小夹角）。  \n   - 用余弦定理估算：  \n     \\[\n     d(\\text{Royal},\\text{药店}) \\approx \\sqrt{a^2+b^2-2ab\\cos(\\theta)}\n     \\]\n     其中 \\(a,b\\) 为两点到中间点的距离，\\(\\theta\\) 为夹角。  \n   - 若不想精算，也可用三角不等式给出上下界：\\(|a-b| \\le d \\le a+b\\)，再结合夹角判断更接近上界还是下界。\n\n5) **交叉验证（至少两条独立链路）**：再选第二个中间地标重复第4步，比较两次估算是否落在同一选项区间；若一致，则区间可信。\n\n6) **最终映射到选项**：把得到的直线距离估计值（或稳定区间）与 A/B/C/D 的范围对照，选落入的那一档。\n\n[最终选定]\n",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Royal art café到药店的直线距离约为570米。"
+        },
+        {
+          "question": "Gran Caffe Martini & Rossi到Biblioteca della Società geografica italiana的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "[推理计划]\n推理计划（步骤）：\n\n1) **锁定起点与终点地标**\n   - 起点：**Gran Caffe Martini & Rossi**\n   - 终点：**Biblioteca della Società geografica italiana**\n\n2) **优先寻找“同一视野列表中的直接观测距离”**\n   - 检查 Gran Caffe Martini & Rossi 的视野内POI是否包含 Biblioteca：若包含则直接读距离。\n   - 若不包含，则检查 Biblioteca 的视野内POI是否包含 Gran Caffe Martini & Rossi：若包含则直接读距离（这是最可靠的“直线距离”证据）。\n\n3) **从终点POI记录中提取关键关系**\n   - 在 **POI 12) Biblioteca della Società geografica italiana** 的视野内POI里，找到 **Gran Caffe Martini & Rossi** 对应的“距离（米）”记录。\n   - 记录该距离值，并注意它本身就是两点的**直线距离近似**（无需沿路径累加）。\n\n4) **用交叉验证（可选但稳妥）**\n   - 参考与两者都相关的中间地标（如 **Royal art café / Al Gladiatore / Cafè Cafè / La Pace del Cervello**）：\n     - 例如 Biblioteca→Royal art café、Royal art café→Gran Caffe Martini & Rossi 的距离量级是否与“直接距离”一致（直线距离应不大于绕行路径的分段和）。\n   - 目的：确认没有读错POI或单位。\n\n5) **映射到选项区间**\n   - 将读到的直线距离与选项区间对照：\n     - 0–200、200–400、400–800、800–1200（米）\n   - 选择落入的区间作为答案选项。\n\n[最终选定]\n",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Gran Caffe Martini & Rossi到Biblioteca della Società geografica italiana的直线距离约为626米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离La Biga al Colosseo最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "[推理计划]\n推理计划（步骤）：\n\n1) **锁定目标地标**：把“La Biga al Colosseo”作为参照点，优先使用它自己的“视野内POI”列表，因为这里直接给出了到各候选POI的距离与方向。\n\n2) **在La Biga al Colosseo的视野内POI中定位三个候选项**：逐一找到  \n   - Oppio Caffè  \n   - Royal art café  \n   - Gran Caffe Martini & Rossi  \n   并记录它们各自对应的距离数值（米）。\n\n3) **交叉验证（可选但更稳）**：用候选POI各自的视野内POI列表反查到“La Biga al Colosseo”的距离，确认与步骤2的距离一致或近似一致（例如 Oppio Caffè 视野内是否也给出到 La Biga 的距离）。\n\n4) **比较距离大小**：将三者到“La Biga al Colosseo”的距离进行排序，找出最小值。\n\n5) **输出结论对应选项**：把最小距离对应的POI映射回选项A/B/C，得到最终答案。\n\n[最终选定]\n",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Oppio Caffè距离La Biga al Colosseo最近，约111米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Oppio Caffè最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "[推理计划]\n推理计划（步骤）：\n\n1) **锁定参照点**：把 *Oppio Caffè* 作为中心点，只比较题目给的三个候选POI（Royal art café、Gran Caffe Martini & Rossi、药店）到它的距离。\n\n2) **优先使用同一视野表的直接距离**：查看“POI：Oppio Caffè”的视野内POI列表，记录其中与三位候选对应的距离：\n   - Oppio Caffè → Royal art café 的距离\n   - Oppio Caffè → Gran Caffe Martini & Rossi 的距离\n   - Oppio Caffè → 药店 的距离\n\n3) **交叉验证避免误差**：分别再去候选POI自己的视野表里，找回指向 Oppio Caffè 的距离（例如“POI：药店”里是否列出 Oppio Caffè 距离；“POI：Gran Caffe Martini & Rossi”里是否列出 Oppio Caffè 距离；“POI：Royal art café”里是否列出 Oppio Caffè 距离），确认数值一致或接近。\n\n4) **只做最小比较**：将三条距离数值做大小排序，选出最小者，即“距离 Oppio Caffè 最近”的选项。\n\n5) **必要时用路径作补充检查（可选）**：若视野表缺失或冲突，再从“完整行驶路径”中找是否存在 Oppio Caffè 与候选POI之间的直接段（或通过一个中间点的两段近似），用段长估算并与视野表结论一致性核对。\n\n[最终选定]\n",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Gran Caffe Martini & Rossi距离Oppio Caffè最近，约228米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Royal art café最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "[推理计划]\n推理计划（步骤）：\n\n1) **锁定参照点与候选POI**\n   - 参照点：**Royal art café**\n   - 候选：A **Gran Caffe Martini & Rossi**，B **药店**，C **Biblioteca della Società geografica italiana**\n\n2) **优先使用“从Royal art café直接可见”的距离作为一手证据**\n   - 在“Royal art café”的视野列表中查找：\n     - Royal art café → Gran Caffe Martini & Rossi（已给出≈76m）\n     - Royal art café → 药店（若未出现，说明可能超出当时视野范围或未记录，需要用交叉记录补足）\n     - Royal art café → Biblioteca（未出现，同样需要交叉记录）\n\n3) **用“对称观测”交叉验证距离（同一对POI在不同记录中应一致）**\n   - 检查 Gran Caffe Martini & Rossi 记录中是否有 Royal art café（有：≈76m），确认A的距离可靠。\n   - 检查 Biblioteca 记录中是否有 Royal art café（有：≈627m），得到C的距离。\n   - 检查 药店 或 La Base / Oppio Caffè 等记录中是否有 Royal art café：\n     - 若药店记录没有 Royal art café，则改用“药店 ↔ Gran Caffe Martini & Rossi / La Base / La Biga / Oppio”等与Royal art café之间的链路来估计上界/下界（见下一步）。\n\n4) **若B缺少直接距离，用“路径/三角不等式”给出可比较的距离范围**\n   - 选取连接Royal art café与药店的最短、信息最全的中间点链路（例如：Royal art café → Oppio Caffè → 药店，或 Royal art café → La Biga → 药店，或 Royal art café → La Base → 药店）。\n   - 用已知边长做两类推断：\n     - **上界**：d(Royal, 药店) ≤ d(Royal, X) + d(X, 药店)\n     - **下界**：d(Royal, 药店) ≥ | d(Royal, X) − d(X, 药店) |\n   - 目的：判断B是否可能超过C（≈627m），或明显小于C。\n\n5) **对三者做最终比较**\n   - A：直接距离≈76m（显然较近）\n   - C：直接距离≈627m（较远）\n   - B：用第4步得到的范围与≈627m对比：\n     - 若B的上界仍 < 627m，则最远为C\n     - 若B的下界 > 627m，则最远为B\n     - 若范围跨越627m，则再换另一条中间链路收紧范围（优先选距离短、误差累积少的链路）。\n\n6) **输出结论时只依据“最可靠的直接观测”或“被多条链路一致支持的比较结果”**\n   - 优先级：直接观测（同一对POI互相记录） > 多点链路一致推断 > 单一路径粗略上界/下界。\n\n[最终选定]\n",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Biblioteca della Società geografica italiana距离Royal art café最远，约627米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Gran Caffe Martini & Rossi最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "[推理计划]\n推理计划（步骤）：\n\n1) **锁定参照点与候选POI**\n   - 参照点：**Gran Caffe Martini & Rossi**  \n   - 候选：A **药店**、B **Biblioteca della Società geografica italiana**、C **Al Gladiatore**\n\n2) **优先使用“从Gran Caffe Martini & Rossi视野内POI”里的直接距离**\n   - 在记录(2)「Gran Caffe Martini & Rossi」的视野内POI中，查找：\n     - 到 **Al Gladiatore** 的距离（已给出）\n     - 到 **药店** 的距离（已给出）\n   - 这两项是“从参照点直接观测”的距离，可信度最高、无需换算。\n\n3) **为Biblioteca补齐与Gran Caffe Martini & Rossi的距离**\n   - 检查记录(2)是否包含 **Biblioteca**：若没有，则改用记录(12)「Biblioteca della Società geografica italiana」视野内POI中，查找 **Gran Caffe Martini & Rossi** 的距离（已给出）。\n   - 由于距离是对称的（A到B与B到A相同），可直接把该数值当作“Gran Caffe Martini & Rossi到Biblioteca”的距离。\n\n4) **统一比较三者距离大小**\n   - 将三条距离放在同一列表中：\n     - d(Gran Caffe Martini & Rossi, 药店)\n     - d(Gran Caffe Martini & Rossi, Biblioteca)\n     - d(Gran Caffe Martini & Rossi, Al Gladiatore)\n   - 选取数值**最大**者，即“最远”的POI。\n\n5) **一致性校验（可选但稳妥）**\n   - 用其他记录交叉验证同一对POI的距离是否接近（例如在药店记录(8)里也能看到 Gran Caffe Martini & Rossi 的距离；在Al Gladiatore记录(3)里也能看到 Gran Caffe Martini & Rossi 的距离）。\n   - 若出现小幅差异，以“直接在参照点视野内记录”的数值为主，或取多次观测的近似一致值。\n\n[最终选定]\n",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Biblioteca della Società geografica italiana距离Gran Caffe Martini & Rossi最远，约626米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "[推理计划]\n1) **明确“POI密度”的可操作定义**  \n   - 以“某POI的视野内POI数量”作为密度代理指标（因为每个POI都给出了“视野内POI列表”）。  \n   - 如需更严谨，可作为次级校验：在相近半径范围内（例如只统计≤300m或≤400m）比较“近邻数量”，避免“视野范围差异”带来的偏差。\n\n2) **锁定候选POI并提取各自的邻居列表**（只看选项A-D）  \n   - A Oppio Caffè：读取其“视野内POI”条目，记录邻居数量，并记录各邻居距离。  \n   - B Biblioteca della Società geografica italiana：同上。  \n   - C 药店：同上。  \n   - D La Base：同上。  \n   关注点：每个候选点的“视野内POI”条目里有多少个POI（列表长度），以及这些POI的距离分布。\n\n3) **第一轮比较：直接用“视野内POI数量”排序**  \n   - 对A/B/C/D分别计数（列表里有几条POI）。  \n   - 数量最多者，作为“周围POI密度最高”的初步答案候选。\n\n4) **第二轮校验（可选但推荐）：统一距离阈值下的近邻数**  \n   - 设定一个统一半径（例如300m；若300m下差异不明显，再用400m）。  \n   - 对A/B/C/D分别统计“距离≤阈值”的邻居数量。  \n   - 目的：排除某些点“视野内POI”虽然多，但大多很远，从而并非真正“周围更密”。\n\n5) **一致性检查：利用互相可见关系验证邻居合理性**  \n   - 例如：若X在Y的视野内，通常Y也会在X的视野内（数据里大多成对出现）。  \n   - 若发现某候选点的邻居计数异常（明显少/多），回到其他POI记录中交叉确认该候选点周边是否确实存在更多POI。\n\n6) **得出结论规则**  \n   - 若“视野内POI数量”与“统一半径近邻数”两种指标指向同一候选点，则选它。  \n   - 若两者冲突，则优先采用“统一半径近邻数”作为“密度”更贴近直觉的判据，并在结论中说明采用的判据。\n\n[最终选定]\n",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Oppio Caffè周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "[推理计划]\n推理计划（步骤）：\n\n1) **明确“POI密度”的可操作定义**  \n   - 以“某个候选POI在其视野内可见的POI数量”作为密度代理指标（因为每条POI记录都给出了“视野内POI列表”）。  \n   - 为避免口径不一致，优先使用**该POI自身的记录**（例如“POI：La Base”那条）来统计，而不是从别的POI反推。\n\n2) **锁定需要对比的候选POI记录**  \n   - 只看四个选项对应的POI条目：  \n     A) POI：La Biga al Colosseo（记录7）  \n     B) POI：Biblioteca della Società geografica italiana（记录12）  \n     C) POI：药店（记录8）  \n     D) POI：La Base（记录9）\n\n3) **分别统计每个候选POI“视野内POI”的数量（核心指标）**  \n   - 对记录7/8/9/12逐条数清单里的项目数（每个“•”算1个邻近POI）。  \n   - 记录成表：候选POI → 可见POI数量。\n\n4) **处理可能的并列与公平性检查（次级规则）**  \n   - 若出现数量并列：  \n     - 4.1 进一步比较“近距离邻居数量”（例如统计≤300m或≤400m的POI个数），作为更接近“密度”的细化指标。  \n     - 4.2 或比较平均距离/中位距离：邻居更近者视为更“密”。\n\n5) **一致性验证（可选但稳健）**  \n   - 用其他POI记录中对该候选POI的“反向可见”关系做抽查：例如若X在Y视野内，通常Y也应在X附近（不要求完全对称，但可用于发现漏计/异常）。  \n   - 不用全量验证，只需确认没有把“节点/位置_xx”误当POI计入。\n\n6) **得出结论**  \n   - 依据第3步（必要时结合第4步）选出“周围POI密度最高”的候选项字母。\n\n[最终选定]\n",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "La Biga al Colosseo周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "[推理计划]\n推理计划（步骤）：\n\n1) **明确“POI密度最低”的可操作定义**  \n   - 以“某POI视野内POI列表”作为其“周围POI集合”。  \n   - 用一个简单可比的密度指标：  \n     - **指标1：邻居数量**（视野内POI条目数越少，越稀疏）。  \n     - **指标2：平均距离/中位距离**（在邻居数量相同或接近时，距离越远表示越稀疏）。  \n   - 为避免不同POI“视野半径”不一致带来的偏差，优先用**邻居数量**做主判据，再用距离做辅判据。\n\n2) **锁定候选POI并提取各自“视野内POI”数据**（只看选项A-D）  \n   - A：Biblioteca della Società geografica italiana（记录12）→ 抄下其可见POI及距离。  \n   - B：药店（记录8）→ 抄下其可见POI及距离。  \n   - C：La Base（记录9）→ 抄下其可见POI及距离。  \n   - D：Royal art café（记录1）→ 抄下其可见POI及距离。  \n\n3) **对每个候选POI计算“邻居数量”**  \n   - 分别统计A/B/C/D的视野内POI条目数（不把自己算进去）。  \n   - 若出现并列最少，进入下一步用距离打破平局。\n\n4) **在并列情况下比较“距离分布”以判断稀疏程度**  \n   - 对并列者计算：  \n     - 平均距离或中位距离；  \n     - 或者统计“近邻数量”（例如≤200m内有几个POI）。  \n   - 规则：**近距离邻居更少、整体距离更远** → 密度更低。\n\n5) **一致性/稳健性检查（可选但建议）**  \n   - 用“互相可见”做交叉验证：例如若X说Y在300m，Y也应在相近距离看到X（允许误差）。  \n   - 若发现某候选POI的列表明显“截断”或异常（例如缺少本应出现的近邻），则回到其他记录中查看该候选POI是否也被频繁作为他人视野内POI出现，作为密度的辅助证据（被很多点近距离看到通常意味着更密集）。\n\n6) **得出结论**  \n   - 先按邻居数量选出最少者；若并列，再按距离稀疏性指标选出最终“周围POI密度最低”的POI，并对应到选项A-D。\n\n[最终选定]\n",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Biblioteca della Società geografica italiana周围的POI密度最低，500米范围内只有0个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "[推理计划]\n1) **明确“POI密度”的可操作定义**  \n   - 用每个候选POI的“视野内POI列表”来近似其周围POI密度。  \n   - 主要指标：**视野内POI数量**（越少→密度越低）。  \n   - 辅助校验：在数量相同或接近时，再比较**这些POI的距离分布**（整体更远→更稀疏）。\n\n2) **锁定需要比较的地标（仅四个候选）**  \n   - A 药店（记录 #8）  \n   - B Biblioteca della Società geografica italiana（记录 #12）  \n   - C La Base（记录 #9）  \n   - D Royal art café（记录 #1）\n\n3) **逐一统计每个候选点的“视野内POI数量”**  \n   - 从对应记录中数清楚条目数（每条“• XXX：方向…距离…”算1个）。  \n   - 得到四个计数后，先按计数从小到大排序，**计数最小者即为“密度最低”的首选答案**。\n\n4) **若出现并列（或差异很小），用距离分布做二次判定**  \n   - 对并列的候选点：  \n     - 计算/比较“最近POI距离”（最近邻越远→越稀疏）。  \n     - 粗略比较“平均距离/中位距离”（整体更远→密度更低）。  \n   - 重点关注是否存在大量<200m的邻近POI；若多数都在300–700m，说明更稀疏。\n\n5) **一致性检查（避免单点视野偏差）**  \n   - 用其他POI记录中“指向该候选点”的距离作交叉验证：  \n     - 例如看周边多个点到该候选点的距离是否普遍较大（支持其处于更稀疏区域）。  \n   - 同时参考行驶路径：若该候选点附近可快速串联多个POI（短距离频繁出现），通常密度更高；反之更低。\n\n6) **输出结论选择**  \n   - 先依据步骤3的最小计数确定答案；如并列，再依据步骤4的距离稀疏性打破平局，最终在A/B/C/D中选出“周围POI密度最低”的那个。\n\n[最终选定]\n",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "药店周围的POI密度最低，500米范围内只有3个其他POI。"
+        },
+        {
+          "question": "从La Biga al Colosseo到Oppio Caffè，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "[推理计划]\n推理计划（步骤）：\n\n1) **锁定起终点的“直连距离”作为基准**\n   - 在 POI 记录里查找 **La Biga al Colosseo 视野内是否直接包含 Oppio Caffè**，以及对应距离。\n   - 这将给出选项 A 的总长度（若为直接可达，则就是该单段距离），作为所有方案对比的下界基准。\n\n2) **为每个选项列出需要的“边”（相邻点之间的距离）**\n   - 对 B/C/D，把路径拆成若干段：`节点1 -> 节点2 -> ... -> Oppio Caffè`。\n   - 每一段都需要一个可用的距离来源：优先使用\n     - “完整行驶路径”中出现的 **同一对节点的连续移动距离**；\n     - 或 POI 视野列表中给出的 **两点互相可见的距离**（若该段恰好是 POI-to-POI）。\n\n3) **从数据中逐段取数（或判定缺失）**\n   - **A**：直接用 La Biga al Colosseo 记录中 “Oppio Caffè：距离≈111m”（若存在且明确）。\n   - **B**：依次在“完整行驶路径”里定位这些段是否出现过：\n     - `La Biga al Colosseo -> merulana南节点`\n     - `merulana南节点 -> lanza and Sapori e Delizie节点`\n     - `lanza and Sapori e Delizie节点 -> merulana北节点`\n     - `merulana北节点 -> Oppio Caffè`\n     - 若某段未直接出现，则尝试用已出现的相邻段组合/回推；若仍无法得到距离，则标记该选项“数据不足/需估计”，并避免与可精确计算的选项混比。\n   - **C**：同样逐段在“完整行驶路径”中找：\n     - `La Biga al Colosseo -> saivi and La Pace del Cervello节点`\n     - `saivi and La Pace del Cervello节点 -> saivi and La Biga al Colosseo节点`\n     - `saivi and La Biga al Colosseo节点 -> claudia and Al Gladiatore节点`\n     - `claudia and Al Gladiatore节点 -> merulana and Trattoria Morgana节点`\n     - `merulana and Trattoria Morgana节点 -> Oppio Caffè`\n   - **D**：逐段找：\n     - `La Biga al Colosseo -> merulana and Il Galeone节点`\n     - `merulana and Il Galeone节点 -> saivi and La Pace del Cervello节点`\n     - `saivi and La Pace del Cervello节点 -> lanza and Sapori e Delizie节点`\n     - `lanza and Sapori e Delizie节点 -> Oppio Caffè`\n\n4) **计算每个选项的总路程**\n   - 将每个选项中已获取的各段距离相加，得到总长度。\n   - 对于出现“往返/绕行”的段（例如路径里有来回经过同一节点），严格按选项给定顺序累加，不做“直线替代”。\n\n5) **一致性校验（避免取错边）**\n   - 对关键段做交叉验证：如果某两点在 POI 视野中互相可见，应能在双方记录中找到近似一致的距离（允许少量误差）。\n   - 若“完整行驶路径”里同一对点出现多次，检查距离是否一致；不一致时优先取与该段方向/上下文最匹配的一次，或取平均并注明。\n\n6) **与基准比较并选最短**\n   - 将 B/C/D 的总长度与 A 的基准长度比较。\n   - 若 A 是直接 111m 级别，而其他方案包含多段且每段几十到几百米，通常会明显更长；但仍以计算结果为准。\n   - 输出“最短路径对应的选项字母”，并在最终答案中可附上各选项总长度对比（若题目允许）。\n\n[最终选定]\n",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：La Biga al Colosseo -> Oppio Caffè，总距离约111米。"
+        },
+        {
+          "question": "从Oppio Caffè到Royal art café，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "[推理计划]\n1) **先明确“最短路径”判定标准**  \n   - 只比较四个选项中给出的分段路线总距离。  \n   - 总距离 = 路线上每一段“相邻节点/POI之间”的行驶距离之和（以“完整行驶路径”里出现的相邻跳转距离为准）。  \n   - 若某一段在“完整行驶路径”里没有直接相邻记录，则该选项该段距离无法直接读出，需要：  \n     - 优先在路径记录中寻找同一对节点是否在别处以相反方向出现（距离应相同）；  \n     - 仍找不到则标记为“缺失”，该选项无法可靠计算（或需用POI视野距离做近似，但应最后才用）。\n\n2) **建立可用的“关键节点间距离表”（只摘与四个选项相关的段）**  \n   重点从“完整行驶路径”中抽取这些相邻段的距离：  \n   - Oppio Caffè ↔ saivi and Oppio Caffè节点（26° 154m；反向也出现）  \n   - saivi and Oppio Caffè节点 ↔ saivi and Royal art café节点（145° 143m；反向也出现）  \n   - saivi and Royal art café节点 ↔ Royal art café（179° 109m；反向也出现）  \n   - Oppio Caffè ↔ saivi and La Biga al Colosseo节点（路径中出现：saivi and La Biga al Colosseo节点 → saivi and Oppio Caffè节点 73m；以及 saivi and Oppio Caffè节点 → saivi and La Biga al Colosseo节点 124m 这两段要核对是否为同名但不同连接点，需小心）  \n   - Oppio Caffè ↔ oppio节点（路径中：位置_62 → oppio节点 59m，但不是Oppio Caffè直连；另有 oppio节点 → 位置_64 120m；需要确认Oppio Caffè到oppio节点是否有直接段）  \n   - claudia and Biblioteca节点 ↔ Biblioteca（148m）以及 claudia and Biblioteca节点 ↔ claudia and Al Gladiatore节点（346m）  \n   - imperial and Gustando Roma节点 ↔（周边位置节点）60m 等  \n   - lanza and Sapori e Delizie节点 ↔ Sapori e Delizie（142m）以及 merulana北节点 ↔ lanza and Sapori e Delizie节点（77m）  \n   - merulana and Trattoria Morgana节点 ↔ merulana北节点（205m）以及 Trattoria Morgana ↔ merulana and Trattoria Morgana节点（126m）以及 位置_64 ↔ Trattoria Morgana（159m）\n\n3) **逐个选项“按段求和”，并检查每段是否可从路径记录直接读取**  \n   - **选项B**：Oppio Caffè → saivi&Oppio(154) → saivi&Royal(143) → Royal(109)。  \n     - 这三段都能在“完整行驶路径”中直接找到，先把B的总和算出来，作为强基准。  \n   - **选项A**：Oppio Caffè → saivi&LaBiga → claudia&Biblioteca → oppio节点 → Royal。  \n     - 逐段检查：  \n       1) Oppio Caffè ↔ saivi&LaBiga：是否有直接相邻段？（路径里有 La Biga → saivi&LaBiga 124m，但不是Oppio；另有 saivi&LaBiga ↔ saivi&Oppio 73m/124m，需确认）  \n       2) saivi&LaBiga ↔ claudia&Biblioteca：路径中是否出现过直接连接？若无则缺失。  \n       3) claudia&Biblioteca ↔ oppio节点：是否直接相邻？若无则缺失。  \n       4) oppio节点 ↔ Royal：是否直接相邻？若无则缺失。  \n     - 若多段缺失，则A无法与B做同口径比较（除非用POI视野距离/几何估算，但那会引入误差）。  \n   - **选项C**：Oppio Caffè → oppio节点 → saivi&Royal → merulana北 → merulana&Trattoria → Royal。  \n     - 检查关键问题：  \n       1) Oppio Caffè ↔ oppio节点是否有直接段（路径里看起来是通过位置_60/61/62到oppio节点，不是直连）。  \n       2) oppio节点 ↔ saivi&Royal 是否直连（路径里未见）。  \n       3) saivi&Royal ↔ merulana北 是否直连（未见）。  \n       4) merulana北 ↔ merulana&Trattoria（205m有）  \n       5) merulana&Trattoria ↔ Royal 是否直连（未见；Royal到Trattoria在POI视野里约554m，但不是节点直连）  \n     - 若核心段缺失，C同样难以精确求和。  \n   - **选项D**：Oppio Caffè → claudia&Biblioteca → imperial&Gustando → lanza&Sapori → Royal。  \n     - 逐段核对是否存在直接相邻段：  \n       1) Oppio ↔ claudia&Biblioteca（未见直连）  \n       2) claudia&Biblioteca ↔ imperial&Gustando（未见直连）  \n       3) imperial&Gustando ↔ lanza&Sapori（未见直连）  \n       4) lanza&Sapori ↔ Royal（未见直连）  \n     - 若均缺失，则D不可计算或明显不具备“短路径”证据。\n\n4) **用“可计算性 + 明确总距离”优先筛选**  \n   - 若只有B能完全由路径记录给出每段距离，则先判定：  \n     - B是唯一可严格计算的候选；  \n     - 其他选项若缺失段，需要额外假设/估算，通常不应判为“最短”除非能证明其上界仍小于B（很难）。\n\n5) **如必须在缺失段中继续比较：制定估算策略（最后手段）**  \n   - 对缺失段，用“POI视野内距离”或“已知节点链路的最短拼接”给出**下界/上界**：  \n     - 下界：直线距离（若能从POI视野得到）  \n     - 上界：用已出现的路径片段把两点通过中间节点连起来的最短已知组合  \n   - 通过比较：若某选项的“最小可能总长下界”都大于B的精确总长，则可排除；若某选项的“最大可能总长上界”仍小于B，则可反超（通常不太可能）。\n\n6) **最终输出结论的推导方式**  \n   - 先给出B的精确总距离（由三段相加）。  \n   - 对A/C/D：说明哪些段缺失、无法同口径精算；若做了上下界估算，则展示界限比较如何排除或保留。  \n   - 由此确定“最短路径”对应的选项。\n\n[最终选定]\n",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：Oppio Caffè -> (saivi and Oppio Caffè节点) -> (saivi and Royal art café节点) -> Royal art café，总距离约405米。"
+        },
+        {
+          "question": "从Royal art café到Gran Caffe Martini & Rossi，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "[推理计划]\n推理计划（步骤）：\n\n1) **锁定起终点的“直接边”与已知距离**\n   - 在POI视野记录里找：Royal art café ↔ Gran Caffe Martini & Rossi 是否直接可达、距离是多少。\n   - 在“完整行驶路径”里找：是否出现过 `Royal art café -> Gran Caffe Martini & Rossi` 的段落，并记录该段距离（这是选项C的长度基准）。\n\n2) **为每个选项列出需要经过的中间节点，并在轨迹中逐段“对齐”**\n   - A：Royal art café → cerchi and 咖啡厅节点 → saivi and Oppio Caffè节点 → merulana南节点 → Gran Caffe Martini & Rossi  \n   - B：Royal art café → merulana and Trattoria Morgana节点 → cerchi and 咖啡厅节点 → saivi and La Pace del Cervello节点 → saivi and Oppio Caffè节点 → Gran Caffe Martini & Rossi  \n   - C：Royal art café → Gran Caffe Martini & Rossi  \n   - D：Royal art café → oppio节点 → merulana and Trattoria Morgana节点 → saivi and La Pace del Cervello节点 → Gran Caffe Martini & Rossi\n\n3) **从“完整行驶路径”中提取每个选项所需的分段距离**\n   - 对每一条“相邻节点对”（例如 Royal art café→saivi and Oppio Caffè节点），在路径日志中找到对应的移动段，抄下其距离。\n   - 若某个选项中的相邻节点对在日志中**没有直接段**，则：\n     - 继续在日志中寻找这两点之间是否存在一条由若干段组成的已走过的连接链（用已出现的节点串起来），并把这些段距离相加作为该“缺失边”的替代距离。\n     - 同时记录该替代链是否唯一/是否可能有更短未记录路线（不臆测，只用已知段）。\n\n4) **用“方向一致性”做校验，避免错配同名节点**\n   - 对于关键节点（如 cerchi and 咖啡厅节点、saivi and Oppio Caffè节点、merulana and Trattoria Morgana节点、oppio节点），用日志中出现的进出方向与周边POI相对方位做一致性检查，确保提取的段确实连接的是同一地理点。\n\n5) **计算每个选项的总长度**\n   - 将选项中每一段（或替代链）的距离求和，得到 A/B/C/D 的总米数。\n   - 特别注意：选项C若存在“直接边”，其长度通常就是单段距离；其余选项是多段累加。\n\n6) **比较并得出“最短路径”**\n   - 直接比较四个总长度，最小者即答案。\n   - 若出现某选项含有无法在日志中闭合的段（例如 merulana南节点未在日志中出现），则标记该选项“无法用现有数据精确计算”，并在可计算的选项中比较最短；或仅在能补全距离后再参与比较。\n\n[最终选定]\n",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：Royal art café -> Gran Caffe Martini & Rossi，总距离约76米。"
+        },
+        {
+          "question": "从Gran Caffe Martini & Rossi到药店，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "[推理计划]\n下面是我会采用的**最短路径推理计划**（不直接给出答案，只给步骤与关注点）：\n\n1) **锁定起终点的可用“锚点”与已知边**\n   - 起点：**Gran Caffe Martini & Rossi**\n   - 终点：**药店**\n   - 从“完整行驶路径”里提取所有与以下节点相关的**实际走过的段**（因为这些段给出了方向+距离，可直接累加）：\n     - Gran Caffe Martini & Rossi ↔ Royal art café ↔ saivi and Royal art café节点\n     - saivi and Oppio Caffè节点 ↔ saivi and La Biga al Colosseo节点 ↔ 药店\n     - claudia and Biblioteca节点 ↔ Biblioteca\n     - cerchi and 咖啡厅节点 ↔ 咖啡厅\n     - merulana / lanza / Il Galeone 相关节点（若在路径中出现与其他网络的连接）\n\n2) **把每个选项拆成“连续边”的距离求和问题**\n   - 对 A/B/C/D 分别列出：  \n     `Gran Caffe Martini & Rossi -> 节点1 -> 节点2 -> ... -> 药店`  \n     然后逐段去“完整行驶路径”中找对应的**直接移动记录**（例如“X → Y（距离≈…m）”）。\n\n3) **优先使用“完整行驶路径”的距离；缺失则判定该选项不可直接验证或需替代估计**\n   - 若某一段（例如“Gran Caffe Martini & Rossi -> cerchi and 咖啡厅节点”）在完整路径里**没有出现过直接连接**：\n     - 先检查是否能用“完整路径中已走过的中间点”把它拆成多段（例如先到 Al Gladiatore，再到某节点）。\n     - 如果仍无法在记录中拼出一条连续链，则标记该选项为“距离不可由现有数据闭合”，在比较时要么剔除，要么只能用POI视野距离做粗估（见下一步）。\n\n4) **必要时用“POI视野内POI距离”做补充估计（但要小心）**\n   - 当某段缺少路径距离时，尝试用POI记录中的“方向+距离”作为近似直线距离下界/估计值：\n     - 例如：Gran Caffe Martini & Rossi 到 药店在POI视野里给出约 **534m**（但这是直线，不一定可走）。\n   - 规则：  \n     - 直线距离只能作为**下界**或粗估，不能比“可走路径累加”更可靠。  \n     - 若某选项大量依赖直线估计，而另一选项能完全用路径段累加，则优先相信后者。\n\n5) **对每个选项做“可闭合性检查”**\n   - 检查选项中的每个节点是否在完整行驶路径中出现，并且与前后节点存在可拼接的移动段：\n     - D 里的 `saivi and Royal art café节点 -> saivi and Oppio Caffè节点 -> saivi and La Biga al Colosseo节点 -> 药店` 在路径中看起来是同一“saivi网络”内的连续段，通常更容易闭合。\n     - A/C/B 涉及 merulana/lanza/imperial/cerchi/claudia 等不同网络，重点检查它们是否与起点侧（Gran Caffe Martini & Rossi附近）或终点侧（药店附近）有明确连接段。\n\n6) **计算每个可闭合选项的总距离**\n   - 对能完全闭合的选项：把每一段的“≈距离”直接相加得到总长度。\n   - 对部分缺失但可用POI直线补的选项：记录“已知段总和 + 估计段”，并标注不确定性。\n\n7) **比较总距离并做一致性校验**\n   - 选出总距离最小者。\n   - 用常识校验：  \n     - 若某条路线总和明显小于起点到药店的直线下界（例如远小于≈534m），则说明拼接或读取段有误，需要回到第2-3步复核。\n\n8) **输出结论时说明依据**\n   - 明确说明：哪个选项的距离是“完全由完整行驶路径段累加得到”，哪个选项存在“缺失段/直线估计”，以保证最短判断可追溯。\n\n[最终选定]\n",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：Gran Caffe Martini & Rossi -> (saivi and Royal art café节点) -> (saivi and Royal art café节点) -> (saivi and Oppio Caffè节点) -> (saivi and La Biga al Colosseo节点) -> 药店，总距离约775米。"
+        }
+      ],
+      "completed_at": "2025-12-27T01:06:53.372172"
+    },
+    "context_text": "POI点单元记录（按时间顺序）：\n1) POI：Royal art café\n   - 视野内POI（方向度数；距离米）：\n     • Gran Caffe Martini & Rossi：方向 278°，距离 ≈ 76m\n     • Cafè Cafè：方向 180°，距离 ≈ 103m\n     • La Pace del Cervello：方向 139°，距离 ≈ 124m\n     • Al Gladiatore：方向 270°，距离 ≈ 145m\n     • Oppio Caffè：方向 342°，距离 ≈ 250m\n     • La Biga al Colosseo：方向 334°，距离 ≈ 354m\n     • La Base：方向 324°，距离 ≈ 528m\n     • Trattoria Morgana：方向 54°，距离 ≈ 554m\n2) POI：Gran Caffe Martini & Rossi\n   - 视野内POI（方向度数；距离米）：\n     • Al Gladiatore：方向 262°，距离 ≈ 71m\n     • Royal art café：方向 98°，距离 ≈ 76m\n     • Cafè Cafè：方向 146°，距离 ≈ 137m\n     • La Pace del Cervello：方向 124°，距离 ≈ 187m\n     • Oppio Caffè：方向 0°，距离 ≈ 228m\n     • La Biga al Colosseo：方向 346°，距离 ≈ 318m\n     • La Base：方向 331°，距离 ≈ 479m\n     • 药店：方向 343°，距离 ≈ 534m\n3) POI：Al Gladiatore\n   - 视野内POI（方向度数；距离米）：\n     • Gran Caffe Martini & Rossi：方向 82°，距离 ≈ 71m\n     • Royal art café：方向 90°，距离 ≈ 145m\n     • Cafè Cafè：方向 125°，距离 ≈ 179m\n     • La Pace del Cervello：方向 113°，距离 ≈ 245m\n     • Oppio Caffè：方向 16°，距离 ≈ 248m\n     • La Biga al Colosseo：方向 358°，距离 ≈ 318m\n     • La Base：方向 339°，距离 ≈ 458m\n     • Gustando Roma：方向 309°，距离 ≈ 505m\n4) POI：Cafè Cafè\n   - 视野内POI（方向度数；距离米）：\n     • La Pace del Cervello：方向 83°，距离 ≈ 80m\n     • Royal art café：方向 0°，距离 ≈ 103m\n     • Gran Caffe Martini & Rossi：方向 326°，距离 ≈ 137m\n     • Al Gladiatore：方向 305°，距离 ≈ 179m\n     • Oppio Caffè：方向 347°，距离 ≈ 351m\n     • La Biga al Colosseo：方向 340°，距离 ≈ 450m\n     • Biblioteca della Società geografica italiana：方向 195°，距离 ≈ 526m\n     • La Base：方向 330°，距离 ≈ 616m\n5) POI：La Pace del Cervello\n   - 视野内POI（方向度数；距离米）：\n     • Cafè Cafè：方向 263°，距离 ≈ 80m\n     • Royal art café：方向 319°，距离 ≈ 124m\n     • Gran Caffe Martini & Rossi：方向 304°，距离 ≈ 187m\n     • Al Gladiatore：方向 293°，距离 ≈ 245m\n     • Oppio Caffè：方向 335°，距离 ≈ 368m\n     • La Biga al Colosseo：方向 330°，距离 ≈ 475m\n     • Trattoria Morgana：方向 42°，距离 ≈ 557m\n     • Biblioteca della Società geografica italiana：方向 203°，距离 ≈ 561m\n6) POI：Oppio Caffè\n   - 视野内POI（方向度数；距离米）：\n     • La Biga al Colosseo：方向 316°，距离 ≈ 111m\n     • Gran Caffe Martini & Rossi：方向 180°，距离 ≈ 228m\n     • Al Gladiatore：方向 196°，距离 ≈ 248m\n     • Royal art café：方向 162°，距离 ≈ 250m\n     • La Base：方向 309°，距离 ≈ 301m\n     • 药店：方向 331°，距离 ≈ 321m\n     • Cafè Cafè：方向 167°，距离 ≈ 351m\n     • La Pace del Cervello：方向 155°，距离 ≈ 368m\n7) POI：La Biga al Colosseo\n   - 视野内POI（方向度数；距离米）：\n     • Oppio Caffè：方向 136°，距离 ≈ 111m\n     • La Base：方向 305°，距离 ≈ 190m\n     • 药店：方向 339°，距离 ≈ 216m\n     • Gran Caffe Martini & Rossi：方向 166°，距离 ≈ 318m\n     • Al Gladiatore：方向 178°，距离 ≈ 318m\n     • Royal art café：方向 154°，距离 ≈ 354m\n     • Gustando Roma：方向 270°，距离 ≈ 382m\n     • Cafè Cafè：方向 160°，距离 ≈ 450m\n8) POI：药店\n   - 视野内POI（方向度数；距离米）：\n     • La Base：方向 221°，距离 ≈ 123m\n     • La Biga al Colosseo：方向 159°，距离 ≈ 216m\n     • Oppio Caffè：方向 151°，距离 ≈ 321m\n     • Gustando Roma：方向 237°，距离 ≈ 365m\n     • Il Galeone：方向 53°，距离 ≈ 383m\n     • Al Gladiatore：方向 171°，距离 ≈ 528m\n     • Gran Caffe Martini & Rossi：方向 163°，距离 ≈ 534m\n     • Sapori e Delizie：方向 78°，距离 ≈ 547m\n9) POI：La Base\n   - 视野内POI（方向度数；距离米）：\n     • 药店：方向 41°，距离 ≈ 123m\n     • La Biga al Colosseo：方向 125°，距离 ≈ 190m\n     • Gustando Roma：方向 245°，距离 ≈ 249m\n     • Oppio Caffè：方向 129°，距离 ≈ 301m\n     • Al Gladiatore：方向 159°，距离 ≈ 458m\n     • Gran Caffe Martini & Rossi：方向 151°，距离 ≈ 479m\n     • Il Galeone：方向 50°，距离 ≈ 505m\n     • Royal art café：方向 144°，距离 ≈ 528m\n10) POI：Gustando Roma\n   - 视野内POI（方向度数；距离米）：\n     • La Base：方向 65°，距离 ≈ 249m\n     • 药店：方向 57°，距离 ≈ 365m\n     • La Biga al Colosseo：方向 90°，距离 ≈ 382m\n     • Oppio Caffè：方向 100°，距离 ≈ 467m\n     • Al Gladiatore：方向 129°，距离 ≈ 505m\n     • Gran Caffe Martini & Rossi：方向 124°，距离 ≈ 556m\n     • 咖啡厅：方向 204°，距离 ≈ 557m\n     • Royal art café：方向 121°，距离 ≈ 625m\n11) POI：咖啡厅\n   - 视野内POI（方向度数；距离米）：\n     • Gustando Roma：方向 24°，距离 ≈ 557m\n     • Al Gladiatore：方向 73°，距离 ≈ 646m\n     • Gran Caffe Martini & Rossi：方向 74°，距离 ≈ 717m\n     • Biblioteca della Società geografica italiana：方向 124°，距离 ≈ 758m\n     • La Base：方向 36°，距离 ≈ 764m\n     • Cafè Cafè：方向 84°，距离 ≈ 769m\n     • Royal art café：方向 76°，距离 ≈ 787m\n     • La Biga al Colosseo：方向 50°，距离 ≈ 793m\n12) POI：Biblioteca della Società geografica italiana\n   - 视野内POI（方向度数；距离米）：\n     • Cafè Cafè：方向 15°，距离 ≈ 526m\n     • La Pace del Cervello：方向 23°，距离 ≈ 561m\n     • Al Gladiatore：方向 359°，距离 ≈ 612m\n     • Gran Caffe Martini & Rossi：方向 6°，距离 ≈ 626m\n     • Royal art café：方向 13°，距离 ≈ 627m\n     • 咖啡厅：方向 304°，距离 ≈ 758m\n13) POI：Trattoria Morgana\n   - 视野内POI（方向度数；距离米）：\n     • Sapori e Delizie：方向 335°，距离 ≈ 342m\n     • Oppio Caffè：方向 261°，距离 ≈ 534m\n     • Royal art café：方向 234°，距离 ≈ 554m\n     • La Pace del Cervello：方向 222°，距离 ≈ 557m\n     • Il Galeone：方向 319°，距离 ≈ 570m\n     • La Biga al Colosseo：方向 270°，距离 ≈ 605m\n     • Gran Caffe Martini & Rossi：方向 239°，距离 ≈ 612m\n     • Cafè Cafè：方向 227°，距离 ≈ 620m\n14) POI：Sapori e Delizie\n   - 视野内POI（方向度数；距离米）：\n     • Il Galeone：方向 297°，距离 ≈ 259m\n     • Trattoria Morgana：方向 155°，距离 ≈ 342m\n     • 药店：方向 258°，距离 ≈ 547m\n     • Oppio Caffè：方向 224°，距离 ≈ 548m\n     • La Biga al Colosseo：方向 236°，距离 ≈ 556m\n     • La Base：方向 252°，距离 ≈ 649m\n     • Royal art café：方向 206°，距离 ≈ 702m\n     • Gran Caffe Martini & Rossi：方向 211°，距离 ≈ 729m\n15) POI：Il Galeone\n   - 视野内POI（方向度数；距离米）：\n     • Sapori e Delizie：方向 117°，距离 ≈ 259m\n     • 药店：方向 233°，距离 ≈ 383m\n     • La Biga al Colosseo：方向 208°，距离 ≈ 490m\n     • La Base：方向 230°，距离 ≈ 505m\n     • Oppio Caffè：方向 196°，距离 ≈ 535m\n     • Trattoria Morgana：方向 139°，距离 ≈ 570m\n     • Gustando Roma：方向 235°，距离 ≈ 748m\n     • Royal art café：方向 186°，距离 ≈ 756m\n\n完整行驶路径（仅方向与距离）：\n- 起点：起点\n→ saivi and Royal art café节点（方向 86°，距离 ≈ 141m）\n→ Royal art café（方向 179°，距离 ≈ 109m）\n→ Gran Caffe Martini & Rossi（方向 278°，距离 ≈ 76m）\n→ Al Gladiatore（方向 262°，距离 ≈ 71m）\n→ Gran Caffe Martini & Rossi（方向 82°，距离 ≈ 71m）\n→ Royal art café（方向 98°，距离 ≈ 76m）\n→ Gran Caffe Martini & Rossi（方向 278°，距离 ≈ 76m）\n→ Al Gladiatore（方向 262°，距离 ≈ 71m）\n→ Cafè Cafè（方向 125°，距离 ≈ 179m）\n→ La Pace del Cervello（方向 83°，距离 ≈ 80m）\n→ saivi and La Pace del Cervello节点（方向 359°，距离 ≈ 185m）\n→ saivi and Royal art café节点（方向 283°，距离 ≈ 82m）\n→ saivi and Oppio Caffè节点（方向 266°，距离 ≈ 141m）\n→ Oppio Caffè（方向 26°，距离 ≈ 154m）\n→ La Biga al Colosseo（方向 316°，距离 ≈ 111m）\n→ saivi and La Biga al Colosseo节点（方向 215°，距离 ≈ 124m）\n→ 药店（方向 359°，距离 ≈ 304m）\n→ La Base（方向 221°，距离 ≈ 123m）\n→ 药店（方向 41°，距离 ≈ 123m）\n→ La Base（方向 221°，距离 ≈ 123m）\n→ La Base and Gustando Roma节点（方向 272°，距离 ≈ 144m）\n→ Gustando Roma（方向 216°，距离 ≈ 136m）\n→ 位置_23（方向 158°，距离 ≈ 53m）\n→ 位置_24（方向 142°，距离 ≈ 51m）\n→ 位置_25（方向 139°，距离 ≈ 93m）\n→ 位置_26（方向 122°，距离 ≈ 63m）\n→ imperial and Gustando Roma节点（方向 112°，距离 ≈ 60m）\n→ 位置_28（方向 39°，距离 ≈ 68m）\n→ saivi and La Biga al Colosseo节点（方向 37°，距离 ≈ 73m）\n→ saivi and Oppio Caffè节点（方向 145°，距离 ≈ 143m）\n→ saivi and Royal art café节点（方向 86°，距离 ≈ 141m）\n→ Royal art café（方向 179°，距离 ≈ 109m）\n→ Gran Caffe Martini & Rossi（方向 278°，距离 ≈ 76m）\n→ Al Gladiatore（方向 262°，距离 ≈ 71m）\n→ claudia and Al Gladiatore节点（方向 167°，距离 ≈ 283m）\n→ claudia and Al Gladiatore节点（方向 247°，距离 ≈ 44m）\n→ 位置_37（方向 281°，距离 ≈ 61m）\n→ 位置_38（方向 279°，距离 ≈ 120m）\n→ 位置_39（方向 266°，距离 ≈ 54m）\n→ 位置_40（方向 192°，距离 ≈ 69m）\n→ cerchi and 咖啡厅节点（方向 206°，距离 ≈ 323m）\n→ 咖啡厅（方向 330°，距离 ≈ 502m）\n→ cerchi and 咖啡厅节点（方向 150°，距离 ≈ 502m）\n→ 位置_44（方向 26°，距离 ≈ 323m）\n→ 位置_45（方向 12°，距离 ≈ 69m）\n→ 位置_46（方向 86°，距离 ≈ 54m）\n→ 位置_47（方向 99°，距离 ≈ 120m）\n→ claudia and Al Gladiatore节点（方向 101°，距离 ≈ 61m）\n→ claudia and Al Gladiatore节点（方向 67°，距离 ≈ 44m）\n→ claudia and Biblioteca节点（方向 164°，距离 ≈ 346m）\n→ Biblioteca della Società geografica italiana（方向 269°，距离 ≈ 148m）\n→ claudia and Biblioteca节点（方向 89°，距离 ≈ 148m）\n→ claudia and Al Gladiatore节点（方向 344°，距离 ≈ 346m）\n→ Al Gladiatore（方向 347°，距离 ≈ 283m）\n→ Gran Caffe Martini & Rossi（方向 82°，距离 ≈ 71m）\n→ Royal art café（方向 98°，距离 ≈ 76m）\n→ saivi and Royal art café节点（方向 359°，距离 ≈ 109m）\n→ saivi and Oppio Caffè节点（方向 266°，距离 ≈ 141m）\n→ Oppio Caffè（方向 26°，距离 ≈ 154m）\n→ 位置_60（方向 13°，距离 ≈ 58m）\n→ 位置_61（方向 109°，距离 ≈ 127m）\n→ 位置_62（方向 79°，距离 ≈ 166m）\n→ oppio节点（方向 55°，距离 ≈ 59m）\n→ 位置_64（方向 148°，距离 ≈ 120m）\n→ Trattoria Morgana（方向 48°，距离 ≈ 159m）\n→ merulana and Trattoria Morgana节点（方向 36°，距离 ≈ 126m）\n→ merulana北节点（方向 0°，距离 ≈ 205m）\n→ lanza and Sapori e Delizie节点（方向 272°，距离 ≈ 77m）\n→ Sapori e Delizie（方向 269°，距离 ≈ 142m）\n→ lanza and Il Galeone节点（方向 255°，距离 ≈ 402m）\n→ Il Galeone（方向 35°，距离 ≈ 275m）\n→ Il Galeone（方向 215°，距离 ≈ 39m）\n→ 位置_73（方向 215°，距离 ≈ 82m）",
+    "context_mode": "context"
+  }
+}

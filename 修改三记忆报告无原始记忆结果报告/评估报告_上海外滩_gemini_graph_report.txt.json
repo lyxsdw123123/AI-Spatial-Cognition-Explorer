@@ -1,0 +1,261 @@
+{
+  "region": "上海外滩",
+  "source_file": "上海外滩_gemini_graph_report.txt",
+  "evaluation_time": "2025-12-25T12:47:23.059054",
+  "context_text": "# 第二种记忆道路连通图描述\n## 节点列表\nNODE[id,类型,附加属性]\nNODE[1,POI,name=金钟广场]\nNODE[2,POI,name=普安路延安东路(公交站)]\nNODE[3,POI,name=香港广场北座]\nNODE[4,POI,name=东淮海国际大厦]\nNODE[5,POI,name=露香园]\nNODE[6,POI,name=黄浦区机关办公大楼]\nNODE[7,POI,name=上海黄浦区图书馆大楼]\nNODE[8,POI,name=上海市青莲阁大楼]\nNODE[9,POI,name=人民广场地铁站1号口]\nNODE[10,ROAD,name=起点]\nNODE[11,ROAD,name=西藏北路与延安高架路的节点]\nNODE[12,ROAD,name=东淮海国际大厦道路与延安高架路的节点]\nNODE[13,ROAD,name=金钟广场道路与延安高架路的节点]\nNODE[14,ROAD,name=西藏北路铺路与人民大道的节点]\nNODE[15,ROAD,name=普安路延安东路(公交站)与人民大道的节点]\nNODE[16,ROAD,name=香港广场北座道路与延安高架路的节点]\nNODE[17,ROAD,name=露香园道路与西藏北路的节点]\nNODE[18,ROAD,name=位置_29]\nNODE[19,ROAD,name=位置_31]\nNODE[20,ROAD,name=位置_39]\nNODE[21,ROAD,name=位置_41]\nNODE[22,ROAD,name=位置_43]\n\n## 边列表\nEDGE[起点ID,终点ID,道路长度,方向]\nEDGE[10,11,309m,120°]\nEDGE[11,12,58m,205°]\nEDGE[12,13,316m,235°]\nEDGE[13,1,75m,320°]\nEDGE[1,13,75m,140°]\nEDGE[13,12,316m,55°]\nEDGE[12,11,58m,25°]\nEDGE[11,14,299m,325°]\nEDGE[14,15,524m,227°]\nEDGE[15,2,67m,324°]\nEDGE[2,15,67m,144°]\nEDGE[15,14,524m,47°]\nEDGE[14,11,299m,145°]\nEDGE[11,12,58m,205°]\nEDGE[12,13,316m,235°]\nEDGE[13,16,491m,237°]\nEDGE[16,3,142m,356°]\nEDGE[3,16,142m,176°]\nEDGE[16,13,491m,57°]\nEDGE[13,12,316m,55°]\nEDGE[12,4,72m,166°]\nEDGE[4,12,72m,346°]\nEDGE[12,11,58m,25°]\nEDGE[11,17,185m,148°]\nEDGE[17,5,116m,66°]\nEDGE[5,17,116m,246°]\nEDGE[17,11,185m,328°]\nEDGE[11,14,299m,325°]\nEDGE[14,18,342m,62°]\nEDGE[18,6,121m,34°]\nEDGE[6,19,121m,214°]\nEDGE[19,14,342m,242°]\nEDGE[14,7,349m,332°]\nEDGE[7,8,175m,65°]\nEDGE[8,7,175m,245°]\nEDGE[7,9,245m,243°]\nEDGE[9,9,34m,63°]\nEDGE[9,7,211m,63°]\nEDGE[7,20,116m,243°]\nEDGE[20,9,129m,243°]\nEDGE[9,21,94m,63°]\nEDGE[21,9,94m,243°]\nEDGE[9,22,91m,63°]",
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 19,
+      "total_questions": 24,
+      "accuracy": 79.16666666666666,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 8,
+          "total": 8,
+          "percentage": 100.0
+        },
+        "空间距离估算": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "邻近关系判断": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "POI密度识别": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "路径规划": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        }
+      },
+      "answers": [
+        {
+          "question": "东淮海国际大厦相对于金钟广场在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "东淮海国际大厦位于金钟广场的东北面。"
+        },
+        {
+          "question": "普安路延安东路(公交站)相对于东淮海国际大厦在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "普安路延安东路(公交站)位于东淮海国际大厦的西北面。"
+        },
+        {
+          "question": "人民广场地铁站1号口相对于普安路延安东路(公交站)在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "人民广场地铁站1号口位于普安路延安东路(公交站)的东北面。"
+        },
+        {
+          "question": "露香园相对于人民广场地铁站1号口在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "露香园位于人民广场地铁站1号口的东南面。"
+        },
+        {
+          "question": "金钟广场相对于东淮海国际大厦在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "金钟广场位于东淮海国际大厦的西南面。"
+        },
+        {
+          "question": "东淮海国际大厦相对于普安路延安东路(公交站)在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "东淮海国际大厦位于普安路延安东路(公交站)的东南面。"
+        },
+        {
+          "question": "普安路延安东路(公交站)相对于人民广场地铁站1号口在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "普安路延安东路(公交站)位于人民广场地铁站1号口的西南面。"
+        },
+        {
+          "question": "人民广场地铁站1号口相对于露香园在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "人民广场地铁站1号口位于露香园的西北面。"
+        },
+        {
+          "question": "金钟广场到普安路延安东路(公交站)的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "金钟广场到普安路延安东路(公交站)的直线距离约为290米。"
+        },
+        {
+          "question": "东淮海国际大厦到人民广场地铁站1号口的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "东淮海国际大厦到人民广场地铁站1号口的直线距离约为787米。"
+        },
+        {
+          "question": "普安路延安东路(公交站)到露香园的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "普安路延安东路(公交站)到露香园的直线距离约为800米。"
+        },
+        {
+          "question": "人民广场地铁站1号口到上海黄浦区图书馆大楼的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "人民广场地铁站1号口到上海黄浦区图书馆大楼的直线距离约为245米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离金钟广场最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "普安路延安东路(公交站)距离金钟广场最近，约290米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离东淮海国际大厦最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "露香园距离东淮海国际大厦最近，约211米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离普安路延安东路(公交站)最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "露香园距离普安路延安东路(公交站)最远，约800米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离人民广场地铁站1号口最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "露香园距离人民广场地铁站1号口最远，约939米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "上海市青莲阁大楼周围的POI密度最高，500米范围内有3个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "金钟广场周围的POI密度最高，500米范围内有3个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "露香园周围的POI密度最低，500米范围内只有1个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "黄浦区机关办公大楼周围的POI密度最低，500米范围内只有1个其他POI。"
+        },
+        {
+          "question": "从金钟广场到东淮海国际大厦，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：金钟广场 -> (金钟广场道路与延安高架路的节点) -> (东淮海国际大厦道路与延安高架路的节点) -> 东淮海国际大厦，总距离约464米。"
+        },
+        {
+          "question": "从东淮海国际大厦到普安路延安东路(公交站)，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：东淮海国际大厦 -> (东淮海国际大厦道路与延安高架路的节点) -> (西藏北路与延安高架路的节点) -> (西藏北路铺路与人民大道的节点) -> (普安路延安东路(公交站)与人民大道的节点) -> 普安路延安东路(公交站)，总距离约1022米。"
+        },
+        {
+          "question": "从普安路延安东路(公交站)到人民广场地铁站1号口，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：普安路延安东路(公交站) -> (普安路延安东路(公交站)与人民大道的节点) -> (西藏北路铺路与人民大道的节点) -> (西藏北路铺路与人民大道的节点) -> 人民广场地铁站1号口，总距离约1187米。"
+        },
+        {
+          "question": "从人民广场地铁站1号口到露香园，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：人民广场地铁站1号口 -> (西藏北路铺路与人民大道的节点) -> (西藏北路铺路与人民大道的节点) -> (西藏北路与延安高架路的节点) -> (露香园道路与西藏北路的节点) -> 露香园，总距离约1196米。"
+        }
+      ],
+      "completed_at": "2025-12-25T12:47:21.388743"
+    },
+    "context_text": "# 第二种记忆道路连通图描述\n## 节点列表\nNODE[id,类型,附加属性]\nNODE[1,POI,name=金钟广场]\nNODE[2,POI,name=普安路延安东路(公交站)]\nNODE[3,POI,name=香港广场北座]\nNODE[4,POI,name=东淮海国际大厦]\nNODE[5,POI,name=露香园]\nNODE[6,POI,name=黄浦区机关办公大楼]\nNODE[7,POI,name=上海黄浦区图书馆大楼]\nNODE[8,POI,name=上海市青莲阁大楼]\nNODE[9,POI,name=人民广场地铁站1号口]\nNODE[10,ROAD,name=起点]\nNODE[11,ROAD,name=西藏北路与延安高架路的节点]\nNODE[12,ROAD,name=东淮海国际大厦道路与延安高架路的节点]\nNODE[13,ROAD,name=金钟广场道路与延安高架路的节点]\nNODE[14,ROAD,name=西藏北路铺路与人民大道的节点]\nNODE[15,ROAD,name=普安路延安东路(公交站)与人民大道的节点]\nNODE[16,ROAD,name=香港广场北座道路与延安高架路的节点]\nNODE[17,ROAD,name=露香园道路与西藏北路的节点]\nNODE[18,ROAD,name=位置_29]\nNODE[19,ROAD,name=位置_31]\nNODE[20,ROAD,name=位置_39]\nNODE[21,ROAD,name=位置_41]\nNODE[22,ROAD,name=位置_43]\n\n## 边列表\nEDGE[起点ID,终点ID,道路长度,方向]\nEDGE[10,11,309m,120°]\nEDGE[11,12,58m,205°]\nEDGE[12,13,316m,235°]\nEDGE[13,1,75m,320°]\nEDGE[1,13,75m,140°]\nEDGE[13,12,316m,55°]\nEDGE[12,11,58m,25°]\nEDGE[11,14,299m,325°]\nEDGE[14,15,524m,227°]\nEDGE[15,2,67m,324°]\nEDGE[2,15,67m,144°]\nEDGE[15,14,524m,47°]\nEDGE[14,11,299m,145°]\nEDGE[11,12,58m,205°]\nEDGE[12,13,316m,235°]\nEDGE[13,16,491m,237°]\nEDGE[16,3,142m,356°]\nEDGE[3,16,142m,176°]\nEDGE[16,13,491m,57°]\nEDGE[13,12,316m,55°]\nEDGE[12,4,72m,166°]\nEDGE[4,12,72m,346°]\nEDGE[12,11,58m,25°]\nEDGE[11,17,185m,148°]\nEDGE[17,5,116m,66°]\nEDGE[5,17,116m,246°]\nEDGE[17,11,185m,328°]\nEDGE[11,14,299m,325°]\nEDGE[14,18,342m,62°]\nEDGE[18,6,121m,34°]\nEDGE[6,19,121m,214°]\nEDGE[19,14,342m,242°]\nEDGE[14,7,349m,332°]\nEDGE[7,8,175m,65°]\nEDGE[8,7,175m,245°]\nEDGE[7,9,245m,243°]\nEDGE[9,9,34m,63°]\nEDGE[9,7,211m,63°]\nEDGE[7,20,116m,243°]\nEDGE[20,9,129m,243°]\nEDGE[9,21,94m,63°]\nEDGE[21,9,94m,243°]\nEDGE[9,22,91m,63°]",
+    "context_mode": "graph"
+  }
+}

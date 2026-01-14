@@ -28,7 +28,7 @@ class Config:
     # 其他大模型配置
     DEEPSEEK_API_KEY = os.getenv('DEEPSEEK_API_KEY', '')
     OPENAI_API_KEY = os.getenv('OPENAI_API_KEY', '')
-    ZHIPUAI_API_KEY = os.getenv('ZHIPUAI_API_KEY', '')
+    ZHIPU_API_KEY = os.getenv('ZHIPU_API_KEY', '')
     GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY', '')
     ANTHROPIC_API_KEY = os.getenv('ANTHROPIC_API_KEY', '')
     OPENROUTER_API_KEY = os.getenv('OPENROUTER_API_KEY', '')
@@ -66,7 +66,7 @@ class Config:
             'dashscope_api_key': cls.DASHSCOPE_API_KEY,
             'deepseek_api_key': cls.DEEPSEEK_API_KEY,
             'openai_api_key': cls.OPENAI_API_KEY,
-            'zhipuai_api_key': cls.ZHIPUAI_API_KEY,
+            'zhipu_api_key': cls.ZHIPU_API_KEY,
             'google_api_key': cls.GOOGLE_API_KEY,
             'anthropic_api_key': cls.ANTHROPIC_API_KEY,
             'openrouter_api_key': cls.OPENROUTER_API_KEY,
