@@ -482,7 +482,14 @@ async def stop_exploration():
                     except Exception:
                         context_text = ""
                 elif mode == 'map':
-                    snap = explorer_agent.path_memory.build_map_memory_snapshot(explorer_agent.exploration_boundary or [], 30)
+                    grid_size = 30
+                    try:
+                        _gb, _gs = local_data_service.get_grid_boundary_and_size()
+                        if _gs is not None:
+                            grid_size = int(_gs)
+                    except Exception:
+                        pass
+                    snap = explorer_agent.path_memory.build_map_memory_snapshot(explorer_agent.exploration_boundary or [], grid_size)
                     try:
                         nodes = snap.get('nodes', [])
                         grid = snap.get('road_grid', {}) or {}

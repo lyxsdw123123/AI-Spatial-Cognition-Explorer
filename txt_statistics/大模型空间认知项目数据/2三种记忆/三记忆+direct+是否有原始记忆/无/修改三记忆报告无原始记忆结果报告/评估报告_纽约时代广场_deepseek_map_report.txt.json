@@ -1,0 +1,261 @@
+{
+  "region": "纽约时代广场",
+  "source_file": "纽约时代广场_deepseek_map_report.txt",
+  "evaluation_time": "2025-12-25T23:16:36.889967",
+  "context_text": "# 第三种记忆map描述\n## 节点列表\nNODE[id,类型,附加属性，ij坐标]\n[栅格参数]\n- grid_size: 30\nNODE[1,POI,name=Junior's，（12，11）]\nNODE[2,POI,name=Hard Rock Cafe，（10，11）]\nNODE[3,POI,name=Europa Cafe，（8，9）]\nNODE[4,POI,name=Chase，（4，26）]\nNODE[5,POI,name=Starbucks，（6，13）]\nNODE[6,POI,name=Tony's，（6，15）]\nNODE[7,POI,name=The Lambs Club，（8，17）]\nNODE[8,POI,name=Del Frisco's Double Eagle Steakhouse，（14，20）]\nNODE[9,POI,name=The Playwright，（18，15）]\nNODE[10,POI,name=Public School 212，（18，7）]\nNODE[11,POI,name=5 Napkin Burger，（16，2）]\nNODE[12,POI,name=Duane Reade，（26，17）]\nNODE[13,ROAD,name=Junior's and west 50rd的节点，（14，13）]\nNODE[14,ROAD,name=7th avenue and west 50rd的节点，（12，15）]\nNODE[15,ROAD,name=west 44rd and 7th avenue的节点，（10，13）]\nNODE[16,ROAD,name=Hard Rock Cafe and 7th avenue的节点，（8，13）]\nNODE[17,ROAD,name=Chase and 7th avenue的节点，（6，11）]\nNODE[18,ROAD,name=west 42rd and 7th avenue的节点，（4，9）]\nNODE[19,ROAD,name=west 42rd and Starbucks的节点，（6，5）]\nNODE[20,ROAD,name=Europa Cafe and 7th avenue的节点，（8，11）]\nNODE[21,ROAD,name=west 44rd and The Lambs Club的节点，（8，15）]\nNODE[22,ROAD,name=west 50rd and The Lambs Club的节点，（10，17）]\nNODE[23,ROAD,name=west 50rd and 6th avenue的节点，（8，19）]\nNODE[24,ROAD,name=Chase and 6th avenue的节点，（6，18）]\nNODE[25,ROAD,name=west 46rd and 6th avenue的节点，（14，23）]\nNODE[26,ROAD,name=west 46rd and Del Frisco's Double Eagle Steakhouse的节点，（16，21）]\nNODE[27,ROAD,name=west 46rd and 7th avenue的节点，（18，19）]\nNODE[28,ROAD,name=7th avenue and The Playwright的节点，（16，17）]\nNODE[29,ROAD,name=west 50rd and 50th street的节点，（14，7）]\nNODE[30,ROAD,name=west 50rd and Public School 212的节点，（16，6）]\nNODE[31,ROAD,name=west 44rd and 50th street的节点，（12，6）]\nNODE[32,ROAD,name=west 46rd and 50th street的节点，（22，13）]\nNODE[33,ROAD,name=Duane Reade与50th street的节点，（26，15）]\nNODE[34,ROAD,name=west 50rd and Chase的节点，（6，21）]\nNODE[35,ROAD,name=位置_61，（3，25）]\nNODE[36,ROAD,name=位置_63，（4，23）]\nNODE[37,ROAD,name=位置_65，（5，22）]\n\n## 道路列表\nROAD[道路坐标]\nROAD[（2，24），（2，25），（3，24），（3，25），（3，26），（4，8），（4，9），（4，19），（4，23），（4，26），（5，7），（5，10），（5，18），（5，22），（6，5），（6，6），（6，9），（6，10），（6，11），（6，13），（6，14），（6，15），（6，18），（6，21），（7，6），（7，9），（7，11），（7，13），（7，15），（7，18），（7，20），（8，7），（8，9），（8，11），（8，12），（8，13），（8，15），（8，16），（8，17），（8，19），（9，10），（9，12），（9，13），（9，17），（9，18），（9，20），（10，11），（10，13），（10，17），（10，20），（11，14），（11，16），（11，21），（12，6），（12，11），（12，15），（12，22），（13，5），（13，6），（13，12），（13，14），（13，16），（13，22），（14，4），（14，7），（14，8），（14，9），（14，10），（14，11），（14，12），（14，13），（14，16），（14，20），（14，23），（15，3），（15，6），（15，8），（15，16），（15，20），（15，22），（16，2），（16，6），（16，8），（16，17），（16，21），（17，6），（17，9），（17，16），（17，18），（17，20），（18，7），（18，10），（18，15），（18，19），（19，11），（19，17），（19，18），（20，12），（20，16），（21，12），（21，14），（21，15），（22，13），（23，14），（24，14），（25，14），（26，15），（26，16），（26，17）]",
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 15,
+      "total_questions": 24,
+      "accuracy": 62.5,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 6,
+          "total": 8,
+          "percentage": 75.0
+        },
+        "空间距离估算": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "邻近关系判断": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "POI密度识别": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "路径规划": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Hard Rock Cafe相对于Junior's在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "Hard Rock Cafe位于Junior's的西南面。"
+        },
+        {
+          "question": "Starbucks相对于Hard Rock Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Starbucks位于Hard Rock Cafe的东南面。"
+        },
+        {
+          "question": "Europa Cafe相对于Starbucks在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Europa Cafe位于Starbucks的西北面。"
+        },
+        {
+          "question": "Chase相对于Europa Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Chase位于Europa Cafe的西南面。"
+        },
+        {
+          "question": "Junior's相对于Hard Rock Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Junior's位于Hard Rock Cafe的东北面。"
+        },
+        {
+          "question": "Hard Rock Cafe相对于Starbucks在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Hard Rock Cafe位于Starbucks的西北面。"
+        },
+        {
+          "question": "Starbucks相对于Europa Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Starbucks位于Europa Cafe的东南面。"
+        },
+        {
+          "question": "Europa Cafe相对于Chase在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Europa Cafe位于Chase的东北面。"
+        },
+        {
+          "question": "Junior's到Starbucks的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Junior's到Starbucks的直线距离约为284米。"
+        },
+        {
+          "question": "Hard Rock Cafe到Europa Cafe的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Hard Rock Cafe到Europa Cafe的直线距离约为82米。"
+        },
+        {
+          "question": "Starbucks到Chase的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Starbucks到Chase的直线距离约为145米。"
+        },
+        {
+          "question": "Europa Cafe到Chase的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Europa Cafe到Chase的直线距离约为411米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Junior's最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Hard Rock Cafe距离Junior's最近，约114米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Hard Rock Cafe最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Europa Cafe距离Hard Rock Cafe最近，约82米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Starbucks最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Chase距离Starbucks最远，约251米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Europa Cafe最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Public School 212距离Europa Cafe最远，约459米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Europa Cafe周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Hard Rock Cafe周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Duane Reade周围的POI密度最低，500米范围内只有1个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Public School 212周围的POI密度最低，500米范围内只有4个其他POI。"
+        },
+        {
+          "question": "从Junior's到Hard Rock Cafe，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：Junior's -> (Junior's and west 50rd的节点) -> (7th avenue and west 50rd的节点) -> (west 44rd and 7th avenue的节点) -> (Hard Rock Cafe and 7th avenue的节点) -> Hard Rock Cafe，总距离约505米。"
+        },
+        {
+          "question": "从Hard Rock Cafe到Starbucks，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：Hard Rock Cafe -> (Hard Rock Cafe and 7th avenue的节点) -> Starbucks，总距离约195米。"
+        },
+        {
+          "question": "从Starbucks到Europa Cafe，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：Starbucks -> (Hard Rock Cafe and 7th avenue的节点) -> (Europa Cafe and 7th avenue的节点) -> Europa Cafe，总距离约220米。"
+        },
+        {
+          "question": "从Europa Cafe到Chase，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：Europa Cafe -> Chase，总距离约85米。"
+        }
+      ],
+      "completed_at": "2025-12-25T23:16:36.354552"
+    },
+    "context_text": "# 第三种记忆map描述\n## 节点列表\nNODE[id,类型,附加属性，ij坐标]\n[栅格参数]\n- grid_size: 30\nNODE[1,POI,name=Junior's，（12，11）]\nNODE[2,POI,name=Hard Rock Cafe，（10，11）]\nNODE[3,POI,name=Europa Cafe，（8，9）]\nNODE[4,POI,name=Chase，（4，26）]\nNODE[5,POI,name=Starbucks，（6，13）]\nNODE[6,POI,name=Tony's，（6，15）]\nNODE[7,POI,name=The Lambs Club，（8，17）]\nNODE[8,POI,name=Del Frisco's Double Eagle Steakhouse，（14，20）]\nNODE[9,POI,name=The Playwright，（18，15）]\nNODE[10,POI,name=Public School 212，（18，7）]\nNODE[11,POI,name=5 Napkin Burger，（16，2）]\nNODE[12,POI,name=Duane Reade，（26，17）]\nNODE[13,ROAD,name=Junior's and west 50rd的节点，（14，13）]\nNODE[14,ROAD,name=7th avenue and west 50rd的节点，（12，15）]\nNODE[15,ROAD,name=west 44rd and 7th avenue的节点，（10，13）]\nNODE[16,ROAD,name=Hard Rock Cafe and 7th avenue的节点，（8，13）]\nNODE[17,ROAD,name=Chase and 7th avenue的节点，（6，11）]\nNODE[18,ROAD,name=west 42rd and 7th avenue的节点，（4，9）]\nNODE[19,ROAD,name=west 42rd and Starbucks的节点，（6，5）]\nNODE[20,ROAD,name=Europa Cafe and 7th avenue的节点，（8，11）]\nNODE[21,ROAD,name=west 44rd and The Lambs Club的节点，（8，15）]\nNODE[22,ROAD,name=west 50rd and The Lambs Club的节点，（10，17）]\nNODE[23,ROAD,name=west 50rd and 6th avenue的节点，（8，19）]\nNODE[24,ROAD,name=Chase and 6th avenue的节点，（6，18）]\nNODE[25,ROAD,name=west 46rd and 6th avenue的节点，（14，23）]\nNODE[26,ROAD,name=west 46rd and Del Frisco's Double Eagle Steakhouse的节点，（16，21）]\nNODE[27,ROAD,name=west 46rd and 7th avenue的节点，（18，19）]\nNODE[28,ROAD,name=7th avenue and The Playwright的节点，（16，17）]\nNODE[29,ROAD,name=west 50rd and 50th street的节点，（14，7）]\nNODE[30,ROAD,name=west 50rd and Public School 212的节点，（16，6）]\nNODE[31,ROAD,name=west 44rd and 50th street的节点，（12，6）]\nNODE[32,ROAD,name=west 46rd and 50th street的节点，（22，13）]\nNODE[33,ROAD,name=Duane Reade与50th street的节点，（26，15）]\nNODE[34,ROAD,name=west 50rd and Chase的节点，（6，21）]\nNODE[35,ROAD,name=位置_61，（3，25）]\nNODE[36,ROAD,name=位置_63，（4，23）]\nNODE[37,ROAD,name=位置_65，（5，22）]\n\n## 道路列表\nROAD[道路坐标]\nROAD[（2，24），（2，25），（3，24），（3，25），（3，26），（4，8），（4，9），（4，19），（4，23），（4，26），（5，7），（5，10），（5，18），（5，22），（6，5），（6，6），（6，9），（6，10），（6，11），（6，13），（6，14），（6，15），（6，18），（6，21），（7，6），（7，9），（7，11），（7，13），（7，15），（7，18），（7，20），（8，7），（8，9），（8，11），（8，12），（8，13），（8，15），（8，16），（8，17），（8，19），（9，10），（9，12），（9，13），（9，17），（9，18），（9，20），（10，11），（10，13），（10，17），（10，20），（11，14），（11，16），（11，21），（12，6），（12，11），（12，15），（12，22），（13，5），（13，6），（13，12），（13，14），（13，16），（13，22），（14，4），（14，7），（14，8），（14，9），（14，10），（14，11），（14，12），（14，13），（14，16），（14，20），（14，23），（15，3），（15，6），（15，8），（15，16），（15，20），（15，22），（16，2），（16，6），（16，8），（16，17），（16，21），（17，6），（17，9），（17，16），（17，18），（17，20），（18，7），（18，10），（18，15），（18，19），（19，11），（19，17），（19，18），（20，12），（20，16），（21，12），（21，14），（21，15），（22，13），（23，14），（24，14），（25，14），（26，15），（26，16），（26，17）]",
+    "context_mode": "map"
+  }
+}

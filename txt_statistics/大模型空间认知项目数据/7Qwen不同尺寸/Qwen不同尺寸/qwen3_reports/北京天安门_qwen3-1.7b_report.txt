@@ -1,0 +1,5214 @@
+{
+  "region": "北京天安门",
+  "model": "qwen3-1.7b",
+  "exploration_report": {
+    "exploration_path": [
+      {
+        "location": [
+          39.903938852355154,
+          116.40771080367652
+        ],
+        "timestamp": "2025-12-27T17:57:52.557261",
+        "action": "move_start",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "隆和居",
+          "target_location": [
+            39.903160951000075,
+            116.40601931300012
+          ]
+        }
+      },
+      {
+        "location": [
+          39.90376254800003,
+          116.40671372700001
+        ],
+        "timestamp": "2025-12-27T17:57:52.557261",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "隆和居",
+          "target_location": [
+            39.903160951000075,
+            116.40601931300012
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          39.90316044800005,
+          116.40672467600007
+        ],
+        "timestamp": "2025-12-27T17:57:53.067028",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "隆和居",
+          "target_location": [
+            39.903160951000075,
+            116.40601931300012
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          39.903160951000075,
+          116.40601931300012
+        ],
+        "timestamp": "2025-12-27T17:57:53.571068",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "隆和居",
+          "target_location": [
+            39.903160951000075,
+            116.40601931300012
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          39.90316044800005,
+          116.40672467600007
+        ],
+        "timestamp": "2025-12-27T17:57:56.627299",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "四季回头特色菜馆",
+          "target_location": [
+            39.904328433000046,
+            116.40752500000008
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          39.90376254800003,
+          116.40671372700001
+        ],
+        "timestamp": "2025-12-27T17:57:57.146939",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "四季回头特色菜馆",
+          "target_location": [
+            39.904328433000046,
+            116.40752500000008
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          39.90376120500008,
+          116.40739646000009
+        ],
+        "timestamp": "2025-12-27T17:57:57.647229",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "四季回头特色菜馆",
+          "target_location": [
+            39.904328433000046,
+            116.40752500000008
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          39.904328433000046,
+          116.40752500000008
+        ],
+        "timestamp": "2025-12-27T17:57:58.162948",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "四季回头特色菜馆",
+          "target_location": [
+            39.904328433000046,
+            116.40752500000008
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          39.90432795100003,
+          116.40668908200007
+        ],
+        "timestamp": "2025-12-27T17:58:01.292206",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "正义路1号院",
+          "target_location": [
+            39.90618000000006,
+            116.40760000000012
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          39.90613805100003,
+          116.40661135700009
+        ],
+        "timestamp": "2025-12-27T17:58:01.765229",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "正义路1号院",
+          "target_location": [
+            39.90618000000006,
+            116.40760000000012
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          39.90618000000006,
+          116.40760000000012
+        ],
+        "timestamp": "2025-12-27T17:58:02.284231",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "正义路1号院",
+          "target_location": [
+            39.90618000000006,
+            116.40760000000012
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          39.9061783809508,
+          116.40756184267292
+        ],
+        "timestamp": "2025-12-27T17:58:06.449381",
+        "action": "move_final_approach",
+        "decision": {
+          "action": "explore_direction",
+          "target": 180.0,
+          "reason": "No unvisited interesting POIs visible."
+        }
+      },
+      {
+        "location": [
+          39.90613805100003,
+          116.40661135700009
+        ],
+        "timestamp": "2025-12-27T17:58:09.654140",
+        "action": "move_road_step",
+        "decision": {
+          "action": "explore_direction",
+          "target": 270.0,
+          "reason": "No unvisited interesting POIs visible.",
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          39.906193014420886,
+          116.40660770594069
+        ],
+        "timestamp": "2025-12-27T17:58:10.151561",
+        "action": "move_final_approach",
+        "decision": {
+          "action": "explore_direction",
+          "target": 270.0,
+          "reason": "No unvisited interesting POIs visible."
+        }
+      },
+      {
+        "location": [
+          39.907841242000075,
+          116.40649821900001
+        ],
+        "timestamp": "2025-12-27T17:58:14.163965",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "长安大厦(东长安街)",
+          "target_location": [
+            39.90723864300003,
+            116.40890471400007
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          39.90791197200008,
+          116.40904452000007
+        ],
+        "timestamp": "2025-12-27T17:58:14.665873",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "长安大厦(东长安街)",
+          "target_location": [
+            39.90723864300003,
+            116.40890471400007
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          39.90723864300003,
+          116.40890471400007
+        ],
+        "timestamp": "2025-12-27T17:58:15.148342",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "长安大厦(东长安街)",
+          "target_location": [
+            39.90723864300003,
+            116.40890471400007
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          39.90791197200008,
+          116.40904452000007
+        ],
+        "timestamp": "2025-12-27T17:58:19.110964",
+        "action": "move_road_step",
+        "decision": {
+          "action": "explore_direction",
+          "target": 0.0,
+          "reason": "No interesting POIs visible.",
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          39.907908266983576,
+          116.40891113830591
+        ],
+        "timestamp": "2025-12-27T17:58:19.596006",
+        "action": "move_final_approach",
+        "decision": {
+          "action": "explore_direction",
+          "target": 0.0,
+          "reason": "No interesting POIs visible."
+        }
+      },
+      {
+        "location": [
+          39.90790896157575,
+          116.40893614383049
+        ],
+        "timestamp": "2025-12-27T17:58:22.498541",
+        "action": "move_final_approach",
+        "decision": {
+          "action": "explore_direction",
+          "target": 0.0,
+          "reason": "No interesting POIs visible."
+        }
+      },
+      {
+        "location": [
+          39.90790965616793,
+          116.40896114935506
+        ],
+        "timestamp": "2025-12-27T17:58:25.476109",
+        "action": "move_final_approach",
+        "decision": {
+          "action": "explore_direction",
+          "target": 0.0,
+          "reason": "No interesting POIs visible."
+        }
+      },
+      {
+        "location": [
+          39.907910350760105,
+          116.40898615487964
+        ],
+        "timestamp": "2025-12-27T17:58:28.706299",
+        "action": "move_final_approach",
+        "decision": {
+          "action": "explore_direction",
+          "target": 0.0,
+          "reason": "No interesting POIs visible."
+        }
+      },
+      {
+        "location": [
+          39.90795835700004,
+          116.41151851500001
+        ],
+        "timestamp": "2025-12-27T17:58:32.701654",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "北京东方广场",
+          "target_location": [
+            39.909489000000065,
+            116.41452800000002
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          39.90803203300004,
+          116.41323930100009
+        ],
+        "timestamp": "2025-12-27T17:58:33.191140",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "北京东方广场",
+          "target_location": [
+            39.909489000000065,
+            116.41452800000002
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          39.90807788700005,
+          116.4147490470001
+        ],
+        "timestamp": "2025-12-27T17:58:33.691477",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "北京东方广场",
+          "target_location": [
+            39.909489000000065,
+            116.41452800000002
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          39.909489000000065,
+          116.41452800000002
+        ],
+        "timestamp": "2025-12-27T17:58:34.195982",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "北京东方广场",
+          "target_location": [
+            39.909489000000065,
+            116.41452800000002
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          39.90807788700005,
+          116.4147490470001
+        ],
+        "timestamp": "2025-12-27T17:58:37.325053",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "东方广场W1座",
+          "target_location": [
+            39.909092000000044,
+            116.41313400000001
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          39.90803203300004,
+          116.41323930100009
+        ],
+        "timestamp": "2025-12-27T17:58:37.841383",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "东方广场W1座",
+          "target_location": [
+            39.909092000000044,
+            116.41313400000001
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          39.909092000000044,
+          116.41313400000001
+        ],
+        "timestamp": "2025-12-27T17:58:38.340872",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "东方广场W1座",
+          "target_location": [
+            39.909092000000044,
+            116.41313400000001
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          39.90803203300004,
+          116.41323930100009
+        ],
+        "timestamp": "2025-12-27T17:58:41.359143",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "霞公府",
+          "target_location": [
+            39.90964891100003,
+            116.40813283000011
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          39.90795835700004,
+          116.41151851500001
+        ],
+        "timestamp": "2025-12-27T17:58:41.876728",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "霞公府",
+          "target_location": [
+            39.90964891100003,
+            116.40813283000011
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          39.90791197200008,
+          116.40904452000007
+        ],
+        "timestamp": "2025-12-27T17:58:42.381042",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "霞公府",
+          "target_location": [
+            39.90964891100003,
+            116.40813283000011
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          39.907841242000075,
+          116.40649821900001
+        ],
+        "timestamp": "2025-12-27T17:58:42.900085",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "霞公府",
+          "target_location": [
+            39.90964891100003,
+            116.40813283000011
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          39.90967206600004,
+          116.40672722500005
+        ],
+        "timestamp": "2025-12-27T17:58:43.402510",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "霞公府",
+          "target_location": [
+            39.90964891100003,
+            116.40813283000011
+          ],
+          "step_index": 5
+        }
+      },
+      {
+        "location": [
+          39.90964891100003,
+          116.40813283000011
+        ],
+        "timestamp": "2025-12-27T17:58:43.901238",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "霞公府",
+          "target_location": [
+            39.90964891100003,
+            116.40813283000011
+          ],
+          "step_index": 6
+        }
+      },
+      {
+        "location": [
+          39.90967206600004,
+          116.40672722500005
+        ],
+        "timestamp": "2025-12-27T17:58:47.192063",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "天安门东(地铁站)",
+          "target_location": [
+            39.908479562000025,
+            116.40105895600004
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          39.907841242000075,
+          116.40649821900001
+        ],
+        "timestamp": "2025-12-27T17:58:47.686671",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "天安门东(地铁站)",
+          "target_location": [
+            39.908479562000025,
+            116.40105895600004
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          39.907678747000034,
+          116.40310962900003
+        ],
+        "timestamp": "2025-12-27T17:58:48.184976",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "天安门东(地铁站)",
+          "target_location": [
+            39.908479562000025,
+            116.40105895600004
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          39.907752937000055,
+          116.40234579000003
+        ],
+        "timestamp": "2025-12-27T17:58:48.699492",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "天安门东(地铁站)",
+          "target_location": [
+            39.908479562000025,
+            116.40105895600004
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          39.90781625000005,
+          116.40106935600011
+        ],
+        "timestamp": "2025-12-27T17:58:49.201142",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "天安门东(地铁站)",
+          "target_location": [
+            39.908479562000025,
+            116.40105895600004
+          ],
+          "step_index": 5
+        }
+      },
+      {
+        "location": [
+          39.908479562000025,
+          116.40105895600004
+        ],
+        "timestamp": "2025-12-27T17:58:49.702246",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "天安门东(地铁站)",
+          "target_location": [
+            39.908479562000025,
+            116.40105895600004
+          ],
+          "step_index": 6
+        }
+      },
+      {
+        "location": [
+          39.90781625000005,
+          116.40106935600011
+        ],
+        "timestamp": "2025-12-27T17:58:53.079002",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "天安门东地铁站D西南口",
+          "target_location": [
+            39.90723208900005,
+            116.40103181200004
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          39.90723208900005,
+          116.40103181200004
+        ],
+        "timestamp": "2025-12-27T17:58:53.600791",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "天安门东地铁站D西南口",
+          "target_location": [
+            39.90723208900005,
+            116.40103181200004
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          39.90781625000005,
+          116.40106935600011
+        ],
+        "timestamp": "2025-12-27T17:58:58.803287",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "天安门东地铁站B东北口",
+          "target_location": [
+            39.90845953500008,
+            116.40240138400009
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          39.907752937000055,
+          116.40234579000003
+        ],
+        "timestamp": "2025-12-27T17:58:59.316061",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "天安门东地铁站B东北口",
+          "target_location": [
+            39.90845953500008,
+            116.40240138400009
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          39.90845953500008,
+          116.40240138400009
+        ],
+        "timestamp": "2025-12-27T17:58:59.835921",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "天安门东地铁站B东北口",
+          "target_location": [
+            39.90845953500008,
+            116.40240138400009
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          39.907752937000055,
+          116.40234579000003
+        ],
+        "timestamp": "2025-12-27T17:59:02.978672",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "东方捷路地下停车场",
+          "target_location": [
+            39.90907167900008,
+            116.40320401800011
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          39.907678747000034,
+          116.40310962900003
+        ],
+        "timestamp": "2025-12-27T17:59:03.491434",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "东方捷路地下停车场",
+          "target_location": [
+            39.90907167900008,
+            116.40320401800011
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          39.90907167900008,
+          116.40320401800011
+        ],
+        "timestamp": "2025-12-27T17:59:03.993149",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "东方捷路地下停车场",
+          "target_location": [
+            39.90907167900008,
+            116.40320401800011
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          39.907678747000034,
+          116.40310962900003
+        ],
+        "timestamp": "2025-12-27T17:59:07.086933",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "前门东大街23号院",
+          "target_location": [
+            39.90141217000007,
+            116.40167232100009
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          39.907841242000075,
+          116.40649821900001
+        ],
+        "timestamp": "2025-12-27T17:59:07.608005",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "前门东大街23号院",
+          "target_location": [
+            39.90141217000007,
+            116.40167232100009
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          39.90613805100003,
+          116.40661135700009
+        ],
+        "timestamp": "2025-12-27T17:59:08.095374",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "前门东大街23号院",
+          "target_location": [
+            39.90141217000007,
+            116.40167232100009
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          39.90432795100003,
+          116.40668908200007
+        ],
+        "timestamp": "2025-12-27T17:59:08.611530",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "前门东大街23号院",
+          "target_location": [
+            39.90141217000007,
+            116.40167232100009
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          39.90376254800003,
+          116.40671372700001
+        ],
+        "timestamp": "2025-12-27T17:59:09.112120",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "前门东大街23号院",
+          "target_location": [
+            39.90141217000007,
+            116.40167232100009
+          ],
+          "step_index": 5
+        }
+      },
+      {
+        "location": [
+          39.90316044800005,
+          116.40672467600007
+        ],
+        "timestamp": "2025-12-27T17:59:09.616010",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "前门东大街23号院",
+          "target_location": [
+            39.90141217000007,
+            116.40167232100009
+          ],
+          "step_index": 6
+        }
+      },
+      {
+        "location": [
+          39.90261777000006,
+          116.40672524100012
+        ],
+        "timestamp": "2025-12-27T17:59:10.121959",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "前门东大街23号院",
+          "target_location": [
+            39.90141217000007,
+            116.40167232100009
+          ],
+          "step_index": 7
+        }
+      },
+      {
+        "location": [
+          39.90204126100008,
+          116.40672655000003
+        ],
+        "timestamp": "2025-12-27T17:59:10.610086",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "前门东大街23号院",
+          "target_location": [
+            39.90141217000007,
+            116.40167232100009
+          ],
+          "step_index": 8
+        }
+      },
+      {
+        "location": [
+          39.90084355500005,
+          116.40673673600008
+        ],
+        "timestamp": "2025-12-27T17:59:11.112966",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "前门东大街23号院",
+          "target_location": [
+            39.90141217000007,
+            116.40167232100009
+          ],
+          "step_index": 9
+        }
+      },
+      {
+        "location": [
+          39.900711013000034,
+          116.40165667000008
+        ],
+        "timestamp": "2025-12-27T17:59:11.600274",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "前门东大街23号院",
+          "target_location": [
+            39.90141217000007,
+            116.40167232100009
+          ],
+          "step_index": 10
+        }
+      },
+      {
+        "location": [
+          39.90141217000007,
+          116.40167232100009
+        ],
+        "timestamp": "2025-12-27T17:59:12.095556",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "前门东大街23号院",
+          "target_location": [
+            39.90141217000007,
+            116.40167232100009
+          ],
+          "step_index": 11
+        }
+      },
+      {
+        "location": [
+          39.900711013000034,
+          116.40165667000008
+        ],
+        "timestamp": "2025-12-27T17:59:14.988757",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "前门(公交站)",
+          "target_location": [
+            39.89897088300006,
+            116.40162254300003
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          39.89897088300006,
+          116.40162254300003
+        ],
+        "timestamp": "2025-12-27T17:59:15.499305",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "前门(公交站)",
+          "target_location": [
+            39.89897088300006,
+            116.40162254300003
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          39.900711013000034,
+          116.40165667000008
+        ],
+        "timestamp": "2025-12-27T17:59:18.770553",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "正义路社区服务站",
+          "target_location": [
+            39.90201115700006,
+            116.40607625900009
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          39.90084355500005,
+          116.40673673600008
+        ],
+        "timestamp": "2025-12-27T17:59:19.283859",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "正义路社区服务站",
+          "target_location": [
+            39.90201115700006,
+            116.40607625900009
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          39.90204126100008,
+          116.40672655000003
+        ],
+        "timestamp": "2025-12-27T17:59:19.784425",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "正义路社区服务站",
+          "target_location": [
+            39.90201115700006,
+            116.40607625900009
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          39.90201115700006,
+          116.40607625900009
+        ],
+        "timestamp": "2025-12-27T17:59:20.302423",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "正义路社区服务站",
+          "target_location": [
+            39.90201115700006,
+            116.40607625900009
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          39.90204126100008,
+          116.40672655000003
+        ],
+        "timestamp": "2025-12-27T17:59:25.391728",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "正义路10号院",
+          "target_location": [
+            39.90257634000005,
+            116.4060098000001
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          39.90261777000006,
+          116.40672524100012
+        ],
+        "timestamp": "2025-12-27T17:59:25.903026",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "正义路10号院",
+          "target_location": [
+            39.90257634000005,
+            116.4060098000001
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          39.90257634000005,
+          116.4060098000001
+        ],
+        "timestamp": "2025-12-27T17:59:26.405719",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "正义路10号院",
+          "target_location": [
+            39.90257634000005,
+            116.4060098000001
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          39.90261777000006,
+          116.40672524100012
+        ],
+        "timestamp": "2025-12-27T17:59:29.416168",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "正义路3号院",
+          "target_location": [
+            39.90376120500008,
+            116.40739646000009
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          39.90316044800005,
+          116.40672467600007
+        ],
+        "timestamp": "2025-12-27T17:59:29.914885",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "正义路3号院",
+          "target_location": [
+            39.90376120500008,
+            116.40739646000009
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          39.90376254800003,
+          116.40671372700001
+        ],
+        "timestamp": "2025-12-27T17:59:30.420487",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "正义路3号院",
+          "target_location": [
+            39.90376120500008,
+            116.40739646000009
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          39.90376120500008,
+          116.40739646000009
+        ],
+        "timestamp": "2025-12-27T17:59:30.923755",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "正义路3号院",
+          "target_location": [
+            39.90376120500008,
+            116.40739646000009
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          39.90376254800003,
+          116.40671372700001
+        ],
+        "timestamp": "2025-12-27T17:59:34.009600",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "东方广场W3座",
+          "target_location": [
+            39.90965078600004,
+            116.41233635700007
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          39.90432795100003,
+          116.40668908200007
+        ],
+        "timestamp": "2025-12-27T17:59:34.515103",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "东方广场W3座",
+          "target_location": [
+            39.90965078600004,
+            116.41233635700007
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          39.90613805100003,
+          116.40661135700009
+        ],
+        "timestamp": "2025-12-27T17:59:35.028247",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "东方广场W3座",
+          "target_location": [
+            39.90965078600004,
+            116.41233635700007
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          39.907841242000075,
+          116.40649821900001
+        ],
+        "timestamp": "2025-12-27T17:59:35.539187",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "东方广场W3座",
+          "target_location": [
+            39.90965078600004,
+            116.41233635700007
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          39.90791197200008,
+          116.40904452000007
+        ],
+        "timestamp": "2025-12-27T17:59:36.041194",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "东方广场W3座",
+          "target_location": [
+            39.90965078600004,
+            116.41233635700007
+          ],
+          "step_index": 5
+        }
+      },
+      {
+        "location": [
+          39.90795835700004,
+          116.41151851500001
+        ],
+        "timestamp": "2025-12-27T17:59:36.559049",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "东方广场W3座",
+          "target_location": [
+            39.90965078600004,
+            116.41233635700007
+          ],
+          "step_index": 6
+        }
+      },
+      {
+        "location": [
+          39.90979238700004,
+          116.41147141700003
+        ],
+        "timestamp": "2025-12-27T17:59:37.062716",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "东方广场W3座",
+          "target_location": [
+            39.90965078600004,
+            116.41233635700007
+          ],
+          "step_index": 7
+        }
+      },
+      {
+        "location": [
+          39.90965078600004,
+          116.41233635700007
+        ],
+        "timestamp": "2025-12-27T17:59:37.548066",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "东方广场W3座",
+          "target_location": [
+            39.90965078600004,
+            116.41233635700007
+          ],
+          "step_index": 8
+        }
+      },
+      {
+        "location": [
+          39.90979238700004,
+          116.41147141700003
+        ],
+        "timestamp": "2025-12-27T17:59:40.506728",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "王府井喜悦购物中心地下停车场",
+          "target_location": [
+            39.90959060700004,
+            116.41088510700001
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          39.90959060700004,
+          116.41088510700001
+        ],
+        "timestamp": "2025-12-27T17:59:41.028456",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "王府井喜悦购物中心地下停车场",
+          "target_location": [
+            39.90959060700004,
+            116.41088510700001
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          39.90979238700004,
+          116.41147141700003
+        ],
+        "timestamp": "2025-12-27T17:59:44.126876",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "北京东交民巷饭店写字楼",
+          "target_location": [
+            39.90313513000007,
+            116.40809412500005
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          39.90795835700004,
+          116.41151851500001
+        ],
+        "timestamp": "2025-12-27T17:59:44.636938",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "北京东交民巷饭店写字楼",
+          "target_location": [
+            39.90313513000007,
+            116.40809412500005
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          39.90791197200008,
+          116.40904452000007
+        ],
+        "timestamp": "2025-12-27T17:59:45.139329",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "北京东交民巷饭店写字楼",
+          "target_location": [
+            39.90313513000007,
+            116.40809412500005
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          39.907841242000075,
+          116.40649821900001
+        ],
+        "timestamp": "2025-12-27T17:59:45.641070",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "北京东交民巷饭店写字楼",
+          "target_location": [
+            39.90313513000007,
+            116.40809412500005
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          39.90613805100003,
+          116.40661135700009
+        ],
+        "timestamp": "2025-12-27T17:59:46.170508",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "北京东交民巷饭店写字楼",
+          "target_location": [
+            39.90313513000007,
+            116.40809412500005
+          ],
+          "step_index": 5
+        }
+      },
+      {
+        "location": [
+          39.90432795100003,
+          116.40668908200007
+        ],
+        "timestamp": "2025-12-27T17:59:46.686940",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "北京东交民巷饭店写字楼",
+          "target_location": [
+            39.90313513000007,
+            116.40809412500005
+          ],
+          "step_index": 6
+        }
+      },
+      {
+        "location": [
+          39.904328433000046,
+          116.40752500000008
+        ],
+        "timestamp": "2025-12-27T17:59:47.173932",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "北京东交民巷饭店写字楼",
+          "target_location": [
+            39.90313513000007,
+            116.40809412500005
+          ],
+          "step_index": 7
+        }
+      },
+      {
+        "location": [
+          39.90313513000007,
+          116.40809412500005
+        ],
+        "timestamp": "2025-12-27T17:59:47.680223",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "北京东交民巷饭店写字楼",
+          "target_location": [
+            39.90313513000007,
+            116.40809412500005
+          ],
+          "step_index": 8
+        }
+      },
+      {
+        "location": [
+          39.904328433000046,
+          116.40752500000008
+        ],
+        "timestamp": "2025-12-27T17:59:52.790116",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "宝鼎中心",
+          "target_location": [
+            39.89959012500003,
+            116.41310850900004
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          39.90376120500008,
+          116.40739646000009
+        ],
+        "timestamp": "2025-12-27T17:59:53.269945",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "宝鼎中心",
+          "target_location": [
+            39.89959012500003,
+            116.41310850900004
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          39.90376254800003,
+          116.40671372700001
+        ],
+        "timestamp": "2025-12-27T17:59:53.786362",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "宝鼎中心",
+          "target_location": [
+            39.89959012500003,
+            116.41310850900004
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          39.90316044800005,
+          116.40672467600007
+        ],
+        "timestamp": "2025-12-27T17:59:54.295360",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "宝鼎中心",
+          "target_location": [
+            39.89959012500003,
+            116.41310850900004
+          ],
+          "step_index": 4
+        }
+      },
+      {
+        "location": [
+          39.90261777000006,
+          116.40672524100012
+        ],
+        "timestamp": "2025-12-27T17:59:54.799001",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "宝鼎中心",
+          "target_location": [
+            39.89959012500003,
+            116.41310850900004
+          ],
+          "step_index": 5
+        }
+      },
+      {
+        "location": [
+          39.90204126100008,
+          116.40672655000003
+        ],
+        "timestamp": "2025-12-27T17:59:55.298892",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "宝鼎中心",
+          "target_location": [
+            39.89959012500003,
+            116.41310850900004
+          ],
+          "step_index": 6
+        }
+      },
+      {
+        "location": [
+          39.90084355500005,
+          116.40673673600008
+        ],
+        "timestamp": "2025-12-27T17:59:55.801877",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "宝鼎中心",
+          "target_location": [
+            39.89959012500003,
+            116.41310850900004
+          ],
+          "step_index": 7
+        }
+      },
+      {
+        "location": [
+          39.90092275600006,
+          116.41177961300002
+        ],
+        "timestamp": "2025-12-27T17:59:56.309682",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "宝鼎中心",
+          "target_location": [
+            39.89959012500003,
+            116.41310850900004
+          ],
+          "step_index": 8
+        }
+      },
+      {
+        "location": [
+          39.89974304000003,
+          116.41185250800004
+        ],
+        "timestamp": "2025-12-27T17:59:56.808435",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "宝鼎中心",
+          "target_location": [
+            39.89959012500003,
+            116.41310850900004
+          ],
+          "step_index": 9
+        }
+      },
+      {
+        "location": [
+          39.89959012500003,
+          116.41310850900004
+        ],
+        "timestamp": "2025-12-27T17:59:57.326106",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "宝鼎中心",
+          "target_location": [
+            39.89959012500003,
+            116.41310850900004
+          ],
+          "step_index": 10
+        }
+      },
+      {
+        "location": [
+          39.89974304000003,
+          116.41185250800004
+        ],
+        "timestamp": "2025-12-27T18:00:00.371546",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "新怡家园",
+          "target_location": [
+            39.89829283300003,
+            116.41446191800003
+          ],
+          "step_index": 1
+        }
+      },
+      {
+        "location": [
+          39.898359105000054,
+          116.41191034700012
+        ],
+        "timestamp": "2025-12-27T18:00:00.870168",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "新怡家园",
+          "target_location": [
+            39.89829283300003,
+            116.41446191800003
+          ],
+          "step_index": 2
+        }
+      },
+      {
+        "location": [
+          39.89829283300003,
+          116.41446191800003
+        ],
+        "timestamp": "2025-12-27T18:00:01.355966",
+        "action": "move_road_step",
+        "decision": {
+          "action": "move_to_poi",
+          "target": "新怡家园",
+          "target_location": [
+            39.89829283300003,
+            116.41446191800003
+          ],
+          "step_index": 3
+        }
+      },
+      {
+        "location": [
+          39.898293440335976,
+          116.41443853465888
+        ],
+        "timestamp": "2025-12-27T18:00:04.431763",
+        "action": "move_final_approach",
+        "decision": {
+          "action": "explore_direction",
+          "target": 0.0,
+          "reason": "No POIs visible nearby. Suggest exploring a direction."
+        }
+      },
+      {
+        "location": [
+          39.89829283300003,
+          116.41446191800003
+        ],
+        "timestamp": "2025-12-27T18:00:06.387509",
+        "action": "move_final_approach",
+        "decision": {
+          "action": "explore_direction",
+          "target": 180.0,
+          "reason": "No POIs visible nearby. Suggest exploring a direction."
+        }
+      },
+      {
+        "location": [
+          39.898323312432744,
+          116.41328841430958
+        ],
+        "timestamp": "2025-12-27T18:00:10.367185",
+        "action": "move_final_approach",
+        "decision": {
+          "action": "explore_direction",
+          "target": 270.0,
+          "reason": "No POIs visible nearby. Suggest exploring a direction."
+        }
+      }
+    ],
+    "visited_pois": [
+      "17",
+      "6",
+      "19",
+      "14",
+      "0",
+      "1",
+      "5",
+      "12",
+      "2",
+      "7",
+      "13",
+      "4",
+      "11",
+      "18",
+      "15",
+      "20",
+      "3",
+      "9",
+      "10",
+      "8",
+      "16"
+    ],
+    "interesting_pois": [
+      {
+        "poi": {
+          "id": "0",
+          "name": "金钟广场",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.227518195000073,
+            121.47435677800001
+          ],
+          "address": "淮海中路98号(近柳林路)(大世界地铁站3号口步行80米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:16:04.820343"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "普安路延安东路(公交站)",
+          "type": "交通设施服务;公交车站;公交车站相关",
+          "location": [
+            31.228637666000054,
+            121.4716006320001
+          ],
+          "address": "775路;782路;783路;934路;DZ普南线;沪朱高速定班线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:16:10.029903"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "香港广场北座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.225913330000026,
+            121.47040318600011
+          ],
+          "address": "淮海中路282号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:16:15.772918"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "东淮海国际大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.227988152000023,
+            121.47777120800004
+          ],
+          "address": "淮海东路45-47号(大世界地铁站5号口步行220米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:16:20.480996"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "露香园",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            31.228072952000048,
+            121.47999372400011
+          ],
+          "address": "露香苑路88(豫园地铁站3号口步行420米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:16:24.524535"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "黄浦区机关办公大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.233631914000057,
+            121.48001820100001
+          ],
+          "address": "山东中路1号(豫园地铁站5号口步行460米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:16:30.044450"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "上海市青莲阁大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.234747723000055,
+            121.47607018500003
+          ],
+          "address": "福州路515号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:16:34.410181"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "上海黄浦区图书馆大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.234101490000057,
+            121.47438925300003
+          ],
+          "address": "福州路655号(人民广场地铁站15号口步行360米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:16:40.234452"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "人民广场地铁站1号口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            31.233123699000032,
+            121.47207070000002
+          ],
+          "address": "1号线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:16:43.030783"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "上海市青莲阁大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.234747723000055,
+            121.47607018500003
+          ],
+          "address": "福州路515号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:18:22.022991"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "上海黄浦区图书馆大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.234101490000057,
+            121.47438925300003
+          ],
+          "address": "福州路655号(人民广场地铁站15号口步行360米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:18:25.182138"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "人民广场地铁站1号口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            31.233123699000032,
+            121.47207070000002
+          ],
+          "address": "1号线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:18:29.211744"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "普安路延安东路(公交站)",
+          "type": "交通设施服务;公交车站;公交车站相关",
+          "location": [
+            31.228637666000054,
+            121.4716006320001
+          ],
+          "address": "775路;782路;783路;934路;DZ普南线;沪朱高速定班线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:18:34.087076"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "金钟广场",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.227518195000073,
+            121.47435677800001
+          ],
+          "address": "淮海中路98号(近柳林路)(大世界地铁站3号口步行80米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:18:40.410391"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "东淮海国际大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.227988152000023,
+            121.47777120800004
+          ],
+          "address": "淮海东路45-47号(大世界地铁站5号口步行220米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:18:44.748076"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "露香园",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            31.228072952000048,
+            121.47999372400011
+          ],
+          "address": "露香苑路88(豫园地铁站3号口步行420米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:18:50.020308"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "黄浦区机关办公大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.233631914000057,
+            121.48001820100001
+          ],
+          "address": "山东中路1号(豫园地铁站5号口步行460米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:18:58.291829"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "香港广场北座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.225913330000026,
+            121.47040318600011
+          ],
+          "address": "淮海中路282号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:19:05.083286"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "金钟广场",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.227518195000073,
+            121.47435677800001
+          ],
+          "address": "淮海中路98号(近柳林路)(大世界地铁站3号口步行80米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:21:25.862412"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "东淮海国际大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.227988152000023,
+            121.47777120800004
+          ],
+          "address": "淮海东路45-47号(大世界地铁站5号口步行220米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:21:29.424165"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "露香园",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            31.228072952000048,
+            121.47999372400011
+          ],
+          "address": "露香苑路88(豫园地铁站3号口步行420米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:21:33.552416"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "黄浦区机关办公大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.233631914000057,
+            121.48001820100001
+          ],
+          "address": "山东中路1号(豫园地铁站5号口步行460米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:21:38.450215"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "上海市青莲阁大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.234747723000055,
+            121.47607018500003
+          ],
+          "address": "福州路515号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:21:42.643430"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "上海黄浦区图书馆大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.234101490000057,
+            121.47438925300003
+          ],
+          "address": "福州路655号(人民广场地铁站15号口步行360米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:21:45.509636"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "人民广场地铁站1号口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            31.233123699000032,
+            121.47207070000002
+          ],
+          "address": "1号线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:21:48.392978"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "普安路延安东路(公交站)",
+          "type": "交通设施服务;公交车站;公交车站相关",
+          "location": [
+            31.228637666000054,
+            121.4716006320001
+          ],
+          "address": "775路;782路;783路;934路;DZ普南线;沪朱高速定班线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:21:55.645234"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "香港广场北座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.225913330000026,
+            121.47040318600011
+          ],
+          "address": "淮海中路282号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:22:01.202526"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "金钟广场",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.227518195000073,
+            121.47435677800001
+          ],
+          "address": "淮海中路98号(近柳林路)(大世界地铁站3号口步行80米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:24:02.832740"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "东淮海国际大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.227988152000023,
+            121.47777120800004
+          ],
+          "address": "淮海东路45-47号(大世界地铁站5号口步行220米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:24:06.516118"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "露香园",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            31.228072952000048,
+            121.47999372400011
+          ],
+          "address": "露香苑路88(豫园地铁站3号口步行420米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:24:10.718886"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "普安路延安东路(公交站)",
+          "type": "交通设施服务;公交车站;公交车站相关",
+          "location": [
+            31.228637666000054,
+            121.4716006320001
+          ],
+          "address": "775路;782路;783路;934路;DZ普南线;沪朱高速定班线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:24:15.217888"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "香港广场北座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.225913330000026,
+            121.47040318600011
+          ],
+          "address": "淮海中路282号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:24:20.759222"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "人民广场地铁站1号口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            31.233123699000032,
+            121.47207070000002
+          ],
+          "address": "1号线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:24:26.285201"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "上海黄浦区图书馆大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.234101490000057,
+            121.47438925300003
+          ],
+          "address": "福州路655号(人民广场地铁站15号口步行360米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:24:28.835011"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "上海市青莲阁大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.234747723000055,
+            121.47607018500003
+          ],
+          "address": "福州路515号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:24:34.129325"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "黄浦区机关办公大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.233631914000057,
+            121.48001820100001
+          ],
+          "address": "山东中路1号(豫园地铁站5号口步行460米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:24:37.930939"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "金钟广场",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.227518195000073,
+            121.47435677800001
+          ],
+          "address": "淮海中路98号(近柳林路)(大世界地铁站3号口步行80米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:26:02.636817"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "东淮海国际大厦",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.227988152000023,
+            121.47777120800004
+          ],
+          "address": "淮海东路45-47号(大世界地铁站5号口步行220米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:26:07.584957"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "普安路延安东路(公交站)",
+          "type": "交通设施服务;公交车站;公交车站相关",
+          "location": [
+            31.228637666000054,
+            121.4716006320001
+          ],
+          "address": "775路;782路;783路;934路;DZ普南线;沪朱高速定班线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:26:13.836670"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "人民广场地铁站1号口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            31.233123699000032,
+            121.47207070000002
+          ],
+          "address": "1号线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:26:19.525427"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "上海黄浦区图书馆大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.234101490000057,
+            121.47438925300003
+          ],
+          "address": "福州路655号(人民广场地铁站15号口步行360米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:26:24.350180"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "上海市青莲阁大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.234747723000055,
+            121.47607018500003
+          ],
+          "address": "福州路515号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:26:27.259867"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "黄浦区机关办公大楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.233631914000057,
+            121.48001820100001
+          ],
+          "address": "山东中路1号(豫园地铁站5号口步行460米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:26:31.631033"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "露香园",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            31.228072952000048,
+            121.47999372400011
+          ],
+          "address": "露香苑路88(豫园地铁站3号口步行420米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:26:36.467651"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "香港广场北座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            31.225913330000026,
+            121.47040318600011
+          ],
+          "address": "淮海中路282号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:26:41.984793"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "Crussh Bar",
+          "type": "咖啡厅",
+          "location": [
+            51.49707674900003,
+            -0.1262974909999457
+          ],
+          "address": "4, Millbank",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:27:48.262052"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "Quirinale",
+          "type": "餐厅",
+          "location": [
+            51.49782865000003,
+            -0.12702302599996074
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:27:51.331545"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "The Cinnamon Club",
+          "type": "餐厅",
+          "location": [
+            51.49712265100004,
+            -0.12939284899994163
+          ],
+          "address": "30, Great Smith Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:27:56.172804"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "Ashburnham House",
+          "type": "学校",
+          "location": [
+            51.49779130600007,
+            -0.13010317299995222
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:27:58.744530"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "Milne’s House",
+          "type": "学校",
+          "location": [
+            51.49845720700006,
+            -0.13007887299994536
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:28:01.556810"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "Café Fresco",
+          "type": "咖啡厅",
+          "location": [
+            51.49995134200003,
+            -0.13091964599993844
+          ],
+          "address": "11A, Tothill Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:28:04.810308"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "Caffè Nero",
+          "type": "咖啡厅",
+          "location": [
+            51.50144796600006,
+            -0.12475896799998054
+          ],
+          "address": "70, Bridge Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:28:09.115337"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "Zen China",
+          "type": "餐厅",
+          "location": [
+            51.50203248400004,
+            -0.1191967999999406
+          ],
+          "address": "Westminster Bridge Road, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:28:16.102726"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "Aji Zen Canteen",
+          "type": "餐厅",
+          "location": [
+            51.501338012000076,
+            -0.11849747899992735
+          ],
+          "address": "London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:28:20.422909"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "Shepherds Hall",
+          "type": "咖啡厅",
+          "location": [
+            51.498400642000036,
+            -0.11991549099997201
+          ],
+          "address": "249, Westminster Bridge Road, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:28:24.944543"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "Riverside Cafe",
+          "type": "咖啡厅",
+          "location": [
+            51.49488533200008,
+            -0.1216719799999737
+          ],
+          "address": "Albert Embankment, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:28:28.213157"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "PizzaExpress",
+          "type": "餐厅",
+          "location": [
+            51.492804868000064,
+            -0.1255464779999329
+          ],
+          "address": "25, Millbank, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:28:33.764949"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "Footstool",
+          "type": "餐厅",
+          "location": [
+            51.49492566600003,
+            -0.12714988899995205
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:28:38.259040"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "Lloyds Bank",
+          "type": "银行",
+          "location": [
+            51.49564831300006,
+            -0.12697717799994734
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:28:41.256808"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "Wash House",
+          "type": "咖啡厅",
+          "location": [
+            51.496357603000035,
+            -0.1294433629999503
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:28:47.729397"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "Crussh Bar",
+          "type": "咖啡厅",
+          "location": [
+            51.49707674900003,
+            -0.1262974909999457
+          ],
+          "address": "4, Millbank",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:30:37.963856"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "Lloyds Bank",
+          "type": "银行",
+          "location": [
+            51.49564831300006,
+            -0.12697717799994734
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:30:41.754185"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "Footstool",
+          "type": "餐厅",
+          "location": [
+            51.49492566600003,
+            -0.12714988899995205
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:30:45.086303"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "PizzaExpress",
+          "type": "餐厅",
+          "location": [
+            51.492804868000064,
+            -0.1255464779999329
+          ],
+          "address": "25, Millbank, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:30:49.849615"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "Riverside Cafe",
+          "type": "咖啡厅",
+          "location": [
+            51.49488533200008,
+            -0.1216719799999737
+          ],
+          "address": "Albert Embankment, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:30:54.848766"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "Shepherds Hall",
+          "type": "咖啡厅",
+          "location": [
+            51.498400642000036,
+            -0.11991549099997201
+          ],
+          "address": "249, Westminster Bridge Road, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:30:59.274145"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "Zen China",
+          "type": "餐厅",
+          "location": [
+            51.50203248400004,
+            -0.1191967999999406
+          ],
+          "address": "Westminster Bridge Road, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:31:05.092177"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "Aji Zen Canteen",
+          "type": "餐厅",
+          "location": [
+            51.501338012000076,
+            -0.11849747899992735
+          ],
+          "address": "London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:31:13.788631"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "Caffè Nero",
+          "type": "咖啡厅",
+          "location": [
+            51.50144796600006,
+            -0.12475896799998054
+          ],
+          "address": "70, Bridge Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:31:18.822407"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "Quirinale",
+          "type": "餐厅",
+          "location": [
+            51.49782865000003,
+            -0.12702302599996074
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:31:24.400166"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "The Cinnamon Club",
+          "type": "餐厅",
+          "location": [
+            51.49712265100004,
+            -0.12939284899994163
+          ],
+          "address": "30, Great Smith Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:31:29.501545"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "Ashburnham House",
+          "type": "学校",
+          "location": [
+            51.49779130600007,
+            -0.13010317299995222
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:31:33.083328"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "Milne’s House",
+          "type": "学校",
+          "location": [
+            51.49845720700006,
+            -0.13007887299994536
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:31:36.634456"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "Café Fresco",
+          "type": "咖啡厅",
+          "location": [
+            51.49995134200003,
+            -0.13091964599993844
+          ],
+          "address": "11A, Tothill Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:31:40.378092"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "Wash House",
+          "type": "咖啡厅",
+          "location": [
+            51.496357603000035,
+            -0.1294433629999503
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:31:48.788062"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "Crussh Bar",
+          "type": "咖啡厅",
+          "location": [
+            51.49707674900003,
+            -0.1262974909999457
+          ],
+          "address": "4, Millbank",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:33:36.962324"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "Quirinale",
+          "type": "餐厅",
+          "location": [
+            51.49782865000003,
+            -0.12702302599996074
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:33:39.526389"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "Lloyds Bank",
+          "type": "银行",
+          "location": [
+            51.49564831300006,
+            -0.12697717799994734
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:33:43.547825"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "Footstool",
+          "type": "餐厅",
+          "location": [
+            51.49492566600003,
+            -0.12714988899995205
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:33:46.682488"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "PizzaExpress",
+          "type": "餐厅",
+          "location": [
+            51.492804868000064,
+            -0.1255464779999329
+          ],
+          "address": "25, Millbank, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:33:50.855815"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "Riverside Cafe",
+          "type": "咖啡厅",
+          "location": [
+            51.49488533200008,
+            -0.1216719799999737
+          ],
+          "address": "Albert Embankment, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:33:55.270120"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "Shepherds Hall",
+          "type": "咖啡厅",
+          "location": [
+            51.498400642000036,
+            -0.11991549099997201
+          ],
+          "address": "249, Westminster Bridge Road, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:33:59.657762"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "Aji Zen Canteen",
+          "type": "餐厅",
+          "location": [
+            51.501338012000076,
+            -0.11849747899992735
+          ],
+          "address": "London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:34:06.740739"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "Zen China",
+          "type": "餐厅",
+          "location": [
+            51.50203248400004,
+            -0.1191967999999406
+          ],
+          "address": "Westminster Bridge Road, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:34:10.778500"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "Caffè Nero",
+          "type": "咖啡厅",
+          "location": [
+            51.50144796600006,
+            -0.12475896799998054
+          ],
+          "address": "70, Bridge Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:34:14.777566"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "Café Fresco",
+          "type": "咖啡厅",
+          "location": [
+            51.49995134200003,
+            -0.13091964599993844
+          ],
+          "address": "11A, Tothill Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:34:19.489855"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "Milne’s House",
+          "type": "学校",
+          "location": [
+            51.49845720700006,
+            -0.13007887299994536
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:34:22.779905"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "Ashburnham House",
+          "type": "学校",
+          "location": [
+            51.49779130600007,
+            -0.13010317299995222
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:34:25.507552"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "The Cinnamon Club",
+          "type": "餐厅",
+          "location": [
+            51.49712265100004,
+            -0.12939284899994163
+          ],
+          "address": "30, Great Smith Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:34:28.222625"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "Wash House",
+          "type": "咖啡厅",
+          "location": [
+            51.496357603000035,
+            -0.1294433629999503
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:34:33.715636"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "Quirinale",
+          "type": "餐厅",
+          "location": [
+            51.49782865000003,
+            -0.12702302599996074
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:37:10.973667"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "Crussh Bar",
+          "type": "咖啡厅",
+          "location": [
+            51.49707674900003,
+            -0.1262974909999457
+          ],
+          "address": "4, Millbank",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:37:13.650710"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "Shepherds Hall",
+          "type": "咖啡厅",
+          "location": [
+            51.498400642000036,
+            -0.11991549099997201
+          ],
+          "address": "249, Westminster Bridge Road, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:37:19.725658"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "Aji Zen Canteen",
+          "type": "餐厅",
+          "location": [
+            51.501338012000076,
+            -0.11849747899992735
+          ],
+          "address": "London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:37:23.907007"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "Zen China",
+          "type": "餐厅",
+          "location": [
+            51.50203248400004,
+            -0.1191967999999406
+          ],
+          "address": "Westminster Bridge Road, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:37:27.828097"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "Caffè Nero",
+          "type": "咖啡厅",
+          "location": [
+            51.50144796600006,
+            -0.12475896799998054
+          ],
+          "address": "70, Bridge Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:37:31.727712"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "Lloyds Bank",
+          "type": "银行",
+          "location": [
+            51.49564831300006,
+            -0.12697717799994734
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:37:36.943367"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "Footstool",
+          "type": "餐厅",
+          "location": [
+            51.49492566600003,
+            -0.12714988899995205
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:37:43.083575"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "The Cinnamon Club",
+          "type": "餐厅",
+          "location": [
+            51.49712265100004,
+            -0.12939284899994163
+          ],
+          "address": "30, Great Smith Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:37:47.396581"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "Ashburnham House",
+          "type": "学校",
+          "location": [
+            51.49779130600007,
+            -0.13010317299995222
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:37:49.740459"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "Milne’s House",
+          "type": "学校",
+          "location": [
+            51.49845720700006,
+            -0.13007887299994536
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:37:52.123946"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "Café Fresco",
+          "type": "咖啡厅",
+          "location": [
+            51.49995134200003,
+            -0.13091964599993844
+          ],
+          "address": "11A, Tothill Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:37:55.038866"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "Wash House",
+          "type": "咖啡厅",
+          "location": [
+            51.496357603000035,
+            -0.1294433629999503
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:37:59.515588"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "PizzaExpress",
+          "type": "餐厅",
+          "location": [
+            51.492804868000064,
+            -0.1255464779999329
+          ],
+          "address": "25, Millbank, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:38:04.185974"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "Riverside Cafe",
+          "type": "咖啡厅",
+          "location": [
+            51.49488533200008,
+            -0.1216719799999737
+          ],
+          "address": "Albert Embankment, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:38:10.869103"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "Quirinale",
+          "type": "餐厅",
+          "location": [
+            51.49782865000003,
+            -0.12702302599996074
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:39:36.200355"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "Caffè Nero",
+          "type": "咖啡厅",
+          "location": [
+            51.50144796600006,
+            -0.12475896799998054
+          ],
+          "address": "70, Bridge Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:39:40.771281"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "Crussh Bar",
+          "type": "咖啡厅",
+          "location": [
+            51.49707674900003,
+            -0.1262974909999457
+          ],
+          "address": "4, Millbank",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:39:45.926392"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "Shepherds Hall",
+          "type": "咖啡厅",
+          "location": [
+            51.498400642000036,
+            -0.11991549099997201
+          ],
+          "address": "249, Westminster Bridge Road, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:39:52.598704"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "Milne’s House",
+          "type": "学校",
+          "location": [
+            51.49845720700006,
+            -0.13007887299994536
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:39:59.366325"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "Ashburnham House",
+          "type": "学校",
+          "location": [
+            51.49779130600007,
+            -0.13010317299995222
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:40:04.336120"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "The Cinnamon Club",
+          "type": "餐厅",
+          "location": [
+            51.49712265100004,
+            -0.12939284899994163
+          ],
+          "address": "30, Great Smith Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:40:07.455484"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "Wash House",
+          "type": "咖啡厅",
+          "location": [
+            51.496357603000035,
+            -0.1294433629999503
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:40:10.608065"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "Aji Zen Canteen",
+          "type": "餐厅",
+          "location": [
+            51.501338012000076,
+            -0.11849747899992735
+          ],
+          "address": "London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:40:18.785424"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "Zen China",
+          "type": "餐厅",
+          "location": [
+            51.50203248400004,
+            -0.1191967999999406
+          ],
+          "address": "Westminster Bridge Road, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:40:23.724156"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "Lloyds Bank",
+          "type": "银行",
+          "location": [
+            51.49564831300006,
+            -0.12697717799994734
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:40:32.888419"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "Footstool",
+          "type": "餐厅",
+          "location": [
+            51.49492566600003,
+            -0.12714988899995205
+          ],
+          "address": null,
+          "distance": 0
+        },
+        "time": "2025-12-27T17:40:35.253411"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "Café Fresco",
+          "type": "咖啡厅",
+          "location": [
+            51.49995134200003,
+            -0.13091964599993844
+          ],
+          "address": "11A, Tothill Street, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:40:41.239236"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "Riverside Cafe",
+          "type": "咖啡厅",
+          "location": [
+            51.49488533200008,
+            -0.1216719799999737
+          ],
+          "address": "Albert Embankment, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:40:48.341000"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "PizzaExpress",
+          "type": "餐厅",
+          "location": [
+            51.492804868000064,
+            -0.1255464779999329
+          ],
+          "address": "25, Millbank, London",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:40:52.062795"
+      },
+      {
+        "poi": {
+          "id": "17",
+          "name": "正义路3号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90376120500008,
+            116.40739646000009
+          ],
+          "address": "正义路与东交民巷交叉口北约140米",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:42:22.279953"
+      },
+      {
+        "poi": {
+          "id": "16",
+          "name": "四季回头特色菜馆",
+          "type": "餐饮服务;中餐厅;中餐厅",
+          "location": [
+            39.904328433000046,
+            116.40752500000008
+          ],
+          "address": "西四西五条路之间爱民街门市454",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:42:24.914540"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "正义路1号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90618000000006,
+            116.40760000000012
+          ],
+          "address": "正义路与东长安街交叉口东南200米",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:42:29.235332"
+      },
+      {
+        "poi": {
+          "id": "18",
+          "name": "长安大厦(东长安街)",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90723864300003,
+            116.40890471400007
+          ],
+          "address": "东华门街道东长安街10号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:42:33.943573"
+      },
+      {
+        "poi": {
+          "id": "19",
+          "name": "东方广场W3座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90965078600004,
+            116.41233635700007
+          ],
+          "address": "东长安街1号西区3号楼(王府井地铁站A东北口旁)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:42:39.148915"
+      },
+      {
+        "poi": {
+          "id": "20",
+          "name": "王府井喜悦购物中心地下停车场",
+          "type": "交通设施服务;停车场;公共停车场",
+          "location": [
+            39.90959060700004,
+            116.41088510700001
+          ],
+          "address": "王府井大街301号(王府井地铁站E1口旁)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:42:44.039367"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "东方广场W1座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.909092000000044,
+            116.41313400000001
+          ],
+          "address": "东长安街1号西区1号楼(王府井地铁站B1东北口步行110米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:42:49.096413"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "北京东方广场",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.909489000000065,
+            116.41452800000002
+          ],
+          "address": "东长安街1号(东单地铁站E西北口步行240米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:42:56.651102"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "霞公府",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            39.90964891100003,
+            116.40813283000011
+          ],
+          "address": "东长安街(王府井地铁站F1东口步行430米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:43:02.396512"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "天安门东地铁站B东北口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            39.90845953500008,
+            116.40240138400009
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:43:07.270426"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "天安门东(地铁站)",
+          "type": "交通设施服务;地铁站;地铁站",
+          "location": [
+            39.908479562000025,
+            116.40105895600004
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:43:11.546185"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "天安门东地铁站D西南口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            39.90723208900005,
+            116.40103181200004
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:43:16.287832"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "东方捷路地下停车场",
+          "type": "交通设施服务;停车场;公共停车场",
+          "location": [
+            39.90907167900008,
+            116.40320401800011
+          ],
+          "address": "南池子大街菖蒲河公园(天安门东地铁站B东北口步行260米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:43:20.618900"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "隆和居",
+          "type": "餐饮服务;中餐厅;中餐厅",
+          "location": [
+            39.903160951000075,
+            116.40601931300012
+          ],
+          "address": "东华门街道正义路8号(原市政府斜对面)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:43:27.217354"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "正义路10号院",
+          "type": "商务住宅;住宅区;住宅区",
+          "location": [
+            39.90257634000005,
+            116.4060098000001
+          ],
+          "address": "正义路与东交民巷交叉口北80米",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:43:32.799139"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "正义路社区服务站",
+          "type": "商务住宅;住宅区;社区中心|生活服务;生活服务场所;生活服务场所",
+          "location": [
+            39.90201115700006,
+            116.40607625900009
+          ],
+          "address": "东交民巷32号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:43:37.449967"
+      },
+      {
+        "poi": {
+          "id": "15",
+          "name": "北京东交民巷饭店写字楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90313513000007,
+            116.40809412500005
+          ],
+          "address": "东交民巷丙23号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:43:43.134392"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "宝鼎中心",
+          "type": "商务住宅;楼宇;商住两用楼宇",
+          "location": [
+            39.89959012500003,
+            116.41310850900004
+          ],
+          "address": "东打磨厂街7号(崇文门地铁站D西南口步行480米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:43:50.639970"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "新怡家园",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            39.89829283300003,
+            116.41446191800003
+          ],
+          "address": "东打磨厂街36号(崇文门地铁站H西南口步行250米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:43:54.884182"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "前门(公交站)",
+          "type": "交通设施服务;公交车站;公交车站相关",
+          "location": [
+            39.89897088300006,
+            116.40162254300003
+          ],
+          "address": "120路;137路;141路;141路区间;22路;2路;332路;48路;599路;59路;5路;5路加车德胜门区间;622路;66路;67路;82路;8路;93路;前门故宫环线观光巴士;前门有轨电车;前门王府井观光专线;北京夜景观光北线;夜18路;夜2",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:43:59.893696"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "前门东大街23号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90141217000007,
+            116.40167232100009
+          ],
+          "address": "前门东大街23号(前门地铁站E2北口步行250米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:44:03.498812"
+      },
+      {
+        "poi": {
+          "id": "17",
+          "name": "正义路3号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90376120500008,
+            116.40739646000009
+          ],
+          "address": "正义路与东交民巷交叉口北约140米",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:45:56.748091"
+      },
+      {
+        "poi": {
+          "id": "16",
+          "name": "四季回头特色菜馆",
+          "type": "餐饮服务;中餐厅;中餐厅",
+          "location": [
+            39.904328433000046,
+            116.40752500000008
+          ],
+          "address": "西四西五条路之间爱民街门市454",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:46:00.415105"
+      },
+      {
+        "poi": {
+          "id": "18",
+          "name": "长安大厦(东长安街)",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90723864300003,
+            116.40890471400007
+          ],
+          "address": "东华门街道东长安街10号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:46:05.741950"
+      },
+      {
+        "poi": {
+          "id": "19",
+          "name": "东方广场W3座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90965078600004,
+            116.41233635700007
+          ],
+          "address": "东长安街1号西区3号楼(王府井地铁站A东北口旁)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:46:10.966617"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "东方广场W1座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.909092000000044,
+            116.41313400000001
+          ],
+          "address": "东长安街1号西区1号楼(王府井地铁站B1东北口步行110米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:46:16.476138"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "北京东方广场",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.909489000000065,
+            116.41452800000002
+          ],
+          "address": "东长安街1号(东单地铁站E西北口步行240米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:46:20.857678"
+      },
+      {
+        "poi": {
+          "id": "20",
+          "name": "王府井喜悦购物中心地下停车场",
+          "type": "交通设施服务;停车场;公共停车场",
+          "location": [
+            39.90959060700004,
+            116.41088510700001
+          ],
+          "address": "王府井大街301号(王府井地铁站E1口旁)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:46:27.284682"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "霞公府",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            39.90964891100003,
+            116.40813283000011
+          ],
+          "address": "东长安街(王府井地铁站F1东口步行430米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:46:36.194194"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "正义路1号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90618000000006,
+            116.40760000000012
+          ],
+          "address": "正义路与东长安街交叉口东南200米",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:46:40.814476"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "隆和居",
+          "type": "餐饮服务;中餐厅;中餐厅",
+          "location": [
+            39.903160951000075,
+            116.40601931300012
+          ],
+          "address": "东华门街道正义路8号(原市政府斜对面)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:46:46.205968"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "正义路10号院",
+          "type": "商务住宅;住宅区;住宅区",
+          "location": [
+            39.90257634000005,
+            116.4060098000001
+          ],
+          "address": "正义路与东交民巷交叉口北80米",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:46:49.410957"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "正义路社区服务站",
+          "type": "商务住宅;住宅区;社区中心|生活服务;生活服务场所;生活服务场所",
+          "location": [
+            39.90201115700006,
+            116.40607625900009
+          ],
+          "address": "东交民巷32号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:46:53.199971"
+      },
+      {
+        "poi": {
+          "id": "15",
+          "name": "北京东交民巷饭店写字楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90313513000007,
+            116.40809412500005
+          ],
+          "address": "东交民巷丙23号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:46:59.378355"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "宝鼎中心",
+          "type": "商务住宅;楼宇;商住两用楼宇",
+          "location": [
+            39.89959012500003,
+            116.41310850900004
+          ],
+          "address": "东打磨厂街7号(崇文门地铁站D西南口步行480米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:47:06.715407"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "新怡家园",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            39.89829283300003,
+            116.41446191800003
+          ],
+          "address": "东打磨厂街36号(崇文门地铁站H西南口步行250米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:47:13.695246"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "前门(公交站)",
+          "type": "交通设施服务;公交车站;公交车站相关",
+          "location": [
+            39.89897088300006,
+            116.40162254300003
+          ],
+          "address": "120路;137路;141路;141路区间;22路;2路;332路;48路;599路;59路;5路;5路加车德胜门区间;622路;66路;67路;82路;8路;93路;前门故宫环线观光巴士;前门有轨电车;前门王府井观光专线;北京夜景观光北线;夜18路;夜2",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:47:19.179310"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "前门东大街23号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90141217000007,
+            116.40167232100009
+          ],
+          "address": "前门东大街23号(前门地铁站E2北口步行250米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:47:23.310197"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "天安门东地铁站D西南口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            39.90723208900005,
+            116.40103181200004
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:47:32.428915"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "天安门东(地铁站)",
+          "type": "交通设施服务;地铁站;地铁站",
+          "location": [
+            39.908479562000025,
+            116.40105895600004
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:47:35.940427"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "天安门东地铁站B东北口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            39.90845953500008,
+            116.40240138400009
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:47:40.796484"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "东方捷路地下停车场",
+          "type": "交通设施服务;停车场;公共停车场",
+          "location": [
+            39.90907167900008,
+            116.40320401800011
+          ],
+          "address": "南池子大街菖蒲河公园(天安门东地铁站B东北口步行260米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:47:45.363476"
+      },
+      {
+        "poi": {
+          "id": "17",
+          "name": "正义路3号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90376120500008,
+            116.40739646000009
+          ],
+          "address": "正义路与东交民巷交叉口北约140米",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:50:55.342958"
+      },
+      {
+        "poi": {
+          "id": "16",
+          "name": "四季回头特色菜馆",
+          "type": "餐饮服务;中餐厅;中餐厅",
+          "location": [
+            39.904328433000046,
+            116.40752500000008
+          ],
+          "address": "西四西五条路之间爱民街门市454",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:50:58.176745"
+      },
+      {
+        "poi": {
+          "id": "15",
+          "name": "北京东交民巷饭店写字楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90313513000007,
+            116.40809412500005
+          ],
+          "address": "东交民巷丙23号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:51:01.400527"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "正义路10号院",
+          "type": "商务住宅;住宅区;住宅区",
+          "location": [
+            39.90257634000005,
+            116.4060098000001
+          ],
+          "address": "正义路与东交民巷交叉口北80米",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:51:07.160138"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "正义路社区服务站",
+          "type": "商务住宅;住宅区;社区中心|生活服务;生活服务场所;生活服务场所",
+          "location": [
+            39.90201115700006,
+            116.40607625900009
+          ],
+          "address": "东交民巷32号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:51:14.172019"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "隆和居",
+          "type": "餐饮服务;中餐厅;中餐厅",
+          "location": [
+            39.903160951000075,
+            116.40601931300012
+          ],
+          "address": "东华门街道正义路8号(原市政府斜对面)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:51:18.825861"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "前门东大街23号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90141217000007,
+            116.40167232100009
+          ],
+          "address": "前门东大街23号(前门地铁站E2北口步行250米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:51:24.615192"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "前门(公交站)",
+          "type": "交通设施服务;公交车站;公交车站相关",
+          "location": [
+            39.89897088300006,
+            116.40162254300003
+          ],
+          "address": "120路;137路;141路;141路区间;22路;2路;332路;48路;599路;59路;5路;5路加车德胜门区间;622路;66路;67路;82路;8路;93路;前门故宫环线观光巴士;前门有轨电车;前门王府井观光专线;北京夜景观光北线;夜18路;夜2",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:51:31.337965"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "天安门东地铁站B东北口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            39.90845953500008,
+            116.40240138400009
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:51:39.796165"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "天安门东(地铁站)",
+          "type": "交通设施服务;地铁站;地铁站",
+          "location": [
+            39.908479562000025,
+            116.40105895600004
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:51:43.566397"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "东方捷路地下停车场",
+          "type": "交通设施服务;停车场;公共停车场",
+          "location": [
+            39.90907167900008,
+            116.40320401800011
+          ],
+          "address": "南池子大街菖蒲河公园(天安门东地铁站B东北口步行260米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:51:47.861031"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "天安门东地铁站D西南口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            39.90723208900005,
+            116.40103181200004
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:51:52.439712"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "正义路1号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90618000000006,
+            116.40760000000012
+          ],
+          "address": "正义路与东长安街交叉口东南200米",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:51:58.215908"
+      },
+      {
+        "poi": {
+          "id": "18",
+          "name": "长安大厦(东长安街)",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90723864300003,
+            116.40890471400007
+          ],
+          "address": "东华门街道东长安街10号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:52:02.601585"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "霞公府",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            39.90964891100003,
+            116.40813283000011
+          ],
+          "address": "东长安街(王府井地铁站F1东口步行430米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:52:09.818499"
+      },
+      {
+        "poi": {
+          "id": "20",
+          "name": "王府井喜悦购物中心地下停车场",
+          "type": "交通设施服务;停车场;公共停车场",
+          "location": [
+            39.90959060700004,
+            116.41088510700001
+          ],
+          "address": "王府井大街301号(王府井地铁站E1口旁)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:52:14.985084"
+      },
+      {
+        "poi": {
+          "id": "19",
+          "name": "东方广场W3座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90965078600004,
+            116.41233635700007
+          ],
+          "address": "东长安街1号西区3号楼(王府井地铁站A东北口旁)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:52:18.344527"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "东方广场W1座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.909092000000044,
+            116.41313400000001
+          ],
+          "address": "东长安街1号西区1号楼(王府井地铁站B1东北口步行110米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:52:22.543266"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "北京东方广场",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.909489000000065,
+            116.41452800000002
+          ],
+          "address": "东长安街1号(东单地铁站E西北口步行240米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:52:26.255640"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "新怡家园",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            39.89829283300003,
+            116.41446191800003
+          ],
+          "address": "东打磨厂街36号(崇文门地铁站H西南口步行250米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:52:31.843967"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "宝鼎中心",
+          "type": "商务住宅;楼宇;商住两用楼宇",
+          "location": [
+            39.89959012500003,
+            116.41310850900004
+          ],
+          "address": "东打磨厂街7号(崇文门地铁站D西南口步行480米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:52:35.370610"
+      },
+      {
+        "poi": {
+          "id": "17",
+          "name": "正义路3号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90376120500008,
+            116.40739646000009
+          ],
+          "address": "正义路与东交民巷交叉口北约140米",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:54:58.687096"
+      },
+      {
+        "poi": {
+          "id": "16",
+          "name": "四季回头特色菜馆",
+          "type": "餐饮服务;中餐厅;中餐厅",
+          "location": [
+            39.904328433000046,
+            116.40752500000008
+          ],
+          "address": "西四西五条路之间爱民街门市454",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:55:01.293561"
+      },
+      {
+        "poi": {
+          "id": "15",
+          "name": "北京东交民巷饭店写字楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90313513000007,
+            116.40809412500005
+          ],
+          "address": "东交民巷丙23号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:55:03.988233"
+      },
+      {
+        "poi": {
+          "id": "18",
+          "name": "长安大厦(东长安街)",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90723864300003,
+            116.40890471400007
+          ],
+          "address": "东华门街道东长安街10号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:55:09.205566"
+      },
+      {
+        "poi": {
+          "id": "19",
+          "name": "东方广场W3座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90965078600004,
+            116.41233635700007
+          ],
+          "address": "东长安街1号西区3号楼(王府井地铁站A东北口旁)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:55:13.565146"
+      },
+      {
+        "poi": {
+          "id": "20",
+          "name": "王府井喜悦购物中心地下停车场",
+          "type": "交通设施服务;停车场;公共停车场",
+          "location": [
+            39.90959060700004,
+            116.41088510700001
+          ],
+          "address": "王府井大街301号(王府井地铁站E1口旁)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:55:16.612494"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "北京东方广场",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.909489000000065,
+            116.41452800000002
+          ],
+          "address": "东长安街1号(东单地铁站E西北口步行240米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:55:21.906078"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "东方广场W1座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.909092000000044,
+            116.41313400000001
+          ],
+          "address": "东长安街1号西区1号楼(王府井地铁站B1东北口步行110米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:55:28.466107"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "霞公府",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            39.90964891100003,
+            116.40813283000011
+          ],
+          "address": "东长安街(王府井地铁站F1东口步行430米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:55:33.446504"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "正义路1号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90618000000006,
+            116.40760000000012
+          ],
+          "address": "正义路与东长安街交叉口东南200米",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:55:37.637301"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "正义路社区服务站",
+          "type": "商务住宅;住宅区;社区中心|生活服务;生活服务场所;生活服务场所",
+          "location": [
+            39.90201115700006,
+            116.40607625900009
+          ],
+          "address": "东交民巷32号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:55:43.285784"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "正义路10号院",
+          "type": "商务住宅;住宅区;住宅区",
+          "location": [
+            39.90257634000005,
+            116.4060098000001
+          ],
+          "address": "正义路与东交民巷交叉口北80米",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:55:47.036495"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "隆和居",
+          "type": "餐饮服务;中餐厅;中餐厅",
+          "location": [
+            39.903160951000075,
+            116.40601931300012
+          ],
+          "address": "东华门街道正义路8号(原市政府斜对面)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:55:49.613308"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "前门东大街23号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90141217000007,
+            116.40167232100009
+          ],
+          "address": "前门东大街23号(前门地铁站E2北口步行250米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:55:54.905219"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "前门(公交站)",
+          "type": "交通设施服务;公交车站;公交车站相关",
+          "location": [
+            39.89897088300006,
+            116.40162254300003
+          ],
+          "address": "120路;137路;141路;141路区间;22路;2路;332路;48路;599路;59路;5路;5路加车德胜门区间;622路;66路;67路;82路;8路;93路;前门故宫环线观光巴士;前门有轨电车;前门王府井观光专线;北京夜景观光北线;夜18路;夜2",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:56:00.829524"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "天安门东(地铁站)",
+          "type": "交通设施服务;地铁站;地铁站",
+          "location": [
+            39.908479562000025,
+            116.40105895600004
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:56:09.294584"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "天安门东地铁站D西南口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            39.90723208900005,
+            116.40103181200004
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:56:12.369868"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "天安门东地铁站B东北口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            39.90845953500008,
+            116.40240138400009
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:56:15.960268"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "东方捷路地下停车场",
+          "type": "交通设施服务;停车场;公共停车场",
+          "location": [
+            39.90907167900008,
+            116.40320401800011
+          ],
+          "address": "南池子大街菖蒲河公园(天安门东地铁站B东北口步行260米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:56:19.472502"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "宝鼎中心",
+          "type": "商务住宅;楼宇;商住两用楼宇",
+          "location": [
+            39.89959012500003,
+            116.41310850900004
+          ],
+          "address": "东打磨厂街7号(崇文门地铁站D西南口步行480米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:56:27.547233"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "新怡家园",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            39.89829283300003,
+            116.41446191800003
+          ],
+          "address": "东打磨厂街36号(崇文门地铁站H西南口步行250米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:56:31.065149"
+      },
+      {
+        "poi": {
+          "id": "14",
+          "name": "隆和居",
+          "type": "餐饮服务;中餐厅;中餐厅",
+          "location": [
+            39.903160951000075,
+            116.40601931300012
+          ],
+          "address": "东华门街道正义路8号(原市政府斜对面)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:57:54.073663"
+      },
+      {
+        "poi": {
+          "id": "16",
+          "name": "四季回头特色菜馆",
+          "type": "餐饮服务;中餐厅;中餐厅",
+          "location": [
+            39.904328433000046,
+            116.40752500000008
+          ],
+          "address": "西四西五条路之间爱民街门市454",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:57:58.677555"
+      },
+      {
+        "poi": {
+          "id": "2",
+          "name": "正义路1号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90618000000006,
+            116.40760000000012
+          ],
+          "address": "正义路与东长安街交叉口东南200米",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:58:02.786394"
+      },
+      {
+        "poi": {
+          "id": "18",
+          "name": "长安大厦(东长安街)",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90723864300003,
+            116.40890471400007
+          ],
+          "address": "东华门街道东长安街10号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:58:15.663308"
+      },
+      {
+        "poi": {
+          "id": "0",
+          "name": "北京东方广场",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.909489000000065,
+            116.41452800000002
+          ],
+          "address": "东长安街1号(东单地铁站E西北口步行240米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:58:34.680247"
+      },
+      {
+        "poi": {
+          "id": "1",
+          "name": "东方广场W1座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.909092000000044,
+            116.41313400000001
+          ],
+          "address": "东长安街1号西区1号楼(王府井地铁站B1东北口步行110米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:58:38.830276"
+      },
+      {
+        "poi": {
+          "id": "3",
+          "name": "霞公府",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            39.90964891100003,
+            116.40813283000011
+          ],
+          "address": "东长安街(王府井地铁站F1东口步行430米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:58:44.399204"
+      },
+      {
+        "poi": {
+          "id": "4",
+          "name": "天安门东(地铁站)",
+          "type": "交通设施服务;地铁站;地铁站",
+          "location": [
+            39.908479562000025,
+            116.40105895600004
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:58:50.174644"
+      },
+      {
+        "poi": {
+          "id": "5",
+          "name": "天安门东地铁站D西南口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            39.90723208900005,
+            116.40103181200004
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:58:54.118966"
+      },
+      {
+        "poi": {
+          "id": "6",
+          "name": "天安门东地铁站B东北口",
+          "type": "交通设施服务;地铁站;出入口",
+          "location": [
+            39.90845953500008,
+            116.40240138400009
+          ],
+          "address": "1号线/八通线",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:59:00.338485"
+      },
+      {
+        "poi": {
+          "id": "7",
+          "name": "东方捷路地下停车场",
+          "type": "交通设施服务;停车场;公共停车场",
+          "location": [
+            39.90907167900008,
+            116.40320401800011
+          ],
+          "address": "南池子大街菖蒲河公园(天安门东地铁站B东北口步行260米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:59:04.479916"
+      },
+      {
+        "poi": {
+          "id": "11",
+          "name": "前门东大街23号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90141217000007,
+            116.40167232100009
+          ],
+          "address": "前门东大街23号(前门地铁站E2北口步行250米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:59:12.603612"
+      },
+      {
+        "poi": {
+          "id": "10",
+          "name": "前门(公交站)",
+          "type": "交通设施服务;公交车站;公交车站相关",
+          "location": [
+            39.89897088300006,
+            116.40162254300003
+          ],
+          "address": "120路;137路;141路;141路区间;22路;2路;332路;48路;599路;59路;5路;5路加车德胜门区间;622路;66路;67路;82路;8路;93路;前门故宫环线观光巴士;前门有轨电车;前门王府井观光专线;北京夜景观光北线;夜18路;夜2",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:59:15.987085"
+      },
+      {
+        "poi": {
+          "id": "12",
+          "name": "正义路社区服务站",
+          "type": "商务住宅;住宅区;社区中心|生活服务;生活服务场所;生活服务场所",
+          "location": [
+            39.90201115700006,
+            116.40607625900009
+          ],
+          "address": "东交民巷32号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:59:20.805704"
+      },
+      {
+        "poi": {
+          "id": "13",
+          "name": "正义路10号院",
+          "type": "商务住宅;住宅区;住宅区",
+          "location": [
+            39.90257634000005,
+            116.4060098000001
+          ],
+          "address": "正义路与东交民巷交叉口北80米",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:59:26.894830"
+      },
+      {
+        "poi": {
+          "id": "17",
+          "name": "正义路3号院",
+          "type": "商务住宅;商务住宅相关;商务住宅相关",
+          "location": [
+            39.90376120500008,
+            116.40739646000009
+          ],
+          "address": "正义路与东交民巷交叉口北约140米",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:59:31.442593"
+      },
+      {
+        "poi": {
+          "id": "19",
+          "name": "东方广场W3座",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90965078600004,
+            116.41233635700007
+          ],
+          "address": "东长安街1号西区3号楼(王府井地铁站A东北口旁)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:59:38.064827"
+      },
+      {
+        "poi": {
+          "id": "20",
+          "name": "王府井喜悦购物中心地下停车场",
+          "type": "交通设施服务;停车场;公共停车场",
+          "location": [
+            39.90959060700004,
+            116.41088510700001
+          ],
+          "address": "王府井大街301号(王府井地铁站E1口旁)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:59:41.541061"
+      },
+      {
+        "poi": {
+          "id": "15",
+          "name": "北京东交民巷饭店写字楼",
+          "type": "商务住宅;楼宇;商务写字楼",
+          "location": [
+            39.90313513000007,
+            116.40809412500005
+          ],
+          "address": "东交民巷丙23号",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:59:48.196191"
+      },
+      {
+        "poi": {
+          "id": "9",
+          "name": "宝鼎中心",
+          "type": "商务住宅;楼宇;商住两用楼宇",
+          "location": [
+            39.89959012500003,
+            116.41310850900004
+          ],
+          "address": "东打磨厂街7号(崇文门地铁站D西南口步行480米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T17:59:57.819283"
+      },
+      {
+        "poi": {
+          "id": "8",
+          "name": "新怡家园",
+          "type": "商务住宅;住宅区;住宅小区",
+          "location": [
+            39.89829283300003,
+            116.41446191800003
+          ],
+          "address": "东打磨厂街36号(崇文门地铁站H西南口步行250米)",
+          "distance": 0
+        },
+        "time": "2025-12-27T18:00:01.858419"
+      }
+    ],
+    "total_distance": 2140,
+    "exploration_time": 0,
+    "poi_count": 225
+  },
+  "evaluation_result": {
+    "total_score": 10,
+    "total_questions": 24,
+    "accuracy": 41.66666666666667,
+    "type_scores": {
+      "定位与定向": {
+        "correct": 4,
+        "total": 8,
+        "percentage": 50.0
+      },
+      "空间距离估算": {
+        "correct": 0,
+        "total": 4,
+        "percentage": 0.0
+      },
+      "邻近关系判断": {
+        "correct": 1,
+        "total": 4,
+        "percentage": 25.0
+      },
+      "POI密度识别": {
+        "correct": 4,
+        "total": 4,
+        "percentage": 100.0
+      },
+      "路径规划": {
+        "correct": 1,
+        "total": 4,
+        "percentage": 25.0
+      }
+    },
+    "answers": [
+      {
+        "question": "东方广场W1座相对于北京东方广场在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "A",
+        "ai_explanation": "",
+        "correct_answer": "D",
+        "is_correct": false,
+        "explanation": "东方广场W1座位于北京东方广场的西南面。"
+      },
+      {
+        "question": "正义路1号院相对于东方广场W1座在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "A",
+        "ai_explanation": "",
+        "correct_answer": "D",
+        "is_correct": false,
+        "explanation": "正义路1号院位于东方广场W1座的西南面。"
+      },
+      {
+        "question": "前门东大街23号院相对于正义路1号院在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "A",
+        "ai_explanation": "",
+        "correct_answer": "D",
+        "is_correct": false,
+        "explanation": "前门东大街23号院位于正义路1号院的西南面。"
+      },
+      {
+        "question": "霞公府相对于前门东大街23号院在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "A",
+        "ai_explanation": "",
+        "correct_answer": "A",
+        "is_correct": true,
+        "explanation": "霞公府位于前门东大街23号院的东北面。"
+      },
+      {
+        "question": "北京东方广场相对于东方广场W1座在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "A",
+        "ai_explanation": "",
+        "correct_answer": "A",
+        "is_correct": true,
+        "explanation": "北京东方广场位于东方广场W1座的东北面。"
+      },
+      {
+        "question": "东方广场W1座相对于正义路1号院在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "A",
+        "ai_explanation": "",
+        "correct_answer": "A",
+        "is_correct": true,
+        "explanation": "东方广场W1座位于正义路1号院的东北面。"
+      },
+      {
+        "question": "正义路1号院相对于前门东大街23号院在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "A",
+        "ai_explanation": "",
+        "correct_answer": "A",
+        "is_correct": true,
+        "explanation": "正义路1号院位于前门东大街23号院的东北面。"
+      },
+      {
+        "question": "前门东大街23号院相对于霞公府在哪个方向？",
+        "type": "定位与定向",
+        "ai_answer": "A",
+        "ai_explanation": "",
+        "correct_answer": "D",
+        "is_correct": false,
+        "explanation": "前门东大街23号院位于霞公府的西南面。"
+      },
+      {
+        "question": "北京东方广场到正义路1号院的直线距离大约是多少？",
+        "type": "空间距离估算",
+        "ai_answer": "A",
+        "ai_explanation": "",
+        "correct_answer": "C",
+        "is_correct": false,
+        "explanation": "北京东方广场到正义路1号院的直线距离约为696米。"
+      },
+      {
+        "question": "东方广场W1座到前门东大街23号院的直线距离大约是多少？",
+        "type": "空间距离估算",
+        "ai_answer": "A",
+        "ai_explanation": "",
+        "correct_answer": "D",
+        "is_correct": false,
+        "explanation": "东方广场W1座到前门东大街23号院的直线距离约为1298米。"
+      },
+      {
+        "question": "正义路1号院到霞公府的直线距离大约是多少？",
+        "type": "空间距离估算",
+        "ai_answer": "A",
+        "ai_explanation": "",
+        "correct_answer": "C",
+        "is_correct": false,
+        "explanation": "正义路1号院到霞公府的直线距离约为388米。"
+      },
+      {
+        "question": "前门东大街23号院到新怡家园的直线距离大约是多少？",
+        "type": "空间距离估算",
+        "ai_answer": "A",
+        "ai_explanation": "",
+        "correct_answer": "C",
+        "is_correct": false,
+        "explanation": "前门东大街23号院到新怡家园的直线距离约为1144米。"
+      },
+      {
+        "question": "在以下POI中，哪个距离北京东方广场最近？",
+        "type": "邻近关系判断",
+        "ai_answer": "A",
+        "ai_explanation": "",
+        "correct_answer": "A",
+        "is_correct": true,
+        "explanation": "东方广场W1座距离北京东方广场最近，约126米。"
+      },
+      {
+        "question": "在以下POI中，哪个距离东方广场W1座最近？",
+        "type": "邻近关系判断",
+        "ai_answer": "A",
+        "ai_explanation": "",
+        "correct_answer": "C",
+        "is_correct": false,
+        "explanation": "霞公府距离东方广场W1座最近，约431米。"
+      },
+      {
+        "question": "在以下POI中，哪个距离正义路1号院最远？",
+        "type": "邻近关系判断",
+        "ai_answer": "A",
+        "ai_explanation": "",
+        "correct_answer": "C",
+        "is_correct": false,
+        "explanation": "新怡家园距离正义路1号院最远，约1054米。"
+      },
+      {
+        "question": "在以下POI中，哪个距离前门东大街23号院最远？",
+        "type": "邻近关系判断",
+        "ai_answer": "A",
+        "ai_explanation": "",
+        "correct_answer": "B",
+        "is_correct": false,
+        "explanation": "新怡家园距离前门东大街23号院最远，约1144米。"
+      },
+      {
+        "question": "在当前区域内，哪个POI周围的POI密度最高？",
+        "type": "POI密度识别",
+        "ai_answer": "A",
+        "ai_explanation": "",
+        "correct_answer": "A",
+        "is_correct": true,
+        "explanation": "东方捷路地下停车场周围的POI密度最高，500米范围内有5个其他POI。"
+      },
+      {
+        "question": "在当前区域内，哪个POI周围的POI密度最高？",
+        "type": "POI密度识别",
+        "ai_answer": "A",
+        "ai_explanation": "",
+        "correct_answer": "A",
+        "is_correct": true,
+        "explanation": "天安门东地铁站B东北口周围的POI密度最高，500米范围内有3个其他POI。"
+      },
+      {
+        "question": "在当前区域内，哪个POI周围的POI密度最低？",
+        "type": "POI密度识别",
+        "ai_answer": "A",
+        "ai_explanation": "",
+        "correct_answer": "A",
+        "is_correct": true,
+        "explanation": "前门东大街23号院周围的POI密度最低，500米范围内只有0个其他POI。"
+      },
+      {
+        "question": "在当前区域内，哪个POI周围的POI密度最低？",
+        "type": "POI密度识别",
+        "ai_answer": "A",
+        "ai_explanation": "",
+        "correct_answer": "A",
+        "is_correct": true,
+        "explanation": "新怡家园周围的POI密度最低，500米范围内只有0个其他POI。"
+      },
+      {
+        "question": "从北京东方广场到东方广场W1座，以下哪种路径最短？",
+        "type": "路径规划",
+        "ai_answer": "A",
+        "ai_explanation": "",
+        "correct_answer": "A",
+        "is_correct": true,
+        "explanation": "最短路径是：北京东方广场 -> (东长安街与北京东方广场的节点) -> (东长安街与东方广场W1座道路的节点) -> 东方广场W1座，总距离约405米。"
+      },
+      {
+        "question": "从东方广场W1座到正义路1号院，以下哪种路径最短？",
+        "type": "路径规划",
+        "ai_answer": "A",
+        "ai_explanation": "",
+        "correct_answer": "B",
+        "is_correct": false,
+        "explanation": "最短路径是：东方广场W1座 -> (东长安街与东方广场W1座道路的节点) -> (东长安街与台基厂大街的节点) -> (东长安街与长安大厦道路的节点) -> (东长安街与正义路的节点) -> (正义路与正义路1号院道路的节点) -> 正义路1号院，总距离约967米。"
+      },
+      {
+        "question": "从正义路1号院到前门东大街23号院，以下哪种路径最短？",
+        "type": "路径规划",
+        "ai_answer": "A",
+        "ai_explanation": "",
+        "correct_answer": "C",
+        "is_correct": false,
+        "explanation": "最短路径是：正义路1号院 -> (正义路与正义路1号院道路的节点) -> (正义路与四季回头特色菜馆道路的节) -> (正义路与正义路3号院道路的节点) -> (正义路与隆和居道路的节点) -> (正义路与正义路10号院道路的节点) -> (正义路与正义路社区服务站道路的节) -> (正义路与前门东大街的节点) -> (前门东大街与前门道路的节点) -> 前门东大街23号院，总距离约1184米。"
+      },
+      {
+        "question": "从前门东大街23号院到霞公府，以下哪种路径最短？",
+        "type": "路径规划",
+        "ai_answer": "A",
+        "ai_explanation": "",
+        "correct_answer": "D",
+        "is_correct": false,
+        "explanation": "最短路径是：前门东大街23号院 -> (前门东大街与前门道路的节点) -> (正义路与前门东大街的节点) -> (正义路与正义路社区服务站道路的节) -> (正义路与正义路10号院道路的节点) -> (正义路与隆和居道路的节点) -> (正义路与正义路3号院道路的节点) -> (正义路与四季回头特色菜馆道路的节) -> (正义路与正义路1号院道路的节点) -> (东长安街与正义路的节点) -> (南河沿大街与霞公府道路的节点) -> 霞公府，总距离约1614米。"
+      }
+    ],
+    "completed_at": "2025-12-27T18:02:43.760300"
+  },
+  "context_text": "POI点单元记录（按时间顺序）：\n1) POI：北京东方广场\n   - 视野内POI（方向度数；距离米）：\n     • 东方广场W1座：方向 254°，距离 ≈ 127m\n     • 东方广场W3座：方向 274°，距离 ≈ 188m\n     • 王府井喜悦购物中心地下停车场：方向 272°，距离 ≈ 311m\n     • 长安大厦(东长安街)：方向 248°，距离 ≈ 541m\n     • 霞公府：方向 271°，距离 ≈ 546m\n     • 正义路1号院：方向 244°，距离 ≈ 696m\n2) POI：正义路1号院\n   - 视野内POI（方向度数；距离米）：\n     • 长安大厦(东长安街)：方向 51°，距离 ≈ 162m\n     • 四季回头特色菜馆：方向 182°，距离 ≈ 206m\n     • 正义路3号院：方向 185°，距离 ≈ 270m\n     • 北京东交民巷饭店写字楼：方向 171°，距离 ≈ 341m\n     • 隆和居：方向 208°，距离 ≈ 362m\n     • 霞公府：方向 9°，距离 ≈ 388m\n     • 正义路10号院：方向 204°，距离 ≈ 423m\n     • 王府井喜悦购物中心地下停车场：方向 44°，距离 ≈ 472m\n3) POI：新怡家园\n   - 视野内POI（方向度数；距离米）：\n     • 宝鼎中心：方向 314°，距离 ≈ 185m\n     • 北京东交民巷饭店写字楼：方向 307°，距离 ≈ 765m\n4) POI：东方广场W1座\n   - 视野内POI（方向度数；距离米）：\n     • 东方广场W3座：方向 305°，距离 ≈ 92m\n     • 北京东方广场：方向 74°，距离 ≈ 127m\n     • 王府井喜悦购物中心地下停车场：方向 283°，距离 ≈ 200m\n     • 长安大厦(东长安街)：方向 246°，距离 ≈ 415m\n     • 霞公府：方向 276°，距离 ≈ 431m\n     • 正义路1号院：方向 242°，距离 ≈ 572m\n     • 四季回头特色菜馆：方向 230°，距离 ≈ 714m\n     • 正义路3号院：方向 227°，距离 ≈ 769m\n5) POI：天安门东地铁站D西南口\n   - 视野内POI（方向度数；距离米）：\n     • 天安门东(地铁站)：方向 1°，距离 ≈ 139m\n     • 天安门东地铁站B东北口：方向 48°，距离 ≈ 180m\n     • 东方捷路地下停车场：方向 50°，距离 ≈ 276m\n     • 正义路1号院：方向 99°，距离 ≈ 572m\n     • 隆和居：方向 129°，距离 ≈ 621m\n     • 四季回头特色菜馆：方向 114°，距离 ≈ 641m\n     • 前门东大街23号院：方向 174°，距离 ≈ 649m\n     • 霞公府：方向 71°，距离 ≈ 663m\n6) POI：东方捷路地下停车场\n   - 视野内POI（方向度数；距离米）：\n     • 天安门东地铁站B东北口：方向 233°，距离 ≈ 97m\n     • 天安门东(地铁站)：方向 255°，距离 ≈ 194m\n     • 天安门东地铁站D西南口：方向 230°，距离 ≈ 276m\n     • 霞公府：方向 83°，距离 ≈ 425m\n     • 正义路1号院：方向 123°，距离 ≈ 494m\n     • 长安大厦(东长安街)：方向 108°，距离 ≈ 527m\n     • 四季回头特色菜馆：方向 138°，距离 ≈ 643m\n     • 王府井喜悦购物中心地下停车场：方向 86°，距离 ≈ 658m\n7) POI：天安门东地铁站B东北口\n   - 视野内POI（方向度数；距离米）：\n     • 东方捷路地下停车场：方向 53°，距离 ≈ 97m\n     • 天安门东(地铁站)：方向 271°，距离 ≈ 115m\n     • 天安门东地铁站D西南口：方向 228°，距离 ≈ 180m\n     • 霞公府：方向 78°，距离 ≈ 506m\n     • 正义路1号院：方向 114°，距离 ≈ 511m\n     • 长安大厦(东长安街)：方向 101°，距离 ≈ 571m\n     • 四季回头特色菜馆：方向 129°，距离 ≈ 634m\n     • 隆和居：方向 146°，距离 ≈ 665m\n8) POI：天安门东(地铁站)\n   - 视野内POI（方向度数；距离米）：\n     • 天安门东地铁站B东北口：方向 91°，距离 ≈ 115m\n     • 天安门东地铁站D西南口：方向 181°，距离 ≈ 139m\n     • 东方捷路地下停车场：方向 75°，距离 ≈ 194m\n     • 正义路1号院：方向 109°，距离 ≈ 614m\n     • 霞公府：方向 81°，距离 ≈ 617m\n     • 长安大厦(东长安街)：方向 99°，距离 ≈ 683m\n     • 四季回头特色菜馆：方向 123°，距离 ≈ 719m\n     • 隆和居：方向 137°，距离 ≈ 727m\n9) POI：霞公府\n   - 视野内POI（方向度数；距离米）：\n     • 王府井喜悦购物中心地下停车场：方向 91°，距离 ≈ 235m\n     • 长安大厦(东长安街)：方向 162°，距离 ≈ 276m\n     • 东方广场W3座：方向 90°，距离 ≈ 359m\n     • 正义路1号院：方向 189°，距离 ≈ 388m\n     • 东方捷路地下停车场：方向 263°，距离 ≈ 425m\n     • 东方广场W1座：方向 96°，距离 ≈ 431m\n     • 天安门东地铁站B东北口：方向 258°，距离 ≈ 506m\n     • 北京东方广场：方向 91°，距离 ≈ 546m\n10) POI：前门东大街23号院\n   - 视野内POI（方向度数；距离米）：\n     • 前门(公交站)：方向 181°，距离 ≈ 271m\n     • 正义路社区服务站：方向 82°，距离 ≈ 382m\n     • 正义路10号院：方向 75°，距离 ≈ 392m\n     • 隆和居：方向 68°，距离 ≈ 419m\n     • 正义路3号院：方向 68°，距离 ≈ 554m\n     • 北京东交民巷饭店写字楼：方向 75°，距离 ≈ 580m\n     • 四季回头特色菜馆：方向 64°，距离 ≈ 595m\n     • 天安门东地铁站D西南口：方向 354°，距离 ≈ 649m\n11) POI：正义路社区服务站\n   - 视野内POI（方向度数；距离米）：\n     • 正义路10号院：方向 353°，距离 ≈ 63m\n     • 隆和居：方向 357°，距离 ≈ 128m\n     • 北京东交民巷饭店写字楼：方向 61°，距离 ≈ 213m\n     • 正义路3号院：方向 37°，距离 ≈ 225m\n     • 四季回头特色菜馆：方向 32°，距离 ≈ 286m\n     • 前门东大街23号院：方向 262°，距离 ≈ 382m\n     • 正义路1号院：方向 20°，距离 ≈ 481m\n     • 前门(公交站)：方向 236°，距离 ≈ 509m\n12) POI：前门(公交站)\n   - 视野内POI（方向度数；距离米）：\n     • 前门东大街23号院：方向 1°，距离 ≈ 271m\n     • 正义路社区服务站：方向 56°，距离 ≈ 509m\n     • 正义路10号院：方向 51°，距离 ≈ 548m\n     • 隆和居：方向 46°，距离 ≈ 598m\n     • 北京东交民巷饭店写字楼：方向 57°，距离 ≈ 721m\n     • 正义路3号院：方向 50°，距离 ≈ 725m\n     • 四季回头特色菜馆：方向 48°，距离 ≈ 780m\n13) POI：正义路10号院\n   - 视野内POI（方向度数；距离米）：\n     • 正义路社区服务站：方向 173°，距离 ≈ 63m\n     • 隆和居：方向 1°，距离 ≈ 65m\n     • 正义路3号院：方向 49°，距离 ≈ 177m\n     • 北京东交民巷饭店写字楼：方向 75°，距离 ≈ 188m\n     • 四季回头特色菜馆：方向 41°，距离 ≈ 234m\n     • 前门东大街23号院：方向 255°，距离 ≈ 392m\n     • 正义路1号院：方向 24°，距离 ≈ 423m\n     • 前门(公交站)：方向 231°，距离 ≈ 548m\n14) POI：隆和居\n   - 视野内POI（方向度数；距离米）：\n     • 正义路10号院：方向 181°，距离 ≈ 65m\n     • 正义路社区服务站：方向 177°，距离 ≈ 128m\n     • 正义路3号院：方向 66°，距离 ≈ 135m\n     • 北京东交民巷饭店写字楼：方向 91°，距离 ≈ 177m\n     • 四季回头特色菜馆：方向 52°，距离 ≈ 183m\n     • 正义路1号院：方向 28°，距离 ≈ 362m\n     • 前门东大街23号院：方向 248°，距离 ≈ 419m\n     • 长安大厦(东长安街)：方向 35°，距离 ≈ 516m\n15) POI：宝鼎中心\n   - 视野内POI（方向度数；距离米）：\n     • 新怡家园：方向 134°，距离 ≈ 185m\n     • 北京东交民巷饭店写字楼：方向 305°，距离 ≈ 582m\n     • 正义路社区服务站：方向 289°，距离 ≈ 658m\n     • 正义路3号院：方向 306°，距离 ≈ 673m\n     • 正义路10号院：方向 293°，距离 ≈ 691m\n     • 四季回头特色菜馆：方向 310°，距离 ≈ 710m\n     • 隆和居：方向 297°，距离 ≈ 723m\n16) POI：正义路3号院\n   - 视野内POI（方向度数；距离米）：\n     • 四季回头特色菜馆：方向 13°，距离 ≈ 64m\n     • 北京东交民巷饭店写字楼：方向 132°，距离 ≈ 92m\n     • 隆和居：方向 246°，距离 ≈ 135m\n     • 正义路10号院：方向 229°，距离 ≈ 177m\n     • 正义路社区服务站：方向 217°，距离 ≈ 225m\n     • 正义路1号院：方向 5°，距离 ≈ 270m\n     • 长安大厦(东长安街)：方向 23°，距离 ≈ 408m\n     • 前门东大街23号院：方向 248°，距离 ≈ 554m\n17) POI：四季回头特色菜馆\n   - 视野内POI（方向度数；距离米）：\n     • 正义路3号院：方向 193°，距离 ≈ 64m\n     • 北京东交民巷饭店写字楼：方向 155°，距离 ≈ 141m\n     • 隆和居：方向 232°，距离 ≈ 183m\n     • 正义路1号院：方向 2°，距离 ≈ 206m\n     • 正义路10号院：方向 221°，距离 ≈ 234m\n     • 正义路社区服务站：方向 212°，距离 ≈ 286m\n     • 长安大厦(东长安街)：方向 25°，距离 ≈ 344m\n     • 霞公府：方向 7°，距离 ≈ 594m\n18) POI：长安大厦(东长安街)\n   - 视野内POI（方向度数；距离米）：\n     • 正义路1号院：方向 231°，距离 ≈ 162m\n     • 霞公府：方向 342°，距离 ≈ 276m\n     • 王府井喜悦购物中心地下停车场：方向 40°，距离 ≈ 311m\n     • 四季回头特色菜馆：方向 205°，距离 ≈ 344m\n     • 东方广场W3座：方向 55°，距离 ≈ 397m\n     • 正义路3号院：方向 203°，距离 ≈ 408m\n     • 东方广场W1座：方向 66°，距离 ≈ 415m\n     • 北京东交民巷饭店写字楼：方向 191°，距离 ≈ 461m\n19) POI：东方广场W3座\n   - 视野内POI（方向度数；距离米）：\n     • 东方广场W1座：方向 125°，距离 ≈ 92m\n     • 王府井喜悦购物中心地下停车场：方向 268°，距离 ≈ 124m\n     • 北京东方广场：方向 94°，距离 ≈ 188m\n     • 霞公府：方向 270°，距离 ≈ 359m\n     • 长安大厦(东长安街)：方向 235°，距离 ≈ 397m\n     • 正义路1号院：方向 234°，距离 ≈ 559m\n     • 四季回头特色菜馆：方向 222°，距离 ≈ 720m\n     • 正义路3号院：方向 220°，距离 ≈ 779m\n20) POI：王府井喜悦购物中心地下停车场\n   - 视野内POI（方向度数；距离米）：\n     • 东方广场W3座：方向 88°，距离 ≈ 124m\n     • 东方广场W1座：方向 103°，距离 ≈ 200m\n     • 霞公府：方向 271°，距离 ≈ 235m\n     • 北京东方广场：方向 92°，距离 ≈ 311m\n     • 长安大厦(东长安街)：方向 220°，距离 ≈ 311m\n     • 正义路1号院：方向 224°，距离 ≈ 472m\n     • 四季回头特色菜馆：方向 213°，距离 ≈ 652m\n     • 东方捷路地下停车场：方向 266°，距离 ≈ 658m\n21) POI：北京东交民巷饭店写字楼\n   - 视野内POI（方向度数；距离米）：\n     • 正义路3号院：方向 312°，距离 ≈ 92m\n     • 四季回头特色菜馆：方向 335°，距离 ≈ 141m\n     • 隆和居：方向 271°，距离 ≈ 177m\n     • 正义路10号院：方向 255°，距离 ≈ 188m\n     • 正义路社区服务站：方向 241°，距离 ≈ 213m\n     • 正义路1号院：方向 351°，距离 ≈ 341m\n     • 长安大厦(东长安街)：方向 11°，距离 ≈ 461m\n     • 前门东大街23号院：方向 255°，距离 ≈ 580m\n\n完整行驶路径（仅方向与距离）：\n- 起点：金钟广场\n→ node_31.226993_121.474867（方向 136°，距离 ≈ 76m）\n→ node_31.228619_121.477595（方向 59°，距离 ≈ 316m）\n→ node_31.229092_121.477864（方向 30°，距离 ≈ 59m）\n→ node_31.231321_121.476095（方向 322°，距离 ≈ 300m）\n→ node_31.228143_121.472017（方向 232°，距离 ≈ 525m）\n→ node_31.228638_121.471601（方向 320°，距离 ≈ 68m）\n→ 普安路延安东路(公交站)（方向 0°，距离 ≈ 0m）\n→ node_31.228143_121.472017（方向 140°，距离 ≈ 68m）\n→ node_31.231321_121.476095（方向 52°，距离 ≈ 525m）\n→ node_31.229092_121.477864（方向 142°，距离 ≈ 300m）\n→ node_31.228619_121.477595（方向 210°，距离 ≈ 59m）\n→ node_31.226993_121.474867（方向 239°，距离 ≈ 316m）\n→ node_31.224633_121.470500（方向 242°，距离 ≈ 491m）\n→ node_31.225913_121.470403（方向 356°，距离 ≈ 143m）\n→ 香港广场北座（方向 0°，距离 ≈ 0m）\n→ node_31.224633_121.470500（方向 176°，距离 ≈ 143m）\n→ node_31.226993_121.474867（方向 62°，距离 ≈ 491m）\n→ node_31.228619_121.477595（方向 59°，距离 ≈ 316m）\n→ node_31.227988_121.477771（方向 164°，距离 ≈ 72m）\n→ 东淮海国际大厦（方向 0°，距离 ≈ 0m）\n→ node_31.228619_121.477595（方向 344°，距离 ≈ 72m）\n→ node_31.229092_121.477864（方向 30°，距离 ≈ 59m）\n→ node_31.227659_121.478872（方向 145°，距离 ≈ 186m）\n→ node_31.228073_121.479994（方向 70°，距离 ≈ 116m）\n→ 露香园（方向 0°，距离 ≈ 0m）\n→ node_31.227659_121.478872（方向 250°，距离 ≈ 116m）\n→ node_31.229092_121.477864（方向 325°，距离 ≈ 186m）\n→ node_31.231321_121.476095（方向 322°，距离 ≈ 300m）\n→ node_31.232732_121.479298（方向 66°，距离 ≈ 343m）\n→ node_31.233632_121.480018（方向 39°，距离 ≈ 121m）\n→ 黄浦区机关办公大楼（方向 0°，距离 ≈ 0m）\n→ node_31.232732_121.479298（方向 219°，距离 ≈ 121m）\n→ node_31.231321_121.476095（方向 246°，距离 ≈ 343m）\n→ node_31.234101_121.474389（方向 328°，距离 ≈ 349m）\n→ node_31.234748_121.476070（方向 69°，距离 ≈ 175m）\n→ 上海市青莲阁大楼（方向 0°，距离 ≈ 0m）\n→ node_31.234101_121.474389（方向 249°，距离 ≈ 175m）\n→ 上海黄浦区图书馆大楼（方向 0°，距离 ≈ 0m）\n→ node_31.233124_121.472071（方向 247°，距离 ≈ 246m）\n→ 人民广场地铁站1号口（方向 0°，距离 ≈ 0m）\n→ node_31.234101_121.474389（方向 67°，距离 ≈ 246m）\n→ node_31.234748_121.476070（方向 69°，距离 ≈ 175m）\n→ 上海市青莲阁大楼（方向 0°，距离 ≈ 0m）\n→ node_31.234101_121.474389（方向 249°，距离 ≈ 175m）\n→ 上海黄浦区图书馆大楼（方向 0°，距离 ≈ 0m）\n→ node_31.233124_121.472071（方向 247°，距离 ≈ 246m）\n→ 人民广场地铁站1号口（方向 0°，距离 ≈ 0m）\n→ node_31.234101_121.474389（方向 67°，距离 ≈ 246m）\n→ node_31.231321_121.476095（方向 148°，距离 ≈ 349m）\n→ node_31.228143_121.472017（方向 232°，距离 ≈ 525m）\n→ node_31.228638_121.471601（方向 320°，距离 ≈ 68m）\n→ 普安路延安东路(公交站)（方向 0°，距离 ≈ 0m）\n→ node_31.228143_121.472017（方向 140°，距离 ≈ 68m）\n→ node_31.231321_121.476095（方向 52°，距离 ≈ 525m）\n→ node_31.229092_121.477864（方向 142°，距离 ≈ 300m）\n→ node_31.228619_121.477595（方向 210°，距离 ≈ 59m）\n→ node_31.226993_121.474867（方向 239°，距离 ≈ 316m）\n→ node_31.227518_121.474357（方向 316°，距离 ≈ 76m）\n→ 金钟广场（方向 0°，距离 ≈ 0m）\n→ node_31.226993_121.474867（方向 136°，距离 ≈ 76m）\n→ node_31.228619_121.477595（方向 59°，距离 ≈ 316m）\n→ node_31.227988_121.477771（方向 164°，距离 ≈ 72m）\n→ 东淮海国际大厦（方向 0°，距离 ≈ 0m）\n→ node_31.228619_121.477595（方向 344°，距离 ≈ 72m）\n→ node_31.229092_121.477864（方向 30°，距离 ≈ 59m）\n→ node_31.227659_121.478872（方向 145°，距离 ≈ 186m）\n→ node_31.228073_121.479994（方向 70°，距离 ≈ 116m）\n→ 露香园（方向 0°，距离 ≈ 0m）\n→ node_31.227659_121.478872（方向 250°，距离 ≈ 116m）\n→ node_31.229092_121.477864（方向 325°，距离 ≈ 186m）\n→ node_31.231321_121.476095（方向 322°，距离 ≈ 300m）\n→ node_31.232732_121.479298（方向 66°，距离 ≈ 343m）\n→ node_31.233632_121.480018（方向 39°，距离 ≈ 121m）\n→ 黄浦区机关办公大楼（方向 0°，距离 ≈ 0m）\n→ node_31.232732_121.479298（方向 219°，距离 ≈ 121m）\n→ node_31.231321_121.476095（方向 246°，距离 ≈ 343m）\n→ node_31.229092_121.477864（方向 142°，距离 ≈ 300m）\n→ node_31.228619_121.477595（方向 210°，距离 ≈ 59m）\n→ node_31.226993_121.474867（方向 239°，距离 ≈ 316m）\n→ node_31.224633_121.470500（方向 242°，距离 ≈ 491m）\n→ node_31.225913_121.470403（方向 356°，距离 ≈ 143m）\n→ 香港广场北座（方向 0°，距离 ≈ 0m）\n→ node_31.224633_121.470500（方向 176°，距离 ≈ 143m）\n→ node_31.225913_121.470403（方向 356°，距离 ≈ 143m）\n→ node_31.224633_121.470500（方向 176°，距离 ≈ 143m）\n→ node_31.229092_121.477864（方向 59°，距离 ≈ 858m）\n→ node_31.228619_121.477595（方向 210°，距离 ≈ 59m）\n→ node_31.226993_121.474867（方向 239°，距离 ≈ 316m）\n→ node_31.227518_121.474357（方向 316°，距离 ≈ 76m）\n→ 金钟广场（方向 0°，距离 ≈ 0m）\n→ node_31.226993_121.474867（方向 136°，距离 ≈ 76m）\n→ node_31.228619_121.477595（方向 59°，距离 ≈ 316m）\n→ node_31.227988_121.477771（方向 164°，距离 ≈ 72m）\n→ 东淮海国际大厦（方向 0°，距离 ≈ 0m）\n→ node_31.228619_121.477595（方向 344°，距离 ≈ 72m）\n→ node_31.229092_121.477864（方向 30°，距离 ≈ 59m）\n→ node_31.227659_121.478872（方向 145°，距离 ≈ 186m）\n→ node_31.228073_121.479994（方向 70°，距离 ≈ 116m）\n→ 露香园（方向 0°，距离 ≈ 0m）\n→ node_31.227659_121.478872（方向 250°，距离 ≈ 116m）\n→ node_31.229092_121.477864（方向 325°，距离 ≈ 186m）\n→ node_31.231321_121.476095（方向 322°，距离 ≈ 300m）\n→ node_31.232732_121.479298（方向 66°，距离 ≈ 343m）\n→ node_31.233632_121.480018（方向 39°，距离 ≈ 121m）\n→ 黄浦区机关办公大楼（方向 0°，距离 ≈ 0m）\n→ node_31.232732_121.479298（方向 219°，距离 ≈ 121m）\n→ node_31.231321_121.476095（方向 246°，距离 ≈ 343m）\n→ node_31.234101_121.474389（方向 328°，距离 ≈ 349m）\n→ node_31.234748_121.476070（方向 69°，距离 ≈ 175m）\n→ 上海市青莲阁大楼（方向 0°，距离 ≈ 0m）\n→ node_31.234101_121.474389（方向 249°，距离 ≈ 175m）\n→ 上海黄浦区图书馆大楼（方向 0°，距离 ≈ 0m）\n→ node_31.233124_121.472071（方向 247°，距离 ≈ 246m）\n→ 人民广场地铁站1号口（方向 0°，距离 ≈ 0m）\n→ node_31.234101_121.474389（方向 67°，距离 ≈ 246m）\n→ node_31.231321_121.476095（方向 148°，距离 ≈ 349m）\n→ node_31.228143_121.472017（方向 232°，距离 ≈ 525m）\n→ node_31.228638_121.471601（方向 320°，距离 ≈ 68m）\n→ 普安路延安东路(公交站)（方向 0°，距离 ≈ 0m）\n→ node_31.228143_121.472017（方向 140°，距离 ≈ 68m）\n→ node_31.231321_121.476095（方向 52°，距离 ≈ 525m）\n→ node_31.229092_121.477864（方向 142°，距离 ≈ 300m）\n→ node_31.228619_121.477595（方向 210°，距离 ≈ 59m）\n→ node_31.226993_121.474867（方向 239°，距离 ≈ 316m）\n→ node_31.224633_121.470500（方向 242°，距离 ≈ 491m）\n→ node_31.225913_121.470403（方向 356°，距离 ≈ 143m）\n→ 香港广场北座（方向 0°，距离 ≈ 0m）\n→ node_31.224633_121.470500（方向 176°，距离 ≈ 143m）\n→ node_31.225913_121.470403（方向 356°，距离 ≈ 143m）\n→ node_31.224633_121.470500（方向 176°，距离 ≈ 143m）\n→ node_31.229092_121.477864（方向 59°，距离 ≈ 858m）\n→ node_31.228619_121.477595（方向 210°，距离 ≈ 59m）\n→ node_31.226993_121.474867（方向 239°，距离 ≈ 316m）\n→ node_31.227518_121.474357（方向 316°，距离 ≈ 76m）\n→ 金钟广场（方向 0°，距离 ≈ 0m）\n→ node_31.226993_121.474867（方向 136°，距离 ≈ 76m）\n→ node_31.228619_121.477595（方向 59°，距离 ≈ 316m）\n→ node_31.227988_121.477771（方向 164°，距离 ≈ 72m）\n→ 东淮海国际大厦（方向 0°，距离 ≈ 0m）\n→ node_31.228619_121.477595（方向 344°，距离 ≈ 72m）\n→ node_31.229092_121.477864（方向 30°，距离 ≈ 59m）\n→ node_31.227659_121.478872（方向 145°，距离 ≈ 186m）\n→ node_31.228073_121.479994（方向 70°，距离 ≈ 116m）\n→ 露香园（方向 0°，距离 ≈ 0m）\n→ node_31.227659_121.478872（方向 250°，距离 ≈ 116m）\n→ node_31.229092_121.477864（方向 325°，距离 ≈ 186m）\n→ node_31.231321_121.476095（方向 322°，距离 ≈ 300m）\n→ node_31.228143_121.472017（方向 232°，距离 ≈ 525m）\n→ node_31.228638_121.471601（方向 320°，距离 ≈ 68m）\n→ 普安路延安东路(公交站)（方向 0°，距离 ≈ 0m）\n→ node_31.228143_121.472017（方向 140°，距离 ≈ 68m）\n→ node_31.231321_121.476095（方向 52°，距离 ≈ 525m）\n→ node_31.229092_121.477864（方向 142°，距离 ≈ 300m）\n→ node_31.228619_121.477595（方向 210°，距离 ≈ 59m）\n→ node_31.226993_121.474867（方向 239°，距离 ≈ 316m）\n→ node_31.224633_121.470500（方向 242°，距离 ≈ 491m）\n→ node_31.225913_121.470403（方向 356°，距离 ≈ 143m）\n→ 香港广场北座（方向 0°，距离 ≈ 0m）\n→ node_31.224633_121.470500（方向 176°，距离 ≈ 143m）\n→ node_31.226993_121.474867（方向 62°，距离 ≈ 491m）\n→ node_31.228619_121.477595（方向 59°，距离 ≈ 316m）\n→ node_31.229092_121.477864（方向 30°，距离 ≈ 59m）\n→ node_31.231321_121.476095（方向 322°，距离 ≈ 300m）\n→ node_31.234101_121.474389（方向 328°，距离 ≈ 349m）\n→ node_31.233124_121.472071（方向 247°，距离 ≈ 246m）\n→ 人民广场地铁站1号口（方向 0°，距离 ≈ 0m）\n→ node_31.234101_121.474389（方向 67°，距离 ≈ 246m）\n→ 上海黄浦区图书馆大楼（方向 0°，距离 ≈ 0m）\n→ node_31.234748_121.476070（方向 69°，距离 ≈ 175m）\n→ 上海市青莲阁大楼（方向 0°，距离 ≈ 0m）\n→ node_31.234101_121.474389（方向 249°，距离 ≈ 175m）\n→ node_31.231321_121.476095（方向 148°，距离 ≈ 349m）\n→ node_31.232732_121.479298（方向 66°，距离 ≈ 343m）\n→ node_31.233632_121.480018（方向 39°，距离 ≈ 121m）\n→ 黄浦区机关办公大楼（方向 0°，距离 ≈ 0m）\n→ node_31.232732_121.479298（方向 219°，距离 ≈ 121m）\n→ node_31.233632_121.480018（方向 39°，距离 ≈ 121m）\n→ node_31.232732_121.479298（方向 219°，距离 ≈ 121m）\n→ node_31.233632_121.480018（方向 39°，距离 ≈ 121m）\n→ node_31.229092_121.477864（方向 205°，距离 ≈ 545m）\n→ node_31.228619_121.477595（方向 210°，距离 ≈ 59m）\n→ node_31.226993_121.474867（方向 239°，距离 ≈ 316m）\n→ node_31.227518_121.474357（方向 316°，距离 ≈ 76m）\n→ 金钟广场（方向 0°，距离 ≈ 0m）\n→ node_31.226993_121.474867（方向 136°，距离 ≈ 76m）\n→ node_31.228619_121.477595（方向 59°，距离 ≈ 316m）\n→ node_31.227988_121.477771（方向 164°，距离 ≈ 72m）\n→ 东淮海国际大厦（方向 0°，距离 ≈ 0m）\n→ node_31.228619_121.477595（方向 344°，距离 ≈ 72m）\n→ node_31.229092_121.477864（方向 30°，距离 ≈ 59m）\n→ node_31.231321_121.476095（方向 322°，距离 ≈ 300m）\n→ node_31.228143_121.472017（方向 232°，距离 ≈ 525m）\n→ node_31.228638_121.471601（方向 320°，距离 ≈ 68m）\n→ 普安路延安东路(公交站)（方向 0°，距离 ≈ 0m）\n→ node_31.228143_121.472017（方向 140°，距离 ≈ 68m）\n→ node_31.231321_121.476095（方向 52°，距离 ≈ 525m）\n→ node_31.234101_121.474389（方向 328°，距离 ≈ 349m）\n→ node_31.233124_121.472071（方向 247°，距离 ≈ 246m）\n→ 人民广场地铁站1号口（方向 0°，距离 ≈ 0m）\n→ node_31.234101_121.474389（方向 67°，距离 ≈ 246m）\n→ 上海黄浦区图书馆大楼（方向 0°，距离 ≈ 0m）\n→ node_31.234748_121.476070（方向 69°，距离 ≈ 175m）\n→ 上海市青莲阁大楼（方向 0°，距离 ≈ 0m）\n→ node_31.234101_121.474389（方向 249°，距离 ≈ 175m）\n→ node_31.231321_121.476095（方向 148°，距离 ≈ 349m）\n→ node_31.232732_121.479298（方向 66°，距离 ≈ 343m）\n→ node_31.233632_121.480018（方向 39°，距离 ≈ 121m）\n→ 黄浦区机关办公大楼（方向 0°，距离 ≈ 0m）\n→ node_31.232732_121.479298（方向 219°，距离 ≈ 121m）\n→ node_31.231321_121.476095（方向 246°，距离 ≈ 343m）\n→ node_31.229092_121.477864（方向 142°，距离 ≈ 300m）\n→ node_31.227659_121.478872（方向 145°，距离 ≈ 186m）\n→ node_31.228073_121.479994（方向 70°，距离 ≈ 116m）\n→ 露香园（方向 0°，距离 ≈ 0m）\n→ node_31.227659_121.478872（方向 250°，距离 ≈ 116m）\n→ node_31.229092_121.477864（方向 325°，距离 ≈ 186m）\n→ node_31.228619_121.477595（方向 210°，距离 ≈ 59m）\n→ node_31.226993_121.474867（方向 239°，距离 ≈ 316m）\n→ node_31.224633_121.470500（方向 242°，距离 ≈ 491m）\n→ node_31.225913_121.470403（方向 356°，距离 ≈ 143m）\n→ 香港广场北座（方向 0°，距离 ≈ 0m）\n→ node_51.496993_-0.125404（方向 279°，距离 ≈ 9197656m）\n→ node_51.497077_-0.126297（方向 275°，距离 ≈ 63m）\n→ Crussh Bar（方向 0°，距离 ≈ 0m）\n→ node_51.497829_-0.127023（方向 316°，距离 ≈ 98m）\n→ Quirinale（方向 0°，距离 ≈ 0m）\n→ node_51.497077_-0.126297（方向 136°，距离 ≈ 98m）\n→ node_51.496413_-0.126259（方向 177°，距离 ≈ 74m）\n→ node_51.495627_-0.129409（方向 256°，距离 ≈ 235m）\n→ node_51.496358_-0.129443（方向 357°，距离 ≈ 81m）\n→ node_51.497123_-0.129393（方向 4°，距离 ≈ 85m）\n→ The Cinnamon Club（方向 0°，距离 ≈ 0m）\n→ node_51.497791_-0.130103（方向 313°，距离 ≈ 89m）\n→ Ashburnham House（方向 0°，距离 ≈ 0m）\n→ node_51.498457_-0.130079（方向 2°，距离 ≈ 74m）\n→ Milne’s House（方向 0°，距离 ≈ 0m）\n→ node_51.499937_-0.129285（方向 28°，距离 ≈ 173m）\n→ node_51.499951_-0.130920（方向 271°，距离 ≈ 113m）\n→ Café Fresco（方向 0°，距离 ≈ 0m）\n→ node_51.499937_-0.129285（方向 91°，距离 ≈ 113m）\n→ node_51.499882_-0.127144（方向 91°，距离 ≈ 148m）\n→ node_51.500707_-0.127210（方向 355°，距离 ≈ 92m）\n→ node_51.500660_-0.125426（方向 91°，距离 ≈ 124m）\n→ node_51.501448_-0.124759（方向 40°，距离 ≈ 99m）\n→ Caffè Nero（方向 0°，距离 ≈ 0m）\n→ node_51.500706_-0.124564（方向 165°，距离 ≈ 84m）\n→ node_51.500678_-0.119859（方向 90°，距离 ≈ 326m）\n→ node_51.502118_-0.119912（方向 358°，距离 ≈ 160m）\n→ node_51.502032_-0.119197（方向 97°，距离 ≈ 50m）\n→ Zen China（方向 0°，距离 ≈ 0m）\n→ node_51.502118_-0.119912（方向 277°，距离 ≈ 50m）\n→ node_51.500678_-0.119859（方向 178°，距离 ≈ 160m）\n→ node_51.500682_-0.118668（方向 90°，距离 ≈ 82m）\n→ node_51.501338_-0.118497（方向 15°，距离 ≈ 74m）\n→ Aji Zen Canteen（方向 0°，距离 ≈ 0m）\n→ node_51.500682_-0.118668（方向 195°，距离 ≈ 74m）\n→ node_51.500678_-0.119859（方向 270°，距离 ≈ 82m）\n→ node_51.498376_-0.120751（方向 201°，距离 ≈ 263m）\n→ node_51.498401_-0.119915（方向 88°，距离 ≈ 58m）\n→ Shepherds Hall（方向 0°，距离 ≈ 0m）\n→ node_51.498376_-0.120751（方向 268°，距离 ≈ 58m）\n→ node_51.494885_-0.121672（方向 195°，距离 ≈ 393m）\n→ Riverside Cafe（方向 0°，距离 ≈ 0m）\n→ node_51.494123_-0.121606（方向 175°，距离 ≈ 85m）\n→ node_51.494174_-0.124826（方向 271°，距离 ≈ 223m）\n→ node_51.492791_-0.124802（方向 179°，距离 ≈ 154m）\n→ node_51.492805_-0.125546（方向 271°，距离 ≈ 52m）\n→ PizzaExpress（方向 0°，距离 ≈ 0m）\n→ node_51.492791_-0.124802（方向 91°，距离 ≈ 52m）\n→ node_51.494174_-0.124826（方向 359°，距离 ≈ 154m）\n→ node_51.494937_-0.125458（方向 320°，距离 ≈ 96m）\n→ node_51.494926_-0.127150（方向 270°，距离 ≈ 117m）\n→ Footstool（方向 0°，距离 ≈ 0m）\n→ node_51.495648_-0.126977（方向 13°，距离 ≈ 81m）\n→ Lloyds Bank（方向 0°，距离 ≈ 0m）\n→ node_51.496413_-0.126259（方向 43°，距离 ≈ 98m）\n→ node_51.495627_-0.129409（方向 256°，距离 ≈ 235m）\n→ node_51.496358_-0.129443（方向 357°，距离 ≈ 81m）\n→ Wash House（方向 0°，距离 ≈ 0m）\n→ node_51.495627_-0.129409（方向 177°，距离 ≈ 81m）\n→ node_51.496413_-0.126259（方向 76°，距离 ≈ 235m）\n→ node_51.495648_-0.126977（方向 223°，距离 ≈ 98m）\n→ node_51.494926_-0.127150（方向 193°，距离 ≈ 81m）\n→ node_51.495648_-0.126977（方向 13°，距离 ≈ 81m）\n→ node_51.496413_-0.126259（方向 43°，距离 ≈ 98m）\n→ node_51.495627_-0.129409（方向 256°，距离 ≈ 235m）\n→ node_51.496413_-0.126259（方向 76°，距离 ≈ 235m）\n→ node_51.495648_-0.126977（方向 223°，距离 ≈ 98m）\n→ node_51.496993_-0.125404（方向 49°，距离 ≈ 185m）\n→ node_51.497077_-0.126297（方向 275°，距离 ≈ 63m）\n→ Crussh Bar（方向 0°，距离 ≈ 0m）\n→ node_51.496413_-0.126259（方向 177°，距离 ≈ 74m）\n→ node_51.495648_-0.126977（方向 223°，距离 ≈ 98m）\n→ Lloyds Bank（方向 0°，距离 ≈ 0m）\n→ node_51.494926_-0.127150（方向 193°，距离 ≈ 81m）\n→ Footstool（方向 0°，距离 ≈ 0m）\n→ node_51.494937_-0.125458（方向 90°，距离 ≈ 117m）\n→ node_51.494174_-0.124826（方向 140°，距离 ≈ 96m）\n→ node_51.492791_-0.124802（方向 179°，距离 ≈ 154m）\n→ node_51.492805_-0.125546（方向 271°，距离 ≈ 52m）\n→ PizzaExpress（方向 0°，距离 ≈ 0m）\n→ node_51.492791_-0.124802（方向 91°，距离 ≈ 52m）\n→ node_51.494174_-0.124826（方向 359°，距离 ≈ 154m）\n→ node_51.494123_-0.121606（方向 91°，距离 ≈ 223m）\n→ node_51.494885_-0.121672（方向 355°，距离 ≈ 85m）\n→ Riverside Cafe（方向 0°，距离 ≈ 0m）\n→ node_51.498376_-0.120751（方向 15°，距离 ≈ 393m）\n→ node_51.498401_-0.119915（方向 88°，距离 ≈ 58m）\n→ Shepherds Hall（方向 0°，距离 ≈ 0m）\n→ node_51.498376_-0.120751（方向 268°，距离 ≈ 58m）\n→ node_51.500678_-0.119859（方向 21°，距离 ≈ 263m）\n→ node_51.502118_-0.119912（方向 358°，距离 ≈ 160m）\n→ node_51.502032_-0.119197（方向 97°，距离 ≈ 50m）\n→ Zen China（方向 0°，距离 ≈ 0m）\n→ node_51.502118_-0.119912（方向 277°，距离 ≈ 50m）\n→ node_51.500678_-0.119859（方向 178°，距离 ≈ 160m）\n→ node_51.500682_-0.118668（方向 90°，距离 ≈ 82m）\n→ node_51.501338_-0.118497（方向 15°，距离 ≈ 74m）\n→ Aji Zen Canteen（方向 0°，距离 ≈ 0m）\n→ node_51.500682_-0.118668（方向 195°，距离 ≈ 74m）\n→ node_51.500678_-0.119859（方向 270°，距离 ≈ 82m）\n→ node_51.500706_-0.124564（方向 270°，距离 ≈ 326m）\n→ node_51.501448_-0.124759（方向 345°，距离 ≈ 84m）\n→ Caffè Nero（方向 0°，距离 ≈ 0m）\n→ node_51.500660_-0.125426（方向 220°，距离 ≈ 99m）\n→ node_51.499756_-0.125375（方向 177°，距离 ≈ 101m）\n→ node_51.497776_-0.125328（方向 179°，距离 ≈ 220m）\n→ node_51.497829_-0.127023（方向 272°，距离 ≈ 117m）\n→ Quirinale（方向 0°，距离 ≈ 0m）\n→ node_51.497077_-0.126297（方向 136°，距离 ≈ 98m）\n→ node_51.496413_-0.126259（方向 177°，距离 ≈ 74m）\n→ node_51.495627_-0.129409（方向 256°，距离 ≈ 235m）\n→ node_51.496358_-0.129443（方向 357°，距离 ≈ 81m）\n→ node_51.497123_-0.129393（方向 4°，距离 ≈ 85m）\n→ The Cinnamon Club（方向 0°，距离 ≈ 0m）\n→ node_51.497791_-0.130103（方向 313°，距离 ≈ 89m）\n→ Ashburnham House（方向 0°，距离 ≈ 0m）\n→ node_51.498457_-0.130079（方向 2°，距离 ≈ 74m）\n→ Milne’s House（方向 0°，距离 ≈ 0m）\n→ node_51.499937_-0.129285（方向 28°，距离 ≈ 173m）\n→ node_51.499951_-0.130920（方向 271°，距离 ≈ 113m）\n→ Café Fresco（方向 0°，距离 ≈ 0m）\n→ node_51.499937_-0.129285（方向 91°，距离 ≈ 113m）\n→ node_51.498457_-0.130079（方向 208°，距离 ≈ 173m）\n→ node_51.497791_-0.130103（方向 182°，距离 ≈ 74m）\n→ node_51.497123_-0.129393（方向 133°，距离 ≈ 89m）\n→ node_51.496358_-0.129443（方向 184°，距离 ≈ 85m）\n→ Wash House（方向 0°，距离 ≈ 0m）\n→ node_51.496993_-0.125404（方向 81°，距离 ≈ 288m）\n→ node_51.497077_-0.126297（方向 275°，距离 ≈ 63m）\n→ Crussh Bar（方向 0°，距离 ≈ 0m）\n→ node_51.497829_-0.127023（方向 316°，距离 ≈ 98m）\n→ Quirinale（方向 0°，距离 ≈ 0m）\n→ node_51.497077_-0.126297（方向 136°，距离 ≈ 98m）\n→ node_51.496413_-0.126259（方向 177°，距离 ≈ 74m）\n→ node_51.495648_-0.126977（方向 223°，距离 ≈ 98m）\n→ Lloyds Bank（方向 0°，距离 ≈ 0m）\n→ node_51.494926_-0.127150（方向 193°，距离 ≈ 81m）\n→ Footstool（方向 0°，距离 ≈ 0m）\n→ node_51.494937_-0.125458（方向 90°，距离 ≈ 117m）\n→ node_51.494174_-0.124826（方向 140°，距离 ≈ 96m）\n→ node_51.492791_-0.124802（方向 179°，距离 ≈ 154m）\n→ node_51.492805_-0.125546（方向 271°，距离 ≈ 52m）\n→ PizzaExpress（方向 0°，距离 ≈ 0m）\n→ node_51.492791_-0.124802（方向 91°，距离 ≈ 52m）\n→ node_51.494174_-0.124826（方向 359°，距离 ≈ 154m）\n→ node_51.494123_-0.121606（方向 91°，距离 ≈ 223m）\n→ node_51.494885_-0.121672（方向 355°，距离 ≈ 85m）\n→ Riverside Cafe（方向 0°，距离 ≈ 0m）\n→ node_51.498376_-0.120751（方向 15°，距离 ≈ 393m）\n→ node_51.498401_-0.119915（方向 88°，距离 ≈ 58m）\n→ Shepherds Hall（方向 0°，距离 ≈ 0m）\n→ node_51.498376_-0.120751（方向 268°，距离 ≈ 58m）\n→ node_51.500678_-0.119859（方向 21°，距离 ≈ 263m）\n→ node_51.500682_-0.118668（方向 90°，距离 ≈ 82m）\n→ node_51.501338_-0.118497（方向 15°，距离 ≈ 74m）\n→ Aji Zen Canteen（方向 0°，距离 ≈ 0m）\n→ node_51.500682_-0.118668（方向 195°，距离 ≈ 74m）\n→ node_51.500678_-0.119859（方向 270°，距离 ≈ 82m）\n→ node_51.502118_-0.119912（方向 358°，距离 ≈ 160m）\n→ node_51.502032_-0.119197（方向 97°，距离 ≈ 50m）\n→ Zen China（方向 0°，距离 ≈ 0m）\n→ node_51.502118_-0.119912（方向 277°，距离 ≈ 50m）\n→ node_51.500678_-0.119859（方向 178°，距离 ≈ 160m）\n→ node_51.500706_-0.124564（方向 270°，距离 ≈ 326m）\n→ node_51.501448_-0.124759（方向 345°，距离 ≈ 84m）\n→ Caffè Nero（方向 0°，距离 ≈ 0m）\n→ node_51.500660_-0.125426（方向 220°，距离 ≈ 99m）\n→ node_51.500707_-0.127210（方向 271°，距离 ≈ 124m）\n→ node_51.499882_-0.127144（方向 175°，距离 ≈ 92m）\n→ node_51.499937_-0.129285（方向 271°，距离 ≈ 148m）\n→ node_51.499951_-0.130920（方向 271°，距离 ≈ 113m）\n→ Café Fresco（方向 0°，距离 ≈ 0m）\n→ node_51.499937_-0.129285（方向 91°，距离 ≈ 113m）\n→ node_51.498457_-0.130079（方向 208°，距离 ≈ 173m）\n→ Milne’s House（方向 0°，距离 ≈ 0m）\n→ node_51.497791_-0.130103（方向 182°，距离 ≈ 74m）\n→ Ashburnham House（方向 0°，距离 ≈ 0m）\n→ node_51.497123_-0.129393（方向 133°，距离 ≈ 89m）\n→ The Cinnamon Club（方向 0°，距离 ≈ 0m）\n→ node_51.496358_-0.129443（方向 184°，距离 ≈ 85m）\n→ Wash House（方向 0°，距离 ≈ 0m）\n→ node_51.495627_-0.129409（方向 177°，距离 ≈ 81m）\n→ node_51.496413_-0.126259（方向 76°，距离 ≈ 235m）\n→ node_51.495648_-0.126977（方向 223°，距离 ≈ 98m）\n→ node_51.494926_-0.127150（方向 193°，距离 ≈ 81m）\n→ node_51.495648_-0.126977（方向 13°，距离 ≈ 81m）\n→ node_51.496413_-0.126259（方向 43°，距离 ≈ 98m）\n→ node_51.495627_-0.129409（方向 256°，距离 ≈ 235m）\n→ node_51.494220_-0.129477（方向 183°，距离 ≈ 157m）\n→ node_51.495627_-0.129409（方向 3°，距离 ≈ 157m）\n→ node_51.496413_-0.126259（方向 76°，距离 ≈ 235m）\n→ node_51.495648_-0.126977（方向 223°，距离 ≈ 98m）\n→ node_51.496413_-0.126259（方向 43°，距离 ≈ 98m）\n→ node_51.495627_-0.129409（方向 256°，距离 ≈ 235m）\n→ node_51.496358_-0.129443（方向 357°，距离 ≈ 81m）\n→ node_51.497123_-0.129393（方向 4°，距离 ≈ 85m）\n→ node_51.497829_-0.127023（方向 73°，距离 ≈ 182m）\n→ Quirinale（方向 0°，距离 ≈ 0m）\n→ node_51.497077_-0.126297（方向 136°，距离 ≈ 98m）\n→ Crussh Bar（方向 0°，距离 ≈ 0m）\n→ node_51.496993_-0.125404（方向 95°，距离 ≈ 63m）\n→ node_51.496310_-0.125421（方向 181°，距离 ≈ 76m）\n→ node_51.494937_-0.125458（方向 182°，距离 ≈ 153m）\n→ node_51.494174_-0.124826（方向 140°，距离 ≈ 96m）\n→ node_51.494123_-0.121606（方向 91°，距离 ≈ 223m）\n→ node_51.494885_-0.121672（方向 355°，距离 ≈ 85m）\n→ node_51.498376_-0.120751（方向 15°，距离 ≈ 393m）\n→ node_51.498401_-0.119915（方向 88°，距离 ≈ 58m）\n→ Shepherds Hall（方向 0°，距离 ≈ 0m）\n→ node_51.498376_-0.120751（方向 268°，距离 ≈ 58m）\n→ node_51.500678_-0.119859（方向 21°，距离 ≈ 263m）\n→ node_51.500682_-0.118668（方向 90°，距离 ≈ 82m）\n→ node_51.501338_-0.118497（方向 15°，距离 ≈ 74m）\n→ Aji Zen Canteen（方向 0°，距离 ≈ 0m）\n→ node_51.500682_-0.118668（方向 195°，距离 ≈ 74m）\n→ node_51.500678_-0.119859（方向 270°，距离 ≈ 82m）\n→ node_51.502118_-0.119912（方向 358°，距离 ≈ 160m）\n→ node_51.502032_-0.119197（方向 97°，距离 ≈ 50m）\n→ Zen China（方向 0°，距离 ≈ 0m）\n→ node_51.502118_-0.119912（方向 277°，距离 ≈ 50m）\n→ node_51.500678_-0.119859（方向 178°，距离 ≈ 160m）\n→ node_51.500706_-0.124564（方向 270°，距离 ≈ 326m）\n→ node_51.501448_-0.124759（方向 345°，距离 ≈ 84m）\n→ Caffè Nero（方向 0°，距离 ≈ 0m）\n→ node_51.500660_-0.125426（方向 220°，距离 ≈ 99m）\n→ node_51.499756_-0.125375（方向 177°，距离 ≈ 101m）\n→ node_51.497776_-0.125328（方向 179°，距离 ≈ 220m）\n→ node_51.496993_-0.125404（方向 186°，距离 ≈ 87m）\n→ node_51.496310_-0.125421（方向 181°，距离 ≈ 76m）\n→ node_51.495648_-0.126977（方向 247°，距离 ≈ 130m）\n→ Lloyds Bank（方向 0°，距离 ≈ 0m）\n→ node_51.494926_-0.127150（方向 193°，距离 ≈ 81m）\n→ Footstool（方向 0°，距离 ≈ 0m）\n→ node_51.495648_-0.126977（方向 13°，距离 ≈ 81m）\n→ node_51.496413_-0.126259（方向 43°，距离 ≈ 98m）\n→ node_51.495627_-0.129409（方向 256°，距离 ≈ 235m）\n→ node_51.496358_-0.129443（方向 357°，距离 ≈ 81m）\n→ node_51.497123_-0.129393（方向 4°，距离 ≈ 85m）\n→ The Cinnamon Club（方向 0°，距离 ≈ 0m）\n→ node_51.497791_-0.130103（方向 313°，距离 ≈ 89m）\n→ Ashburnham House（方向 0°，距离 ≈ 0m）\n→ node_51.498457_-0.130079（方向 2°，距离 ≈ 74m）\n→ Milne’s House（方向 0°，距离 ≈ 0m）\n→ node_51.499937_-0.129285（方向 28°，距离 ≈ 173m）\n→ node_51.499951_-0.130920（方向 271°，距离 ≈ 113m）\n→ Café Fresco（方向 0°，距离 ≈ 0m）\n→ node_51.499937_-0.129285（方向 91°，距离 ≈ 113m）\n→ node_51.498457_-0.130079（方向 208°，距离 ≈ 173m）\n→ node_51.497791_-0.130103（方向 182°，距离 ≈ 74m）\n→ node_51.497123_-0.129393（方向 133°，距离 ≈ 89m）\n→ node_51.496358_-0.129443（方向 184°，距离 ≈ 85m）\n→ Wash House（方向 0°，距离 ≈ 0m）\n→ node_51.495627_-0.129409（方向 177°，距离 ≈ 81m）\n→ node_51.494220_-0.129477（方向 183°，距离 ≈ 157m）\n→ node_51.494174_-0.124826（方向 91°，距离 ≈ 322m）\n→ node_51.492791_-0.124802（方向 179°，距离 ≈ 154m）\n→ node_51.492805_-0.125546（方向 271°，距离 ≈ 52m）\n→ PizzaExpress（方向 0°，距离 ≈ 0m）\n→ node_51.492791_-0.124802（方向 91°，距离 ≈ 52m）\n→ node_51.494174_-0.124826（方向 359°，距离 ≈ 154m）\n→ node_51.494123_-0.121606（方向 91°，距离 ≈ 223m）\n→ node_51.494885_-0.121672（方向 355°，距离 ≈ 85m）\n→ Riverside Cafe（方向 0°，距离 ≈ 0m）\n→ node_51.494123_-0.121606（方向 175°，距离 ≈ 85m）\n→ node_51.494044_-0.121015（方向 98°，距离 ≈ 42m）\n→ node_51.494123_-0.121606（方向 278°，距离 ≈ 42m）\n→ node_51.494885_-0.121672（方向 355°，距离 ≈ 85m）\n→ node_51.497829_-0.127023（方向 299°，距离 ≈ 494m）\n→ Quirinale（方向 0°，距离 ≈ 0m）\n→ node_51.497776_-0.125328（方向 92°，距离 ≈ 117m）\n→ node_51.499756_-0.125375（方向 359°，距离 ≈ 220m）\n→ node_51.500660_-0.125426（方向 357°，距离 ≈ 101m）\n→ node_51.501448_-0.124759（方向 40°，距离 ≈ 99m）\n→ Caffè Nero（方向 0°，距离 ≈ 0m）\n→ node_51.500660_-0.125426（方向 220°，距离 ≈ 99m）\n→ node_51.499756_-0.125375（方向 177°，距离 ≈ 101m）\n→ node_51.497776_-0.125328（方向 179°，距离 ≈ 220m）\n→ node_51.496993_-0.125404（方向 186°，距离 ≈ 87m）\n→ node_51.497077_-0.126297（方向 275°，距离 ≈ 63m）\n→ Crussh Bar（方向 0°，距离 ≈ 0m）\n→ node_51.496993_-0.125404（方向 95°，距离 ≈ 63m）\n→ node_51.496310_-0.125421（方向 181°，距离 ≈ 76m）\n→ node_51.494937_-0.125458（方向 182°，距离 ≈ 153m）\n→ node_51.494174_-0.124826（方向 140°，距离 ≈ 96m）\n→ node_51.494123_-0.121606（方向 91°，距离 ≈ 223m）\n→ node_51.494885_-0.121672（方向 355°，距离 ≈ 85m）\n→ node_51.498376_-0.120751（方向 15°，距离 ≈ 393m）\n→ node_51.498401_-0.119915（方向 88°，距离 ≈ 58m）\n→ Shepherds Hall（方向 0°，距离 ≈ 0m）\n→ node_51.498376_-0.120751（方向 268°，距离 ≈ 58m）\n→ node_51.500678_-0.119859（方向 21°，距离 ≈ 263m）\n→ node_51.500706_-0.124564（方向 270°，距离 ≈ 326m）\n→ node_51.500660_-0.125426（方向 267°，距离 ≈ 60m）\n→ node_51.500707_-0.127210（方向 271°，距离 ≈ 124m）\n→ node_51.499882_-0.127144（方向 175°，距离 ≈ 92m）\n→ node_51.499937_-0.129285（方向 271°，距离 ≈ 148m）\n→ node_51.498457_-0.130079（方向 208°，距离 ≈ 173m）\n→ Milne’s House（方向 0°，距离 ≈ 0m）\n→ node_51.497791_-0.130103（方向 182°，距离 ≈ 74m）\n→ Ashburnham House（方向 0°，距离 ≈ 0m）\n→ node_51.497123_-0.129393（方向 133°，距离 ≈ 89m）\n→ The Cinnamon Club（方向 0°，距离 ≈ 0m）\n→ node_51.496358_-0.129443（方向 184°，距离 ≈ 85m）\n→ Wash House（方向 0°，距离 ≈ 0m）\n→ node_51.497123_-0.129393（方向 4°，距离 ≈ 85m）\n→ node_51.497791_-0.130103（方向 313°，距离 ≈ 89m）\n→ node_51.498457_-0.130079（方向 2°，距离 ≈ 74m）\n→ node_51.499937_-0.129285（方向 28°，距离 ≈ 173m）\n→ node_51.499882_-0.127144（方向 91°，距离 ≈ 148m）\n→ node_51.500707_-0.127210（方向 355°，距离 ≈ 92m）\n→ node_51.500660_-0.125426（方向 91°，距离 ≈ 124m）\n→ node_51.500706_-0.124564（方向 87°，距离 ≈ 60m）\n→ node_51.500678_-0.119859（方向 90°，距离 ≈ 326m）\n→ node_51.500682_-0.118668（方向 90°，距离 ≈ 82m）\n→ node_51.501338_-0.118497（方向 15°，距离 ≈ 74m）\n→ Aji Zen Canteen（方向 0°，距离 ≈ 0m）\n→ node_51.500682_-0.118668（方向 195°，距离 ≈ 74m）\n→ node_51.500678_-0.119859（方向 270°，距离 ≈ 82m）\n→ node_51.502118_-0.119912（方向 358°，距离 ≈ 160m）\n→ node_51.502032_-0.119197（方向 97°，距离 ≈ 50m）\n→ Zen China（方向 0°，距离 ≈ 0m）\n→ node_51.502118_-0.119912（方向 277°，距离 ≈ 50m）\n→ node_51.500678_-0.119859（方向 178°，距离 ≈ 160m）\n→ node_51.500706_-0.124564（方向 270°，距离 ≈ 326m）\n→ node_51.500660_-0.125426（方向 267°，距离 ≈ 60m）\n→ node_51.499756_-0.125375（方向 177°，距离 ≈ 101m）\n→ node_51.497776_-0.125328（方向 179°，距离 ≈ 220m）\n→ node_51.496993_-0.125404（方向 186°，距离 ≈ 87m）\n→ node_51.496310_-0.125421（方向 181°，距离 ≈ 76m）\n→ node_51.495648_-0.126977（方向 247°，距离 ≈ 130m）\n→ Lloyds Bank（方向 0°，距离 ≈ 0m）\n→ node_51.494926_-0.127150（方向 193°，距离 ≈ 81m）\n→ Footstool（方向 0°，距离 ≈ 0m）\n→ node_51.495648_-0.126977（方向 13°，距离 ≈ 81m）\n→ node_51.496310_-0.125421（方向 67°，距离 ≈ 130m）\n→ node_51.496993_-0.125404（方向 1°，距离 ≈ 76m）\n→ node_51.497776_-0.125328（方向 6°，距离 ≈ 87m）\n→ node_51.499756_-0.125375（方向 359°，距离 ≈ 220m）\n→ node_51.499882_-0.127144（方向 274°，距离 ≈ 123m）\n→ node_51.499937_-0.129285（方向 271°，距离 ≈ 148m）\n→ node_51.499951_-0.130920（方向 271°，距离 ≈ 113m）\n→ Café Fresco（方向 0°，距离 ≈ 0m）\n→ node_51.499937_-0.129285（方向 91°，距离 ≈ 113m）\n→ node_51.499882_-0.127144（方向 91°，距离 ≈ 148m）\n→ node_51.499756_-0.125375（方向 94°，距离 ≈ 123m）\n→ node_51.497776_-0.125328（方向 179°，距离 ≈ 220m）\n→ node_51.496993_-0.125404（方向 186°，距离 ≈ 87m）\n→ node_51.496310_-0.125421（方向 181°，距离 ≈ 76m）\n→ node_51.494937_-0.125458（方向 182°，距离 ≈ 153m）\n→ node_51.494174_-0.124826（方向 140°，距离 ≈ 96m）\n→ node_51.494123_-0.121606（方向 91°，距离 ≈ 223m）\n→ node_51.494885_-0.121672（方向 355°，距离 ≈ 85m）\n→ Riverside Cafe（方向 0°，距离 ≈ 0m）\n→ node_51.494123_-0.121606（方向 175°，距离 ≈ 85m）\n→ node_51.494174_-0.124826（方向 271°，距离 ≈ 223m）\n→ node_51.492791_-0.124802（方向 179°，距离 ≈ 154m）\n→ node_51.492805_-0.125546（方向 271°，距离 ≈ 52m）\n→ PizzaExpress（方向 0°，距离 ≈ 0m）\n→ node_51.492791_-0.124802（方向 91°，距离 ≈ 52m）\n→ node_51.494174_-0.124826（方向 359°，距离 ≈ 154m）\n→ node_51.494937_-0.125458（方向 320°，距离 ≈ 96m）\n→ node_51.494926_-0.127150（方向 270°，距离 ≈ 117m）\n→ node_51.495648_-0.126977（方向 13°，距离 ≈ 81m）\n→ node_51.496413_-0.126259（方向 43°，距离 ≈ 98m）\n→ node_51.495627_-0.129409（方向 256°，距离 ≈ 235m）\n→ node_51.494220_-0.129477（方向 183°，距离 ≈ 157m）\n→ 路径16 正义路3号院（方向 96°，距离 ≈ 8142202m）\n→ 正义路与四季回头特色菜馆道路的节（方向 309°，距离 ≈ 87m）\n→ 路径17 四季回头特色菜馆（方向 90°，距离 ≈ 71m）\n→ 正义路与四季回头特色菜馆道路的节（方向 270°，距离 ≈ 71m）\n→ 正义路与正义路1号院道路的节点（方向 358°，距离 ≈ 201m）\n→ 路径2 正义路1号院（方向 88°，距离 ≈ 84m）\n→ 正义路与正义路1号院道路的节点（方向 268°，距离 ≈ 84m）\n→ 东长安街与正义路的节点（方向 356°，距离 ≈ 190m）\n→ 东长安街与长安大厦道路的节点（方向 88°，距离 ≈ 217m）\n→ 路径18 长安大厦(东长安街)（方向 192°，距离 ≈ 76m）\n→ 东长安街与长安大厦道路的节点（方向 12°，距离 ≈ 76m）\n→ 东长安街与台基厂大街的节点（方向 89°，距离 ≈ 211m）\n→ 王府井大街与东方广场W3座道路的节点（方向 359°，距离 ≈ 204m）\n→ 路径19 东方广场W3座（方向 99°，距离 ≈ 75m）\n→ 王府井大街与东方广场W3座道路的节点（方向 279°，距离 ≈ 75m）\n→ 路径20 王府井喜悦购物中心地下停车场（方向 251°，距离 ≈ 55m）\n→ 王府井大街与东方广场W3座道路的节点（方向 71°，距离 ≈ 55m）\n→ 东长安街与台基厂大街的节点（方向 179°，距离 ≈ 204m）\n→ 东长安街与东方广场W1座道路的节点（方向 88°，距离 ≈ 147m）\n→ 路径4 东方广场W1座（方向 354°，距离 ≈ 118m）\n→ 东长安街与东方广场W1座道路的节点（方向 174°，距离 ≈ 118m）\n→ 东长安街与北京东方广场的节点（方向 88°，距离 ≈ 129m）\n→ node_39.909489_116.414528（方向 351°，距离 ≈ 158m）\n→ 路径1 北京东方广场（方向 0°，距离 ≈ 0m）\n→ 东长安街与北京东方广场的节点（方向 171°，距离 ≈ 158m）\n→ 东长安街与东方广场W1座道路的节点（方向 268°，距离 ≈ 129m）\n→ 东长安街与台基厂大街的节点（方向 268°，距离 ≈ 147m）\n→ 东长安街与长安大厦道路的节点（方向 269°，距离 ≈ 211m）\n→ 东长安街与正义路的节点（方向 268°，距离 ≈ 217m）\n→ 南河沿大街与霞公府道路的节点（方向 7°，距离 ≈ 205m）\n→ 路径9 霞公府（方向 91°，距离 ≈ 120m）\n→ 南河沿大街与霞公府道路的节点（方向 271°，距离 ≈ 120m）\n→ 东长安街与正义路的节点（方向 187°，距离 ≈ 205m）\n→ 东长安街与南池子大街的节点（方向 267°，距离 ≈ 290m）\n→ 东长安街与天安门东地铁站B口道路的（方向 276°，距离 ≈ 66m）\n→ 路径7 天安门东地铁站B东北口（方向 4°，距离 ≈ 79m）\n→ 东长安街与天安门东地铁站B口道路的（方向 184°，距离 ≈ 79m）\n→ 东长安街与天安门东地铁站道路的节（方向 273°，距离 ≈ 109m）\n→ 路径8 天安门东(地铁站)（方向 359°，距离 ≈ 74m）\n→ 东长安街与天安门东地铁站道路的节（方向 179°，距离 ≈ 74m）\n→ 路径5 天安门东地铁站D西南口（方向 184°，距离 ≈ 65m）\n→ 东长安街与天安门东地铁站道路的节（方向 4°，距离 ≈ 65m）\n→ 东长安街与天安门东地铁站B口道路的（方向 93°，距离 ≈ 109m）\n→ 东长安街与南池子大街的节点（方向 96°，距离 ≈ 66m）\n→ node_39.909072_116.403204（方向 4°，距离 ≈ 155m）\n→ 路径6 东方捷路地下停车场（方向 0°，距离 ≈ 0m）\n→ 东长安街与南池子大街的节点（方向 184°，距离 ≈ 155m）\n→ 东长安街与正义路的节点（方向 87°，距离 ≈ 290m）\n→ 正义路与正义路1号院道路的节点（方向 176°，距离 ≈ 190m）\n→ 正义路与四季回头特色菜馆道路的节（方向 178°，距离 ≈ 201m）\n→ 正义路与正义路3号院道路的节点（方向 178°，距离 ≈ 63m）\n→ 正义路与隆和居道路的节点（方向 179°，距离 ≈ 67m）\n→ 路径14 隆和居（方向 270°，距离 ≈ 60m）\n→ 正义路与正义路10号院道路的节点（方向 128°，距离 ≈ 85m）\n→ 路径13 正义路10号院（方向 267°，距离 ≈ 61m）\n→ 正义路与正义路10号院道路的节点（方向 87°，距离 ≈ 61m）\n→ 正义路与正义路社区服务站道路的节（方向 180°，距离 ≈ 64m）\n→ 路径11 正义路社区服务站（方向 267°，距离 ≈ 56m）\n→ 正义路与正义路社区服务站道路的节（方向 87°，距离 ≈ 56m）\n→ 正义路与正义路10号院道路的节点（方向 360°，距离 ≈ 64m）\n→ 正义路与隆和居道路的节点（方向 360°，距离 ≈ 60m）\n→ 正义路与正义路3号院道路的节点（方向 359°，距离 ≈ 67m）\n→ 正义路与四季回头特色菜馆道路的节（方向 358°，距离 ≈ 63m）\n→ 北京东交民巷饭店写字楼（方向 91°，距离 ≈ 117m）\n→ 正义路与四季回头特色菜馆道路的节（方向 310°，距离 ≈ 179m）\n→ 正义路与正义路3号院道路的节点（方向 178°，距离 ≈ 63m）\n→ 正义路与隆和居道路的节点（方向 179°，距离 ≈ 67m）\n→ 正义路与正义路10号院道路的节点（方向 180°，距离 ≈ 60m）\n→ 正义路与正义路社区服务站道路的节（方向 180°，距离 ≈ 64m）\n→ 正义路与前门东大街的节点（方向 180°，距离 ≈ 133m）\n→ 崇文门西大街与祈年大街的节点（方向 89°，距离 ≈ 430m）\n→ 祈年大街与宝鼎中心道路的节点（方向 176°，距离 ≈ 131m）\n→ 路径15 宝鼎中心（方向 97°，距离 ≈ 108m）\n→ 祈年大街与宝鼎中心道路的节点（方向 277°，距离 ≈ 108m）\n→ 祈年大街与新怡家园道路的节点（方向 178°，距离 ≈ 154m）\n→ node_39.898293_116.414462（方向 91°，距离 ≈ 218m）\n→ 路径3 新怡家园（方向 0°，距离 ≈ 0m）\n→ 祈年大街与新怡家园道路的节点（方向 271°，距离 ≈ 218m）\n→ 祈年大街与宝鼎中心道路的节点（方向 358°，距离 ≈ 154m）\n→ 崇文门西大街与祈年大街的节点（方向 356°，距离 ≈ 131m）\n→ 正义路与前门东大街的节点（方向 269°，距离 ≈ 430m）\n→ 前门东大街与前门道路的节点（方向 269°，距离 ≈ 434m）\n→ node_39.898971_116.401623（方向 181°，距离 ≈ 194m）\n→ 路径12 前门(公交站)（方向 0°，距离 ≈ 0m）\n→ 前门东大街与前门道路的节点（方向 1°，距离 ≈ 194m）\n→ 路径10 前门东大街23号院（方向 1°，距离 ≈ 78m）\n→ 路径16 正义路3号院（方向 68°，距离 ≈ 554m）\n→ 正义路与四季回头特色菜馆道路的节（方向 309°，距离 ≈ 87m）\n→ 路径17 四季回头特色菜馆（方向 90°，距离 ≈ 71m）\n→ 正义路与四季回头特色菜馆道路的节（方向 270°，距离 ≈ 71m）\n→ 正义路与正义路1号院道路的节点（方向 358°，距离 ≈ 201m）\n→ 东长安街与正义路的节点（方向 356°，距离 ≈ 190m）\n→ 东长安街与长安大厦道路的节点（方向 88°，距离 ≈ 217m）\n→ 路径18 长安大厦(东长安街)（方向 192°，距离 ≈ 76m）\n→ 东长安街与长安大厦道路的节点（方向 12°，距离 ≈ 76m）\n→ 东长安街与台基厂大街的节点（方向 89°，距离 ≈ 211m）\n→ 王府井大街与东方广场W3座道路的节点（方向 359°，距离 ≈ 204m）\n→ 路径19 东方广场W3座（方向 99°，距离 ≈ 75m）\n→ 王府井大街与东方广场W3座道路的节点（方向 279°，距离 ≈ 75m）\n→ 东长安街与台基厂大街的节点（方向 179°，距离 ≈ 204m）\n→ 东长安街与东方广场W1座道路的节点（方向 88°，距离 ≈ 147m）\n→ 路径4 东方广场W1座（方向 354°，距离 ≈ 118m）\n→ 东长安街与东方广场W1座道路的节点（方向 174°，距离 ≈ 118m）\n→ 东长安街与北京东方广场的节点（方向 88°，距离 ≈ 129m）\n→ node_39.909489_116.414528（方向 351°，距离 ≈ 158m）\n→ 路径1 北京东方广场（方向 0°，距离 ≈ 0m）\n→ 东长安街与北京东方广场的节点（方向 171°，距离 ≈ 158m）\n→ 东长安街与东方广场W1座道路的节点（方向 268°，距离 ≈ 129m）\n→ 东长安街与台基厂大街的节点（方向 268°，距离 ≈ 147m）\n→ 王府井大街与东方广场W3座道路的节点（方向 359°，距离 ≈ 204m）\n→ 路径20 王府井喜悦购物中心地下停车场（方向 251°，距离 ≈ 55m）\n→ 王府井大街与东方广场W3座道路的节点（方向 71°，距离 ≈ 55m）\n→ 东长安街与台基厂大街的节点（方向 179°，距离 ≈ 204m）\n→ 东长安街与长安大厦道路的节点（方向 269°，距离 ≈ 211m）\n→ 东长安街与正义路的节点（方向 268°，距离 ≈ 217m）\n→ 南河沿大街与霞公府道路的节点（方向 7°，距离 ≈ 205m）\n→ 路径9 霞公府（方向 91°，距离 ≈ 120m）\n→ 南河沿大街与霞公府道路的节点（方向 271°，距离 ≈ 120m）\n→ 东长安街与正义路的节点（方向 187°，距离 ≈ 205m）\n→ 正义路与正义路1号院道路的节点（方向 176°，距离 ≈ 190m）\n→ 路径2 正义路1号院（方向 88°，距离 ≈ 84m）\n→ 正义路与正义路1号院道路的节点（方向 268°，距离 ≈ 84m）\n→ 正义路与四季回头特色菜馆道路的节（方向 178°，距离 ≈ 201m）\n→ 正义路与正义路3号院道路的节点（方向 178°，距离 ≈ 63m）\n→ 正义路与隆和居道路的节点（方向 179°，距离 ≈ 67m）\n→ 路径14 隆和居（方向 270°，距离 ≈ 60m）\n→ 正义路与正义路10号院道路的节点（方向 128°，距离 ≈ 85m）\n→ 路径13 正义路10号院（方向 267°，距离 ≈ 61m）\n→ 正义路与正义路10号院道路的节点（方向 87°，距离 ≈ 61m）\n→ 正义路与正义路社区服务站道路的节（方向 180°，距离 ≈ 64m）\n→ 路径11 正义路社区服务站（方向 267°，距离 ≈ 56m）\n→ 正义路与正义路社区服务站道路的节（方向 87°，距离 ≈ 56m）\n→ 正义路与正义路10号院道路的节点（方向 360°，距离 ≈ 64m）\n→ 正义路与隆和居道路的节点（方向 360°，距离 ≈ 60m）\n→ 正义路与正义路3号院道路的节点（方向 359°，距离 ≈ 67m）\n→ 正义路与四季回头特色菜馆道路的节（方向 358°，距离 ≈ 63m）\n→ 北京东交民巷饭店写字楼（方向 91°，距离 ≈ 117m）\n→ 正义路与四季回头特色菜馆道路的节（方向 310°，距离 ≈ 179m）\n→ 正义路与正义路3号院道路的节点（方向 178°，距离 ≈ 63m）\n→ 正义路与隆和居道路的节点（方向 179°，距离 ≈ 67m）\n→ 正义路与正义路10号院道路的节点（方向 180°，距离 ≈ 60m）\n→ 正义路与正义路社区服务站道路的节（方向 180°，距离 ≈ 64m）\n→ 正义路与前门东大街的节点（方向 180°，距离 ≈ 133m）\n→ 崇文门西大街与祈年大街的节点（方向 89°，距离 ≈ 430m）\n→ 祈年大街与宝鼎中心道路的节点（方向 176°，距离 ≈ 131m）\n→ 路径15 宝鼎中心（方向 97°，距离 ≈ 108m）\n→ 祈年大街与宝鼎中心道路的节点（方向 277°，距离 ≈ 108m）\n→ 祈年大街与新怡家园道路的节点（方向 178°，距离 ≈ 154m）\n→ node_39.898293_116.414462（方向 91°，距离 ≈ 218m）\n→ 路径3 新怡家园（方向 0°，距离 ≈ 0m）\n→ 祈年大街与新怡家园道路的节点（方向 271°，距离 ≈ 218m）\n→ 祈年大街与宝鼎中心道路的节点（方向 358°，距离 ≈ 154m）\n→ 崇文门西大街与祈年大街的节点（方向 356°，距离 ≈ 131m）\n→ 正义路与前门东大街的节点（方向 269°，距离 ≈ 430m）\n→ 前门东大街与前门道路的节点（方向 269°，距离 ≈ 434m）\n→ node_39.898971_116.401623（方向 181°，距离 ≈ 194m）\n→ 路径12 前门(公交站)（方向 0°，距离 ≈ 0m）\n→ 前门东大街与前门道路的节点（方向 1°，距离 ≈ 194m）\n→ 路径10 前门东大街23号院（方向 1°，距离 ≈ 78m）\n→ 前门东大街与前门道路的节点（方向 181°，距离 ≈ 78m）\n→ 正义路与前门东大街的节点（方向 89°，距离 ≈ 434m）\n→ 正义路与正义路社区服务站道路的节（方向 360°，距离 ≈ 133m）\n→ 正义路与正义路10号院道路的节点（方向 360°，距离 ≈ 64m）\n→ 正义路与隆和居道路的节点（方向 360°，距离 ≈ 60m）\n→ 正义路与正义路3号院道路的节点（方向 359°，距离 ≈ 67m）\n→ 正义路与四季回头特色菜馆道路的节（方向 358°，距离 ≈ 63m）\n→ 正义路与正义路1号院道路的节点（方向 358°，距离 ≈ 201m）\n→ 东长安街与正义路的节点（方向 356°，距离 ≈ 190m）\n→ 东长安街与南池子大街的节点（方向 267°，距离 ≈ 290m）\n→ 东长安街与天安门东地铁站B口道路的（方向 276°，距离 ≈ 66m）\n→ 东长安街与天安门东地铁站道路的节（方向 273°，距离 ≈ 109m）\n→ 路径5 天安门东地铁站D西南口（方向 184°，距离 ≈ 65m）\n→ 东长安街与天安门东地铁站道路的节（方向 4°，距离 ≈ 65m）\n→ 路径8 天安门东(地铁站)（方向 359°，距离 ≈ 74m）\n→ 东长安街与天安门东地铁站道路的节（方向 179°，距离 ≈ 74m）\n→ 东长安街与天安门东地铁站B口道路的（方向 93°，距离 ≈ 109m）\n→ 路径7 天安门东地铁站B东北口（方向 4°，距离 ≈ 79m）\n→ 东长安街与天安门东地铁站B口道路的（方向 184°，距离 ≈ 79m）\n→ 东长安街与南池子大街的节点（方向 96°，距离 ≈ 66m）\n→ node_39.909072_116.403204（方向 4°，距离 ≈ 155m）\n→ 路径6 东方捷路地下停车场（方向 0°，距离 ≈ 0m）\n→ 路径16 正义路3号院（方向 142°，距离 ≈ 690m）\n→ 正义路与四季回头特色菜馆道路的节（方向 309°，距离 ≈ 87m）\n→ 路径17 四季回头特色菜馆（方向 90°，距离 ≈ 71m）\n→ 正义路与隆和居道路的节点（方向 214°，距离 ≈ 147m）\n→ 北京东交民巷饭店写字楼（方向 91°，距离 ≈ 117m）\n→ 正义路与四季回头特色菜馆道路的节（方向 310°，距离 ≈ 179m）\n→ 正义路与正义路3号院道路的节点（方向 178°，距离 ≈ 63m）\n→ 正义路与隆和居道路的节点（方向 179°，距离 ≈ 67m）\n→ 正义路与正义路10号院道路的节点（方向 180°，距离 ≈ 60m）\n→ 路径13 正义路10号院（方向 267°，距离 ≈ 61m）\n→ 正义路与正义路10号院道路的节点（方向 87°，距离 ≈ 61m）\n→ 正义路与正义路社区服务站道路的节（方向 180°，距离 ≈ 64m）\n→ 路径11 正义路社区服务站（方向 267°，距离 ≈ 56m）\n→ 正义路与正义路社区服务站道路的节（方向 87°，距离 ≈ 56m）\n→ 正义路与正义路10号院道路的节点（方向 360°，距离 ≈ 64m）\n→ 正义路与隆和居道路的节点（方向 360°，距离 ≈ 60m）\n→ 路径14 隆和居（方向 270°，距离 ≈ 60m）\n→ 正义路与隆和居道路的节点（方向 90°，距离 ≈ 60m）\n→ 正义路与正义路10号院道路的节点（方向 180°，距离 ≈ 60m）\n→ 正义路与正义路社区服务站道路的节（方向 180°，距离 ≈ 64m）\n→ 正义路与前门东大街的节点（方向 180°，距离 ≈ 133m）\n→ 前门东大街与前门道路的节点（方向 269°，距离 ≈ 434m）\n→ 路径10 前门东大街23号院（方向 1°，距离 ≈ 78m）\n→ 前门东大街与前门道路的节点（方向 181°，距离 ≈ 78m）\n→ node_39.898971_116.401623（方向 181°，距离 ≈ 194m）\n→ 路径12 前门(公交站)（方向 0°，距离 ≈ 0m）\n→ 前门东大街与前门道路的节点（方向 1°，距离 ≈ 194m）\n→ 正义路与前门东大街的节点（方向 89°，距离 ≈ 434m）\n→ 正义路与正义路社区服务站道路的节（方向 360°，距离 ≈ 133m）\n→ 正义路与正义路10号院道路的节点（方向 360°，距离 ≈ 64m）\n→ 正义路与隆和居道路的节点（方向 360°，距离 ≈ 60m）\n→ 正义路与正义路3号院道路的节点（方向 359°，距离 ≈ 67m）\n→ 正义路与四季回头特色菜馆道路的节（方向 358°，距离 ≈ 63m）\n→ 正义路与正义路1号院道路的节点（方向 358°，距离 ≈ 201m）\n→ 东长安街与正义路的节点（方向 356°，距离 ≈ 190m）\n→ 东长安街与南池子大街的节点（方向 267°，距离 ≈ 290m）\n→ 东长安街与天安门东地铁站B口道路的（方向 276°，距离 ≈ 66m）\n→ 路径7 天安门东地铁站B东北口（方向 4°，距离 ≈ 79m）\n→ 东长安街与天安门东地铁站B口道路的（方向 184°，距离 ≈ 79m）\n→ 东长安街与天安门东地铁站道路的节（方向 273°，距离 ≈ 109m）\n→ 路径8 天安门东(地铁站)（方向 359°，距离 ≈ 74m）\n→ 东长安街与天安门东地铁站道路的节（方向 179°，距离 ≈ 74m）\n→ 东长安街与天安门东地铁站B口道路的（方向 93°，距离 ≈ 109m）\n→ 东长安街与南池子大街的节点（方向 96°，距离 ≈ 66m）\n→ node_39.909072_116.403204（方向 4°，距离 ≈ 155m）\n→ 路径6 东方捷路地下停车场（方向 0°，距离 ≈ 0m）\n→ 东长安街与南池子大街的节点（方向 184°，距离 ≈ 155m）\n→ 东长安街与天安门东地铁站B口道路的（方向 276°，距离 ≈ 66m）\n→ 东长安街与天安门东地铁站道路的节（方向 273°，距离 ≈ 109m）\n→ 路径5 天安门东地铁站D西南口（方向 184°，距离 ≈ 65m）\n→ 东长安街与天安门东地铁站道路的节（方向 4°，距离 ≈ 65m）\n→ 东长安街与天安门东地铁站B口道路的（方向 93°，距离 ≈ 109m）\n→ 东长安街与南池子大街的节点（方向 96°，距离 ≈ 66m）\n→ 东长安街与正义路的节点（方向 87°，距离 ≈ 290m）\n→ 正义路与正义路1号院道路的节点（方向 176°，距离 ≈ 190m）\n→ 路径2 正义路1号院（方向 88°，距离 ≈ 84m）\n→ 正义路与正义路1号院道路的节点（方向 268°，距离 ≈ 84m）\n→ 东长安街与正义路的节点（方向 356°，距离 ≈ 190m）\n→ 东长安街与长安大厦道路的节点（方向 88°，距离 ≈ 217m）\n→ 路径18 长安大厦(东长安街)（方向 192°，距离 ≈ 76m）\n→ 东长安街与长安大厦道路的节点（方向 12°，距离 ≈ 76m）\n→ 东长安街与正义路的节点（方向 268°，距离 ≈ 217m）\n→ 南河沿大街与霞公府道路的节点（方向 7°，距离 ≈ 205m）\n→ 路径9 霞公府（方向 91°，距离 ≈ 120m）\n→ 南河沿大街与霞公府道路的节点（方向 271°，距离 ≈ 120m）\n→ 东长安街与正义路的节点（方向 187°，距离 ≈ 205m）\n→ 东长安街与长安大厦道路的节点（方向 88°，距离 ≈ 217m）\n→ 东长安街与台基厂大街的节点（方向 89°，距离 ≈ 211m）\n→ 王府井大街与东方广场W3座道路的节点（方向 359°，距离 ≈ 204m）\n→ 路径20 王府井喜悦购物中心地下停车场（方向 251°，距离 ≈ 55m）\n→ 王府井大街与东方广场W3座道路的节点（方向 71°，距离 ≈ 55m）\n→ 路径19 东方广场W3座（方向 99°，距离 ≈ 75m）\n→ 王府井大街与东方广场W3座道路的节点（方向 279°，距离 ≈ 75m）\n→ 东长安街与台基厂大街的节点（方向 179°，距离 ≈ 204m）\n→ 东长安街与东方广场W1座道路的节点（方向 88°，距离 ≈ 147m）\n→ 路径4 东方广场W1座（方向 354°，距离 ≈ 118m）\n→ 东长安街与东方广场W1座道路的节点（方向 174°，距离 ≈ 118m）\n→ 东长安街与北京东方广场的节点（方向 88°，距离 ≈ 129m）\n→ node_39.909489_116.414528（方向 351°，距离 ≈ 158m）\n→ 路径1 北京东方广场（方向 0°，距离 ≈ 0m）\n→ 东长安街与北京东方广场的节点（方向 171°，距离 ≈ 158m）\n→ 东长安街与东方广场W1座道路的节点（方向 268°，距离 ≈ 129m）\n→ 东长安街与台基厂大街的节点（方向 268°，距离 ≈ 147m）\n→ 崇文门西大街与祈年大街的节点（方向 178°，距离 ≈ 783m）\n→ 祈年大街与宝鼎中心道路的节点（方向 176°，距离 ≈ 131m）\n→ 祈年大街与新怡家园道路的节点（方向 178°，距离 ≈ 154m）\n→ node_39.898293_116.414462（方向 91°，距离 ≈ 218m）\n→ 路径3 新怡家园（方向 0°，距离 ≈ 0m）\n→ 祈年大街与新怡家园道路的节点（方向 271°，距离 ≈ 218m）\n→ 祈年大街与宝鼎中心道路的节点（方向 358°，距离 ≈ 154m）\n→ 路径15 宝鼎中心（方向 97°，距离 ≈ 108m）\n→ 路径16 正义路3号院（方向 306°，距离 ≈ 673m）\n→ 正义路与四季回头特色菜馆道路的节（方向 309°，距离 ≈ 87m）\n→ 路径17 四季回头特色菜馆（方向 90°，距离 ≈ 71m）\n→ 正义路与隆和居道路的节点（方向 214°，距离 ≈ 147m）\n→ 北京东交民巷饭店写字楼（方向 91°，距离 ≈ 117m）\n→ 正义路与四季回头特色菜馆道路的节（方向 310°，距离 ≈ 179m）\n→ 正义路与正义路1号院道路的节点（方向 358°，距离 ≈ 201m）\n→ 东长安街与正义路的节点（方向 356°，距离 ≈ 190m）\n→ 东长安街与长安大厦道路的节点（方向 88°，距离 ≈ 217m）\n→ 路径18 长安大厦(东长安街)（方向 192°，距离 ≈ 76m）\n→ 东长安街与长安大厦道路的节点（方向 12°，距离 ≈ 76m）\n→ 东长安街与台基厂大街的节点（方向 89°，距离 ≈ 211m）\n→ 王府井大街与东方广场W3座道路的节点（方向 359°，距离 ≈ 204m）\n→ 路径19 东方广场W3座（方向 99°，距离 ≈ 75m）\n→ 王府井大街与东方广场W3座道路的节点（方向 279°，距离 ≈ 75m）\n→ 路径20 王府井喜悦购物中心地下停车场（方向 251°，距离 ≈ 55m）\n→ 王府井大街与东方广场W3座道路的节点（方向 71°，距离 ≈ 55m）\n→ 东长安街与台基厂大街的节点（方向 179°，距离 ≈ 204m）\n→ 东长安街与东方广场W1座道路的节点（方向 88°，距离 ≈ 147m）\n→ 东长安街与北京东方广场的节点（方向 88°，距离 ≈ 129m）\n→ node_39.909489_116.414528（方向 351°，距离 ≈ 158m）\n→ 路径1 北京东方广场（方向 0°，距离 ≈ 0m）\n→ 东长安街与北京东方广场的节点（方向 171°，距离 ≈ 158m）\n→ 东长安街与东方广场W1座道路的节点（方向 268°，距离 ≈ 129m）\n→ 路径4 东方广场W1座（方向 354°，距离 ≈ 118m）\n→ 东长安街与东方广场W1座道路的节点（方向 174°，距离 ≈ 118m）\n→ 东长安街与台基厂大街的节点（方向 268°，距离 ≈ 147m）\n→ 东长安街与长安大厦道路的节点（方向 269°，距离 ≈ 211m）\n→ 东长安街与正义路的节点（方向 268°，距离 ≈ 217m）\n→ 南河沿大街与霞公府道路的节点（方向 7°，距离 ≈ 205m）\n→ 路径9 霞公府（方向 91°，距离 ≈ 120m）\n→ 南河沿大街与霞公府道路的节点（方向 271°，距离 ≈ 120m）\n→ 东长安街与正义路的节点（方向 187°，距离 ≈ 205m）\n→ 正义路与正义路1号院道路的节点（方向 176°，距离 ≈ 190m）\n→ 路径2 正义路1号院（方向 88°，距离 ≈ 84m）\n→ 正义路与正义路1号院道路的节点（方向 268°，距离 ≈ 84m）\n→ 正义路与四季回头特色菜馆道路的节（方向 178°，距离 ≈ 201m）\n→ 正义路与正义路3号院道路的节点（方向 178°，距离 ≈ 63m）\n→ 正义路与隆和居道路的节点（方向 179°，距离 ≈ 67m）\n→ 正义路与正义路10号院道路的节点（方向 180°，距离 ≈ 60m）\n→ 正义路与正义路社区服务站道路的节（方向 180°，距离 ≈ 64m）\n→ 路径11 正义路社区服务站（方向 267°，距离 ≈ 56m）\n→ 正义路与正义路社区服务站道路的节（方向 87°，距离 ≈ 56m）\n→ 正义路与正义路10号院道路的节点（方向 360°，距离 ≈ 64m）\n→ 路径13 正义路10号院（方向 267°，距离 ≈ 61m）\n→ 正义路与隆和居道路的节点（方向 51°，距离 ≈ 89m）\n→ 路径14 隆和居（方向 270°，距离 ≈ 60m）\n→ 正义路与隆和居道路的节点（方向 90°，距离 ≈ 60m）\n→ 正义路与正义路10号院道路的节点（方向 180°，距离 ≈ 60m）\n→ 正义路与正义路社区服务站道路的节（方向 180°，距离 ≈ 64m）\n→ 正义路与前门东大街的节点（方向 180°，距离 ≈ 133m）\n→ 前门东大街与前门道路的节点（方向 269°，距离 ≈ 434m）\n→ 路径10 前门东大街23号院（方向 1°，距离 ≈ 78m）\n→ 前门东大街与前门道路的节点（方向 181°，距离 ≈ 78m）\n→ node_39.898971_116.401623（方向 181°，距离 ≈ 194m）\n→ 路径12 前门(公交站)（方向 0°，距离 ≈ 0m）\n→ 前门东大街与前门道路的节点（方向 1°，距离 ≈ 194m）\n→ 正义路与前门东大街的节点（方向 89°，距离 ≈ 434m）\n→ 正义路与正义路社区服务站道路的节（方向 360°，距离 ≈ 133m）\n→ 正义路与正义路10号院道路的节点（方向 360°，距离 ≈ 64m）\n→ 正义路与隆和居道路的节点（方向 360°，距离 ≈ 60m）\n→ 正义路与正义路3号院道路的节点（方向 359°，距离 ≈ 67m）\n→ 正义路与四季回头特色菜馆道路的节（方向 358°，距离 ≈ 63m）\n→ 正义路与正义路1号院道路的节点（方向 358°，距离 ≈ 201m）\n→ 东长安街与正义路的节点（方向 356°，距离 ≈ 190m）\n→ 东长安街与南池子大街的节点（方向 267°，距离 ≈ 290m）\n→ 东长安街与天安门东地铁站B口道路的（方向 276°，距离 ≈ 66m）\n→ 东长安街与天安门东地铁站道路的节（方向 273°，距离 ≈ 109m）\n→ 路径8 天安门东(地铁站)（方向 359°，距离 ≈ 74m）\n→ 东长安街与天安门东地铁站道路的节（方向 179°，距离 ≈ 74m）\n→ 路径5 天安门东地铁站D西南口（方向 184°，距离 ≈ 65m）\n→ 东长安街与天安门东地铁站道路的节（方向 4°，距离 ≈ 65m）\n→ 东长安街与天安门东地铁站B口道路的（方向 93°，距离 ≈ 109m）\n→ 路径7 天安门东地铁站B东北口（方向 4°，距离 ≈ 79m）\n→ 东长安街与天安门东地铁站B口道路的（方向 184°，距离 ≈ 79m）\n→ 东长安街与南池子大街的节点（方向 96°，距离 ≈ 66m）\n→ node_39.909072_116.403204（方向 4°，距离 ≈ 155m）\n→ 路径6 东方捷路地下停车场（方向 0°，距离 ≈ 0m）\n→ 东长安街与南池子大街的节点（方向 184°，距离 ≈ 155m）\n→ 东长安街与正义路的节点（方向 87°，距离 ≈ 290m）\n→ 正义路与正义路1号院道路的节点（方向 176°，距离 ≈ 190m）\n→ 正义路与四季回头特色菜馆道路的节（方向 178°，距离 ≈ 201m）\n→ 正义路与正义路3号院道路的节点（方向 178°，距离 ≈ 63m）\n→ 正义路与隆和居道路的节点（方向 179°，距离 ≈ 67m）\n→ 正义路与正义路10号院道路的节点（方向 180°，距离 ≈ 60m）\n→ 正义路与正义路社区服务站道路的节（方向 180°，距离 ≈ 64m）\n→ 正义路与前门东大街的节点（方向 180°，距离 ≈ 133m）\n→ 崇文门西大街与祈年大街的节点（方向 89°，距离 ≈ 430m）\n→ 祈年大街与宝鼎中心道路的节点（方向 176°，距离 ≈ 131m）\n→ 路径15 宝鼎中心（方向 97°，距离 ≈ 108m）\n→ 祈年大街与宝鼎中心道路的节点（方向 277°，距离 ≈ 108m）\n→ 祈年大街与新怡家园道路的节点（方向 178°，距离 ≈ 154m）\n→ node_39.898293_116.414462（方向 91°，距离 ≈ 218m）\n→ 路径3 新怡家园（方向 0°，距离 ≈ 0m）\n→ 正义路与正义路3号院道路的节点（方向 305°，距离 ≈ 898m）\n→ 正义路与隆和居道路的节点（方向 179°，距离 ≈ 67m）\n→ 路径14 隆和居（方向 270°，距离 ≈ 60m）\n→ 正义路与隆和居道路的节点（方向 90°，距离 ≈ 60m）\n→ 正义路与正义路3号院道路的节点（方向 359°，距离 ≈ 67m）\n→ 正义路与四季回头特色菜馆道路的节（方向 358°，距离 ≈ 63m）\n→ 路径17 四季回头特色菜馆（方向 90°，距离 ≈ 71m）\n→ 正义路与四季回头特色菜馆道路的节（方向 270°，距离 ≈ 71m）\n→ 正义路与正义路1号院道路的节点（方向 358°，距离 ≈ 201m）\n→ 路径2 正义路1号院（方向 88°，距离 ≈ 84m）\n→ 正义路与正义路1号院道路的节点（方向 268°，距离 ≈ 84m）\n→ 东长安街与正义路的节点（方向 356°，距离 ≈ 190m）\n→ 东长安街与长安大厦道路的节点（方向 88°，距离 ≈ 217m）\n→ 路径18 长安大厦(东长安街)（方向 192°，距离 ≈ 76m）\n→ 东长安街与长安大厦道路的节点（方向 12°，距离 ≈ 76m）\n→ 东长安街与台基厂大街的节点（方向 89°，距离 ≈ 211m）\n→ 东长安街与东方广场W1座道路的节点（方向 88°，距离 ≈ 147m）\n→ 东长安街与北京东方广场的节点（方向 88°，距离 ≈ 129m）\n→ node_39.909489_116.414528（方向 351°，距离 ≈ 158m）\n→ 路径1 北京东方广场（方向 0°，距离 ≈ 0m）\n→ 东长安街与北京东方广场的节点（方向 171°，距离 ≈ 158m）\n→ 东长安街与东方广场W1座道路的节点（方向 268°，距离 ≈ 129m）\n→ 路径4 东方广场W1座（方向 354°，距离 ≈ 118m）\n→ 东长安街与东方广场W1座道路的节点（方向 174°，距离 ≈ 118m）\n→ 东长安街与台基厂大街的节点（方向 268°，距离 ≈ 147m）\n→ 东长安街与长安大厦道路的节点（方向 269°，距离 ≈ 211m）\n→ 东长安街与正义路的节点（方向 268°，距离 ≈ 217m）\n→ 南河沿大街与霞公府道路的节点（方向 7°，距离 ≈ 205m）\n→ 路径9 霞公府（方向 91°，距离 ≈ 120m）\n→ 南河沿大街与霞公府道路的节点（方向 271°，距离 ≈ 120m）\n→ 东长安街与正义路的节点（方向 187°，距离 ≈ 205m）\n→ 东长安街与南池子大街的节点（方向 267°，距离 ≈ 290m）\n→ 东长安街与天安门东地铁站B口道路的（方向 276°，距离 ≈ 66m）\n→ 东长安街与天安门东地铁站道路的节（方向 273°，距离 ≈ 109m）\n→ 路径8 天安门东(地铁站)（方向 359°，距离 ≈ 74m）\n→ 东长安街与天安门东地铁站道路的节（方向 179°，距离 ≈ 74m）\n→ 路径5 天安门东地铁站D西南口（方向 184°，距离 ≈ 65m）\n→ 东长安街与天安门东地铁站道路的节（方向 4°，距离 ≈ 65m）\n→ 东长安街与天安门东地铁站B口道路的（方向 93°，距离 ≈ 109m）\n→ 路径7 天安门东地铁站B东北口（方向 4°，距离 ≈ 79m）\n→ 东长安街与天安门东地铁站B口道路的（方向 184°，距离 ≈ 79m）\n→ 东长安街与南池子大街的节点（方向 96°，距离 ≈ 66m）\n→ node_39.909072_116.403204（方向 4°，距离 ≈ 155m）\n→ 路径6 东方捷路地下停车场（方向 0°，距离 ≈ 0m）\n→ 东长安街与南池子大街的节点（方向 184°，距离 ≈ 155m）\n→ 东长安街与正义路的节点（方向 87°，距离 ≈ 290m）\n→ 正义路与正义路1号院道路的节点（方向 176°，距离 ≈ 190m）\n→ 正义路与四季回头特色菜馆道路的节（方向 178°，距离 ≈ 201m）\n→ 正义路与正义路3号院道路的节点（方向 178°，距离 ≈ 63m）\n→ 正义路与隆和居道路的节点（方向 179°，距离 ≈ 67m）\n→ 正义路与正义路10号院道路的节点（方向 180°，距离 ≈ 60m）\n→ 正义路与正义路社区服务站道路的节（方向 180°，距离 ≈ 64m）\n→ 正义路与前门东大街的节点（方向 180°，距离 ≈ 133m）\n→ 前门东大街与前门道路的节点（方向 269°，距离 ≈ 434m）\n→ 路径10 前门东大街23号院（方向 1°，距离 ≈ 78m）\n→ 前门东大街与前门道路的节点（方向 181°，距离 ≈ 78m）\n→ node_39.898971_116.401623（方向 181°，距离 ≈ 194m）\n→ 路径12 前门(公交站)（方向 0°，距离 ≈ 0m）\n→ 前门东大街与前门道路的节点（方向 1°，距离 ≈ 194m）\n→ 正义路与前门东大街的节点（方向 89°，距离 ≈ 434m）\n→ 正义路与正义路社区服务站道路的节（方向 360°，距离 ≈ 133m）\n→ 路径11 正义路社区服务站（方向 267°，距离 ≈ 56m）\n→ 正义路与正义路社区服务站道路的节（方向 87°，距离 ≈ 56m）\n→ 正义路与正义路10号院道路的节点（方向 360°，距离 ≈ 64m）\n→ 路径13 正义路10号院（方向 267°，距离 ≈ 61m）\n→ 正义路与正义路10号院道路的节点（方向 87°，距离 ≈ 61m）\n→ 正义路与隆和居道路的节点（方向 360°，距离 ≈ 60m）\n→ 正义路与正义路3号院道路的节点（方向 359°，距离 ≈ 67m）\n→ 路径16 正义路3号院（方向 90°，距离 ≈ 58m）\n→ 正义路与正义路3号院道路的节点（方向 270°，距离 ≈ 58m）\n→ 正义路与四季回头特色菜馆道路的节（方向 358°，距离 ≈ 63m）\n→ 正义路与正义路1号院道路的节点（方向 358°，距离 ≈ 201m）\n→ 东长安街与正义路的节点（方向 356°，距离 ≈ 190m）\n→ 东长安街与长安大厦道路的节点（方向 88°，距离 ≈ 217m）\n→ 东长安街与台基厂大街的节点（方向 89°，距离 ≈ 211m）\n→ 王府井大街与东方广场W3座道路的节点（方向 359°，距离 ≈ 204m）\n→ 路径19 东方广场W3座（方向 99°，距离 ≈ 75m）\n→ 王府井大街与东方广场W3座道路的节点（方向 279°，距离 ≈ 75m）\n→ 路径20 王府井喜悦购物中心地下停车场（方向 251°，距离 ≈ 55m）\n→ 王府井大街与东方广场W3座道路的节点（方向 71°，距离 ≈ 55m）\n→ 东长安街与台基厂大街的节点（方向 179°，距离 ≈ 204m）\n→ 东长安街与长安大厦道路的节点（方向 269°，距离 ≈ 211m）\n→ 东长安街与正义路的节点（方向 268°，距离 ≈ 217m）\n→ 正义路与正义路1号院道路的节点（方向 176°，距离 ≈ 190m）\n→ 正义路与四季回头特色菜馆道路的节（方向 178°，距离 ≈ 201m）\n→ 正义路与隆和居道路的节点（方向 178°，距离 ≈ 130m）\n→ 北京东交民巷饭店写字楼（方向 91°，距离 ≈ 117m）\n→ 正义路与四季回头特色菜馆道路的节（方向 310°，距离 ≈ 179m）\n→ 正义路与正义路3号院道路的节点（方向 178°，距离 ≈ 63m）\n→ 正义路与隆和居道路的节点（方向 179°，距离 ≈ 67m）\n→ 正义路与正义路10号院道路的节点（方向 180°，距离 ≈ 60m）\n→ 正义路与正义路社区服务站道路的节（方向 180°，距离 ≈ 64m）\n→ 正义路与前门东大街的节点（方向 180°，距离 ≈ 133m）\n→ 崇文门西大街与祈年大街的节点（方向 89°，距离 ≈ 430m）\n→ 祈年大街与宝鼎中心道路的节点（方向 176°，距离 ≈ 131m）\n→ 路径15 宝鼎中心（方向 97°，距离 ≈ 108m）\n→ 祈年大街与宝鼎中心道路的节点（方向 277°，距离 ≈ 108m）\n→ 祈年大街与新怡家园道路的节点（方向 178°，距离 ≈ 154m）\n→ node_39.898293_116.414462（方向 91°，距离 ≈ 218m）\n→ 路径3 新怡家园（方向 0°，距离 ≈ 0m）\n\n总和：\n已访问POI数量：45\n已访问道路节点数量（只要Name字段的）：0\n总探索距离：0米\n探索时间：0秒"
+}

@@ -34,7 +34,7 @@ class Config:
     OPENROUTER_API_KEY = os.getenv('OPENROUTER_API_KEY', '')
     
     # AI探索配置
-    AI_VISION_RADIUS = 2000  # AI视野半径（米）
+    AI_VISION_RADIUS = 100  # AI视野半径（米）
     AI_MOVE_SPEED = 50      # AI移动速度（米/秒）
     AI_MOVE_INTERVAL = 2    # AI移动间隔（秒）
     

@@ -1,3 +1,6 @@
+---
+alwaysApply: false
+---
 🎯 核心框架
 
 - Streamlit (≥1.28.0) - 前端Web界面框架

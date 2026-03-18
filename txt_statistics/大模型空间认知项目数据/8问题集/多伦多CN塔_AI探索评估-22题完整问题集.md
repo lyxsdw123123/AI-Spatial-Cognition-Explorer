@@ -1,0 +1,378 @@
+# AI探索评估 - 24题完整问题集
+
+## 概述
+
+本文档包含基于多伦多CN塔地区真实POI数据生成的24个空间认知评估问题，用于测试AI在陌生环境中的空间意识和认知能力。
+
+**数据来源**: 多伦多CN塔POI数据  
+**生成时间**: 2025年1月  
+**问题分布**: 
+- 定位与定向: 8
+- 空间距离估算: 4  
+- 邻近关系判断: 4
+- POI密度识别: 4
+- 路径规划: 4
+
+---
+
+## 一、定位与定向（8题）
+
+### 问题1
+**题目**: Boston Pizza相对于The Rec Room在哪个方向？
+
+**选项**:
+- 东北
+- 东南
+- 西北
+- 西南
+
+**正确答案**: C  
+**解释**: Boston Pizza位于The Rec Room的西北面。  
+**难度**: medium
+
+---
+
+### 问题2
+**题目**: Second Cup相对于Boston Pizza在哪个方向？
+
+**选项**:
+- 东北
+- 东南
+- 西北
+- 西南
+
+**正确答案**: A  
+**解释**: Second Cup位于Boston Pizza的东北面。  
+**难度**: medium
+
+---
+
+### 问题3
+**题目**: Aroma Espresso Bar相对于Second Cup在哪个方向？
+
+**选项**:
+- 东北
+- 东南
+- 西北
+- 西南
+
+**正确答案**: B  
+**解释**: Aroma Espresso Bar位于Second Cup的东南面。  
+**难度**: medium
+
+---
+
+### 问题4
+**题目**: RBC Royal Bank相对于Aroma Espresso Bar在哪个方向？
+
+**选项**:
+- 东北
+- 东南
+- 西北
+- 西南
+
+**正确答案**: D  
+**解释**: RBC Royal Bank位于Aroma Espresso Bar的西南面。  
+**难度**: medium
+
+---
+
+### 问题5
+**题目**: The Rec Room相对于Boston Pizza在哪个方向？
+
+**选项**:
+- 东北
+- 东南
+- 西北
+- 西南
+
+**正确答案**: B  
+**解释**: The Rec Room位于Boston Pizza的东南面。  
+**难度**: medium
+
+---
+
+### 问题6
+**题目**: Boston Pizza相对于Second Cup在哪个方向？
+
+**选项**:
+- 东北
+- 东南
+- 西北
+- 西南
+
+**正确答案**: D  
+**解释**: Boston Pizza位于Second Cup的西南面。  
+**难度**: medium
+
+---
+
+### 问题7
+**题目**: Second Cup相对于Aroma Espresso Bar在哪个方向？
+
+**选项**:
+- 东北
+- 东南
+- 西北
+- 西南
+
+**正确答案**: C  
+**解释**: Second Cup位于Aroma Espresso Bar的西北面。  
+**难度**: medium
+
+---
+
+### 问题8
+**题目**: Aroma Espresso Bar相对于RBC Royal Bank在哪个方向？
+
+**选项**:
+- 东北
+- 东南
+- 西北
+- 西南
+
+**正确答案**: A  
+**解释**: Aroma Espresso Bar位于RBC Royal Bank的东北面。  
+**难度**: medium
+
+---
+## 二、空间距离估算（4题）
+
+### 问题1
+**题目**: The Rec Room到Second Cup的直线距离大约是多少？
+
+**选项**:
+- 0-200米
+- 200-400米
+- 400-800米
+- 800-1200米
+
+**正确答案**: C  
+**解释**: The Rec Room到Second Cup的直线距离约为508米。  
+**难度**: medium
+
+---
+
+### 问题2
+**题目**: Boston Pizza到Aroma Espresso Bar的直线距离大约是多少？
+
+**选项**:
+- 0-200米
+- 200-400米
+- 400-800米
+- 800-1200米
+
+**正确答案**: C  
+**解释**: Boston Pizza到Aroma Espresso Bar的直线距离约为468米。  
+**难度**: medium
+
+---
+
+### 问题3
+**题目**: Second Cup到RBC Royal Bank的直线距离大约是多少？
+
+**选项**:
+- 0-200米
+- 200-400米
+- 400-800米
+- 800-1200米
+
+**正确答案**: C  
+**解释**: Second Cup到RBC Royal Bank的直线距离约为766米。  
+**难度**: medium
+
+---
+
+### 问题4
+**题目**: Aroma Espresso Bar到Scaddabush的直线距离大约是多少？
+
+**选项**:
+- 0-100米
+- 100-200米
+- 200-400米
+- 400-800米
+
+**正确答案**: C  
+**解释**: Aroma Espresso Bar到Scaddabush的直线距离约为342米。  
+**难度**: medium
+
+---
+## 三、邻近关系判断（4题）
+
+### 问题1
+**题目**: 在以下POI中，哪个距离The Rec Room最近？
+
+**选项**:
+- Boston Pizza
+- Second Cup
+- Aroma Espresso Bar
+
+**正确答案**: C  
+**解释**: Aroma Espresso Bar距离The Rec Room最近，约315米。  
+**难度**: medium
+
+---
+
+### 问题2
+**题目**: 在以下POI中，哪个距离Boston Pizza最近？
+
+**选项**:
+- Second Cup
+- Aroma Espresso Bar
+- RBC Royal Bank
+
+**正确答案**: A  
+**解释**: Second Cup距离Boston Pizza最近，约77米。  
+**难度**: medium
+
+---
+
+### 问题3
+**题目**: 在以下POI中，哪个距离Second Cup最远？
+
+**选项**:
+- Aroma Espresso Bar
+- RBC Royal Bank
+- Scaddabush
+
+**正确答案**: B  
+**解释**: RBC Royal Bank距离Second Cup最远，约766米。  
+**难度**: medium
+
+---
+
+### 问题4
+**题目**: 在以下POI中，哪个距离Aroma Espresso Bar最远？
+
+**选项**:
+- RBC Royal Bank
+- Scaddabush
+- St. Louis Bar & Grill
+
+**正确答案**: A  
+**解释**: RBC Royal Bank距离Aroma Espresso Bar最远，约930米。  
+**难度**: medium
+
+---
+## 四、POI密度识别（4题）
+
+### 问题1
+**题目**: 在当前区域内，哪个POI周围的POI密度最高？
+
+**选项**:
+- Boston Pizza
+- RBC Royal Bank
+- The Rec Room
+- Aroma Espresso Bar
+
+**正确答案**: A  
+**解释**: Boston Pizza周围的POI密度最高，500米范围内有8个其他POI。  
+**难度**: medium
+
+---
+
+### 问题2
+**题目**: 在当前区域内，哪个POI周围的POI密度最高？
+
+**选项**:
+- Scaddabush
+- RBC Royal Bank
+- The Rec Room
+- Aroma Espresso Bar
+
+**正确答案**: A  
+**解释**: Scaddabush周围的POI密度最高，500米范围内有6个其他POI。  
+**难度**: medium
+
+---
+
+### 问题3
+**题目**: 在当前区域内，哪个POI周围的POI密度最低？
+
+**选项**:
+- RBC Royal Bank
+- The Rec Room
+- Aroma Espresso Bar
+- St. Louis Bar & Grill
+
+**正确答案**: A  
+**解释**: RBC Royal Bank周围的POI密度最低，500米范围内只有2个其他POI。  
+**难度**: medium
+
+---
+
+### 问题4
+**题目**: 在当前区域内，哪个POI周围的POI密度最低？
+
+**选项**:
+- The Rec Room
+- RBC Royal Bank
+- Aroma Espresso Bar
+- St. Louis Bar & Grill
+
+**正确答案**: A  
+**解释**: The Rec Room周围的POI密度最低，500米范围内只有4个其他POI。  
+**难度**: medium
+
+---
+## 五、路径规划（4题）
+
+### 问题1
+**题目**: 从The Rec Room到Boston Pizza，以下哪种路径最短？
+
+**选项**:
+- The Rec Room -> (bremner and The Rec Room节点) -> (simcoe street and Aroma Espresso Bar节点) -> (simcoe street and front street节点) -> (Scaddabush and front street节点) -> (Boston Pizza and front street节点) -> Boston Pizza
+- The Rec Room -> (Scaddabush and front street节点) -> (spadina avenue节点) -> (spadina avenue南节点) -> (queens and Starbucks节点) -> Boston Pizza
+- The Rec Room -> (queens and simcoe street节点) -> (queens and Swiss Chalet节点) -> (spadina avenue南节点) -> (Boston Pizza and front street节点) -> Boston Pizza
+- The Rec Room -> (simcoe street and Starbucks节点) -> (Tim Hortons and front street节点) -> (spadina avenue南节点) -> Boston Pizza
+
+**正确答案**: A  
+**解释**: 最短路径是：The Rec Room -> (bremner and The Rec Room节点) -> (simcoe street and Aroma Espresso Bar节点) -> (simcoe street and front street节点) -> (Scaddabush and front street节点) -> (Boston Pizza and front street节点) -> Boston Pizza，总距离约969米。  
+**难度**: hard
+
+---
+
+### 问题2
+**题目**: 从Boston Pizza到Second Cup，以下哪种路径最短？
+
+**选项**:
+- Boston Pizza -> (Tim Hortons and indian restaurant节点) -> (indian restaurant道路节点) -> (simcoe street and Starbucks节点) -> Second Cup
+- Boston Pizza -> Second Cup
+- Boston Pizza -> (simcoe street and Starbucks节点) -> (RBC Royal Bank and spadina avenue节点) -> (simcoe street and front street节点) -> (Tim Hortons and front street节点) -> Second Cup
+- Boston Pizza -> (bremner and The Rec Room节点) -> (Scaddabush and front street节点) -> (spadina avenue节点) -> Second Cup
+
+**正确答案**: B  
+**解释**: 最短路径是：Boston Pizza -> Second Cup，总距离约77米。  
+**难度**: hard
+
+---
+
+### 问题3
+**题目**: 从Second Cup到Aroma Espresso Bar，以下哪种路径最短？
+
+**选项**:
+- Second Cup -> (spadina avenue节点) -> (simcoe street and front street节点) -> (simcoe street and Aroma Espresso Bar节点) -> (RBC Royal Bank and spadina avenue节点) -> Aroma Espresso Bar
+- Second Cup -> (spadina avenue节点) -> (Tim Hortons and front street节点) -> (simcoe street and Starbucks节点) -> (Boston Pizza and Starbucks节点) -> Aroma Espresso Bar
+- Second Cup -> (Boston Pizza and Starbucks节点) -> (Boston Pizza and front street节点) -> (Scaddabush and front street节点) -> (simcoe street and front street节点) -> (simcoe street and Aroma Espresso Bar节点) -> Aroma Espresso Bar
+- Second Cup -> (spadina avenue南节点) -> (indian restaurant and front street节点) -> (St. Louis Bar and spadina avenue节点) -> Aroma Espresso Bar
+
+**正确答案**: C  
+**解释**: 最短路径是：Second Cup -> (Boston Pizza and Starbucks节点) -> (Boston Pizza and front street节点) -> (Scaddabush and front street节点) -> (simcoe street and front street节点) -> (simcoe street and Aroma Espresso Bar节点) -> Aroma Espresso Bar，总距离约808米。  
+**难度**: hard
+
+---
+
+### 问题4
+**题目**: 从Aroma Espresso Bar到RBC Royal Bank，以下哪种路径最短？
+
+**选项**:
+- Aroma Espresso Bar -> (spadina avenue节点) -> (queens and simcoe street节点) -> (front street西节点) -> (RBC Royal Bank and spadina avenue节点) -> (St. Louis Bar and spadina avenue节点) -> (Scaddabush and front street节点) -> RBC Royal Bank
+- Aroma Espresso Bar -> (queens and Wild Wing节点) -> (indian restaurant and front street节点) -> (Tim Hortons and front street节点) -> (front street西节点) -> (front street and Jack Astor's节点) -> (spadina avenue节点) -> (bremner and The Rec Room节点) -> RBC Royal Bank
+- Aroma Espresso Bar -> (front street西节点) -> (bremner and The Rec Room节点) -> (Tim Hortons and indian restaurant节点) -> (Tim Hortons and front street节点) -> (RBC Royal Bank and spadina avenue节点) -> (queens and Wild Wing节点) -> RBC Royal Bank
+- Aroma Espresso Bar -> (simcoe street and Aroma Espresso Bar节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (St. Louis Bar and spadina avenue节点) -> (St. Louis Bar and spadina avenue节点) -> (RBC Royal Bank and spadina avenue节点) -> RBC Royal Bank
+
+**正确答案**: D  
+**解释**: 最短路径是：Aroma Espresso Bar -> (simcoe street and Aroma Espresso Bar节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (St. Louis Bar and spadina avenue节点) -> (St. Louis Bar and spadina avenue节点) -> (RBC Royal Bank and spadina avenue节点) -> RBC Royal Bank，总距离约1132米。  
+**难度**: hard
+
+---

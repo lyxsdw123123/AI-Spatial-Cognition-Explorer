@@ -1,0 +1,261 @@
+{
+  "region": "长沙五一广场",
+  "source_file": "长沙五一广场_gemini_graph_report.txt",
+  "evaluation_time": "2025-12-26T05:49:15.179385",
+  "context_text": "# 第二种记忆道路连通图描述\n## 节点列表\nNODE[id,类型,附加属性]\nNODE[1,POI,name=华菱大厦(芙蓉中路)]\nNODE[2,POI,name=天心阁北门停车场]\nNODE[3,POI,name=天心华庭]\nNODE[4,POI,name=丽都大厦]\nNODE[5,POI,name=芙蓉广场(地铁站)]\nNODE[6,POI,name=永华大厦]\nNODE[7,POI,name=和府大厦]\nNODE[8,POI,name=华美欧大厦]\nNODE[9,POI,name=迎宾路口(地铁站)]\nNODE[10,POI,name=湖南省人民政府机关二院]\nNODE[11,POI,name=亚大时代大厦]\nNODE[12,POI,name=嘉熙中心]\nNODE[13,ROAD,name=起点]\nNODE[14,ROAD,name=华菱大厦(芙蓉中路)与湘江中路的节点]\nNODE[15,ROAD,name=丽都大厦与湘江中路的节点]\nNODE[16,ROAD,name=五一大道与湘江中路的节点]\nNODE[17,ROAD,name=天心阁北门停车场道路与五一大道的节点]\nNODE[18,ROAD,name=天心阁北门停车场道路节点]\nNODE[19,ROAD,name=天心华庭与五一大道的节点]\nNODE[20,ROAD,name=永华大厦与五一大道的节点]\nNODE[21,ROAD,name=芙蓉广场(地铁站)与五一大道的节点]\nNODE[22,ROAD,name=和府大厦与五一大道的节点]\nNODE[23,ROAD,name=华美欧大厦与湘江中路的节点]\nNODE[24,ROAD,name=迎宾路口(地铁站)与蔡锷中路的节点]\nNODE[25,ROAD,name=湖南省人民政府机关二院与蔡锷中路的节点]\nNODE[26,ROAD,name=蔡锷中路与湘江中路的节点]\nNODE[27,ROAD,name=嘉熙中心与蔡锷中路的节点]\n\n## 边列表\nEDGE[起点ID,终点ID,道路长度,方向]\nEDGE[13,1,276m,176°]\nEDGE[1,14,275m,358°]\nEDGE[14,15,422m,269°]\nEDGE[15,16,136m,269°]\nEDGE[16,17,428m,180°]\nEDGE[17,18,142m,83°]\nEDGE[18,2,127m,149°]\nEDGE[2,18,127m,329°]\nEDGE[18,17,142m,263°]\nEDGE[17,19,80m,181°]\nEDGE[19,3,136m,264°]\nEDGE[3,19,136m,84°]\nEDGE[19,17,80m,1°]\nEDGE[17,16,428m,0°]\nEDGE[16,15,136m,89°]\nEDGE[15,4,138m,359°]\nEDGE[4,15,138m,179°]\nEDGE[15,16,136m,269°]\nEDGE[16,20,259m,1°]\nEDGE[20,21,95m,359°]\nEDGE[21,5,219m,91°]\nEDGE[5,21,219m,271°]\nEDGE[21,20,95m,179°]\nEDGE[20,6,97m,274°]\nEDGE[6,20,97m,94°]\nEDGE[20,21,95m,359°]\nEDGE[21,22,339m,0°]\nEDGE[22,7,283m,90°]\nEDGE[7,22,283m,270°]\nEDGE[22,21,339m,180°]\nEDGE[21,20,95m,179°]\nEDGE[20,16,259m,181°]\nEDGE[16,15,136m,89°]\nEDGE[15,14,422m,89°]\nEDGE[14,23,127m,89°]\nEDGE[23,8,327m,357°]\nEDGE[8,24,174m,93°]\nEDGE[24,9,124m,82°]\nEDGE[9,24,124m,262°]\nEDGE[24,25,223m,175°]\nEDGE[25,10,112m,54°]\nEDGE[10,25,112m,234°]\nEDGE[25,24,223m,355°]\nEDGE[24,9,124m,82°]\nEDGE[9,11,275m,76°]\nEDGE[11,9,275m,256°]\nEDGE[9,24,124m,262°]\nEDGE[24,25,223m,175°]\nEDGE[25,26,102m,175°]\nEDGE[26,27,620m,174°]\nEDGE[27,12,104m,230°]",
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 20,
+      "total_questions": 24,
+      "accuracy": 83.33333333333334,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 7,
+          "total": 8,
+          "percentage": 87.5
+        },
+        "空间距离估算": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "邻近关系判断": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        },
+        "POI密度识别": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "路径规划": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        }
+      },
+      "answers": [
+        {
+          "question": "华菱大厦(芙蓉中路)相对于华美欧大厦在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "华菱大厦(芙蓉中路)位于华美欧大厦的西南面。"
+        },
+        {
+          "question": "湖南省人民政府机关二院相对于华菱大厦(芙蓉中路)在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "湖南省人民政府机关二院位于华菱大厦(芙蓉中路)的东北面。"
+        },
+        {
+          "question": "天心华庭相对于湖南省人民政府机关二院在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "天心华庭位于湖南省人民政府机关二院的西南面。"
+        },
+        {
+          "question": "芙蓉广场(地铁站)相对于天心华庭在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "芙蓉广场(地铁站)位于天心华庭的东北面。"
+        },
+        {
+          "question": "华美欧大厦相对于华菱大厦(芙蓉中路)在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "华美欧大厦位于华菱大厦(芙蓉中路)的东北面。"
+        },
+        {
+          "question": "华菱大厦(芙蓉中路)相对于湖南省人民政府机关二院在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "华菱大厦(芙蓉中路)位于湖南省人民政府机关二院的西南面。"
+        },
+        {
+          "question": "湖南省人民政府机关二院相对于天心华庭在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "湖南省人民政府机关二院位于天心华庭的东北面。"
+        },
+        {
+          "question": "天心华庭相对于芙蓉广场(地铁站)在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "天心华庭位于芙蓉广场(地铁站)的西南面。"
+        },
+        {
+          "question": "华美欧大厦到湖南省人民政府机关二院的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "华美欧大厦到湖南省人民政府机关二院的直线距离约为328米。"
+        },
+        {
+          "question": "华菱大厦(芙蓉中路)到天心华庭的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "华菱大厦(芙蓉中路)到天心华庭的直线距离约为752米。"
+        },
+        {
+          "question": "湖南省人民政府机关二院到芙蓉广场(地铁站)的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "湖南省人民政府机关二院到芙蓉广场(地铁站)的直线距离约为755米。"
+        },
+        {
+          "question": "天心华庭到迎宾路口(地铁站)的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "天心华庭到迎宾路口(地铁站)的直线距离约为1408米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离华美欧大厦最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "湖南省人民政府机关二院距离华美欧大厦最近，约328米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离华菱大厦(芙蓉中路)最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "湖南省人民政府机关二院距离华菱大厦(芙蓉中路)最近，约585米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离湖南省人民政府机关二院最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "天心华庭距离湖南省人民政府机关二院最远，约1296米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离天心华庭最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "迎宾路口(地铁站)距离天心华庭最远，约1408米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "芙蓉广场(地铁站)周围的POI密度最高，500米范围内有4个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "华美欧大厦周围的POI密度最高，500米范围内有3个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "华菱大厦(芙蓉中路)周围的POI密度最低，500米范围内只有1个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "天心华庭周围的POI密度最低，500米范围内只有1个其他POI。"
+        },
+        {
+          "question": "从华美欧大厦到华菱大厦(芙蓉中路)，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：华美欧大厦 -> (华美欧大厦与湘江中路的节点) -> (华菱大厦(芙蓉中路)与湘江中路的节点) -> 华菱大厦(芙蓉中路)，总距离约730米。"
+        },
+        {
+          "question": "从华菱大厦(芙蓉中路)到湖南省人民政府机关二院，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：华菱大厦(芙蓉中路) -> (华菱大厦(芙蓉中路)与湘江中路的节点) -> (华美欧大厦与湘江中路的节点) -> (蔡锷中路与湘江中路的节点) -> (湖南省人民政府机关二院与蔡锷中路的节点) -> 湖南省人民政府机关二院，总距离约806米。"
+        },
+        {
+          "question": "从湖南省人民政府机关二院到天心华庭，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：湖南省人民政府机关二院 -> (湖南省人民政府机关二院与蔡锷中路的节点) -> (蔡锷中路与湘江中路的节点) -> (华美欧大厦与湘江中路的节点) -> (华菱大厦(芙蓉中路)与湘江中路的节点) -> (丽都大厦与湘江中路的节点) -> (五一大道与湘江中路的节点) -> (天心阁北门停车场道路与五一大道的节点) -> (天心华庭与五一大道的节点) -> 天心华庭，总距离约1735米。"
+        },
+        {
+          "question": "从天心华庭到芙蓉广场(地铁站)，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：天心华庭 -> (天心华庭与五一大道的节点) -> (天心阁北门停车场道路与五一大道的节点) -> (五一大道与湘江中路的节点) -> (永华大厦与五一大道的节点) -> (芙蓉广场(地铁站)与五一大道的节点) -> 芙蓉广场(地铁站)，总距离约1218米。"
+        }
+      ],
+      "completed_at": "2025-12-26T05:49:13.913286"
+    },
+    "context_text": "# 第二种记忆道路连通图描述\n## 节点列表\nNODE[id,类型,附加属性]\nNODE[1,POI,name=华菱大厦(芙蓉中路)]\nNODE[2,POI,name=天心阁北门停车场]\nNODE[3,POI,name=天心华庭]\nNODE[4,POI,name=丽都大厦]\nNODE[5,POI,name=芙蓉广场(地铁站)]\nNODE[6,POI,name=永华大厦]\nNODE[7,POI,name=和府大厦]\nNODE[8,POI,name=华美欧大厦]\nNODE[9,POI,name=迎宾路口(地铁站)]\nNODE[10,POI,name=湖南省人民政府机关二院]\nNODE[11,POI,name=亚大时代大厦]\nNODE[12,POI,name=嘉熙中心]\nNODE[13,ROAD,name=起点]\nNODE[14,ROAD,name=华菱大厦(芙蓉中路)与湘江中路的节点]\nNODE[15,ROAD,name=丽都大厦与湘江中路的节点]\nNODE[16,ROAD,name=五一大道与湘江中路的节点]\nNODE[17,ROAD,name=天心阁北门停车场道路与五一大道的节点]\nNODE[18,ROAD,name=天心阁北门停车场道路节点]\nNODE[19,ROAD,name=天心华庭与五一大道的节点]\nNODE[20,ROAD,name=永华大厦与五一大道的节点]\nNODE[21,ROAD,name=芙蓉广场(地铁站)与五一大道的节点]\nNODE[22,ROAD,name=和府大厦与五一大道的节点]\nNODE[23,ROAD,name=华美欧大厦与湘江中路的节点]\nNODE[24,ROAD,name=迎宾路口(地铁站)与蔡锷中路的节点]\nNODE[25,ROAD,name=湖南省人民政府机关二院与蔡锷中路的节点]\nNODE[26,ROAD,name=蔡锷中路与湘江中路的节点]\nNODE[27,ROAD,name=嘉熙中心与蔡锷中路的节点]\n\n## 边列表\nEDGE[起点ID,终点ID,道路长度,方向]\nEDGE[13,1,276m,176°]\nEDGE[1,14,275m,358°]\nEDGE[14,15,422m,269°]\nEDGE[15,16,136m,269°]\nEDGE[16,17,428m,180°]\nEDGE[17,18,142m,83°]\nEDGE[18,2,127m,149°]\nEDGE[2,18,127m,329°]\nEDGE[18,17,142m,263°]\nEDGE[17,19,80m,181°]\nEDGE[19,3,136m,264°]\nEDGE[3,19,136m,84°]\nEDGE[19,17,80m,1°]\nEDGE[17,16,428m,0°]\nEDGE[16,15,136m,89°]\nEDGE[15,4,138m,359°]\nEDGE[4,15,138m,179°]\nEDGE[15,16,136m,269°]\nEDGE[16,20,259m,1°]\nEDGE[20,21,95m,359°]\nEDGE[21,5,219m,91°]\nEDGE[5,21,219m,271°]\nEDGE[21,20,95m,179°]\nEDGE[20,6,97m,274°]\nEDGE[6,20,97m,94°]\nEDGE[20,21,95m,359°]\nEDGE[21,22,339m,0°]\nEDGE[22,7,283m,90°]\nEDGE[7,22,283m,270°]\nEDGE[22,21,339m,180°]\nEDGE[21,20,95m,179°]\nEDGE[20,16,259m,181°]\nEDGE[16,15,136m,89°]\nEDGE[15,14,422m,89°]\nEDGE[14,23,127m,89°]\nEDGE[23,8,327m,357°]\nEDGE[8,24,174m,93°]\nEDGE[24,9,124m,82°]\nEDGE[9,24,124m,262°]\nEDGE[24,25,223m,175°]\nEDGE[25,10,112m,54°]\nEDGE[10,25,112m,234°]\nEDGE[25,24,223m,355°]\nEDGE[24,9,124m,82°]\nEDGE[9,11,275m,76°]\nEDGE[11,9,275m,256°]\nEDGE[9,24,124m,262°]\nEDGE[24,25,223m,175°]\nEDGE[25,26,102m,175°]\nEDGE[26,27,620m,174°]\nEDGE[27,12,104m,230°]",
+    "context_mode": "graph"
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "region": "伦敦大本钟",
+  "source_file": "伦敦大本钟_gemini_graph_report.txt",
+  "evaluation_time": "2025-12-25T13:40:22.716636",
+  "context_text": "# 第二种记忆道路连通图描述\n## 节点列表\nNODE[id,类型,附加属性]\nNODE[1,POI,name=Crussh Bar]\nNODE[2,POI,name=Quirinale]\nNODE[3,POI,name=Wash House]\nNODE[4,POI,name=The Cinnamon Club]\nNODE[5,POI,name=Ashburnham House]\nNODE[6,POI,name=Milne’s House]\nNODE[7,POI,name=Café Fresco]\nNODE[8,POI,name=Caffè Nero]\nNODE[9,POI,name=Zen China]\nNODE[10,POI,name=Aji Zen Canteen]\nNODE[11,POI,name=Shepherds Hall]\nNODE[12,POI,name=Riverside Cafe]\nNODE[13,POI,name=PizzaExpress]\nNODE[14,POI,name=Footstool]\nNODE[15,POI,name=Lloyds Bank]\nNODE[16,ROAD,name=起点]\nNODE[17,ROAD,name=Crussh Bar and margeret street节点]\nNODE[18,ROAD,name=Crussh Bar and Lloyds Bank节点]\nNODE[19,ROAD,name=Wash House南节点]\nNODE[20,ROAD,name=tothill street and Milne’s House节点]\nNODE[21,ROAD,name=tothill street and minster bridge西节点的节点]\nNODE[22,ROAD,name=minster bridge西节点]\nNODE[23,ROAD,name=margeret street and minster bridge节点]\nNODE[24,ROAD,name=Caffè Nero and minster bridge节点]\nNODE[25,ROAD,name=Zen China and minster bridge节点]\nNODE[26,ROAD,name=Zen China节点]\nNODE[27,ROAD,name=Aji Zen Canteen and minster bridge节点]\nNODE[28,ROAD,name=albert and Shepherds Hallj节点]\nNODE[29,ROAD,name=albert and Riverside Cafe节点]\nNODE[30,ROAD,name=the terrace and margeret street节点]\nNODE[31,ROAD,name=the terrace and PizzaExpress节点]\nNODE[32,ROAD,name=Footstool and margeret street节点]\nNODE[33,ROAD,name=Lloyds Bank and margeret street节点]\nNODE[34,ROAD,name=位置_44]\nNODE[35,ROAD,name=位置_50]\nNODE[36,ROAD,name=位置_52]\n\n## 边列表\nEDGE[起点ID,终点ID,道路长度,方向]\nEDGE[16,17,68m,226°]\nEDGE[17,1,62m,278°]\nEDGE[1,2,97m,329°]\nEDGE[2,1,97m,149°]\nEDGE[1,18,73m,177°]\nEDGE[18,19,234m,248°]\nEDGE[19,3,81m,358°]\nEDGE[3,4,85m,2°]\nEDGE[4,3,85m,182°]\nEDGE[3,4,85m,2°]\nEDGE[4,5,89m,326°]\nEDGE[5,6,74m,1°]\nEDGE[6,20,173m,18°]\nEDGE[20,7,113m,270°]\nEDGE[7,20,113m,90°]\nEDGE[20,21,148m,92°]\nEDGE[21,22,91m,357°]\nEDGE[22,23,123m,92°]\nEDGE[23,8,99m,27°]\nEDGE[8,24,83m,170°]\nEDGE[24,25,325m,90°]\nEDGE[25,26,160m,358°]\nEDGE[26,9,50m,100°]\nEDGE[9,26,50m,280°]\nEDGE[26,25,160m,178°]\nEDGE[25,27,82m,89°]\nEDGE[27,10,73m,9°]\nEDGE[10,27,73m,189°]\nEDGE[27,25,82m,269°]\nEDGE[25,28,263m,193°]\nEDGE[28,11,57m,87°]\nEDGE[11,28,57m,267°]\nEDGE[28,12,393m,189°]\nEDGE[12,29,84m,176°]\nEDGE[29,30,222m,271°]\nEDGE[30,31,153m,179°]\nEDGE[31,13,51m,271°]\nEDGE[13,31,51m,91°]\nEDGE[31,30,153m,359°]\nEDGE[30,32,95m,332°]\nEDGE[32,14,117m,269°]\nEDGE[14,15,81m,8°]\nEDGE[15,33,130m,55°]\nEDGE[33,34,73m,180°]\nEDGE[34,32,78m,180°]\nEDGE[32,32,15m,152°]\nEDGE[32,14,124m,275°]\nEDGE[14,14,23m,89°]\nEDGE[14,32,93m,89°]\nEDGE[32,35,68m,0°]\nEDGE[35,32,82m,147°]\nEDGE[32,36,109m,220°]",
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 20,
+      "total_questions": 24,
+      "accuracy": 83.33333333333334,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 8,
+          "total": 8,
+          "percentage": 100.0
+        },
+        "空间距离估算": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        },
+        "邻近关系判断": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "POI密度识别": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "路径规划": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Crussh Bar相对于Caffè Nero在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "Crussh Bar位于Caffè Nero的西南面。"
+        },
+        {
+          "question": "Quirinale相对于Crussh Bar在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Quirinale位于Crussh Bar的西北面。"
+        },
+        {
+          "question": "The Cinnamon Club相对于Quirinale在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "The Cinnamon Club位于Quirinale的西南面。"
+        },
+        {
+          "question": "Milne’s House相对于The Cinnamon Club在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Milne’s House位于The Cinnamon Club的西北面。"
+        },
+        {
+          "question": "Caffè Nero相对于Crussh Bar在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Caffè Nero位于Crussh Bar的东北面。"
+        },
+        {
+          "question": "Crussh Bar相对于Quirinale在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Crussh Bar位于Quirinale的东南面。"
+        },
+        {
+          "question": "Quirinale相对于The Cinnamon Club在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Quirinale位于The Cinnamon Club的东北面。"
+        },
+        {
+          "question": "The Cinnamon Club相对于Milne’s House在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "The Cinnamon Club位于Milne’s House的东南面。"
+        },
+        {
+          "question": "Caffè Nero到Quirinale的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Caffè Nero到Quirinale的直线距离约为431米。"
+        },
+        {
+          "question": "Crussh Bar到The Cinnamon Club的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Crussh Bar到The Cinnamon Club的直线距离约为214米。"
+        },
+        {
+          "question": "Quirinale到Milne’s House的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Quirinale到Milne’s House的直线距离约为222米。"
+        },
+        {
+          "question": "The Cinnamon Club到Ashburnham House的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "The Cinnamon Club到Ashburnham House的直线距离约为89米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Caffè Nero最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Quirinale距离Caffè Nero最近，约431米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Crussh Bar最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Quirinale距离Crussh Bar最近，约97米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Quirinale最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Milne’s House距离Quirinale最远，约222米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离The Cinnamon Club最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Lloyds Bank距离The Cinnamon Club最远，约234米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Quirinale周围的POI密度最高，500米范围内有9个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Crussh Bar周围的POI密度最高，500米范围内有9个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Shepherds Hall周围的POI密度最低，500米范围内只有3个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Caffè Nero周围的POI密度最低，500米范围内只有4个其他POI。"
+        },
+        {
+          "question": "从Caffè Nero到Crussh Bar，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：Caffè Nero -> (margeret street and minster bridge节点) -> (tothill street and margeret street节点) -> (Quirinale and margeret street节点) -> (Crussh Bar and margeret street节点) -> Crussh Bar，总距离约569米。"
+        },
+        {
+          "question": "从Crussh Bar到Quirinale，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：Crussh Bar -> Quirinale，总距离约97米。"
+        },
+        {
+          "question": "从Quirinale到The Cinnamon Club，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：Quirinale -> (Crussh Bar and margeret street节点) -> (Crussh Bar and Lloyds Bank节点) -> (Wash House南节点) -> (Wash House南节点) -> The Cinnamon Club，总距离约572米。"
+        },
+        {
+          "question": "从The Cinnamon Club到Milne’s House，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：The Cinnamon Club -> (tothill street and Milne’s House节点) -> Milne’s House，总距离约163米。"
+        }
+      ],
+      "completed_at": "2025-12-25T13:40:22.506316"
+    },
+    "context_text": "# 第二种记忆道路连通图描述\n## 节点列表\nNODE[id,类型,附加属性]\nNODE[1,POI,name=Crussh Bar]\nNODE[2,POI,name=Quirinale]\nNODE[3,POI,name=Wash House]\nNODE[4,POI,name=The Cinnamon Club]\nNODE[5,POI,name=Ashburnham House]\nNODE[6,POI,name=Milne’s House]\nNODE[7,POI,name=Café Fresco]\nNODE[8,POI,name=Caffè Nero]\nNODE[9,POI,name=Zen China]\nNODE[10,POI,name=Aji Zen Canteen]\nNODE[11,POI,name=Shepherds Hall]\nNODE[12,POI,name=Riverside Cafe]\nNODE[13,POI,name=PizzaExpress]\nNODE[14,POI,name=Footstool]\nNODE[15,POI,name=Lloyds Bank]\nNODE[16,ROAD,name=起点]\nNODE[17,ROAD,name=Crussh Bar and margeret street节点]\nNODE[18,ROAD,name=Crussh Bar and Lloyds Bank节点]\nNODE[19,ROAD,name=Wash House南节点]\nNODE[20,ROAD,name=tothill street and Milne’s House节点]\nNODE[21,ROAD,name=tothill street and minster bridge西节点的节点]\nNODE[22,ROAD,name=minster bridge西节点]\nNODE[23,ROAD,name=margeret street and minster bridge节点]\nNODE[24,ROAD,name=Caffè Nero and minster bridge节点]\nNODE[25,ROAD,name=Zen China and minster bridge节点]\nNODE[26,ROAD,name=Zen China节点]\nNODE[27,ROAD,name=Aji Zen Canteen and minster bridge节点]\nNODE[28,ROAD,name=albert and Shepherds Hallj节点]\nNODE[29,ROAD,name=albert and Riverside Cafe节点]\nNODE[30,ROAD,name=the terrace and margeret street节点]\nNODE[31,ROAD,name=the terrace and PizzaExpress节点]\nNODE[32,ROAD,name=Footstool and margeret street节点]\nNODE[33,ROAD,name=Lloyds Bank and margeret street节点]\nNODE[34,ROAD,name=位置_44]\nNODE[35,ROAD,name=位置_50]\nNODE[36,ROAD,name=位置_52]\n\n## 边列表\nEDGE[起点ID,终点ID,道路长度,方向]\nEDGE[16,17,68m,226°]\nEDGE[17,1,62m,278°]\nEDGE[1,2,97m,329°]\nEDGE[2,1,97m,149°]\nEDGE[1,18,73m,177°]\nEDGE[18,19,234m,248°]\nEDGE[19,3,81m,358°]\nEDGE[3,4,85m,2°]\nEDGE[4,3,85m,182°]\nEDGE[3,4,85m,2°]\nEDGE[4,5,89m,326°]\nEDGE[5,6,74m,1°]\nEDGE[6,20,173m,18°]\nEDGE[20,7,113m,270°]\nEDGE[7,20,113m,90°]\nEDGE[20,21,148m,92°]\nEDGE[21,22,91m,357°]\nEDGE[22,23,123m,92°]\nEDGE[23,8,99m,27°]\nEDGE[8,24,83m,170°]\nEDGE[24,25,325m,90°]\nEDGE[25,26,160m,358°]\nEDGE[26,9,50m,100°]\nEDGE[9,26,50m,280°]\nEDGE[26,25,160m,178°]\nEDGE[25,27,82m,89°]\nEDGE[27,10,73m,9°]\nEDGE[10,27,73m,189°]\nEDGE[27,25,82m,269°]\nEDGE[25,28,263m,193°]\nEDGE[28,11,57m,87°]\nEDGE[11,28,57m,267°]\nEDGE[28,12,393m,189°]\nEDGE[12,29,84m,176°]\nEDGE[29,30,222m,271°]\nEDGE[30,31,153m,179°]\nEDGE[31,13,51m,271°]\nEDGE[13,31,51m,91°]\nEDGE[31,30,153m,359°]\nEDGE[30,32,95m,332°]\nEDGE[32,14,117m,269°]\nEDGE[14,15,81m,8°]\nEDGE[15,33,130m,55°]\nEDGE[33,34,73m,180°]\nEDGE[34,32,78m,180°]\nEDGE[32,32,15m,152°]\nEDGE[32,14,124m,275°]\nEDGE[14,14,23m,89°]\nEDGE[14,32,93m,89°]\nEDGE[32,35,68m,0°]\nEDGE[35,32,82m,147°]\nEDGE[32,36,109m,220°]",
+    "context_mode": "graph"
+  }
+}

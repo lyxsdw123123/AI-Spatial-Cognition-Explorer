@@ -1,0 +1,261 @@
+{
+  "region": "芝加哥千禧公园",
+  "source_file": "芝加哥千禧公园_claude_map_report.txt",
+  "evaluation_time": "2025-12-26T04:02:10.230855",
+  "context_text": "# 第三种记忆map描述\n## 节点列表\nNODE[id,类型,附加属性，ij坐标]\n[栅格参数]\n- grid_size: 30\nNODE[1,POI,name=The Park Grill，（12，12）]\nNODE[2,POI,name=Starbucks，（25，18）]\nNODE[3,POI,name=Walgreens，（15，7）]\nNODE[4,POI,name=Oasis Cafe，（13，6）]\nNODE[5,POI,name=Pittsfield Cafe，（15，6）]\nNODE[6,POI,name=Pizano's Pizza & Pasta，（10，5）]\nNODE[7,POI,name=National College of Education Urban Campus，（9，7）]\nNODE[8,POI,name=Wildberry Pancakes and Cafe，（19，13）]\nNODE[9,POI,name=Market Creations，（20，10）]\nNODE[10,POI,name=Chase，（19，7）]\nNODE[11,POI,name=CVS Pharmacy，（24，21）]\nNODE[12,POI,name=Eggy's，（22，26）]\nNODE[13,POI,name=Terzo Piano，（3，15）]\nNODE[14,POI,name=Miller’s Pub，（3，2）]\nNODE[15,ROAD,name=The Park Grill and machigan street节点，（12，9）]\nNODE[16,ROAD,name=Walgreens and machigan street节点，（15，9）]\nNODE[17,ROAD,name=randoful river and machigan street节点，（18，9）]\nNODE[18,ROAD,name=randoful river and Chase节点，（18，7）]\nNODE[19,ROAD,name=randoful river西节点，（18，4）]\nNODE[20,ROAD,name=Pittsfield Cafe and wabash avenue节点，（15，4）]\nNODE[21,ROAD,name=Oasis Cafe and wabash avenue节点，（13，4）]\nNODE[22,ROAD,name=Pizano's Pizza & Pasta and wabash avenue节点，（10，4）]\nNODE[23,ROAD,name=moron river and wabash avenue节点，（6，4）]\nNODE[24,ROAD,name=moron river and machigan street节点，（5，9）]\nNODE[25,ROAD,name=National College and machigan street节点，（9，9）]\nNODE[26,ROAD,name=randoful river and Market Creations节点，（18，10）]\nNODE[27,ROAD,name=randoful river and Wildberry Pancakes and Cafe，（18，13）]\nNODE[28,ROAD,name=east steet and Wildberry Pancakes and Cafe的节点，（22，13）]\nNODE[29,ROAD,name=east steet and Market Creations节点，（22，10）]\nNODE[30,ROAD,name=east steet and machigan street节点，（22，9）]\nNODE[31,ROAD,name=east steet and stetson avenue的节点，（22，15）]\nNODE[32,ROAD,name=lake street西节点，（24，15）]\nNODE[33,ROAD,name=lake street and Starbucks的节点，（24，17）]\nNODE[34,ROAD,name=lake street and CVS Pharmacy的节点，（23，19）]\nNODE[35,ROAD,name=east steet and Eggy's的节点，（22，19）]\nNODE[36,ROAD,name=moron river and Terzo Piano节点，（6，15）]\nNODE[37,ROAD,name=Miller’s Pub and wabash avenue节点，（3，4）]\n\n## 道路列表\nROAD[道路坐标]\nROAD[（3，2），（3，3），（3，4），（3，15），（4，4），（4，15），（5，4），（5，7），（5，8），（5，9），（5，10），（5，11），（5，12），（5，15），（6，4），（6，5），（6，6），（6，9），（6，12），（6，13），（6，14），（6，15），（7，4），（7，9），（8，4），（8，9），（9，4），（9，7），（9，8），（9，9），（10，4），（10，5），（10，7），（10，9），（11，4），（11，7），（11，9），（12，4），（12，7），（12，8），（12，9），（12，10），（12，11），（12，12），（13，4），（13，5），（13，6），（13，7），（13，9），（14，4），（14，6），（14，7），（14，9），（15，4），（15，5），（15，6），（15，7），（15，8），（15，9），（16，4），（16，9），（17，4），（17，9），（18，4），（18，5），（18，6），（18，7），（18，8），（18，9），（18，10），（18，11），（18，12），（18，13），（19，7），（19，9），（19，10），（19，13），（20，9），（20，10），（20，13），（21，9），（21，10），（21，13），（22，9），（22，10），（22，11），（22，12），（22，13），（22，14），（22，15），（22，16），（22，17），（22，18），（22，19），（22，20），（22，21），（22，22），（22，23），（22，24），（22，25），（22，26），（23，15），（23，19），（23，23），（23，24），（24，15），（24，16），（24，17），（24，18），（24，20），（24，21），（24，22），（25，18）]",
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 10,
+      "total_questions": 24,
+      "accuracy": 41.66666666666667,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 2,
+          "total": 8,
+          "percentage": 25.0
+        },
+        "空间距离估算": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "邻近关系判断": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "POI密度识别": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "路径规划": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Wildberry Pancakes and Cafe相对于The Park Grill在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Wildberry Pancakes and Cafe位于The Park Grill的东北面。"
+        },
+        {
+          "question": "Starbucks相对于Wildberry Pancakes and Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Starbucks位于Wildberry Pancakes and Cafe的西南面。"
+        },
+        {
+          "question": "Pittsfield Cafe相对于Starbucks在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Pittsfield Cafe位于Starbucks的西北面。"
+        },
+        {
+          "question": "Walgreens相对于Pittsfield Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Walgreens位于Pittsfield Cafe的东南面。"
+        },
+        {
+          "question": "The Park Grill相对于Wildberry Pancakes and Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "The Park Grill位于Wildberry Pancakes and Cafe的西南面。"
+        },
+        {
+          "question": "Wildberry Pancakes and Cafe相对于Starbucks在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Wildberry Pancakes and Cafe位于Starbucks的东北面。"
+        },
+        {
+          "question": "Starbucks相对于Pittsfield Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Starbucks位于Pittsfield Cafe的东南面。"
+        },
+        {
+          "question": "Pittsfield Cafe相对于Walgreens在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Pittsfield Cafe位于Walgreens的西北面。"
+        },
+        {
+          "question": "The Park Grill到Starbucks的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "The Park Grill到Starbucks的直线距离约为129米。"
+        },
+        {
+          "question": "Wildberry Pancakes and Cafe到Pittsfield Cafe的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Wildberry Pancakes and Cafe到Pittsfield Cafe的直线距离约为264米。"
+        },
+        {
+          "question": "Starbucks到Walgreens的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Starbucks到Walgreens的直线距离约为88米。"
+        },
+        {
+          "question": "Pittsfield Cafe到CVS Pharmacy的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Pittsfield Cafe到CVS Pharmacy的直线距离约为528米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离The Park Grill最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Starbucks距离The Park Grill最近，约129米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Wildberry Pancakes and Cafe最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Walgreens距离Wildberry Pancakes and Cafe最近，约237米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Starbucks最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "CVS Pharmacy距离Starbucks最远，约559米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Pittsfield Cafe最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "CVS Pharmacy距离Pittsfield Cafe最远，约528米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Market Creations周围的POI密度最高，500米范围内有9个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Chase周围的POI密度最高，500米范围内有9个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "CVS Pharmacy周围的POI密度最低，500米范围内只有4个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Starbucks周围的POI密度最低，500米范围内只有8个其他POI。"
+        },
+        {
+          "question": "从The Park Grill到Wildberry Pancakes and Cafe，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：The Park Grill -> (The Park Grill and machigan street节点) -> (Walgreens and machigan street节点) -> (randoful river and machigan street节点) -> (randoful river and Market Creations节点) -> (randoful river and Wildberry Pancakes and Cafe) -> Wildberry Pancakes and Cafe，总距离约471米。"
+        },
+        {
+          "question": "从Wildberry Pancakes and Cafe到Starbucks，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "最短路径是：Wildberry Pancakes and Cafe -> (randoful river and Wildberry Pancakes and Cafe) -> (randoful river and Market Creations节点) -> (randoful river and machigan street节点) -> (Walgreens and machigan street节点) -> (Walgreens and machigan street节点) -> Starbucks，总距离约435米。"
+        },
+        {
+          "question": "从Starbucks到Pittsfield Cafe，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：Starbucks -> (Walgreens and machigan street节点) -> (Walgreens and machigan street节点) -> (randoful river and machigan street节点) -> (randoful river and Chase节点) -> (randoful river西节点) -> (Pittsfield Cafe and wabash avenue节点) -> Pittsfield Cafe，总距离约532米。"
+        },
+        {
+          "question": "从Pittsfield Cafe到Walgreens，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：Pittsfield Cafe -> (Pittsfield Cafe and wabash avenue节点) -> (randoful river西节点) -> (randoful river and Chase节点) -> (randoful river and machigan street节点) -> (Walgreens and machigan street节点) -> Walgreens，总距离约443米。"
+        }
+      ],
+      "completed_at": "2025-12-26T04:02:09.452688"
+    },
+    "context_text": "# 第三种记忆map描述\n## 节点列表\nNODE[id,类型,附加属性，ij坐标]\n[栅格参数]\n- grid_size: 30\nNODE[1,POI,name=The Park Grill，（12，12）]\nNODE[2,POI,name=Starbucks，（25，18）]\nNODE[3,POI,name=Walgreens，（15，7）]\nNODE[4,POI,name=Oasis Cafe，（13，6）]\nNODE[5,POI,name=Pittsfield Cafe，（15，6）]\nNODE[6,POI,name=Pizano's Pizza & Pasta，（10，5）]\nNODE[7,POI,name=National College of Education Urban Campus，（9，7）]\nNODE[8,POI,name=Wildberry Pancakes and Cafe，（19，13）]\nNODE[9,POI,name=Market Creations，（20，10）]\nNODE[10,POI,name=Chase，（19，7）]\nNODE[11,POI,name=CVS Pharmacy，（24，21）]\nNODE[12,POI,name=Eggy's，（22，26）]\nNODE[13,POI,name=Terzo Piano，（3，15）]\nNODE[14,POI,name=Miller’s Pub，（3，2）]\nNODE[15,ROAD,name=The Park Grill and machigan street节点，（12，9）]\nNODE[16,ROAD,name=Walgreens and machigan street节点，（15，9）]\nNODE[17,ROAD,name=randoful river and machigan street节点，（18，9）]\nNODE[18,ROAD,name=randoful river and Chase节点，（18，7）]\nNODE[19,ROAD,name=randoful river西节点，（18，4）]\nNODE[20,ROAD,name=Pittsfield Cafe and wabash avenue节点，（15，4）]\nNODE[21,ROAD,name=Oasis Cafe and wabash avenue节点，（13，4）]\nNODE[22,ROAD,name=Pizano's Pizza & Pasta and wabash avenue节点，（10，4）]\nNODE[23,ROAD,name=moron river and wabash avenue节点，（6，4）]\nNODE[24,ROAD,name=moron river and machigan street节点，（5，9）]\nNODE[25,ROAD,name=National College and machigan street节点，（9，9）]\nNODE[26,ROAD,name=randoful river and Market Creations节点，（18，10）]\nNODE[27,ROAD,name=randoful river and Wildberry Pancakes and Cafe，（18，13）]\nNODE[28,ROAD,name=east steet and Wildberry Pancakes and Cafe的节点，（22，13）]\nNODE[29,ROAD,name=east steet and Market Creations节点，（22，10）]\nNODE[30,ROAD,name=east steet and machigan street节点，（22，9）]\nNODE[31,ROAD,name=east steet and stetson avenue的节点，（22，15）]\nNODE[32,ROAD,name=lake street西节点，（24，15）]\nNODE[33,ROAD,name=lake street and Starbucks的节点，（24，17）]\nNODE[34,ROAD,name=lake street and CVS Pharmacy的节点，（23，19）]\nNODE[35,ROAD,name=east steet and Eggy's的节点，（22，19）]\nNODE[36,ROAD,name=moron river and Terzo Piano节点，（6，15）]\nNODE[37,ROAD,name=Miller’s Pub and wabash avenue节点，（3，4）]\n\n## 道路列表\nROAD[道路坐标]\nROAD[（3，2），（3，3），（3，4），（3，15），（4，4），（4，15），（5，4），（5，7），（5，8），（5，9），（5，10），（5，11），（5，12），（5，15），（6，4），（6，5），（6，6），（6，9），（6，12），（6，13），（6，14），（6，15），（7，4），（7，9），（8，4），（8，9），（9，4），（9，7），（9，8），（9，9），（10，4），（10，5），（10，7），（10，9），（11，4），（11，7），（11，9），（12，4），（12，7），（12，8），（12，9），（12，10），（12，11），（12，12），（13，4），（13，5），（13，6），（13，7），（13，9），（14，4），（14，6），（14，7），（14，9），（15，4），（15，5），（15，6），（15，7），（15，8），（15，9），（16，4），（16，9），（17，4），（17，9），（18，4），（18，5），（18，6），（18，7），（18，8），（18，9），（18，10），（18，11），（18，12），（18，13），（19，7），（19，9），（19，10），（19，13），（20，9），（20，10），（20，13），（21，9），（21，10），（21，13），（22，9），（22，10），（22，11），（22，12），（22，13），（22，14），（22，15），（22，16），（22，17），（22，18），（22，19），（22，20），（22，21），（22，22），（22，23），（22，24），（22，25），（22，26），（23，15），（23，19），（23，23），（23，24），（24，15），（24，16），（24，17），（24，18），（24，20），（24，21），（24，22），（25，18）]",
+    "context_mode": "map"
+  }
+}
