@@ -296,6 +296,182 @@ Current Location: [<lat>, <lng>]. Visited POIs count: <n>. Analyze surroundings 
   - 阶段 2（Candidates）：`base_prompt + 计划 + "Let's think step by step."`，并行生成 3 个候选（temperature=1.0）
   - 阶段 3（Select）：使用 `tot_select_prompt`（单独模板），让模型在候选中选择
 
+#### 2.4.0 四种提问方式在代码里是怎么“跑起来”的（调用链）
+
+四种提问方式不是“配置文件里写了四段 Prompt”这么简单，而是在一次评估请求中按策略循环执行。调用链是：
+
+1) API 收到请求：`POST /evaluation/start`
+2) API 组装 `exploration_data`（只保留 `context_text/context_mode/prompt_rules`），然后调用 `evaluation_agent.initialize(...)`
+3) API 用 `asyncio.create_task(evaluation_agent.start_evaluation())` 异步启动评估
+4) `start_evaluation()` 内部 `for strategy in self.strategies:` 依次执行四种策略（每种策略会遍历全部题目）
+5) 每种策略的每道题都在 `_evaluate_single_strategy(strategy)` 里通过不同分支构造不同的 prompt / 调用次数 / temperature
+
+对应代码（直接定位到“跑起来”的入口）：
+
+- 请求入口与异步启动：[evaluation_api.py:L48-L209](file:///d:/a_project_study/AI_exploer_aoto_onlybeijing/AI_exploer_aotoV10/AI_exploer_aoto/backend/evaluation_api.py#L48-L209)
+- 逐策略执行（四种提问方式依次跑）：[start_evaluation()](file:///d:/a_project_study/AI_exploer_aoto_onlybeijing/AI_exploer_aotoV10/AI_exploer_aoto/backend/evaluation_agent.py#L291-L312)
+- 每道题进入四分支实现：[_evaluate_single_strategy()](file:///d:/a_project_study/AI_exploer_aoto_onlybeijing/AI_exploer_aotoV10/AI_exploer_aoto/backend/evaluation_agent.py#L319-L449)
+
+#### 2.4.1 四种提问方式的“共同底座”：base_prompt 如何构建
+
+四种提问方式本质上都是围绕同一个 `base_prompt` 做不同程度的追加与多次调用；因此理解“底座”非常关键。底座构建发生在 `EvaluationAgent._evaluate_single_strategy()` 的每道题循环里：
+
+- 把 `question["options"]` 格式化为 `A. ...\nB. ...\nC. ...\nD. ...`（`options_str`）
+- 由 `context_mode` 选择 `evaluation_prompt_text/graph/map` 模板
+- `.format(...)` 得到 `base_prompt`
+- 若 `enable_explanation=False`，追加“只输出字母”的强约束
+- 若请求侧/默认侧提供了 `prompt_rules`，以“附加规则（优先级最高）”前缀把规则块拼到最前面
+
+对应代码（关键片段）：
+
+- [evaluation_agent.py:L319-L360](file:///d:/a_project_study/AI_exploer_aoto_onlybeijing/AI_exploer_aotoV10/AI_exploer_aoto/backend/evaluation_agent.py#L319-L360)
+
+```python
+options_str = "\n".join([
+    f"{chr(65 + j)}. {option}"
+    for j, option in enumerate(options_list)
+])
+
+base_tmpl = self._get_base_prompt_template(self.exploration_data.get('context_mode'))
+base_prompt = base_tmpl.format(
+    exploration_context=exploration_context,
+    question=qtext,
+    options=options_str
+)
+
+if not self.enable_explanation:
+    base_prompt += "\n\n输出要求（严格）：只输出一个大写字母作为答案（对应选项标签），不要输出\"答案：\"前缀、不要输出解释、不要输出任何其他字符。"
+
+if rules_block:
+    base_prompt = f"附加规则（优先级最高）：\n{rules_block}\n\n" + base_prompt
+```
+
+补充：策略列表的默认值与外部覆盖入口
+
+- 默认策略列表在 `__init__` 与 `initialize()` 中都是 `["Direct", "CoT", "Self-Consistency", "ToT"]`
+- API 请求可通过 `strategies` 字段覆盖（不传则走默认）
+
+对应代码：
+
+- [evaluation_agent.py:L22-L37](file:///d:/a_project_study/AI_exploer_aoto_onlybeijing/AI_exploer_aotoV10/AI_exploer_aoto/backend/evaluation_agent.py#L22-L37)
+- [evaluation_agent.py:L232-L248](file:///d:/a_project_study/AI_exploer_aoto_onlybeijing/AI_exploer_aotoV10/AI_exploer_aoto/backend/evaluation_agent.py#L232-L248)
+- [evaluation_api.py:L38-L43](file:///d:/a_project_study/AI_exploer_aoto_onlybeijing/AI_exploer_aotoV10/AI_exploer_aoto/backend/evaluation_api.py#L38-L43)
+- [evaluation_api.py:L200-L205](file:///d:/a_project_study/AI_exploer_aoto_onlybeijing/AI_exploer_aotoV10/AI_exploer_aoto/backend/evaluation_api.py#L200-L205)
+
+#### 2.4.2 Direct（直接提问）如何实现
+
+实现要点：
+
+- 对每道题只调用一次模型：`_call_llm_async(base_prompt)`
+- 采样温度使用 `EvaluationAgent.temperature` 默认值（`__init__` 为 0.1；如未覆盖）
+- 统一用 `_extract_answer()` 从响应文本中解析出 A-D（兼容“答案：A”等格式）
+
+对应代码：
+
+- [evaluation_agent.py:L364-L370](file:///d:/a_project_study/AI_exploer_aoto_onlybeijing/AI_exploer_aotoV10/AI_exploer_aoto/backend/evaluation_agent.py#L364-L370)
+
+```python
+if strategy == "Direct":
+    response = await self._call_llm_async(base_prompt)
+    ai_answer = self._extract_answer(response)
+    ai_explanation = self._extract_explanation(response)
+```
+
+#### 2.4.3 CoT（Zero-shot Chain-of-Thought）如何实现
+
+实现要点：
+
+- Direct 的基础上，在 prompt 末尾追加一句固定指令：`Let's think step by step.`
+- 仍然是每道题只调用一次模型；区别仅在于 prompt 末尾多了“鼓励逐步推理”的触发语
+
+对应代码：
+
+- [evaluation_agent.py:L371-L378](file:///d:/a_project_study/AI_exploer_aoto_onlybeijing/AI_exploer_aotoV10/AI_exploer_aoto/backend/evaluation_agent.py#L371-L378)
+
+```python
+elif strategy == "CoT":
+    cot_prompt = base_prompt + "\n\nLet's think step by step."
+    response = await self._call_llm_async(cot_prompt)
+    ai_answer = self._extract_answer(response)
+    ai_explanation = self._extract_explanation(response)
+```
+
+#### 2.4.4 Self-Consistency（自一致性投票）如何实现
+
+实现要点：
+
+- 使用与 CoT 相同的 `cot_prompt`
+- 对同一个 `cot_prompt` 并行采样 5 次（`asyncio.gather`），并把 `temperature` 强制设为 `1.0` 以增加多样性
+- 把 5 次响应都喂给 `_extract_answer()`，对得到的 A-D 结果做 `Counter(...).most_common(1)` 多数投票
+- 解释文本取“第一条投票胜出的候选响应”的解释（如果开启解释）
+
+对应代码：
+
+- [evaluation_agent.py:L379-L405](file:///d:/a_project_study/AI_exploer_aoto_onlybeijing/AI_exploer_aotoV10/AI_exploer_aoto/backend/evaluation_agent.py#L379-L405)
+
+```python
+elif strategy == "Self-Consistency":
+    cot_prompt = base_prompt + "\n\nLet's think step by step."
+    tasks = [self._call_llm_async(cot_prompt, temperature=1.0) for _ in range(5)]
+    responses = await asyncio.gather(*tasks, return_exceptions=True)
+
+    valid_responses = [r for r in responses if isinstance(r, str)]
+    extracted_answers = [self._extract_answer(r) for r in valid_responses]
+
+    if extracted_answers:
+        from collections import Counter
+        vote_counts = Counter(extracted_answers)
+        ai_answer = vote_counts.most_common(1)[0][0]
+        for r in valid_responses:
+            if self._extract_answer(r) == ai_answer:
+                ai_explanation = self._extract_explanation(r)
+                break
+```
+
+#### 2.4.5 ToT（Tree-of-Thoughts：计划→候选→选择）如何实现
+
+实现要点（严格对应代码）：
+
+- 阶段 1（Plan）：用 `tot_plan_prompt` 单独生成一个“推理计划 plan”，调用 1 次模型
+- 阶段 2（Candidates）：把 `plan` 注入到候选生成 prompt 中，并追加 `Let's think step by step.`；并行采样 3 次（temperature=1.0）得到多个候选响应
+- 阶段 3（Select）：把所有候选响应按“候选答案 1/2/3”拼成 `candidates_text`，再用 `tot_select_prompt` 让模型选择最可信的一个；选择阶段温度设置为 `0.1`（更偏确定性）
+- 当 `enable_explanation=False` 时，ToT 的选择阶段同样会追加“只输出字母”的强约束（注意：这里加在 `select_prompt` 上，不是在 `base_prompt` 上）
+
+对应代码：
+
+- [evaluation_agent.py:L406-L449](file:///d:/a_project_study/AI_exploer_aoto_onlybeijing/AI_exploer_aotoV10/AI_exploer_aoto/backend/evaluation_agent.py#L406-L449)
+
+```python
+elif strategy == "ToT":
+    plan_prompt = self.tot_plan_prompt.format(
+        exploration_context=exploration_context,
+        question=qtext,
+        options=options_str
+    )
+    plan = await self._call_llm_async(plan_prompt)
+
+    candidate_gen_prompt = base_prompt + f"\n\n请严格遵循以下推理计划进行思考：\n{plan}\n\nLet's think step by step."
+    cand_tasks = [self._call_llm_async(candidate_gen_prompt, temperature=1.0) for _ in range(3)]
+    candidate_responses = await asyncio.gather(*cand_tasks, return_exceptions=True)
+    valid_candidates = [r for r in candidate_responses if isinstance(r, str) and r.strip()]
+
+    candidates_text = ""
+    for idx, cand in enumerate(valid_candidates, 1):
+        candidates_text += f"候选答案 {idx}:\n{cand}\n{'-'*20}\n"
+
+    select_prompt = self.tot_select_prompt.format(
+        question=qtext,
+        plan=plan,
+        candidates=candidates_text
+    )
+    if not self.enable_explanation:
+        select_prompt += "\n\n输出要求（严格）：只输出一个大写字母作为答案（对应选项标签），不要输出\"答案：\"前缀、不要输出解释、不要输出任何其他字符。"
+
+    selection_response = await self._call_llm_async(select_prompt, temperature=0.1)
+    ai_answer = self._extract_answer(selection_response)
+    ai_explanation = f"[推理计划]\n{plan}\n\n[最终选定]\n{self._extract_explanation(selection_response)}"
+```
+
 ToT 阶段 1：tot_plan_prompt（原文）：
 
 ```text

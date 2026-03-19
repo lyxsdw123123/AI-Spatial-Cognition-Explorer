@@ -1222,6 +1222,7 @@ async def stop_exploration():
                     'total_road_nodes_visited': total_road_nodes_named,
                     'total_distance_meters': total_distance_meters,
                     'total_time_seconds': total_time_seconds,
+                    'reselect_start_count': int(getattr(explorer_agent, 'reselect_start_count', 0) or 0),
                     'round_index': int(getattr(explorer_agent, 'exploration_round', 1)),
                     'rounds_completed': int(getattr(explorer_agent, 'rounds_completed', 0))
                 },
@@ -1297,6 +1298,8 @@ async def stop_exploration():
                         lines.append(f"总探索距离：{int(sm.get('total_distance_meters'))}米")
                     if sm.get('total_time_seconds') is not None:
                         lines.append(f"探索时间：{int(sm.get('total_time_seconds'))}秒")
+                    if sm.get('reselect_start_count') is not None:
+                        lines.append(f"重新起点次数：{int(sm.get('reselect_start_count'))}")
                     exploration_data['context_text'] = "\n".join(lines)
                     exploration_data['context_mode'] = 'context'
                 elif mode == 'raw':
@@ -2233,10 +2236,38 @@ async def get_exploration_status():
     """获取探索状态"""
     try:
         status = explorer_agent.get_current_status()
+        try:
+            region_name = None
+            if getattr(explorer_agent, "use_local_data", False) and getattr(explorer_agent, "local_data_service", None):
+                region_name = getattr(explorer_agent.local_data_service, "region_name", None)
+            if region_name:
+                status["region_name"] = region_name
+        except Exception:
+            pass
         return {
             "success": True,
             "data": status
         }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/exploration/raw_history")
+async def get_exploration_raw_history(tail_lines: int = 200):
+    try:
+        text = ""
+        try:
+            text = explorer_agent.get_raw_memory_text() if hasattr(explorer_agent, "get_raw_memory_text") else ""
+        except Exception:
+            text = ""
+
+        lines = text.splitlines()
+        total_lines = len(lines)
+        n = int(tail_lines or 0)
+        if n <= 0:
+            tail = ""
+        else:
+            tail = "\n".join(lines[-n:])
+        return {"success": True, "data": {"total_lines": total_lines, "tail_lines": min(n, total_lines), "tail_text": tail}}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

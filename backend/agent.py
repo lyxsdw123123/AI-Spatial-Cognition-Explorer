@@ -43,6 +43,12 @@ class ExplorerAgent:
         self.poi_not_found_error_count = 0
         self.max_poi_not_found_errors = 5
         self.failed_poi_names = set()
+        self.random_move_no_poi_count = 0
+        self.reselect_start_count = 0
+        self.max_no_poi_moves_before_reselect = 2
+        self._road_node_id_map = {}
+        self._road_node_id_counter = 0
+        self._auto_explore_direction_index = 0
         
         # Services
         self.path_memory = PathMemoryManager(data_dir="data/mental_maps")
@@ -140,7 +146,13 @@ Rules:
         # But create_openai_tools_agent is the standard for "tool calling" models.
         try:
             agent = create_openai_tools_agent(self.llm, self.tools, prompt)
-            self.agent_executor = AgentExecutor(agent=agent, tools=self.tools, verbose=True, return_intermediate_steps=True)
+            self.agent_executor = AgentExecutor(
+                agent=agent,
+                tools=self.tools,
+                verbose=True,
+                return_intermediate_steps=True,
+                max_iterations=200,
+            )
         except Exception:
             # Fallback for models without native tool calling API support (if any)
             # But qwen-turbo usually supports it.
@@ -151,7 +163,13 @@ Rules:
                 MessagesPlaceholder(variable_name="agent_scratchpad"),
             ])
             agent = create_react_agent(self.llm, self.tools, react_prompt)
-            self.agent_executor = AgentExecutor(agent=agent, tools=self.tools, verbose=True, return_intermediate_steps=True)
+            self.agent_executor = AgentExecutor(
+                agent=agent,
+                tools=self.tools,
+                verbose=True,
+                return_intermediate_steps=True,
+                max_iterations=200,
+            )
 
     async def initialize(self, start_location: Tuple[float, float], 
                         boundary: List[Tuple[float, float]],
@@ -172,8 +190,23 @@ Rules:
         self.use_local_data = use_local_data
         self.local_data_service = local_data_service
         self.max_exploration_rounds = max_rounds
+        self.is_exploring = False
+        self.exploration_round = 1
+        self.rounds_completed = 0
+        self.ever_visited_pois = set()
+        self.exploration_complete = False
+        self.visited_pois = set()
+        self.interesting_pois = []
+        self.exploration_path = []
+        self.position_history = []
         self.poi_not_found_error_count = 0
         self.failed_poi_names = set()
+        self.random_move_no_poi_count = 0
+        self.reselect_start_count = 0
+        self.max_no_poi_moves_before_reselect = 2
+        self._road_node_id_map = {}
+        self._road_node_id_counter = 0
+        self._auto_explore_direction_index = 0
         self.path_memory.initialize(start_location, boundary, exploration_mode)
         self.raw_conversation_history = []  # 重置历史记录
         
@@ -209,15 +242,20 @@ Rules:
         
         while self.is_exploring:
             try:
+                try:
+                    if self.mental_map.get("available_pois") and not self._get_unexplored_pois():
+                        self.is_exploring = False
+                        self._current_action = "Exploration complete (all POIs visited)"
+                        print(f"\n[System] Exploration Complete! Visited all {len(self.mental_map.get('available_pois') or [])} POIs.", flush=True)
+                        break
+                except Exception:
+                    pass
+
                 print("\n--- Agent Step ---")
-                # Invoke Agent for one decision cycle
-                # We give it the current status as input
                 status_desc = f"Current Location: {self.current_location}. "
                 if self.visited_pois:
                     status_desc += f"Visited POIs count: {len(self.visited_pois)}. "
-                
-                # Execute agent
-                # The agent should call tools and finally return a summary of what it did.
+
                 input_text = f"{status_desc} Analyze surroundings and perform the next move."
                 result = await self.agent_executor.ainvoke({
                     "input": input_text
@@ -241,7 +279,45 @@ Rules:
                 
                 self.raw_conversation_history.extend(step_log)
                 
-                print(f"Agent Result: {result.get('output')}")
+                output_text = result.get('output')
+                print(f"Agent Result: {output_text}")
+
+                try:
+                    last_tool = ""
+                    last_obs = ""
+                    if intermediate_steps:
+                        last_action, last_observation = intermediate_steps[-1]
+                        last_tool = getattr(last_action, "tool", "") if last_action is not None else ""
+                        last_obs = str(last_observation or "")
+
+                    if last_tool == "scan_environment" and ("Found 0 visible POIs" in last_obs):
+                        unexplored = self._get_unexplored_pois()
+                        if unexplored:
+                            auto_result = await self.tool_reselect_start_point("system_auto_reselect_no_visible_pois")
+                            self.raw_conversation_history.append("[System Auto] reselect_start_point")
+                            self.raw_conversation_history.append(f"Tool Output: {auto_result}")
+                            self.raw_conversation_history.append("")
+                            print(f"[System Auto] {auto_result}", flush=True)
+                    elif last_tool == "explore_direction":
+                        if ("No POIs visible" in last_obs) and ("Reselected start point" in last_obs):
+                            try:
+                                scan_result = await self.tool_scan_environment()
+                                self.raw_conversation_history.append("[System Auto] scan_environment(after_reselect)")
+                                self.raw_conversation_history.append(f"Tool Output: {scan_result}")
+                                self.raw_conversation_history.append("")
+                                print(f"[System Auto] {scan_result}", flush=True)
+                                if "Found 0 visible POIs" in str(scan_result or ""):
+                                    unexplored = self._get_unexplored_pois()
+                                    if unexplored:
+                                        auto_result = await self.tool_reselect_start_point("system_auto_reselect_still_no_visible_after_reselect")
+                                        self.raw_conversation_history.append("[System Auto] reselect_start_point(again)")
+                                        self.raw_conversation_history.append(f"Tool Output: {auto_result}")
+                                        self.raw_conversation_history.append("")
+                                        print(f"[System Auto] {auto_result}", flush=True)
+                            except Exception:
+                                pass
+                except Exception:
+                    pass
                 
                 # 执行系统级轮次检查（对LLM不可见，仅在后端控制逻辑流）
                 await self._check_and_handle_round_completion()
@@ -289,12 +365,29 @@ Rules:
         """Logic for scanning environment"""
         self._current_action = "Scanning Environment"
         visible_pois = await self._get_visible_pois()
+        if visible_pois:
+            self.random_move_no_poi_count = 0
         
         summary = f"Found {len(visible_pois)} visible POIs.\n"
         for p in visible_pois:
             summary += f"- {p['name']} ({p.get('type','unknown')}), Dist: {p.get('distance_to_ai',0):.0f}m, Dir: {self._calculate_direction(self.current_location, p['location'])}\n"
         
         if not visible_pois:
+            try:
+                if self.mental_map.get("available_pois") and not self._get_unexplored_pois():
+                    self.is_exploring = False
+                    self._current_action = "Exploration complete (all POIs visited)"
+                    summary += "No unexplored POIs remain. Exploration complete. Proceed to evaluation."
+                    return summary
+            except Exception:
+                pass
+            try:
+                if self.mental_map.get("available_pois") and self._get_unexplored_pois():
+                    reselection = await self.tool_reselect_start_point("system_auto_reselect_no_visible_pois(scan)")
+                    summary += f"No POIs visible nearby. {reselection}"
+                    return summary
+            except Exception:
+                pass
             summary += "No POIs visible nearby. Suggest exploring a direction."
             
         return summary
@@ -407,8 +500,79 @@ Rules:
              await self._move_in_direction_on_road(direction, decision_record)
         else:
              await self._move_in_direction_direct(direction, decision_record)
-             
-        return f"Explored direction {direction:.0f}°. New location: {self.current_location}"
+
+        visible_pois = await self._get_visible_pois()
+        if visible_pois:
+            self.random_move_no_poi_count = 0
+            return f"Explored direction {direction:.0f}°. New location: {self.current_location}. Now see {len(visible_pois)} visible POIs."
+
+        try:
+            if self.mental_map.get("available_pois") and not self._get_unexplored_pois():
+                self.is_exploring = False
+                self._current_action = "Exploration complete (all POIs visited)"
+                return "No unexplored POIs remain. Exploration complete. Proceed to evaluation."
+        except Exception:
+            pass
+
+        self.random_move_no_poi_count += 1
+        if self.random_move_no_poi_count >= int(getattr(self, "max_no_poi_moves_before_reselect", 2) or 2):
+            unexplored = self._get_unexplored_pois()
+            if unexplored:
+                move_count = int(self.random_move_no_poi_count or 0)
+                reselection_reason = f"连续随机移动{self.random_move_no_poi_count}次仍未发现POI"
+                reselection = await self.tool_reselect_start_point(reselection_reason)
+                return f"Explored direction {direction:.0f}°. New location: {self.current_location}. No POIs visible after {move_count} random moves. {reselection}"
+
+        return f"Explored direction {direction:.0f}°. New location: {self.current_location}. No POIs visible nearby."
+
+    async def tool_reselect_start_point(self, reason: str = "") -> str:
+        self._current_action = "Reselecting Start Point"
+
+        unexplored = self._get_unexplored_pois()
+        if not unexplored:
+            return "No unexplored POIs remain. Cannot reselect a new start point."
+
+        target_poi = random.choice(unexplored)
+        target_loc = target_poi.get("location")
+        if not isinstance(target_loc, (list, tuple)) or len(target_loc) < 2:
+            return "Selected POI has invalid location. Cannot reselect start point."
+
+        self.reselect_start_count += 1
+        self.random_move_no_poi_count = 0
+
+        decision_record = {
+            "action": "reselect_start_point",
+            "target": target_poi.get("name"),
+            "target_id": target_poi.get("id"),
+            "target_location": list(target_loc),
+            "reason": reason,
+            "reselect_count": self.reselect_start_count,
+        }
+        self._last_decision = decision_record
+
+        self.current_location = list(target_loc)
+        self._record_path_point("reselect_start_point", decision_record)
+
+        visible_snapshot = self._build_visible_snapshot_at_location(
+            self.current_location,
+            exclude_poi_id=target_poi.get("id"),
+            limit=10,
+        )
+
+        try:
+            if hasattr(self.path_memory, "_last_poi_visit"):
+                self.path_memory._last_poi_visit = None
+            if hasattr(self.path_memory, "_current_leg_route_nodes"):
+                self.path_memory._current_leg_route_nodes = []
+            if hasattr(self.path_memory, "_current_leg_total_distance"):
+                self.path_memory._current_leg_total_distance = 0.0
+        except Exception:
+            pass
+
+        await self._visit_poi(target_poi, decision_record, visible_snapshot=visible_snapshot)
+
+        target_name = target_poi.get("name") or "Unknown POI"
+        return f"Reselected start point to unexplored POI '{target_name}' (count={self.reselect_start_count})."
 
     async def tool_plan_path(self, target: str) -> str:
         """Logic for planning a path to a target (POI or coordinates)"""
@@ -552,7 +716,7 @@ Rules:
             try:
                 self.path_memory.append_sequence_item("road_node", {
                     "location": loc,
-                    "name": f"node_{loc[0]:.6f}_{loc[1]:.6f}"
+                    "name": self._format_road_node_name(loc)
                 })
             except Exception:
                 pass
@@ -575,7 +739,12 @@ Rules:
              self._record_path_point("move_road_end", decision)
 
     async def _move_in_direction_direct(self, direction, decision):
-        dist = max(self.min_move_distance, self.move_speed * self.move_interval)
+        try:
+            k = int(getattr(self, "random_move_no_poi_count", 0) or 0)
+        except Exception:
+            k = 0
+        base_dist = max(self.min_move_distance, self.move_speed * self.move_interval)
+        dist = float(base_dist) * float(max(1, min(12, k + 1)))
         rad = math.radians(direction)
         lat_off = dist * math.cos(rad) / 111000
         lng_off = dist * math.sin(rad) / (111000 * math.cos(math.radians(self.current_location[0])))
@@ -585,11 +754,35 @@ Rules:
         if self._is_within_boundary(new_loc):
             await self._move_direct(new_loc, decision)
         else:
+            await self._move_direct(self.current_location, decision)
+
+    def _format_road_node_name(self, loc: List[float]) -> str:
+        try:
+            if not isinstance(loc, (list, tuple)) or len(loc) < 2:
+                self._road_node_id_counter += 1
+                return f"node_{self._road_node_id_counter}"
+            key = f"{float(loc[0]):.6f}_{float(loc[1]):.6f}"
+            if key in self._road_node_id_map:
+                return f"node_{self._road_node_id_map[key]}"
+            self._road_node_id_counter += 1
+            self._road_node_id_map[key] = self._road_node_id_counter
+            return f"node_{self._road_node_id_counter}"
+        except Exception:
+            try:
+                self._road_node_id_counter += 1
+                return f"node_{self._road_node_id_counter}"
+            except Exception:
+                return "node_1"
+        else:
             print("Hit boundary during direction move")
 
     async def _move_in_direction_on_road(self, direction, decision):
         # Try to project point in direction
-        dist = 100
+        try:
+            k = int(getattr(self, "random_move_no_poi_count", 0) or 0)
+        except Exception:
+            k = 0
+        dist = int(min(1500, max(200, 200 * (k + 1))))
         rad = math.radians(direction)
         lat_off = dist * math.cos(rad) / 111000
         lng_off = dist * math.sin(rad) / (111000 * math.cos(math.radians(self.current_location[0])))
@@ -603,14 +796,16 @@ Rules:
         else:
             await self._move_direct(target, decision)
 
-    async def _visit_poi(self, poi, decision):
+    async def _visit_poi(self, poi, decision, visible_snapshot: Optional[List[Dict]] = None):
         self.visited_pois.add(poi['id'])
         self.interesting_pois.append({'poi': poi, 'time': datetime.now()})
         
         # Record to memory
         self.path_memory.record_poi_visit(poi, {
             'visit_time': datetime.now().isoformat(),
-            'notes': f"Visited via {decision.get('action')}"
+            'notes': f"Visited via {decision.get('action')}",
+            'location_when_visited': self.current_location.copy(),
+            'visible_snapshot': visible_snapshot or []
         })
         
     def _record_path_point(self, action, decision):
@@ -637,6 +832,61 @@ Rules:
         x = math.cos(lat1) * math.sin(lat2) - math.sin(lat1) * math.cos(lat2) * math.cos(d_lng)
         bearing = math.degrees(math.atan2(y, x))
         return (bearing + 360) % 360
+
+    def _get_unexplored_pois(self) -> List[Dict]:
+        explored_ids = set()
+        try:
+            explored_ids |= set(self.ever_visited_pois or set())
+        except Exception:
+            pass
+        try:
+            explored_ids |= set(self.visited_pois or set())
+        except Exception:
+            pass
+
+        unexplored = []
+        for p in self.mental_map.get("available_pois", []) or []:
+            try:
+                pid = p.get("id")
+                if not pid:
+                    continue
+                if pid in explored_ids:
+                    continue
+                unexplored.append(p)
+            except Exception:
+                continue
+        return unexplored
+
+    def _build_visible_snapshot_at_location(
+        self,
+        location: List[float],
+        exclude_poi_id: Optional[str] = None,
+        limit: int = 10,
+    ) -> List[Dict]:
+        items = []
+        for p in self.mental_map.get("available_pois", []) or []:
+            try:
+                pid = p.get("id")
+                if not pid or pid == exclude_poi_id:
+                    continue
+                if pid in self.visited_pois:
+                    continue
+                loc = p.get("location")
+                if not isinstance(loc, (list, tuple)) or len(loc) < 2:
+                    continue
+                dist = self.map_service.calculate_distance(location, loc)
+                if dist > self.vision_radius:
+                    continue
+                direction = self._calculate_direction(location, loc)
+                items.append({
+                    "name": p.get("name") or str(pid),
+                    "relative_position": {"direction": float(direction), "distance": float(dist)},
+                })
+            except Exception:
+                continue
+
+        items.sort(key=lambda x: x.get("relative_position", {}).get("distance", float("inf")))
+        return items[: max(0, int(limit or 0))]
 
     def _generate_exploration_report(self):
         return {
@@ -680,6 +930,14 @@ Rules:
             if p.get('id'):
                 available_ids.add(p['id'])
         
+        try:
+            if self.mental_map.get("available_pois") and not self._get_unexplored_pois():
+                print(f"\n[System] Exploration Complete! Visited all {len(available_ids)} POIs.", flush=True)
+                self.stop_exploration()
+                return
+        except Exception:
+            pass
+
         # 2. 判断是否完成本轮（已访问集合 包含 全量集合）
         if available_ids and self.visited_pois and self.visited_pois.issuperset(available_ids):
             print(f"\n[System] Round {self.exploration_round} Completed! Visited all {len(available_ids)} POIs.")

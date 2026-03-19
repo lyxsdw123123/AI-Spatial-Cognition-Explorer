@@ -21,7 +21,7 @@ class EvaluationAgent:
     
     def __init__(self):
         self.api_key = Config.DASHSCOPE_API_KEY
-        self.model = "qwen-turbo"
+        self.model = "qwen-plus-2025-12-01"
         self.temperature = 0.1
         self.model_provider = "qwen"
         
@@ -249,12 +249,12 @@ class EvaluationAgent:
         # Initialize LLM based on provider
         self.llm_config = {
             "api_key": Config.DASHSCOPE_API_KEY,
-            "model": "qwen-max-latest"
+            "model": "qwen-plus-2025-12-01"
         }
         
         if self.model_provider == "qwen":
             self.llm_config["api_key"] = Config.DASHSCOPE_API_KEY
-            self.llm_config["model"] = "qwen-max-latest"
+            self.llm_config["model"] = "qwen-plus-2025-12-01"
         
         elif self.model_provider.startswith("qwen3"):
             self.llm_config["api_key"] = Config.DASHSCOPE_API_KEY

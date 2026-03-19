@@ -57,10 +57,42 @@ class PathMemoryManager:
             boundary: 探索边界
             exploration_mode: 探索模式
         """
+        try:
+            existing_catalog = getattr(self, "_road_nodes_catalog", None)
+        except Exception:
+            existing_catalog = None
+
+        try:
+            self.poi_layer = POIMemoryLayer()
+            self.node_layer = RoadNodeMemoryLayer()
+            self.road_layer = RoadDataMemoryLayer()
+        except Exception:
+            pass
+
+        try:
+            self.path_units = []
+            self._path_unit_sequence = 0
+            self._last_poi_visit = None
+            self._grid_cache = None
+            self.ordered_sequence = []
+        except Exception:
+            pass
+
+        try:
+            self.operation_count = 0
+        except Exception:
+            pass
+
         self.start_location = start_location
         self.boundary = boundary
         self.exploration_mode = exploration_mode
         self.is_initialized = True
+
+        try:
+            if existing_catalog is not None:
+                self._road_nodes_catalog = existing_catalog
+        except Exception:
+            pass
         
         print(f"路径记忆系统初始化完成: 起始位置={start_location}, 模式={exploration_mode}")
 
@@ -229,32 +261,29 @@ class PathMemoryManager:
                 continue
 
         # 再加载磁盘上的路径单元文件（过滤测试数据）
-        try:
-            if os.path.isdir(self.path_units_dir):
-                for fname in os.listdir(self.path_units_dir):
-                    if not fname.endswith(".json"):
-                        continue
-                    # 过滤历史测试文件，避免污染真实探索输出
-                    # 规则：文件名以 path_unit_test_ 开头，或内容包含 session_id 以 test_session 开头，或包含中文“测试POI”
-                    if fname.startswith("path_unit_test_"):
-                        continue
-                    fpath = os.path.join(self.path_units_dir, fname)
-                    with open(fpath, "r", encoding="utf-8") as f:
-                        data = json.load(f)
-                        # 简单校验关键字段
-                        if isinstance(data, dict) and data.get("path_id"):
-                            sid = data.get("session_id") or ""
-                            start_name = data.get("start_poi_name") or ""
-                            end_name = data.get("end_poi_name") or ""
-                            # 内容级过滤：跳过测试会话与测试POI
-                            if isinstance(sid, str) and sid.startswith("test_session"):
-                                continue
-                            # 扩展过滤：凡是名称包含“测试”均跳过（如“测试餐厅”、“测试商店”）
-                            if (isinstance(start_name, str) and ("测试POI" in start_name or "测试" in start_name)) or (isinstance(end_name, str) and ("测试POI" in end_name or "测试" in end_name)):
-                                continue
-                            units.append(data)
-        except Exception as e:
-            print(f"⚠️ 加载磁盘路径单元失败: {e}")
+        # 默认不启用磁盘加载，避免跨区域/跨实验污染；仅在 auto_save=True 时启用
+        if self.auto_save:
+            try:
+                if os.path.isdir(self.path_units_dir):
+                    for fname in os.listdir(self.path_units_dir):
+                        if not fname.endswith(".json"):
+                            continue
+                        if fname.startswith("path_unit_test_"):
+                            continue
+                        fpath = os.path.join(self.path_units_dir, fname)
+                        with open(fpath, "r", encoding="utf-8") as f:
+                            data = json.load(f)
+                            if isinstance(data, dict) and data.get("path_id"):
+                                sid = data.get("session_id") or ""
+                                start_name = data.get("start_poi_name") or ""
+                                end_name = data.get("end_poi_name") or ""
+                                if isinstance(sid, str) and sid.startswith("test_session"):
+                                    continue
+                                if (isinstance(start_name, str) and ("测试POI" in start_name or "测试" in start_name)) or (isinstance(end_name, str) and ("测试POI" in end_name or "测试" in end_name)):
+                                    continue
+                                units.append(data)
+            except Exception as e:
+                print(f"⚠️ 加载磁盘路径单元失败: {e}")
 
         # 按序列排序，保持稳定输出
         try:

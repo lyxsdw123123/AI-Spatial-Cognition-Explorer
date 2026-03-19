@@ -66,7 +66,7 @@ class ModelFactory:
                  raise ValueError("DashScope API Key is missing. Please configure DASHSCOPE_API_KEY.")
             return ChatTongyi(
                 dashscope_api_key=Config.DASHSCOPE_API_KEY,
-                model_name="qwen-max-latest", # or qwen-max
+                model_name="qwen-plus-2025-12-01",
                 **common_kwargs
             )
             

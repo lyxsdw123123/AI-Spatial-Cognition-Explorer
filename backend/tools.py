@@ -12,6 +12,9 @@ class ExploreDirectionInput(BaseModel):
     direction: float = Field(..., description="The direction to explore (0-360 degrees)")
     reason: str = Field(..., description="The reason for choosing this direction")
 
+class ReselectStartPointInput(BaseModel):
+    reason: str = Field("", description="Why reselecting the start point")
+
 def get_exploration_tools(agent_instance) -> List[BaseTool]:
     """
     Get the list of tools for the exploration agent.
@@ -47,6 +50,13 @@ def get_exploration_tools(agent_instance) -> List[BaseTool]:
         """
         return agent_instance.tool_check_memory()
 
+    async def reselect_start_point(reason: str = "") -> str:
+        """
+        Reselect a new start point from unexplored POIs and continue exploration.
+        Use this when you cannot find any POIs after many random moves.
+        """
+        return await agent_instance.tool_reselect_start_point(reason)
+
     return [
         StructuredTool.from_function(
             coroutine=scan_environment,
@@ -62,6 +72,11 @@ def get_exploration_tools(agent_instance) -> List[BaseTool]:
             coroutine=explore_direction,
             name="explore_direction",
             description="Move in a specific direction (0-360). Use this if no interesting POIs are visible."
+        ),
+        StructuredTool.from_function(
+            coroutine=reselect_start_point,
+            name="reselect_start_point",
+            description="Pick a random unexplored POI as a new start point and restart exploration there."
         ),
         StructuredTool.from_function(
             coroutine=check_memory,
