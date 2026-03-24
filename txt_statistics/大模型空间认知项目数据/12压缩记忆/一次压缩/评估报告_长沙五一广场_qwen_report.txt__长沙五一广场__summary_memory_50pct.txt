@@ -1,0 +1,10 @@
+The AI agent began at a starting location in Changsha and systematically visited the nearest unvisited Points of Interest (POIs) by repeatedly scanning the environment and moving to the closest one. It visited six POIs in order:  
+1. **华菱大厦(芙蓉中路)** (276 m),  
+2. **天心阁北门停车场** (441 m),  
+3. **天心华庭** (345 m),  
+4. **永华大厦** (791 m),  
+5. **丽都大厦** (260 m).  
+
+Each move used road-network path planning, and after each arrival, the agent rescanned to update visible POIs and select the next nearest unvisited target. The process is ongoing, with 8 POIs remaining visible after the latest scan.
+The AI agent systematically visited all 7 initially detected POIs in order of proximity, starting from the current location. It began with **芙蓉广场(地铁站)** (226m), then proceeded to **和府大厦** (350m), **华美欧大厦** (525m), **迎宾路口(地铁站)** (298m), **湖南省人民政府机关二院** (175m), **亚大时代大厦** (370m), and finally **嘉熙中心** (1156m). At each stop, it scanned the environment, updated visible POIs, planned an optimal road-network path, and confirmed successful visitation. All 7 POIs are now visited; no unvisited POIs remain.
+The agent attempted to locate points of interest (POIs) by scanning the environment and, finding none, explored two different directions (199° then 90°), relocating each time and re-scanning. After both explorations yielded zero visible POIs and reaching the maximum iteration limit, the agent stopped.

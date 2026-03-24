@@ -508,6 +508,12 @@ def _append_csv_row(csv_path: str, fieldnames: List[str], row: Dict[str, Any]) -
         writer.writerow(row)
 
 
+def _expected_report_path(out_dir: str, region: str, model_provider: str) -> str:
+    report_root = os.path.join(out_dir, "最近报告", "探索策略+最近评估结果报告")
+    report_filename = f"评估报告_{region}_{model_provider}_report.txt.json"
+    return os.path.join(report_root, report_filename)
+
+
 def _wait_evaluation_done(base_url: str, *, timeout_sec: int, stall_sec: int) -> None:
     eval_start_ts = time.time()
     eval_done = False
@@ -680,6 +686,7 @@ def _run_once(
     input_report_dir: str,
     out_dir_first: str,
     out_dir_second: str,
+    run_indices: List[int],
     region: str,
     model_provider: str,
     exploration_mode: str,
@@ -693,7 +700,7 @@ def _run_once(
         print(
             f"[DRY RUN] region={region} model={model_provider} memory={memory_mode} "
             f"strategy={strategy} exploration={exploration_mode} "
-            f"out1={out_dir_first} out2={out_dir_second} input_report_dir={input_report_dir}"
+            f"out1={out_dir_first} out2={out_dir_second} runs={run_indices} input_report_dir={input_report_dir}"
         )
         return
 
@@ -726,7 +733,9 @@ def _run_once(
 
     report_paths: List[str] = []
     summaries: List[Dict[str, Any]] = []
-    for idx, eval_out_dir in enumerate([out_dir_first, out_dir_second], start=1):
+    pairs: Dict[int, str] = {1: out_dir_first, 2: out_dir_second}
+    eval_out_dirs: List[Tuple[int, str]] = [(i, pairs[i]) for i in run_indices if i in pairs]
+    for idx, eval_out_dir in eval_out_dirs:
         _safe_mkdir(eval_out_dir)
         print(f"[{datetime.now().strftime('%H:%M:%S')}] 启动第{idx}次评估...", flush=True)
         print(f"[{datetime.now().strftime('%H:%M:%S')}] 等待评估结束(最长30分钟)...", flush=True)
@@ -786,7 +795,7 @@ def _parse_args(argv: List[str]) -> argparse.Namespace:
     p.add_argument("--base-url", default="http://127.0.0.1:8000")
     p.add_argument("--out-dir", default=default_out)
     p.add_argument("--regions", default=",".join(REGIONS_15))
-    p.add_argument("--models", default=",".join(MODELS_5))
+    p.add_argument("--models", default="")
     p.add_argument("--model", default="deepseek")
     p.add_argument("--memory-mode", default="context")
     p.add_argument("--strategy", default="Direct")
@@ -799,6 +808,10 @@ def _parse_args(argv: List[str]) -> argparse.Namespace:
     p.add_argument("--no-restart-backend-each-region", dest="restart_backend_each_region", action="store_false")
     p.add_argument("--skip-deepseek-done", dest="skip_deepseek_done", action="store_true", default=True)
     p.add_argument("--no-skip-deepseek-done", dest="skip_deepseek_done", action="store_false")
+    p.add_argument("--resume", dest="resume", action="store_true", default=True)
+    p.add_argument("--no-resume", dest="resume", action="store_false")
+    p.add_argument("--resume-partial", dest="resume_partial", action="store_true", default=True)
+    p.add_argument("--no-resume-partial", dest="resume_partial", action="store_false")
     return p.parse_args(argv)
 
 
@@ -810,7 +823,17 @@ def main(argv: List[str]) -> int:
     out_dir_first = os.path.join(out_root_dir, "第一次结果")
     out_dir_second = os.path.join(out_root_dir, "第二次结果")
     regions = [r.strip() for r in str(args.regions).split(",") if r.strip()]
-    models = _parse_csv_list(getattr(args, "models", "")) or [str(args.model)]
+
+    has_models_flag = any(a == "--models" or str(a).startswith("--models=") for a in argv)
+    has_model_flag = any(a == "--model" or str(a).startswith("--model=") for a in argv)
+    if has_models_flag:
+        raw_models = str(getattr(args, "models", "") or "")
+    elif has_model_flag:
+        raw_models = str(getattr(args, "model", "") or "")
+    else:
+        raw_models = ",".join(MODELS_5)
+
+    models = _parse_csv_list(raw_models) if "," in raw_models else ([raw_models] if raw_models.strip() else [])
     models = [_normalize_model_name(m) for m in models if _normalize_model_name(m)]
 
     if not regions:
@@ -845,6 +868,30 @@ def main(argv: List[str]) -> int:
                         print(f"[SKIP] 已完成: model=deepseek region={region}")
                         continue
 
+                    expected_1 = _expected_report_path(out_dir_first, region, model_provider)
+                    expected_2 = _expected_report_path(out_dir_second, region, model_provider)
+                    exists_1 = os.path.exists(expected_1)
+                    exists_2 = os.path.exists(expected_2)
+
+                    run_indices = [1, 2]
+                    if bool(args.resume):
+                        if exists_1 and exists_2:
+                            print(f"[SKIP] 已存在: model={model_provider} region={region}")
+                            continue
+                        if bool(args.resume_partial):
+                            run_indices = []
+                            if not exists_1:
+                                run_indices.append(1)
+                            if not exists_2:
+                                run_indices.append(2)
+                            if not run_indices:
+                                print(f"[SKIP] 已存在: model={model_provider} region={region}")
+                                continue
+                        else:
+                            if exists_1 or exists_2:
+                                print(f"[SKIP] 已存在(部分): model={model_provider} region={region}")
+                                continue
+
                     if not args.dry_run and bool(args.restart_backend_each_region) and local_host and backend:
                         backend.restart()
                         ready = _wait_for_condition(lambda: _ping_server(base_url), timeout_sec=60, interval_sec=1)
@@ -856,6 +903,7 @@ def main(argv: List[str]) -> int:
                         input_report_dir=str(args.input_report_dir),
                         out_dir_first=out_dir_first,
                         out_dir_second=out_dir_second,
+                        run_indices=run_indices,
                         region=region,
                         model_provider=model_provider,
                         exploration_mode=str(args.exploration_mode),

@@ -17,13 +17,20 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
 REGIONS_15 = [
-    
-    
-    
-    
-    
-    
-    
+    "上海外滩",
+    "伦敦大本钟",
+    "北京天安门",
+    "多伦多CN塔",
+    "巴黎埃菲尔铁塔",
+    "广州塔",
+    "旧金山联合广场",
+    "柏林勃兰登堡门",
+    "武汉黄鹤楼",
+    "洛杉矶好莱坞",
+    "纽约时代广场",
+    "维也纳美泉宫",
+    "罗马斗兽场",
+    "芝加哥千禧公园",
     "长沙五一广场"
 ]
 
@@ -39,9 +46,24 @@ def _request_json(
     json_body: Optional[Dict[str, Any]] = None,
     timeout: int = 60,
 ) -> Dict[str, Any]:
-    resp = requests.request(method, url, json=json_body, timeout=timeout)
-    resp.raise_for_status()
-    return resp.json()
+    method_u = str(method or "").upper()
+    max_attempts = 3 if method_u in ("GET", "HEAD", "OPTIONS") else 1
+    last_exc: Optional[BaseException] = None
+    for attempt in range(max_attempts):
+        try:
+            resp = requests.request(method_u, url, json=json_body, timeout=timeout)
+            resp.raise_for_status()
+            return resp.json()
+        except (requests.exceptions.ReadTimeout, requests.exceptions.ConnectionError) as e:
+            last_exc = e
+            if attempt < max_attempts - 1:
+                time.sleep(1 + attempt * 2)
+                continue
+            raise
+        except Exception as e:
+            last_exc = e
+            raise
+    raise RuntimeError(f"请求失败: {url} -> {last_exc}")
 
 
 def _parse_host_port(base_url: str) -> Tuple[str, int]:
@@ -310,15 +332,21 @@ def _start_evaluation(
         raise RuntimeError(f"启动评估失败: {payload}")
 
 
+def _reset_evaluation(base_url: str) -> None:
+    payload = _request_json("POST", f"{base_url}/evaluation/reset", json_body={}, timeout=60)
+    if not payload.get("success"):
+        raise RuntimeError(f"重置评估失败: {payload}")
+
+
 def _get_evaluation_status(base_url: str) -> str:
-    payload = _request_json("GET", f"{base_url}/evaluation/status", timeout=30)
+    payload = _request_json("GET", f"{base_url}/evaluation/status", timeout=60)
     if not payload.get("success"):
         return "unknown"
     return str(payload.get("status") or "unknown")
 
 
 def _get_evaluation_status_payload(base_url: str) -> Dict[str, Any]:
-    payload = _request_json("GET", f"{base_url}/evaluation/status", timeout=30)
+    payload = _request_json("GET", f"{base_url}/evaluation/status", timeout=60)
     return payload if isinstance(payload, dict) else {}
 
 
@@ -330,6 +358,113 @@ def _get_evaluation_result(base_url: str) -> Dict[str, Any]:
     if not isinstance(data, dict):
         raise RuntimeError(f"评估结果格式异常: {type(data)}")
     return data
+
+
+def _run_evaluation_with_reset_and_watchdog(
+    base_url: str,
+    *,
+    questions: List[Dict[str, Any]],
+    model_provider: str,
+    strategy: str,
+    context_text: str,
+    context_mode: str,
+    total_timeout_sec: int = 1800,
+    stall_timeout_sec: int = 180,
+    max_restarts: int = 2,
+) -> None:
+    overall_start = time.time()
+    last_error: Optional[str] = None
+    for attempt in range(max_restarts + 1):
+        elapsed = time.time() - overall_start
+        remaining = total_timeout_sec - elapsed
+        if remaining <= 0:
+            raise RuntimeError(f"评估超时(总超时{total_timeout_sec}s)，最后错误: {last_error}")
+
+        try:
+            print(f"[{datetime.now().strftime('%H:%M:%S')}] 重置评估状态...", flush=True)
+            _reset_evaluation(base_url)
+        except Exception as e:
+            last_error = str(e)
+            print(f"[{datetime.now().strftime('%H:%M:%S')}] 重置评估失败(继续尝试启动): {e}", flush=True)
+
+        print(f"[{datetime.now().strftime('%H:%M:%S')}] 启动评估(attempt={attempt + 1}/{max_restarts + 1})...", flush=True)
+        _start_evaluation(
+            base_url,
+            questions=questions,
+            model_provider=model_provider,
+            strategy=strategy,
+            context_text=context_text,
+            context_mode=context_mode,
+        )
+
+        print(f"[{datetime.now().strftime('%H:%M:%S')}] 等待评估结束(remaining={int(remaining)}s)...", flush=True)
+        attempt_start = time.time()
+        last_eval_fp: Optional[str] = None
+        last_change_ts = time.time()
+        consecutive_status_errors = 0
+        last_status: Optional[str] = None
+        last_progress: Optional[Any] = None
+        last_cq: Optional[Any] = None
+        last_tq: Optional[Any] = None
+        last_error = None
+
+        while time.time() - attempt_start < remaining:
+            try:
+                s_payload = _get_evaluation_status_payload(base_url)
+                consecutive_status_errors = 0
+            except Exception as e:
+                consecutive_status_errors += 1
+                last_error = str(e)
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] 获取评估状态失败(第{consecutive_status_errors}次): {e}", flush=True)
+                if consecutive_status_errors >= 3:
+                    if attempt >= max_restarts:
+                        raise RuntimeError(f"评估状态连续超时/断连，且已达到最大重启次数: {e}")
+                    print(f"[{datetime.now().strftime('%H:%M:%S')}] 评估状态连续失败，准备重启评估...", flush=True)
+                    break
+                time.sleep(5)
+                continue
+            st = s_payload.get("status")
+            prog = s_payload.get("progress")
+            cq = s_payload.get("current_question")
+            tq = s_payload.get("total_questions")
+            err = s_payload.get("error")
+
+            fp = json.dumps(
+                {"status": st, "progress": prog, "current_question": cq, "total_questions": tq, "error": err},
+                ensure_ascii=False,
+                sort_keys=True,
+            )
+
+            changed = (
+                fp != last_eval_fp
+                or st != last_status
+                or prog != last_progress
+                or cq != last_cq
+                or tq != last_tq
+                or err != last_error
+            )
+            if changed:
+                last_eval_fp = fp
+                last_change_ts = time.time()
+                last_status, last_progress, last_cq, last_tq, last_error = st, prog, cq, tq, err
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] 评估状态: status={st} progress={prog} q={cq}/{tq} error={err}", flush=True)
+
+            if st in ("completed", "failed"):
+                if st == "completed":
+                    return
+                if attempt >= max_restarts:
+                    raise RuntimeError(f"评估失败且已达到最大重启次数: error={err}")
+                break
+
+            if time.time() - last_change_ts > stall_timeout_sec:
+                if attempt >= max_restarts:
+                    raise RuntimeError(f"评估疑似卡死(超过{stall_timeout_sec}s无状态变化)，且已达到最大重启次数")
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] 评估疑似卡死(超过{stall_timeout_sec}s无状态变化)，准备重启评估...", flush=True)
+                break
+
+            time.sleep(5)
+
+    raise RuntimeError(f"评估未完成，最后错误: {last_error}")
 
 
 def _write_csv_header(csv_path: str, fieldnames: List[str]) -> None:
@@ -489,44 +624,17 @@ def _run_once(
     print("=" * 60, flush=True)
 
     print(f"[{datetime.now().strftime('%H:%M:%S')}] 启动评估...", flush=True)
-    _start_evaluation(
+    _run_evaluation_with_reset_and_watchdog(
         base_url,
         questions=questions,
         model_provider=model_provider,
         strategy=strategy,
         context_text=ctx_text,
         context_mode=ctx_mode,
+        total_timeout_sec=1800,
+        stall_timeout_sec=180,
+        max_restarts=2,
     )
-
-    print(f"[{datetime.now().strftime('%H:%M:%S')}] 等待评估结束(最长30分钟)...", flush=True)
-    eval_start_ts = time.time()
-    eval_done = False
-    last_eval_fp: Optional[str] = None
-    while time.time() - eval_start_ts < 1800:
-        s_payload = _get_evaluation_status_payload(base_url)
-        st = s_payload.get("status")
-        prog = s_payload.get("progress")
-        cq = s_payload.get("current_question")
-        tq = s_payload.get("total_questions")
-        err = s_payload.get("error")
-        fp = json.dumps(
-            {"status": st, "progress": prog, "current_question": cq, "total_questions": tq, "error": err},
-            ensure_ascii=False,
-            sort_keys=True,
-        )
-        if fp != last_eval_fp:
-            last_eval_fp = fp
-            print(f"[{datetime.now().strftime('%H:%M:%S')}] 评估状态: status={st} progress={prog} q={cq}/{tq} error={err}", flush=True)
-        if st in ("completed", "failed"):
-            eval_done = True
-            break
-        time.sleep(5)
-    if not eval_done:
-        raise RuntimeError(f"评估超时: {region}")
-
-    status = _get_evaluation_status(base_url)
-    if status != "completed":
-        raise RuntimeError(f"评估失败: {region}")
 
     print(f"[{datetime.now().strftime('%H:%M:%S')}] 拉取评估结果...", flush=True)
     result_data = _get_evaluation_result(base_url)
@@ -594,13 +702,13 @@ def _run_once(
 
 
 def _parse_args(argv: List[str]) -> argparse.Namespace:
-    default_out = os.path.join(PROJECT_ROOT, "txt_statistics", "大模型空间认知项目数据", "10不同视野")
+    default_out = os.path.join(PROJECT_ROOT, "txt_statistics", "大模型空间认知项目数据", "10不同视野", "Qwen", "3000")
 
     p = argparse.ArgumentParser()
     p.add_argument("--base-url", default="http://127.0.0.1:8000")
     p.add_argument("--out-dir", default=default_out)
     p.add_argument("--regions", default=",".join(REGIONS_15))
-    p.add_argument("--model", default="deepseek")
+    p.add_argument("--model", default="qwen")
     p.add_argument("--memory-mode", default="context")
     p.add_argument("--strategy", default="Direct")
     p.add_argument("--exploration-mode", default="最近距离探索")

@@ -1,0 +1,261 @@
+{
+  "region": "广州塔",
+  "source_file": "广州塔_claude_report.txt",
+  "evaluation_time": "2026-03-22T14:45:00.806963",
+  "context_text": "POI点单元记录（按时间顺序）：\n1) POI：信德商务大厦\n   - 视野内POI（方向度数；距离米）：\n     • 金德大厦：方向 173°，距离 ≈ 445m\n     • 珠江国际大厦：方向 312°，距离 ≈ 550m\n     • 越秀城市广场南塔：方向 8°，距离 ≈ 578m\n     • 捷登都会：方向 264°，距离 ≈ 586m\n     • 宝升商业大厦：方向 201°，距离 ≈ 604m\n     • 景腾商业大厦：方向 224°，距离 ≈ 691m\n2) POI：景腾商业大厦\n   - 视野内POI（方向度数；距离米）：\n     • 宝升商业大厦：方向 101°，距离 ≈ 260m\n     • 捷登都会：方向 343°，距离 ≈ 463m\n     • 金德大厦：方向 82°，距离 ≈ 513m\n     • 信德商务大厦：方向 44°，距离 ≈ 691m\n3) POI：金德大厦\n   - 视野内POI（方向度数；距离米）：\n     • 宝升商业大厦：方向 245°，距离 ≈ 282m\n     • 信德商务大厦：方向 353°，距离 ≈ 445m\n     • 景腾商业大厦：方向 262°，距离 ≈ 513m\n     • 捷登都会：方向 299°，距离 ≈ 732m\n4) POI：越秀城市广场南塔\n   - 视野内POI（方向度数；距离米）：\n     • 珠江国际大厦：方向 250°，距离 ≈ 499m\n     • 信德商务大厦：方向 188°，距离 ≈ 578m\n5) POI：宝升商业大厦\n   - 视野内POI（方向度数；距离米）：\n     • 景腾商业大厦：方向 281°，距离 ≈ 260m\n     • 金德大厦：方向 65°，距离 ≈ 282m\n     • 信德商务大厦：方向 21°，距离 ≈ 604m\n     • 捷登都会：方向 321°，距离 ≈ 625m\n6) POI：捷登都会\n   - 视野内POI（方向度数；距离米）：\n     • 景腾商业大厦：方向 163°，距离 ≈ 463m\n     • 珠江国际大厦：方向 24°，距离 ≈ 495m\n     • 信德商务大厦：方向 84°，距离 ≈ 586m\n     • 宝升商业大厦：方向 141°，距离 ≈ 625m\n     • 金德大厦：方向 119°，距离 ≈ 732m\n7) POI：珠江国际大厦\n   - 视野内POI（方向度数；距离米）：\n     • 捷登都会：方向 204°，距离 ≈ 495m\n     • 越秀城市广场南塔：方向 70°，距离 ≈ 499m\n     • 信德商务大厦：方向 132°，距离 ≈ 550m\n\n完整行驶路径（仅方向与距离）：\n- 路径1 起点：信德商务大厦\n→ 路径2 景腾商业大厦（方向 224°，距离 ≈ 691m）\n→ 路径3 金德大厦（方向 82°，距离 ≈ 513m）\n→ 路径4 越秀城市广场南塔（方向 1°，距离 ≈ 1017m）\n→ 路径5 宝升商业大厦（方向 195°，距离 ≈ 1175m）\n→ 路径6 捷登都会（方向 321°，距离 ≈ 625m）\n→ 珠江国际大厦（方向 24°，距离 ≈ 495m）\n\n总和：\n已访问POI数量：7\n已访问道路节点数量（只要Name字段的）：0\n总探索距离：160米\n探索时间：0秒\n重新起点次数：6",
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 19,
+      "total_questions": 24,
+      "accuracy": 79.16666666666666,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 6,
+          "total": 8,
+          "percentage": 75.0
+        },
+        "空间距离估算": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        },
+        "邻近关系判断": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        },
+        "POI密度识别": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "路径规划": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Boston Pizza相对于The Rec Room在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文中The Rec Room的POI记录，Boston Pizza相对于The Rec Room的方向是331°（方向 331°，距离 ≈ 463m）。由于331°位于315°-360°范围内，因此Boston Pizza位于The Rec Room的西北方向。这也可以通过Boston Pizza的POI记录得到交叉验证，其中显示The Rec Room相对于Boston Pizza的方向是151°（方向 151°，距离 ≈ 463m），两者互为反向（相差180°），距离一致。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Boston Pizza位于The Rec Room的西北面。"
+        },
+        {
+          "question": "Second Cup相对于Boston Pizza在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "A\n\n根据上下文中POI点单元记录1，从Boston Pizza视角看Second Cup的方向是45°（正北偏东45°），这对应东北方向。可以通过POI点单元记录2中Second Cup视角看Boston Pizza的方向225°（正南偏西45°）进行交叉验证。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Second Cup位于Boston Pizza的东北面。"
+        },
+        {
+          "question": "Aroma Espresso Bar相对于Second Cup在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "从上下文中Second Cup的POI记录可以看到，Aroma Espresso Bar相对于Second Cup的方向是120°（介于90°-180°之间，即东南方向），距离约465米。这个方向可以通过Second Cup的视野内POI记录直接获得。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Aroma Espresso Bar位于Second Cup的东南面。"
+        },
+        {
+          "question": "RBC Royal Bank相对于Aroma Espresso Bar在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "根据上下文，RBC Royal Bank相对于Aroma Espresso Bar的方向度数未直接给出。但我们可以从Aroma Espresso Bar到RBC Royal Bank的反向关系推导：从RBC Royal Bank到Aroma Espresso Bar的方向未给出，但从RBC Royal Bank到其他POI的方向都在32°-94°之间，且根据完整行驶路径可知RBC Royal Bank位于Aroma Espresso Bar的西南方向（从Aroma Espresso Bar到Starbucks再到RBC Royal Bank的路径走向），因此选择西南方向。",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "RBC Royal Bank位于Aroma Espresso Bar的西南面。"
+        },
+        {
+          "question": "The Rec Room相对于Boston Pizza在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "根据POI点记录1，从Boston Pizza视野内可见The Rec Room，方向151°（介于90°-180°之间，即东南方向），距离约463米。这是唯一一条直接体现两者相对方位的记录，因此可确定The Rec Room相对于Boston Pizza位于东南方向。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "The Rec Room位于Boston Pizza的东南面。"
+        },
+        {
+          "question": "Boston Pizza相对于Second Cup在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "根据POI记录2，从Second Cup视角看Boston Pizza的方向是225°（正南偏西45°），即Boston Pizza位于Second Cup的西南方向。这与POI记录1中从Boston Pizza视角看Second Cup的方向45°（正北偏东45°）相互对应。",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "Boston Pizza位于Second Cup的西南面。"
+        },
+        {
+          "question": "Second Cup相对于Aroma Espresso Bar在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "C\n\n根据上下文中POI点12) Aroma Espresso Bar的记录：\n• Second Cup：方向 300°，距离 ≈ 465m\n\n300°对应西北方向（270°-360°范围），因此Second Cup相对于Aroma Espresso Bar在西北方向。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Second Cup位于Aroma Espresso Bar的西北面。"
+        },
+        {
+          "question": "Aroma Espresso Bar相对于RBC Royal Bank在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "从上下文中，RBC Royal Bank和Aroma Espresso Bar之间没有直接的方位角记录。但我们可以通过其他POI的记录推导：\n1. Aroma Espresso Bar相对于Starbucks的方向是316°\n2. Starbucks相对于RBC Royal Bank的方向是42°\n3. 因此Aroma Espresso Bar必定位于RBC Royal Bank的西南方向\n\n所以答案是D（西南）。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Aroma Espresso Bar位于RBC Royal Bank的东北面。"
+        },
+        {
+          "question": "The Rec Room到Second Cup的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "根据上下文中POI点单元记录10，The Rec Room可以看到Second Cup，方向为341°，距离约508米。这个距离落在400-800米的范围内，因此选择C选项。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "The Rec Room到Second Cup的直线距离约为508米。"
+        },
+        {
+          "question": "Boston Pizza到Aroma Espresso Bar的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "从上下文中，Boston Pizza记录中没有直接看到Aroma Espresso Bar的距离信息。但我们可以通过Second Cup的记录看到：\n- Second Cup到Boston Pizza距离约77m\n- Second Cup到Aroma Espresso Bar距离约465m\n\n或通过Aroma Espresso Bar的记录看到：\n- Aroma Espresso Bar到Boston Pizza距离约469m\n\n因此Boston Pizza到Aroma Espresso Bar的直线距离约469米，落在400-800米区间内。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Boston Pizza到Aroma Espresso Bar的直线距离约为468米。"
+        },
+        {
+          "question": "Second Cup到RBC Royal Bank的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "从上下文中，我们可以找到：\n1. RBC Royal Bank视野内可以看到Second Cup，方向53°，距离≈767m\n2. Second Cup视野内没有直接看到RBC Royal Bank的记录\n\n基于第1点的数据，可以确定Second Cup到RBC Royal Bank的直线距离约为767米，落在400-800米的范围内。\n\n虽然Second Cup没有直接记录到RBC Royal Bank的视野数据，但由于两点之间的直线距离是相等的，所以可以使用RBC Royal Bank看到Second Cup的距离数据作为判断依据。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Second Cup到RBC Royal Bank的直线距离约为766米。"
+        },
+        {
+          "question": "Aroma Espresso Bar到Scaddabush的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "C\n\n根据上下文中POI点12) Aroma Espresso Bar的记录显示：\n• Scaddabush：方向 318°，距离 ≈ 342m\n\n或从POI点7) Scaddabush的记录也可验证：\n• Aroma Espresso Bar：方向 138°，距离 ≈ 342m\n\n两个POI点的记录相互印证，直线距离约为342米，落在200-400米区间内。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Aroma Espresso Bar到Scaddabush的直线距离约为342米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离The Rec Room最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "C\n\n根据上下文POI点\"The Rec Room\"的记录：\n- Boston Pizza距离463m\n- Second Cup距离508m \n- Aroma Espresso Bar距离315m\n\n对比这三个距离值，Aroma Espresso Bar的315m是最短的，因此它是距离The Rec Room最近的POI。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Aroma Espresso Bar距离The Rec Room最近，约315米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Boston Pizza最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "根据POI点记录1，从Boston Pizza可以看到：\n- Second Cup：距离77m\n- Aroma Espresso Bar：未直接记录距离\n- RBC Royal Bank：未直接记录距离\n\n从其他POI的记录交叉验证：\n- Aroma Espresso Bar到Boston Pizza：469m（POI点记录12）\n- RBC Royal Bank到Boston Pizza：690m（POI点记录14）\n\n因此Second Cup距离Boston Pizza最近，约77米。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Second Cup距离Boston Pizza最近，约77米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Second Cup最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "从上下文中查找Second Cup与各选项之间的直线距离：\n- Second Cup到Aroma Espresso Bar：465m（POI记录2）\n- Second Cup到RBC Royal Bank：767m（POI记录14）\n- Second Cup到Scaddabush：178m（POI记录2）\n\n因此RBC Royal Bank距离Second Cup最远，为767米。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "RBC Royal Bank距离Second Cup最远，约766米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Aroma Espresso Bar最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "A\n\n根据上下文POI点12) Aroma Espresso Bar的记录：\n- Scaddabush距离约342m\n- St. Louis Bar & Grill没有直接距离记录\n\n而RBC Royal Bank与Aroma Espresso Bar之间没有直接的距离记录。\n\n但从路径记录可以看到：\nAroma Espresso Bar → Starbucks(328m) → RBC Royal Bank(1081m)\n这表明RBC Royal Bank与Aroma Espresso Bar的距离最远。\n\n因此RBC Royal Bank是距离Aroma Espresso Bar最远的POI。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "RBC Royal Bank距离Aroma Espresso Bar最远，约930米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "A\n\n我的解释思路：\n1. 计算每个选项POI视野内的POI数量：\n- Boston Pizza: 8个POI\n- RBC Royal Bank: 8个POI  \n- The Rec Room: 8个POI\n- Aroma Espresso Bar: 8个POI\n\n2. 比较各POI视野内其他POI的平均距离：\n- Boston Pizza: (77+153+196+232+239+307+426+463)/8 = 261.6m\n- RBC Royal Bank: (312+453+626+654+658+690+750+767)/8 = 613.8m\n- The Rec Room: (129+139+315+346+435+463+494+508)/8 = 353.6m\n- Aroma Espresso Bar: (292+315+328+342+354+408+465+469)/8 = 371.6m\n\n3. Boston Pizza视野内POI数量相同但平均距离最短，说明周围POI分布最密集。\n\n因此选择A。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Boston Pizza周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "通过分析每个选项POI的视野范围内POI数量和距离分布：\n\nScaddabush视野内有8个POI，且多数POI距离较近：\n- 最近的3个POI（Starbucks 171m、Second Cup 178m、Jack Astor's 194m）都在200m以内\n- 其余POI（Boston Pizza 232m、Starbucks 306m等）也大多在400m以内\n\n相比之下：\n- RBC Royal Bank视野内有8个POI，但最近的POI (St. Louis Bar & Grill)也在312m外，其他都在450m以上\n- The Rec Room视野内有8个POI，但分布较分散，最近的POI (Swiss Chalet)在129m\n- Aroma Espresso Bar视野内有8个POI，但最近的POI (Wild Wing)在292m外\n\n因此Scaddabush周围POI密度最高，既有较多POI数量，又都较为集中。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Scaddabush周围的POI密度最高，500米范围内有6个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "通过比较每个选项POI的视野内POI数量：\n- RBC Royal Bank: 8个POI\n- The Rec Room: 8个POI\n- Aroma Espresso Bar: 8个POI\n- St. Louis Bar & Grill: 8个POI\n\n虽然POI数量相同，但考虑到RBC Royal Bank视野内的POI距离普遍较远：\n- 最近的POI (St. Louis Bar & Grill) 也在312m外\n- 其他POI距离分布在453m-767m之间\n- 没有300m以内的密集POI\n\n相比之下：\n- The Rec Room有3个POI在150m以内\n- Aroma Espresso Bar有4个POI在350m以内\n- St. Louis Bar & Grill有4个POI在400m以内\n\n因此RBC Royal Bank周围的POI密度最低。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "RBC Royal Bank周围的POI密度最低，500米范围内只有2个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "通过比较每个选项POI的视野内POI数量：\n- The Rec Room: 视野内有8个POI\n- RBC Royal Bank: 视野内有8个POI\n- Aroma Espresso Bar: 视野内有8个POI\n- St. Louis Bar & Grill: 视野内有8个POI\n\n虽然POI数量相同，但考虑到距离分布：\n- RBC Royal Bank的最近POI (St. Louis Bar & Grill)距离312m，其他POI都在450m以上\n- 其他选项都有多个300m以内的近距POI\n\n因此RBC Royal Bank周围POI分布最稀疏，密度最低。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "The Rec Room周围的POI密度最低，500米范围内只有4个其他POI。"
+        },
+        {
+          "question": "从The Rec Room到Boston Pizza，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "依据不足。上下文中虽然有The Rec Room和Boston Pizza的位置信息，但没有给出题目中路径节点之间的完整距离和方向信息，无法准确计算和比较这四条路径的总长度。从已知信息看，The Rec Room和Boston Pizza之间的直线距离约463米（从POI点单元记录10可见），但无法判断哪条具体路径最短。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：The Rec Room -> (bremner and The Rec Room节点) -> (simcoe street and Aroma Espresso Bar节点) -> (simcoe street and front street节点) -> (Scaddabush and front street节点) -> (Boston Pizza and front street节点) -> Boston Pizza，总距离约969米。"
+        },
+        {
+          "question": "从Boston Pizza到Second Cup，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "B\n\n根据上下文，Boston Pizza和Second Cup之间有直接的距离记录：\n- 从Boston Pizza视角看Second Cup：方向45°，距离77m\n- 从Second Cup视角看Boston Pizza：方向225°，距离77m\n\n其他选项都涉及经过多个中间节点，必然产生更长的路径距离。而选项B是直接连接两点的直线距离，显然是最短的。\n\n这符合规则2要求使用直线最短距离而非路径距离。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：Boston Pizza -> Second Cup，总距离约77米。"
+        },
+        {
+          "question": "从Second Cup到Aroma Espresso Bar，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "D\n\n根据上下文，Second Cup到Aroma Espresso Bar的直线距离约465米（从POI点单元记录2可见）。由于题目中给出的路径都是通过多个中间节点，且上下文中没有提供这些节点之间的完整距离信息，因此无法准确计算和比较这些路径的总长度。\n\n在依据不足的情况下，我选择D是因为它的节点数最少，理论上可能构成最短路径，但这只是一个推测。要得出确切答案需要更多关于路径节点之间距离的信息。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "最短路径是：Second Cup -> (Boston Pizza and Starbucks节点) -> (Boston Pizza and front street节点) -> (Scaddabush and front street节点) -> (simcoe street and front street节点) -> (simcoe street and Aroma Espresso Bar节点) -> Aroma Espresso Bar，总距离约808米。"
+        },
+        {
+          "question": "从Aroma Espresso Bar到RBC Royal Bank，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "依据不足。上下文中虽然有Aroma Espresso Bar和RBC Royal Bank的POI记录，但没有给出它们之间的直接方向和距离关系。同时，选项中提到的大多数道路节点在上下文中也未出现具体位置信息。因此无法准确判断哪条路径最短。\n\n根据文本记忆规则第3、4、5条，在缺乏必要信息的情况下，应明确指出依据不足，而不是进行推测。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "最短路径是：Aroma Espresso Bar -> (simcoe street and Aroma Espresso Bar节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (St. Louis Bar and spadina avenue节点) -> (St. Louis Bar and spadina avenue节点) -> (RBC Royal Bank and spadina avenue节点) -> RBC Royal Bank，总距离约1132米。"
+        }
+      ],
+      "completed_at": "2026-03-22T14:44:55.009480"
+    },
+    "context_text": "POI点单元记录（按时间顺序）：\n1) POI：信德商务大厦\n   - 视野内POI（方向度数；距离米）：\n     • 金德大厦：方向 173°，距离 ≈ 445m\n     • 珠江国际大厦：方向 312°，距离 ≈ 550m\n     • 越秀城市广场南塔：方向 8°，距离 ≈ 578m\n     • 捷登都会：方向 264°，距离 ≈ 586m\n     • 宝升商业大厦：方向 201°，距离 ≈ 604m\n     • 景腾商业大厦：方向 224°，距离 ≈ 691m\n2) POI：景腾商业大厦\n   - 视野内POI（方向度数；距离米）：\n     • 宝升商业大厦：方向 101°，距离 ≈ 260m\n     • 捷登都会：方向 343°，距离 ≈ 463m\n     • 金德大厦：方向 82°，距离 ≈ 513m\n     • 信德商务大厦：方向 44°，距离 ≈ 691m\n3) POI：金德大厦\n   - 视野内POI（方向度数；距离米）：\n     • 宝升商业大厦：方向 245°，距离 ≈ 282m\n     • 信德商务大厦：方向 353°，距离 ≈ 445m\n     • 景腾商业大厦：方向 262°，距离 ≈ 513m\n     • 捷登都会：方向 299°，距离 ≈ 732m\n4) POI：越秀城市广场南塔\n   - 视野内POI（方向度数；距离米）：\n     • 珠江国际大厦：方向 250°，距离 ≈ 499m\n     • 信德商务大厦：方向 188°，距离 ≈ 578m\n5) POI：宝升商业大厦\n   - 视野内POI（方向度数；距离米）：\n     • 景腾商业大厦：方向 281°，距离 ≈ 260m\n     • 金德大厦：方向 65°，距离 ≈ 282m\n     • 信德商务大厦：方向 21°，距离 ≈ 604m\n     • 捷登都会：方向 321°，距离 ≈ 625m\n6) POI：捷登都会\n   - 视野内POI（方向度数；距离米）：\n     • 景腾商业大厦：方向 163°，距离 ≈ 463m\n     • 珠江国际大厦：方向 24°，距离 ≈ 495m\n     • 信德商务大厦：方向 84°，距离 ≈ 586m\n     • 宝升商业大厦：方向 141°，距离 ≈ 625m\n     • 金德大厦：方向 119°，距离 ≈ 732m\n7) POI：珠江国际大厦\n   - 视野内POI（方向度数；距离米）：\n     • 捷登都会：方向 204°，距离 ≈ 495m\n     • 越秀城市广场南塔：方向 70°，距离 ≈ 499m\n     • 信德商务大厦：方向 132°，距离 ≈ 550m\n\n完整行驶路径（仅方向与距离）：\n- 路径1 起点：信德商务大厦\n→ 路径2 景腾商业大厦（方向 224°，距离 ≈ 691m）\n→ 路径3 金德大厦（方向 82°，距离 ≈ 513m）\n→ 路径4 越秀城市广场南塔（方向 1°，距离 ≈ 1017m）\n→ 路径5 宝升商业大厦（方向 195°，距离 ≈ 1175m）\n→ 路径6 捷登都会（方向 321°，距离 ≈ 625m）\n→ 珠江国际大厦（方向 24°，距离 ≈ 495m）\n\n总和：\n已访问POI数量：7\n已访问道路节点数量（只要Name字段的）：0\n总探索距离：160米\n探索时间：0秒\n重新起点次数：6",
+    "context_mode": "context"
+  }
+}
