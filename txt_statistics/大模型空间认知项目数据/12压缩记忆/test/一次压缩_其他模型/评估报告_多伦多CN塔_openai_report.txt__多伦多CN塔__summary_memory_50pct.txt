@@ -1,0 +1,16 @@
+The AI sequentially explored nearby points of interest (POIs) starting from `[43.6439, -79.3879]`, using a nearest-unvisited-POI strategy:  
+- **Step 1**: Scanned 15 POIs → moved to **Boston Pizza** (73 m, NW).  
+- **Step 9**: Scanned 14 POIs → moved to **Second Cup** (77 m, NE).  
+- **Step 17**: Scanned 13 POIs → moved to **Starbucks** (139 m, ~301°).  
+- **Step 25**: Scanned 12 POIs → moved to **“259 host …a fine indian restaurant”** (137 m, ~236°).  
+
+Each move used road-network routing (2–3 steps, 72–250 m), successfully visiting 4 distinct POIs — all restaurants or cafés — with decreasing visible POI count likely due to changing vantage point.
+The AI agent sequentially visited nearby POIs by scanning the environment, identifying the nearest unvisited one, and navigating via the road network. Starting from Step 33 with 4 visited POIs, it visited:  
+- **Tim Hortons** (177 m, ~281 m path, 4 steps),  
+- **St. Louis Bar & Grill** (369 m, ~839 m, 7 steps),  
+- **RBC Royal Bank** (312 m, ~485 m, 4 steps),  
+- **The Rec Room** (654 m, ~1114 m, 9 steps),  
+- **Swiss Chalet** (129 m, ~2060 m, 10 steps).  
+
+By Step 65, 8 POIs were visited. The agent consistently prioritized proximity (nearest unvisited POI) and used road-network navigation—paths grew longer as closer options were exhausted.
+The AI agent is systematically exploring nearby points of interest (POIs) using a nearest-unvisited-POI strategy. Starting from the Swiss Chalet, it repeatedly scans its surroundings, identifies visible unvisited POIs, selects the closest one, plans a road-network path, and visits it. So far, it has visited 14 POIs—including Wild Wing, Aroma Espresso Bar, Starbucks (twice), Jack Astor’s, and Scaddabush—each time updating location and count. The latest move brought it to a Starbucks ~171 m away (Step 109). Exploration continues with only unvisited visible POIs considered at each step.

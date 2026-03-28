@@ -1,0 +1,265 @@
+{
+  "region": "维也纳美泉宫",
+  "eval_model": "openai",
+  "strategy": "Direct",
+  "context_mode": "一次压缩",
+  "source_file": "评估报告_维也纳美泉宫_qwen_report.txt__维也纳美泉宫__summary_memory_50pct.txt",
+  "source_path": "D:\\a_project_study\\AI_exploer_aoto_onlybeijing\\AI_exploer_aotoV10\\AI_exploer_aoto\\txt_statistics\\大模型空间认知项目数据\\12压缩记忆\\一次压缩\\评估报告_维也纳美泉宫_qwen_report.txt__维也纳美泉宫__summary_memory_50pct.txt",
+  "evaluation_time": "2026-03-24T20:14:08.490616",
+  "context_text": "The AI agent, starting at [48.2075, 16.3730] in Vienna, sequentially visits the nearest unvisited points of interest (POIs) by scanning the environment and moving stepwise:  \n1. **Hypo-Bank Vorarlberg** (50m, bank) →  \n2. **Cheng Chinese Cuisine** (44m, restaurant) →  \n3. **Restaurant SURA** (43m, restaurant) →  \n4. **Ma Creperie** (44m, restaurant).  \n\nEach move uses road-network path planning (2–5 steps, 61–257m), followed by a new scan to update visible POIs. So far, 4 POIs have been visited; 12 remain unvisited.\nThe agent is navigating a city environment to visit points of interest (POIs). Starting with 11 visible POIs, it sequentially visits the nearest unvisited one using `move_to_poi`, then scans again to update visibility. So far, it has visited:  \n1. **Cafe-Restaurant Ronacher** (211 m),  \n2. **Zur goldenen Krone** (146 m),  \n3. **Cafe Mozart** (267 m),  \n4. **Raiffeisenlandesbank Niederösterreich-Wien** (279 m),  \n5. **aïda** (205 m — current target, next move).  \n\nEach move follows road-network path planning, and the agent updates its surroundings via `scan_environment` after each visit. It has visited 5 POIs (with “Visited POIs count: 7” in the final user input suggesting two prior visits not shown in this log), and continues prioritizing proximity-driven exploration.\nThe AI agent systematically visited 6 POIs—*aïda*, *Alte Feldapotheke*, *Pizza Bizi*, *Zum Rothen Krebs*, *Castelletto*, and *Kaffee Alt Wien*—by repeatedly scanning for visible unvisited POIs and moving to the nearest one. After successfully visiting *Kaffee Alt Wien*, only *Korb (No.4)* remains visible (492m away), but prior attempts to navigate there failed due to a map data error (“not found in known map data”). The agent continues its exploration loop, now targeting *Korb (No.4)* as the sole remaining visible unvisited POI.\nThe agent repeatedly detects only one visible POI—“Korb (No.4) (咖啡厅)”—at varying distances and directions, but every attempt to navigate there fails because the POI is “known to be missing.” Despite multiple repositioning maneuvers (exploring directions 270°, 315°, 0°, 45°) and rescan cycles, no other unvisited POIs appear. After exhausting iterations and a final failed move attempt, the agent halts exploration and initiates evaluation, acknowledging persistent failure to locate Korb (No.4).",
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 11,
+      "total_questions": 24,
+      "accuracy": 45.83333333333333,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 2,
+          "total": 8,
+          "percentage": 25.0
+        },
+        "空间距离估算": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "邻近关系判断": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "POI密度识别": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "路径规划": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Raiffeisenlandesbank Niederösterreich-Wien相对于Hypo-Bank Vorarlberg在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "Raiffeisenlandesbank Niederösterreich-Wien位于Hypo-Bank Vorarlberg的西南面。"
+        },
+        {
+          "question": "Cheng Chinese Cuisine相对于Raiffeisenlandesbank Niederösterreich-Wien在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "依据不足",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Cheng Chinese Cuisine位于Raiffeisenlandesbank Niederösterreich-Wien的东北面。"
+        },
+        {
+          "question": "Restaurant SURA相对于Cheng Chinese Cuisine在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Restaurant SURA位于Cheng Chinese Cuisine的东南面。"
+        },
+        {
+          "question": "aïda相对于Restaurant SURA在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "aïda位于Restaurant SURA的西北面。"
+        },
+        {
+          "question": "Hypo-Bank Vorarlberg相对于Raiffeisenlandesbank Niederösterreich-Wien在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Hypo-Bank Vorarlberg位于Raiffeisenlandesbank Niederösterreich-Wien的东北面。"
+        },
+        {
+          "question": "Raiffeisenlandesbank Niederösterreich-Wien相对于Cheng Chinese Cuisine在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "Raiffeisenlandesbank Niederösterreich-Wien位于Cheng Chinese Cuisine的西南面。"
+        },
+        {
+          "question": "Cheng Chinese Cuisine相对于Restaurant SURA在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "依据不足",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Cheng Chinese Cuisine位于Restaurant SURA的西北面。"
+        },
+        {
+          "question": "Restaurant SURA相对于aïda在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Restaurant SURA位于aïda的东南面。"
+        },
+        {
+          "question": "Hypo-Bank Vorarlberg到Cheng Chinese Cuisine的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Hypo-Bank Vorarlberg到Cheng Chinese Cuisine的直线距离约为43米。"
+        },
+        {
+          "question": "Raiffeisenlandesbank Niederösterreich-Wien到Restaurant SURA的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Raiffeisenlandesbank Niederösterreich-Wien到Restaurant SURA的直线距离约为341米。"
+        },
+        {
+          "question": "Cheng Chinese Cuisine到aïda的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Cheng Chinese Cuisine到aïda的直线距离约为199米。"
+        },
+        {
+          "question": "Restaurant SURA到Kaffee Alt Wien的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Restaurant SURA到Kaffee Alt Wien的直线距离约为254米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Hypo-Bank Vorarlberg最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Cheng Chinese Cuisine距离Hypo-Bank Vorarlberg最近，约43米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Raiffeisenlandesbank Niederösterreich-Wien最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "aïda距离Raiffeisenlandesbank Niederösterreich-Wien最近，约205米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Cheng Chinese Cuisine最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Kaffee Alt Wien距离Cheng Chinese Cuisine最远，约276米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Restaurant SURA最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Alte Feldapotheke距离Restaurant SURA最远，约299米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Ma Creperie周围的POI密度最高，500米范围内有9个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Alte Feldapotheke周围的POI密度最高，500米范围内有9个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Kaffee Alt Wien周围的POI密度最低，500米范围内只有7个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Zur goldenen Krone周围的POI密度最低，500米范围内只有7个其他POI。"
+        },
+        {
+          "question": "从Hypo-Bank Vorarlberg到Raiffeisenlandesbank Niederösterreich-Wien，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "依据不足",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：Hypo-Bank Vorarlberg -> (Hypo-Bank Vorarlberg and aïda节点) -> (strabe and aïda节点) -> (strabe and Weih节点) -> (strabe and Raiffeisenlandesbank节点) -> Raiffeisenlandesbank Niederösterreich-Wien，总距离约407米。"
+        },
+        {
+          "question": "从Raiffeisenlandesbank Niederösterreich-Wien到Cheng Chinese Cuisine，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "依据不足",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "最短路径是：Raiffeisenlandesbank Niederösterreich-Wien -> (strabe and Raiffeisenlandesbank节点) -> (strabe and Weih节点) -> (strabe and aïda节点) -> (Hypo-Bank Vorarlberg and aïda节点) -> (Hypo-Bank Vorarlberg and aïda节点) -> (Cheng Chinese Cuisine节点) -> Cheng Chinese Cuisine，总距离约539米。"
+        },
+        {
+          "question": "从Cheng Chinese Cuisine到Restaurant SURA，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：Cheng Chinese Cuisine -> Restaurant SURA，总距离约42米。"
+        },
+        {
+          "question": "从Restaurant SURA到aïda，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "依据不足",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：Restaurant SURA -> (Restaurant SURA节点) -> (Cheng Chinese Cuisine节点) -> (Hypo-Bank Vorarlberg and aïda节点) -> (Hypo-Bank Vorarlberg and aïda节点) -> (strabe and aïda节点) -> aïda，总距离约381米。"
+        }
+      ],
+      "completed_at": "2026-03-24T20:14:04.238740"
+    },
+    "context_text": "The AI agent, starting at [48.2075, 16.3730] in Vienna, sequentially visits the nearest unvisited points of interest (POIs) by scanning the environment and moving stepwise:  \n1. **Hypo-Bank Vorarlberg** (50m, bank) →  \n2. **Cheng Chinese Cuisine** (44m, restaurant) →  \n3. **Restaurant SURA** (43m, restaurant) →  \n4. **Ma Creperie** (44m, restaurant).  \n\nEach move uses road-network path planning (2–5 steps, 61–257m), followed by a new scan to update visible POIs. So far, 4 POIs have been visited; 12 remain unvisited.\nThe agent is navigating a city environment to visit points of interest (POIs). Starting with 11 visible POIs, it sequentially visits the nearest unvisited one using `move_to_poi`, then scans again to update visibility. So far, it has visited:  \n1. **Cafe-Restaurant Ronacher** (211 m),  \n2. **Zur goldenen Krone** (146 m),  \n3. **Cafe Mozart** (267 m),  \n4. **Raiffeisenlandesbank Niederösterreich-Wien** (279 m),  \n5. **aïda** (205 m — current target, next move).  \n\nEach move follows road-network path planning, and the agent updates its surroundings via `scan_environment` after each visit. It has visited 5 POIs (with “Visited POIs count: 7” in the final user input suggesting two prior visits not shown in this log), and continues prioritizing proximity-driven exploration.\nThe AI agent systematically visited 6 POIs—*aïda*, *Alte Feldapotheke*, *Pizza Bizi*, *Zum Rothen Krebs*, *Castelletto*, and *Kaffee Alt Wien*—by repeatedly scanning for visible unvisited POIs and moving to the nearest one. After successfully visiting *Kaffee Alt Wien*, only *Korb (No.4)* remains visible (492m away), but prior attempts to navigate there failed due to a map data error (“not found in known map data”). The agent continues its exploration loop, now targeting *Korb (No.4)* as the sole remaining visible unvisited POI.\nThe agent repeatedly detects only one visible POI—“Korb (No.4) (咖啡厅)”—at varying distances and directions, but every attempt to navigate there fails because the POI is “known to be missing.” Despite multiple repositioning maneuvers (exploring directions 270°, 315°, 0°, 45°) and rescan cycles, no other unvisited POIs appear. After exhausting iterations and a final failed move attempt, the agent halts exploration and initiates evaluation, acknowledging persistent failure to locate Korb (No.4).",
+    "context_mode": "一次压缩"
+  }
+}

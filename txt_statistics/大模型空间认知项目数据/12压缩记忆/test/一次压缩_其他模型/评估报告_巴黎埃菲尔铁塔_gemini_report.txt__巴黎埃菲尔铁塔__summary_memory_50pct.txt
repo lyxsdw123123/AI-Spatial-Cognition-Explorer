@@ -1,0 +1,19 @@
+The AI agent began at a location near Paris (coordinates ~48.86°N, 2.29°E) and sequentially visited the nearest visible point of interest (POI) at each step:  
+1. **Castel Cafe** (338 m → moved 261 m),  
+2. **Yes’N’You** (334 m → moved 434 m),  
+3. **Le Casse Noix** (129 m → moved 129 m),  
+4. **Société Générale** (392 m → moved 683 m).  
+
+At each stop, it scanned the surroundings to identify the closest unvisited POI before navigating. The route prioritized proximity over category, visiting restaurants, a school, and a bank—demonstrating iterative, proximity-driven exploration.
+The agent navigated a sequence of nearby points of interest (POIs) in Paris, starting from an initial location and iteratively:  
+1. Scanning the environment to detect visible POIs,  
+2. Selecting the closest *unvisited* POI (prioritizing proximity),  
+3. Planning and executing a road-network path to it,  
+4. Visiting and re-scanning upon arrival.  
+
+It visited 7 POIs in order:  
+**Collège privé Saint-Louis de Gonzague** (843m) → **L’Ancien Trocadéro** (485m) → **Shang Palace** (401m) → **Pharmacie Galliera** (348m) → **Linette** (782m).  
+
+Each move involved 4-step path planning (~600–1000m), and scanning updated visibility/distance/direction as the agent relocated. The process halted after reaching Linette, having exhausted the iteration limit.
+The agent systematically visited 7 POIs in sequence—Linette, II Sorrentino, 20 Eiffel, Café Le Dôme, Restaurant Doïna, Crédit du Nord, and finally Café de l'Alma—each time scanning the environment and moving to the nearest unvisited POI. After visiting Café de l'Alma, no further POIs were visible, prompting exploratory moves: first north (0°), then east (90°), both yielding zero detectable POIs. The agent is now actively searching beyond the initial visible set due to exhaustion of nearby points of interest.
+The agent explored four directions (90°, 180°, 270°, 315°), scanning the environment after each move—but found **zero visible POIs** each time. After checking memory and confirming it had already visited 15 POIs (path length: 44 points), it attempted a final exploratory move at 45°. Still finding no new POIs, the agent halted due to reaching the maximum iteration limit.

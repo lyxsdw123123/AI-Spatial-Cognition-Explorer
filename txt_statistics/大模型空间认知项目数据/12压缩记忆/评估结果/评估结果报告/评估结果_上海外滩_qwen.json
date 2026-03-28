@@ -1,0 +1,265 @@
+{
+  "region": "上海外滩",
+  "eval_model": "qwen",
+  "strategy": "Direct",
+  "context_mode": "一次压缩",
+  "source_file": "评估报告_上海外滩_qwen_report.txt__上海外滩__summary_memory_50pct.txt",
+  "source_path": "D:\\a_project_study\\AI_exploer_aoto_onlybeijing\\AI_exploer_aotoV10\\AI_exploer_aoto\\txt_statistics\\大模型空间认知项目数据\\12压缩记忆\\一次压缩\\评估报告_上海外滩_qwen_report.txt__上海外滩__summary_memory_50pct.txt",
+  "evaluation_time": "2026-03-24T13:08:30.112750",
+  "context_text": "The AI agent began at a location in Shanghai (31.23°N, 121.48°E) and systematically visited 6 unvisited points of interest (POIs) in order of increasing proximity at each step:  \n1. **金钟广场** (340 m) →  \n2. **普安路延安东路(公交站)** (290 m from current position) →  \n3. **香港广场北座** (324 m) →  \n4. **东淮海国际大厦** (738 m) →  \n5. **露香园** (212 m) →  \n6. **黄浦区机关办公大楼** (618 m).  \n\nEach move involved environment scanning, path planning via road network (totaling 32 steps and ~7.1 km), and successful on-site visitation. All originally detected POIs—except the already-visited ones—were progressively covered, ending with the sixth and final destination.\nThe agent systematically visited three nearby POIs in order of proximity: first **Shanghai Qingliange Building** (395m), then **Huangpu District Library** (175m), and finally **People’s Square Metro Station Exit 1** (246m). After exhausting all visible POIs, it attempted directional exploration—first continuing south-west (244°), then west (270°), and north (0°)—to uncover new points of interest. Exploration eventually succeeded in moving the agent northward to a new coordinate, prompting another environmental scan. The process reflects a goal-directed, iterative navigation strategy prioritizing nearest unvisited POIs, followed by systematic directional search when visibility is exhausted.\nThe agent scanned for visible POIs, found none, and explored east (90°) to a new location—still finding no POIs. After repeating scan-and-explore once, it halted due to reaching the maximum iteration limit.",
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 11,
+      "total_questions": 24,
+      "accuracy": 45.83333333333333,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 3,
+          "total": 8,
+          "percentage": 37.5
+        },
+        "空间距离估算": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "邻近关系判断": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "POI密度识别": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "路径规划": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        }
+      },
+      "answers": [
+        {
+          "question": "东淮海国际大厦相对于金钟广场在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D\n依据不足。上下文中仅给出东淮海国际大厦与金钟广场各自相对于前一位置的距离（金钟广场距起点340 m；东淮海国际大厦距其前一位置即香港广场北座738 m），但未提供任何关于二者之间相对方位角、方向描述（如度数）或坐标间方位关系的直接信息，也未给出各POI的绝对坐标（除起点外），因此无法确定东淮海国际大厦相对于金钟广场的方向。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "东淮海国际大厦位于金钟广场的东北面。"
+        },
+        {
+          "question": "普安路延安东路(公交站)相对于东淮海国际大厦在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D\n依据不足。上下文中仅给出各POI之间的移动顺序及相邻两站间的直线距离（如“普安路延安东路(公交站)”距上一站“金钟广场”290 m，“东淮海国际大厦”距上一站“香港广场北座”738 m），但未提供任何关于“普安路延安东路(公交站)”与“东淮海国际大厦”之间相对方位角、共同参考点下的方向关系或二者坐标差值的信息，也未出现二者直接比较的方向描述（如方位角度、罗盘方向词）。因此无法确定其相对方向。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "普安路延安东路(公交站)位于东淮海国际大厦的西北面。"
+        },
+        {
+          "question": "人民广场地铁站1号口相对于普安路延安东路(公交站)在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D  \n依据不足。上下文中未提供“人民广场地铁站1号口”与“普安路延安东路(公交站)”之间的相对方向或方位角信息，亦未给出二者坐标、共同参照点或可推导的方向关系；仅分别提及：①“普安路延安东路(公交站)”为序列中第2个POI（距第1个POI金钟广场290 m）；②“People’s Square Metro Station Exit 1”为另一独立探索分支中的第3个POI（距前一POI Huangpu District Library 246 m），但该分支起始点、路径及与主序列的空间关系均未说明。无跨分支方位或坐标关联信息，无法判断二者相对方向。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "人民广场地铁站1号口位于普安路延安东路(公交站)的东北面。"
+        },
+        {
+          "question": "露香园相对于人民广场地铁站1号口在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "上下文中未提供露香园与人民广场地铁站1号口之间的相对方向或距离信息。露香园出现在第一段路径序列中（第5个POI，距前一位置212 m），而人民广场地铁站1号口出现在第二段独立探索序列中（“People’s Square Metro Station Exit 1”，距前一位置246 m），但两段序列无共同参照点、无坐标关联、无角度关系描述，亦无共现方位角数据。依据文本记忆规则第3条和第5条，无法建立二者空间关系，故方向判断依据不足。",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "露香园位于人民广场地铁站1号口的东南面。"
+        },
+        {
+          "question": "金钟广场相对于东淮海国际大厦在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D  \n依据上下文，金钟广场与东淮海国际大厦之间无直接的方向角或相对方位描述；二者仅通过路径顺序和各自到前一位置的距离间接关联：金钟广场是第1个POI（从上海起点出发340 m），东淮海国际大厦是第4个POI（从第3个POI香港广场北座出发738 m）。上下文未提供金钟广场与东淮海国际大厦之间的直线方向角、方位关系或共同参考点下的角度比较，也未给出二者坐标或可推导方位的中间角度信息。因此，无法确定其相对方向，依据不足。",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "金钟广场位于东淮海国际大厦的西南面。"
+        },
+        {
+          "question": "东淮海国际大厦相对于普安路延安东路(公交站)在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "上下文仅说明从普安路延安东路(公交站)到东淮海国际大厦的移动路径中，中间经过了香港广场北座（324 m），再前往东淮海国际大厦（738 m），但未提供任何关于东淮海国际大厦相对于普安路延安东路(公交站)的方位角或方向描述；也未给出二者坐标或相对角度信息。所有方向判断必须基于原文明确给出的度数（如244°、270°、0°、90°等）或POI间直接的方向关系，而此处无此类依据。因此，无法确定其方向，依据不足。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "东淮海国际大厦位于普安路延安东路(公交站)的东南面。"
+        },
+        {
+          "question": "普安路延安东路(公交站)相对于人民广场地铁站1号口在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D  \n依据不足。上下文中未提供“普安路延安东路(公交站)”与“人民广场地铁站1号口”之间的相对方向、方位角或距离信息，也未给出二者共同参照的坐标或中间实体关系，无法推导其相对方位。",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "普安路延安东路(公交站)位于人民广场地铁站1号口的西南面。"
+        },
+        {
+          "question": "人民广场地铁站1号口相对于露香园在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D\n依据不足。上下文中未提供人民广场地铁站1号口与露香园之间的相对方向或方位角信息，也未给出二者坐标、距离或共同参照点；仅分别提及“人民广场地铁站 Exit 1”在另一探索序列中（距上海青凉阁大厦395m、黄浦区图书馆175m），以及“露香园”在主序列中（距东淮海国际大厦212m）；两序列无空间关联描述，无法推导其相对方位。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "人民广场地铁站1号口位于露香园的西北面。"
+        },
+        {
+          "question": "金钟广场到普安路延安东路(公交站)的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "上下文明确指出“普安路延安东路(公交站)”距离“当前位置”290 m，而该“当前位置”即上一步所到达的“金钟广场”，因此金钟广场到普安路延安东路(公交站)的直线距离为290 m，属于200–300米区间。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "金钟广场到普安路延安东路(公交站)的直线距离约为290米。"
+        },
+        {
+          "question": "东淮海国际大厦到人民广场地铁站1号口的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "东淮海国际大厦到人民广场地铁站1号口的直线距离约为787米。"
+        },
+        {
+          "question": "普安路延安东路(公交站)到露香园的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "C\n上下文仅给出各POI相对于前一位置的直线距离：普安路延安东路(公交站)到香港广场北座为324 m，香港广场北座到东淮海国际大厦为738 m，东淮海国际大厦到露香园为212 m。但未提供普安路延安东路(公交站)与露香园之间的直接或间接距离关系（如共同参照点坐标、方位角或路径累加依据），也未给出二者坐标或可推算的几何关系；所有距离均为相邻访问步骤间的独立测量值，不可跨步累加（规则2强调“直线距离而非路径距离”，且规则3禁止引入外部常识或假设路径连续性）。因此，无法从给定信息中确定二者直线距离，但选项需选择最合理范围：三段距离之和（324+738+212=1274 m）是路径长度下限，而直线距离必≤该值；又因无共线或角度信息，无法进一步缩小范围。1274 m落入C区间（800–1200米）上限之外，但D区间下限为1200米，1274 m属D；然而，该和为折线路径长，直线距离严格小于它，故可能落入C或D。但上下文完全缺失二者间任何方向或距离描述，依据不足——但题目要求必须选一项，且规则4指出“比较方向或距离必须基于原文度数或距离表述”，而原文未出现二者关联，故无法计算。然而，所有选项均为范围，需基于已有数据合理推断：从普安路延安东路(公交站)到露香园中间隔两个POI（香港广场北座、东淮海国际大厦），其各自距离为324 m和738 m，仅这两段直线距离之和已超800 m（324+738=1062 m），而露香园距东淮海国际大厦仅212 m，故三点构成三角形，普安路延安东路(公交站)到露香园直线距离必大于|738−324|=414 m且小于738+324=1062 m（三角不等式），再结合露香园距东淮海国际大厦212 m，整体最大可能直线距离仍低于1200 m（例如若三点近似共线且露香园在延长线上，则最大约1062+212=1274 m，但此时已非三角形；最小可能接近|1062−212|=850 m）。但上下文未提供方位角，无法验证共线性。因此，唯一可确定的是该距离大于324 m且小于324+738+212=1274 m，故落在C（800–1200）或D（1200–2000）之间；由于1274 m更接近1200 m且无证据支持超过1200 m，保守选C。但规则4强调“必须基于原文度数或距离表述”，而原文无此数据，故严格依据不足——然而题目强制选择，且C是唯一覆盖三角不等式推导出的典型范围（800–1200）的选项。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "普安路延安东路(公交站)到露香园的直线距离约为800米。"
+        },
+        {
+          "question": "人民广场地铁站1号口到上海黄浦区图书馆大楼的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "A",
+          "ai_explanation": "上下文中提到“Shanghai Qingliange Building (395m), then Huangpu District Library (175m), and finally People’s Square Metro Station Exit 1 (246m)”，三者为系统访问的三个POI，按顺序依次访问，且明确给出各段距离为从**当前位置**到下一POI的直线距离。其中，“Huangpu District Library (175m)”指从上海青凉阁大厦到黄浦区图书馆的直线距离为175 m；“People’s Square Metro Station Exit 1 (246m)”指从黄浦区图书馆（即上一位置）到人民广场地铁站1号口的直线距离为246 m。因此，人民广场地铁站1号口与黄浦区图书馆之间的直线距离在上下文中直接给出为246 m，属于200–300米区间；但选项中无200–300米对应C项，而246 m落在C（200–300米）范围内。然而，需严格核对：题干问的是“人民广场地铁站1号口到上海黄浦区图书馆大楼的直线距离”，即反向距离，但直线距离具有对称性，246 m仍适用。故应选C。但选项C是“200-300米”，246 m确属该区间。此前误判为B（100–200米），但246 m > 200，不属B。因此正确答案是C。  \n（注：上下文仅出现“Huangpu District Library”和“People’s Square Metro Station Exit 1”，未出现“上海黄浦区图书馆大楼”这一全称，但依据规则3“仅引用上下文出现的实体”，“Huangpu District Library”即对应“黄浦区图书馆”，而中文语境中“黄浦区图书馆”与“上海黄浦区图书馆大楼”指同一实体，且上下文未提及其他同名POI，故可等同。距离数值唯一且直接：246 m。）  \n\nC",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "人民广场地铁站1号口到上海黄浦区图书馆大楼的直线距离约为245米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离金钟广场最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "普安路延安东路(公交站)距离金钟广场最近，约290米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离东淮海国际大厦最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "C  \n根据上下文，“东淮海国际大厦”后紧接着访问的是“露香园”（212 m），该距离明确标注为从东淮海国际大厦到露香园的直线距离；而“普安路延安东路(公交站)”出现在序列中更早位置，其距离（290 m）是相对于前一个位置（金钟广场）的，非相对于东淮海国际大厦，上下文未提供其与东淮海国际大厦的距离；“人民广场地铁站1号口”出现在另一独立探索序列中，距离为246 m，但该距离是相对于“黄浦区图书馆”（175 m）的前序位置，上下文未给出其与东淮海国际大厦的任何距离或方向信息。因此，唯一有明示距离且直接关联东淮海国际大厦的POI是露香园（212 m），故最近。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "露香园距离东淮海国际大厦最近，约211米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离普安路延安东路(公交站)最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "露香园距离普安路延安东路(公交站)最远，约800米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离人民广场地铁站1号口最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "上下文明确给出“人民广场地铁站1号口”（即“People’s Square Metro Station Exit 1”）与另两个POI的距离：“Shanghai Qingliange Building”（上海市青莲阁大楼）395m、“Huangpu District Library”（上海黄浦区图书馆大楼）175m；而“露香园”仅出现在第一段路径序列中，其距离是相对于前一位置（东淮海国际大厦）的212m，且上下文**未提供露香园与人民广场地铁站1号口之间的任何方向或距离信息**；同理，“上海市青莲阁大楼”和“上海黄浦区图书馆大楼”均与人民广场地铁站1号口在同一组扫描中被依次访问，距离明确（395m、175m），但“露香园”未出现在该组，也无任何跨组距离或方位关联。因此，三者中仅有A（露香园）的距离依据完全缺失，无法比较；但题目要求选出“最远”，必须基于**有依据的距离值**进行比较——B为175m，C为395m，A无依据。依据规则4和5，A因依据不足不能参与距离比较；在有依据的选项中，C（395m）＞ B（175m），故C最远。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "露香园距离人民广场地铁站1号口最远，约939米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "上海市青莲阁大楼周围的POI密度最高，500米范围内有3个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "金钟广场周围的POI密度最高，500米范围内有3个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "露香园周围的POI密度最低，500米范围内只有1个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "黄浦区机关办公大楼周围的POI密度最低，500米范围内只有1个其他POI。"
+        },
+        {
+          "question": "从金钟广场到东淮海国际大厦，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "最短路径是：金钟广场 -> (金钟广场道路与延安高架路的节点) -> (东淮海国际大厦道路与延安高架路的节点) -> 东淮海国际大厦，总距离约464米。"
+        },
+        {
+          "question": "从东淮海国际大厦到普安路延安东路(公交站)，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "最短路径是：东淮海国际大厦 -> (东淮海国际大厦道路与延安高架路的节点) -> (西藏北路与延安高架路的节点) -> (西藏北路铺路与人民大道的节点) -> (普安路延安东路(公交站)与人民大道的节点) -> 普安路延安东路(公交站)，总距离约1022米。"
+        },
+        {
+          "question": "从普安路延安东路(公交站)到人民广场地铁站1号口，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "依据不足",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：普安路延安东路(公交站) -> (普安路延安东路(公交站)与人民大道的节点) -> (西藏北路铺路与人民大道的节点) -> (西藏北路铺路与人民大道的节点) -> 人民广场地铁站1号口，总距离约1187米。"
+        },
+        {
+          "question": "从人民广场地铁站1号口到露香园，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：人民广场地铁站1号口 -> (西藏北路铺路与人民大道的节点) -> (西藏北路铺路与人民大道的节点) -> (西藏北路与延安高架路的节点) -> (露香园道路与西藏北路的节点) -> 露香园，总距离约1196米。"
+        }
+      ],
+      "completed_at": "2026-03-24T13:08:24.686507"
+    },
+    "context_text": "The AI agent began at a location in Shanghai (31.23°N, 121.48°E) and systematically visited 6 unvisited points of interest (POIs) in order of increasing proximity at each step:  \n1. **金钟广场** (340 m) →  \n2. **普安路延安东路(公交站)** (290 m from current position) →  \n3. **香港广场北座** (324 m) →  \n4. **东淮海国际大厦** (738 m) →  \n5. **露香园** (212 m) →  \n6. **黄浦区机关办公大楼** (618 m).  \n\nEach move involved environment scanning, path planning via road network (totaling 32 steps and ~7.1 km), and successful on-site visitation. All originally detected POIs—except the already-visited ones—were progressively covered, ending with the sixth and final destination.\nThe agent systematically visited three nearby POIs in order of proximity: first **Shanghai Qingliange Building** (395m), then **Huangpu District Library** (175m), and finally **People’s Square Metro Station Exit 1** (246m). After exhausting all visible POIs, it attempted directional exploration—first continuing south-west (244°), then west (270°), and north (0°)—to uncover new points of interest. Exploration eventually succeeded in moving the agent northward to a new coordinate, prompting another environmental scan. The process reflects a goal-directed, iterative navigation strategy prioritizing nearest unvisited POIs, followed by systematic directional search when visibility is exhausted.\nThe agent scanned for visible POIs, found none, and explored east (90°) to a new location—still finding no POIs. After repeating scan-and-explore once, it halted due to reaching the maximum iteration limit.",
+    "context_mode": "一次压缩"
+  }
+}

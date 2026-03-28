@@ -1,0 +1,265 @@
+{
+  "region": "纽约时代广场",
+  "eval_model": "deepseek",
+  "strategy": "Direct",
+  "context_mode": "一次压缩",
+  "source_file": "评估报告_纽约时代广场_qwen_report.txt__纽约时代广场__summary_memory_50pct.txt",
+  "source_path": "D:\\a_project_study\\AI_exploer_aoto_onlybeijing\\AI_exploer_aotoV10\\AI_exploer_aoto\\txt_statistics\\大模型空间认知项目数据\\12压缩记忆\\一次压缩\\评估报告_纽约时代广场_qwen_report.txt__纽约时代广场__summary_memory_50pct.txt",
+  "evaluation_time": "2026-03-24T13:32:42.899563",
+  "context_text": "The AI agent began at a location in Manhattan and systematically visited the nearest unvisited points of interest (POIs) in sequence:  \n1. **Junior’s** (93 m, 224°) →  \n2. **Hard Rock Cafe** (115 m, 191°) →  \n3. **Europa Cafe** (83 m, 218°) →  \n4. **Chase bank** (86 m, 190°).  \n\nAfter each visit, it re-scanned the environment to update visible POIs and selected the next closest unvisited one. All moves were executed successfully via road-network paths (2–6 steps, 87–561 m). The agent is now ready for the next step after visiting Chase.\nThe AI agent navigated a sequence of nearby points of interest (POIs) in Manhattan, prioritizing the nearest unvisited one at each step. It visited **Starbucks** twice (first at 113m, then again at 242m—likely a different location), then **Tony’s** (69m), and **The Lambs Club** (125m). After each visit, it re-scanned the environment, updating visible POIs as distance and perspective changed. The process terminated due to max iterations, with 7 POIs visited total. The current nearest unvisited POI is **Chase (bank)** at 197m (153.2°), followed by **Del Frisco’s** (312m) and **The Playwright** (458m).\nThe AI agent systematically visited 7 unvisited POIs—Chase (bank), Del Frisco’s, The Playwright, Public School 212, 5 Napkin Burger, Duane Reade, and finally Chase again—using `move_to_poi` after scanning the environment at each stop. After visiting all initially visible POIs, only Chase remained—but it had already been visited earlier (counting as one of the 14 total visited). Upon returning to Chase, no new POIs were detected. The agent then performed directional exploration (160°) due to zero visible POIs, ending in a new location to continue searching. The process reflects goal-directed navigation, iterative scanning, and fallback exploration when no unvisited POIs are in view.\nThe agent repeatedly scanned its surroundings and found no visible points of interest (POIs). It then consistently explored in the same direction (~160°) across multiple iterations, updating its location each time—though the final location stabilized. After exhausting the maximum allowed iterations without detecting any POIs, the agent halted.",
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 10,
+      "total_questions": 24,
+      "accuracy": 41.66666666666667,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 2,
+          "total": 8,
+          "percentage": 25.0
+        },
+        "空间距离估算": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "邻近关系判断": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "POI密度识别": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "路径规划": {
+          "correct": 4,
+          "total": 4,
+          "percentage": 100.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Hard Rock Cafe相对于Junior's在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Hard Rock Cafe位于Junior's的西南面。"
+        },
+        {
+          "question": "Starbucks相对于Hard Rock Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Starbucks位于Hard Rock Cafe的东南面。"
+        },
+        {
+          "question": "Europa Cafe相对于Starbucks在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Europa Cafe位于Starbucks的西北面。"
+        },
+        {
+          "question": "Chase相对于Europa Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "Chase位于Europa Cafe的西南面。"
+        },
+        {
+          "question": "Junior's相对于Hard Rock Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Junior's位于Hard Rock Cafe的东北面。"
+        },
+        {
+          "question": "Hard Rock Cafe相对于Starbucks在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Hard Rock Cafe位于Starbucks的西北面。"
+        },
+        {
+          "question": "Starbucks相对于Europa Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Starbucks位于Europa Cafe的东南面。"
+        },
+        {
+          "question": "Europa Cafe相对于Chase在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Europa Cafe位于Chase的东北面。"
+        },
+        {
+          "question": "Junior's到Starbucks的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Junior's到Starbucks的直线距离约为284米。"
+        },
+        {
+          "question": "Hard Rock Cafe到Europa Cafe的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Hard Rock Cafe到Europa Cafe的直线距离约为82米。"
+        },
+        {
+          "question": "Starbucks到Chase的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Starbucks到Chase的直线距离约为145米。"
+        },
+        {
+          "question": "Europa Cafe到Chase的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Europa Cafe到Chase的直线距离约为411米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Junior's最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Hard Rock Cafe距离Junior's最近，约114米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Hard Rock Cafe最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Europa Cafe距离Hard Rock Cafe最近，约82米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Starbucks最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Chase距离Starbucks最远，约251米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Europa Cafe最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Public School 212距离Europa Cafe最远，约459米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Europa Cafe周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Hard Rock Cafe周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Duane Reade周围的POI密度最低，500米范围内只有1个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Public School 212周围的POI密度最低，500米范围内只有4个其他POI。"
+        },
+        {
+          "question": "从Junior's到Hard Rock Cafe，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：Junior's -> (Junior's and west 50rd的节点) -> (7th avenue and west 50rd的节点) -> (west 44rd and 7th avenue的节点) -> (Hard Rock Cafe and 7th avenue的节点) -> Hard Rock Cafe，总距离约505米。"
+        },
+        {
+          "question": "从Hard Rock Cafe到Starbucks，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：Hard Rock Cafe -> (Hard Rock Cafe and 7th avenue的节点) -> Starbucks，总距离约195米。"
+        },
+        {
+          "question": "从Starbucks到Europa Cafe，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：Starbucks -> (Hard Rock Cafe and 7th avenue的节点) -> (Europa Cafe and 7th avenue的节点) -> Europa Cafe，总距离约220米。"
+        },
+        {
+          "question": "从Europa Cafe到Chase，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：Europa Cafe -> Chase，总距离约85米。"
+        }
+      ],
+      "completed_at": "2026-03-24T13:32:38.455600"
+    },
+    "context_text": "The AI agent began at a location in Manhattan and systematically visited the nearest unvisited points of interest (POIs) in sequence:  \n1. **Junior’s** (93 m, 224°) →  \n2. **Hard Rock Cafe** (115 m, 191°) →  \n3. **Europa Cafe** (83 m, 218°) →  \n4. **Chase bank** (86 m, 190°).  \n\nAfter each visit, it re-scanned the environment to update visible POIs and selected the next closest unvisited one. All moves were executed successfully via road-network paths (2–6 steps, 87–561 m). The agent is now ready for the next step after visiting Chase.\nThe AI agent navigated a sequence of nearby points of interest (POIs) in Manhattan, prioritizing the nearest unvisited one at each step. It visited **Starbucks** twice (first at 113m, then again at 242m—likely a different location), then **Tony’s** (69m), and **The Lambs Club** (125m). After each visit, it re-scanned the environment, updating visible POIs as distance and perspective changed. The process terminated due to max iterations, with 7 POIs visited total. The current nearest unvisited POI is **Chase (bank)** at 197m (153.2°), followed by **Del Frisco’s** (312m) and **The Playwright** (458m).\nThe AI agent systematically visited 7 unvisited POIs—Chase (bank), Del Frisco’s, The Playwright, Public School 212, 5 Napkin Burger, Duane Reade, and finally Chase again—using `move_to_poi` after scanning the environment at each stop. After visiting all initially visible POIs, only Chase remained—but it had already been visited earlier (counting as one of the 14 total visited). Upon returning to Chase, no new POIs were detected. The agent then performed directional exploration (160°) due to zero visible POIs, ending in a new location to continue searching. The process reflects goal-directed navigation, iterative scanning, and fallback exploration when no unvisited POIs are in view.\nThe agent repeatedly scanned its surroundings and found no visible points of interest (POIs). It then consistently explored in the same direction (~160°) across multiple iterations, updating its location each time—though the final location stabilized. After exhausting the maximum allowed iterations without detecting any POIs, the agent halted.",
+    "context_mode": "一次压缩"
+  }
+}

@@ -1,0 +1,19 @@
+The AI agent performs a nearest-POI exploration starting from Berlin (52.516°N, 13.379°E). It sequentially visits the closest unvisited point of interest (POI) by scanning the environment and navigating via road network:  
+1. **Starbucks** (16 m, visited instantly),  
+2. **Viale dei Tigli** (108 m straight-line; 482 m via roads),  
+3. **Maman** (111 m; 136 m via roads),  
+4. **Alt-Berliner Wirtshaus** (107 m; path pending).  
+At each step, the POI list updates to exclude visited locations, and distances/directions adjust based on the new position. The strategy prioritizes proximity while respecting real-world navigation constraints.
+The AI agent performed a sequential, nearest-POI exploration starting from its initial location, visiting 7 points of interest (POIs) in order:  
+1. **Alt-Berliner Wirtshaus** (107m → visited),  
+2. **Commerzbank** (250m → visited, 796m path due to road network),  
+3. **Hopfingerbräu im Palais** (192m → visited),  
+4. **Berlin Pavillon am Reichstag** (290m → visited),  
+5. **Bistro im Haus der Bundespressekonferenz** (592m → next move initiated).  
+
+At each stop, it scanned the environment to update visible POIs, prioritizing the closest unvisited one. After 7 visits (including the current move-in-progress), the agent halted due to max iteration limit. All visited POIs are restaurants or cafés/banks near Berlin’s government district (Reichstag area).
+The AI is systematically exploring Berlin’s government/media district using a nearest-POI strategy. So far, it has visited **11 POIs**, including cafés (Bistro im Haus der Bundespressekonferenz, Cinque, flamingo, Café Lebensart) and restaurants, navigating via road networks with step-by-step path planning. Each move follows: scan → identify closest unvisited visible POI → plan & execute route → confirm visit. The current location is near Café Lebensart (POI #11), and the next step requires checking memory to determine which of the 4 newly visible POIs (Café Lebensart, Saravanaa Bhavan, Lindenbräu, eleven) remains unvisited — indicating potential duplication or multiple instances of some venues (e.g., Café Lebensart appears repeatedly at varying distances/directions).
+The AI systematically explored nearby points of interest (POIs) using a nearest-POI strategy:  
+- Visited **Saravanaa Bhavan** (155m, 287m path), then **Lindenbräu** (185m, 1188m path), and **eleven** (457m, 1400m path), bringing the total visited POIs to **15**.  
+- After exhausting visible POIs, it proactively explored east (90°) and then northeast (45°) — moving ~100m each time — but found **no new visible POIs**.  
+- Current location: `[52.50977413, 13.38178476]`. Exploration continues in search of additional POIs.

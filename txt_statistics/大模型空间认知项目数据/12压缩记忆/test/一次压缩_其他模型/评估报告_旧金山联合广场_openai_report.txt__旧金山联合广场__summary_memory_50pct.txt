@@ -1,0 +1,25 @@
+The AI sequentially explored nearby points of interest (POIs) starting from a location in San Francisco. At each step, it scanned the environment, identified visible POIs, selected the nearest *unvisited* one—prioritizing banks and institutions—and navigated there via road-network routing. It successfully visited:  
+1. **Wells Fargo** (~95 m, Step 1),  
+2. **Citibank** (~225 m, Step 9),  
+3. **Union Bank of California** (~202 m, Step 17),  
+4. **Cogswell College** (~383 m, Step 25).  
+Each move was executed with a planned path (161–852 m, 2–6 steps), confirming successful visits. The strategy consistently targeted the closest unvisited POI based on straight-line distance and direction.
+The agent follows a **nearest-unvisited-POI exploration strategy**, scanning surroundings at each step and moving via the road network to the closest unvisited point of interest. Starting from Step 33 with 4 visited POIs, it sequentially visited:
+
+- **Notre Dame Des Victoires Grammar School** (93 m, Step 33)  
+- **Wells Fargo** (247 m, Step 41)  
+- **Walgreens** (89 m, Step 49)  
+- **Akiko's Sushi Bar** (112 m, Step 57)  
+- **Zingari** (67 m, identified as nearest at Step 65 — though move not yet executed in provided text)
+
+Each move was successfully completed, increasing the visited count from 4 to 8. Distances are short (67–247 m), directions cluster around 180°–265° (southwest to west), indicating southward/westward progression through a dense urban area.
+The AI agent systematically explores nearby points of interest (POIs) using a nearest-POI navigation strategy. Starting from an initial location with 9 visited POIs, it repeatedly:  
+1. Scans the environment to identify visible unvisited POIs,  
+2. Selects the closest one,  
+3. Plans and executes a road-network path to reach and visit it.  
+
+Over 7 steps (Steps 73–113), it visits **6 additional POIs** in order of increasing distance:  
+**Zingari** (67 m) → **Biscuits & Blues** (125 m) → **Pinecrest Diner** (62 m) → **Cafe Mason** (55 m) → **John’s Grill Live Jazz** (258 m) → **AMC Loews Metreon 16** (312 m) → **Tú Lan** (634 m).  
+
+Visited POI count rises from **9 to 15**, covering restaurants and a cinema—all successfully reached via short, stepwise road paths (2–9 steps, ~62–1026 m).
+Moved to the nearest unvisited POI, Tú Lan restaurant (~634 m southwest), and successfully visited it via road network (~1.03 km, 9 steps).

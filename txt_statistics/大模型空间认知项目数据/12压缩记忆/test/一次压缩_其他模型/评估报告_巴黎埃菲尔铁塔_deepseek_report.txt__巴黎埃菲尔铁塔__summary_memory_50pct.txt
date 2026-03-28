@@ -1,0 +1,15 @@
+The AI agent begins at a location near the Eiffel Tower (coordinates ~48.86°N, 2.29°E) and follows a rule-based navigation strategy: repeatedly scan the environment and move to the nearest *unvisited* visible point of interest (POI).  
+
+- **Step 1**: Scans → finds 15 POIs; selects **Castel Cafe** (338 m away) as the nearest unvisited POI → moves there (261 m).  
+- **Step 2**: Rescans from Castel Cafe → finds 14 POIs; **Yes’N’You** (school, 334 m) is now closest → moves there (434 m).  
+- **Step 3**: Rescans from Yes’N’You → finds 13 POIs; **Le Casse Noix** (restaurant, 129 m) is now the nearest unvisited POI → prepares to move there.  
+
+The agent prioritizes proximity and visitation status, using road-network path planning for each move.
+The AI agent sequentially visits the nearest unvisited point of interest (POI) from its current location: first **Le Casse Noix** (129m), then **Société Générale** (392m), then **Collège privé Saint-Louis de Gonzague** (843m), and next targets **L’Ancien Trocadéro** (485m)—now the closest unvisited POI from its latest position. At each stop, it scans the environment to update visible POIs and their distances/directions before selecting the next destination.
+The AI agent follows a nearest-unvisited-POI exploration strategy. Starting at an unknown location, it:  
+1. Scans for visible POIs, selects the closest unvisited one (e.g., *L’Ancien Trocadéro*, 485m), navigates there, and marks it visited.  
+2. Repeats: scans from the new location, identifies the next nearest unvisited POI (*Shang Palace*, 401m → *Pharmacie Galliera*, 348m → *Linette*, 782m), and moves accordingly.  
+3. Each move succeeds via road-network path planning; visited count increases (reaching 7).  
+4. The process halts due to max iterations—no explicit goal or termination condition beyond iteration limit.
+The agent systematically visited 15 POIs in sequence, always moving to the nearest unvisited visible point of interest (POI) from its current location—starting at “Linette”, then “II Sorrentino”, “20 Eiffel”, “Café Le Dôme”, “Restaurant Doïna”, “Crédit du Nord”, and finally “Café de l’Alma”. After visiting the last POI, no further visible POIs remained, so the agent—having reached its iteration limit and exhausted visible targets—initiated exploratory movement northward (0°) to continue discovery. Total visited POIs: 15; path length: 36 points.
+The AI agent systematically explored a sparse geographic area, moving in five directions (0°, 90°, 135°, 225°, 315°) and scanning the environment after each move—but found **zero visible POIs** at every location. Despite having previously visited 15 POIs (per memory check) and traversing a 41-point path, no new POIs were detected during this session. The exploration continued methodically—shifting from north to east, southeast, southwest, and finally northwest—in an attempt to cover ground and return toward denser areas. The agent terminated upon reaching the maximum iteration limit with no new POIs discovered.

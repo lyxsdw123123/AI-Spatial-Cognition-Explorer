@@ -1,0 +1,11 @@
+The AI agent began at a location in Toronto and sequentially visited the nearest unvisited points of interest (POIs): first **Boston Pizza** (73m), then **Second Cup** (77m), then a **Starbucks** (139m), and finally **259 host …a fine indian restaurant** (137m). At each stop, it scanned the environment to identify visible POIs and selected the closest unvisited one for the next move—demonstrating a greedy, proximity-based navigation strategy across five locations.
+The agent systematically visited 7 POIs in sequence by scanning the environment, selecting the nearest unvisited POI, and navigating via road network:  
+1. **Tim Hortons** (177 m) →  
+2. **St. Louis Bar & Grill** (369 m) →  
+3. **RBC Royal Bank** (312 m) →  
+4. **The Rec Room** (654 m) →  
+5. **Swiss Chalet** (129 m, from The Rec Room).  
+
+After visiting Swiss Chalet, 7 POIs remain visible—including Scaddabush (494 m), Aroma Espresso Bar (315 m), Wild Wing (139 m), and others—but the agent has not yet selected or moved to the next one. The process halted mid-task (not due to iteration limit this time), with scanning complete at Swiss Chalet and the next move pending.
+The agent systematically visited 6 distinct POIs—Wild Wing, Aroma Espresso Bar, Starbucks (twice), Jack Astor’s, and Scaddabush—by repeatedly scanning for nearby points of interest, selecting the closest unvisited one, planning a road-network path, and moving there. After exhausting all initially visible POIs (culminating in a final visit to Starbucks), no further POIs were detectable. The agent then entered an exploration phase: attempting directional searches at 0°, 90°, and 180°, each followed by a scan—but found zero POIs each time. The process halted due to max iterations, with no new POIs discovered during exploration.
+The agent systematically explored four directions (180°, 270°, 45°, 135°), moving to new GPS coordinates each time and scanning for points of interest (POIs). At every location, no POIs were detected. After exhausting the iteration limit without finding any POIs, the agent terminated.

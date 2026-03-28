@@ -1,0 +1,265 @@
+{
+  "region": "武汉黄鹤楼",
+  "eval_model": "openai",
+  "strategy": "Direct",
+  "context_mode": "一次压缩",
+  "source_file": "评估报告_武汉黄鹤楼_qwen_report.txt__武汉黄鹤楼__summary_memory_50pct.txt",
+  "source_path": "D:\\a_project_study\\AI_exploer_aoto_onlybeijing\\AI_exploer_aotoV10\\AI_exploer_aoto\\txt_statistics\\大模型空间认知项目数据\\12压缩记忆\\一次压缩\\评估报告_武汉黄鹤楼_qwen_report.txt__武汉黄鹤楼__summary_memory_50pct.txt",
+  "evaluation_time": "2026-03-24T17:58:03.788005",
+  "context_text": "The AI agent began at a location near Wuhan’s Hankou Riverfront and systematically visited the nearest unvisited Points of Interest (POIs) in sequence:  \n1. **汉口江滩三阳广场停车点** (197 m, 0.1°),  \n2. **沿江大道三阳路(公交站)** (146 m, 28.25°),  \n3. **天悦外滩金融中心停车场** (218 m, 286.48°).  \n\nAt each stop, it scanned the environment to update its visible POI list (reducing from 20 → 19 → 18), prioritizing proximity and unvisited status. All moves succeeded via road-network pathfinding. The agent is now at 天悦外滩金融中心停车场, ready for the next scan and decision.\nThe AI agent sequentially visited the three nearest unvisited points of interest (POIs):  \n1. **天悦外滩金融中心** (66 m, 10.97°),  \n2. **匠心城-三阳中心B座** (86 m, 272.06°),  \n3. **三阳路中山大道(公交站)** (79 m, 274.24°).  \n\nEach visit was followed by an environment scan to update visible POIs. Distances and directions shifted slightly after each move due to repositioning. After visiting the third POI, 14 unvisited POIs remain—mostly farther away (>140 m), with the closest now being **延庆小区** (143 m) and **包豪斯大厦** (199 m). The agent continues its exploration loop.\nThe AI agent sequentially visited nearby points of interest (POIs) starting from **延庆小区**, then moved to the nearest unvisited visible POIs: **包豪斯大厦** (55 m), **永胜大厦** (70 m), and **延庆里停车场** (64 m). At each location, it scanned the environment to update its list of visible POIs—reducing from 13 to 12 to 11—prioritizing proximity and unvisited status. The agent operated within a road-network navigation framework and stopped due to reaching the maximum iteration limit.\nThe agent systematically visited 5 POIs—**公安宿舍**, **运征大厦**, **柏林公寓**, **沿江大道粤汉码头(公交站)**, and **汉口江滩西北7门停车场**—in order of increasing proximity (95m → 66m → 278m → 152m → 77m), moving via shortest road-network paths (2–5 steps, 65–592m). Each visit was followed by an environmental rescan, reducing the visible unvisited POI count from 10 to 6. The current nearest unvisited POI is **汉口江滩西北7门停车场** (77 m, 91.6°), and the agent is about to move there.\nThe AI agent systematically visited six nearby points of interest (POIs) in sequence—starting with 汉口江滩西北7门停车场 and ending with 知音号码头—each time moving to the nearest unvisited POI identified via environment scanning. After visiting all initially visible POIs, no new ones were detected; two southward exploration attempts (including one at 180°) failed to reveal additional POIs. The agent terminated due to reaching the maximum iteration limit.",
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 7,
+      "total_questions": 24,
+      "accuracy": 29.166666666666668,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 2,
+          "total": 8,
+          "percentage": 25.0
+        },
+        "空间距离估算": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "邻近关系判断": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "POI密度识别": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "路径规划": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        }
+      },
+      "answers": [
+        {
+          "question": "汉口江滩粤汉码头地面停车场相对于两江游览·粤汉旅游码头在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "依据不足。上下文中虽然提到了\"沿江大道粤汉码头(公交站)\"，但并未出现\"汉口江滩粤汉码头地面停车场\"和\"两江游览·粤汉旅游码头\"这两个实体，也没有它们之间的相对方位角度信息。因此无法判断它们之间的相对方向关系。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "汉口江滩粤汉码头地面停车场位于两江游览·粤汉旅游码头的西北面。"
+        },
+        {
+          "question": "汉口江滩西北7门停车场相对于汉口江滩粤汉码头地面停车场在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "依据不足。上下文中虽然提到了\"汉口江滩西北7门停车场\"和\"沿江大道粤汉码头(公交站)\"，但没有提供这两个地点之间的相对方位角度数据。且\"汉口江滩粤汉码头地面停车场\"这个具体地点在上下文中并未出现。因此无法确定它们之间的相对方位关系。\n\n根据要求仅输出：\n\nX\n\n（X表示无法判断，因为缺乏必要信息）",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "汉口江滩西北7门停车场位于汉口江滩粤汉码头地面停车场的东北面。"
+        },
+        {
+          "question": "知音号码头相对于汉口江滩西北7门停车场在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "依据不足。上下文虽然提到了知音号码头和汉口江滩西北7门停车场这两个地点，但没有给出它们之间的具体方位角度或相对位置关系。因此无法确定知音号码头相对于汉口江滩西北7门停车场的具体方向。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "知音号码头位于汉口江滩西北7门停车场的东北面。"
+        },
+        {
+          "question": "天悦外滩金融中心相对于知音号码头在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "依据不足。上下文中虽然提到了\"天悦外滩金融中心\"和\"知音号码头\"这两个地点，但没有直接给出它们之间的相对方位角度数据。虽然知道它们都是被AI探索过的POI，但文本中没有提供它们之间的具体方位关系，因此无法准确判断它们的相对方向。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "天悦外滩金融中心位于知音号码头的西北面。"
+        },
+        {
+          "question": "两江游览·粤汉旅游码头相对于汉口江滩粤汉码头地面停车场在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "依据不足。上下文中未出现\"两江游览·粤汉旅游码头\"和\"汉口江滩粤汉码头地面停车场\"这两个实体之间的相对方位角度或距离信息，因此无法判断它们的相对方向关系。虽然上下文提到了\"沿江大道粤汉码头(公交站)\"，但这是不同的实体，不能用于判断题目所问的两个地点之间的方向关系。",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "两江游览·粤汉旅游码头位于汉口江滩粤汉码头地面停车场的东南面。"
+        },
+        {
+          "question": "汉口江滩粤汉码头地面停车场相对于汉口江滩西北7门停车场在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "依据不足。上下文中虽然提到了\"汉口江滩西北7门停车场\"和\"粤汉码头\"相关地点，但未直接给出\"汉口江滩粤汉码头地面停车场\"与\"汉口江滩西北7门停车场\"之间的相对方位角度数据，因此无法准确判断它们之间的相对方向关系。",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "汉口江滩粤汉码头地面停车场位于汉口江滩西北7门停车场的西南面。"
+        },
+        {
+          "question": "汉口江滩西北7门停车场相对于知音号码头在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "依据不足。上下文中虽然提到了这两个地点，但没有给出它们之间的相对方位角度数据，因此无法准确判断它们的相对方向关系。文本仅提到它们都是被AI agent按顺序访问的POI，但未提供它们之间的具体方位角信息。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "汉口江滩西北7门停车场位于知音号码头的西南面。"
+        },
+        {
+          "question": "知音号码头相对于天悦外滩金融中心在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "依据不足。上下文中虽然提到了知音号码头和天悦外滩金融中心这两个地点，但没有直接给出它们之间的相对方位角度数据。虽然知道知音号码头是最后访问的POI，天悦外滩金融中心是较早访问的POI，但文本中没有提供它们之间的具体方位角关系，因此无法准确判断相对方向。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "知音号码头位于天悦外滩金融中心的东南面。"
+        },
+        {
+          "question": "两江游览·粤汉旅游码头到汉口江滩西北7门停车场的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "上下文中未直接给出\"两江游览·粤汉旅游码头\"这个具体地点名称，也未给出它与\"汉口江滩西北7门停车场\"之间的直接距离和方位关系。虽然文中提到了\"沿江大道粤汉码头(公交站)\"和\"汉口江滩西北7门停车场\"，但这些并不足以准确判断所问两点之间的直线距离。因此需要明确指出\"依据不足\"，无法给出确切答案。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "两江游览·粤汉旅游码头到汉口江滩西北7门停车场的直线距离约为205米。"
+        },
+        {
+          "question": "汉口江滩粤汉码头地面停车场到知音号码头的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "依据不足。上下文中虽然提到了\"知音号码头\"和\"沿江大道粤汉码头(公交站)\"，但未提供这两个地点之间的直线距离数据。同时也未找到\"汉口江滩粤汉码头地面停车场\"这一具体地点的相关信息。因此无法根据给定文本准确判断这两个地点之间的直线距离。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "汉口江滩粤汉码头地面停车场到知音号码头的直线距离约为984米。"
+        },
+        {
+          "question": "汉口江滩西北7门停车场到天悦外滩金融中心的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文，天悦外滩金融中心停车场是第一组探索的第3个POI，之后汉口江滩西北7门停车场在第4组探索中被提到，且其距离当时位置为77米（方向91.6°）。虽然两个POI之间的直接距离没有明确给出，但通过它们各自相对其他POI的距离（都在200米以内）可以推断，它们之间的直线距离应该在0-200米范围内。因此选择A选项最为合理。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "汉口江滩西北7门停车场到天悦外滩金融中心的直线距离约为775米。"
+        },
+        {
+          "question": "知音号码头到运征大厦的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "上下文中没有直接给出知音号码头和运征大厦之间的直线距离。虽然文本提到这两个地点都被访问过，但没有提供它们之间的相对位置关系或直线距离。因此，无法准确判断这两个地点之间的直线距离。需要明确标注\"依据不足\"。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "知音号码头到运征大厦的直线距离约为692米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离两江游览·粤汉旅游码头最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "依据不足。上下文中未提及\"两江游览·粤汉旅游码头\"这个POI，也未出现它与选项中任何POI之间的距离或方位关系。虽然文中提到了\"汉口江滩西北7门停车场\"、\"知音号码头\"等POI，但缺乏它们与目标POI之间的相对位置信息，无法判断哪个最近。\n\n因此无法基于给定上下文做出准确判断。",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "汉口江滩西北7门停车场距离两江游览·粤汉旅游码头最近，约205米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离汉口江滩粤汉码头地面停车场最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "依据不足。上下文中未提供\"汉口江滩粤汉码头地面停车场\"这个POI与选项中任何POI之间的直接距离关系。虽然文中提到了\"沿江大道粤汉码头(公交站)\"和其他一些POI，但这与题目中的\"汉口江滩粤汉码头地面停车场\"不是同一个地点，且缺乏它们之间的距离数据，因此无法确定哪个选项距离最近。\n\n根据要求，仅输出：\n\nX\n\n（注：由于依据不足，无法给出A/B/C中的任何一个选项作为确定答案）",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "汉口江滩西北7门停车场距离汉口江滩粤汉码头地面停车场最近，约155米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离汉口江滩西北7门停车场最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文，我们需要比较这三个POI到汉口江滩西北7门停车场的距离。然而，上下文中并未直接给出这三个POI到汉口江滩西北7门停车场的具体距离。我们只知道：\n1. 运征大厦被提到时是以66m的距离被访问\n2. 天悦外滩金融中心的具体位置信息在文中有提到\n3. 知音号码头被提到是在最后一段，作为最后访问的POI\n\n由于缺乏直接的距离数据比较依据，这个答案存在不确定性。但根据文本描述的访问顺序，知音号码头是在最后被访问的，且是在所有其他POI之后，这暗示它可能是距离最远的。不过这个推断仍然需要标注\"依据不足\"，因为文本中没有给出确切的距离数据。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "知音号码头距离汉口江滩西北7门停车场最远，约833米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离知音号码头最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "依据不足。上下文中虽然提到了知音号码头和这三个POI，但没有给出它们之间的具体距离或相对位置关系。因此无法判断哪个POI与知音号码头的距离最远。\n\n根据要求仅输出：\n\nX\n\n(注：由于依据不足，无法给出A/B/C中的任何一个选项作为确定答案)",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "运征大厦距离知音号码头最远，约692米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "从文本中可以看到，天悦外滩金融中心周围有较多密集的POI：\n1. 天悦外滩金融中心停车场（距离218m）\n2. 天悦外滩金融中心本身\n3. 匠心城-三阳中心B座（距离86m）\n4. 三阳路中山大道公交站（距离79m）\n\n相比之下：\n- 运征大厦周围的具体POI数量和距离在文本中描述不足\n- 知音号码头周围的POI分布情况文本中未提供具体信息\n- 延庆小区周围仅提到了包豪斯大厦（55m）、永胜大厦（70m）和延庆里停车场（64m）\n\n因此，从已知信息来看，天悦外滩金融中心周边的POI密度最高。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "运征大厦周围的POI密度最高，500米范围内有6个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "从文本中可以看到，当AI位于天悦外滩金融中心停车场时，其周围最近的三个POI距离都很近：\n1. 天悦外滩金融中心 (66m)\n2. 匠心城-三阳中心B座 (86m)\n3. 三阳路中山大道(公交站) (79m)\n\n相比之下，其他选项周围的POI密度较低：\n- 延庆小区周围记录的POI有包豪斯大厦(55m)、永胜大厦(70m)、延庆里停车场(64m)，虽然距离也较近，但数量不及天悦外滩金融中心区域\n- 对于沿江大道粤汉码头(公交站)和知音号码头，文本中没有提供其周边POI的具体密度信息，依据不足\n\n因此，基于已知信息，天悦外滩金融中心周边的POI密度最高。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "沿江大道粤汉码头(公交站)周围的POI密度最高，500米范围内有5个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "根据上下文，在知音号码头附近，系统尝试进行南向探索（包括180°方向）都未能发现新的POI，表明该区域POI密度较低。相比之下：\n- 天悦外滩金融中心周围有多个近距离POI：天悦外滩金融中心(66m)、匠心城-三阳中心B座(86m)等\n- 延庆小区附近有包豪斯大厦(55m)、永胜大厦(70m)、延庆里停车场(64m)等\n- 三阳路中山大道(公交站)周边的POI分布情况在文本中描述不足，无法完整判断\n\n因此知音号码头周边POI密度最低。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "知音号码头周围的POI密度最低，500米范围内只有0个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "根据上下文，知音号码头是最后一个被访问的POI，且访问后\"no new ones were detected\"且\"两次南向探索都未发现新POI\"，说明其周边缺乏POI。相比之下，其他选项周边都有多个可见POI：\n- 天悦外滩金融中心周边有天悦外滩金融中心停车场(66m)、匠心城-三阳中心B座(86m)等\n- 延庆小区周边有包豪斯大厦(55m)、永胜大厦(70m)、延庆里停车场(64m)\n- 三阳路中山大道站周边有匠心城-三阳中心B座(相近)等\n\n因此知音号码头周边POI密度最低。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "天悦外滩金融中心周围的POI密度最低，500米范围内只有3个其他POI。"
+        },
+        {
+          "question": "从两江游览·粤汉旅游码头到汉口江滩粤汉码头地面停车场，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "依据不足",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "最短路径是：两江游览·粤汉旅游码头 -> (胜利街与汉口江滩停车场的节点) -> 汉口江滩粤汉码头地面停车场，总距离约230米。"
+        },
+        {
+          "question": "从汉口江滩粤汉码头地面停车场到汉口江滩西北7门停车场，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "依据不足",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：汉口江滩粤汉码头地面停车场 -> (柏林公寓与一元路的节点) -> 汉口江滩西北7门停车场，总距离约213米。"
+        },
+        {
+          "question": "从汉口江滩西北7门停车场到知音号码头，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "最短路径是：汉口江滩西北7门停车场 -> (柏林公寓与一元路的节点) -> (中山大道与建设街的节点) -> (中山大道与三阳路的节点) -> (中山大道与四唯路的节点) -> 知音号码头，总距离约1006米。"
+        },
+        {
+          "question": "从知音号码头到天悦外滩金融中心，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "最短路径是：知音号码头 -> (中山大道与四唯路的节点) -> (中山大道与三阳路的节点) -> (汉口江滩三阳广场停车点与三阳路的节点) -> (汉口江滩三阳广场停车点与三阳路的节点) -> (京汉大路与三阳路节点) -> (天悦外滩金融中心停车场节点) -> (九鼎集团对外停车场节点) -> 天悦外滩金融中心，总距离约823米。"
+        }
+      ],
+      "completed_at": "2026-03-24T17:58:00.727526"
+    },
+    "context_text": "The AI agent began at a location near Wuhan’s Hankou Riverfront and systematically visited the nearest unvisited Points of Interest (POIs) in sequence:  \n1. **汉口江滩三阳广场停车点** (197 m, 0.1°),  \n2. **沿江大道三阳路(公交站)** (146 m, 28.25°),  \n3. **天悦外滩金融中心停车场** (218 m, 286.48°).  \n\nAt each stop, it scanned the environment to update its visible POI list (reducing from 20 → 19 → 18), prioritizing proximity and unvisited status. All moves succeeded via road-network pathfinding. The agent is now at 天悦外滩金融中心停车场, ready for the next scan and decision.\nThe AI agent sequentially visited the three nearest unvisited points of interest (POIs):  \n1. **天悦外滩金融中心** (66 m, 10.97°),  \n2. **匠心城-三阳中心B座** (86 m, 272.06°),  \n3. **三阳路中山大道(公交站)** (79 m, 274.24°).  \n\nEach visit was followed by an environment scan to update visible POIs. Distances and directions shifted slightly after each move due to repositioning. After visiting the third POI, 14 unvisited POIs remain—mostly farther away (>140 m), with the closest now being **延庆小区** (143 m) and **包豪斯大厦** (199 m). The agent continues its exploration loop.\nThe AI agent sequentially visited nearby points of interest (POIs) starting from **延庆小区**, then moved to the nearest unvisited visible POIs: **包豪斯大厦** (55 m), **永胜大厦** (70 m), and **延庆里停车场** (64 m). At each location, it scanned the environment to update its list of visible POIs—reducing from 13 to 12 to 11—prioritizing proximity and unvisited status. The agent operated within a road-network navigation framework and stopped due to reaching the maximum iteration limit.\nThe agent systematically visited 5 POIs—**公安宿舍**, **运征大厦**, **柏林公寓**, **沿江大道粤汉码头(公交站)**, and **汉口江滩西北7门停车场**—in order of increasing proximity (95m → 66m → 278m → 152m → 77m), moving via shortest road-network paths (2–5 steps, 65–592m). Each visit was followed by an environmental rescan, reducing the visible unvisited POI count from 10 to 6. The current nearest unvisited POI is **汉口江滩西北7门停车场** (77 m, 91.6°), and the agent is about to move there.\nThe AI agent systematically visited six nearby points of interest (POIs) in sequence—starting with 汉口江滩西北7门停车场 and ending with 知音号码头—each time moving to the nearest unvisited POI identified via environment scanning. After visiting all initially visible POIs, no new ones were detected; two southward exploration attempts (including one at 180°) failed to reveal additional POIs. The agent terminated due to reaching the maximum iteration limit.",
+    "context_mode": "一次压缩"
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "region": "旧金山联合广场",
+  "eval_model": "openai",
+  "strategy": "Direct",
+  "context_mode": "一次压缩",
+  "source_file": "评估报告_旧金山联合广场_qwen_report.txt__旧金山联合广场__summary_memory_50pct.txt",
+  "source_path": "D:\\a_project_study\\AI_exploer_aoto_onlybeijing\\AI_exploer_aotoV10\\AI_exploer_aoto\\txt_statistics\\大模型空间认知项目数据\\12压缩记忆\\一次压缩\\评估报告_旧金山联合广场_qwen_report.txt__旧金山联合广场__summary_memory_50pct.txt",
+  "evaluation_time": "2026-03-24T17:43:39.319752",
+  "context_text": "The AI agent began at a location in San Francisco and systematically visited the nearest unvisited bank or point of interest (POI) in each step: first **Wells Fargo (95 m)**, then **Citibank (225 m)**, then **Union Bank of California (202 m)**, and finally **Notre Dame Des Victoires Grammar School (408 m)**. After each visit, it rescanned the environment—observing diminishing visibility and increasing distances to remaining POIs—and selected the next closest unvisited POI. The agent successfully navigated and visited 4 distinct locations using road-network path planning.\nThe agent sequentially visited nearby points of interest (POIs) starting from its initial location: first **Cogswell College** (93m), then **Wells Fargo** (340m), **Walgreens** (89m), **Akiko’s Sushi Bar** (112m), and most recently **Zingari** (67m). At each stop, it scanned the environment to update the list of visible unvisited POIs—observing distances and directions—and selected the nearest remaining one for the next move. After visiting Zingari, 7 POIs remain visible, with Zingari now visited (total visited: 5 confirmed in log; user note says “Visited POIs count: 7”, suggesting two prior visits not shown in this excerpt). The agent operates within iteration limits and navigates via road-network paths.\nThe AI agent systematically visited 7 visible POIs in order of proximity—Zingari (67m), Biscuits & Blues (125m), Pinecrest Diner (62m), Cafe Mason (55m), John’s Grill Live Jazz (258m), AMC Loews Metreon 16 (312m), and finally Tú Lan (634m)—using `move_to_poi` and `scan_environment` at each stop. After visiting all initially visible POIs, a final scan revealed *no visible POIs*, prompting the agent to invoke `explore_direction` (north, 0°) to discover new locations—marking the end of the current exploration phase.\nThe AI agent systematically explored eight cardinal and intercardinal directions (0°, 90°, 180°, 270°, 45°, 135°, and implicitly others) from an initial location in San Francisco (~37.78°N, -122.41°W), moving to a new coordinate after each exploration. At each location, it scanned the environment but found **zero visible points of interest (POIs)**. After exhausting the allowed iterations without detecting any POIs, the agent halted due to reaching the maximum iteration limit.",
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 11,
+      "total_questions": 24,
+      "accuracy": 45.83333333333333,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 4,
+          "total": 8,
+          "percentage": 50.0
+        },
+        "空间距离估算": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "邻近关系判断": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "POI密度识别": {
+          "correct": 0,
+          "total": 4,
+          "percentage": 0.0
+        },
+        "路径规划": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Wells Fargo相对于Wells Fargo在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Wells Fargo位于Wells Fargo的东南面。"
+        },
+        {
+          "question": "Walgreens相对于Wells Fargo在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "依据不足",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Walgreens位于Wells Fargo的西北面。"
+        },
+        {
+          "question": "Biscuits & Blues相对于Walgreens在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "Biscuits & Blues位于Walgreens的西南面。"
+        },
+        {
+          "question": "Akiko's Sushi Bar相对于Biscuits & Blues在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Akiko's Sushi Bar位于Biscuits & Blues的东北面。"
+        },
+        {
+          "question": "Wells Fargo相对于Wells Fargo在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Wells Fargo位于Wells Fargo的西北面。"
+        },
+        {
+          "question": "Wells Fargo相对于Walgreens在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Wells Fargo位于Walgreens的东南面。"
+        },
+        {
+          "question": "Walgreens相对于Biscuits & Blues在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "依据不足",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Walgreens位于Biscuits & Blues的东北面。"
+        },
+        {
+          "question": "Biscuits & Blues相对于Akiko's Sushi Bar在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "Biscuits & Blues位于Akiko's Sushi Bar的西南面。"
+        },
+        {
+          "question": "Wells Fargo到Walgreens的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Wells Fargo到Walgreens的直线距离约为89米。"
+        },
+        {
+          "question": "Wells Fargo到Biscuits & Blues的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Wells Fargo到Biscuits & Blues的直线距离约为452米。"
+        },
+        {
+          "question": "Walgreens到Akiko's Sushi Bar的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Walgreens到Akiko's Sushi Bar的直线距离约为112米。"
+        },
+        {
+          "question": "Biscuits & Blues到Notre Dame Des Victoires Grammar School的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Biscuits & Blues到Notre Dame Des Victoires Grammar School的直线距离约为563米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Wells Fargo最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Walgreens距离Wells Fargo最近，约89米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Wells Fargo最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Walgreens距离Wells Fargo最近，约392米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Walgreens最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Notre Dame Des Victoires Grammar School距离Walgreens最远，约334米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Biscuits & Blues最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Cogswell College距离Biscuits & Blues最远，约656米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Walgreens周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Wells Fargo周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "AMC Loews Metreon 16周围的POI密度最低，500米范围内只有1个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Cogswell College周围的POI密度最低，500米范围内只有3个其他POI。"
+        },
+        {
+          "question": "从Wells Fargo到Wells Fargo，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "依据不足",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "最短路径是：Wells Fargo -> (sutter street and Wells Fargo的节点) -> (sutter street and stockton street的节点) -> (post street and stockton street的节点) -> (Wells Fargo and stockton street的节点) -> Wells Fargo，总距离约521米。"
+        },
+        {
+          "question": "从Wells Fargo到Walgreens，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "依据不足",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：Wells Fargo -> (Wells Fargo and stockton street的节点) -> (post street and stockton street的节点) -> (sutter street and stockton street的节点) -> (sutter street and Wells Fargo的节点) -> (sutter street and Wells Fargo的节点) -> Walgreens，总距离约553米。"
+        },
+        {
+          "question": "从Walgreens到Biscuits & Blues，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "依据不足",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "最短路径是：Walgreens -> (post street and Walgreens的节点) -> (post street and Biscuits的节点) -> Biscuits & Blues，总距离约357米。"
+        },
+        {
+          "question": "从Biscuits & Blues到Akiko's Sushi Bar，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：Biscuits & Blues -> (post street and Biscuits的节点) -> (post street and Biscuits的节点) -> Akiko's Sushi Bar，总距离约191米。"
+        }
+      ],
+      "completed_at": "2026-03-24T17:43:34.235467"
+    },
+    "context_text": "The AI agent began at a location in San Francisco and systematically visited the nearest unvisited bank or point of interest (POI) in each step: first **Wells Fargo (95 m)**, then **Citibank (225 m)**, then **Union Bank of California (202 m)**, and finally **Notre Dame Des Victoires Grammar School (408 m)**. After each visit, it rescanned the environment—observing diminishing visibility and increasing distances to remaining POIs—and selected the next closest unvisited POI. The agent successfully navigated and visited 4 distinct locations using road-network path planning.\nThe agent sequentially visited nearby points of interest (POIs) starting from its initial location: first **Cogswell College** (93m), then **Wells Fargo** (340m), **Walgreens** (89m), **Akiko’s Sushi Bar** (112m), and most recently **Zingari** (67m). At each stop, it scanned the environment to update the list of visible unvisited POIs—observing distances and directions—and selected the nearest remaining one for the next move. After visiting Zingari, 7 POIs remain visible, with Zingari now visited (total visited: 5 confirmed in log; user note says “Visited POIs count: 7”, suggesting two prior visits not shown in this excerpt). The agent operates within iteration limits and navigates via road-network paths.\nThe AI agent systematically visited 7 visible POIs in order of proximity—Zingari (67m), Biscuits & Blues (125m), Pinecrest Diner (62m), Cafe Mason (55m), John’s Grill Live Jazz (258m), AMC Loews Metreon 16 (312m), and finally Tú Lan (634m)—using `move_to_poi` and `scan_environment` at each stop. After visiting all initially visible POIs, a final scan revealed *no visible POIs*, prompting the agent to invoke `explore_direction` (north, 0°) to discover new locations—marking the end of the current exploration phase.\nThe AI agent systematically explored eight cardinal and intercardinal directions (0°, 90°, 180°, 270°, 45°, 135°, and implicitly others) from an initial location in San Francisco (~37.78°N, -122.41°W), moving to a new coordinate after each exploration. At each location, it scanned the environment but found **zero visible points of interest (POIs)**. After exhausting the allowed iterations without detecting any POIs, the agent halted due to reaching the maximum iteration limit.",
+    "context_mode": "一次压缩"
+  }
+}

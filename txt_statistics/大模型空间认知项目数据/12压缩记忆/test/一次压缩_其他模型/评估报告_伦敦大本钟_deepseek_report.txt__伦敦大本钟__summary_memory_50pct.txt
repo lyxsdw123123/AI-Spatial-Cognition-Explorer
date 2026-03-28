@@ -1,0 +1,15 @@
+The AI agent begins at a location in London and follows a nearest-unvisited-POI exploration strategy. It first scans the environment, identifies 15 visible POIs, and moves to the closest—**Crussh Bar (117m)**. After visiting it, a new scan reveals 14 POIs; the nearest unvisited is **Quirinale (98m)**, which it visits next. A third scan yields 13 POIs, and the nearest unvisited is now **The Cinnamon Club (182m)**, selected as the next destination. The agent successfully navigates via road-network paths each time.
+The AI agent sequentially visited the nearest unvisited point of interest (POI) from its current location:  
+1. **The Cinnamon Club** (182m → moved, 716m path),  
+2. **Wash House** (85m → moved, 85m path),  
+3. **Ashburnham House** (166m → moved, 193m path),  
+4. **Milne’s House** (74m → moved, 74m path),  
+5. Now identifies **Café Fresco** (176m) as the next nearest unvisited POI from Milne’s House and initiates movement.  
+
+Each step involved scanning the environment, selecting the closest unvisited visible POI, planning a road-network path, and confirming successful visitation.
+The agent is systematically visiting the nearest unvisited point of interest (POI) using a greedy exploration strategy. Starting at Café Fresco (176m), it sequentially visited:  
+→ Caffè Nero (458m) → Zen China (390m) → Aji Zen Canteen (91m) → Shepherds Hall (341m) → Riverside Cafe (409m).  
+
+Each move involved scanning the environment, selecting the closest visible unvisited POI, planning a road-network path, and confirming successful visitation. After 6 visits (total visited: 7), the current location is Riverside Cafe, with remaining visible unvisited POIs: Lloyds Bank (577m), Footstool (633m), and PizzaExpress (734m). The agent stopped due to reaching the maximum iteration limit.
+The agent systematically visited 15 POIs—including Riverside Cafe, PizzaExpress, Footstool, and Lloyds Bank—by navigating via road networks and scanning at each location. After exhausting visible POIs (ending with 0 found), it performed a systematic four-direction exploration (north → east → south → west) to discover new points of interest. It now scans again from the final explored location, continuing its mission to locate and visit unvisited POIs.
+The agent systematically explored the area, visiting 15 POIs over a 51-point path. After scanning at two locations (270° and then 45°), no new POIs were found. With no visible points of interest and having exhausted its iteration limit, the agent stopped exploration.

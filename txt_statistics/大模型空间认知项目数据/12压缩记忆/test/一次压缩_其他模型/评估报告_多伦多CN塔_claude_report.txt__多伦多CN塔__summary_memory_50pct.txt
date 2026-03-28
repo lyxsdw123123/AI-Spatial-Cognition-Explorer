@@ -1,0 +1,16 @@
+The AI performed a nearest-POI exploration starting from [43.6439, −79.3879] in Toronto. It sequentially visited the closest unvisited point of interest (POI) at each step:  
+1. **Boston Pizza** (73 m),  
+2. **Second Cup** (77 m),  
+3. **Starbucks** (139 m),  
+4. **259 host … a fine indian restaurant** (137 m).  
+
+After each visit, it rescanned the environment to update visible POIs (decreasing from 15 to 12), confirming successful movement and continued exploration. All moves used road-network paths (2–3 steps, 72–250 m).
+The agent explored a series of nearby points of interest (POIs), prioritizing the nearest unvisited one at each step. Starting from an initial location, it sequentially visited:  
+- **Tim Hortons** (177 m),  
+- **St. Louis Bar & Grill** (369 m),  
+- **RBC Royal Bank** (312 m),  
+- and **The Rec Room** (654 m),  
+
+updating its position and scanning surroundings after each visit. After 4 moves, it has visited **8 POIs** total. It is now at `[43.640582508, -79.386319265]` and has just scanned the environment again to identify the next nearest unvisited POI — continuing its nearest-POI exploration strategy.
+The AI is systematically exploring nearby points of interest (POIs) using a nearest-unvisited-POI strategy. Starting from an initial location, it scans the environment, identifies visible POIs with distances and directions, selects the closest unvisited one, plans a road-network path, and moves there—updating the visited count each time. So far, it has successfully visited **Swiss Chalet** (129m), **Wild Wing** (137m), **Aroma Espresso Bar** (292m), and **Starbucks** (328m), bringing the total visited POIs to **12**. The current step targets **Jack Astor’s**, the nearest remaining unvisited POI at 651m. All movements follow real-world road routing (not straight-line), resulting in longer path distances (e.g., 2060m for Swiss Chalet, 2963m for Starbucks).
+The AI is autonomously exploring an urban area using a nearest-unvisited-POI strategy. It visited **Jack Astor’s** (3296m, 18 steps), then **Scaddabush** (394m, 5 steps), and **Starbucks** (496m, 5 steps), bringing the total to **15 visited POIs**. After Starbucks, no POIs were visible, so it proactively explored northeast (45°) and then east (90°) to discover new locations—continuing its efficient, goal-directed exploration.

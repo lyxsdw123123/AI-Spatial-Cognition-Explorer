@@ -1,0 +1,22 @@
+The AI performed a step-by-step nearest-POI exploration starting from the initial location. It scanned the environment, identified visible points of interest (POIs), and sequentially visited the closest unvisited POI each time:  
+1. **华菱大厦(芙蓉中路)** (276m, 2 steps, 275m),  
+2. **天心阁北门停车场** (441m, 7 steps, 1630m),  
+3. **天心华庭** (345m, 5 steps, 528m),  
+4. **丽都大厦** (718m, 6 steps, 955m),  
+5. **芙蓉广场(地铁站)** (226m, next move initiated).  
+
+At each stop, it re-scanned to update the visible POI list and distances. Total distance traveled so far: ~3,388m across 25 navigation steps. The strategy prioritizes proximity and incremental environmental awareness.
+The AI agent systematically explores nearby points of interest (POIs) using a nearest-unvisited-POI strategy. Starting from芙蓉广场(地铁站), it sequentially visits:  
+1. **永华大厦** (324m),  
+2. **和府大厦** (571m),  
+3. **华美欧大厦** (525m),  
+4. **迎宾路口(地铁站)** (298m),  
+5. **湖南省人民政府机关二院** (175m).  
+
+Each move involves scanning the environment, selecting the closest unvisited visible POI, planning a road-network path, and confirming successful visitation. After 9 total visits, the agent is now at 湖南省人民政府机关二院 (175m away, direction 185°), ready for the next step.
+The AI agent systematically explored three nearby points of interest (POIs) in sequence:  
+1. **湖南省人民政府机关二院** (residential compound, 486 m, 4 steps), increasing visited POIs from 9 to 10.  
+2. **亚大时代大厦** (commercial office building, 796 m, 5 steps), increasing count to 11.  
+3. **嘉熙中心** (commercial office building, 1508 m, 7 steps), increasing count to 12.  
+
+Each move followed the nearest-unvisited-POI strategy, using road-network path planning. Total distance traveled across the three moves: ~2.8 km. The agent is now at 嘉熙中心 and ready for further exploration.

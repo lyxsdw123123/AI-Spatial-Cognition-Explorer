@@ -1,0 +1,265 @@
+{
+  "region": "长沙五一广场",
+  "eval_model": "deepseek",
+  "strategy": "Direct",
+  "context_mode": "一次压缩",
+  "source_file": "评估报告_长沙五一广场_qwen_report.txt__长沙五一广场__summary_memory_50pct.txt",
+  "source_path": "D:\\a_project_study\\AI_exploer_aoto_onlybeijing\\AI_exploer_aotoV10\\AI_exploer_aoto\\txt_statistics\\大模型空间认知项目数据\\12压缩记忆\\一次压缩\\评估报告_长沙五一广场_qwen_report.txt__长沙五一广场__summary_memory_50pct.txt",
+  "evaluation_time": "2026-03-24T13:43:40.710393",
+  "context_text": "The AI agent began at a starting location in Changsha and systematically visited the nearest unvisited Points of Interest (POIs) by repeatedly scanning the environment and moving to the closest one. It visited six POIs in order:  \n1. **华菱大厦(芙蓉中路)** (276 m),  \n2. **天心阁北门停车场** (441 m),  \n3. **天心华庭** (345 m),  \n4. **永华大厦** (791 m),  \n5. **丽都大厦** (260 m).  \n\nEach move used road-network path planning, and after each arrival, the agent rescanned to update visible POIs and select the next nearest unvisited target. The process is ongoing, with 8 POIs remaining visible after the latest scan.\nThe AI agent systematically visited all 7 initially detected POIs in order of proximity, starting from the current location. It began with **芙蓉广场(地铁站)** (226m), then proceeded to **和府大厦** (350m), **华美欧大厦** (525m), **迎宾路口(地铁站)** (298m), **湖南省人民政府机关二院** (175m), **亚大时代大厦** (370m), and finally **嘉熙中心** (1156m). At each stop, it scanned the environment, updated visible POIs, planned an optimal road-network path, and confirmed successful visitation. All 7 POIs are now visited; no unvisited POIs remain.\nThe agent attempted to locate points of interest (POIs) by scanning the environment and, finding none, explored two different directions (199° then 90°), relocating each time and re-scanning. After both explorations yielded zero visible POIs and reaching the maximum iteration limit, the agent stopped.",
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 10,
+      "total_questions": 24,
+      "accuracy": 41.66666666666667,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 4,
+          "total": 8,
+          "percentage": 50.0
+        },
+        "空间距离估算": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "邻近关系判断": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "POI密度识别": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "路径规划": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        }
+      },
+      "answers": [
+        {
+          "question": "华菱大厦(芙蓉中路)相对于华美欧大厦在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "华菱大厦(芙蓉中路)位于华美欧大厦的西南面。"
+        },
+        {
+          "question": "湖南省人民政府机关二院相对于华菱大厦(芙蓉中路)在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "湖南省人民政府机关二院位于华菱大厦(芙蓉中路)的东北面。"
+        },
+        {
+          "question": "天心华庭相对于湖南省人民政府机关二院在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "天心华庭位于湖南省人民政府机关二院的西南面。"
+        },
+        {
+          "question": "芙蓉广场(地铁站)相对于天心华庭在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "芙蓉广场(地铁站)位于天心华庭的东北面。"
+        },
+        {
+          "question": "华美欧大厦相对于华菱大厦(芙蓉中路)在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "华美欧大厦位于华菱大厦(芙蓉中路)的东北面。"
+        },
+        {
+          "question": "华菱大厦(芙蓉中路)相对于湖南省人民政府机关二院在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "华菱大厦(芙蓉中路)位于湖南省人民政府机关二院的西南面。"
+        },
+        {
+          "question": "湖南省人民政府机关二院相对于天心华庭在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "湖南省人民政府机关二院位于天心华庭的东北面。"
+        },
+        {
+          "question": "天心华庭相对于芙蓉广场(地铁站)在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "天心华庭位于芙蓉广场(地铁站)的西南面。"
+        },
+        {
+          "question": "华美欧大厦到湖南省人民政府机关二院的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "华美欧大厦到湖南省人民政府机关二院的直线距离约为328米。"
+        },
+        {
+          "question": "华菱大厦(芙蓉中路)到天心华庭的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "华菱大厦(芙蓉中路)到天心华庭的直线距离约为752米。"
+        },
+        {
+          "question": "湖南省人民政府机关二院到芙蓉广场(地铁站)的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "湖南省人民政府机关二院到芙蓉广场(地铁站)的直线距离约为755米。"
+        },
+        {
+          "question": "天心华庭到迎宾路口(地铁站)的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "天心华庭到迎宾路口(地铁站)的直线距离约为1408米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离华美欧大厦最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "湖南省人民政府机关二院距离华美欧大厦最近，约328米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离华菱大厦(芙蓉中路)最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "湖南省人民政府机关二院距离华菱大厦(芙蓉中路)最近，约585米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离湖南省人民政府机关二院最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "天心华庭距离湖南省人民政府机关二院最远，约1296米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离天心华庭最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "迎宾路口(地铁站)距离天心华庭最远，约1408米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "芙蓉广场(地铁站)周围的POI密度最高，500米范围内有4个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "华美欧大厦周围的POI密度最高，500米范围内有3个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "华菱大厦(芙蓉中路)周围的POI密度最低，500米范围内只有1个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "天心华庭周围的POI密度最低，500米范围内只有1个其他POI。"
+        },
+        {
+          "question": "从华美欧大厦到华菱大厦(芙蓉中路)，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：华美欧大厦 -> (华美欧大厦与湘江中路的节点) -> (华菱大厦(芙蓉中路)与湘江中路的节点) -> 华菱大厦(芙蓉中路)，总距离约730米。"
+        },
+        {
+          "question": "从华菱大厦(芙蓉中路)到湖南省人民政府机关二院，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "最短路径是：华菱大厦(芙蓉中路) -> (华菱大厦(芙蓉中路)与湘江中路的节点) -> (华美欧大厦与湘江中路的节点) -> (蔡锷中路与湘江中路的节点) -> (湖南省人民政府机关二院与蔡锷中路的节点) -> 湖南省人民政府机关二院，总距离约806米。"
+        },
+        {
+          "question": "从湖南省人民政府机关二院到天心华庭，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "最短路径是：湖南省人民政府机关二院 -> (湖南省人民政府机关二院与蔡锷中路的节点) -> (蔡锷中路与湘江中路的节点) -> (华美欧大厦与湘江中路的节点) -> (华菱大厦(芙蓉中路)与湘江中路的节点) -> (丽都大厦与湘江中路的节点) -> (五一大道与湘江中路的节点) -> (天心阁北门停车场道路与五一大道的节点) -> (天心华庭与五一大道的节点) -> 天心华庭，总距离约1735米。"
+        },
+        {
+          "question": "从天心华庭到芙蓉广场(地铁站)，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：天心华庭 -> (天心华庭与五一大道的节点) -> (天心阁北门停车场道路与五一大道的节点) -> (五一大道与湘江中路的节点) -> (永华大厦与五一大道的节点) -> (芙蓉广场(地铁站)与五一大道的节点) -> 芙蓉广场(地铁站)，总距离约1218米。"
+        }
+      ],
+      "completed_at": "2026-03-24T13:43:36.413072"
+    },
+    "context_text": "The AI agent began at a starting location in Changsha and systematically visited the nearest unvisited Points of Interest (POIs) by repeatedly scanning the environment and moving to the closest one. It visited six POIs in order:  \n1. **华菱大厦(芙蓉中路)** (276 m),  \n2. **天心阁北门停车场** (441 m),  \n3. **天心华庭** (345 m),  \n4. **永华大厦** (791 m),  \n5. **丽都大厦** (260 m).  \n\nEach move used road-network path planning, and after each arrival, the agent rescanned to update visible POIs and select the next nearest unvisited target. The process is ongoing, with 8 POIs remaining visible after the latest scan.\nThe AI agent systematically visited all 7 initially detected POIs in order of proximity, starting from the current location. It began with **芙蓉广场(地铁站)** (226m), then proceeded to **和府大厦** (350m), **华美欧大厦** (525m), **迎宾路口(地铁站)** (298m), **湖南省人民政府机关二院** (175m), **亚大时代大厦** (370m), and finally **嘉熙中心** (1156m). At each stop, it scanned the environment, updated visible POIs, planned an optimal road-network path, and confirmed successful visitation. All 7 POIs are now visited; no unvisited POIs remain.\nThe agent attempted to locate points of interest (POIs) by scanning the environment and, finding none, explored two different directions (199° then 90°), relocating each time and re-scanning. After both explorations yielded zero visible POIs and reaching the maximum iteration limit, the agent stopped.",
+    "context_mode": "一次压缩"
+  }
+}

@@ -1,0 +1,18 @@
+The AI performed a sequential exploration from an initial location near London, scanning surroundings at each step and moving to the nearest unvisited POI (using road-network navigation). Over four steps, it visited:  
+1. **Crussh Bar** (117 m → 187 m travel),  
+2. **Quirinale** (98 m → 116 m),  
+3. **The Cinnamon Club** (182 m → 716 m),  
+4. **Wash House** (85 m → 85 m).  
+
+Each move followed the “nearest unvisited POI” rule, with visibility decreasing slightly (15 → 12 POIs) as location changed. Total visited POIs: **4**, all successfully reached via planned road paths.
+The AI agent sequentially visited the nearest unvisited point of interest (POI) at each step, using road-network navigation:  
+- **Step 33**: Visited *Ashburnham House* (166 m, 3 steps).  
+- **Step 41**: Visited *Milne’s House* (74 m, 2 steps).  
+- **Step 49**: Visited *Café Fresco* (176 m, 3 steps).  
+- **Step 57**: Visited *Caffè Nero* (458 m, 6 steps).  
+- **Step 65**: Selected *Zen China* (390 m, bearing ~80°) as the next nearest unvisited POI and initiated movement.  
+
+Visited POI count increased from 4 to 8; all moves succeeded via planned road paths.
+The AI agent systematically explores nearby points of interest (POIs) using a nearest-unvisited-POI strategy. Starting from Step 73 with 9 visited POIs, it scans the environment at each step, identifies visible unvisited POIs, selects the closest one, plans a road-network path, and executes the move. Over 8 consecutive steps (73 → 113), it successfully visits:  
+**Aji Zen Canteen** (91 m), **Shepherds Hall** (341 m), **Riverside Cafe** (409 m), **PizzaExpress** (354 m), **Footstool** (261 m), and finally **Lloyds Bank** (81 m), increasing the visited count from 9 to 15. All moves succeed; path lengths range from 2–5 steps (~82–678 m), confirming efficient, incremental exploration.
+Visited Lloyds Bank (~81 m away, bearing ~8.5°) as the nearest unvisited POI, traveling ~82 m via roads.

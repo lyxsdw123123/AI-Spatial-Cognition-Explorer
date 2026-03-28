@@ -1,0 +1,25 @@
+The AI agent navigates sequentially from its starting location near the Eiffel Tower, scanning surroundings at each step and visiting the nearest unvisited Point of Interest (POI) via shortest road-path. Over four steps, it visited:  
+1. **Castel Cafe** (~338 m, Step 1),  
+2. **Yes’N’You** (~334 m, Step 9),  
+3. **Le Casse Noix** (~129 m, Step 17),  
+4. **Société Générale** (~392 m, Step 25).  
+
+Each move succeeded—path planning (2–3 steps) and visit were confirmed. POI count decreased as visibility changed with location; all visited POIs were unvisited prior to selection.
+The AI agent sequentially visits nearby points of interest (POIs) using a “nearest unvisited POI” strategy. Starting from near the Eiffel Tower area, it has visited:  
+- Société Générale (bank),  
+- Collège privé Saint-Louis de Gonzague (school, 843 m),  
+- L’Ancien Trocadéro (café, 485 m),  
+- Shang Palace (restaurant, 401 m),  
+- Pharmacie Galliera (pharmacy, 348 m),  
+- and most recently, Linette (restaurant)—the current nearest unvisited POI (782 m), with movement underway.
+
+Each step involves scanning surroundings, selecting the closest unvisited POI, planning a road-network path (typically 4 steps, ~600–1000 m), and confirming successful visitation. Visited POI count is now 8.
+The AI agent systematically explores nearby points of interest (POIs) by scanning the environment, identifying the nearest unvisited POI, and navigating to it via the road network. Starting from Step 73 with 9 visited POIs, it sequentially visits:  
+- **II Sorrentino** (93 m, 2 steps),  
+- **20 Eiffel** (141 m, 3 steps),  
+- **Café Le Dôme** (143 m, 4 steps),  
+- **Restaurant Doïna** (74 m, 2 steps),  
+- **Crédit du Nord** (112 m, 2 steps),  
+- **Café de l’Alma** (251 m, 4 steps).  
+
+By Step 105, all 6 initially visible POIs are visited, bringing the total to **15 visited POIs**, and no further visible unvisited POIs remain at the final location. Navigation consistently follows the “nearest unvisited POI” heuristic and uses efficient, step-based road-network paths.

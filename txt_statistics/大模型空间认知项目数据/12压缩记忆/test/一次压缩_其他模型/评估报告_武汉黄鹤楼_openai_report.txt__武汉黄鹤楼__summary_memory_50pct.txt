@@ -1,0 +1,45 @@
+The AI is systematically exploring nearby points of interest (POIs) from an initial location in Wuhan, following a “closest unvisited POI” strategy. So far, it has:
+
+- **Step 1**: Scanned 20 POIs → moved to and visited **汉口江滩三阳广场停车点** (197m, north).
+- **Step 9**: Scanned 19 remaining POIs → moved to and visited **沿江大道三阳路(公交站)** (146m, ~28°).
+- **Step 17**: Scanned 18 remaining POIs → moved to and visited **天悦外滩金融中心停车场** (218m, ~286°).
+
+All movements used road-network path planning (448m, 575m, and 424m respectively) and succeeded.  
+**Current state (Step 25)**: At new coordinates, 3 POIs visited, and scanning begins again to identify the next closest unvisited POI.
+AI is systematically exploring the area using a “nearest unvisited POI” strategy. So far, it has:  
+- Scanned surroundings across 4 steps, detecting 17 → 16 → 15 → 14 visible POIs (decreasing as location changes).  
+- Visited 6 POIs in order of proximity:  
+  1. **天悦外滩金融中心** (66m)  
+  2. **匠心城-三阳中心B座** (86m)  
+  3. **三阳路中山大道(公交站)** (79m)  
+  4–6. (Prior visits not shown in latest logs, but count confirms 6 total visited.)  
+- Now, at Step 49, the nearest unvisited POI is **延庆小区** (143m, ~183°), and the AI has just invoked movement toward it.
+The AI is systematically exploring nearby points of interest (POIs) using a “closest unvisited POI first” strategy. Starting from an initial location, it repeatedly:  
+1. Scans the environment to detect visible POIs,  
+2. Selects the nearest unvisited POI,  
+3. Plans and executes a road-network-based movement to reach it,  
+4. Confirms successful visitation.  
+
+So far, it has visited **5 POIs in sequence**:  
+- **延庆小区** (256m, Step 57),  
+- **包豪斯大厦** (55m, Step 65),  
+- **永胜大厦** (160m, Step 73),  
+- **公安宿舍** (57m, Step 81),  
+- **运征大厦** (65m, Step 89).  
+
+Visited count increased from 7 to 11; detected POIs per scan decreased from 14 to 10, reflecting progressive proximity to a denser cluster and/or directional narrowing of visibility. The current step (89) begins a new scan — no POI selection or movement has occurred yet.
+The AI systematically explores nearby points of interest (POIs) in Wuhan’s Hankou Riverside area, following a “closest unvisited POI” strategy. Starting from an initial set of 9 visible POIs, it sequentially visits:  
+1. **Yanqingli Parking Lot** (150m),  
+2. **Jiuding Group Public Parking Lot** (205m),  
+3. **Hankou Riverside Parking Lot** (468m),  
+4. **Hankou Riverside Northwest Gate 7 Parking Lot** (140m),  
+5. **Yuehan Wharf Bus Stop** (77m),  
+6. **Hankou Riverside Yuehan Wharf Ground Parking Lot** (136m).  
+
+Each move uses road-network path planning (2–10 steps, 90–764m), confirms successful arrival, and increments the visited count (now 16). Remaining unvisited POIs include *Liangjiang Sightseeing Yuehan Wharf*, *Zhiyin Hao Wharf*, and *Berlin Apartment*.
+Following the “least recently visited POI first” rule, the agent sequentially visited three nearby points of interest from the starting location:  
+1. **Two Rivers Sightseeing · Yuehan Tourism Wharf** (221 m, east-southeast) → visited  
+2. **Berlin Apartment** (411 m, northwest) → visited  
+3. **Zhiyin Ship Wharf** (884 m, northeast) → visited  
+
+All visible POIs in the current area are now visited; scanning will resume for further exploration if needed.

@@ -1,0 +1,25 @@
+The AI agent begins at a location near Beijing’s Tiananmen Square area and follows a nearest-unvisited-POI exploration strategy. It first scans the environment, identifies 21 visible points of interest (POIs), and moves to the closest—**正义路3号院** (33 m). After scanning again from there (20 POIs visible), it moves to the new nearest unvisited POI—**四季回头特色菜馆** (64 m). A third scan reveals 19 visible POIs, and the agent selects **北京东交民巷饭店写字楼** (141 m) as the next target. The process demonstrates iterative environmental scanning and greedy local navigation toward progressively nearest unvisited landmarks.
+The agent sequentially visited the four nearest unvisited POIs in order of increasing proximity from its starting point:  
+1. **Beijing Dongjiaominxiang Hotel Office Building** (141 m → visited),  
+2. **Longheju** (177 m → visited),  
+3. **Zhengyi Road No. 10 Courtyard** (65 m → visited),  
+4. **Zhengyi Road Community Service Station** (63 m → visited).  
+
+After each visit, it scanned the environment to update visible POIs and selected the next closest unvisited one. All moves succeeded via road-network path planning. The process reflects a greedy nearest-unvisited-POI navigation strategy in a dense urban area near Tiananmen/Justice Road.
+The agent navigated sequentially to the nearest unvisited Point of Interest (POI) from its current location. Starting near Tian’anmen, it first visited **前门东大街23号院** (382 m), then **前门(公交站)** (271 m), and next targeted **宝鼎中心** (982 m). At each step, it scanned the environment, identified visible POIs (mostly business-residential buildings, metro/bus stations, and parking facilities), planned a road-network path, moved, and updated its position. After three moves (visiting 3 POIs), it continued scanning and planning—consistent with a greedy nearest-unvisited-POI strategy—before stopping due to iteration limits. Total visited POIs: 7 (including prior steps not shown in detail).
+The AI agent sequentially visits nearby points of interest (POIs) in Beijing, starting from an initial location and using road-network navigation. It repeatedly:  
+1. **Scans** the environment to detect visible POIs,  
+2. **Selects** the nearest unvisited POI (e.g., 宝鼎中心 → 新怡家园 → 长安大厦 → 正义路1号院 → 霞公府),  
+3. **Navigates** via planned road paths (always longer than straight-line distance due to routing constraints), and  
+4. **Updates** its position and visible POI list after each visit.  
+
+So far, it has visited 5 POIs—spanning commercial buildings, residential complexes, and infrastructure—demonstrating iterative, distance-driven exploration with real-time environmental re-scanning.
+The agent systematically explored 8 visible points of interest (POIs) near Tian’anmen East, prioritizing the nearest unvisited POI at each step. Starting from an initial location, it first visited **Wangfujing Joy Shopping Center Underground Parking** (235 m), then sequentially moved to:  
+- **Oriental Plaza W3 Building** (124 m),  
+- **Oriental Plaza W1 Building** (92 m),  
+- **Beijing Oriental Plaza** (127 m),  
+- **Dongfang Jie Underground Parking** (967 m),  
+- and finally **Tian’anmen East Metro Station B Northeast Exit** (97 m).  
+
+Each move was followed by an environmental scan to update visible POIs. The agent visited 6 distinct POIs in this sequence (total visited count is 14 overall, but only these 6 were newly visited in this segment), with distances ranging from 92–967 m and path lengths from 166–1606 m. It stopped upon reaching the nearest remaining unvisited POI (B Northeast Exit), consistent with its greedy nearest-unvisited strategy.
+The AI agent sequentially visited three nearby subway-related POIs—starting at “天安门东地铁站B东北口”, then “天安门东(地铁站)”, and finally “天安门东地铁站D西南口”—using `move_to_poi` and `scan_environment` to navigate and discover targets. After visiting the third POI, it checked memory (revealing 21 total visited POIs and a 71-point path), and halted due to reaching the maximum iteration limit.

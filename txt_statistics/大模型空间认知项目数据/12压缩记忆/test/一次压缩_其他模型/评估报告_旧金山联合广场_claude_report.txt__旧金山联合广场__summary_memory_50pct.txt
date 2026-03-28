@@ -1,0 +1,31 @@
+The AI is systematically exploring San Francisco using a nearest-unvisited-POI strategy. Starting at [37.7869, −122.4061], it scanned surroundings and visited three banks in sequence:  
+1. **Wells Fargo** (95 m → 161 m path, 2 steps),  
+2. **Citibank** (225 m → 366 m path, 4 steps),  
+3. **Union Bank of California** (202 m → 279 m path, 3 steps).  
+
+After each visit, it re-scanned the environment from its new location, updating visible POIs and selecting the closest unvisited one. As of Step 25, it has visited 3 POIs and is preparing to scan again to identify the next nearest unvisited point of interest.
+The AI is systematically exploring nearby points of interest (POIs) using a nearest-unvisited-POI strategy. Starting from an initial location, it has:
+
+- Scanned the environment → identified visible POIs with distances and bearings  
+- Selected and navigated to the closest unvisited POI each time:  
+  1. **Cogswell College** (383 m, Step 33)  
+  2. **Notre Dame Des Victoires Grammar School** (93 m, Step 41)  
+  3. **Wells Fargo** (247 m, Step 49)  
+
+Each move used road-network path planning (e.g., 6 steps/852 m, 2 steps/104 m, 5 steps/382 m), and all visits were confirmed successful.  
+**Current status (Step 49):** 6 POIs visited; now at Wells Fargo; about to scan again to identify the next nearest unvisited POI (likely Walgreens at 335 m, per prior scan).
+The AI is systematically exploring nearby points of interest (POIs) using a nearest-unvisited-POI strategy. Starting from an initial set of 9 visible POIs, it has sequentially visited the closest unvisited one at each step:  
+1. **Walgreens** (89 m → 212 m path),  
+2. **Akiko’s Sushi Bar** (112 m → 217 m),  
+3. **Zingari** (67 m → 67 m),  
+4. **Biscuits & Blues** (125 m — currently en route).  
+
+Each move uses road-network routing, confirms successful visitation, and updates the visited count (now at 9). With all originally listed POIs visited, the next target is the nearest remaining visible option—Biscuits & Blues—marking continued efficient, distance-optimized exploration.
+The AI is systematically exploring nearby points of interest (POIs) using a nearest-unvisited-POI strategy. Starting from Biscuits & Blues (POI #10), it sequentially visited:  
+- **Pinecrest Diner** (62m, 2 steps → POI #11),  
+- **Cafe Mason** (55m, 2 steps → POI #12),  
+- **John’s Grill Live Jazz** (258m straight-line / 447m path, 5 steps → POI #13),  
+- **AMC Loews Metreon 16** (312m straight-line / 491m path, 6 steps → POI #14).  
+
+All moves succeeded via road-network navigation. Total visited POIs: **14**. The AI now prepares to scan again for the next nearest unvisited POI—currently **Tú Lan** (482m away).
+The agent moved to the nearby unvisited restaurant **Tú Lan** (634m away), increasing visited POIs to 15. After scanning and finding **no visible POIs** at the new location, it **explored northeast (45°)** to discover new areas, reaching a new coordinate. Exploration continues in search of additional POIs.

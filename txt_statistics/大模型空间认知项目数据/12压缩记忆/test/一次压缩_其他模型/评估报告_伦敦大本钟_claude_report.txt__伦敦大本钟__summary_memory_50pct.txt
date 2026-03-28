@@ -1,0 +1,28 @@
+The AI agent began at a location near London and executed a nearest-POI exploration strategy:  
+1. Scanned surroundings → found 15 POIs; moved to **Crussh Bar** (117m, 187m path).  
+2. Rescanned → 14 POIs; moved to **Quirinale** (98m, 116m path).  
+3. Rescanned → 13 POIs; moved to **The Cinnamon Club** (182m, 716m path).  
+4. Rescanned → 12 POIs; moved to **Wash House** (85m, 85m path).  
+So far, it has visited 4 POIs (all cafés or restaurants), progressively updating its local map and always selecting the closest unvisited point. The process continues iteratively.
+The agent is autonomously exploring a location using nearest-POI navigation. Starting from an initial position, it repeatedly scans for visible points of interest (POIs), selects the closest unvisited one, plans a road-network path, moves there, and marks it as visited. So far, it has visited **8 POIs**:  
+- Ashburnham House (school, 166m)  
+- Milne’s House (school, 74m)  
+- Café Fresco (café, 176m → 368m path)  
+- Caffè Nero (café, 458m → 824m path)  
+
+Each visit is followed by a new scan; current location is `[51.501447966, -0.124758968]`, with 8 POIs visited. The next step will be to scan again and move to the newly nearest unvisited POI.
+The AI is systematically exploring nearby points of interest (POIs) using a nearest-unvisited-POI strategy. Starting from an initial location, it scans the environment, identifies visible POIs with distances and directions, selects the closest unvisited one, plans a road-network path, and moves there—updating the visited count each time.
+
+So far, it has visited **12 POIs**, progressing through:  
+- **Zen China** (390m → 847m path),  
+- **Aji Zen Canteen** (91m → 447m),  
+- **Shepherds Hall** (341m → 574m),  
+- **Riverside Cafe** (409m → 494m).  
+
+At **Step 75**, from its current location, it detects **3 remaining visible POIs**:  
+- **PizzaExpress** (354m, nearest),  
+- **Lloyds Bank** (377m),  
+- **Footstool** (379m).  
+
+The next move will be to **PizzaExpress**, the new closest unvisited POI.
+The AI autonomously explored nearby points of interest (POIs) using a nearest-unvisited-POI strategy: it first visited **PizzaExpress** (354m), then **Footstool** (261m), and finally **Lloyds Bank** (81m)—each time scanning the environment, planning a road-network path, and confirming successful visits. This sequence increased the total visited POIs from 12 to 15.

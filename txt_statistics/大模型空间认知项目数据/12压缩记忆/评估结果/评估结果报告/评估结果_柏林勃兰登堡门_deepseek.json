@@ -1,0 +1,265 @@
+{
+  "region": "柏林勃兰登堡门",
+  "eval_model": "deepseek",
+  "strategy": "Direct",
+  "context_mode": "一次压缩",
+  "source_file": "评估报告_柏林勃兰登堡门_qwen_report.txt__柏林勃兰登堡门__summary_memory_50pct.txt",
+  "source_path": "D:\\a_project_study\\AI_exploer_aoto_onlybeijing\\AI_exploer_aotoV10\\AI_exploer_aoto\\txt_statistics\\大模型空间认知项目数据\\12压缩记忆\\一次压缩\\评估报告_柏林勃兰登堡门_qwen_report.txt__柏林勃兰登堡门__summary_memory_50pct.txt",
+  "evaluation_time": "2026-03-24T13:24:22.143049",
+  "context_text": "The AI agent began at a location near Berlin’s government district and systematically visited the nearest unvisited Points of Interest (POIs) in sequence:  \n1. **Starbucks** (16m),  \n2. **Viale dei Tigli** (108m),  \n3. **Maman** (111m),  \n4. **Alt-Berliner Wirtshaus** (107m).  \n\nAfter each visit, it re-scanned the environment to update visible POIs and selected the next closest unvisited one. All moves were successfully executed via road-network navigation. The agent has now visited 4 POIs and is preparing to scan again for the next target.\nThe agent systematically explores nearby points of interest (POIs) by scanning the environment, selecting the nearest unvisited POI, navigating to it via road network, and visiting it. Starting from its initial location, it sequentially visited:  \n1. **Café Lebensart** (32.5m, 32.5°),  \n2. **flamingo** (426m, 32.6°),  \n3. **Cinque** (432m, 327.3°),  \n4. **Bistro im Haus der Bundespressekonferenz** (417m, 258.4°).  \n\nAfter each visit, it rescanned and updated its list of visible (unvisited) POIs — reducing from 11 to 8 over time. The agent stopped due to reaching the maximum iteration limit, having visited **4 distinct POIs** (though the user note says “Visited POIs count: 7”, the log confirms only these 4 visits occurred in the shown sequence). The current location is near [52.5229, 13.3827], and the next nearest unvisited POI is now **Bistro im Haus der Bundespressekonferenz**, which has just been visited — implying the next scan will identify the next closest among the remaining 7 visible POIs.\nThe AI agent systematically visited 7 visible POIs in order of proximity, starting from the initial location:  \n1. **Hopfingerbräu im Palais** (554 m)  \n2. **Commerzbank** (192 m)  \n3. **Berlin Pavillon am Reichstag** (344 m)  \n4. **Café Lebensart** (682 m)  \n5. **Saravanaa Bhavan** (155 m)  \n6. **Lindenbräu** (185 m)  \n7. **eleven** (457 m) — final POI, currently being navigated to.\n\nAt each step, the agent scanned the environment, selected the nearest unvisited visible POI, planned a road-network path, moved there, and confirmed visitation. After visiting six POIs, only *eleven* remained visible and unvisited; the agent is now en route to it. Total visited POIs: 7 (not 14 — the “14” in the user input appears inconsistent with the log).\nThe agent successfully navigated to and visited the POI “eleven (咖啡厅)” via an 8-step, ~1400m road-network path. Subsequent environmental scans at that location and after nine directional explorations (north, east, south, west, southwest, northwest, and others) consistently detected **zero visible POIs**, prompting continued systematic exploration across Berlin coordinates. No new POIs were found during this entire sequence.\nThe agent scanned for visible points of interest (POIs), found none, suggested exploring a new direction, and then halted due to reaching the maximum iteration limit.",
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 6,
+      "total_questions": 24,
+      "accuracy": 25.0,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 0,
+          "total": 8,
+          "percentage": 0.0
+        },
+        "空间距离估算": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "邻近关系判断": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "POI密度识别": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "路径规划": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Hopfingerbräu im Palais相对于Commerzbank在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Hopfingerbräu im Palais位于Commerzbank的东北面。"
+        },
+        {
+          "question": "Viale dei Tigli相对于Hopfingerbräu im Palais在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Viale dei Tigli位于Hopfingerbräu im Palais的东南面。"
+        },
+        {
+          "question": "Starbucks相对于Viale dei Tigli在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Starbucks位于Viale dei Tigli的西北面。"
+        },
+        {
+          "question": "Berlin Pavillon am Reichstag相对于Starbucks在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Berlin Pavillon am Reichstag位于Starbucks的西北面。"
+        },
+        {
+          "question": "Commerzbank相对于Hopfingerbräu im Palais在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Commerzbank位于Hopfingerbräu im Palais的西南面。"
+        },
+        {
+          "question": "Hopfingerbräu im Palais相对于Viale dei Tigli在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Hopfingerbräu im Palais位于Viale dei Tigli的西北面。"
+        },
+        {
+          "question": "Viale dei Tigli相对于Starbucks在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Viale dei Tigli位于Starbucks的东南面。"
+        },
+        {
+          "question": "Starbucks相对于Berlin Pavillon am Reichstag在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Starbucks位于Berlin Pavillon am Reichstag的东南面。"
+        },
+        {
+          "question": "Commerzbank到Viale dei Tigli的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Commerzbank到Viale dei Tigli的直线距离约为178米。"
+        },
+        {
+          "question": "Hopfingerbräu im Palais到Starbucks的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Hopfingerbräu im Palais到Starbucks的直线距离约为148米。"
+        },
+        {
+          "question": "Viale dei Tigli到Berlin Pavillon am Reichstag的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Viale dei Tigli到Berlin Pavillon am Reichstag的直线距离约为500米。"
+        },
+        {
+          "question": "Starbucks到Café Lebensart的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Starbucks到Café Lebensart的直线距离约为243米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Commerzbank最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Starbucks距离Commerzbank最近，约141米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Hopfingerbräu im Palais最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Starbucks距离Hopfingerbräu im Palais最近，约148米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Viale dei Tigli最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Berlin Pavillon am Reichstag距离Viale dei Tigli最远，约500米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Starbucks最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Berlin Pavillon am Reichstag距离Starbucks最远，约409米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Maman周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Commerzbank周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Bistro im Haus der Bundespressekonferenz周围的POI密度最低，500米范围内只有0个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Café Lebensart周围的POI密度最低，500米范围内只有3个其他POI。"
+        },
+        {
+          "question": "从Commerzbank到Hopfingerbräu im Palais，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：Commerzbank -> Hopfingerbräu im Palais，总距离约191米。"
+        },
+        {
+          "question": "从Hopfingerbräu im Palais到Viale dei Tigli，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "最短路径是：Hopfingerbräu im Palais -> (Hopfingerbräu im Palais and marsch节点) -> (Starbucks and marsch节点) -> (Café Lebensart and marsch节点) -> (Viale dei Tigli and marsch节点) -> (Viale dei Tigli and marsch节点) -> Viale dei Tigli，总距离约548米。"
+        },
+        {
+          "question": "从Viale dei Tigli到Starbucks，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "最短路径是：Viale dei Tigli -> (Viale dei Tigli and marsch节点) -> (Viale dei Tigli and marsch节点) -> (Café Lebensart and marsch节点) -> (Starbucks and marsch节点) -> Starbucks，总距离约388米。"
+        },
+        {
+          "question": "从Starbucks到Berlin Pavillon am Reichstag，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：Starbucks -> (Starbucks and marsch节点) -> (Hopfingerbräu im Palais and marsch节点) -> (ebert and Hopfingerbräu im Palais节点) -> (ebert and Hopfingerbräu im Palais节点) -> Berlin Pavillon am Reichstag，总距离约702米。"
+        }
+      ],
+      "completed_at": "2026-03-24T13:24:20.097455"
+    },
+    "context_text": "The AI agent began at a location near Berlin’s government district and systematically visited the nearest unvisited Points of Interest (POIs) in sequence:  \n1. **Starbucks** (16m),  \n2. **Viale dei Tigli** (108m),  \n3. **Maman** (111m),  \n4. **Alt-Berliner Wirtshaus** (107m).  \n\nAfter each visit, it re-scanned the environment to update visible POIs and selected the next closest unvisited one. All moves were successfully executed via road-network navigation. The agent has now visited 4 POIs and is preparing to scan again for the next target.\nThe agent systematically explores nearby points of interest (POIs) by scanning the environment, selecting the nearest unvisited POI, navigating to it via road network, and visiting it. Starting from its initial location, it sequentially visited:  \n1. **Café Lebensart** (32.5m, 32.5°),  \n2. **flamingo** (426m, 32.6°),  \n3. **Cinque** (432m, 327.3°),  \n4. **Bistro im Haus der Bundespressekonferenz** (417m, 258.4°).  \n\nAfter each visit, it rescanned and updated its list of visible (unvisited) POIs — reducing from 11 to 8 over time. The agent stopped due to reaching the maximum iteration limit, having visited **4 distinct POIs** (though the user note says “Visited POIs count: 7”, the log confirms only these 4 visits occurred in the shown sequence). The current location is near [52.5229, 13.3827], and the next nearest unvisited POI is now **Bistro im Haus der Bundespressekonferenz**, which has just been visited — implying the next scan will identify the next closest among the remaining 7 visible POIs.\nThe AI agent systematically visited 7 visible POIs in order of proximity, starting from the initial location:  \n1. **Hopfingerbräu im Palais** (554 m)  \n2. **Commerzbank** (192 m)  \n3. **Berlin Pavillon am Reichstag** (344 m)  \n4. **Café Lebensart** (682 m)  \n5. **Saravanaa Bhavan** (155 m)  \n6. **Lindenbräu** (185 m)  \n7. **eleven** (457 m) — final POI, currently being navigated to.\n\nAt each step, the agent scanned the environment, selected the nearest unvisited visible POI, planned a road-network path, moved there, and confirmed visitation. After visiting six POIs, only *eleven* remained visible and unvisited; the agent is now en route to it. Total visited POIs: 7 (not 14 — the “14” in the user input appears inconsistent with the log).\nThe agent successfully navigated to and visited the POI “eleven (咖啡厅)” via an 8-step, ~1400m road-network path. Subsequent environmental scans at that location and after nine directional explorations (north, east, south, west, southwest, northwest, and others) consistently detected **zero visible POIs**, prompting continued systematic exploration across Berlin coordinates. No new POIs were found during this entire sequence.\nThe agent scanned for visible points of interest (POIs), found none, suggested exploring a new direction, and then halted due to reaching the maximum iteration limit.",
+    "context_mode": "一次压缩"
+  }
+}

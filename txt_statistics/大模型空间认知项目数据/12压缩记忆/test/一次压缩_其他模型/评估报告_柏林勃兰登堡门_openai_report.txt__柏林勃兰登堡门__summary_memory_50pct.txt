@@ -1,0 +1,20 @@
+The AI is navigating Berlin using a nearest-unvisited-POI strategy. Starting near the Reichstag, it sequentially visited:  
+1. **Starbucks** (~16 m, 0-step move),  
+2. **Viale dei Tigli** (~108 m, 482 m / 6 steps),  
+3. **Maman** (~111 m, 136 m / 2 steps),  
+4. **Alt-Berliner Wirtshaus** (~107 m, 130 m / 2 steps).  
+
+Each step involved scanning surroundings (POI count decreased from 15 to 12 as visited locations dropped out of visibility), selecting the closest unvisited POI, and executing a road-network path. Total visited POIs: **4**.
+The AI agent is navigating Berlin, visiting points of interest (POIs) using a nearest-unvisited-POI strategy. Starting from Alt-Berliner Wirtshaus (Step 33), it sequentially visited:  
+- **Commerzbank** (~250 m, 796 m path),  
+- **Hopfingerbräu im Palais** (~192 m, 191 m path),  
+- **Berlin Pavillon am Reichstag** (~290 m, 476 m path),  
+- **Bistro im Haus der Bundespressekonferenz** (~592 m, 1628 m path).  
+
+Each step involved scanning the environment, identifying visible POIs, selecting the closest unvisited one, planning a road-network path, and confirming successful visitation. After 5 moves (Steps 33 → 65), 8 POIs have been visited. The current location is near the Bundespressekonferenz; the next scan (Step 65) is pending.
+The AI systematically explored 13 POIs across 7 steps using a “nearest unvisited POI” strategy:  
+- Started with 7 visible POIs; visited **Cinque** (417 m, 78°).  
+- Then visited **flamingo** (432 m, 147°), **Café Lebensart** (twice—426 m and 686 m), **Saravanaa Bhavan** (155 m, 230°), **Lindenbräu** (185 m, 244°), and finally **eleven** (457 m, 90°).  
+- After exhausting all visible POIs (reaching 0 in the final scan), it initiated exploratory navigation northeast (45°) to discover new POIs.  
+All movements used road-network path planning (3–10 steps, 287–1400 m), and every target was successfully visited. Total visited POIs: **13**.
+After visiting the two nearest POIs—Lindenbräu (185 m) and eleven (302 m)—no further visible POIs remained, so the agent explored 45° (NE) to discover new locations, arriving at coordinates [52.509774, 13.380305].

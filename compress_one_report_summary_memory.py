@@ -1,4 +1,5 @@
 import argparse
+import csv
 import json
 import os
 import re
@@ -152,7 +153,18 @@ def summarize_default_iterative(
     return final_text
 
 
-def compress_one_file(llm, input_path: Path, output_dir: Path, skip_existing: bool) -> Optional[Path]:
+def _extract_model_from_filename(name: str) -> str:
+    m = re.search(r"_([a-zA-Z0-9]+)_report\.txt\.json$", name)
+    return (m.group(1).lower() if m else "")
+
+
+def compress_one_file(
+    llm,
+    input_path: Path,
+    output_dir: Path,
+    skip_existing: bool,
+) -> Optional[Tuple[str, str, str, int, int, str]]:
+    model = _extract_model_from_filename(input_path.name)
     with input_path.open("r", encoding="utf-8") as f:
         data = json.loads(f.read())
 
@@ -160,23 +172,36 @@ def compress_one_file(llm, input_path: Path, output_dir: Path, skip_existing: bo
     base = input_path.stem
     out_50 = output_dir / f"{base}__{region}__summary_memory_50pct.txt"
     if skip_existing and out_50.exists():
+        b = out_50.stat().st_size
         print(f"skip_existing: {str(out_50)}", flush=True)
         print("", flush=True)
-        return out_50
+        return (region, model, out_50.name, b, b * 8, str(out_50.parent))
 
     context_text = pick_one_context_text(data)
     ctx_bytes = len(context_text.encode("utf-8"))
     print(f"input: {str(input_path)}", flush=True)
     print(f"region: {region}", flush=True)
+    if model:
+        print(f"source_model: {model}", flush=True)
     print(f"context_bytes: {ctx_bytes}", flush=True)
 
     print("[run] generating 50% summary (1 pass default chain)...", flush=True)
     summary_50 = summarize_default_iterative(llm, context_text, passes=1)
 
     out_50.write_text(summary_50, encoding="utf-8")
-    print(f"summary_50_bytes: {len(summary_50.encode('utf-8'))} -> {str(out_50)}", flush=True)
+    b = len(summary_50.encode("utf-8"))
+    print(f"summary_50_bytes: {b} -> {str(out_50)}", flush=True)
     print("", flush=True)
-    return out_50
+    return (region, model, out_50.name, b, b * 8, str(out_50.parent))
+
+
+def _split_csv_set(v: str) -> List[str]:
+    items: List[str] = []
+    for x in (v or "").split(","):
+        x = x.strip().lower()
+        if x:
+            items.append(x)
+    return items
 
 
 def main() -> None:
@@ -187,16 +212,24 @@ def main() -> None:
     )
     ap.add_argument(
         "--output_dir",
-        default=r"txt_statistics\大模型空间认知项目数据\12压缩记忆\test\一次压缩",
+        default=r"txt_statistics\大模型空间认知项目数据\12压缩记忆\test\一次压缩_其他模型",
     )
     ap.add_argument(
-        "--exclude_region",
-        default="柏林勃兰登堡门",
+        "--include_models",
+        default="openai,deepseek,claude,gemini",
+    )
+    ap.add_argument(
+        "--exclude_models",
+        default="qwen",
+    )
+    ap.add_argument(
+        "--stats_csv",
+        default=r"txt_statistics\大模型空间认知项目数据\12压缩记忆\test\一次压缩_其他模型\csv\压缩记忆_50pct_其他模型字节统计.csv",
     )
     ap.add_argument(
         "--skip_existing",
         action="store_true",
-        default=True,
+        default=False,
     )
     args = ap.parse_args()
 
@@ -221,33 +254,44 @@ def main() -> None:
         temperature=0.2,
     )
 
+    include_models = set(_split_csv_set(args.include_models))
+    exclude_models = set(_split_csv_set(args.exclude_models))
+
     targets: List[Path] = []
     if input_path.is_dir():
-        for p in sorted(input_path.rglob("*_qwen_report.txt.json")):
+        for p in sorted(input_path.rglob("*_report.txt.json")):
+            m = _extract_model_from_filename(p.name)
+            if include_models and m not in include_models:
+                continue
+            if exclude_models and m in exclude_models:
+                continue
             targets.append(p)
     else:
         targets.append(input_path)
 
-    written: List[Path] = []
     skipped = 0
+    rows: List[Tuple[str, str, str, int, int, str]] = []
     for p in targets:
-        try:
-            with p.open("r", encoding="utf-8") as f:
-                data = json.loads(f.read())
-            region = (data.get("region") or "").strip()
-        except Exception:
-            region = ""
-
-        if input_path.is_dir() and args.exclude_region and region == args.exclude_region:
-            skipped += 1
-            continue
-
         out = compress_one_file(llm, p, output_dir, skip_existing=args.skip_existing)
         if out:
-            written.append(out)
+            rows.append(out)
+        else:
+            skipped += 1
 
-    print(f"done_files: {len(written)}", flush=True)
+    stats_csv = Path(args.stats_csv)
+    if not stats_csv.is_absolute():
+        stats_csv = project_root / stats_csv
+    stats_csv.parent.mkdir(parents=True, exist_ok=True)
+
+    with stats_csv.open("w", encoding="utf-8-sig", newline="") as w:
+        cw = csv.writer(w)
+        cw.writerow(["region", "source_model", "file_name", "compressed_bytes", "compressed_bits", "folder"])
+        for r in sorted(rows, key=lambda x: (x[0], x[1], x[2])):
+            cw.writerow(list(r))
+
+    print(f"done_files: {len(rows)}", flush=True)
     print(f"skipped_files: {skipped}", flush=True)
+    print(f"stats_csv: {str(stats_csv)}", flush=True)
 
 
 if __name__ == "__main__":

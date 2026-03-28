@@ -1,0 +1,265 @@
+{
+  "region": "多伦多CN塔",
+  "eval_model": "qwen",
+  "strategy": "Direct",
+  "context_mode": "一次压缩",
+  "source_file": "评估报告_多伦多CN塔_qwen_report.txt__多伦多CN塔__summary_memory_50pct.txt",
+  "source_path": "D:\\a_project_study\\AI_exploer_aoto_onlybeijing\\AI_exploer_aotoV10\\AI_exploer_aoto\\txt_statistics\\大模型空间认知项目数据\\12压缩记忆\\一次压缩\\评估报告_多伦多CN塔_qwen_report.txt__多伦多CN塔__summary_memory_50pct.txt",
+  "evaluation_time": "2026-03-24T15:48:43.993616",
+  "context_text": "The AI began at a location in Toronto and systematically visited the nearest unvisited points of interest (POIs) in sequence:  \n1. **Boston Pizza** (73 m, 324.7°),  \n2. **Second Cup** (77 m, 36.3°),  \n3. **Starbucks** (139 m, 301.1°),  \n4. **259 host …a fine indian restaurant** (137 m, 236.3°).  \n\nAt each stop, it scanned the environment to identify remaining visible POIs, selected the closest unvisited one, planned a road-network path, and confirmed successful visitation. Five POIs remain unvisited after four moves.\nThe agent sequentially visits the nearest unvisited point of interest (POI) by scanning, selecting the closest one, navigating via road network, and confirming visitation. So far, it has visited:  \n1. **Tim Hortons** (177 m),  \n2. **St. Louis Bar & Grill** (369 m),  \n3. **The Rec Room** (346 m),  \n4. **Swiss Chalet** (129 m),  \n5. **Wild Wing** (137 m).  \n\nAfter each visit, it rescans to update visible POIs. As of the latest step, Wild Wing has just been reached, and the next scan will identify the new nearest unvisited POI (e.g., *Aroma Espresso Bar* at 408 m is now the closest remaining). The agent operates under iteration limits and uses directional/distance data for navigation.\nThe AI agent systematically explores nearby points of interest (POIs) by alternating between moving to the nearest unvisited visible POI and scanning the environment to discover new ones. Starting at Wild Wing, it sequentially visits Aroma Espresso Bar, Scaddabush, two distinct Starbucks locations, Jack Astor’s, and finally RBC Royal Bank—totaling 7 visited POIs in this session (with prior visits bringing the count to 14). Each move is road-network–planned and confirmed upon arrival; scanning updates the visible POI list, guiding the next move. The process terminates due to max iterations after successfully reaching RBC Royal Bank—the last remaining visible POI.\nThe agent repeatedly scanned for points of interest (POIs) but found none. It initially explored west (270°), then south (180°), and finally east (90°), eventually making multiple successive eastward moves—each yielding a new location—yet still detecting zero POIs. After exhausting its iteration limit without finding any visible POIs, the agent terminated.",
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 6,
+      "total_questions": 24,
+      "accuracy": 25.0,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 2,
+          "total": 8,
+          "percentage": 25.0
+        },
+        "空间距离估算": {
+          "correct": 0,
+          "total": 4,
+          "percentage": 0.0
+        },
+        "邻近关系判断": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "POI密度识别": {
+          "correct": 0,
+          "total": 4,
+          "percentage": 0.0
+        },
+        "路径规划": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Boston Pizza相对于The Rec Room在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D\n依据不足。上下文中未提供Boston Pizza与The Rec Room之间的相对方位或共同参照系下的方向/距离数据；二者分别出现在不同探索序列中（Boston Pizza在Toronto起始序列，The Rec Room在另一序列），且无任何文本说明其空间关系或共享坐标原点。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Boston Pizza位于The Rec Room的西北面。"
+        },
+        {
+          "question": "Second Cup相对于Boston Pizza在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "A\nSecond Cup相对于Boston Pizza的方向需通过两者相对于起点的方位角推算。上下文给出：Boston Pizza位于起点的324.7°（即北偏西约35.3°，属西北象限），Second Cup位于起点的36.3°（即北偏东约36.3°，属东北象限）。因此，从Boston Pizza看向Second Cup，需从324.7°顺时针转至36.3°，跨越角度为36.3° − 324.7° + 360° = 71.6°，即Second Cup位于Boston Pizza的东北方向；且二者方位角差值小于90°，且36.3° > 324.7°（经模360调整后），表明Second Cup在Boston Pizza的顺时针侧、更靠近正北与正东之间，故为东北方向。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Second Cup位于Boston Pizza的东北面。"
+        },
+        {
+          "question": "Aroma Espresso Bar相对于Second Cup在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "上下文中未给出Aroma Espresso Bar与Second Cup之间的直接方向或距离关系。Aroma Espresso Bar出现在“Starting at Wild Wing, it sequentially visits Aroma Espresso Bar, Scaddabush, two distinct Starbucks locations…”中，其方位角仅知在Wild Wing的扫描结果中为408 m（但无角度）；Second Cup出现在首段序列中，方位角为36.3°（相对于起始点Toronto某位置）。两者的参考原点不同（前者以Wild Wing为基准，后者以初始Toronto位置为基准），且上下文未提供二者之间的相对方位、共同参照点或坐标转换依据，故无法推导Aroma Espresso Bar相对于Second Cup的方向。依据不足。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Aroma Espresso Bar位于Second Cup的东南面。"
+        },
+        {
+          "question": "RBC Royal Bank相对于Aroma Espresso Bar在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "RBC Royal Bank位于Aroma Espresso Bar的西南面。"
+        },
+        {
+          "question": "The Rec Room相对于Boston Pizza在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D  \n上下文未提供The Rec Room与Boston Pizza之间的相对方位角或距离信息，仅分别给出二者相对于各自起点的方向与距离（Boston Pizza：73 m, 324.7°；The Rec Room：346 m，但未标注方向），且无共同参考点或坐标系转换依据，无法推导二者相对方位。依据不足。",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "The Rec Room位于Boston Pizza的东南面。"
+        },
+        {
+          "question": "Boston Pizza相对于Second Cup在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "C\nBoston Pizza位于起点方位角324.7°，Second Cup位于起点方位角36.3°。324.7°位于西北象限（270°–360°），36.3°位于东北象限（0°–90°），因此Boston Pizza在Second Cup的西北方向。",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Boston Pizza位于Second Cup的西南面。"
+        },
+        {
+          "question": "Second Cup相对于Aroma Espresso Bar在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D\n依据不足。上下文中未提供Second Cup与Aroma Espresso Bar之间的相对方向或共同参照点的方位角信息，也未给出二者共有的起始位置或可推导角度关系的中间实体；所有方位角数据均以各自出发点为基准（如“Boston Pizza (73 m, 324.7°)”指从初始Toronto位置测得），无法跨序列建立Second Cup与Aroma Espresso Bar的直接方位关系。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Second Cup位于Aroma Espresso Bar的西北面。"
+        },
+        {
+          "question": "Aroma Espresso Bar相对于RBC Royal Bank在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D  \n上下文仅说明AI“Starting at Wild Wing, it sequentially visits Aroma Espresso Bar, Scaddabush, two distinct Starbucks locations, Jack Astor’s, and finally RBC Royal Bank”，即Aroma Espresso Bar在RBC Royal Bank之前被访问，但未提供二者之间的相对方位角或距离；也未出现以RBC Royal Bank为参考点对Aroma Espresso Bar的方向描述（如“方向X°”）；所有方位角数据均以AI起始位置或各POI自身为参考，无跨POI方向关系。依据不足。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Aroma Espresso Bar位于RBC Royal Bank的东北面。"
+        },
+        {
+          "question": "The Rec Room到Second Cup的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "A",
+          "ai_explanation": "A\n依据不足。上下文中未提供The Rec Room与Second Cup之间的直接距离、方位角或可推导二者相对位置的共同参照点；两POI分别出现在不同探索序列中（The Rec Room在第二段序列第3位，Second Cup在第一段序列第2位），且无共享起点或中间坐标信息，无法计算直线距离。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "The Rec Room到Second Cup的直线距离约为508米。"
+        },
+        {
+          "question": "Boston Pizza到Aroma Espresso Bar的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "D  \n依据不足。上下文中未提供Boston Pizza与Aroma Espresso Bar之间的直接或间接距离、方位角关系，也未给出二者共同参照的同一位置（如起点）的坐标或相对位置信息；Boston Pizza出现在第一段探索序列中（起始点为Toronto某地），而Aroma Espresso Bar出现在第三段（起始点为Wild Wing），两段探索无空间关联描述，无共用参照系，无法推算直线距离。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Boston Pizza到Aroma Espresso Bar的直线距离约为468米。"
+        },
+        {
+          "question": "Second Cup到RBC Royal Bank的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "D  \n依据不足。上下文中未提供Second Cup与RBC Royal Bank之间的直接或间接距离信息，也未给出二者共有的参考位置或可推导的几何关系（如共同参照点、角度链、坐标系或路径序列中的相邻关系）。Second Cup出现在第一段访问序列中（第2站），RBC Royal Bank出现在第三段序列末尾（第7站，且明确为“最后剩余可见POI”），但两段描述无空间关联表述，未提及其相对方位或距离；所有距离数据均为各POI相对于其出发点的直线距离，且出发点不同（第一段起始于Toronto某地，第三段起始于Wild Wing），无法跨段进行三角定位或距离推算。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Second Cup到RBC Royal Bank的直线距离约为766米。"
+        },
+        {
+          "question": "Aroma Espresso Bar到Scaddabush的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "A",
+          "ai_explanation": "E\n依据不足。上下文中未提供Aroma Espresso Bar与Scaddabush之间的直线距离、方位角或相对位置信息，仅提及二者均为被依次访问的POI（“Starting at Wild Wing, it sequentially visits Aroma Espresso Bar, Scaddabush, two distinct Starbucks locations, Jack Astor’s, and finally RBC Royal Bank”），但未给出二者间的任何距离或方向数据。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Aroma Espresso Bar到Scaddabush的直线距离约为342米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离The Rec Room最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Aroma Espresso Bar距离The Rec Room最近，约315米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Boston Pizza最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Second Cup距离Boston Pizza最近，约77米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Second Cup最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "上下文中未提供Aroma Espresso Bar、RBC Royal Bank、Scaddabush与Second Cup之间的直线距离或方位角数据，亦无任何可推导其相对距离的中间参照（如共同起点的距离序列、共现于同一扫描列表等）。所有关于Second Cup的信息仅出现在第一段：“Boston Pizza (73 m, 324.7°), Second Cup (77 m, 36.3°), Starbucks (139 m, 301.1°), 259 host …a fine indian restaurant (137 m, 236.3°)”，该序列以AI起始点为参考，给出各POI相对于起点的距离和方位；而Aroma Espresso Bar、RBC Royal Bank、Scaddabush均出现在后续独立探索路径中（如“Starting at Wild Wing, it sequentially visits Aroma Espresso Bar, Scaddabush, two distinct Starbucks locations, Jack Astor’s, and finally RBC Royal Bank”），其距离值（如Aroma Espresso Bar “at 408 m”）均以Wild Wing为参考，非Second Cup。无文本表明Second Cup与三者中任一存在直接或间接距离关系，依据不足。",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "RBC Royal Bank距离Second Cup最远，约766米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Aroma Espresso Bar最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "C  \n依据不足。上下文中未提供Aroma Espresso Bar与RBC Royal Bank、Scaddabush、St. Louis Bar & Grill之间的直线距离数据；仅提及Aroma Espresso Bar在Wild Wing之后被访问（“Starting at Wild Wing, it sequentially visits Aroma Espresso Bar, Scaddabush, two distinct Starbucks locations, Jack Astor’s, and finally RBC Royal Bank”），以及St. Louis Bar & Grill是早期序列中第2个被访问的POI（“1. Tim Hortons (177 m), 2. St. Louis Bar & Grill (369 m)”），但该369 m是其相对于起始点（未明示）的距离，而非相对于Aroma Espresso Bar；全文无任何一处给出Aroma Espresso Bar到任一选项POI的方位角或距离数值，故无法比较远近。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "RBC Royal Bank距离Aroma Espresso Bar最远，约930米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Boston Pizza周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "C  \n依据不足。上下文中未提供任何POI周围POI密度（如单位面积内POI数量、邻近POI列表或空间分布密度描述）的相关信息；所有段落仅记载AI访问序列、单点方位角与距离、扫描行为及迭代状态，未出现关于Scaddabush、RBC Royal Bank、The Rec Room或Aroma Espresso Bar各自周边POI数量、聚集程度或邻接关系的描述。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Scaddabush周围的POI密度最高，500米范围内有6个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "D  \n依据不足。上下文中未提供任何POI周围POI密度（如邻近POI数量、分布范围或空间聚集度）的直接或间接信息；所有描述仅涉及AI访问序列、单点到各POI的方向与距离，以及扫描后可见POI列表的动态更新，但从未统计或比较各POI自身的邻域内POI数量或密度。因此，无法从给定文本中判断RBC Royal Bank、The Rec Room、Aroma Espresso Bar或St. Louis Bar & Grill中哪一个周围POI密度最低。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "RBC Royal Bank周围的POI密度最低，500米范围内只有2个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "The Rec Room周围的POI密度最低，500米范围内只有4个其他POI。"
+        },
+        {
+          "question": "从The Rec Room到Boston Pizza，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "最短路径是：The Rec Room -> (bremner and The Rec Room节点) -> (simcoe street and Aroma Espresso Bar节点) -> (simcoe street and front street节点) -> (Scaddabush and front street节点) -> (Boston Pizza and front street节点) -> Boston Pizza，总距离约969米。"
+        },
+        {
+          "question": "从Boston Pizza到Second Cup，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：Boston Pizza -> Second Cup，总距离约77米。"
+        },
+        {
+          "question": "从Second Cup到Aroma Espresso Bar，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "最短路径是：Second Cup -> (Boston Pizza and Starbucks节点) -> (Boston Pizza and front street节点) -> (Scaddabush and front street节点) -> (simcoe street and front street节点) -> (simcoe street and Aroma Espresso Bar节点) -> Aroma Espresso Bar，总距离约808米。"
+        },
+        {
+          "question": "从Aroma Espresso Bar到RBC Royal Bank，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：Aroma Espresso Bar -> (simcoe street and Aroma Espresso Bar节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (bremner and The Rec Room节点) -> (St. Louis Bar and spadina avenue节点) -> (St. Louis Bar and spadina avenue节点) -> (RBC Royal Bank and spadina avenue节点) -> RBC Royal Bank，总距离约1132米。"
+        }
+      ],
+      "completed_at": "2026-03-24T15:48:39.154777"
+    },
+    "context_text": "The AI began at a location in Toronto and systematically visited the nearest unvisited points of interest (POIs) in sequence:  \n1. **Boston Pizza** (73 m, 324.7°),  \n2. **Second Cup** (77 m, 36.3°),  \n3. **Starbucks** (139 m, 301.1°),  \n4. **259 host …a fine indian restaurant** (137 m, 236.3°).  \n\nAt each stop, it scanned the environment to identify remaining visible POIs, selected the closest unvisited one, planned a road-network path, and confirmed successful visitation. Five POIs remain unvisited after four moves.\nThe agent sequentially visits the nearest unvisited point of interest (POI) by scanning, selecting the closest one, navigating via road network, and confirming visitation. So far, it has visited:  \n1. **Tim Hortons** (177 m),  \n2. **St. Louis Bar & Grill** (369 m),  \n3. **The Rec Room** (346 m),  \n4. **Swiss Chalet** (129 m),  \n5. **Wild Wing** (137 m).  \n\nAfter each visit, it rescans to update visible POIs. As of the latest step, Wild Wing has just been reached, and the next scan will identify the new nearest unvisited POI (e.g., *Aroma Espresso Bar* at 408 m is now the closest remaining). The agent operates under iteration limits and uses directional/distance data for navigation.\nThe AI agent systematically explores nearby points of interest (POIs) by alternating between moving to the nearest unvisited visible POI and scanning the environment to discover new ones. Starting at Wild Wing, it sequentially visits Aroma Espresso Bar, Scaddabush, two distinct Starbucks locations, Jack Astor’s, and finally RBC Royal Bank—totaling 7 visited POIs in this session (with prior visits bringing the count to 14). Each move is road-network–planned and confirmed upon arrival; scanning updates the visible POI list, guiding the next move. The process terminates due to max iterations after successfully reaching RBC Royal Bank—the last remaining visible POI.\nThe agent repeatedly scanned for points of interest (POIs) but found none. It initially explored west (270°), then south (180°), and finally east (90°), eventually making multiple successive eastward moves—each yielding a new location—yet still detecting zero POIs. After exhausting its iteration limit without finding any visible POIs, the agent terminated.",
+    "context_mode": "一次压缩"
+  }
+}

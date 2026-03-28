@@ -1,0 +1,10 @@
+The AI agent began at a location near London (51.497°N, −0.125°W), scanned its surroundings, and sequentially visited the nearest unvisited points of interest (POIs):  
+1. **Crussh Bar** (117 m → 187 m path),  
+2. **Quirinale** (98 m → 116 m path),  
+3. **The Cinnamon Club** (182 m → 716 m path),  
+4. **Wash House** (85 m → 85 m path).  
+
+At each stop, it re-scanned the environment to identify nearby POIs—primarily cafés, restaurants, schools, and banks—progressively narrowing the visible set from 15 to 11 as it moved. All movements succeeded via road-network navigation.
+The AI agent sequentially visits nearby points of interest (POIs) by scanning its environment, selecting the nearest unvisited POI, and navigating there. Starting at Ashburnham House (166m), it proceeds to Milne’s House (74m), then Café Fresco (176m), Caffè Nero (458m), Zen China (390m), and finally Aji Zen Canteen (91m). At each stop, it scans again to identify the next closest POI—prioritizing proximity and apparent unvisited status. The sequence reflects a greedy, iterative exploration strategy constrained by maximum iteration limits.
+The AI agent autonomously navigated a sequence of 7 nearby points of interest (POIs)—starting at Aji Zen Canteen and proceeding through Shepherds Hall, Riverside Cafe, PizzaExpress, Footstool, and finally Lloyds Bank—using `move_to_poi` and `scan_environment` to iteratively select and visit the closest unvisited POI. After visiting all 6 visible POIs (total visited count: 14), no further POIs were detectable from Lloyds Bank. The agent then performed three directional explorations (180°, 90°, 0°) in response to repeated “0 visible POIs” feedback, scanning after each move—but found none. The process halted due to exhaustion of visible targets and exploration attempts, not iteration limits.
+The agent repeatedly scanned for points of interest (POIs) across three locations—each reached by exploring a new direction (270°, then 45°, then 135°)—but found zero visible POIs at any location. After exhausting the maximum allowed iterations without success, the agent stopped.

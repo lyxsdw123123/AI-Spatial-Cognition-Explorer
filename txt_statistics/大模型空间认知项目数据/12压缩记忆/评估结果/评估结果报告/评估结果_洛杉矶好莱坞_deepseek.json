@@ -1,0 +1,265 @@
+{
+  "region": "洛杉矶好莱坞",
+  "eval_model": "deepseek",
+  "strategy": "Direct",
+  "context_mode": "一次压缩",
+  "source_file": "评估报告_洛杉矶好莱坞_qwen_report.txt__洛杉矶好莱坞__summary_memory_50pct.txt",
+  "source_path": "D:\\a_project_study\\AI_exploer_aoto_onlybeijing\\AI_exploer_aotoV10\\AI_exploer_aoto\\txt_statistics\\大模型空间认知项目数据\\12压缩记忆\\一次压缩\\评估报告_洛杉矶好莱坞_qwen_report.txt__洛杉矶好莱坞__summary_memory_50pct.txt",
+  "evaluation_time": "2026-03-24T13:29:50.441064",
+  "context_text": "The AI agent began at a location near Hollywood Blvd and systematically visited the nearest unvisited points of interest (POIs) in order of increasing proximity:  \n1. **Chado Tea Room** (41 m),  \n2. **TCL Chinese 6 Theatre** (47 m),  \n3. **Whealthy** (42 m),  \n4. **Hard Rock Cafe** (45 m).  \n\nAfter each visit, it re-scanned the environment to identify the next closest unvisited POI. All moves were successfully executed via short road-network paths (≤2 steps, ~40–47 m). The agent has now visited 4 POIs and is preparing to scan again for the next nearest unvisited one.\nThe AI agent systematically visits the nearest unvisited point of interest (POI) in sequence:  \n1. **JINYA Ramen Bar** (73 m) →  \n2. **California Pizza Kitchen** (67 m) →  \n3. **Dave & Buster's** (59 m) →  \n4. **Lucky Strike** (51 m) →  \n5. Now heading to **Greco's Pizza** (115 m), the new nearest unvisited POI.  \n\nEach step involves scanning the environment, selecting the closest unvisited POI, planning a road-network path, moving, and confirming visitation. So far, 5 POIs have been visited (with 7 total visited per user input—implying 2 prior visits not shown), and the agent continues its greedy nearest-unvisited-POI strategy.\nThe AI agent systematically visited 7 nearby POIs in order of proximity—starting with Greco’s Pizza, then Hooters, The Coffee Bean & Tea Leaf, 25 Degrees, Restorant, Kensho, and finally Starbucks—using `move_to_poi` and `scan_environment` at each step. After visiting Starbucks (the last visible POI), no further POIs were detected. The agent then performed two exploratory moves—first north, then east—but scanning after each yielded zero visible POIs, indicating the local area is exhausted. The task ended without reaching a termination condition (e.g., max iterations was not hit post-Starbucks; exploration continues).\nThe agent repeatedly scanned for points of interest (POIs) but found none in four successive locations. After each null scan, it explored a new direction (South → West → Northeast → Southeast), moved to a new GPS coordinate, and rescanned—each time yielding zero visible POIs. The process terminated automatically after reaching the maximum iteration limit with no POIs discovered.",
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 11,
+      "total_questions": 24,
+      "accuracy": 45.83333333333333,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 3,
+          "total": 8,
+          "percentage": 37.5
+        },
+        "空间距离估算": {
+          "correct": 1,
+          "total": 4,
+          "percentage": 25.0
+        },
+        "邻近关系判断": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "POI密度识别": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "路径规划": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Hard Rock Cafe相对于Whealthy在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Hard Rock Cafe位于Whealthy的东南面。"
+        },
+        {
+          "question": "TCL Chinese 6 Theatre相对于Hard Rock Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "TCL Chinese 6 Theatre位于Hard Rock Cafe的东北面。"
+        },
+        {
+          "question": "Chado Tea Room相对于TCL Chinese 6 Theatre在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Chado Tea Room位于TCL Chinese 6 Theatre的东北面。"
+        },
+        {
+          "question": "The Coffee Bean & Tea Leaf相对于Chado Tea Room在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "依据不足",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "The Coffee Bean & Tea Leaf位于Chado Tea Room的西南面。"
+        },
+        {
+          "question": "Whealthy相对于Hard Rock Cafe在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Whealthy位于Hard Rock Cafe的西北面。"
+        },
+        {
+          "question": "Hard Rock Cafe相对于TCL Chinese 6 Theatre在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "Hard Rock Cafe位于TCL Chinese 6 Theatre的西南面。"
+        },
+        {
+          "question": "TCL Chinese 6 Theatre相对于Chado Tea Room在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "TCL Chinese 6 Theatre位于Chado Tea Room的西南面。"
+        },
+        {
+          "question": "Chado Tea Room相对于The Coffee Bean & Tea Leaf在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Chado Tea Room位于The Coffee Bean & Tea Leaf的东北面。"
+        },
+        {
+          "question": "Whealthy到TCL Chinese 6 Theatre的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Whealthy到TCL Chinese 6 Theatre的直线距离约为42米。"
+        },
+        {
+          "question": "Hard Rock Cafe到Chado Tea Room的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Hard Rock Cafe到Chado Tea Room的直线距离约为133米。"
+        },
+        {
+          "question": "TCL Chinese 6 Theatre到The Coffee Bean & Tea Leaf的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "TCL Chinese 6 Theatre到The Coffee Bean & Tea Leaf的直线距离约为201米。"
+        },
+        {
+          "question": "Chado Tea Room到JINYA Ramen Bar的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Chado Tea Room到JINYA Ramen Bar的直线距离约为103米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Whealthy最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "TCL Chinese 6 Theatre距离Whealthy最近，约42米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Hard Rock Cafe最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "TCL Chinese 6 Theatre距离Hard Rock Cafe最近，约87米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离TCL Chinese 6 Theatre最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "The Coffee Bean & Tea Leaf距离TCL Chinese 6 Theatre最远，约201米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Chado Tea Room最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "The Coffee Bean & Tea Leaf距离Chado Tea Room最远，约247米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Greco's Pizza周围的POI密度最高，500米范围内有9个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Dave & Buster's周围的POI密度最高，500米范围内有9个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Whealthy周围的POI密度最低，500米范围内只有9个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Hard Rock Cafe周围的POI密度最低，500米范围内只有9个其他POI。"
+        },
+        {
+          "question": "从Whealthy到Hard Rock Cafe，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：Whealthy -> Hard Rock Cafe，总距离约45米。"
+        },
+        {
+          "question": "从Hard Rock Cafe到TCL Chinese 6 Theatre，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "最短路径是：Hard Rock Cafe -> (Hard Rock Cafe and hollywood bouldvard的节点) -> TCL Chinese 6 Theatre，总距离约87米。"
+        },
+        {
+          "question": "从TCL Chinese 6 Theatre到Chado Tea Room，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：TCL Chinese 6 Theatre -> Chado Tea Room，总距离约46米。"
+        },
+        {
+          "question": "从Chado Tea Room到The Coffee Bean & Tea Leaf，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "D",
+          "is_correct": false,
+          "explanation": "最短路径是：Chado Tea Room -> (Hard Rock Cafe and hollywood bouldvard的节点) -> (Hard Rock Cafe and hollywood bouldvard的节点) -> (Hard Rock Cafe and hollywood bouldvard的节点) -> (Hard Rock Cafe and hollywood bouldvard的节点) -> (Hooters and hollywood bouldvard的节点) -> (Tea Leaf and hollywood bouldvard的节点) -> The Coffee Bean & Tea Leaf，总距离约309米。"
+        }
+      ],
+      "completed_at": "2026-03-24T13:29:47.264722"
+    },
+    "context_text": "The AI agent began at a location near Hollywood Blvd and systematically visited the nearest unvisited points of interest (POIs) in order of increasing proximity:  \n1. **Chado Tea Room** (41 m),  \n2. **TCL Chinese 6 Theatre** (47 m),  \n3. **Whealthy** (42 m),  \n4. **Hard Rock Cafe** (45 m).  \n\nAfter each visit, it re-scanned the environment to identify the next closest unvisited POI. All moves were successfully executed via short road-network paths (≤2 steps, ~40–47 m). The agent has now visited 4 POIs and is preparing to scan again for the next nearest unvisited one.\nThe AI agent systematically visits the nearest unvisited point of interest (POI) in sequence:  \n1. **JINYA Ramen Bar** (73 m) →  \n2. **California Pizza Kitchen** (67 m) →  \n3. **Dave & Buster's** (59 m) →  \n4. **Lucky Strike** (51 m) →  \n5. Now heading to **Greco's Pizza** (115 m), the new nearest unvisited POI.  \n\nEach step involves scanning the environment, selecting the closest unvisited POI, planning a road-network path, moving, and confirming visitation. So far, 5 POIs have been visited (with 7 total visited per user input—implying 2 prior visits not shown), and the agent continues its greedy nearest-unvisited-POI strategy.\nThe AI agent systematically visited 7 nearby POIs in order of proximity—starting with Greco’s Pizza, then Hooters, The Coffee Bean & Tea Leaf, 25 Degrees, Restorant, Kensho, and finally Starbucks—using `move_to_poi` and `scan_environment` at each step. After visiting Starbucks (the last visible POI), no further POIs were detected. The agent then performed two exploratory moves—first north, then east—but scanning after each yielded zero visible POIs, indicating the local area is exhausted. The task ended without reaching a termination condition (e.g., max iterations was not hit post-Starbucks; exploration continues).\nThe agent repeatedly scanned for points of interest (POIs) but found none in four successive locations. After each null scan, it explored a new direction (South → West → Northeast → Southeast), moved to a new GPS coordinate, and rescanned—each time yielding zero visible POIs. The process terminated automatically after reaching the maximum iteration limit with no POIs discovered.",
+    "context_mode": "一次压缩"
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "region": "罗马斗兽场",
+  "eval_model": "qwen",
+  "strategy": "Direct",
+  "context_mode": "一次压缩",
+  "source_file": "评估报告_罗马斗兽场_qwen_report.txt__罗马斗兽场__summary_memory_50pct.txt",
+  "source_path": "D:\\a_project_study\\AI_exploer_aoto_onlybeijing\\AI_exploer_aotoV10\\AI_exploer_aoto\\txt_statistics\\大模型空间认知项目数据\\12压缩记忆\\一次压缩\\评估报告_罗马斗兽场_qwen_report.txt__罗马斗兽场__summary_memory_50pct.txt",
+  "evaluation_time": "2026-03-24T13:40:06.130189",
+  "context_text": "The AI began at a location near Rome’s Colosseum and systematically visited the nearest unvisited points of interest (POIs) in sequence:  \n1. **Al Gladiatore** (99 m, 182°) → 495 m path  \n2. **Gran Caffe Martini & Rossi** (71 m, 82°) → 95 m path  \n3. **Royal art café** (76 m, 98°) → 102 m path  \n4. **Cafè Cafè** (104 m, 180°) → path initiated  \n\nAt each stop, it scanned the environment to identify remaining visible POIs, prioritizing proximity and updating its position. So far, it has visited four restaurants/cafés—all within ~100–320 m of the starting point—and is now en route to the fifth.\nThe AI agent autonomously navigated a sequence of nearby points of interest (POIs) in Rome, starting from an initial location and visiting 7 POIs: Cafè Cafè, La Pace del Cervello, Oppio Caffè, La Biga al Colosseo, and then—after scanning anew—identified and began moving toward the nearest unvisited POI, “药店” (pharmacy), located 216m away at 339.89°. The exploration was iterative: at each stop, the agent scanned the environment, selected the closest unvisited POI, planned a road-network path, moved there, and repeated—until halted by iteration limits. All movements were successful, with distances and headings updated dynamically based on real-time scanning.\nThe AI agent systematically visited 7 unvisited POIs in order of proximity:  \n1. **药店** (216m) → 2. **La Base** (124m) → 3. **Gustando Roma** (249m) → 4. **咖啡厅** (558m) → 5. **Biblioteca della Società geografica italiana** (758m) → 6. **Trattoria Morgana** (1105m) → 7. **Sapori e Delizie** (343m).  \nAfter each visit, it scanned the environment, updating the list of visible unvisited POIs. Only **Il Galeone** (259m) remains unvisited. Total path distance ≈ 11.5 km across 72 navigation steps.\nThe agent navigated to the café *Il Galeone* (259m away), visited it, then repeatedly scanned and explored in multiple directions (N, E, S, W, NE, NW) — totaling 7 explorations — but found **no additional visible POIs**. After exhausting all attempts and reaching the maximum iteration limit, the agent halted with no further points of interest discovered.",
+  "evaluation_result": {
+    "Direct": {
+      "total_score": 13,
+      "total_questions": 24,
+      "accuracy": 54.166666666666664,
+      "type_scores": {
+        "定位与定向": {
+          "correct": 3,
+          "total": 8,
+          "percentage": 37.5
+        },
+        "空间距离估算": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "邻近关系判断": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        },
+        "POI密度识别": {
+          "correct": 2,
+          "total": 4,
+          "percentage": 50.0
+        },
+        "路径规划": {
+          "correct": 3,
+          "total": 4,
+          "percentage": 75.0
+        }
+      },
+      "answers": [
+        {
+          "question": "Oppio Caffè相对于La Biga al Colosseo在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D  \n依据不足。上下文中仅提及Oppio Caffè和La Biga al Colosseo同为被访问的POI（“Cafè Cafè, La Pace del Cervello, Oppio Caffè, La Biga al Colosseo”），但未提供二者之间的相对方位角或距离信息，也未说明它们相对于共同参考点（如起点）的方向差值，因此无法判断Oppio Caffè相对于La Biga al Colosseo的方向。",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Oppio Caffè位于La Biga al Colosseo的东南面。"
+        },
+        {
+          "question": "Royal art café相对于Oppio Caffè在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D\n依据不足。上下文中未提供Royal art café与Oppio Caffè之间的相对方位角或距离信息，也未给出二者共同参照的同一位置的方位描述，无法推导其相对方向。",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Royal art café位于Oppio Caffè的东南面。"
+        },
+        {
+          "question": "Gran Caffe Martini & Rossi相对于Royal art café在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "C\nGran Caffe Martini & Rossi位于起始点（Colosseum附近）的82°方向，Royal art café位于起始点的98°方向；二者均以起始点为参考，方位角82°（东偏北）比98°（东偏南）更靠近正北，因此Gran Caffe Martini & Rossi在Royal art café的西北方向。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Gran Caffe Martini & Rossi位于Royal art café的西北面。"
+        },
+        {
+          "question": "药店相对于Gran Caffe Martini & Rossi在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "C",
+          "ai_explanation": "C\n药店位于起始点（Colosseum附近）的339.89°方向、216 m处；Gran Caffe Martini & Rossi位于起始点的82°方向、71 m处。二者方位角差为339.89° − 82° = 257.89°，但因角度为循环量，需取最小夹角：min(257.89°, 360°−257.89°) = min(257.89°, 102.11°) ≈ 102.11°，该夹角跨越正北（0°）与正西（270°）之间，且药店方位角339.89°（即北偏西约20.11°）明显小于Gran Caffe Martini & Rossi的82°（即东偏北8°），故药店在Gran Caffe Martini & Rossi的西北方向。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "药店位于Gran Caffe Martini & Rossi的西北面。"
+        },
+        {
+          "question": "La Biga al Colosseo相对于Oppio Caffè在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D  \n依据不足。上下文中仅提及La Biga al Colosseo和Oppio Caffè同为被访问的POIs，且均出现在“7 POIs”序列中（“Cafè Cafè, La Pace del Cervello, Oppio Caffè, La Biga al Colosseo…”），但未提供二者之间的相对方位角或距离信息，亦未给出任一者相对于共同参考点（如起点或另一POI）的方位关系可用于推导其相互方向。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "La Biga al Colosseo位于Oppio Caffè的西北面。"
+        },
+        {
+          "question": "Oppio Caffè相对于Royal art café在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D  \nRoyal art café 出现在第一段探索序列中，方位为 98°（相对于起点），而 Oppio Caffè 出现在第二段叙述中：“Cafè Cafè, La Pace del Cervello, Oppio Caffè, La Biga al Colosseo”，但该句**未提供 Oppio Caffè 相对于 Royal art café 的方向或距离**；也**未给出 Oppio Caffè 相对于起点的方位角或距离**；上下文未出现任何将二者关联的方向、距离或共同参考点。因此，无法依据文本确定 Oppio Caffè 相对于 Royal art café 的方向。依据不足。\n\nD",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Oppio Caffè位于Royal art café的西北面。"
+        },
+        {
+          "question": "Royal art café相对于Gran Caffe Martini & Rossi在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "B",
+          "ai_explanation": "B\nRoyal art café位于76 m, 98°，Gran Caffe Martini & Rossi位于71 m, 82°，二者均以起始点（Colosseum附近）为基准；98°与82°均在正东（90°）附近，98°略偏南、82°略偏北，但二者方位角差仅16°，且均大于90°−45°=45°、小于90°+45°=135°，故同属东南象限；因Royal art café方位角（98°）大于Gran Caffe Martini & Rossi（82°），即更偏南，故Royal art café相对于Gran Caffe Martini & Rossi位于东南方向。",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Royal art café位于Gran Caffe Martini & Rossi的东南面。"
+        },
+        {
+          "question": "Gran Caffe Martini & Rossi相对于药店在哪个方向？",
+          "type": "定位与定向",
+          "ai_answer": "D",
+          "ai_explanation": "D  \n上下文未提供Gran Caffe Martini & Rossi与药店之间的相对方位角或共同参考点下的方向关系；二者分别出现在不同导航序列中：Gran Caffe Martini & Rossi出现在起始点（Colosseum附近）的第2站（71 m, 82°），而药店出现在后续序列中（216 m, 339.89°），但该339.89°是相对于AI当时所在位置（即Cafè Cafè之后新扫描位置）的方位，非相对于起始点或Gran Caffe Martini & Rossi。上下文未给出二者共有的参考系下的角度差或坐标关系，故无法推断相对方向。依据不足。",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Gran Caffe Martini & Rossi位于药店的东南面。"
+        },
+        {
+          "question": "La Biga al Colosseo到Royal art café的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "C  \n上下文未提供La Biga al Colosseo与Royal art café之间的直接距离或方位关系；仅知La Biga al Colosseo是第5个被访问的POI（在Cafè Cafè、La Pace del Cervello、Oppio Caffè之后），而Royal art café是第3个被访问的POI（在Al Gladiatore、Gran Caffe Martini & Rossi之后），二者分属不同访问序列段，且无共同参考点的距离或角度数据可推算直线距离；依据不足。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "La Biga al Colosseo到Royal art café的直线距离约为354米。"
+        },
+        {
+          "question": "Oppio Caffè到Gran Caffe Martini & Rossi的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Oppio Caffè到Gran Caffe Martini & Rossi的直线距离约为228米。"
+        },
+        {
+          "question": "Royal art café到药店的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "C",
+          "ai_explanation": "C\n上下文未提供Royal art café与药店之间的直接距离或方位关系；仅知Royal art café距起点（Colosseum附近）76 m、方位98°，而药店距某中间位置216 m、方位339.89°，但该“某中间位置”未被明确定义为Royal art café或其所在点；两POI间无共同参考点的距离或角度差可推算直线距离，依据不足。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Royal art café到药店的直线距离约为570米。"
+        },
+        {
+          "question": "Gran Caffe Martini & Rossi到Biblioteca della Società geografica italiana的直线距离大约是多少？",
+          "type": "空间距离估算",
+          "ai_answer": "D",
+          "ai_explanation": "D  \n依据不足。上下文中未提供Gran Caffe Martini & Rossi与Biblioteca della Società geografica italiana之间的直接或间接距离、方位角或相对位置信息；二者分别出现在不同POI序列中（前者在起始四站序列，后者在七站序列第5站），且无共同参考点坐标、无角度链式关系、无路径/直线距离换算依据。",
+          "correct_answer": "C",
+          "is_correct": false,
+          "explanation": "Gran Caffe Martini & Rossi到Biblioteca della Società geografica italiana的直线距离约为626米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离La Biga al Colosseo最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Oppio Caffè距离La Biga al Colosseo最近，约111米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Oppio Caffè最近？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "Gran Caffe Martini & Rossi距离Oppio Caffè最近，约228米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Royal art café最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "C",
+          "ai_explanation": "C\nRoyal art café在上下文中仅出现在第一段，其与其它POI的距离未被直接给出；Gran Caffe Martini & Rossi与Royal art café同属第一段序列中相邻POI，但二者间直线距离未提供；药店（216m）和Biblioteca della Società geografica italiana（758m）的距离均出自第三段“7 POIs”序列，该序列明确标注Biblioteca距离为758m；而药店距离为216m，Gran Caffe Martini & Rossi距离Royal art café无原文数据——依据不足，无法比较；唯一可比的是Biblioteca（758m）与药店（216m），故Biblioteca距离Royal art café最远（因758m > 216m，且Gran Caffe Martini & Rossi距离无依据）。",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "Biblioteca della Società geografica italiana距离Royal art café最远，约627米。"
+        },
+        {
+          "question": "在以下POI中，哪个距离Gran Caffe Martini & Rossi最远？",
+          "type": "邻近关系判断",
+          "ai_answer": "B",
+          "ai_explanation": "B",
+          "correct_answer": "B",
+          "is_correct": true,
+          "explanation": "Biblioteca della Società geografica italiana距离Gran Caffe Martini & Rossi最远，约626米。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "C  \n“药店”（pharmacy）在上下文中被明确描述为AI在扫描后识别出的“nearest unvisited POI”，且其后紧接访问序列：药店 → La Base → Gustando Roma → 咖啡厅 → Biblioteca della Società geografica italiana → Trattoria Morgana → Sapori e Delizie；同时，该序列起始点即为“药店”，且其距离为216m（明确数值），而其他选项如Oppio Caffè、Biblioteca、La Base均未在任何上下文中被描述为扫描中心或触发新一轮POI发现的枢纽节点；尤其关键的是，“药店”是唯一被明确指出“after scanning anew—identified and began moving toward the nearest unvisited POI”的起点，表明其位置触发了对7个POI的系统性发现链，隐含其周围可见POI数量最多；其余选项无任何关于其周边POI密度或扫描结果的描述，依据不足。",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "Oppio Caffè周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最高？",
+          "type": "POI密度识别",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "A",
+          "is_correct": false,
+          "explanation": "La Biga al Colosseo周围的POI密度最高，500米范围内有8个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "D  \nRoyal art café在上下文中仅出现在第一段序列中：“3. Royal art café (76 m, 98°) → 102 m path”，且后续所有POI列表（7个POI序列、Il Galeone探索段）均未再提及Royal art café作为已访问节点的**扫描结果中的可见POI来源**；而其他选项均有明确的“被扫描到”或“作为扫描起点产生新POI”的上下文：B. 药店是第二段中“扫描 anew 后识别并开始移动”的首个POI，且其后引出La Base等6个POI；C. La Base是药店之后的第二站，且其后继续引出Gustando Roma等；A. Biblioteca della Società geografica italiana是第5站，位于4→5→6→7长序列中，说明其周围存在后续可见POI（Trattoria Morgana等）；唯独Royal art café在全文中**仅作为被访问的一站出现，从未作为扫描起点引出任何后续POI**，也未被描述为拥有任何周边可见POI——依据不足推断其周围有其他POI，故密度最低（可观测到的邻近POI数量为0）。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "Biblioteca della Società geografica italiana周围的POI密度最低，500米范围内只有0个其他POI。"
+        },
+        {
+          "question": "在当前区域内，哪个POI周围的POI密度最低？",
+          "type": "POI密度识别",
+          "ai_answer": "A",
+          "ai_explanation": "D  \nRoyal art café在上下文中仅出现在第一段序列中：“3. Royal art café (76 m, 98°) → 102 m path”，且后续所有POI列表（7个POIs序列、扫描结果、剩余POI、探索尝试）均未再提及Royal art café与任何其他POI的方位或距离关系；它未被列为7个POIs之一，未出现在“药店→La Base→…”序列中，也未出现在最终剩余POI“Il Galeone”或扫描发现的任何新POI中；而其他选项均有明确邻接/上下文共现关系：A. 药店是第1个POI，紧随Cafè Cafè之后，且引出后续6个POI序列；B. Biblioteca della Società geografica italiana是第5个POI，位于4→5→6→7链中；C. La Base是第2个POI，直接接续药店；唯Royal art café自首次出现后即完全脱离后续所有扫描、序列、剩余和探索记录，无任何其他POI被描述为相对于它存在，亦无任何POI被描述为以它为参考点；依据不足表明其周围存在其他POI，故密度最低（零个可确认的邻接POI）。",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "药店周围的POI密度最低，500米范围内只有3个其他POI。"
+        },
+        {
+          "question": "从La Biga al Colosseo到Oppio Caffè，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "A",
+          "correct_answer": "A",
+          "is_correct": true,
+          "explanation": "最短路径是：La Biga al Colosseo -> Oppio Caffè，总距离约111米。"
+        },
+        {
+          "question": "从Oppio Caffè到Royal art café，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "A",
+          "ai_explanation": "依据不足",
+          "correct_answer": "B",
+          "is_correct": false,
+          "explanation": "最短路径是：Oppio Caffè -> (saivi and Oppio Caffè节点) -> (saivi and Royal art café节点) -> Royal art café，总距离约405米。"
+        },
+        {
+          "question": "从Royal art café到Gran Caffe Martini & Rossi，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "C",
+          "ai_explanation": "C",
+          "correct_answer": "C",
+          "is_correct": true,
+          "explanation": "最短路径是：Royal art café -> Gran Caffe Martini & Rossi，总距离约76米。"
+        },
+        {
+          "question": "从Gran Caffe Martini & Rossi到药店，以下哪种路径最短？",
+          "type": "路径规划",
+          "ai_answer": "D",
+          "ai_explanation": "D",
+          "correct_answer": "D",
+          "is_correct": true,
+          "explanation": "最短路径是：Gran Caffe Martini & Rossi -> (saivi and Royal art café节点) -> (saivi and Royal art café节点) -> (saivi and Oppio Caffè节点) -> (saivi and La Biga al Colosseo节点) -> 药店，总距离约775米。"
+        }
+      ],
+      "completed_at": "2026-03-24T13:40:00.628772"
+    },
+    "context_text": "The AI began at a location near Rome’s Colosseum and systematically visited the nearest unvisited points of interest (POIs) in sequence:  \n1. **Al Gladiatore** (99 m, 182°) → 495 m path  \n2. **Gran Caffe Martini & Rossi** (71 m, 82°) → 95 m path  \n3. **Royal art café** (76 m, 98°) → 102 m path  \n4. **Cafè Cafè** (104 m, 180°) → path initiated  \n\nAt each stop, it scanned the environment to identify remaining visible POIs, prioritizing proximity and updating its position. So far, it has visited four restaurants/cafés—all within ~100–320 m of the starting point—and is now en route to the fifth.\nThe AI agent autonomously navigated a sequence of nearby points of interest (POIs) in Rome, starting from an initial location and visiting 7 POIs: Cafè Cafè, La Pace del Cervello, Oppio Caffè, La Biga al Colosseo, and then—after scanning anew—identified and began moving toward the nearest unvisited POI, “药店” (pharmacy), located 216m away at 339.89°. The exploration was iterative: at each stop, the agent scanned the environment, selected the closest unvisited POI, planned a road-network path, moved there, and repeated—until halted by iteration limits. All movements were successful, with distances and headings updated dynamically based on real-time scanning.\nThe AI agent systematically visited 7 unvisited POIs in order of proximity:  \n1. **药店** (216m) → 2. **La Base** (124m) → 3. **Gustando Roma** (249m) → 4. **咖啡厅** (558m) → 5. **Biblioteca della Società geografica italiana** (758m) → 6. **Trattoria Morgana** (1105m) → 7. **Sapori e Delizie** (343m).  \nAfter each visit, it scanned the environment, updating the list of visible unvisited POIs. Only **Il Galeone** (259m) remains unvisited. Total path distance ≈ 11.5 km across 72 navigation steps.\nThe agent navigated to the café *Il Galeone* (259m away), visited it, then repeatedly scanned and explored in multiple directions (N, E, S, W, NE, NW) — totaling 7 explorations — but found **no additional visible POIs**. After exhausting all attempts and reaching the maximum iteration limit, the agent halted with no further points of interest discovered.",
+    "context_mode": "一次压缩"
+  }
+}

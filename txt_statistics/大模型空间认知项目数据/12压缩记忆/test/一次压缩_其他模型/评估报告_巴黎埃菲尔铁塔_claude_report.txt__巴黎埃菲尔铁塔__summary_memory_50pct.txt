@@ -1,0 +1,27 @@
+The AI is systematically exploring Paris using a nearest-POI strategy. Starting near the Eiffel Tower (≈48.86°N, 2.29°E), it scans surroundings at each step, identifies visible points of interest (POIs), and moves to the closest *unvisited* one. So far, it has:  
+- Step 1: Visited **Castel Cafe** (338 m → 261 m path);  
+- Step 9: Visited **Yes’N’You** (school, 334 m → 434 m path);  
+- Step 17: Visited **Le Casse Noix** (restaurant, 129 m → 129 m path);  
+- Step 25: Scanning again from its current location (now 3 POIs visited), preparing for the next move.  
+
+All movements use road-network routing, and the agent maintains state (location, visited count) across steps.
+The AI is autonomously exploring Paris using a nearest-unvisited-POI strategy. Starting from near the Eiffel Tower, it has sequentially visited:  
+1. **Société Générale** (bank, 392m → 683m path),  
+2. **Collège privé Saint-Louis de Gonzague** (school, 843m → 985m),  
+3. **L’Ancien Trocadéro** (café, 485m → 600m).  
+
+After each move, it re-scans the environment from its new location to identify visible POIs, checks memory to avoid repeats, and selects the closest unvisited one. It has now visited **6 POIs total**, and is preparing for the next scan from its current position near Trocadéro.
+The AI is systematically exploring nearby points of interest (POIs) using a “nearest-unvisited-POI” strategy. Starting from an initial location with 9 visible POIs, it first visited **Shang Palace** (401m away), then **Pharmacie Galliera** (348m), **Linette** (782m), and **II Sorrentino** (93m)—each time scanning the environment, selecting the closest unvisited POI, planning a road-network path, and confirming successful visitation. After four moves, the visited POI count rose from 7 to 10. As of Step 79, 5 POIs remain visible—including **20 Eiffel** (141m) and **Crédit du Nord** (151m)—and the AI is poised to select the next nearest (likely *20 Eiffel*) for its fifth move.
+The AI agent is autonomously exploring a location (likely Paris) using a nearest-unvisited-POI strategy. Starting from 10 visited POIs, it sequentially:  
+- Scans the environment to identify visible unvisited POIs,  
+- Selects the closest one,  
+- Plans and executes a road-network path to reach and visit it.  
+
+Over 5 steps (Steps 89–113), it visits:  
+1. **20 Eiffel** (restaurant, +1 → 11 total),  
+2. **Café Le Dôme** (café, +1 → 12),  
+3. **Restaurant Doïna** (restaurant, +1 → 13),  
+4. **Crédit du Nord** (bank, +1 → 14),  
+5. **Café de l’Alma** (café, +1 → 15).  
+
+All moves follow shortest-path routing (2–4 steps, 112–569m), and the agent consistently updates its state, confirms visits, and prepares for the next scan—demonstrating robust, goal-directed exploration.

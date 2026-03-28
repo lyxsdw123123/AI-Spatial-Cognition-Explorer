@@ -1,0 +1,15 @@
+The AI agent is performing a step-by-step exploration of central Shanghai using a nearest-unvisited-POI strategy. Starting from near People’s Square ([31.2305, 121.4751]), it sequentially visits the closest visible point of interest (POI) at each step:
+
+- **Step 1:** Moves 810m to **金钟广场** (340m away) → 1st POI visited.  
+- **Step 9:** From there, moves 1456m to **普安路延安东路(公交站)** (290m away) → 2nd POI.  
+- **Step 17:** After two more scans and a move to **香港广场北座** (324m, 2068m path), then scanning again, it moves 1119m to **东淮海国际大厦** (738m away) → 4th POI visited.
+
+All POIs are commercial/office buildings or transit nodes; movement follows road networks with increasing distances due to urban routing constraints. The agent maintains state (visited count, location) and autonomously repeats scan → select nearest unvisited → navigate → confirm.
+The AI is systematically exploring Shanghai using a nearest-POI strategy. Starting from 4 visited points, it sequentially scanned surroundings and moved to the closest unvisited POI at each step:  
+- Step 29: Moved 460m to **露香园** (residential area) → total = 5  
+- Step 37: Moved 1159m to **黄浦区机关办公大楼** (government office) → total = 6  
+- Step 45: Moved 1078m to **上海市青莲阁大楼** (commercial/residential building) → total = 7  
+- Step 53: Moved 200m to **上海黄浦区图书馆大楼** (library building) → total = 8  
+
+All moves used road-network routing; remaining visible POI is **人民广场地铁站1号口** (People’s Square Metro Exit 1), now the next target.
+After visiting People’s Square Metro Station Exit 1 (bringing total visited POIs to 9), the agent scanned repeatedly but found **no visible POIs** from that location or from six subsequent exploratory moves in directions NE, E, S, W, NW, and N. Despite repositioning across a small area (~100–200m radius), no new POIs were detected—indicating a low-POI-density zone. Exploration continues.

@@ -1,0 +1,45 @@
+The AI is performing a sequential POI exploration task near Tiananmen Square (Beijing), starting from [39.9039, 116.4077]. At each step, it:  
+1. Scans the environment to detect visible POIs,  
+2. Selects the **closest unvisited POI**,  
+3. Navigates there via road network and confirms visit.  
+
+So far (Steps 1 → 25):  
+- ✅ Visited **3 POIs**, in order of increasing distance:  
+  1. **正义路3号院** (33 m, Step 1),  
+  2. **四季回头特色菜馆** (64 m, Step 9),  
+  3. **北京东交民巷饭店写字楼** (141 m, Step 17).  
+- Each move succeeded with minimal path steps (1–2) and accurate navigation.  
+- POI count decreases slightly per scan (21 → 20 → 19), likely due to changing vantage point.  
+- Current location (Step 25) is updated; next step will scan again and target the new nearest unvisited POI.
+The AI agent is systematically exploring a Beijing urban area near Tian’anmen and Wangfujing, using a “nearest unvisited POI” strategy. So far, it has:
+
+- Scanned surroundings 4 times (Steps 33, 41, 49, and initial), detecting 18 → 17 → 16 → … visible POIs each time.  
+- Visited 6 POIs: **隆和居** (177m, restaurant), **正义路10号院** (65m, residential), **正义路社区服务站** (63m, community service), plus 3 earlier ones (not detailed here).  
+- Each move uses road-network path planning (2–6 steps, ~65–432m), confirming successful arrival and visitation.  
+- Current location is near Justice Road; the next scan (Step 49) is about to run — likely targeting the next nearest unvisited POI (e.g., 正义路1号院 at 423m or 前门东大街23号院 at 392m).  
+
+Core behavior: **proximity-driven, sequential, on-foot exploration of mixed-use urban POIs (residential, commercial, transport, services).**
+The AI is systematically exploring POIs around Tiananmen Square (Beijing), using a “nearest unvisited POI” strategy. Starting from an initial location, it scans surroundings, identifies visible POIs with distances and bearings, selects the closest unvisited one, plans a road-network path, and confirms successful visitation. So far, it has visited:  
+- **前门东大街23号院** (382m → 847m path),  
+- **前门(公交站)** (271m → 271m path),  
+- **天安门东地铁站D西南口** (920m → 2203m path),  
+- **天安门东(地铁站)** (139m → 139m path).  
+
+Visited count is now **10**, and it’s about to scan again (Step 81) to identify the next nearest unvisited POI. All movements are precise, verified, and logged with metrics (distance, direction, steps, success).
+The AI is systematically visiting nearby Points of Interest (POIs) in Beijing’s central district, following a “closest unvisited POI” strategy. Starting from near Tian’anmen East, it has sequentially visited:  
+1. **Tian’anmen East Metro Station B NE Exit** (115 m),  
+2. **Dongfang Jie Road Underground Parking** (97 m),  
+3. **Xiagongfu Residential Complex** (425 m),  
+4. **Wangfujing Joy City Underground Parking** (235 m),  
+5. **Oriental Plaza W3 Building** (124 m),  
+6. **Oriental Plaza W1 Building** (92 m — current target).  
+
+Each step involves scanning the environment, selecting the nearest unvisited visible POI, planning a road-network path (3–7 steps, 166–1191 m), and confirming successful visitation. So far, **14 POIs have been visited**, with the latest move underway to Oriental Plaza W1.
+The AI agent systematically explores nearby points of interest (POIs) using a “nearest unvisited POI first” strategy. Starting from Eastern Plaza W1 Building (Step 125), it sequentially visits:  
+- **北京东方广场** (127m, Step 125),  
+- **长安大厦(东长安街)** (541m, Step 133),  
+- **正义路1号院** (162m, Step 141),  
+- **宝鼎中心** (870m, Step 149),  
+- **新怡家园** (185m, Step 149).  
+
+After exhausting all visible POIs (0 found in final scans), it attempts directional exploration—first east (90°), then south (180°)—but discovers no new POIs. The agent now requires further exploration to uncover additional points. Total visited POIs: **19**.

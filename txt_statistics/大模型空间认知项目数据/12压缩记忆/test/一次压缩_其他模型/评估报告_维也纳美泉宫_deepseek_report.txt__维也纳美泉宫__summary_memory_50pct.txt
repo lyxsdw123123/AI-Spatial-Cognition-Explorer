@@ -1,0 +1,25 @@
+The AI agent begins at a location in Vienna and follows a greedy nearest-unvisited-POI strategy. Starting from the initial position, it scans the environment, identifies visible points of interest (POIs), and sequentially visits the closest unvisited one:  
+1. **Hypo-Bank Vorarlberg** (50 m) →  
+2. **Cheng Chinese Cuisine** (44 m from new location) →  
+3. **Restaurant SURA** (43 m) →  
+4. **Ma Creperie** (44 m).  
+
+After each visit, it rescans to update visibility and re-evaluates the nearest remaining unvisited POI. So far, it has visited 4 POIs (all restaurants/banks) and continues exploration.
+The agent performed a sequential, nearest-unvisited-POI exploration in Vienna. Starting from its location, it scanned the environment, identified visible POIs (cafés, pharmacies, restaurants, banks), and repeatedly:  
+1. Selected the closest unvisited POI (e.g., *Kaffee Alt Wien* → *Castelletto* → *Zum Rothen Krebs* → *Pizza Bizi*),  
+2. Navigated via road network (with step/distance estimates),  
+3. Visited the POI, then rescanned.  
+
+It visited 7 POIs total before stopping at step 35 due to iteration limit. The latest move was to *Pizza Bizi* (118 m), the current nearest unvisited POI.
+The AI agent systematically visited 6 of the original 7 visible POIs in order of increasing proximity from its current location:  
+1. **Alte Feldapotheke** (135m) →  
+2. **aïda** (66m from new position) →  
+3. **Raiffeisenlandesbank** (205m) →  
+4. **Cafe Mozart** (279m) →  
+5. **Zur goldenen Krone** (267m) →  
+6. **Cafe-Restaurant Ronacher** (146m).  
+
+At each step, it scanned the environment, selected the nearest unvisited POI, planned a road-network path, moved there, and repeated—leaving only **Korb (No.4)** unvisited. Total visits completed: **6/7**.
+The agent is navigating toward the visible but unmappable POI “Korb (No.4)” (a coffee shop), located ~158 m away at ~331° from its current position ([48.2091, 16.3712]). After successfully visiting *Cafe-Restaurant Ronacher* (the nearest unvisited POI) earlier, it encountered a map data mismatch: `move_to_poi` failed for “Korb (No.4)” and even “Korb”, prompting iterative directional exploration (327° → 331° → 328° → 331°) to close the distance—from 641 m down to 158 m. Despite progress, the POI remains unvisitible due to absence in the map database, and the agent has exhausted its iteration budget without completing the visit. It remains at step 103, poised to continue—but constrained by system limits and missing map data.
+The agent repeatedly detects only one visible POI—“Korb (No.4)” (a coffee shop)—at varying distances (75–249 m) and directions (286°–331°) across multiple locations. Despite attempting to move to it, the system reports it as “missing” or inaccessible. After visiting 14 POIs and systematically exploring six different directions (45°, 135°, 225°, 315°, 0°), scanning anew each time, no additional POIs appear. The persistent visibility—but inaccessibility—of Korb (No.4) suggests it may be a fixed landmark in a sparse or data-limited area. With no new unvisited POIs found, the agent continues systematic exploration per protocol.
+The agent detected one visible POI—“Korb (No.4)” (a café), 75m away at 295°—and attempted to move toward it. However, the system rejected the movement, indicating the POI is known to be missing. With no other visible POIs and reaching the maximum iteration limit, the agent halted.

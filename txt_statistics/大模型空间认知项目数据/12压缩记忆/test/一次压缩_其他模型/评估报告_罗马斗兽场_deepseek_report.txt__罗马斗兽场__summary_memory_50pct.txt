@@ -1,0 +1,23 @@
+The AI agent, starting near the Colosseum in Rome (coordinates ~41.89°N, 12.49°E), follows a rule-based navigation strategy: repeatedly scan for visible POIs and move to the nearest *unvisited* one. It successfully visits three restaurants in sequence:  
+1. **Al Gladiatore** (99 m → 495 m path),  
+2. **Gran Caffe Martini & Rossi** (71 m → 95 m path),  
+3. **Royal art café** (76 m → 102 m path).  
+After each visit, it rescans the environment—observing decreasing POI counts (15 → 14 → 13 → 13) and updated distances/directions—preparing to select the next closest unvisited POI.
+The AI agent systematically visited the nearest unvisited POIs in sequence:  
+1. **Cafè Cafè** (104m → visited),  
+2. **La Pace del Cervello** (81m from new location → visited),  
+3. **Oppio Caffè** (368m → visited),  
+4. **La Biga al Colosseo** (112m → visited).  
+
+At each step, it scanned the environment, identified visible POIs, selected the closest unvisited one, planned a road-network path, moved there, and repeated. So far, 4 of the original 12 POIs have been visited; the process continues with updated visibility and distances after each move.
+The agent, starting from [41.8927, 12.4926], systematically explored 8 visible POIs using a nearest-unvisited-POI strategy. It visited them in this order:  
+1. **La Base** (191 m) →  
+2. **药店** (124 m) →  
+3. **Gustando Roma** (366 m) →  
+4. **咖啡厅** (558 m) →  
+5. **Biblioteca della Società geografica italiana** (758 m) →  
+6. **Trattoria Morgana** (1105 m).  
+
+After visiting 6 POIs (reaching “Visited POIs count: 7” — likely including the start or a prior visit), scanning from Trattoria Morgana revealed only **Il Galeone** (571 m) and **Sapori e Delizie** (343 m) as remaining visible unvisited POIs. The agent was about to move to the nearer of these (Sapori e Delizie) when execution halted due to reaching the maximum iteration limit.
+The agent visited two nearby POIs—first *Sapori e Delizie* (343 m, 335°), then *Il Galeone* (259 m, 298°)—bringing the total visited count to 15. From *Il Galeone*, no POIs were visible, prompting a systematic cardinal-direction exploration (N → E → S → W), each followed by scanning. After four explorations yielding zero visible POIs, the agent recognized sparse coverage and prepared to consult memory and continue exploring—stopping only due to reaching the iteration limit.
+The agent, having visited 15 POIs over a 78-point path, attempted systematic exploration by shifting from cardinal to diagonal (45° northeast) direction to uncover new areas. After moving to the new location and scanning, no POIs were detected. With no visible points of interest and reaching the maximum iteration limit, the agent halted exploration.
