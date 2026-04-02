@@ -21,6 +21,10 @@ class LocalDataService:
         self.road_nodes = {}
         self.road_nodes_gdf = None  # 道路节点数据
         self.road_nodes_data = {}  # 道路节点字典，用于路径记忆
+        self.poi_file_path_override: Optional[str] = None
+        self.road_file_path_override: Optional[str] = None
+        self.road_nodes_file_path_override: Optional[str] = None
+        self.grid_file_path_override: Optional[str] = None
         
     def switch_region(self, new_region_name: str) -> bool:
         """切换到新的区域并清理旧数据
@@ -54,7 +58,24 @@ class LocalDataService:
         self.road_nodes = {}
         self.road_nodes_gdf = None
         self.road_nodes_data = {}
+        self.poi_file_path_override = None
+        self.road_file_path_override = None
+        self.road_nodes_file_path_override = None
+        self.grid_file_path_override = None
         # print("已清理所有数据")
+
+    def set_data_file_overrides(
+        self,
+        *,
+        poi_file_path: Optional[str] = None,
+        road_file_path: Optional[str] = None,
+        road_nodes_file_path: Optional[str] = None,
+        grid_file_path: Optional[str] = None,
+    ) -> None:
+        self.poi_file_path_override = poi_file_path
+        self.road_file_path_override = road_file_path
+        self.road_nodes_file_path_override = road_nodes_file_path
+        self.grid_file_path_override = grid_file_path
         
     def _get_region_data_path(self, filename: str) -> str:
         """获取指定区域的数据文件路径
@@ -69,7 +90,7 @@ class LocalDataService:
     
     def get_grid_boundary_and_size(self) -> Tuple[List[List[float]], int]:
         try:
-            grid_path = self._get_region_data_path("格网数据.shp")
+            grid_path = self.grid_file_path_override or self._get_region_data_path("格网数据.shp")
             if not os.path.exists(grid_path):
                 return [], 20
             gdf = gpd.read_file(grid_path, encoding='utf-8')
@@ -100,7 +121,7 @@ class LocalDataService:
         """
         try:
             if road_file_path is None:
-                road_file_path = self._get_region_data_path("道路数据.shp")
+                road_file_path = self.road_file_path_override or self._get_region_data_path("道路数据.shp")
                 
             if not os.path.exists(road_file_path):
                 print(f"道路数据文件不存在: {road_file_path}")
@@ -128,7 +149,7 @@ class LocalDataService:
         """
         try:
             if poi_file_path is None:
-                poi_file_path = self._get_region_data_path("POI数据.shp")
+                poi_file_path = self.poi_file_path_override or self._get_region_data_path("POI数据.shp")
                 
             if not os.path.exists(poi_file_path):
                 print(f"POI数据文件不存在: {poi_file_path}")
@@ -421,7 +442,7 @@ class LocalDataService:
         """
         try:
             if road_nodes_file_path is None:
-                road_nodes_file_path = self._get_region_data_path("道路节点数据.shp")
+                road_nodes_file_path = self.road_nodes_file_path_override or self._get_region_data_path("道路节点数据.shp")
             
             if not os.path.exists(road_nodes_file_path):
                 print(f"道路节点数据文件不存在: {road_nodes_file_path}")

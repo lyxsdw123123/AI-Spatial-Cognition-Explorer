@@ -1,130 +1,129 @@
-# 🗺️ AI 空间认知探索系统 (AI Spatial Cognition Explorer)
+# AI 空间认知探索系统（AI Spatial Cognition Explorer）
 
-> **项目目标**：将 AI Agent 放入陌生的地图环境中，使其像人类一样通过自主探索构建属于自己的"心理地图"（Cognitive Map），并通过标准化的空间认知测试来评估其空间意识能力。
+项目目标：将 AI Agent 放入陌生的真实地理环境中，让其在“有限视野”约束下自主探索并形成“心理地图”，然后用标准化题型对其空间认知能力进行量化评估。
 
-## 📖 项目简介
+## 实验覆盖（核心矩阵）
 
-本项目是一个基于 LLM（大语言模型）的自主智能体仿真系统。系统模拟了一个 AI 探索者在城市环境中的移动和感知过程。AI 能够：
-1.  **感知环境**：读取周围的 POI（兴趣点）和道路网络。
-2.  **自主决策**：根据不同的探索策略（如随机、最近邻、最短路径）规划移动路线。
-3.  **构建记忆**：在探索过程中，动态构建不同形式的空间记忆（文本叙述、拓扑图、栅格地图）。
-4.  **接受评估**：探索结束后，系统会自动生成一套基于真实地理数据的考卷，测试 AI 的定位定向、距离估算、空间关系判断等能力。
+### 1) 五模型（默认覆盖）
 
-## ✨ 核心功能
+默认实验脚本按“厂商标识/Provider”组织，覆盖 5 个模型通道：
 
-### 1. 多模态地图支持
-- **在线地图**：集成高德地图与 OpenStreetMap，支持全球范围的区域选择。
-- **本地数据**：支持导入本地 Shapefile (.shp) 数据（POI 和路网），实现离线环境下的高精度仿真。
+- qwen（通义）
+- openai（OpenAI 兼容接口）
+- deepseek（深度求索）
+- claude（Anthropic）
+- gemini（Google）
 
-### 2. 智能探索机制
-- **多种探索模式**：
-  - 🎲 **随机 POI 探索**：随机选择目标，模拟漫无目的的游荡。
-  - 📍 **最近距离探索**：贪婪策略，优先访问最近的未探索点。
-  - 🛣️ **最短路径探索**：基于 Dijkstra/A* 算法的路径规划能力展示。
-- **拟人化移动**：模拟真实的移动速度和视野范围（默认 1000米视野），仅能感知视野内的环境。
+说明：代码结构支持继续扩展更多 Provider（例如新增适配器），但本 README 以当前实验常用的 5 模型组合为主。
 
-### 3. 多样化空间记忆 (Memory Systems)
-系统实现了三种不同的记忆构建方式，用于对比 LLM 对空间信息的理解能力：
-- 📝 **Context (文本流)**：将探索经历记录为线性的叙事文本（"我从A走到B，看到了C..."）。
-- 🕸️ **Graph (拓扑图)**：构建节点（POI/路口）与边（道路）的拓扑网络结构。
-- 🗺️ **Map (栅格地图)**：将环境抽象为网格坐标系，记录每个网格的属性。
+### 2) 四种记忆（Memory）
 
-### 4. 自动化评估系统 (Evaluation)
-探索结束后，系统充当"考官"，基于真实的地理数据自动生成试卷：
-- **题型**：定位与定向、空间距离估算、邻近关系判断、POI 密度识别、路径规划。
-- **评分**：自动比对 AI 的回答与真实地理数据的计算结果，生成详细的得分报告。
+用于对比“不同记忆形态”对空间推理的影响：
 
-## 🛠️ 技术栈
+- raw：原始记忆/原始信息（保留更完整的探索过程与事实信息）
+- context：文本叙事记忆（线性记录：从哪到哪、看到什么、做了什么决策）
+- graph：拓扑图记忆（POI/节点/连边结构化表达）
+- map：栅格/地图记忆（将空间抽象为网格并记录属性）
 
-- **前端**：Streamlit (交互界面), Folium (地图可视化)
-- **后端**：FastAPI (REST API), WebSocket (实时状态推送)
-- **AI 核心**：LangChain, 阿里云通义千问 (DashScope) / OpenAI 兼容接口
-- **数据处理**：GeoPandas (地理数据), NetworkX (路网图构建), Shapely
-- **算法**：Dijkstra 最短路径算法, Haversine 距离公式
+### 3) 三种探索方式（Exploration）
 
-## 📂 项目结构
+- 随机 POI 探索（随机目标/随机游走风格）
+- 最近距离探索（贪婪策略，优先访问最近未探索点）
+- 最短路径探索（路径规划导向，体现 Dijkstra/A* 等能力）
+
+### 4) 15 个区域（Regions）
+
+默认实验区域为 15 个（脚本中作为 REGIONS 列表使用）：
+
+1. 上海外滩
+2. 伦敦大本钟
+3. 北京天安门
+4. 多伦多CN塔
+5. 巴黎埃菲尔铁塔
+6. 广州塔
+7. 旧金山联合广场
+8. 柏林勃兰登堡门
+9. 武汉黄鹤楼
+10. 洛杉矶好莱坞
+11. 纽约时代广场
+12. 维也纳美泉宫
+13. 罗马斗兽场
+14. 芝加哥千禧公园
+15. 长沙五一广场
+
+### 5) 四种提问方式（Question Strategies）
+
+用于评估阶段的问答策略（同一套题目，用不同提示策略对比）：
+
+- Direct：直接回答
+- CoT：Chain-of-Thought（链式推理）
+- Self-Consistency：自洽采样/投票
+- ToT：Tree-of-Thought（树状推理）
+
+## 项目结构（核心代码不动）
 
 ```text
 AI_exploer_aoto/
-├── frontend/               # Streamlit 前端应用
-│   ├── app.py              # 前端主入口
-│   └── local_data_loader.py# 本地 Shapefile 加载器
-├── backend/                # FastAPI 后端服务
-│   ├── app.py              # 后端主入口 (API & WebSocket)
-│   ├── agent.py            # AI 探索者核心逻辑 (ExplorerAgent)
-│   ├── evaluation_agent.py # 评估代理 (负责答题)
-│   ├── evaluation_api.py   # 评估相关接口
-│   ├── map_service.py      # 地图服务管理
-│   ├── question_generator.py # 自动化出题模块
-│   ├── data_service/       # 本地数据处理服务 (Dijkstra算法等)
-│   └── path_memory/        # 空间记忆管理 (Graph/Map构建)
-├── config/                 # 配置文件
-├── data/                   # 本地地理数据存储 (Shapefiles)
-└── requirements.txt        # 项目依赖
+├── backend/                 # FastAPI 后端（探索/记忆/评估核心）
+├── frontend/                # Streamlit 前端（地图可视化与控制台）
+├── config/                  # 配置
+├── data/                    # 本地地理数据（Shapefile 等）
+├── txt_statistics/          # 统计/中间数据（如 token cost、汇总等）
+├── requirements.txt         # Python 依赖
+└── start_backend.py         # 后端启动脚本
+└── start_frontend.py        # 前端启动脚本
 ```
 
-## 🚀 快速开始
+说明：根目录可能还包含大量实验脚本、报告文本、CSV 汇总、日志等，这些属于“实验产物/辅助工具”，不影响核心服务运行。
 
-### 1. 环境准备
+## 快速开始
 
-确保 Python 版本 ≥ 3.9。
+### 1) 安装依赖
 
 ```bash
-# 克隆项目
-git clone [repository_url]
-cd AI_exploer_aoto
-
-# 安装依赖
 pip install -r requirements.txt
 ```
 
-### 2. 配置 API 密钥
+### 2) 配置密钥（.env）
 
-在项目根目录创建 `.env` 文件（参考 `.env.example`）：
+根目录的 `.env` 用于配置在线服务的密钥（例如高德地图、各模型 API Key）。你可以按当前项目实际使用的 Provider 增删对应字段。
 
-```ini
-# 高德地图 API Key (用于前端底图和在线数据)
-AMAP_API_KEY=your_amap_key
-
-# 通义千问 API Key (用于 AI 决策和问答)
-DASHSCOPE_API_KEY=your_dashscope_key
-```
-
-### 3. 启动系统
-
-推荐使用一键启动脚本（如果提供了 `main.py`）：
+### 3) 启动前后端
 
 ```bash
-python main.py --mode all
-```
-
-或者分别启动前后端：
-
-```bash
-# 终端 1：启动后端
+# 终端 1：后端
 python start_backend.py
-# (或者直接运行 uvicorn backend.app:app --reload)
 
-# 终端 2：启动前端
+# 终端 2：前端
 python start_frontend.py
-# (或者 streamlit run frontend/app.py)
 ```
 
-### 4. 使用流程
+默认访问：
 
-1.  打开浏览器访问 `http://localhost:8501`。
-2.  **区域选择**：在侧边栏选择"北京天安门"或其他预设区域。
-3.  **本地数据**：勾选"导入本地数据"以获得最佳体验（需确保 `data/` 目录下有对应 Shapefile）。
-4.  **初始化**：点击"初始化探索"。
-5.  **开始探索**：点击"开始探索"，观察 AI 在地图上的移动。
-6.  **停止与评估**：探索一段时间后点击"停止探索"，系统将自动生成评估报告。
+- 前端：`http://localhost:8501`
+- 后端：`http://127.0.0.1:8000`
 
-## 📊 评估指标
+## 实验脚本入口（常用）
 
-系统会根据 AI 的回答生成以下维度的能力报告：
-- **准确率 (Accuracy)**：回答正确的题目比例。
-- **空间推理能力**：在缺乏直接观测数据时，能否通过记忆推断出相对位置。
-- **幻觉率**：AI 是否编造了不存在的地理关系。
+根目录提供了多种批处理脚本，主要用于“批量探索 + 批量评估 + 产出 CSV/报告”：
 
----
-*本项目为 AI 空间认知研究的实验性平台。*
+- `batch_exploration_experiment.py`：随机 POI 探索（输出到 `experiment_reports/` 与对应 CSV）
+- `batch_exploration_nearest.py`：最近距离探索（输出到 `最近报告/` 与对应 CSV）
+- `batch_exploration_shortest.py`：最短路径探索（输出到 `最短报告/` 与对应 CSV）
+- `batch_exploration_qwen3.py`：特定模型组合的批量实验（输出到 `qwen3_reports/` 与对应 CSV）
+- `evaluate_memory_reports.py` / `evaluate_reports_3memory_with_raw.py`：对已有报告进行离线/二次评估与汇总
+
+提示：这些脚本通常假设后端已启动，并通过 `http://127.0.0.1:8000` 调用探索/评估 API。
+
+## 输出物说明（报告/CSV/日志）
+
+- 报告（.txt/.json）：记录每次探索的过程、记忆摘要与评估结果，便于复盘与对比。
+- CSV 汇总：用于后续统计分析（按区域/模型/记忆/策略聚合）。
+- `backend.log`：后端运行日志（请求日志 + 运行时输出），用于排错与复现问题。
+
+## 技术栈（概览）
+
+- 前端：Streamlit + Folium（地图可视化与交互控制）
+- 后端：FastAPI（REST API）
+- 地理数据：GeoPandas / Shapely（空间计算与数据读写）
+- AI 编排：LangChain（按项目实际代码使用情况）

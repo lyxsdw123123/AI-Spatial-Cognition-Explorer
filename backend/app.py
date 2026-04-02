@@ -80,6 +80,12 @@ class QuestionModel(BaseModel):
 class SwitchRegionModel(BaseModel):
     region_name: str
 
+class LocalDataPathsModel(BaseModel):
+    poi_shp_path: Optional[str] = None
+    road_shp_path: Optional[str] = None
+    road_nodes_shp_path: Optional[str] = None
+    grid_shp_path: Optional[str] = None
+
 # WebSocket连接管理
 class ConnectionManager:
     def __init__(self):
@@ -173,6 +179,19 @@ async def get_local_pois():
             "data": pois,
             "count": len(pois)
         }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/exploration/set_local_data_paths")
+async def set_local_data_paths(paths: LocalDataPathsModel):
+    try:
+        local_data_service.set_data_file_overrides(
+            poi_file_path=paths.poi_shp_path,
+            road_file_path=paths.road_shp_path,
+            road_nodes_file_path=paths.road_nodes_shp_path,
+            grid_file_path=paths.grid_shp_path,
+        )
+        return {"success": True}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
